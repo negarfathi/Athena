@@ -1,0 +1,77 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %x = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %x = alloca i32, align 4 + 0
+NODE   4:   %y = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %y = alloca i32, align 4 + 0
+NODE   5:   %z = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %z = alloca i32, align 4 + 0
+NODE   6:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   7:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   8:   store i32 %call, i32* %x, align 4 (points-to size: 0)
+NODE   9:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  10:   store i32 %call1, i32* %y, align 4 (points-to size: 0)
+NODE  11:   %0 = load i32, i32* %y, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  12:   %1 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  13:   %2 = phi i1 [ false, %while.cond ], [ %cmp2, %land.rhs ] (points-to size: 1)
+    -> null + 0
+NODE  14:   %3 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  15:   %4 = load i32, i32* %y, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  16:   %17 = load i32, i32* %retval, align 4 (points-to size: 1)
+    -> null + 0
+NODE  17:   ret i32 %17 (points-to size: 0)
+NODE  18:   %5 = load i32, i32* %y, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  19:   store i32 %5, i32* %z, align 4 (points-to size: 0)
+NODE  20:   %call4 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  21:   %6 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  22:   store i32 %6, i32* %z, align 4 (points-to size: 0)
+NODE  23:   %7 = load i32, i32* %y, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  24:   %8 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  25:   %add = add nsw i32 %7, %8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  26:   store i32 %add, i32* %y, align 4 (points-to size: 0)
+NODE  27:   %9 = load i32, i32* %z, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  28:   %sub = sub nsw i32 %9, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  29:   store i32 %sub, i32* %x, align 4 (points-to size: 0)
+NODE  30:   %10 = load i32, i32* %y, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  31:   %11 = load i32, i32* %z, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  32:   %add6 = add nsw i32 %10, %11 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  33:   store i32 %add6, i32* %z, align 4 (points-to size: 0)
+NODE  34:   %12 = load i32, i32* %y, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  35:   %13 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  36:   %add8 = add nsw i32 %12, %13 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  37:   store i32 %add8, i32* %x, align 4 (points-to size: 0)
+NODE  38:   %14 = load i32, i32* %z, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  39:   %sub9 = sub nsw i32 %14, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  40:   store i32 %sub9, i32* %y, align 4 (points-to size: 0)
+NODE  41:   %15 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  42:   %16 = load i32, i32* %z, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  43:   %add10 = add nsw i32 %15, %16 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  44:   store i32 %add10, i32* %z, align 4 (points-to size: 0)
+NODE  45: main (points-to size: 1)
+    -> main + 0

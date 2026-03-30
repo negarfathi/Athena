@@ -1,0 +1,111 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.52sQGL
+
+Input File is : svcomp_openbsd_cstpcpy_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+char* cstpcpy(char *to, const char *from)
+{
+	for (; (*to = *from) != '\0'; ++from, ++to){;}
+	return(to);
+}
+
+int main() {
+  int length1 = __VERIFIER_nondet_int();
+  int length2 = __VERIFIER_nondet_int();
+  {if (length1 < 1) {
+      length1 = 1;
+  }}
+  {if (length2 < 1) {
+      length2 = 1;
+  }}
+  {if (length1 < length2) {return 0;}}
+  char* nondetArea = (char*) alloca(length1 * sizeof(char));
+  char* nondetString = (char*) alloca(length2 * sizeof(char));
+  nondetString[length2-1] = '\0';
+  cstpcpy(nondetArea,nondetString);
+  return 0;
+}
+  
+./proton: line 26:    90 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_openbsd_cstpcpy_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+char* cstpcpy(char *to, const char *from)
+{
+myBool pStored0 = myFalse; __VERIFIER_reached_control(7, __func__);
+	for (; (*to = *from) != '\0'; ++from, ++to){ __VERIFIER_loop_head(7, __func__);
+printf("CBMC Instrumentation @ line7");myBool flag=__VERIFIER_nondet_myBool();static const char * ofrom;static char * oto;if(pStored0){__CPROVER_assert(!(ofrom==from && oto==to),"recurrent state found");} if(flag){ofrom=from;oto=to;pStored0=myTrue;} ;}
+	return(to);
+}
+
+int main() {
+  int length1 = __VERIFIER_nondet_int();
+  int length2 = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(14, __func__);
+if (length1 < 1) { __VERIFIER_control_true(14, __func__);
+
+      length1 = 1;
+  }}
+  { __VERIFIER_reached_control(17, __func__);
+if (length2 < 1) { __VERIFIER_control_true(17, __func__);
+
+      length2 = 1;
+  }}
+  { __VERIFIER_reached_control(20, __func__);
+if (length1 < length2) { __VERIFIER_control_true(20, __func__);
+return 0;}}
+  char* nondetArea = (char*) alloca(length1 * sizeof(char));
+  char* nondetString = (char*) alloca(length2 * sizeof(char));
+  nondetString[length2-1] = '\0';
+  cstpcpy(nondetArea,nondetString);
+  return 0;
+}
+  
+./proton: line 26:   102 Aborted                 instrumenter -in *braced.c -c
+svcomp_openbsd_cstpcpy_alloca_braced_instrumented.c
+NTFILE is svcomp_openbsd_cstpcpy_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_openbsd_cstpcpy_alloca.c
+FILE=svcomp_openbsd_cstpcpy_alloca_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 56492 milliseconds

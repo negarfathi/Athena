@@ -1,0 +1,148 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.sgzFT7
+
+Input File is : BradleyMannaSipma-CAV2005-Fig1-modified_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program from Fig.1 of
+ * 2005CAV - Bradley,Manna,Sipma - Linear Ranking with Reachability
+ * Modified version that can be nonterminating because we allow that inputs of
+ * gcd may be zero.
+ *
+ * Date: 12.12.2013
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+
+int gcd(int y1, int y2) {
+	while (y1 != y2) {
+		{if (y1 > y2) {
+			y1 = y1 - y2;
+		} else {
+			y2 = y2 - y1;
+		}}
+	}
+	return y1;
+}
+
+int main() {
+	int y1 = __VERIFIER_nondet_int();
+	int y2 = __VERIFIER_nondet_int();
+	{if (y1 >= 0  && y2 >= 0) {
+		gcd(y1, y2);
+	}}
+	return 0;
+}
+
+
+
+End Main   
+
+Input File is : BradleyMannaSipma-CAV2005-Fig1-modified_false-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Fig.1 of
+ * 2005CAV - Bradley,Manna,Sipma - Linear Ranking with Reachability
+ * Modified version that can be nonterminating because we allow that inputs of
+ * gcd may be zero.
+ *
+ * Date: 12.12.2013
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+
+int gcd(int y1, int y2) {
+myBool pStored0 = myFalse; __VERIFIER_reached_control(16, __func__);
+	while (y1 != y2) { __VERIFIER_loop_head(16, __func__);
+printf("CBMC Instrumentation @ line16");myBool flag=__VERIFIER_nondet_myBool();static int oy1;static int oy2;if(pStored0){__CPROVER_assert(!(oy1==y1 && oy2==y2),"recurrent state found");} if(flag){oy1=y1;oy2=y2;pStored0=myTrue;} 
+		{ __VERIFIER_reached_control(17, __func__);
+if (y1 > y2) { __VERIFIER_control_true(17, __func__);
+
+			y1 = y1 - y2;
+		} else { __VERIFIER_control_false(19, __func__);
+
+			y2 = y2 - y1;
+		}}
+	}
+	return y1;
+}
+
+int main() {
+	int y1 = __VERIFIER_nondet_int();
+	int y2 = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(29, __func__);
+if (y1 >= 0  && y2 >= 0) { __VERIFIER_control_true(29, __func__);
+
+		gcd(y1, y2);
+	}}
+	return 0;
+}
+
+
+
+End Main 
+ BradleyMannaSipma-CAV2005-Fig1-modified_false-termination_braced_instrumented.c
+NTFILE is BradleyMannaSipma-CAV2005-Fig1-modified_false-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = BradleyMannaSipma-CAV2005-Fig1-modified_false-termination.c
+b'39c006d87da3fe68fdf12cd769ec15b2f5d1ee285f7ba039eed0b476b490ec76  BradleyMannaSipma-CAV2005-Fig1-modified_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Termination_Category/BradleyMannaSipma-CAV2005-Fig1-modified_false-termination/BradleyMannaSipma-CAV2005-Fig1-modified_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 29 reachedControl
+main 29 trueBranch
+enteringLasso
+gcd 16 reachedControl
+gcd 16 loopHead
+gcd 17 reachedControl
+gcd 17 trueBranch
+gcd 16 loopHead
+Trace file line inside enterred lasso check : gcd 16 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Termination_Category/BradleyMannaSipma-CAV2005-Fig1-modified_false-termination/BradleyMannaSipma-CAV2005-Fig1-modified_false-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for BradleyMannaSipma-CAV2005-Fig1-modified_false-termination.c
+FILE=BradleyMannaSipma-CAV2005-Fig1-modified_false-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2060 milliseconds

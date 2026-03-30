@@ -1,0 +1,109 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.ZpywTq
+
+Input File is : MinusMin.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  typedef enum {false,true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x;
+    int y;
+    int res;
+    int min;
+    x = __VERIFIER_nondet_int();
+    y = __VERIFIER_nondet_int();
+    res = 0;
+    
+    {if (x < y) { min = x; }
+    else { min = y; }}
+    
+    while (min == y) {
+        y = y+1;
+        res = res+1;
+        {if (x < y) { min = x; }
+        else { min = y; }}
+    }
+    
+    return 0;
+}
+
+End Main   
+
+Input File is : MinusMin_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+typedef enum {false,true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x;
+    int y;
+    int res;
+    int min;
+    x = __VERIFIER_nondet_int();
+    y = __VERIFIER_nondet_int();
+    res = 0;
+    
+    { __VERIFIER_reached_control(14, __func__);
+if (x < y) { __VERIFIER_control_true(14, __func__);
+ min = x; }
+    else { __VERIFIER_control_false(15, __func__);
+ min = y; }}
+    
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(17, __func__);
+ while (min == y) { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int omin;static int ores;static int ox;static int oy;if(pStored0){__CPROVER_assert(!(omin==min && ores==res && ox==x && oy==y),"recurrent state found");} if(flag){omin=min;ores=res;ox=x;oy=y;pStored0=myTrue;} 
+        y = y+1;
+        res = res+1;
+        { __VERIFIER_reached_control(20, __func__);
+if (x < y) { __VERIFIER_control_true(20, __func__);
+ min = x; }
+        else { __VERIFIER_control_false(21, __func__);
+ min = y; }}
+    }
+    
+    return 0;
+}
+
+End Main 
+ MinusMin_braced_instrumented.c
+NTFILE is MinusMin_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for MinusMin.c
+FILE=MinusMin_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 62568 milliseconds

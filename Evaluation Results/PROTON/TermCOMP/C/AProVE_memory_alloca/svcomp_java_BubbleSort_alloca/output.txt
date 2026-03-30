@@ -1,0 +1,107 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.n5RJat
+
+Input File is : svcomp_java_BubbleSort_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+void sort(int *x, int n) {
+    int pass;
+    int i;
+    for (pass=1; pass < n; pass++)  // count how many times
+        // This next loop becomes shorter and shorter
+        {for (i=0; i < n - pass; i++)
+            {{if (x[i] > x[i+1]) {
+                // exchange elements
+                int temp = x[i]; x[i] = x[i+1];  x[i+1] = temp;
+            }}}}
+}
+
+int main() {
+  int array_size = __VERIFIER_nondet_int();
+  {if (array_size < 1) {
+     array_size = 1;
+  }}
+  int* numbers = (int*) alloca(array_size * sizeof(int));
+  sort(numbers, array_size);
+  return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_java_BubbleSort_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+void sort(int *x, int n) {
+    int pass;
+    int i;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(10, __func__);
+ for (pass=1; pass < n; pass++)  // count how many times
+        // This next loop becomes shorter and shorter
+        { __VERIFIER_loop_head(10, __func__);
+printf("CBMC Instrumentation @ line10");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int on;static int opass;if(pStored0){__CPROVER_assert(!(oi==i && on==n && opass==pass),"recurrent state found");} if(flag){oi=i;on=n;opass=pass;pStored0=myTrue;} myBool pStored1 = myFalse; __VERIFIER_reached_control(11, __func__);
+for (i=0; i < n - pass; i++)
+            { __VERIFIER_loop_head(11, __func__);
+printf("CBMC Instrumentation @ line11");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int on;static int opass;if(pStored1){__CPROVER_assert(!(oi==i && on==n && opass==pass),"recurrent state found");} if(flag){oi=i;on=n;opass=pass;pStored1=myTrue;} { __VERIFIER_reached_control(11, __func__);
+if (x[i] > x[i+1]) { __VERIFIER_control_true(11, __func__);
+
+                // exchange elements
+                int temp = x[i]; x[i] = x[i+1];  x[i+1] = temp;
+            }}}}
+}
+
+int main() {
+  int array_size = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(19, __func__);
+if (array_size < 1) { __VERIFIER_control_true(19, __func__);
+
+     array_size = 1;
+  }}
+  int* numbers = (int*) alloca(array_size * sizeof(int));
+  sort(numbers, array_size);
+  return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_java_BubbleSort_alloca_braced_instrumented.c
+NTFILE is svcomp_java_BubbleSort_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_java_BubbleSort_alloca.c
+FILE=svcomp_java_BubbleSort_alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183043 milliseconds

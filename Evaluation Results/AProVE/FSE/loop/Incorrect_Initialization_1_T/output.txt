@@ -1,0 +1,11 @@
+/liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_1_T/Incorrect_Initialization_1_T.c:10:5: warning: incompatible redeclaration of library function 'strcspn' [-Wincompatible-library-redeclaration]
+int strcspn(const char *strSrc, const char *str)
+    ^
+/liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_1_T/Incorrect_Initialization_1_T.c:10:5: note: 'strcspn' is a builtin with type 'unsigned long (const char *, const char *)'
+1 warning generated.
+
+line 157:5 extraneous input 'metadata' expecting EXCLAMATION
+line 157:25 no viable alternative at input '!'
+Accessing possible trap value at node 596.
+MAYBE
+Runtime: 6478 milliseconds

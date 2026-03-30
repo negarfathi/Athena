@@ -1,0 +1,118 @@
+///*** 1_main ***///
+START: main_bb130;
+
+FROM: main_bb130;
+TO: main_bb130_end;
+
+FROM: main_bb130_end;
+assume(0 >= 0);
+TO: main_timeShift.exit.i.i;
+
+FROM: main_bb130_end;
+assume(1 >= 0);
+TO: main_bb139;
+
+FROM: main_timeShift.exit.i.i;
+v456 := nondet();
+v458 := waterLevel;
+TO: main_timeShift.exit.i.i_end;
+
+FROM: main_timeShift.exit.i.i_end;
+assume((v456 != 0) && (v458 < 2));
+TO: main_bb131;
+
+FROM: main_timeShift.exit.i.i_end;
+assume((v456 == 0) || (v458 >= 2));
+TO: main_waterRise.exit.i.i;
+
+FROM: main_bb131;
+v460 := waterLevel;
+v461 := v460 + 1;
+waterLevel := v461;
+TO: main_waterRise.exit.i.i;
+
+FROM: main_waterRise.exit.i.i;
+v462 := nondet();
+TO: main_waterRise.exit.i.i_end;
+
+FROM: main_waterRise.exit.i.i_end;
+assume(v462 != 0);
+TO: main_bb132;
+
+FROM: main_waterRise.exit.i.i_end;
+assume(v462 == 0);
+TO: main_changeMethaneLevel.exit.i.i;
+
+FROM: main_bb132;
+v464 := methaneLevelCritical;
+TO: main_bb132_end;
+
+FROM: main_bb132_end;
+assume(v464 != 0);
+TO: main_bb133;
+
+FROM: main_bb132_end;
+assume(v464 == 0);
+TO: main_bb134;
+
+FROM: main_bb133;
+methaneLevelCritical := 0;
+TO: main_changeMethaneLevel.exit.i.i;
+
+FROM: main_bb134;
+methaneLevelCritical := 1;
+TO: main_changeMethaneLevel.exit.i.i;
+
+FROM: main_changeMethaneLevel.exit.i.i;
+v466 := nondet();
+TO: main_changeMethaneLevel.exit.i.i_end;
+
+FROM: main_changeMethaneLevel.exit.i.i_end;
+assume(v466 != 0);
+TO: main_bb136;
+
+FROM: main_changeMethaneLevel.exit.i.i_end;
+assume(v466 == 0);
+TO: main_bb135;
+
+FROM: main_bb135;
+v468 := nondet();
+TO: main_bb136;
+
+FROM: main_bb136;
+v469 := pumpRunning;
+v471 := waterLevel;
+TO: main_bb136_end;
+
+FROM: main_bb136_end;
+assume((v469 != 0) && (v471 > 0));
+TO: main_bb137;
+
+FROM: main_bb136_end;
+assume((v469 == 0) || (v471 <= 0));
+TO: main_lowerWaterLevel.exit.i.i.i;
+
+FROM: main_bb137;
+v473 := waterLevel;
+v474 := v473 - 1;
+waterLevel := v474;
+TO: main_lowerWaterLevel.exit.i.i.i;
+
+FROM: main_lowerWaterLevel.exit.i.i.i;
+v475 := methaneLevelCritical;
+v477 := pumpRunning;
+TO: main_lowerWaterLevel.exit.i.i.i_end;
+
+FROM: main_lowerWaterLevel.exit.i.i.i_end;
+assume((v475 != 0) && (v477 != 0));
+TO: main_bb138;
+
+FROM: main_lowerWaterLevel.exit.i.i.i_end;
+assume((v475 == 0) || (v477 == 0));
+TO: main_timeShift.exit.i.i;
+
+FROM: main_bb138;
+
+FROM: main_bb139;
+TO: main_bb139_ret;
+

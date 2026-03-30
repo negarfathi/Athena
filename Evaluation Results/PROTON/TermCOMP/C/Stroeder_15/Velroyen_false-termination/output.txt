@@ -1,0 +1,144 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.PYcgXr
+
+Input File is : Velroyen_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Terminating Program for x < -5 OR 0 <= x <= 30 OR x > 35
+ * (from benchmarks of) 2008TAP - Velroyen,Rummer - Non-Termination Checking for Imperative Programs
+ *
+ * Date: 18.12.2013
+ * Author: urban@di.ens.fr
+ */
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int x;
+	while (x!=0) {
+	    {if (-5 <= x && x <= 35) {
+		    {if (x < 0) {
+			    x = -5;
+			} else {
+			    {if (x > 30) {
+				    x = 35;
+				} else {
+					x = x - 1;
+				}}
+			}}
+		} else {
+		    x = 0;
+		}}
+	}
+    return 0;
+}
+
+End Main   
+
+Input File is : Velroyen_false-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Terminating Program for x < -5 OR 0 <= x <= 30 OR x > 35
+ * (from benchmarks of) 2008TAP - Velroyen,Rummer - Non-Termination Checking for Imperative Programs
+ *
+ * Date: 18.12.2013
+ * Author: urban@di.ens.fr
+ */
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int x;
+myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+	while (x!=0) { __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int ox;if(pStored0){__CPROVER_assert(!(ox==x),"recurrent state found");} if(flag){ox=x;pStored0=myTrue;} 
+	    { __VERIFIER_reached_control(15, __func__);
+if (-5 <= x && x <= 35) { __VERIFIER_control_true(15, __func__);
+
+		    { __VERIFIER_reached_control(16, __func__);
+if (x < 0) { __VERIFIER_control_true(16, __func__);
+
+			    x = -5;
+			} else { __VERIFIER_control_false(18, __func__);
+
+			    { __VERIFIER_reached_control(19, __func__);
+if (x > 30) { __VERIFIER_control_true(19, __func__);
+
+				    x = 35;
+				} else { __VERIFIER_control_false(21, __func__);
+
+					x = x - 1;
+				}}
+			}}
+		} else { __VERIFIER_control_false(25, __func__);
+
+		    x = 0;
+		}}
+	}
+    return 0;
+}
+
+End Main 
+ Velroyen_false-termination_braced_instrumented.c
+NTFILE is Velroyen_false-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Velroyen_false-termination.c
+b'ef804c18d00f63eec9ac6688b996219f2bb9d1715db622f1e287a7f4ef3a5de4  Velroyen_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Velroyen_false-termination/Velroyen_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+main 14 reachedControl
+main 14 loopHead
+main 15 reachedControl
+main 15 trueBranch
+main 16 reachedControl
+main 18 falseBranch
+main 19 reachedControl
+main 19 trueBranch
+main 14 loopHead
+Trace file line inside enterred lasso check : main 14 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Velroyen_false-termination/Velroyen_false-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Velroyen_false-termination.c
+FILE=Velroyen_false-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2007 milliseconds

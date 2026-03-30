@@ -1,0 +1,81 @@
+line 132:5 extraneous input 'metadata' expecting EXCLAMATION
+line 132:25 no viable alternative at input '!'
+Graph finished, checking  consistency
+Graph finished, checked consistency, took 0.002s
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+Running Thread.stop() against 1755890481Exec. 10, LLVMLassoToIntTRS[]
+Stack trace:
+    app//immutables.Immutable.ImmutableIterator.hasNext(Unknown Source)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:666)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSTerm.getPositionsWithSubTerms(TRSTerm.java:455)
+    app//aprove.Framework.IRSwT.IRSwTFormatTransformer.killOR(IRSwTFormatTransformer.java:409)
+    app//aprove.Framework.IRSwT.IRSwTFormatTransformer.removeDivModAndNotAndNotEqualAndOrAndFalse(IRSwTFormatTransformer.java:598)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:189)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMLassoToIntTRSProcessor.process(LLVMLassoToIntTRSProcessor.java:53)
+    app//aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+    app//aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Running Thread.stop() against 1755890481Exec. 12, LLVMLassoToIntTRS[]
+Stack trace:
+    app//immutables.Immutable.ImmutableIterator.hasNext(Unknown Source)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:666)
+Aborted 1755890481Exec. 10, LLVMLassoToIntTRS[] with a hard timeout.
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSTerm.getPositionsWithSubTerms(TRSTerm.java:455)
+    app//aprove.Framework.IRSwT.IRSwTFormatTransformer.killOR(IRSwTFormatTransformer.java:409)
+    app//aprove.Framework.IRSwT.IRSwTFormatTransformer.removeDivModAndNotAndNotEqualAndOrAndFalse(IRSwTFormatTransformer.java:598)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:189)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMLassoToIntTRSProcessor.process(LLVMLassoToIntTRSProcessor.java:53)
+    app//aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+    app//aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:157)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Aborted 1755890481Exec. 12, LLVMLassoToIntTRS[] with a hard timeout.
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:157)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+YES
+Runtime: 25672 milliseconds

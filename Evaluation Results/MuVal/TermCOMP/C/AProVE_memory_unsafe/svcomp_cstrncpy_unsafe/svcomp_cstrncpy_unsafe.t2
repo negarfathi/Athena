@@ -1,0 +1,57 @@
+///*** 1_main ***///
+START: main_bb6;
+
+FROM: main_bb6;
+v12 := nondet();
+var__temp_v.0.i := v12;
+TO: main_bb7;
+
+FROM: main_bb7;
+v.0.i := var__temp_v.0.i;
+TO: main_bb7_end;
+
+FROM: main_bb7_end;
+assume(v.0.i > 0);
+TO: main_bb8;
+
+FROM: main_bb7_end;
+assume(v.0.i <= 0);
+TO: main_cstrncpy.exit;
+
+FROM: main_bb8;
+v14 := v.0.i + -1;
+v16 := nondef.3;
+vdst.0.i := v16;
+var__temp_v.0.i := v14;
+var__temp_vn2.0.i := v14;
+TO: main_bb8_end;
+
+FROM: main_bb8_end;
+assume(v18 == 0);
+TO: main_bb9;
+
+FROM: main_bb8_end;
+assume(v18 != 0);
+TO: main_bb7;
+
+FROM: main_bb9;
+vn2.0.i := var__temp_vn2.0.i;
+v20 := vn2.0.i + -1;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(vn2.0.i != 0);
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(vn2.0.i == 0);
+TO: main_cstrncpy.exit;
+
+FROM: main_bb10;
+vus.0.i := 0;
+var__temp_vn2.0.i := v20;
+TO: main_bb9;
+
+FROM: main_cstrncpy.exit;
+TO: main_cstrncpy.exit_ret;
+

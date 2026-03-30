@@ -1,0 +1,56 @@
+///*** 1_main ***///
+START: main_bb5;
+
+FROM: main_bb5;
+memory0_freeIndex := 1;
+vmemory0 := nondet();
+v11 := nondet();
+TO: main_bb5_v.;
+FROM: main_bb5_v.;
+assume(v11 < 1);
+v. := 1;
+TO: main_bb5_sv.;
+
+FROM: main_bb5_v.;
+assume(v11 >= 1);
+v. := v11;
+TO: main_bb5_sv.;
+
+FROM: main_bb5_sv.;
+v13 := v. * 1;
+v14 := memory0_freeIndex;
+v15 := memory0_freeIndex;
+v16 := v15 + v13;
+memory0_freeIndex := v16;
+var__temp_vsum.0.i := 0;
+var__temp_vi.0.i := 0;
+TO: main_bb6;
+
+FROM: main_bb6;
+vsum.0.i := var__temp_vsum.0.i;
+vi.0.i := var__temp_vi.0.i;
+TO: main_bb6_end;
+
+FROM: main_bb6_end;
+assume(vi.0.i < v.);
+TO: main_bb7;
+
+FROM: main_bb6_end;
+assume(vi.0.i >= v.);
+TO: main_sumOfThirdBytes.exit;
+
+FROM: main_bb7;
+v18 := v14 + vi.0.i;
+v19 := v18 + 2;
+v20 := v19;
+v21 := v20;
+v22 := select_array(vmemory0, v21);
+v23 := vsum.0.i + v22;
+v24 := vi.0.i + 1;
+var__temp_vsum.0.i := v23;
+var__temp_vi.0.i := v24;
+TO: main_bb6;
+
+FROM: main_sumOfThirdBytes.exit;
+TO: main_sumOfThirdBytes.exit_ret;
+

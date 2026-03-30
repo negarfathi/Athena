@@ -1,0 +1,137 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.uYtqKU
+
+Input File is : svcomp_BradleyMannaSipma-2005CAV-Fig1-modified_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+/*
+ * Program from Fig.1 of
+ * 2005CAV - Bradley,Manna,Sipma - Linear Ranking with Reachability
+ * Modified version that can be nonterminating because we allow that inputs of
+ * gcd may be zero.
+ *
+ * Date: 12.12.2013
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+
+int gcd(int *y1, int *y2) {
+	while (*y1 != *y2) {
+		{if (*y1 > *y2) {
+			*y1 = *y1 - *y2;
+		} else {
+			*y2 = *y2 - *y1;
+		}}
+	}
+	return *y1;
+}
+
+int main() {
+        int *y1 = alloca(sizeof(int));
+	int *y2 = alloca(sizeof(int));
+	*y1 = __VERIFIER_nondet_int();
+	*y2 = __VERIFIER_nondet_int();
+	{if (*y1 >= 0  && *y2 >= 0) {
+		gcd(y1, y2);
+	}}
+	return 0;
+}
+
+
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_BradleyMannaSipma-2005CAV-Fig1-modified_false-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+/*
+ * Program from Fig.1 of
+ * 2005CAV - Bradley,Manna,Sipma - Linear Ranking with Reachability
+ * Modified version that can be nonterminating because we allow that inputs of
+ * gcd may be zero.
+ *
+ * Date: 12.12.2013
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+
+int gcd(int *y1, int *y2) {
+myBool pStored0 = myFalse; __VERIFIER_reached_control(18, __func__);
+	while (*y1 != *y2) { __VERIFIER_loop_head(18, __func__);
+
+		{ __VERIFIER_reached_control(19, __func__);
+if (*y1 > *y2) { __VERIFIER_control_true(19, __func__);
+
+			*y1 = *y1 - *y2;
+		} else { __VERIFIER_control_false(21, __func__);
+
+			*y2 = *y2 - *y1;
+		}}
+	}
+	return *y1;
+}
+
+int main() {
+        int *y1 = alloca(sizeof(int));
+	int *y2 = alloca(sizeof(int));
+	*y1 = __VERIFIER_nondet_int();
+	*y2 = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(33, __func__);
+if (*y1 >= 0  && *y2 >= 0) { __VERIFIER_control_true(33, __func__);
+
+		gcd(y1, y2);
+	}}
+	return 0;
+}
+
+
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_BradleyMannaSipma-2005CAV-Fig1-modified_false-termination_braced_instrumented.c
+NTFILE is svcomp_BradleyMannaSipma-2005CAV-Fig1-modified_false-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for svcomp_BradleyMannaSipma-2005CAV-Fig1-modified_false-termination.c
+FILE=svcomp_BradleyMannaSipma-2005CAV-Fig1-modified_false-termination_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 121817 milliseconds

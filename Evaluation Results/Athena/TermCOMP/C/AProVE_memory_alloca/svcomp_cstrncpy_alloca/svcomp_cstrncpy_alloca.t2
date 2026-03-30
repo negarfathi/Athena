@@ -1,0 +1,122 @@
+///*** 1_main ***///
+START: main_bb8;
+
+
+
+FROM: main_bb8;
+memory0_freeIndex := 1;
+memory1_freeIndex := 1;
+vmemory0 := nondet();
+vmemory1 := nondet();
+v22 := nondet();
+v23 := nondet();
+TO: main_bb8_v.;
+FROM: main_bb8_v.;
+assume(v22 < 1);
+v. := 1;
+TO: main_bb8_sv.;
+
+FROM: main_bb8_v.;
+assume(v22 >= 1);
+v. := v22;
+TO: main_bb8_sv.;
+
+FROM: main_bb8_sv.;
+TO: main_bb8_vn.0;
+FROM: main_bb8_vn.0;
+assume(v23 < 1);
+vn.0 := 1;
+TO: main_bb8_svn.0;
+
+FROM: main_bb8_vn.0;
+assume(v23 >= 1);
+vn.0 := v23;
+TO: main_bb8_svn.0;
+
+FROM: main_bb8_svn.0;
+v26 := vn.0 * 1;
+v27 := memory1_freeIndex;
+v28 := memory1_freeIndex;
+v29 := v28 + v26;
+memory1_freeIndex := v29;
+v30 := v. * 1;
+v31 := memory0_freeIndex;
+v32 := memory0_freeIndex;
+v33 := v32 + v30;
+memory0_freeIndex := v33;
+v34 := v. - 1;
+v35 := v31 + v34;
+v36 := v35;
+v37 := v36;
+vmemory0 := store_array(vmemory0, v37, 0);
+var__temp_vsrc.0.i := v31;
+var__temp_vdst.0.i := v27;
+var__temp_v.0.i := vn.0;
+TO: main_bb9;
+
+FROM: main_bb9;
+vsrc.0.i := var__temp_vsrc.0.i;
+vdst.0.i := var__temp_vdst.0.i;
+v.0.i := var__temp_v.0.i;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(v.0.i > 0);
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(v.0.i <= 0);
+TO: main_cstrncpy.exit;
+
+FROM: main_bb10;
+v39 := v.0.i + -1;
+v40 := vsrc.0.i + 1;
+v41 := vsrc.0.i;
+v42 := v41;
+v43 := select_array(vmemory0, v42);
+v44 := vdst.0.i + 1;
+v45 := vdst.0.i;
+v46 := v45;
+vmemory1 := store_array(vmemory1, v46, v43);
+v47 := v43;
+var__temp_vsrc.0.i := v40;
+var__temp_vdst.0.i := v44;
+var__temp_v.0.i := v39;
+var__temp_vus.0.i := v44;
+var__temp_vn2.0.i := v39;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(v47 == 0);
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(v47 != 0);
+TO: main_bb9;
+
+FROM: main_bb11;
+vus.0.i := var__temp_vus.0.i;
+vn2.0.i := var__temp_vn2.0.i;
+v49 := vn2.0.i + -1;
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(vn2.0.i != 0);
+TO: main_bb12;
+
+FROM: main_bb11_end;
+assume(vn2.0.i == 0);
+TO: main_cstrncpy.exit;
+
+FROM: main_bb12;
+v51 := vus.0.i + 1;
+v52 := vus.0.i;
+v53 := v52;
+vmemory1 := store_array(vmemory1, v53, 0);
+var__temp_vus.0.i := v51;
+var__temp_vn2.0.i := v49;
+TO: main_bb11;
+
+FROM: main_cstrncpy.exit;
+TO: main_cstrncpy.exit_ret;
+

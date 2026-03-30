@@ -1,0 +1,36 @@
+line 25:59 mismatched input 'unnamed_addr' expecting OPENC
+line 26:7 mismatched input 'alloca' expecting TYPE
+line 26:31 mismatched input '*' expecting ASSIGN
+line 27:25 mismatched input '*' expecting ASSIGN
+line 27:32 mismatched input ',' expecting ASSIGN
+line 27:51 mismatched input '*' expecting ASSIGN
+line 27:56 mismatched input ',' expecting ASSIGN
+line 28:7 mismatched input 'load' expecting TYPE
+line 28:29 mismatched input '*' expecting ASSIGN
+line 29:2 mismatched input 'call' expecting ASSIGN
+Aborted 1755903508Exec. 2, CToLLVM with some error. Reason: java.lang.AssertionError: Did not find any first block!.
+            aprove.InputModules.Programs.llvm.parseStructures.LLVMParseFunctionDefinition.convertToFnDefinition(LLVMParseFunctionDefinition.java:37)
+            aprove.InputModules.Programs.llvm.parseStructures.LLVMParseModule.createBasicStructure(LLVMParseModule.java:114)
+            aprove.InputModules.Programs.llvm.Translator.translate(Translator.java:136)
+            aprove.InputModules.Programs.llvm.Translator.translate(Translator.java:115)
+            aprove.Framework.Input.Translator$TranslatorSkeleton.translate(Translator.java:91)
+            aprove.InputModules.Programs.c.CToLLVMProcessor.process(CToLLVMProcessor.java:69)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            java.base/java.lang.Thread.run(Thread.java:840)
+java.lang.AssertionError: Did not find any first block!
+	at aprove.InputModules.Programs.llvm.parseStructures.LLVMParseFunctionDefinition.convertToFnDefinition(LLVMParseFunctionDefinition.java:37)
+	at aprove.InputModules.Programs.llvm.parseStructures.LLVMParseModule.createBasicStructure(LLVMParseModule.java:114)
+	at aprove.InputModules.Programs.llvm.Translator.translate(Translator.java:136)
+	at aprove.InputModules.Programs.llvm.Translator.translate(Translator.java:115)
+	at aprove.Framework.Input.Translator$TranslatorSkeleton.translate(Translator.java:91)
+	at aprove.InputModules.Programs.c.CToLLVMProcessor.process(CToLLVMProcessor.java:69)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+MAYBE
+Runtime: 2254 milliseconds

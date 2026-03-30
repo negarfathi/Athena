@@ -1,0 +1,95 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.7nsVka
+
+Input File is : sum_non_eq_false-unreach-call.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern void __VERIFIER_error();
+
+int sum(int n, int m) {
+    {if (n == 0) {
+      return m;
+    } else {
+      return sum(n - 1, m + 1);
+    }}
+}
+
+int main(void) {
+  int a;
+  int b;
+  int result = sum(a, b);
+  {if (result == a + b) {
+    ERROR: __VERIFIER_error();
+  }}
+}
+
+End Main   
+
+Input File is : sum_non_eq_false-unreach-call_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error();
+
+int sum(int n, int m) {
+    { __VERIFIER_reached_control(4, __func__);
+if (n == 0) { __VERIFIER_control_true(4, __func__);
+
+      return m;
+    } else { __VERIFIER_control_false(6, __func__);
+
+      return sum(n - 1, m + 1);
+    }}
+}
+
+int main(void) {
+  int a;
+  int b;
+  int result = sum(a, b);
+  { __VERIFIER_reached_control(15, __func__);
+if (result == a + b) { __VERIFIER_control_true(15, __func__);
+
+    ERROR: __VERIFIER_error();
+  }}
+}
+
+End Main 
+ sum_non_eq_false-unreach-call_braced_instrumented.c
+NTFILE is sum_non_eq_false-unreach-call_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for sum_non_eq_false-unreach-call.c
+FILE=sum_non_eq_false-unreach-call_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 121520 milliseconds

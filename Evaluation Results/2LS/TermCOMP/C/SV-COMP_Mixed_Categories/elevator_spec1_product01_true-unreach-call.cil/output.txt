@@ -1,0 +1,1282 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/elevator_spec1_product01_true-unreach-call.cil/elevator_spec1_product01_true-unreach-call.cil.c
+Converting
+Type-checking elevator_spec1_product01_true-unreach-call.cil
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+file libacc.c line 65 function __utac__exception__cf_handler_reset: replacing function pointer by 0 possible targets
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __automaton_fail
+Simplifying
+Computing SSA of getDestination
+Simplifying
+Computing SSA of enterElevator
+Simplifying
+Computing SSA of isFloorCalling
+Simplifying
+Computing SSA of resetCallOnFloor
+Simplifying
+Computing SSA of isPersonOnFloor
+Simplifying
+Computing SSA of removePersonFromFloor
+Simplifying
+Computing SSA of isTopFloor
+Simplifying
+Computing SSA of initFloors
+Simplifying
+Computing SSA of timeShift
+Simplifying
+Computing SSA of isBlocked
+Simplifying
+Computing SSA of printState
+Simplifying
+Computing SSA of isEmpty
+Simplifying
+Computing SSA of isAnyLiftButtonPressed
+Simplifying
+Computing SSA of buttonForFloorIsPressed
+Simplifying
+Computing SSA of initTopDown
+Simplifying
+Computing SSA of initBottomUp
+Simplifying
+Computing SSA of areDoorsOpen
+Simplifying
+Computing SSA of getCurrentFloorID
+Simplifying
+Computing SSA of isIdle
+Simplifying
+Computing SSA of leaveElevator
+Simplifying
+Computing SSA of pressInLiftFloorButton
+Simplifying
+Computing SSA of resetFloorButton
+Simplifying
+Computing SSA of getCurrentHeading
+Simplifying
+Computing SSA of anyStopRequested
+Simplifying
+Computing SSA of stopRequestedInDirection
+Simplifying
+Computing SSA of continueInDirection
+Simplifying
+Computing SSA of stopRequestedAtCurrentFloor
+Simplifying
+Computing SSA of getReverseHeading
+Simplifying
+Computing SSA of processWaitingOnFloor
+Simplifying
+Computing SSA of __utac_acc__Specification1_spec__3
+Simplifying
+Computing SSA of existInLiftCallsInDirection
+Simplifying
+Computing SSA of get_nondetMinMax07
+Simplifying
+Computing SSA of initPersonOnFloor
+Simplifying
+Computing SSA of getOrigin
+Simplifying
+Computing SSA of bobCall
+Simplifying
+Computing SSA of aliceCall
+Simplifying
+Computing SSA of angelinaCall
+Simplifying
+Computing SSA of chuckCall
+Simplifying
+Computing SSA of monicaCall
+Simplifying
+Computing SSA of bigMacCall
+Simplifying
+Computing SSA of threeTS
+Simplifying
+Computing SSA of cleanup
+Simplifying
+Computing SSA of randomSequenceOfActions
+Simplifying
+Computing SSA of runTest_Simple
+Simplifying
+Computing SSA of Specification1
+Simplifying
+Computing SSA of Specification2
+Simplifying
+Computing SSA of Specification3
+Simplifying
+Computing SSA of setup
+Simplifying
+Computing SSA of __utac_acc__Specification1_spec__1
+Simplifying
+Computing SSA of __utac_acc__Specification1_spec__4
+Simplifying
+Computing SSA of test
+Simplifying
+Computing SSA of runTest
+Simplifying
+Computing SSA of select_helpers
+Simplifying
+Computing SSA of select_features
+Simplifying
+Computing SSA of valid_product
+Simplifying
+Computing SSA of callOnFloor
+Simplifying
+Computing SSA of __utac_acc__Specification1_spec__2
+Simplifying
+Computing SSA of __utac__exception__cf_handler_set
+Simplifying
+Computing SSA of __utac__exception__cf_handler_free
+Simplifying
+Computing SSA of __utac__exception__cf_handler_reset
+Simplifying
+Computing SSA of __utac__error_stack_mgt
+Simplifying
+Computing SSA of __utac__get_this_arg
+Simplifying
+Computing SSA of __utac__get_this_argtype
+Simplifying
+Computing SSA of spec1
+Simplifying
+Computing SSA of spec14
+Simplifying
+Computing SSA of getWeight
+Simplifying
+Computing SSA of select_one
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object head'obj.v head head'obj.next __CPROVER_rounding_mode calls_0 calls_1 calls_2 calls_3 calls_4 cleanupTimeShifts currentFloorID currentHeading doorState floorButtons_0 floorButtons_1 floorButtons_2 floorButtons_3 floorButtons_4 landingButtons_spc1_0 landingButtons_spc1_1 landingButtons_spc1_2 landingButtons_spc1_3 landingButtons_spc1_4 personOnFloor_0_0 personOnFloor_0_1 personOnFloor_0_2 personOnFloor_0_3 personOnFloor_0_4 personOnFloor_1_0 personOnFloor_1_1 personOnFloor_1_2 personOnFloor_1_3 personOnFloor_1_4 personOnFloor_2_0 personOnFloor_2_1 personOnFloor_2_2 personOnFloor_2_3 personOnFloor_2_4 personOnFloor_3_0 personOnFloor_3_1 personOnFloor_3_2 personOnFloor_3_3 personOnFloor_3_4 personOnFloor_4_0 personOnFloor_4_1 personOnFloor_4_2 personOnFloor_4_3 personOnFloor_4_4 personOnFloor_5_0 personOnFloor_5_1 personOnFloor_5_2 personOnFloor_5_3 personOnFloor_5_4 persons_0 persons_1 persons_2 persons_3 persons_4 persons_5 head'obj __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#32 __CPROVER_thread_key_dtors#30 __CPROVER_thread_keys#31 __CPROVER_malloc_is_new_array#22 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#19 __CPROVER_dead_object#20 __CPROVER_deallocated#21 __CPROVER_new_object#24 head'obj.v head#47 head'obj.next __CPROVER_rounding_mode#28 calls_0#33 calls_1#34 calls_2#35 calls_3#36 calls_4#37 cleanupTimeShifts#38 currentFloorID#39 currentHeading#40 doorState#41 floorButtons_0#42 floorButtons_1#43 floorButtons_2#44 floorButtons_3#45 floorButtons_4#46 landingButtons_spc1_0#48 landingButtons_spc1_1#49 landingButtons_spc1_2#50 landingButtons_spc1_3#51 landingButtons_spc1_4#52 personOnFloor_0_0#53 personOnFloor_0_1#54 personOnFloor_0_2#55 personOnFloor_0_3#56 personOnFloor_0_4#57 personOnFloor_1_0#58 personOnFloor_1_1#59 personOnFloor_1_2#60 personOnFloor_1_3#61 personOnFloor_1_4#62 personOnFloor_2_0#63 personOnFloor_2_1#64 personOnFloor_2_2#65 personOnFloor_2_3#66 personOnFloor_2_4#67 personOnFloor_3_0#68 personOnFloor_3_1#69 personOnFloor_3_2#70 personOnFloor_3_3#71 personOnFloor_3_4#72 personOnFloor_4_0#73 personOnFloor_4_1#74 personOnFloor_4_2#75 personOnFloor_4_3#76 personOnFloor_4_4#77 personOnFloor_5_0#78 personOnFloor_5_1#79 personOnFloor_5_2#80 personOnFloor_5_3#81 personOnFloor_5_4#82 persons_0#83 persons_1#84 persons_2#85 persons_3#86 persons_4#87 persons_5#88 head'obj __CPROVER_pipe_count#27 __CPROVER_max_malloc_size#23 __CPROVER_next_thread_id#25 __CPROVER_next_thread_key#26 __CPROVER_thread_id#29 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#28 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#28) <= 0 && calls_0#33 <= 0 && -((signed __CPROVER_bitvector[33])calls_0#33) <= 0 && calls_1#34 <= 0 && -((signed __CPROVER_bitvector[33])calls_1#34) <= 0 && calls_2#35 <= 0 && -((signed __CPROVER_bitvector[33])calls_2#35) <= 0 && calls_3#36 <= 0 && -((signed __CPROVER_bitvector[33])calls_3#36) <= 0 && calls_4#37 <= 0 && -((signed __CPROVER_bitvector[33])calls_4#37) <= 0 && cleanupTimeShifts#38 <= 12 && -((signed __CPROVER_bitvector[33])cleanupTimeShifts#38) <= -12 && currentFloorID#39 <= 0 && -((signed __CPROVER_bitvector[33])currentFloorID#39) <= 0 && currentHeading#40 <= 1 && -((signed __CPROVER_bitvector[33])currentHeading#40) <= -1 && doorState#41 <= 1 && -((signed __CPROVER_bitvector[33])doorState#41) <= -1 && floorButtons_0#42 <= 0 && -((signed __CPROVER_bitvector[33])floorButtons_0#42) <= 0 && floorButtons_1#43 <= 0 && -((signed __CPROVER_bitvector[33])floorButtons_1#43) <= 0 && floorButtons_2#44 <= 0 && -((signed __CPROVER_bitvector[33])floorButtons_2#44) <= 0 && floorButtons_3#45 <= 0 && -((signed __CPROVER_bitvector[33])floorButtons_3#45) <= 0 && floorButtons_4#46 <= 0 && -((signed __CPROVER_bitvector[33])floorButtons_4#46) <= 0 && landingButtons_spc1_0#48 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_0#48) <= 0 && landingButtons_spc1_1#49 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_1#49) <= 0 && landingButtons_spc1_2#50 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_2#50) <= 0 && landingButtons_spc1_3#51 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_3#51) <= 0 && landingButtons_spc1_4#52 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_4#52) <= 0 && personOnFloor_0_0#53 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_0_0#53) <= 0 && personOnFloor_0_1#54 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_0_1#54) <= 0 && personOnFloor_0_2#55 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_0_2#55) <= 0 && personOnFloor_0_3#56 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_0_3#56) <= 0 && personOnFloor_0_4#57 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_0_4#57) <= 0 && personOnFloor_1_0#58 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_1_0#58) <= 0 && personOnFloor_1_1#59 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_1_1#59) <= 0 && personOnFloor_1_2#60 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_1_2#60) <= 0 && personOnFloor_1_3#61 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_1_3#61) <= 0 && personOnFloor_1_4#62 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_1_4#62) <= 0 && personOnFloor_2_0#63 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_2_0#63) <= 0 && personOnFloor_2_1#64 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_2_1#64) <= 0 && personOnFloor_2_2#65 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_2_2#65) <= 0 && personOnFloor_2_3#66 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_2_3#66) <= 0 && personOnFloor_2_4#67 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_2_4#67) <= 0 && personOnFloor_3_0#68 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_3_0#68) <= 0 && personOnFloor_3_1#69 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_3_1#69) <= 0 && personOnFloor_3_2#70 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_3_2#70) <= 0 && personOnFloor_3_3#71 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_3_3#71) <= 0 && personOnFloor_3_4#72 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_3_4#72) <= 0 && personOnFloor_4_0#73 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_4_0#73) <= 0 && personOnFloor_4_1#74 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_4_1#74) <= 0 && personOnFloor_4_2#75 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_4_2#75) <= 0 && personOnFloor_4_3#76 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_4_3#76) <= 0 && personOnFloor_4_4#77 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_4_4#77) <= 0 && personOnFloor_5_0#78 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_5_0#78) <= 0 && personOnFloor_5_1#79 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_5_1#79) <= 0 && personOnFloor_5_2#80 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_5_2#80) <= 0 && personOnFloor_5_3#81 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_5_3#81) <= 0 && personOnFloor_5_4#82 <= 0 && -((signed __CPROVER_bitvector[33])personOnFloor_5_4#82) <= 0 && persons_0#83 <= 0 && -((signed __CPROVER_bitvector[33])persons_0#83) <= 0 && persons_1#84 <= 0 && -((signed __CPROVER_bitvector[33])persons_1#84) <= 0 && persons_2#85 <= 0 && -((signed __CPROVER_bitvector[33])persons_2#85) <= 0 && persons_3#86 <= 0 && -((signed __CPROVER_bitvector[33])persons_3#86) <= 0 && persons_4#87 <= 0 && -((signed __CPROVER_bitvector[33])persons_4#87) <= 0 && persons_5#88 <= 0 && -((signed __CPROVER_bitvector[33])persons_5#88) <= 0 && __CPROVER_pipe_count#27 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#27) <= 0 && __CPROVER_max_malloc_size#23 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#23) <= -36028797018963968 && __CPROVER_next_thread_id#25 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#25) <= 0 && __CPROVER_next_thread_key#26 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#26) <= 0 && __CPROVER_thread_id#29 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#29) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of select_helpers
+Function select_helpers not analyzed yet
+Recursively summarizing function select_helpers
+Analyzing function select_helpers
+Computing summary
+Computing termination argument for select_helpers
+Function trivially terminates
+
+Summary for function select_helpers
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of select_features
+Function select_features not analyzed yet
+Recursively summarizing function select_features
+Analyzing function select_features
+Computing summary
+Computing termination argument for select_features
+Function trivially terminates
+
+Summary for function select_features
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of valid_product
+Function valid_product not analyzed yet
+Recursively summarizing function valid_product
+Analyzing function valid_product
+Computing summary
+Computing termination argument for valid_product
+Function trivially terminates
+
+Summary for function valid_product
+params: 
+globals_in: 
+globals_out: valid_product#return_value#2544 
+forward precondition: TRUE
+forward transformer: valid_product#return_value#2544 <= 1 && -((signed __CPROVER_bitvector[33])valid_product#return_value#2544) <= -1
+forward invariant: valid_product#return_value#2544 <= 1 && -((signed __CPROVER_bitvector[33])valid_product#return_value#2544) <= -1
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setup
+Function setup not analyzed yet
+Recursively summarizing function setup
+Analyzing function setup
+Computing summary
+Computing termination argument for setup
+Function trivially terminates
+
+Summary for function setup
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of runTest
+Function runTest not analyzed yet
+Recursively summarizing function runTest
+Checking precondition of __utac_acc__Specification1_spec__1
+Function __utac_acc__Specification1_spec__1 not analyzed yet
+Recursively summarizing function __utac_acc__Specification1_spec__1
+Analyzing function __utac_acc__Specification1_spec__1
+Computing summary
+Computing termination argument for __utac_acc__Specification1_spec__1
+Function trivially terminates
+
+Summary for function __utac_acc__Specification1_spec__1
+params: 
+globals_in: landingButtons_spc1_0 landingButtons_spc1_1 landingButtons_spc1_2 landingButtons_spc1_3 landingButtons_spc1_4 
+globals_out: landingButtons_spc1_0#2511 landingButtons_spc1_1#2512 landingButtons_spc1_2#2513 landingButtons_spc1_3#2514 landingButtons_spc1_4#2515 
+forward precondition: TRUE
+forward transformer: landingButtons_spc1_0#2511 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_0#2511) <= 0 && landingButtons_spc1_1#2512 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_1#2512) <= 0 && landingButtons_spc1_2#2513 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_2#2513) <= 0 && landingButtons_spc1_3#2514 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_3#2514) <= 0 && landingButtons_spc1_4#2515 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_4#2515) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of test
+Function test not analyzed yet
+Recursively summarizing function test
+Checking precondition of bigMacCall
+Function bigMacCall not analyzed yet
+Recursively summarizing function bigMacCall
+Checking precondition of getOrigin
+Function getOrigin not analyzed yet
+Recursively summarizing function getOrigin
+Analyzing function getOrigin
+Computing summary
+Computing termination argument for getOrigin
+Function trivially terminates
+
+Summary for function getOrigin
+params: person 
+globals_in: 
+globals_out: getOrigin#return_value#phi2350 
+forward precondition: TRUE
+forward transformer: getOrigin#return_value#phi2350 <= 4 && -((signed __CPROVER_bitvector[33])getOrigin#return_value#phi2350) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of initPersonOnFloor
+Function initPersonOnFloor not analyzed yet
+Recursively summarizing function initPersonOnFloor
+Checking precondition of callOnFloor
+Function callOnFloor not analyzed yet
+Recursively summarizing function callOnFloor
+Checking precondition of __utac_acc__Specification1_spec__2
+Function __utac_acc__Specification1_spec__2 not analyzed yet
+Recursively summarizing function __utac_acc__Specification1_spec__2
+Analyzing function __utac_acc__Specification1_spec__2
+Computing summary
+Computing termination argument for __utac_acc__Specification1_spec__2
+Function trivially terminates
+
+Summary for function __utac_acc__Specification1_spec__2
+params: floor 
+globals_in: landingButtons_spc1_0 landingButtons_spc1_1 landingButtons_spc1_2 landingButtons_spc1_3 landingButtons_spc1_4 
+globals_out: landingButtons_spc1_0#phi2583 landingButtons_spc1_1#phi2583 landingButtons_spc1_2#phi2583 landingButtons_spc1_3#phi2583 landingButtons_spc1_4#phi2583 
+forward precondition: TRUE
+forward transformer: landingButtons_spc1_0#phi2583 <= 2147483647 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_0#phi2583) <= 2147483648 && landingButtons_spc1_1#phi2583 <= 2147483647 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_1#phi2583) <= 2147483648 && landingButtons_spc1_2#phi2583 <= 2147483647 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_2#phi2583) <= 2147483648 && landingButtons_spc1_3#phi2583 <= 2147483647 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_3#phi2583) <= 2147483648 && landingButtons_spc1_4#phi2583 <= 2147483647 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_4#phi2583) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function callOnFloor
+Computing summary
+Computing termination argument for callOnFloor
+Function terminates
+
+Summary for function callOnFloor
+params: floorID 
+globals_in: calls_0 calls_1 calls_2 calls_3 calls_4 
+globals_out: calls_0#phi2567 calls_1#phi2567 calls_2#phi2567 calls_3#phi2567 calls_4#phi2567 
+forward precondition: TRUE
+forward transformer: calls_0#phi2567 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_0#phi2567) <= 2147483648 && calls_1#phi2567 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_1#phi2567) <= 2147483648 && calls_2#phi2567 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_2#phi2567) <= 2147483648 && calls_3#phi2567 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_3#phi2567) <= 2147483648 && calls_4#phi2567 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_4#phi2567) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function initPersonOnFloor
+Computing summary
+Computing termination argument for initPersonOnFloor
+Function terminates
+
+Summary for function initPersonOnFloor
+params: person floor 
+globals_in: personOnFloor_0_0 personOnFloor_0_1 personOnFloor_0_2 personOnFloor_0_3 personOnFloor_0_4 personOnFloor_1_0 personOnFloor_1_1 personOnFloor_1_2 personOnFloor_1_3 personOnFloor_1_4 personOnFloor_2_0 personOnFloor_2_1 personOnFloor_2_2 personOnFloor_2_3 personOnFloor_2_4 personOnFloor_3_0 personOnFloor_3_1 personOnFloor_3_2 personOnFloor_3_3 personOnFloor_3_4 personOnFloor_4_0 personOnFloor_4_1 personOnFloor_4_2 personOnFloor_4_3 personOnFloor_4_4 personOnFloor_5_0 personOnFloor_5_1 personOnFloor_5_2 personOnFloor_5_3 personOnFloor_5_4 
+globals_out: personOnFloor_0_0#phi2305 personOnFloor_0_1#phi2305 personOnFloor_0_2#phi2305 personOnFloor_0_3#phi2305 personOnFloor_0_4#phi2305 personOnFloor_1_0#phi2305 personOnFloor_1_1#phi2305 personOnFloor_1_2#phi2305 personOnFloor_1_3#phi2305 personOnFloor_1_4#phi2305 personOnFloor_2_0#phi2305 personOnFloor_2_1#phi2305 personOnFloor_2_2#phi2305 personOnFloor_2_3#phi2305 personOnFloor_2_4#phi2305 personOnFloor_3_0#phi2305 personOnFloor_3_1#phi2305 personOnFloor_3_2#phi2305 personOnFloor_3_3#phi2305 personOnFloor_3_4#phi2305 personOnFloor_4_0#phi2305 personOnFloor_4_1#phi2305 personOnFloor_4_2#phi2305 personOnFloor_4_3#phi2305 personOnFloor_4_4#phi2305 personOnFloor_5_0#phi2305 personOnFloor_5_1#phi2305 personOnFloor_5_2#phi2305 personOnFloor_5_3#phi2305 personOnFloor_5_4#phi2305 
+forward precondition: TRUE
+forward transformer: personOnFloor_0_0#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_0#phi2305) <= 2147483648 && personOnFloor_0_1#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_1#phi2305) <= 2147483648 && personOnFloor_0_2#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_2#phi2305) <= 2147483648 && personOnFloor_0_3#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_3#phi2305) <= 2147483648 && personOnFloor_0_4#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_4#phi2305) <= 2147483648 && personOnFloor_1_0#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_0#phi2305) <= 2147483648 && personOnFloor_1_1#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_1#phi2305) <= 2147483648 && personOnFloor_1_2#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_2#phi2305) <= 2147483648 && personOnFloor_1_3#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_3#phi2305) <= 2147483648 && personOnFloor_1_4#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_4#phi2305) <= 2147483648 && personOnFloor_2_0#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_0#phi2305) <= 2147483648 && personOnFloor_2_1#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_1#phi2305) <= 2147483648 && personOnFloor_2_2#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_2#phi2305) <= 2147483648 && personOnFloor_2_3#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_3#phi2305) <= 2147483648 && personOnFloor_2_4#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_4#phi2305) <= 2147483648 && personOnFloor_3_0#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_0#phi2305) <= 2147483648 && personOnFloor_3_1#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_1#phi2305) <= 2147483648 && personOnFloor_3_2#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_2#phi2305) <= 2147483648 && personOnFloor_3_3#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_3#phi2305) <= 2147483648 && personOnFloor_3_4#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_4#phi2305) <= 2147483648 && personOnFloor_4_0#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_0#phi2305) <= 2147483648 && personOnFloor_4_1#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_1#phi2305) <= 2147483648 && personOnFloor_4_2#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_2#phi2305) <= 2147483648 && personOnFloor_4_3#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_3#phi2305) <= 2147483648 && personOnFloor_4_4#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_4#phi2305) <= 2147483648 && personOnFloor_5_0#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_0#phi2305) <= 2147483648 && personOnFloor_5_1#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_1#phi2305) <= 2147483648 && personOnFloor_5_2#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_2#phi2305) <= 2147483648 && personOnFloor_5_3#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_3#phi2305) <= 2147483648 && personOnFloor_5_4#phi2305 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_4#phi2305) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function bigMacCall
+Computing summary
+Computing termination argument for bigMacCall
+Function terminates
+
+Summary for function bigMacCall
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of angelinaCall
+Function angelinaCall not analyzed yet
+Recursively summarizing function angelinaCall
+Checking precondition of getOrigin
+Precondition trivially holds, replacing by summary.
+Checking precondition of initPersonOnFloor
+Precondition trivially holds, replacing by summary.
+Analyzing function angelinaCall
+Computing summary
+Computing termination argument for angelinaCall
+Function terminates
+
+Summary for function angelinaCall
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of cleanup
+Function cleanup not analyzed yet
+Recursively summarizing function cleanup
+Checking precondition of timeShift
+Function timeShift not analyzed yet
+Recursively summarizing function timeShift
+Checking precondition of stopRequestedAtCurrentFloor
+Function stopRequestedAtCurrentFloor not analyzed yet
+Recursively summarizing function stopRequestedAtCurrentFloor
+Checking precondition of isFloorCalling
+Function isFloorCalling not analyzed yet
+Recursively summarizing function isFloorCalling
+Analyzing function isFloorCalling
+Computing summary
+Computing termination argument for isFloorCalling
+Function trivially terminates
+
+Summary for function isFloorCalling
+params: floorID 
+globals_in: calls_0 calls_1 calls_2 calls_3 calls_4 
+globals_out: calls_0 calls_1 calls_2 calls_3 calls_4 isFloorCalling#return_value#phi192 
+forward precondition: TRUE
+forward transformer: calls_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_0) <= 2147483648 && calls_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_1) <= 2147483648 && calls_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_2) <= 2147483648 && calls_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_3) <= 2147483648 && calls_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_4) <= 2147483648 && isFloorCalling#return_value#phi192 <= 2147483647 && -((signed __CPROVER_bitvector[33])isFloorCalling#return_value#phi192) <= 2147483648
+forward invariant: calls_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_0) <= 2147483648 && calls_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_1) <= 2147483648 && calls_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_2) <= 2147483648 && calls_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_3) <= 2147483648 && calls_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_4) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of buttonForFloorIsPressed
+Function buttonForFloorIsPressed not analyzed yet
+Recursively summarizing function buttonForFloorIsPressed
+Analyzing function buttonForFloorIsPressed
+Computing summary
+Computing termination argument for buttonForFloorIsPressed
+Function trivially terminates
+
+Summary for function buttonForFloorIsPressed
+params: floorID 
+globals_in: floorButtons_0 floorButtons_1 floorButtons_2 floorButtons_3 floorButtons_4 
+globals_out: buttonForFloorIsPressed#return_value#phi879 floorButtons_0 floorButtons_1 floorButtons_2 floorButtons_3 floorButtons_4 
+forward precondition: TRUE
+forward transformer: buttonForFloorIsPressed#return_value#phi879 <= 2147483647 && -((signed __CPROVER_bitvector[33])buttonForFloorIsPressed#return_value#phi879) <= 2147483648 && floorButtons_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_0) <= 2147483648 && floorButtons_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_1) <= 2147483648 && floorButtons_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_2) <= 2147483648 && floorButtons_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_3) <= 2147483648 && floorButtons_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_4) <= 2147483648
+forward invariant: floorButtons_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_0) <= 2147483648 && floorButtons_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_1) <= 2147483648 && floorButtons_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_2) <= 2147483648 && floorButtons_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_3) <= 2147483648 && floorButtons_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_4) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function stopRequestedAtCurrentFloor
+Computing summary
+Computing termination argument for stopRequestedAtCurrentFloor
+Function terminates
+
+Summary for function stopRequestedAtCurrentFloor
+params: 
+globals_in: currentFloorID 
+globals_out: currentFloorID stopRequestedAtCurrentFloor#return_value#phi1834 
+forward precondition: TRUE
+forward transformer: currentFloorID <= 2147483647 && -((signed __CPROVER_bitvector[33])currentFloorID) <= 2147483648 && stopRequestedAtCurrentFloor#return_value#phi1834 <= 1 && -((signed __CPROVER_bitvector[33])stopRequestedAtCurrentFloor#return_value#phi1834) <= 0
+forward invariant: currentFloorID <= 2147483647 && -((signed __CPROVER_bitvector[33])currentFloorID) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getDestination
+Function getDestination not analyzed yet
+Recursively summarizing function getDestination
+Analyzing function getDestination
+Computing summary
+Computing termination argument for getDestination
+Function trivially terminates
+
+Summary for function getDestination
+params: person 
+globals_in: 
+globals_out: getDestination#return_value#phi137 
+forward precondition: TRUE
+forward transformer: getDestination#return_value#phi137 <= 3 && -((signed __CPROVER_bitvector[33])getDestination#return_value#phi137) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of leaveElevator
+Function leaveElevator not analyzed yet
+Recursively summarizing function leaveElevator
+Analyzing function leaveElevator
+Computing summary
+Computing termination argument for leaveElevator
+Function trivially terminates
+
+Summary for function leaveElevator
+params: p 
+globals_in: persons_0 persons_1 persons_2 persons_3 persons_4 persons_5 
+globals_out: persons_0#phi957 persons_1#phi957 persons_2#phi957 persons_3#phi957 persons_4#phi957 persons_5#phi957 
+forward precondition: TRUE
+forward transformer: persons_0#phi957 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_0#phi957) <= 2147483648 && persons_1#phi957 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_1#phi957) <= 2147483648 && persons_2#phi957 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_2#phi957) <= 2147483648 && persons_3#phi957 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_3#phi957) <= 2147483648 && persons_4#phi957 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_4#phi957) <= 2147483648 && persons_5#phi957 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_5#phi957) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of leaveElevator
+Precondition trivially holds, replacing by summary.
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of leaveElevator
+Precondition trivially holds, replacing by summary.
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of leaveElevator
+Precondition trivially holds, replacing by summary.
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of leaveElevator
+Precondition trivially holds, replacing by summary.
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of leaveElevator
+Precondition trivially holds, replacing by summary.
+Checking precondition of processWaitingOnFloor
+Function processWaitingOnFloor not analyzed yet
+Recursively summarizing function processWaitingOnFloor
+Checking precondition of isPersonOnFloor
+Function isPersonOnFloor not analyzed yet
+Recursively summarizing function isPersonOnFloor
+Analyzing function isPersonOnFloor
+Computing summary
+Computing termination argument for isPersonOnFloor
+Function trivially terminates
+
+Summary for function isPersonOnFloor
+params: person floor 
+globals_in: personOnFloor_0_0 personOnFloor_0_1 personOnFloor_0_2 personOnFloor_0_3 personOnFloor_0_4 personOnFloor_1_0 personOnFloor_1_1 personOnFloor_1_2 personOnFloor_1_3 personOnFloor_1_4 personOnFloor_2_0 personOnFloor_2_1 personOnFloor_2_2 personOnFloor_2_3 personOnFloor_2_4 personOnFloor_3_0 personOnFloor_3_1 personOnFloor_3_2 personOnFloor_3_3 personOnFloor_3_4 personOnFloor_4_0 personOnFloor_4_1 personOnFloor_4_2 personOnFloor_4_3 personOnFloor_4_4 personOnFloor_5_0 personOnFloor_5_1 personOnFloor_5_2 personOnFloor_5_3 personOnFloor_5_4 
+globals_out: isPersonOnFloor#return_value#phi399 personOnFloor_0_0 personOnFloor_0_1 personOnFloor_0_2 personOnFloor_0_3 personOnFloor_0_4 personOnFloor_1_0 personOnFloor_1_1 personOnFloor_1_2 personOnFloor_1_3 personOnFloor_1_4 personOnFloor_2_0 personOnFloor_2_1 personOnFloor_2_2 personOnFloor_2_3 personOnFloor_2_4 personOnFloor_3_0 personOnFloor_3_1 personOnFloor_3_2 personOnFloor_3_3 personOnFloor_3_4 personOnFloor_4_0 personOnFloor_4_1 personOnFloor_4_2 personOnFloor_4_3 personOnFloor_4_4 personOnFloor_5_0 personOnFloor_5_1 personOnFloor_5_2 personOnFloor_5_3 personOnFloor_5_4 
+forward precondition: TRUE
+forward transformer: isPersonOnFloor#return_value#phi399 <= 2147483647 && -((signed __CPROVER_bitvector[33])isPersonOnFloor#return_value#phi399) <= 2147483648 && personOnFloor_0_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_0) <= 2147483648 && personOnFloor_0_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_1) <= 2147483648 && personOnFloor_0_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_2) <= 2147483648 && personOnFloor_0_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_3) <= 2147483648 && personOnFloor_0_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_4) <= 2147483648 && personOnFloor_1_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_0) <= 2147483648 && personOnFloor_1_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_1) <= 2147483648 && personOnFloor_1_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_2) <= 2147483648 && personOnFloor_1_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_3) <= 2147483648 && personOnFloor_1_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_4) <= 2147483648 && personOnFloor_2_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_0) <= 2147483648 && personOnFloor_2_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_1) <= 2147483648 && personOnFloor_2_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_2) <= 2147483648 && personOnFloor_2_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_3) <= 2147483648 && personOnFloor_2_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_4) <= 2147483648 && personOnFloor_3_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_0) <= 2147483648 && personOnFloor_3_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_1) <= 2147483648 && personOnFloor_3_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_2) <= 2147483648 && personOnFloor_3_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_3) <= 2147483648 && personOnFloor_3_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_4) <= 2147483648 && personOnFloor_4_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_0) <= 2147483648 && personOnFloor_4_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_1) <= 2147483648 && personOnFloor_4_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_2) <= 2147483648 && personOnFloor_4_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_3) <= 2147483648 && personOnFloor_4_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_4) <= 2147483648 && personOnFloor_5_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_0) <= 2147483648 && personOnFloor_5_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_1) <= 2147483648 && personOnFloor_5_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_2) <= 2147483648 && personOnFloor_5_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_3) <= 2147483648 && personOnFloor_5_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_4) <= 2147483648
+forward invariant: personOnFloor_0_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_0) <= 2147483648 && personOnFloor_0_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_1) <= 2147483648 && personOnFloor_0_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_2) <= 2147483648 && personOnFloor_0_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_3) <= 2147483648 && personOnFloor_0_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_4) <= 2147483648 && personOnFloor_1_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_0) <= 2147483648 && personOnFloor_1_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_1) <= 2147483648 && personOnFloor_1_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_2) <= 2147483648 && personOnFloor_1_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_3) <= 2147483648 && personOnFloor_1_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_4) <= 2147483648 && personOnFloor_2_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_0) <= 2147483648 && personOnFloor_2_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_1) <= 2147483648 && personOnFloor_2_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_2) <= 2147483648 && personOnFloor_2_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_3) <= 2147483648 && personOnFloor_2_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_4) <= 2147483648 && personOnFloor_3_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_0) <= 2147483648 && personOnFloor_3_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_1) <= 2147483648 && personOnFloor_3_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_2) <= 2147483648 && personOnFloor_3_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_3) <= 2147483648 && personOnFloor_3_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_4) <= 2147483648 && personOnFloor_4_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_0) <= 2147483648 && personOnFloor_4_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_1) <= 2147483648 && personOnFloor_4_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_2) <= 2147483648 && personOnFloor_4_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_3) <= 2147483648 && personOnFloor_4_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_4) <= 2147483648 && personOnFloor_5_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_0) <= 2147483648 && personOnFloor_5_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_1) <= 2147483648 && personOnFloor_5_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_2) <= 2147483648 && personOnFloor_5_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_3) <= 2147483648 && personOnFloor_5_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_4) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of removePersonFromFloor
+Function removePersonFromFloor not analyzed yet
+Recursively summarizing function removePersonFromFloor
+Checking precondition of resetCallOnFloor
+Function resetCallOnFloor not analyzed yet
+Recursively summarizing function resetCallOnFloor
+Analyzing function resetCallOnFloor
+Computing summary
+Computing termination argument for resetCallOnFloor
+Function trivially terminates
+
+Summary for function resetCallOnFloor
+params: floorID 
+globals_in: calls_0 calls_1 calls_2 calls_3 calls_4 
+globals_out: calls_0#phi207 calls_1#phi207 calls_2#phi207 calls_3#phi207 calls_4#phi207 
+forward precondition: TRUE
+forward transformer: calls_0#phi207 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_0#phi207) <= 2147483648 && calls_1#phi207 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_1#phi207) <= 2147483648 && calls_2#phi207 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_2#phi207) <= 2147483648 && calls_3#phi207 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_3#phi207) <= 2147483648 && calls_4#phi207 <= 2147483647 && -((signed __CPROVER_bitvector[33])calls_4#phi207) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function removePersonFromFloor
+Computing summary
+Computing termination argument for removePersonFromFloor
+Function terminates
+
+Summary for function removePersonFromFloor
+params: person floor 
+globals_in: personOnFloor_0_0 personOnFloor_0_1 personOnFloor_0_2 personOnFloor_0_3 personOnFloor_0_4 personOnFloor_1_0 personOnFloor_1_1 personOnFloor_1_2 personOnFloor_1_3 personOnFloor_1_4 personOnFloor_2_0 personOnFloor_2_1 personOnFloor_2_2 personOnFloor_2_3 personOnFloor_2_4 personOnFloor_3_0 personOnFloor_3_1 personOnFloor_3_2 personOnFloor_3_3 personOnFloor_3_4 personOnFloor_4_0 personOnFloor_4_1 personOnFloor_4_2 personOnFloor_4_3 personOnFloor_4_4 personOnFloor_5_0 personOnFloor_5_1 personOnFloor_5_2 personOnFloor_5_3 personOnFloor_5_4 
+globals_out: personOnFloor_0_0#phi494 personOnFloor_0_1#phi494 personOnFloor_0_2#phi494 personOnFloor_0_3#phi494 personOnFloor_0_4#phi494 personOnFloor_1_0#phi494 personOnFloor_1_1#phi494 personOnFloor_1_2#phi494 personOnFloor_1_3#phi494 personOnFloor_1_4#phi494 personOnFloor_2_0#phi494 personOnFloor_2_1#phi494 personOnFloor_2_2#phi494 personOnFloor_2_3#phi494 personOnFloor_2_4#phi494 personOnFloor_3_0#phi494 personOnFloor_3_1#phi494 personOnFloor_3_2#phi494 personOnFloor_3_3#phi494 personOnFloor_3_4#phi494 personOnFloor_4_0#phi494 personOnFloor_4_1#phi494 personOnFloor_4_2#phi494 personOnFloor_4_3#phi494 personOnFloor_4_4#phi494 personOnFloor_5_0#phi494 personOnFloor_5_1#phi494 personOnFloor_5_2#phi494 personOnFloor_5_3#phi494 personOnFloor_5_4#phi494 
+forward precondition: TRUE
+forward transformer: personOnFloor_0_0#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_0#phi494) <= 2147483648 && personOnFloor_0_1#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_1#phi494) <= 2147483648 && personOnFloor_0_2#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_2#phi494) <= 2147483648 && personOnFloor_0_3#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_3#phi494) <= 2147483648 && personOnFloor_0_4#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_0_4#phi494) <= 2147483648 && personOnFloor_1_0#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_0#phi494) <= 2147483648 && personOnFloor_1_1#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_1#phi494) <= 2147483648 && personOnFloor_1_2#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_2#phi494) <= 2147483648 && personOnFloor_1_3#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_3#phi494) <= 2147483648 && personOnFloor_1_4#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_1_4#phi494) <= 2147483648 && personOnFloor_2_0#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_0#phi494) <= 2147483648 && personOnFloor_2_1#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_1#phi494) <= 2147483648 && personOnFloor_2_2#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_2#phi494) <= 2147483648 && personOnFloor_2_3#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_3#phi494) <= 2147483648 && personOnFloor_2_4#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_2_4#phi494) <= 2147483648 && personOnFloor_3_0#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_0#phi494) <= 2147483648 && personOnFloor_3_1#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_1#phi494) <= 2147483648 && personOnFloor_3_2#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_2#phi494) <= 2147483648 && personOnFloor_3_3#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_3#phi494) <= 2147483648 && personOnFloor_3_4#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_3_4#phi494) <= 2147483648 && personOnFloor_4_0#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_0#phi494) <= 2147483648 && personOnFloor_4_1#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_1#phi494) <= 2147483648 && personOnFloor_4_2#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_2#phi494) <= 2147483648 && personOnFloor_4_3#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_3#phi494) <= 2147483648 && personOnFloor_4_4#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_4_4#phi494) <= 2147483648 && personOnFloor_5_0#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_0#phi494) <= 2147483648 && personOnFloor_5_1#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_1#phi494) <= 2147483648 && personOnFloor_5_2#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_2#phi494) <= 2147483648 && personOnFloor_5_3#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_3#phi494) <= 2147483648 && personOnFloor_5_4#phi494 <= 2147483647 && -((signed __CPROVER_bitvector[33])personOnFloor_5_4#phi494) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of pressInLiftFloorButton
+Function pressInLiftFloorButton not analyzed yet
+Recursively summarizing function pressInLiftFloorButton
+Analyzing function pressInLiftFloorButton
+Computing summary
+Computing termination argument for pressInLiftFloorButton
+Function trivially terminates
+
+Summary for function pressInLiftFloorButton
+params: floorID 
+globals_in: floorButtons_0 floorButtons_1 floorButtons_2 floorButtons_3 floorButtons_4 
+globals_out: floorButtons_0#phi972 floorButtons_1#phi972 floorButtons_2#phi972 floorButtons_3#phi972 floorButtons_4#phi972 
+forward precondition: TRUE
+forward transformer: floorButtons_0#phi972 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_0#phi972) <= 2147483648 && floorButtons_1#phi972 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_1#phi972) <= 2147483648 && floorButtons_2#phi972 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_2#phi972) <= 2147483648 && floorButtons_3#phi972 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_3#phi972) <= 2147483648 && floorButtons_4#phi972 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_4#phi972) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of enterElevator
+Function enterElevator not analyzed yet
+Recursively summarizing function enterElevator
+Analyzing function enterElevator
+Computing summary
+Computing termination argument for enterElevator
+Function trivially terminates
+
+Summary for function enterElevator
+params: p 
+globals_in: persons_0 persons_1 persons_2 persons_3 persons_4 persons_5 
+globals_out: persons_0#phi155 persons_1#phi155 persons_2#phi155 persons_3#phi155 persons_4#phi155 persons_5#phi155 
+forward precondition: TRUE
+forward transformer: persons_0#phi155 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_0#phi155) <= 2147483648 && persons_1#phi155 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_1#phi155) <= 2147483648 && persons_2#phi155 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_2#phi155) <= 2147483648 && persons_3#phi155 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_3#phi155) <= 2147483648 && persons_4#phi155 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_4#phi155) <= 2147483648 && persons_5#phi155 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_5#phi155) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of isPersonOnFloor
+Precondition trivially holds, replacing by summary.
+Checking precondition of removePersonFromFloor
+Precondition trivially holds, replacing by summary.
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of pressInLiftFloorButton
+Precondition trivially holds, replacing by summary.
+Checking precondition of enterElevator
+Precondition trivially holds, replacing by summary.
+Checking precondition of isPersonOnFloor
+Precondition trivially holds, replacing by summary.
+Checking precondition of removePersonFromFloor
+Precondition trivially holds, replacing by summary.
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of pressInLiftFloorButton
+Precondition trivially holds, replacing by summary.
+Checking precondition of enterElevator
+Precondition trivially holds, replacing by summary.
+Checking precondition of isPersonOnFloor
+Precondition trivially holds, replacing by summary.
+Checking precondition of removePersonFromFloor
+Precondition trivially holds, replacing by summary.
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of pressInLiftFloorButton
+Precondition trivially holds, replacing by summary.
+Checking precondition of enterElevator
+Precondition trivially holds, replacing by summary.
+Checking precondition of isPersonOnFloor
+Precondition trivially holds, replacing by summary.
+Checking precondition of removePersonFromFloor
+Precondition trivially holds, replacing by summary.
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of pressInLiftFloorButton
+Precondition trivially holds, replacing by summary.
+Checking precondition of enterElevator
+Precondition trivially holds, replacing by summary.
+Checking precondition of isPersonOnFloor
+Precondition trivially holds, replacing by summary.
+Checking precondition of removePersonFromFloor
+Precondition trivially holds, replacing by summary.
+Checking precondition of getDestination
+Precondition trivially holds, replacing by summary.
+Checking precondition of pressInLiftFloorButton
+Precondition trivially holds, replacing by summary.
+Checking precondition of enterElevator
+Precondition trivially holds, replacing by summary.
+Checking precondition of resetCallOnFloor
+Precondition trivially holds, replacing by summary.
+Analyzing function processWaitingOnFloor
+Computing summary
+Computing termination argument for processWaitingOnFloor
+Function terminates
+
+Summary for function processWaitingOnFloor
+params: floorID 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of resetFloorButton
+Function resetFloorButton not analyzed yet
+Recursively summarizing function resetFloorButton
+Analyzing function resetFloorButton
+Computing summary
+Computing termination argument for resetFloorButton
+Function trivially terminates
+
+Summary for function resetFloorButton
+params: floorID 
+globals_in: floorButtons_0 floorButtons_1 floorButtons_2 floorButtons_3 floorButtons_4 
+globals_out: floorButtons_0#phi987 floorButtons_1#phi987 floorButtons_2#phi987 floorButtons_3#phi987 floorButtons_4#phi987 
+forward precondition: TRUE
+forward transformer: floorButtons_0#phi987 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_0#phi987) <= 2147483648 && floorButtons_1#phi987 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_1#phi987) <= 2147483648 && floorButtons_2#phi987 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_2#phi987) <= 2147483648 && floorButtons_3#phi987 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_3#phi987) <= 2147483648 && floorButtons_4#phi987 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_4#phi987) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of stopRequestedInDirection
+Function stopRequestedInDirection not analyzed yet
+Recursively summarizing function stopRequestedInDirection
+Checking precondition of isTopFloor
+Function isTopFloor not analyzed yet
+Recursively summarizing function isTopFloor
+Analyzing function isTopFloor
+Computing summary
+Computing termination argument for isTopFloor
+Function trivially terminates
+
+Summary for function isTopFloor
+params: floorID 
+globals_in: 
+globals_out: isTopFloor#return_value#498 
+forward precondition: TRUE
+forward transformer: isTopFloor#return_value#498 <= 1 && -((signed __CPROVER_bitvector[33])isTopFloor#return_value#498) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Analyzing function stopRequestedInDirection
+Computing summary
+Computing termination argument for stopRequestedInDirection
+Function terminates
+
+Summary for function stopRequestedInDirection
+params: dir respectFloorCalls respectInLiftCalls 
+globals_in: currentFloorID floorButtons_0 floorButtons_1 floorButtons_2 floorButtons_3 floorButtons_4 
+globals_out: currentFloorID floorButtons_0 floorButtons_1 floorButtons_2 floorButtons_3 floorButtons_4 stopRequestedInDirection#return_value#phi1781 
+forward precondition: TRUE
+forward transformer: currentFloorID <= 2147483647 && -((signed __CPROVER_bitvector[33])currentFloorID) <= 2147483648 && floorButtons_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_0) <= 2147483648 && floorButtons_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_1) <= 2147483648 && floorButtons_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_2) <= 2147483648 && floorButtons_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_3) <= 2147483648 && floorButtons_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_4) <= 2147483648 && stopRequestedInDirection#return_value#phi1781 <= 1 && -((signed __CPROVER_bitvector[33])stopRequestedInDirection#return_value#phi1781) <= 0
+forward invariant: currentFloorID <= 2147483647 && -((signed __CPROVER_bitvector[33])currentFloorID) <= 2147483648 && floorButtons_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_0) <= 2147483648 && floorButtons_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_1) <= 2147483648 && floorButtons_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_2) <= 2147483648 && floorButtons_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_3) <= 2147483648 && floorButtons_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_4) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of continueInDirection
+Function continueInDirection not analyzed yet
+Recursively summarizing function continueInDirection
+Checking precondition of isTopFloor
+Precondition trivially holds, replacing by summary.
+Analyzing function continueInDirection
+Computing summary
+Computing termination argument for continueInDirection
+Function terminates
+
+Summary for function continueInDirection
+params: dir 
+globals_in: currentFloorID currentHeading 
+globals_out: currentFloorID#phi1797 currentHeading#phi1793 
+forward precondition: TRUE
+forward transformer: currentFloorID#phi1797 <= 2147483647 && -((signed __CPROVER_bitvector[33])currentFloorID#phi1797) <= 2147483648 && currentHeading#phi1793 <= 2147483647 && -((signed __CPROVER_bitvector[33])currentHeading#phi1793) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getReverseHeading
+Function getReverseHeading not analyzed yet
+Recursively summarizing function getReverseHeading
+Analyzing function getReverseHeading
+Computing summary
+Computing termination argument for getReverseHeading
+Function trivially terminates
+
+Summary for function getReverseHeading
+params: ofHeading 
+globals_in: 
+globals_out: getReverseHeading#return_value#phi1848 
+forward precondition: TRUE
+forward transformer: getReverseHeading#return_value#phi1848 <= 1 && -((signed __CPROVER_bitvector[33])getReverseHeading#return_value#phi1848) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of stopRequestedInDirection
+Precondition trivially holds, replacing by summary.
+Checking precondition of getReverseHeading
+Precondition trivially holds, replacing by summary.
+Checking precondition of continueInDirection
+Precondition trivially holds, replacing by summary.
+Checking precondition of continueInDirection
+Precondition trivially holds, replacing by summary.
+Checking precondition of __utac_acc__Specification1_spec__3
+Function __utac_acc__Specification1_spec__3 not analyzed yet
+Recursively summarizing function __utac_acc__Specification1_spec__3
+Checking precondition of getCurrentFloorID
+Function getCurrentFloorID not analyzed yet
+Recursively summarizing function getCurrentFloorID
+Analyzing function getCurrentFloorID
+Computing summary
+Computing termination argument for getCurrentFloorID
+Function trivially terminates
+
+Summary for function getCurrentFloorID
+params: 
+globals_in: currentFloorID 
+globals_out: currentFloorID getCurrentFloorID#return_value#920 
+forward precondition: TRUE
+forward transformer: currentFloorID <= 2147483647 && -((signed __CPROVER_bitvector[33])currentFloorID) <= 2147483648 && getCurrentFloorID#return_value#920 <= 2147483647 && -((signed __CPROVER_bitvector[33])getCurrentFloorID#return_value#920) <= 2147483648
+forward invariant: currentFloorID <= 2147483647 && -((signed __CPROVER_bitvector[33])currentFloorID) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of areDoorsOpen
+Function areDoorsOpen not analyzed yet
+Recursively summarizing function areDoorsOpen
+Analyzing function areDoorsOpen
+Computing summary
+Computing termination argument for areDoorsOpen
+Function trivially terminates
+
+Summary for function areDoorsOpen
+params: 
+globals_in: doorState 
+globals_out: areDoorsOpen#return_value#912 doorState 
+forward precondition: TRUE
+forward transformer: areDoorsOpen#return_value#912 <= 2147483647 && -((signed __CPROVER_bitvector[33])areDoorsOpen#return_value#912) <= 2147483648 && doorState <= 2147483647 && -((signed __CPROVER_bitvector[33])doorState) <= 2147483648
+forward invariant: doorState <= 2147483647 && -((signed __CPROVER_bitvector[33])doorState) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of areDoorsOpen
+Precondition trivially holds, replacing by summary.
+Checking precondition of areDoorsOpen
+Precondition trivially holds, replacing by summary.
+Checking precondition of areDoorsOpen
+Precondition trivially holds, replacing by summary.
+Checking precondition of areDoorsOpen
+Precondition trivially holds, replacing by summary.
+Analyzing function __utac_acc__Specification1_spec__3
+Computing summary
+Computing termination argument for __utac_acc__Specification1_spec__3
+Function terminates
+
+Summary for function __utac_acc__Specification1_spec__3
+params: 
+globals_in: landingButtons_spc1_0 landingButtons_spc1_1 landingButtons_spc1_2 landingButtons_spc1_3 landingButtons_spc1_4 
+globals_out: landingButtons_spc1_0#phi2001 landingButtons_spc1_1#phi2001 landingButtons_spc1_2#phi2001 landingButtons_spc1_3#phi2001 landingButtons_spc1_4#phi2001 
+forward precondition: TRUE
+forward transformer: landingButtons_spc1_0#phi2001 <= 2147483647 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_0#phi2001) <= 2147483648 && landingButtons_spc1_1#phi2001 <= 2147483647 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_1#phi2001) <= 2147483648 && landingButtons_spc1_2#phi2001 <= 2147483647 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_2#phi2001) <= 2147483648 && landingButtons_spc1_3#phi2001 <= 2147483647 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_3#phi2001) <= 2147483648 && landingButtons_spc1_4#phi2001 <= 2147483647 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_4#phi2001) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function timeShift
+Computing summary
+Computing termination argument for timeShift
+Function terminates
+
+Summary for function timeShift
+params: 
+globals_in: currentFloorID currentHeading doorState persons_0 persons_1 persons_2 persons_3 persons_4 persons_5 
+globals_out: currentFloorID currentHeading doorState#phi616 persons_0 persons_1 persons_2 persons_3 persons_4 persons_5 
+forward precondition: TRUE
+forward transformer: currentFloorID <= 2147483647 && -((signed __CPROVER_bitvector[33])currentFloorID) <= 2147483648 && currentHeading <= 2147483647 && -((signed __CPROVER_bitvector[33])currentHeading) <= 2147483648 && doorState#phi616 <= 2147483647 && -((signed __CPROVER_bitvector[33])doorState#phi616) <= 2147483648 && persons_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_0) <= 2147483648 && persons_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_1) <= 2147483648 && persons_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_2) <= 2147483648 && persons_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_3) <= 2147483648 && persons_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_4) <= 2147483648 && persons_5 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_5) <= 2147483648
+forward invariant: currentFloorID <= 2147483647 && -((signed __CPROVER_bitvector[33])currentFloorID) <= 2147483648 && currentHeading <= 2147483647 && -((signed __CPROVER_bitvector[33])currentHeading) <= 2147483648 && persons_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_0) <= 2147483648 && persons_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_1) <= 2147483648 && persons_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_2) <= 2147483648 && persons_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_3) <= 2147483648 && persons_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_4) <= 2147483648 && persons_5 <= 2147483647 && -((signed __CPROVER_bitvector[33])persons_5) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of isBlocked
+Function isBlocked not analyzed yet
+Recursively summarizing function isBlocked
+Analyzing function isBlocked
+Computing summary
+Computing termination argument for isBlocked
+Function trivially terminates
+
+Summary for function isBlocked
+params: 
+globals_in: 
+globals_out: isBlocked#return_value#631 
+forward precondition: TRUE
+forward transformer: isBlocked#return_value#631 <= 0 && -((signed __CPROVER_bitvector[33])isBlocked#return_value#631) <= 0
+forward invariant: isBlocked#return_value#631 <= 0 && -((signed __CPROVER_bitvector[33])isBlocked#return_value#631) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of isIdle
+Function isIdle not analyzed yet
+Recursively summarizing function isIdle
+Checking precondition of anyStopRequested
+Function anyStopRequested not analyzed yet
+Recursively summarizing function anyStopRequested
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Checking precondition of isFloorCalling
+Precondition trivially holds, replacing by summary.
+Analyzing function anyStopRequested
+Computing summary
+Computing termination argument for anyStopRequested
+Function terminates
+
+Summary for function anyStopRequested
+params: 
+globals_in: floorButtons_0 floorButtons_1 floorButtons_2 floorButtons_3 floorButtons_4 
+globals_out: anyStopRequested#return_value#phi1142 floorButtons_0 floorButtons_1 floorButtons_2 floorButtons_3 floorButtons_4 
+forward precondition: TRUE
+forward transformer: anyStopRequested#return_value#phi1142 <= 1 && -((signed __CPROVER_bitvector[33])anyStopRequested#return_value#phi1142) <= 0 && floorButtons_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_0) <= 2147483648 && floorButtons_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_1) <= 2147483648 && floorButtons_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_2) <= 2147483648 && floorButtons_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_3) <= 2147483648 && floorButtons_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_4) <= 2147483648
+forward invariant: floorButtons_0 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_0) <= 2147483648 && floorButtons_1 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_1) <= 2147483648 && floorButtons_2 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_2) <= 2147483648 && floorButtons_3 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_3) <= 2147483648 && floorButtons_4 <= 2147483647 && -((signed __CPROVER_bitvector[33])floorButtons_4) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function isIdle
+Computing summary
+Computing termination argument for isIdle
+Function terminates
+
+Summary for function isIdle
+params: 
+globals_in: 
+globals_out: isIdle#return_value#932 
+forward precondition: TRUE
+forward transformer: isIdle#return_value#932 <= 1 && -((signed __CPROVER_bitvector[33])isIdle#return_value#932) <= 0
+forward invariant: isIdle#return_value#932 <= 1 && -((signed __CPROVER_bitvector[33])isIdle#return_value#932) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of timeShift
+Precondition trivially holds, replacing by summary.
+Analyzing function cleanup
+Computing summary
+Computing termination argument for cleanup
+Synthesizing ranking function to prove termination
+
+Summary for function cleanup
+params: 
+globals_in: cleanupTimeShifts 
+globals_out: cleanupTimeShifts 
+forward precondition: TRUE
+forward transformer: cleanupTimeShifts <= 2147483647 && -((signed __CPROVER_bitvector[33])cleanupTimeShifts) <= 2147483648
+forward invariant: ($guard#2403 && $guard#ls2424 ==> i#lb2424 <= 2147483647) && ($guard#2403 && $guard#ls2424 ==> -((signed __CPROVER_bitvector[33])i#lb2424) <= 0) && ($guard#2403 && $guard#ls2424 ==> tmp#lb2424 <= 2147483647) && ($guard#2403 && $guard#ls2424 ==> -((signed __CPROVER_bitvector[33])tmp#lb2424) <= 2147483648) && ($guard#2403 && $guard#ls2424 ==> tmp___0#lb2424 <= 2147483647) && ($guard#2403 && $guard#ls2424 ==> -((signed __CPROVER_bitvector[33])tmp___0#lb2424) <= 2147483648) && ($guard#2403 && $guard#ls2424 ==> __cil_tmp4#lb2424 <= 2147483647) && ($guard#2403 && $guard#ls2424 ==> -((signed __CPROVER_bitvector[33])__cil_tmp4#lb2424) <= 2147483648) && cleanupTimeShifts <= 2147483647 && -((signed __CPROVER_bitvector[33])cleanupTimeShifts) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#2403 && $guard#2403 && $guard#2403 && $guard#2403 && $guard#2423 && $cond#2424 && $guard#2423 && $cond#2424 && $guard#2423 && $cond#2424 && $guard#2423 && $cond#2424 ==> (signed __CPROVER_bitvector[47])((signed __CPROVER_bitvector[46])((signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])i#phi2403 - (signed __CPROVER_bitvector[33])i#2423)) + (signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp#phi2403 - (signed __CPROVER_bitvector[33])tmp#2413))) + (signed __CPROVER_bitvector[46])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___0#phi2403 - (signed __CPROVER_bitvector[33])tmp___0#2407))) + (signed __CPROVER_bitvector[47])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])__cil_tmp4#phi2403 - (signed __CPROVER_bitvector[33])__cil_tmp4#2404)) > 0
+
+terminates: yes
+
+Analyzing function test
+Computing summary
+Computing termination argument for test
+Function terminates
+
+Summary for function test
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __utac_acc__Specification1_spec__4
+Function __utac_acc__Specification1_spec__4 not analyzed yet
+Recursively summarizing function __utac_acc__Specification1_spec__4
+Checking precondition of __automaton_fail
+Function __automaton_fail not analyzed yet
+Recursively summarizing function __automaton_fail
+Analyzing function __automaton_fail
+Computing summary
+Computing termination argument for __automaton_fail
+Function never terminates normally
+
+Summary for function __automaton_fail
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function __utac_acc__Specification1_spec__4
+Computing summary
+Computing termination argument for __utac_acc__Specification1_spec__4
+
+Summary for function __utac_acc__Specification1_spec__4
+params: 
+globals_in: landingButtons_spc1_0 landingButtons_spc1_1 landingButtons_spc1_2 landingButtons_spc1_3 landingButtons_spc1_4 
+globals_out: landingButtons_spc1_0 landingButtons_spc1_1 landingButtons_spc1_2 landingButtons_spc1_3 landingButtons_spc1_4 
+forward precondition: TRUE
+forward transformer: landingButtons_spc1_0 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_0) <= 0 && landingButtons_spc1_1 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_1) <= 0 && landingButtons_spc1_2 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_2) <= 0 && landingButtons_spc1_3 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_3) <= 0 && landingButtons_spc1_4 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_4) <= 0
+forward invariant: landingButtons_spc1_0 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_0) <= 0 && landingButtons_spc1_1 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_1) <= 0 && landingButtons_spc1_2 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_2) <= 0 && landingButtons_spc1_3 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_3) <= 0 && landingButtons_spc1_4 <= 0 && -((signed __CPROVER_bitvector[33])landingButtons_spc1_4) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function runTest
+Computing summary
+Computing termination argument for runTest
+
+Summary for function runTest
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+
+Summary for function main
+params: 
+globals_in: 
+globals_out: main#return_value#11 
+forward precondition: TRUE
+forward transformer: main#return_value#11 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#11) <= 0
+forward invariant: main#return_value#11 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#11) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 1003422054
+  number of solver calls: 3898571398
+  number of summaries used: 105
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_initialize]: yes
+[__automaton_fail]: no
+[getDestination]: yes
+[enterElevator]: yes
+[isFloorCalling]: yes
+[resetCallOnFloor]: yes
+[isPersonOnFloor]: yes
+[removePersonFromFloor]: yes
+[isTopFloor]: yes
+[initFloors]: not computed
+[timeShift]: yes
+[isBlocked]: yes
+[printState]: not computed
+[isEmpty]: not computed
+[isAnyLiftButtonPressed]: not computed
+[buttonForFloorIsPressed]: yes
+[initTopDown]: not computed
+[initBottomUp]: not computed
+[areDoorsOpen]: yes
+[getCurrentFloorID]: yes
+[isIdle]: yes
+[leaveElevator]: yes
+[pressInLiftFloorButton]: yes
+[resetFloorButton]: yes
+[getCurrentHeading]: not computed
+[anyStopRequested]: yes
+[stopRequestedInDirection]: yes
+[continueInDirection]: yes
+[stopRequestedAtCurrentFloor]: yes
+[getReverseHeading]: yes
+[processWaitingOnFloor]: yes
+[__utac_acc__Specification1_spec__3]: yes
+[existInLiftCallsInDirection]: not computed
+[get_nondetMinMax07]: not computed
+[initPersonOnFloor]: yes
+[getOrigin]: yes
+[bobCall]: not computed
+[aliceCall]: not computed
+[angelinaCall]: yes
+[chuckCall]: not computed
+[monicaCall]: not computed
+[bigMacCall]: yes
+[threeTS]: not computed
+[cleanup]: yes
+[randomSequenceOfActions]: not computed
+[runTest_Simple]: not computed
+[Specification1]: not computed
+[Specification2]: not computed
+[Specification3]: not computed
+[setup]: yes
+[__utac_acc__Specification1_spec__1]: yes
+[__utac_acc__Specification1_spec__4]: unknown
+[test]: yes
+[runTest]: unknown
+[select_helpers]: yes
+[select_features]: yes
+[valid_product]: yes
+[callOnFloor]: yes
+[__utac_acc__Specification1_spec__2]: yes
+[__utac__exception__cf_handler_set]: not computed
+[__utac__exception__cf_handler_free]: not computed
+[__utac__exception__cf_handler_reset]: not computed
+[__utac__error_stack_mgt]: not computed
+[__utac__get_this_arg]: not computed
+[__utac__get_this_argtype]: not computed
+[spec1]: not computed
+[spec14]: not computed
+[getWeight]: not computed
+[select_one]: not computed
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 169390 milliseconds

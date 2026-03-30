@@ -1,0 +1,77 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.jczsbQ
+
+Input File is : LeikeHeizmann-WST2014-Ex5_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : LeikeHeizmann-WST2014-Ex5_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Example 5 of
+ * 2014WST - Leike, Heizmann - Geometric Series as Nontermination Arguments for Linear Lasso Programs
+ *
+ * Date: 2014-06-29
+ * Author: Jan Leike
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int a, b, olda;
+	a = __VERIFIER_nondet_int();
+	b = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(17, __func__);
+	while (a >= 7) { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;static int oolda;if(pStored0){__CPROVER_assert(!(oa==a && ob==b && oolda==olda),"recurrent state found");} if(flag){oa=a;ob=b;oolda=olda;pStored0=myTrue;} 
+		olda = a;
+		a = b;
+		b = olda + 1;
+		// b = a + 1; is a typo in the paper
+	}
+	return 0;
+}
+
+End Main 
+ LeikeHeizmann-WST2014-Ex5_false-termination_instrumented.c
+NTFILE is LeikeHeizmann-WST2014-Ex5_false-termination_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for LeikeHeizmann-WST2014-Ex5_false-termination.c
+FILE=LeikeHeizmann-WST2014-Ex5_false-termination_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 301827 milliseconds

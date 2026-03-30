@@ -1,0 +1,18 @@
+Checking for termination
+Using default analysis
+Version 839c364b
+Calling Ultimate with: /usr/bin/java -Dosgi.configuration.area=/opt/uautomizer/data/config -Xmx15G -Xms4m -jar /opt/uautomizer/plugins/org.eclipse.equinox.launcher_1.5.800.v20200727-1323.jar -data @noDefault -ultimatedata /opt/uautomizer/data -tc /opt/uautomizer/config/AutomizerTermination.xml -i Benchmarks/TermCOMP/C/Di_Stefano_20/boids_true-termination/boids_true-termination.c -s /opt/uautomizer/config/svcomp-Termination-64bit-Automizer_Default.epf --cacsl2boogietranslator.entry.function main --witnessprinter.witness.directory /opt/uautomizer --witnessprinter.witness.filename witness.graphml --witnessprinter.write.witness.besides.input.file false --witnessprinter.graph.data.specification CHECK( init(main()), LTL(F end) ) --witnessprinter.graph.data.producer Automizer --witnessprinter.graph.data.architecture 64bit --witnessprinter.graph.data.programhash d6e09408032e57ac1fb70f1402f5cc2bebedb78b87a9c5675faf0e094a2f77f7
+.......................................................................................................................................................................................................................................--- End real Ultimate output ---
+
+Execution finished normally
+Using bit-precise analysis
+Retrying with bit-precise analysis
+Calling Ultimate with: /usr/bin/java -Dosgi.configuration.area=/opt/uautomizer/data/config -Xmx15G -Xms4m -jar /opt/uautomizer/plugins/org.eclipse.equinox.launcher_1.5.800.v20200727-1323.jar -data @noDefault -ultimatedata /opt/uautomizer/data -tc /opt/uautomizer/config/AutomizerTermination.xml -i Benchmarks/TermCOMP/C/Di_Stefano_20/boids_true-termination/boids_true-termination.c -s /opt/uautomizer/config/svcomp-Termination-64bit-Automizer_Bitvector.epf --cacsl2boogietranslator.entry.function main --witnessprinter.witness.directory /opt/uautomizer --witnessprinter.witness.filename witness.graphml --witnessprinter.write.witness.besides.input.file false --witnessprinter.graph.data.specification CHECK( init(main()), LTL(F end) ) --witnessprinter.graph.data.producer Automizer --witnessprinter.graph.data.architecture 64bit --witnessprinter.graph.data.programhash d6e09408032e57ac1fb70f1402f5cc2bebedb78b87a9c5675faf0e094a2f77f7
+.................................................................................................................................................................................................................................................................................................--- End real Ultimate output ---
+
+Execution finished normally
+Writing output log to file Ultimate.log
+Result:
+ERROR: ExceptionOrErrorResult: ClassCastException: class de.uni_freiburg.informatik.ultimate.cdt.translation.implementation.container.c.CNamed cannot be cast to class de.uni_freiburg.informatik.ultimate.cdt.translation.implementation.container.c.CPrimitive (de.uni_freiburg.informatik.ultimate.cdt.translation.implementation.container.c.CNamed and de.uni_freiburg.informatik.ultimate.cdt.translation.implementation.container.c.CPrimitive are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @4baf352a)
+
+Runtime: 3551 milliseconds

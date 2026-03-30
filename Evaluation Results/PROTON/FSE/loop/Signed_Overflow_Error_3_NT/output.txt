@@ -1,0 +1,87 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.PhXPo5
+
+Input File is : Signed_Overflow_Error_3_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+
+Commit Number: d306f3d3513c62342fec4e31457766f2473f9e9a
+URL: https://github.com/git/git/commit/d306f3d3513c62342fec4e31457766f2473f9e9a
+Project Name: git
+License: GPL-2.0
+termination: FALSE
+*/
+int main()
+{
+    int number = __VERIFIER_nondet_int();
+    int i, width;
+    for( width = 1, i = 10 ; i <= number ; width++ )
+        {i *= 10;}
+    return 0;
+}
+
+End Main   
+
+Input File is : Signed_Overflow_Error_3_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+
+Commit Number: d306f3d3513c62342fec4e31457766f2473f9e9a
+URL: https://github.com/git/git/commit/d306f3d3513c62342fec4e31457766f2473f9e9a
+Project Name: git
+License: GPL-2.0
+termination: FALSE
+*/
+int main()
+{
+    int number = __VERIFIER_nondet_int();
+    int i, width;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+ for( width = 1, i = 10 ; i <= number ; width++ )
+        { __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int onumber;static int owidth;if(pStored0){__CPROVER_assert(!(oi==i && onumber==number && owidth==width),"recurrent state found");} if(flag){oi=i;onumber=number;owidth=width;pStored0=myTrue;} i *= 10;}
+    return 0;
+}
+
+End Main 
+ Signed_Overflow_Error_3_NT_braced_instrumented.c
+NTFILE is Signed_Overflow_Error_3_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Signed_Overflow_Error_3_NT.c
+FILE=Signed_Overflow_Error_3_NT_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 38165 milliseconds

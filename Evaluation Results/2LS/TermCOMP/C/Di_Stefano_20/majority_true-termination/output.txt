@@ -1,0 +1,506 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/Di_Stefano_20/majority_true-termination/majority_true-termination.c
+Converting
+Type-checking majority_true-termination
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of attr
+Simplifying
+Computing SSA of env
+Simplifying
+Computing SSA of init
+Simplifying
+Computing SSA of _0_2
+Simplifying
+Computing SSA of _0_3
+Simplifying
+Computing SSA of _0_4
+Simplifying
+Computing SSA of _0_5
+Simplifying
+Computing SSA of _0_6
+Simplifying
+Computing SSA of _0_7
+Simplifying
+Computing SSA of _0_8
+Simplifying
+Computing SSA of _0_9
+Simplifying
+Computing SSA of _0_10
+Simplifying
+Computing SSA of _0_11
+Simplifying
+Computing SSA of _0_12
+Simplifying
+Computing SSA of _0_13
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: I pc __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys E __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: I#103 pc#104 __CPROVER_threads_exited#101 __CPROVER_thread_key_dtors#99 __CPROVER_thread_keys#100 E#102 __CPROVER_malloc_is_new_array#91 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#88 __CPROVER_dead_object#89 __CPROVER_deallocated#90 __CPROVER_new_object#93 __CPROVER_rounding_mode#97 __CPROVER_pipe_count#96 __CPROVER_max_malloc_size#92 __CPROVER_next_thread_id#94 __CPROVER_next_thread_key#95 __CPROVER_thread_id#98 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#97 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#97) <= 0 && __CPROVER_pipe_count#96 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#96) <= 0 && __CPROVER_max_malloc_size#92 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#92) <= -36028797018963968 && __CPROVER_next_thread_id#94 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#94) <= 0 && __CPROVER_next_thread_key#95 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#95) <= 0 && __CPROVER_thread_id#98 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#98) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of init
+Function init not analyzed yet
+Recursively summarizing function init
+Analyzing function init
+Computing summary
+Computing termination argument for init
+Synthesizing ranking function to prove termination
+
+Summary for function init
+params: 
+globals_in: I pc E 
+globals_out: I#phi216 pc#phi216 E#phi211 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: ($guard#211 && $guard#ls214 ==> i#lb214 <= 4) && ($guard#211 && $guard#ls214 ==> -((signed __CPROVER_bitvector[9])i#lb214) <= 0) && ($guard#218 && $guard#ls221 ==> j#lb221 <= 1) && ($guard#218 && $guard#ls221 ==> -((signed __CPROVER_bitvector[9])j#lb221) <= 0) && ($guard#223 && $guard#ls226 ==> j#lb226 <= 1) && ($guard#223 && $guard#ls226 ==> -((signed __CPROVER_bitvector[9])j#lb226) <= 0) && ($guard#216 && $guard#ls228 ==> i#lb228 <= 3) && ($guard#216 && $guard#ls228 ==> -((signed __CPROVER_bitvector[9])i#lb228) <= 0) && ($guard#216 && $guard#ls228 ==> j#lb228 <= 255) && ($guard#216 && $guard#ls228 ==> -((signed __CPROVER_bitvector[9])j#lb228) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#211 && $guard#212 && $cond#214 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])i#phi211 - (signed __CPROVER_bitvector[9])i#213) > 0) && ($guard#218 && $guard#219 && $cond#221 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi218 - (signed __CPROVER_bitvector[9])j#220) > 0) && ($guard#223 && $guard#224 && $cond#226 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi223 - (signed __CPROVER_bitvector[9])j#225) > 0) && ($guard#216 && $guard#216 && $guard#227 && $cond#228 && $guard#227 && $cond#228 ==> (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])i#phi216 - (signed __CPROVER_bitvector[9])i#227)) + (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi216 - (signed __CPROVER_bitvector[9])j#phi223)) > 0)
+
+terminates: yes
+
+Checking precondition of _0_2
+Function _0_2 not analyzed yet
+Recursively summarizing function _0_2
+Checking precondition of env
+Function env not analyzed yet
+Recursively summarizing function env
+Analyzing function env
+Computing summary
+Computing termination argument for env
+Function trivially terminates
+
+Summary for function env
+params: id key value check 
+globals_in: E 
+globals_out: E#108 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function _0_2
+Computing summary
+Computing termination argument for _0_2
+Function terminates
+
+Summary for function _0_2
+params: tid 
+globals_in: pc 
+globals_out: pc#260 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_3
+Function _0_3 not analyzed yet
+Recursively summarizing function _0_3
+Checking precondition of attr
+Function attr not analyzed yet
+Recursively summarizing function attr
+Analyzing function attr
+Computing summary
+Computing termination argument for attr
+Function trivially terminates
+
+Summary for function attr
+params: id key value check 
+globals_in: I 
+globals_out: I#106 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function _0_3
+Computing summary
+Computing termination argument for _0_3
+Function terminates
+
+Summary for function _0_3
+params: tid 
+globals_in: I pc E 
+globals_out: I pc#280 E 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_4
+Function _0_4 not analyzed yet
+Recursively summarizing function _0_4
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_4
+Computing summary
+Computing termination argument for _0_4
+Function terminates
+
+Summary for function _0_4
+params: tid 
+globals_in: I pc E 
+globals_out: I pc#302 E 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_5
+Function _0_5 not analyzed yet
+Recursively summarizing function _0_5
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_5
+Computing summary
+Computing termination argument for _0_5
+Function terminates
+
+Summary for function _0_5
+params: tid 
+globals_in: pc E 
+globals_out: pc#324 E 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_6
+Function _0_6 not analyzed yet
+Recursively summarizing function _0_6
+Checking precondition of attr
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_6
+Computing summary
+Computing termination argument for _0_6
+Function terminates
+
+Summary for function _0_6
+params: tid 
+globals_in: pc 
+globals_out: pc#334 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_7
+Function _0_7 not analyzed yet
+Recursively summarizing function _0_7
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_7
+Computing summary
+Computing termination argument for _0_7
+Function terminates
+
+Summary for function _0_7
+params: tid 
+globals_in: I pc E 
+globals_out: I pc#351 E 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_8
+Function _0_8 not analyzed yet
+Recursively summarizing function _0_8
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_8
+Computing summary
+Computing termination argument for _0_8
+Function terminates
+
+Summary for function _0_8
+params: tid 
+globals_in: pc 
+globals_out: pc#367 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_9
+Function _0_9 not analyzed yet
+Recursively summarizing function _0_9
+Checking precondition of attr
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_9
+Computing summary
+Computing termination argument for _0_9
+Function terminates
+
+Summary for function _0_9
+params: tid 
+globals_in: I pc E 
+globals_out: I pc#384 E 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_10
+Function _0_10 not analyzed yet
+Recursively summarizing function _0_10
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_10
+Computing summary
+Computing termination argument for _0_10
+Function terminates
+
+Summary for function _0_10
+params: tid 
+globals_in: pc 
+globals_out: pc#399 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_11
+Function _0_11 not analyzed yet
+Recursively summarizing function _0_11
+Checking precondition of attr
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_11
+Computing summary
+Computing termination argument for _0_11
+Function terminates
+
+Summary for function _0_11
+params: tid 
+globals_in: I pc E 
+globals_out: I pc#416 E 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_12
+Function _0_12 not analyzed yet
+Recursively summarizing function _0_12
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_12
+Computing summary
+Computing termination argument for _0_12
+Function terminates
+
+Summary for function _0_12
+params: tid 
+globals_in: pc 
+globals_out: pc#431 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_13
+Function _0_13 not analyzed yet
+Recursively summarizing function _0_13
+Checking precondition of attr
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_13
+Computing summary
+Computing termination argument for _0_13
+Function terminates
+
+Summary for function _0_13
+params: tid 
+globals_in: I pc E 
+globals_out: I pc#448 E 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Synthesizing ranking function to prove termination
+
+Summary for function main
+params: 
+globals_in: I pc 
+globals_out: I pc main#return_value#phi87 
+forward precondition: TRUE
+forward transformer: main#return_value#phi87 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#phi87) <= 0
+forward invariant: ($guard#5 && $guard#ls83 ==> firstAgent#lb83 <= 255) && ($guard#5 && $guard#ls83 ==> -((signed __CPROVER_bitvector[9])firstAgent#lb83) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#5 && $guard#77 && $cond#83 ==> TRUE
+
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 2869978862
+  number of solver calls: 895839
+  number of summaries used: 35
+  number of termination arguments computed: 2
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_initialize]: yes
+[attr]: yes
+[env]: yes
+[init]: yes
+[_0_2]: yes
+[_0_3]: yes
+[_0_4]: yes
+[_0_5]: yes
+[_0_6]: yes
+[_0_7]: yes
+[_0_8]: yes
+[_0_9]: yes
+[_0_10]: yes
+[_0_11]: yes
+[_0_12]: yes
+[_0_13]: yes
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 427 milliseconds

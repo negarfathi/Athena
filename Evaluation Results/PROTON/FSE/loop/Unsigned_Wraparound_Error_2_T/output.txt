@@ -1,0 +1,95 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.vNilZ3
+
+Input File is : Unsigned_Wraparound_Error_2_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+Commit Number: 8852f5f8ff3d521897175ddeb711d6b77e03fa8a
+URL: https://github.com/GNUnet-Mirror/GNUnet/commit/8852f5f8ff3d521897175ddeb711d6b77e03fa8a
+Project Name: GNUnet
+License: AGPL-3.0
+termination: TRUE
+
+*/
+int main()
+{
+    unsigned int ui = 1;
+    unsigned int size = __VERIFIER_nondet_uint();
+    unsigned int BUFFSIZE = __VERIFIER_nondet_uint();
+    {if( size < BUFFSIZE )
+        {size = BUFFSIZE;}}
+    while( (ui < size) && ( ui * 2 > ui ) )
+        {ui *= 2;}
+    return 0;
+}
+
+End Main   
+
+Input File is : Unsigned_Wraparound_Error_2_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+Commit Number: 8852f5f8ff3d521897175ddeb711d6b77e03fa8a
+URL: https://github.com/GNUnet-Mirror/GNUnet/commit/8852f5f8ff3d521897175ddeb711d6b77e03fa8a
+Project Name: GNUnet
+License: AGPL-3.0
+termination: TRUE
+
+*/
+int main()
+{
+    unsigned int ui = 1;
+    unsigned int size = __VERIFIER_nondet_uint();
+    unsigned int BUFFSIZE = __VERIFIER_nondet_uint();
+    { __VERIFIER_reached_control(15, __func__);
+if( size < BUFFSIZE )
+        { __VERIFIER_control_true(16, __func__);
+size = BUFFSIZE;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(18, __func__);
+ while( (ui < size) && ( ui * 2 > ui ) )
+        { __VERIFIER_loop_head(18, __func__);
+printf("CBMC Instrumentation @ line18");myBool flag=__VERIFIER_nondet_myBool();static unsigned int oBUFFSIZE;static unsigned int osize;static unsigned int oui;if(pStored0){__CPROVER_assert(!(oBUFFSIZE==BUFFSIZE && osize==size && oui==ui),"recurrent state found");} if(flag){oBUFFSIZE=BUFFSIZE;osize=size;oui=ui;pStored0=myTrue;} ui *= 2;}
+    return 0;
+}
+
+End Main 
+ Unsigned_Wraparound_Error_2_T_braced_instrumented.c
+NTFILE is Unsigned_Wraparound_Error_2_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Unsigned_Wraparound_Error_2_T.c
+FILE=Unsigned_Wraparound_Error_2_T_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 8361 milliseconds

@@ -1,0 +1,85 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.ysqykG
+
+Input File is : NonTerminationSimple3_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : NonTerminationSimple3_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2013-12-16
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ * Does not terminate for c >= 0.
+ */
+
+extern int __VERIFIER_nondet_int();
+
+int main()
+{
+	int c = __VERIFIER_nondet_int();
+	int x = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+	while (x >= 0) { __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int oc;static int ox;if(pStored0){__CPROVER_assert(!(oc==c && ox==x),"recurrent state found");} if(flag){oc=c;ox=x;pStored0=myTrue;} 
+		x += c;
+	}
+}
+
+
+End Main 
+ NonTerminationSimple3_false-termination_instrumented.c
+NTFILE is NonTerminationSimple3_false-termination_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = NonTerminationSimple3_false-termination.c
+b'24e5a7d2046e897814138805debbaca8b16d065953bd2eb58c3ee39a047245c6  NonTerminationSimple3_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Ultimate/NonTerminationSimple3_false-termination/NonTerminationSimple3_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+main 14 reachedControl
+main 14 loopHead
+main 14 reachedControl
+main 14 loopHead
+Trace file line inside enterred lasso check : main 14 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Ultimate/NonTerminationSimple3_false-termination/NonTerminationSimple3_false-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for NonTerminationSimple3_false-termination.c
+FILE=NonTerminationSimple3_false-termination_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 1985 milliseconds

@@ -1,0 +1,113 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.wr2nzp
+
+Input File is : svcomp_cstrchr_true_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+char *(cstrchr)(const char *s, int c)
+ {
+     /* Scan s for the character.  When this loop is finished,
+        s will either point to the end of the string or the
+        character we were looking for.  */
+     while (*s != '\0' && *s != (char)c)
+         {s++;}
+     return ( (*s == c) ? (char *) s : 0 );
+ }
+
+int main() {
+    int length = __VERIFIER_nondet_int();
+    {if (length < 1) {
+        length = 1;
+    }}
+    char* nondetString = (char*) alloca(length * sizeof(char));
+    nondetString[length-1] = '\0';
+    cstrchr(nondetString,__VERIFIER_nondet_int());
+    return 0;
+}
+
+
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_cstrchr_true_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+char *(cstrchr)(const char *s, int c)
+ {
+     /* Scan s for the character.  When this loop is finished,
+        s will either point to the end of the string or the
+        character we were looking for.  */
+    myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+ while (*s != '\0' && *s != (char)c)
+         { __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static int oc;static const char * os;if(pStored0){__CPROVER_assert(!(oc==c && os==s),"recurrent state found");} if(flag){oc=c;os=s;pStored0=myTrue;} s++;}
+     return ( (*s == c) ? (char *) s : 0 );
+ }
+
+int main() {
+    int length = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(21, __func__);
+if (length < 1) { __VERIFIER_control_true(21, __func__);
+
+        length = 1;
+    }}
+    char* nondetString = (char*) alloca(length * sizeof(char));
+    nondetString[length-1] = '\0';
+    cstrchr(nondetString,__VERIFIER_nondet_int());
+    return 0;
+}
+
+
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_cstrchr_true_alloca_braced_instrumented.c
+NTFILE is svcomp_cstrchr_true_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_cstrchr_true_alloca.c
+FILE=svcomp_cstrchr_true_alloca_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 38135 milliseconds

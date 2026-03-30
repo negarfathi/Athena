@@ -1,0 +1,70 @@
+line 12:	N4 -{base = __VERIFIER_nondet_int();}-> N5
+	base == 2147483640;
+line 13:	N6 -{count = __VERIFIER_nondet_int();}-> N7
+	i == 0;
+	base == 2147483640;
+	count == 2147483641;
+	(&old_) == 4LL;
+	(&new_) == 60LL;
+lines 15-19:	N10 -{int j = 0;}-> N11
+	j == 0;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 0;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 1;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 1;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 2;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 2;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 3;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 3;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 4;
+line 15:	N11 -{[j < 9]}-> N13
+	(old_[j]) == 16777216;
+	(new_[j]) == 0;
+	j == 4;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 5;
+line 15:	N11 -{[j < 9]}-> N13
+	(old_[j]) == 0;
+	(new_[j]) == 0;
+	j == 5;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 6;
+line 15:	N11 -{[j < 9]}-> N13
+	(old_[j]) == 0;
+	(new_[j]) == 0;
+	j == 6;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 7;
+line 15:	N11 -{[j < 9]}-> N13
+	(old_[j]) == 0;
+	(new_[j]) == 0;
+	j == 7;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 8;
+line 15:	N11 -{[j < 9]}-> N13
+	(old_[j]) == 0;
+	(new_[j]) == 1073741824;
+	j == 8;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 9;
+line 15:	N11 -{[!(j < 9)]}-> N14
+	(old_[9]) == 0;
+	(new_[9]) == 0;
+	j == 9;
+line 22:	N18 -{while}-> N19
+line 22:	N19 -{[base < count]}-> N20
+	number == 2147483640;
+	base == 2147483640;
+	count == 2147483641;
+line 25:	N22 -{while}-> N23
+line 25:	N23 -{[!((old_[i]) != (new_[i]))]}-> N25
+	base == -2147483648U;
+	__CPAchecker_TMP_0 == 0;
+	i == 1;

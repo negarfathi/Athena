@@ -1,0 +1,127 @@
+///*** 1_main ***///
+START: main_bb0;
+
+FROM: main_bb0;
+var__temp_vi.0 := 0;
+TO: main_bb1;
+
+FROM: main_bb1;
+vi.0 := var__temp_vi.0;
+var__temp_vi1.0 := 0;
+var__temp_vtable.0 := v0;
+TO: main_bb1_end;
+
+FROM: main_bb1_end;
+assume(vi.0 < 10);
+TO: main_bb2;
+
+FROM: main_bb1_end;
+assume(vi.0 >= 10);
+TO: main_bb3;
+
+FROM: main_bb2;
+v2 := nondet();
+v4 := v2;
+v5 := nondet();
+v7 := v5;
+v8 := vi.0 + 1;
+var__temp_vi.0 := v8;
+TO: main_bb1;
+
+FROM: main_bb3;
+vi1.0 := var__temp_vi1.0;
+vtable.0 := var__temp_vtable.0;
+TO: main_bb3_end;
+
+FROM: main_bb3_end;
+assume(vi1.0 < 10);
+TO: main_bb4;
+
+FROM: main_bb3_end;
+assume(vi1.0 >= 10);
+TO: main_bb10;
+
+FROM: main_bb4;
+v12 := nondef.3;
+TO: main_NodeBlock;
+
+FROM: main_NodeBlock;
+TO: main_NodeBlock_end;
+
+FROM: main_NodeBlock_end;
+assume(v12 < 2);
+TO: main_LeafBlock;
+
+FROM: main_NodeBlock_end;
+assume(v12 >= 2);
+TO: main_LeafBlock1;
+
+FROM: main_LeafBlock;
+TO: main_LeafBlock_end;
+
+FROM: main_LeafBlock_end;
+assume(v12 == 0);
+TO: main_bb5;
+
+FROM: main_LeafBlock_end;
+assume(v12 != 0);
+TO: main_NewDefault;
+
+FROM: main_bb5;
+v15 := nondef.4;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(v15 != 0);
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(v15 == 0);
+TO: main_bb10;
+
+FROM: main_bb6;
+v19 := nondef.5;
+var__temp_vtable.1 := v19;
+TO: main_bb8;
+
+FROM: main_LeafBlock1;
+var__temp_vtable.1 := vtable.0;
+TO: main_LeafBlock1_end;
+
+FROM: main_LeafBlock1_end;
+assume(v12 == 2);
+TO: main_bb8;
+
+FROM: main_LeafBlock1_end;
+assume(v12 != 2);
+TO: main_NewDefault;
+
+FROM: main_NewDefault;
+TO: main_bb7;
+
+FROM: main_bb7;
+v22 := nondef.6;
+var__temp_vtable.1 := v22;
+TO: main_bb8;
+
+FROM: main_bb8;
+vtable.1 := var__temp_vtable.1;
+TO: main_bb8_end;
+
+FROM: main_bb8_end;
+assume(vtable.1 != 0);
+TO: main_bb10;
+
+FROM: main_bb8_end;
+assume(vtable.1 == 0);
+TO: main_bb9;
+
+FROM: main_bb9;
+v24 := vi1.0 + 1;
+var__temp_vi1.0 := v24;
+var__temp_vtable.0 := vtable.1;
+TO: main_bb3;
+
+FROM: main_bb10;
+TO: main_bb10_ret;
+

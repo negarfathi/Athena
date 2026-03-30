@@ -1,0 +1,112 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.4oFZcq
+
+Input File is : Unsigned_Wraparound_Error_3_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+Commit Number: 9d4a9ea675bcc1ca144101d058804f4fed37e65d
+URL: https://github.com/osxfuse/fuse/commit/9d4a9ea675bcc1ca144101d058804f4fed37e65d
+Project Name: fuse
+License: GPL-2.0
+termination: TRUE
+*/
+int main()
+{
+    unsigned int pathlen = __VERIFIER_nondet_uint();
+    unsigned int newbufsize = __VERIFIER_nondet_uint();
+    unsigned int len = __VERIFIER_nondet_uint();
+    {if( newbufsize + len + 1 == 0xffffffff )
+        {return 0;}}
+    {if( newbufsize == 0 )
+        {return 0;}}
+    while( newbufsize < pathlen + len + 1 )
+    {
+        {if( newbufsize >= 0x80000000 )
+            {newbufsize = 0xffffffff;}
+        else
+            {newbufsize *= 2;}}
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Unsigned_Wraparound_Error_3_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+Commit Number: 9d4a9ea675bcc1ca144101d058804f4fed37e65d
+URL: https://github.com/osxfuse/fuse/commit/9d4a9ea675bcc1ca144101d058804f4fed37e65d
+Project Name: fuse
+License: GPL-2.0
+termination: TRUE
+*/
+int main()
+{
+    unsigned int pathlen = __VERIFIER_nondet_uint();
+    unsigned int newbufsize = __VERIFIER_nondet_uint();
+    unsigned int len = __VERIFIER_nondet_uint();
+    { __VERIFIER_reached_control(14, __func__);
+if( newbufsize + len + 1 == 0xffffffff )
+        { __VERIFIER_control_true(15, __func__);
+return 0;}}
+    { __VERIFIER_reached_control(16, __func__);
+if( newbufsize == 0 )
+        { __VERIFIER_control_true(17, __func__);
+return 0;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(19, __func__);
+ while( newbufsize < pathlen + len + 1 )
+    { __VERIFIER_loop_head(19, __func__);
+printf("CBMC Instrumentation @ line19");myBool flag=__VERIFIER_nondet_myBool();static unsigned int olen;static unsigned int onewbufsize;static unsigned int opathlen;if(pStored0){__CPROVER_assert(!(olen==len && onewbufsize==newbufsize && opathlen==pathlen),"recurrent state found");} if(flag){olen=len;onewbufsize=newbufsize;opathlen=pathlen;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(20, __func__);
+if( newbufsize >= 0x80000000 )
+            { __VERIFIER_control_true(21, __func__);
+newbufsize = 0xffffffff;}
+        else
+            { __VERIFIER_control_false(23, __func__);
+newbufsize *= 2;}}
+    }
+    return 0;
+}
+
+End Main 
+ Unsigned_Wraparound_Error_3_T_braced_instrumented.c
+NTFILE is Unsigned_Wraparound_Error_3_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Unsigned_Wraparound_Error_3_T.c
+FILE=Unsigned_Wraparound_Error_3_T_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 66036 milliseconds

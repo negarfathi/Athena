@@ -1,0 +1,107 @@
+///*** 1_main ***///
+START: main_bb10;
+
+
+
+FROM: main_bb10;
+memory0_freeIndex := 1;
+memory1_freeIndex := 1;
+memory2_freeIndex := 1;
+vmemory2 := nondet();
+vmemory1 := nondet();
+vmemory0 := nondet();
+v58 := nondet();
+v59 := nondet();
+v60 := memory2_freeIndex;
+v61 := memory2_freeIndex;
+v62 := v61 + 1;
+memory2_freeIndex := v62;
+v63 := memory1_freeIndex;
+v64 := memory1_freeIndex;
+v65 := v64 + 1;
+memory1_freeIndex := v65;
+v66 := memory0_freeIndex;
+v67 := memory0_freeIndex;
+v68 := v67 + 1;
+memory0_freeIndex := v68;
+v69 := v60;
+v70 := v69;
+vmemory2 := store_array(vmemory2, v70, v58);
+v71 := v63;
+v72 := v71;
+vmemory1 := store_array(vmemory1, v72, v59);
+v73 := v66;
+v74 := v73;
+vmemory0 := store_array(vmemory0, v74, 0);
+v75 := v60;
+v76 := v75;
+v77 := v63;
+v78 := v77;
+v79 := v60;
+v80 := v79;
+v81 := v63;
+v82 := v81;
+v83 := v63;
+v84 := v83;
+v85 := v63;
+v86 := v85;
+v87 := v66;
+v88 := v87;
+v89 := v66;
+v90 := v89;
+TO: main_bb11;
+
+FROM: main_bb11;
+v91 := select_array(vmemory2, v76);
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(v91 >= 0);
+TO: main_bb12;
+
+FROM: main_bb11_end;
+assume(v91 < 0);
+TO: main_test_fun.exit;
+
+FROM: main_bb12;
+vmemory1 := store_array(vmemory1, v78, 1);
+v93 := select_array(vmemory2, v80);
+TO: main_bb13;
+
+FROM: main_bb13;
+v94 := select_array(vmemory1, v82);
+TO: main_bb13_end;
+
+FROM: main_bb13_end;
+assume(v93 > v94);
+TO: main_bb14;
+
+FROM: main_bb13_end;
+assume(v93 <= v94);
+TO: main_bb15;
+
+FROM: main_bb14;
+v96 := select_array(vmemory1, v84);
+v97 := 2 * v96;
+vmemory1 := store_array(vmemory1, v86, v97);
+v98 := select_array(vmemory0, v88);
+v99 := v98 + 1;
+vmemory0 := store_array(vmemory0, v90, v99);
+TO: main_bb13;
+
+FROM: main_bb15;
+v100 := v60;
+v101 := v100;
+v102 := select_array(vmemory2, v101);
+v103 := v102 - 1;
+v104 := v60;
+v105 := v104;
+vmemory2 := store_array(vmemory2, v105, v103);
+TO: main_bb11;
+
+FROM: main_test_fun.exit;
+v106 := v66;
+v107 := v106;
+v108 := select_array(vmemory0, v107);
+TO: main_test_fun.exit_ret;
+

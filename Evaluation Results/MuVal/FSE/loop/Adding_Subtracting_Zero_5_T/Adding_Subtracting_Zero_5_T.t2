@@ -1,0 +1,68 @@
+///*** 1_main ***///
+START: main_bb4;
+
+FROM: main_bb4;
+v12 := nondet();
+TO: main_bb4_end;
+
+FROM: main_bb4_end;
+assume((v12 <= 0) || (v12 > 65534));
+TO: main_bb10;
+
+FROM: main_bb4_end;
+assume((v12 > 0) && (v12 <= 65534));
+TO: main_bb5;
+
+FROM: main_bb5;
+v17 := v16;
+var__temp_vi.0.i := 2;
+TO: main_bb6;
+
+FROM: main_bb6;
+vi.0.i := var__temp_vi.0.i;
+TO: main_bb6_end;
+
+FROM: main_bb6_end;
+assume(vi.0.i <= v12);
+TO: main_bb7;
+
+FROM: main_bb6_end;
+assume(vi.0.i > v12);
+TO: main_initLink.exit;
+
+FROM: main_bb7;
+v21 := v20;
+v22 := v20;
+v25 := vi.0.i + 1;
+var__temp_vi.0.i := v25;
+TO: main_bb6;
+
+FROM: main_initLink.exit;
+v26 := vcyclic.0.i;
+TO: main_bb8;
+
+FROM: main_bb8;
+TO: main_bb8_end;
+
+FROM: main_bb8_end;
+assume(nondet());
+TO: main_bb9;
+
+FROM: main_bb8_end;
+assume(nondet());
+TO: main_bb10;
+
+FROM: main_bb9;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(nondet());
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(nondet());
+TO: main_bb8;
+
+FROM: main_bb10;
+TO: main_bb10_ret;
+

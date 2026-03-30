@@ -1,0 +1,124 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.XZn7Ah
+
+Input File is : McCarthy91_false-unreach-call_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+/*
+ * Implementation the McCarthy 91 function.
+ * http://en.wikipedia.org/wiki/McCarthy_91_function
+ * 
+ * Author: Matthias Heizmann
+ * Date: 2013-07-13
+ * 
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+
+int f91(int x) {
+    {if (x > 100)
+        {return x -10;}
+    else {
+        return f91(f91(x+11));
+    }}
+}
+
+
+int main() {
+    int x = __VERIFIER_nondet_int();
+    int result = f91(x);
+    {if (result == 91 || x > 102 && result == x - 10) {
+        return 0;
+    } else {
+        ERROR: __VERIFIER_error();
+    }}
+}
+
+End Main   
+
+Input File is : McCarthy91_false-unreach-call_false-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+/*
+ * Implementation the McCarthy 91 function.
+ * http://en.wikipedia.org/wiki/McCarthy_91_function
+ * 
+ * Author: Matthias Heizmann
+ * Date: 2013-07-13
+ * 
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+
+int f91(int x) {
+    { __VERIFIER_reached_control(16, __func__);
+if (x > 100)
+        { __VERIFIER_control_true(17, __func__);
+return x -10;}
+    else { __VERIFIER_control_false(18, __func__);
+
+        return f91(f91(x+11));
+    }}
+}
+
+
+int main() {
+    int x = __VERIFIER_nondet_int();
+    int result = f91(x);
+    { __VERIFIER_reached_control(27, __func__);
+if (result == 91 || x > 102 && result == x - 10) { __VERIFIER_control_true(27, __func__);
+
+        return 0;
+    } else { __VERIFIER_control_false(29, __func__);
+
+        ERROR: __VERIFIER_error();
+    }}
+}
+
+End Main 
+ McCarthy91_false-unreach-call_false-termination_braced_instrumented.c
+NTFILE is McCarthy91_false-unreach-call_false-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for McCarthy91_false-unreach-call_false-termination.c
+FILE=McCarthy91_false-unreach-call_false-termination_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 122160 milliseconds

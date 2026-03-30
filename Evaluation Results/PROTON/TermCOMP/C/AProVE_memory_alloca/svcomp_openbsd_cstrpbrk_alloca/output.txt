@@ -1,0 +1,145 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.AvFt0x
+
+Input File is : svcomp_openbsd_cstrpbrk_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/*
+ * Find the first occurrence in s1 of a character in s2 (excluding NUL).
+ */
+char *
+cstrpbrk(const char *s1, const char *s2)
+{
+	const char *scanp;
+	int c, sc;
+
+	while ((c = *s1++) != 0) {
+		for (scanp = s2; (sc = *scanp++) != 0;)
+			{{if (sc == c)
+				{return ((char *)(s1 - 1));}}}
+	}
+	return (NULL);
+}
+
+int main() {
+    int length1 = __VERIFIER_nondet_int();
+    int length2 = __VERIFIER_nondet_int();
+    {if (length1 < 1) {
+        length1 = 1;
+    }}
+    {if (length2 < 1) {
+        length2 = 1;
+    }}
+    char* nondetString1 = (char*) alloca(length1 * sizeof(char));
+    char* nondetString2 = (char*) alloca(length2 * sizeof(char));
+    nondetString1[length1-1] = '\0';
+    nondetString2[length2-1] = '\0';
+    cstrpbrk(nondetString1,nondetString2);
+    return 0;
+}
+
+
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_openbsd_cstrpbrk_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/*
+ * Find the first occurrence in s1 of a character in s2 (excluding NUL).
+ */
+char *
+cstrpbrk(const char *s1, const char *s2)
+{
+	const char *scanp;
+	int c, sc;
+
+myBool pStored0 = myFalse; __VERIFIER_reached_control(18, __func__);
+	while ((c = *s1++) != 0) { __VERIFIER_loop_head(18, __func__);
+printf("CBMC Instrumentation @ line18");myBool flag=__VERIFIER_nondet_myBool();static int oc;static const char * os1;static const char * os2;static int osc;static const char * oscanp;if(pStored0){__CPROVER_assert(!(oc==c && os1==s1 && os2==s2 && osc==sc && oscanp==scanp),"recurrent state found");} if(flag){oc=c;os1=s1;os2=s2;osc=sc;oscanp=scanp;pStored0=myTrue;} 
+	myBool pStored1 = myFalse; __VERIFIER_reached_control(20, __func__);
+	for (scanp = s2; (sc = *scanp++) != 0;)
+			{ __VERIFIER_loop_head(20, __func__);
+printf("CBMC Instrumentation @ line20");myBool flag=__VERIFIER_nondet_myBool();static int oc;static const char * os1;static const char * os2;static int osc;static const char * oscanp;if(pStored1){__CPROVER_assert(!(oc==c && os1==s1 && os2==s2 && osc==sc && oscanp==scanp),"recurrent state found");} if(flag){oc=c;os1=s1;os2=s2;osc=sc;oscanp=scanp;pStored1=myTrue;} { __VERIFIER_reached_control(20, __func__);
+if (sc == c)
+				{ __VERIFIER_control_true(21, __func__);
+return ((char *)(s1 - 1));}}}
+	}
+	return (NULL);
+}
+
+int main() {
+    int length1 = __VERIFIER_nondet_int();
+    int length2 = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(29, __func__);
+if (length1 < 1) { __VERIFIER_control_true(29, __func__);
+
+        length1 = 1;
+    }}
+    { __VERIFIER_reached_control(32, __func__);
+if (length2 < 1) { __VERIFIER_control_true(32, __func__);
+
+        length2 = 1;
+    }}
+    char* nondetString1 = (char*) alloca(length1 * sizeof(char));
+    char* nondetString2 = (char*) alloca(length2 * sizeof(char));
+    nondetString1[length1-1] = '\0';
+    nondetString2[length2-1] = '\0';
+    cstrpbrk(nondetString1,nondetString2);
+    return 0;
+}
+
+
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_openbsd_cstrpbrk_alloca_braced_instrumented.c
+NTFILE is svcomp_openbsd_cstrpbrk_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_openbsd_cstrpbrk_alloca.c
+FILE=svcomp_openbsd_cstrpbrk_alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183158 milliseconds

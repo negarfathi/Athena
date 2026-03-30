@@ -1,0 +1,78 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.qKfrYg
+
+Input File is : Misusing_Variable_Type_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : Misusing_Variable_Type_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+Commit Number: 090341b0a95d1f6d762915a75c13b393366f4ab3
+URL: https://github.com/torvalds/linux/commit/090341b0a95d1f6d762915a75c13b393366f4ab3
+Project Name: linux
+License: GPL-2.0
+termination: TRUE
+*/
+
+int main()
+{
+    unsigned int mul;
+    int div1,div2;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+ for( div1 = 1 ; div1 >= 0; div1-- )
+    { __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int odiv1;static int odiv2;static unsigned int omul;if(pStored0){__CPROVER_assert(!(odiv1==div1 && odiv2==div2 && omul==mul),"recurrent state found");} if(flag){odiv1=div1;odiv2=div2;omul=mul;pStored0=myTrue;} 
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(16, __func__);
+ for( div2 = 7; div2 >= 0 ; div2-- )
+        { __VERIFIER_loop_head(16, __func__);
+printf("CBMC Instrumentation @ line16");myBool flag=__VERIFIER_nondet_myBool();static int odiv1;static int odiv2;static unsigned int omul;if(pStored1){__CPROVER_assert(!(odiv1==div1 && odiv2==div2 && omul==mul),"recurrent state found");} if(flag){odiv1=div1;odiv2=div2;omul=mul;pStored1=myTrue;} 
+           myBool pStored2 = myFalse; __VERIFIER_reached_control(18, __func__);
+ for( mul = 0 ; mul <= 255; mul++ )
+            { __VERIFIER_loop_head(18, __func__);
+printf("CBMC Instrumentation @ line18");myBool flag=__VERIFIER_nondet_myBool();static int odiv1;static int odiv2;static unsigned int omul;if(pStored2){__CPROVER_assert(!(odiv1==div1 && odiv2==div2 && omul==mul),"recurrent state found");} if(flag){odiv1=div1;odiv2=div2;omul=mul;pStored2=myTrue;} 
+                //loop
+            }
+        }
+    }
+    return 0;
+}
+
+End Main 
+ Misusing_Variable_Type_1_T_instrumented.c
+NTFILE is Misusing_Variable_Type_1_T_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Misusing_Variable_Type_1_T.c
+FILE=Misusing_Variable_Type_1_T_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 64891 milliseconds

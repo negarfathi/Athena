@@ -1,0 +1,234 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.j2Zvp1
+
+Input File is : Adding_Subtracting_Zero_4_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: caa6003b6419d001593478a46fb4cbf8e502e818
+URL: https://github.com/tytso/e2fsprogs/commit/caa6003b6419d001593478a46fb4cbf8e502e818
+Project Name: e2fsprogs
+License: GPL-2.0
+termination: false
+*/
+int flag = 0;
+int read( int loc , int len )
+{
+    int count = 0;
+    {if( flag == 1 ) //whether EOF or not
+        {return 0;}}
+    while( loc < len )
+    {
+        int num =  __VERIFIER_nondet_int();
+        {if( num == 0 ) //abnormal
+        {
+            return -1;
+        }
+        else
+        {
+            {if( num < 0 )
+                {num =  -num;}}
+            num = num % 1000;
+            count++;
+            {if( num < 995 ) //read a char
+            {
+                loc++;
+                continue;
+            }
+            else // EOF
+            {
+                flag = 1;
+                return count;
+            }}
+        }}
+    }
+    return count;
+}
+int main()
+{
+    int count =__VERIFIER_nondet_int();
+    {if( count <= 0 )
+        {return 0;}}
+    int ret;
+    int buf = 0;
+    while( count > 0 )
+    {
+        ret = read( buf, count );
+        {if( ret < 0 )
+            {return 0;}}
+        count -= ret;
+        buf += ret;
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Adding_Subtracting_Zero_4_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: caa6003b6419d001593478a46fb4cbf8e502e818
+URL: https://github.com/tytso/e2fsprogs/commit/caa6003b6419d001593478a46fb4cbf8e502e818
+Project Name: e2fsprogs
+License: GPL-2.0
+termination: false
+*/
+int flag = 0;
+int read( int loc , int len )
+{
+    int count = 0;
+    { __VERIFIER_reached_control(13, __func__);
+if( flag == 1 ) //whether EOF or not
+        { __VERIFIER_control_true(14, __func__);
+return 0;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(16, __func__);
+ while( loc < len )
+    { __VERIFIER_loop_head(16, __func__);
+printf("CBMC Instrumentation @ line16");myBool flag=__VERIFIER_nondet_myBool();static int ocount;static int oflag;static int olen;static int oloc;if(pStored0){__CPROVER_assert(!(ocount==count && oflag==flag && olen==len && oloc==loc),"recurrent state found");} if(flag){ocount=count;oflag=flag;olen=len;oloc=loc;pStored0=myTrue;} 
+        int num =  __VERIFIER_nondet_int();
+        { __VERIFIER_reached_control(18, __func__);
+if( num == 0 ) //abnormal
+        { __VERIFIER_control_true(19, __func__);
+
+            return -1;
+        }
+        else
+        { __VERIFIER_control_false(23, __func__);
+
+            { __VERIFIER_reached_control(24, __func__);
+if( num < 0 )
+                { __VERIFIER_control_true(25, __func__);
+num =  -num;}}
+            num = num % 1000;
+            count++;
+            { __VERIFIER_reached_control(28, __func__);
+if( num < 995 ) //read a char
+            { __VERIFIER_control_true(29, __func__);
+
+                loc++;
+                continue;
+            }
+            else // EOF
+            { __VERIFIER_control_false(34, __func__);
+
+                flag = 1;
+                return count;
+            }}
+        }}
+    }
+    return count;
+}
+int main()
+{
+    int count =__VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(45, __func__);
+if( count <= 0 )
+        { __VERIFIER_control_true(46, __func__);
+return 0;}}
+    int ret;
+    int buf = 0;
+   myBool pStored1 = myFalse; __VERIFIER_reached_control(50, __func__);
+ while( count > 0 )
+    { __VERIFIER_loop_head(50, __func__);
+printf("CBMC Instrumentation @ line50");myBool flag=__VERIFIER_nondet_myBool();static int obuf;static int ocount;static int oflag;static int oret;if(pStored1){__CPROVER_assert(!(obuf==buf && ocount==count && oflag==flag && oret==ret),"recurrent state found");} if(flag){obuf=buf;ocount=count;oflag=flag;oret=ret;pStored1=myTrue;} 
+        ret = read( buf, count );
+        { __VERIFIER_reached_control(52, __func__);
+if( ret < 0 )
+            { __VERIFIER_control_true(53, __func__);
+return 0;}}
+        count -= ret;
+        buf += ret;
+    }
+    return 0;
+}
+
+End Main 
+ Adding_Subtracting_Zero_4_NT_braced_instrumented.c
+NTFILE is Adding_Subtracting_Zero_4_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Adding_Subtracting_Zero_4_NT.c
+b'716251ee1a95a1af20fe09310e3855e0cc1ce4a955ca6a1f07b70bd617b3dff7  Adding_Subtracting_Zero_4_NT.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Adding_Subtracting_Zero_4_NT/Adding_Subtracting_Zero_4_NT.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 45 reachedControl
+main 50 reachedControl
+main 50 loopHead
+read 13 reachedControl
+read 16 reachedControl
+read 16 loopHead
+read 18 reachedControl
+read 23 falseBranch
+read 24 reachedControl
+read 25 trueBranch
+read 28 reachedControl
+read 29 trueBranch
+read 16 loopHead
+read 18 reachedControl
+read 23 falseBranch
+read 24 reachedControl
+read 25 trueBranch
+read 28 reachedControl
+read 29 trueBranch
+read 16 loopHead
+read 18 reachedControl
+read 23 falseBranch
+read 24 reachedControl
+read 25 trueBranch
+read 28 reachedControl
+read 34 falseBranch
+main 52 reachedControl
+main 50 loopHead
+read 13 reachedControl
+read 16 reachedControl
+main 52 reachedControl
+main 50 loopHead
+read 13 reachedControl
+read 16 reachedControl
+enteringLasso
+main 52 reachedControl
+main 50 loopHead
+Trace file line inside enterred lasso check : main 52 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Adding_Subtracting_Zero_4_NT/Adding_Subtracting_Zero_4_NT.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Adding_Subtracting_Zero_4_NT.c
+FILE=Adding_Subtracting_Zero_4_NT_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 3993 milliseconds

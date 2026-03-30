@@ -1,0 +1,132 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.wnlqLX
+
+Input File is : ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 2014-06-08
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ *
+ * This is Example 1.5 from the test suit used in
+ *
+ * Termination Proofs for Linear Simple Loops.
+ * Hong Yi Chen, Shaked Flur, and Supratik Mukhopadhyay.
+ * SAS 2012.
+ *
+ * The test suite is available at the following URL.
+ * https://tigerbytes2.lsu.edu/users/hchen11/lsl/LSL_benchmark.txt
+ *
+ * Comment: terminating, linear
+ */
+
+extern int __VERIFIER_nondet_int();
+
+int main() {
+    int x = __VERIFIER_nondet_int();
+    while (x > 0) {
+        int old_x = x;
+        x = __VERIFIER_nondet_int();
+        {if (2*x > old_x) {
+            break;
+        }}
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2014-06-08
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ *
+ * This is Example 1.5 from the test suit used in
+ *
+ * Termination Proofs for Linear Simple Loops.
+ * Hong Yi Chen, Shaked Flur, and Supratik Mukhopadhyay.
+ * SAS 2012.
+ *
+ * The test suite is available at the following URL.
+ * https://tigerbytes2.lsu.edu/users/hchen11/lsl/LSL_benchmark.txt
+ *
+ * Comment: terminating, linear
+ */
+
+extern int __VERIFIER_nondet_int();
+
+int main() {
+    int x = __VERIFIER_nondet_int();
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(22, __func__);
+ while (x > 0) { __VERIFIER_loop_head(22, __func__);
+printf("CBMC Instrumentation @ line22");myBool flag=__VERIFIER_nondet_myBool();static int ox;if(pStored0){__CPROVER_assert(!(ox==x),"recurrent state found");} if(flag){ox=x;pStored0=myTrue;} 
+        int old_x = x;
+        x = __VERIFIER_nondet_int();
+        { __VERIFIER_reached_control(25, __func__);
+if (2*x > old_x) { __VERIFIER_control_true(25, __func__);
+
+            break;
+        }}
+    }
+    return 0;
+}
+
+End Main 
+ ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination_braced_instrumented.c
+NTFILE is ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination.c
+b'f074f2818598bf5f0f0f7952c8d8e305440b0d3e2f788d2cf236504cf086ff30  ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Termination_Category/ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination/ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 22 reachedControl
+main 22 loopHead
+enteringLasso
+main 25 reachedControl
+main 22 loopHead
+Trace file line inside enterred lasso check : main 25 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Termination_Category/ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination/ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination.c
+FILE=ChenFlurMukhopadhyay-SAS2012-Ex1.05_true-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 1994 milliseconds

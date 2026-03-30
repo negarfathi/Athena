@@ -1,0 +1,11 @@
+Checking for termination
+Using default analysis
+Version 839c364b
+Calling Ultimate with: /usr/bin/java -Dosgi.configuration.area=/opt/uautomizer/data/config -Xmx15G -Xms4m -jar /opt/uautomizer/plugins/org.eclipse.equinox.launcher_1.5.800.v20200727-1323.jar -data @noDefault -ultimatedata /opt/uautomizer/data -tc /opt/uautomizer/config/AutomizerTermination.xml -i Benchmarks/TermCOMP/C/AProVE_numeric/svcomp_a.06/svcomp_a.06.c -s /opt/uautomizer/config/svcomp-Termination-64bit-Automizer_Default.epf --cacsl2boogietranslator.entry.function main --witnessprinter.witness.directory /opt/uautomizer --witnessprinter.witness.filename witness.graphml --witnessprinter.write.witness.besides.input.file false --witnessprinter.graph.data.specification CHECK( init(main()), LTL(F end) ) --witnessprinter.graph.data.producer Automizer --witnessprinter.graph.data.architecture 64bit --witnessprinter.graph.data.programhash fd10ff98f2f4554df2efd2e5a7362160d8b7b5ee6e094ea54a2f3f19c94733e7
+.....................................................................................................................................................................................................................................................................................................................................................................................................................................................--- End real Ultimate output ---
+
+Execution finished normally
+Writing output log to file Ultimate.log
+Result:
+TRUE
+Runtime: 3341 milliseconds

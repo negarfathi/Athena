@@ -1,0 +1,102 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.0GZXMd
+
+Input File is : Unsigned_Wraparound_Error_4_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+
+Commit Number: ce9d4462423ac74a1dbbc4ce52c2c81cfcdda766
+URL: https://github.com/ArtifexSoftware/mupdf/commit/ce9d4462423ac74a1dbbc4ce52c2c81cfcdda766
+Project Name: mupdf
+License: AGPL-3.0
+termination: FALSE
+
+*/
+int main()
+{
+    unsigned int n = __VERIFIER_nondet_uint();
+    while( n > 0 )
+    {
+        unsigned int len = n;
+        {if( len > 16 )
+            {len = 16;}}
+        n -= 16;
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Unsigned_Wraparound_Error_4_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+
+Commit Number: ce9d4462423ac74a1dbbc4ce52c2c81cfcdda766
+URL: https://github.com/ArtifexSoftware/mupdf/commit/ce9d4462423ac74a1dbbc4ce52c2c81cfcdda766
+Project Name: mupdf
+License: AGPL-3.0
+termination: FALSE
+
+*/
+int main()
+{
+    unsigned int n = __VERIFIER_nondet_uint();
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+ while( n > 0 )
+    { __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static unsigned int on;if(pStored0){__CPROVER_assert(!(on==n),"recurrent state found");} if(flag){on=n;pStored0=myTrue;} 
+        unsigned int len = n;
+        { __VERIFIER_reached_control(17, __func__);
+if( len > 16 )
+            { __VERIFIER_control_true(18, __func__);
+len = 16;}}
+        n -= 16;
+    }
+    return 0;
+}
+
+End Main 
+ Unsigned_Wraparound_Error_4_NT_braced_instrumented.c
+NTFILE is Unsigned_Wraparound_Error_4_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for Unsigned_Wraparound_Error_4_NT.c
+FILE=Unsigned_Wraparound_Error_4_NT_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 301808 milliseconds

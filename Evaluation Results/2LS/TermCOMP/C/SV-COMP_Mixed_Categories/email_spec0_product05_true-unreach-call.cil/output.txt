@@ -1,0 +1,1232 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/email_spec0_product05_true-unreach-call.cil/email_spec0_product05_true-unreach-call.cil.c
+Converting
+Type-checking email_spec0_product05_true-unreach-call.cil
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+file libacc.c line 65 function __utac__exception__cf_handler_reset: replacing function pointer by 0 possible targets
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of printf
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of puts
+Simplifying
+Computing SSA of setClientForwardReceiver
+Simplifying
+Computing SSA of setClientId
+Simplifying
+Computing SSA of select_features
+Simplifying
+Computing SSA of select_helpers
+Simplifying
+Computing SSA of valid_product
+Simplifying
+Computing SSA of is_queue_empty
+Simplifying
+Computing SSA of get_queued_client
+Simplifying
+Computing SSA of get_queued_email
+Simplifying
+Computing SSA of outgoing
+Simplifying
+Computing SSA of sendEmail
+Simplifying
+Computing SSA of setup_bob
+Simplifying
+Computing SSA of setup_rjh
+Simplifying
+Computing SSA of setup_chuck
+Simplifying
+Computing SSA of bobToRjh
+Simplifying
+Computing SSA of rjhToBob
+Simplifying
+Computing SSA of test
+Simplifying
+Computing SSA of setup
+Simplifying
+Computing SSA of rjhEnableForwarding
+Simplifying
+Computing SSA of __automaton_fail
+Simplifying
+Computing SSA of initEmail
+Simplifying
+Computing SSA of getEmailId
+Simplifying
+Computing SSA of setEmailId
+Simplifying
+Computing SSA of getEmailFrom
+Simplifying
+Computing SSA of setEmailFrom
+Simplifying
+Computing SSA of getEmailTo
+Simplifying
+Computing SSA of setEmailTo
+Simplifying
+Computing SSA of getEmailSubject
+Simplifying
+Computing SSA of setEmailSubject
+Simplifying
+Computing SSA of getEmailBody
+Simplifying
+Computing SSA of setEmailBody
+Simplifying
+Computing SSA of isEncrypted
+Simplifying
+Computing SSA of setEmailIsEncrypted
+Simplifying
+Computing SSA of getEmailEncryptionKey
+Simplifying
+Computing SSA of setEmailEncryptionKey
+Simplifying
+Computing SSA of isSigned
+Simplifying
+Computing SSA of setEmailIsSigned
+Simplifying
+Computing SSA of getEmailSignKey
+Simplifying
+Computing SSA of setEmailSignKey
+Simplifying
+Computing SSA of isVerified
+Simplifying
+Computing SSA of setEmailIsSignatureVerified
+Simplifying
+Computing SSA of __utac__exception__cf_handler_set
+Simplifying
+Computing SSA of __utac__exception__cf_handler_free
+Simplifying
+Computing SSA of __utac__exception__cf_handler_reset
+Simplifying
+Computing SSA of __utac__error_stack_mgt
+Simplifying
+Computing SSA of __utac__get_this_arg
+Simplifying
+Computing SSA of __utac__get_this_argtype
+Simplifying
+Computing SSA of isReadable
+Simplifying
+Computing SSA of __utac_acc__DecryptForward_spec__1
+Simplifying
+Computing SSA of initClient
+Simplifying
+Computing SSA of getClientName
+Simplifying
+Computing SSA of setClientName
+Simplifying
+Computing SSA of getClientOutbuffer
+Simplifying
+Computing SSA of setClientOutbuffer
+Simplifying
+Computing SSA of getClientAddressBookSize
+Simplifying
+Computing SSA of setClientAddressBookSize
+Simplifying
+Computing SSA of createClientAddressBookEntry
+Simplifying
+Computing SSA of getClientAddressBookAlias
+Simplifying
+Computing SSA of setClientAddressBookAlias
+Simplifying
+Computing SSA of getClientAddressBookAddress
+Simplifying
+Computing SSA of setClientAddressBookAddress
+Simplifying
+Computing SSA of getClientAutoResponse
+Simplifying
+Computing SSA of setClientAutoResponse
+Simplifying
+Computing SSA of getClientPrivateKey
+Simplifying
+Computing SSA of setClientPrivateKey
+Simplifying
+Computing SSA of getClientKeyringSize
+Simplifying
+Computing SSA of createClientKeyringEntry
+Simplifying
+Computing SSA of getClientKeyringUser
+Simplifying
+Computing SSA of setClientKeyringUser
+Simplifying
+Computing SSA of getClientKeyringPublicKey
+Simplifying
+Computing SSA of setClientKeyringPublicKey
+Simplifying
+Computing SSA of getClientForwardReceiver
+Simplifying
+Computing SSA of getClientId
+Simplifying
+Computing SSA of findPublicKey
+Simplifying
+Computing SSA of findClientAddressBookAlias
+Simplifying
+Computing SSA of setClientKeyringSize
+Simplifying
+Computing SSA of printMail
+Simplifying
+Computing SSA of createEmail
+Simplifying
+Computing SSA of queue
+Simplifying
+Computing SSA of mail
+Simplifying
+Computing SSA of deliver
+Simplifying
+Computing SSA of incoming
+Simplifying
+Computing SSA of createClient
+Simplifying
+Computing SSA of forward
+Simplifying
+Computing SSA of incoming__wrappee__Base
+Simplifying
+Computing SSA of prompt
+Simplifying
+Computing SSA of cloneEmail
+Simplifying
+Computing SSA of select_one
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object head'obj.v __ste_client_name0 __ste_client_name1 __ste_client_name2 __ste_email_body0 __ste_email_body1 __ste_email_subject0 __ste_email_subject1 head head'obj.next __CPROVER_rounding_mode __GUIDSL_NON_TERMINAL_main __GUIDSL_ROOT_PRODUCTION __SELECTED_FEATURE_AddressBook __SELECTED_FEATURE_AutoResponder __SELECTED_FEATURE_Base __SELECTED_FEATURE_Decrypt __SELECTED_FEATURE_Encrypt __SELECTED_FEATURE_Forward __SELECTED_FEATURE_Keys __SELECTED_FEATURE_Sign __SELECTED_FEATURE_Verify __ste_ClientAddressBook_size0 __ste_ClientAddressBook_size1 __ste_ClientAddressBook_size2 __ste_ClientKeyring_size0 __ste_ClientKeyring_size1 __ste_ClientKeyring_size2 __ste_Client_AddressBook0_Address0 __ste_Client_AddressBook0_Address1 __ste_Client_AddressBook0_Address2 __ste_Client_AddressBook0_Alias0 __ste_Client_AddressBook0_Alias1 __ste_Client_AddressBook0_Alias2 __ste_Client_AddressBook1_Address0 __ste_Client_AddressBook1_Address1 __ste_Client_AddressBook1_Address2 __ste_Client_AddressBook1_Alias0 __ste_Client_AddressBook1_Alias1 __ste_Client_AddressBook1_Alias2 __ste_Client_AddressBook2_Address0 __ste_Client_AddressBook2_Address1 __ste_Client_AddressBook2_Address2 __ste_Client_AddressBook2_Alias0 __ste_Client_AddressBook2_Alias1 __ste_Client_AddressBook2_Alias2 __ste_Client_Keyring0_PublicKey0 __ste_Client_Keyring0_PublicKey1 __ste_Client_Keyring0_PublicKey2 __ste_Client_Keyring0_User0 __ste_Client_Keyring0_User1 __ste_Client_Keyring0_User2 __ste_Client_Keyring1_PublicKey0 __ste_Client_Keyring1_PublicKey1 __ste_Client_Keyring1_PublicKey2 __ste_Client_Keyring1_User0 __ste_Client_Keyring1_User1 __ste_Client_Keyring1_User2 __ste_Client_Keyring2_PublicKey0 __ste_Client_Keyring2_PublicKey1 __ste_Client_Keyring2_PublicKey2 __ste_Client_Keyring2_User0 __ste_Client_Keyring2_User1 __ste_Client_Keyring2_User2 __ste_Client_counter __ste_Email_counter __ste_client_autoResponse0 __ste_client_autoResponse1 __ste_client_autoResponse2 __ste_client_forwardReceiver0 __ste_client_forwardReceiver1 __ste_client_forwardReceiver2 __ste_client_forwardReceiver3 __ste_client_idCounter0 __ste_client_idCounter1 __ste_client_idCounter2 __ste_client_outbuffer0 __ste_client_outbuffer1 __ste_client_outbuffer2 __ste_client_outbuffer3 __ste_client_privateKey0 __ste_client_privateKey1 __ste_client_privateKey2 __ste_email_encryptionKey0 __ste_email_encryptionKey1 __ste_email_from0 __ste_email_from1 __ste_email_id0 __ste_email_id1 __ste_email_isEncrypted0 __ste_email_isEncrypted1 __ste_email_isSignatureVerified0 __ste_email_isSignatureVerified1 __ste_email_isSigned0 __ste_email_isSigned1 __ste_email_signKey0 __ste_email_signKey1 __ste_email_to0 __ste_email_to1 bob chuck queue_empty queued_client queued_message rjh __ste_client_name0'obj __ste_client_name1'obj __ste_client_name2'obj __ste_email_body0'obj __ste_email_body1'obj __ste_email_subject0'obj __ste_email_subject1'obj head'obj __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#40 __CPROVER_thread_key_dtors#38 __CPROVER_thread_keys#39 __CPROVER_malloc_is_new_array#30 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#27 __CPROVER_dead_object#28 __CPROVER_deallocated#29 __CPROVER_new_object#32 head'obj.v __ste_client_name0#106 __ste_client_name1#107 __ste_client_name2#108 __ste_email_body0#116 __ste_email_body1#117 __ste_email_subject0#132 __ste_email_subject1#133 head#138 head'obj.next __CPROVER_rounding_mode#36 __GUIDSL_NON_TERMINAL_main#41 __GUIDSL_ROOT_PRODUCTION#42 __SELECTED_FEATURE_AddressBook#43 __SELECTED_FEATURE_AutoResponder#44 __SELECTED_FEATURE_Base#45 __SELECTED_FEATURE_Decrypt#46 __SELECTED_FEATURE_Encrypt#47 __SELECTED_FEATURE_Forward#48 __SELECTED_FEATURE_Keys#49 __SELECTED_FEATURE_Sign#50 __SELECTED_FEATURE_Verify#51 __ste_ClientAddressBook_size0#52 __ste_ClientAddressBook_size1#53 __ste_ClientAddressBook_size2#54 __ste_ClientKeyring_size0#55 __ste_ClientKeyring_size1#56 __ste_ClientKeyring_size2#57 __ste_Client_AddressBook0_Address0#58 __ste_Client_AddressBook0_Address1#59 __ste_Client_AddressBook0_Address2#60 __ste_Client_AddressBook0_Alias0#61 __ste_Client_AddressBook0_Alias1#62 __ste_Client_AddressBook0_Alias2#63 __ste_Client_AddressBook1_Address0#64 __ste_Client_AddressBook1_Address1#65 __ste_Client_AddressBook1_Address2#66 __ste_Client_AddressBook1_Alias0#67 __ste_Client_AddressBook1_Alias1#68 __ste_Client_AddressBook1_Alias2#69 __ste_Client_AddressBook2_Address0#70 __ste_Client_AddressBook2_Address1#71 __ste_Client_AddressBook2_Address2#72 __ste_Client_AddressBook2_Alias0#73 __ste_Client_AddressBook2_Alias1#74 __ste_Client_AddressBook2_Alias2#75 __ste_Client_Keyring0_PublicKey0#76 __ste_Client_Keyring0_PublicKey1#77 __ste_Client_Keyring0_PublicKey2#78 __ste_Client_Keyring0_User0#79 __ste_Client_Keyring0_User1#80 __ste_Client_Keyring0_User2#81 __ste_Client_Keyring1_PublicKey0#82 __ste_Client_Keyring1_PublicKey1#83 __ste_Client_Keyring1_PublicKey2#84 __ste_Client_Keyring1_User0#85 __ste_Client_Keyring1_User1#86 __ste_Client_Keyring1_User2#87 __ste_Client_Keyring2_PublicKey0#88 __ste_Client_Keyring2_PublicKey1#89 __ste_Client_Keyring2_PublicKey2#90 __ste_Client_Keyring2_User0#91 __ste_Client_Keyring2_User1#92 __ste_Client_Keyring2_User2#93 __ste_Client_counter#94 __ste_Email_counter#95 __ste_client_autoResponse0#96 __ste_client_autoResponse1#97 __ste_client_autoResponse2#98 __ste_client_forwardReceiver0#99 __ste_client_forwardReceiver1#100 __ste_client_forwardReceiver2#101 __ste_client_forwardReceiver3#102 __ste_client_idCounter0#103 __ste_client_idCounter1#104 __ste_client_idCounter2#105 __ste_client_outbuffer0#109 __ste_client_outbuffer1#110 __ste_client_outbuffer2#111 __ste_client_outbuffer3#112 __ste_client_privateKey0#113 __ste_client_privateKey1#114 __ste_client_privateKey2#115 __ste_email_encryptionKey0#118 __ste_email_encryptionKey1#119 __ste_email_from0#120 __ste_email_from1#121 __ste_email_id0#122 __ste_email_id1#123 __ste_email_isEncrypted0#124 __ste_email_isEncrypted1#125 __ste_email_isSignatureVerified0#126 __ste_email_isSignatureVerified1#127 __ste_email_isSigned0#128 __ste_email_isSigned1#129 __ste_email_signKey0#130 __ste_email_signKey1#131 __ste_email_to0#134 __ste_email_to1#135 bob#136 chuck#137 queue_empty#139 queued_client#140 queued_message#141 rjh#142 __ste_client_name0'obj __ste_client_name1'obj __ste_client_name2'obj __ste_email_body0'obj __ste_email_body1'obj __ste_email_subject0'obj __ste_email_subject1'obj head'obj __CPROVER_pipe_count#35 __CPROVER_max_malloc_size#31 __CPROVER_next_thread_id#33 __CPROVER_next_thread_key#34 __CPROVER_thread_id#37 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#36 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#36) <= 0 && __GUIDSL_NON_TERMINAL_main#41 <= 0 && -((signed __CPROVER_bitvector[33])__GUIDSL_NON_TERMINAL_main#41) <= 0 && __GUIDSL_ROOT_PRODUCTION#42 <= 0 && -((signed __CPROVER_bitvector[33])__GUIDSL_ROOT_PRODUCTION#42) <= 0 && __SELECTED_FEATURE_AddressBook#43 <= 0 && -((signed __CPROVER_bitvector[33])__SELECTED_FEATURE_AddressBook#43) <= 0 && __SELECTED_FEATURE_AutoResponder#44 <= 0 && -((signed __CPROVER_bitvector[33])__SELECTED_FEATURE_AutoResponder#44) <= 0 && __SELECTED_FEATURE_Base#45 <= 0 && -((signed __CPROVER_bitvector[33])__SELECTED_FEATURE_Base#45) <= 0 && __SELECTED_FEATURE_Decrypt#46 <= 0 && -((signed __CPROVER_bitvector[33])__SELECTED_FEATURE_Decrypt#46) <= 0 && __SELECTED_FEATURE_Encrypt#47 <= 0 && -((signed __CPROVER_bitvector[33])__SELECTED_FEATURE_Encrypt#47) <= 0 && __SELECTED_FEATURE_Forward#48 <= 0 && -((signed __CPROVER_bitvector[33])__SELECTED_FEATURE_Forward#48) <= 0 && __SELECTED_FEATURE_Keys#49 <= 0 && -((signed __CPROVER_bitvector[33])__SELECTED_FEATURE_Keys#49) <= 0 && __SELECTED_FEATURE_Sign#50 <= 0 && -((signed __CPROVER_bitvector[33])__SELECTED_FEATURE_Sign#50) <= 0 && __SELECTED_FEATURE_Verify#51 <= 0 && -((signed __CPROVER_bitvector[33])__SELECTED_FEATURE_Verify#51) <= 0 && __ste_ClientAddressBook_size0#52 <= 0 && -((signed __CPROVER_bitvector[33])__ste_ClientAddressBook_size0#52) <= 0 && __ste_ClientAddressBook_size1#53 <= 0 && -((signed __CPROVER_bitvector[33])__ste_ClientAddressBook_size1#53) <= 0 && __ste_ClientAddressBook_size2#54 <= 0 && -((signed __CPROVER_bitvector[33])__ste_ClientAddressBook_size2#54) <= 0 && __ste_ClientKeyring_size0#55 <= 0 && -((signed __CPROVER_bitvector[33])__ste_ClientKeyring_size0#55) <= 0 && __ste_ClientKeyring_size1#56 <= 0 && -((signed __CPROVER_bitvector[33])__ste_ClientKeyring_size1#56) <= 0 && __ste_ClientKeyring_size2#57 <= 0 && -((signed __CPROVER_bitvector[33])__ste_ClientKeyring_size2#57) <= 0 && __ste_Client_AddressBook0_Address0#58 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook0_Address0#58) <= 0 && __ste_Client_AddressBook0_Address1#59 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook0_Address1#59) <= 0 && __ste_Client_AddressBook0_Address2#60 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook0_Address2#60) <= 0 && __ste_Client_AddressBook0_Alias0#61 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook0_Alias0#61) <= 0 && __ste_Client_AddressBook0_Alias1#62 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook0_Alias1#62) <= 0 && __ste_Client_AddressBook0_Alias2#63 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook0_Alias2#63) <= 0 && __ste_Client_AddressBook1_Address0#64 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook1_Address0#64) <= 0 && __ste_Client_AddressBook1_Address1#65 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook1_Address1#65) <= 0 && __ste_Client_AddressBook1_Address2#66 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook1_Address2#66) <= 0 && __ste_Client_AddressBook1_Alias0#67 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook1_Alias0#67) <= 0 && __ste_Client_AddressBook1_Alias1#68 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook1_Alias1#68) <= 0 && __ste_Client_AddressBook1_Alias2#69 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook1_Alias2#69) <= 0 && __ste_Client_AddressBook2_Address0#70 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook2_Address0#70) <= 0 && __ste_Client_AddressBook2_Address1#71 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook2_Address1#71) <= 0 && __ste_Client_AddressBook2_Address2#72 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook2_Address2#72) <= 0 && __ste_Client_AddressBook2_Alias0#73 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook2_Alias0#73) <= 0 && __ste_Client_AddressBook2_Alias1#74 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook2_Alias1#74) <= 0 && __ste_Client_AddressBook2_Alias2#75 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_AddressBook2_Alias2#75) <= 0 && __ste_Client_Keyring0_PublicKey0#76 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring0_PublicKey0#76) <= 0 && __ste_Client_Keyring0_PublicKey1#77 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring0_PublicKey1#77) <= 0 && __ste_Client_Keyring0_PublicKey2#78 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring0_PublicKey2#78) <= 0 && __ste_Client_Keyring0_User0#79 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring0_User0#79) <= 0 && __ste_Client_Keyring0_User1#80 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring0_User1#80) <= 0 && __ste_Client_Keyring0_User2#81 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring0_User2#81) <= 0 && __ste_Client_Keyring1_PublicKey0#82 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring1_PublicKey0#82) <= 0 && __ste_Client_Keyring1_PublicKey1#83 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring1_PublicKey1#83) <= 0 && __ste_Client_Keyring1_PublicKey2#84 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring1_PublicKey2#84) <= 0 && __ste_Client_Keyring1_User0#85 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring1_User0#85) <= 0 && __ste_Client_Keyring1_User1#86 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring1_User1#86) <= 0 && __ste_Client_Keyring1_User2#87 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring1_User2#87) <= 0 && __ste_Client_Keyring2_PublicKey0#88 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring2_PublicKey0#88) <= 0 && __ste_Client_Keyring2_PublicKey1#89 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring2_PublicKey1#89) <= 0 && __ste_Client_Keyring2_PublicKey2#90 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring2_PublicKey2#90) <= 0 && __ste_Client_Keyring2_User0#91 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring2_User0#91) <= 0 && __ste_Client_Keyring2_User1#92 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring2_User1#92) <= 0 && __ste_Client_Keyring2_User2#93 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_Keyring2_User2#93) <= 0 && __ste_Client_counter#94 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Client_counter#94) <= 0 && __ste_Email_counter#95 <= 0 && -((signed __CPROVER_bitvector[33])__ste_Email_counter#95) <= 0 && __ste_client_autoResponse0#96 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_autoResponse0#96) <= 0 && __ste_client_autoResponse1#97 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_autoResponse1#97) <= 0 && __ste_client_autoResponse2#98 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_autoResponse2#98) <= 0 && __ste_client_forwardReceiver0#99 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver0#99) <= 0 && __ste_client_forwardReceiver1#100 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver1#100) <= 0 && __ste_client_forwardReceiver2#101 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver2#101) <= 0 && __ste_client_forwardReceiver3#102 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver3#102) <= 0 && __ste_client_idCounter0#103 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter0#103) <= 0 && __ste_client_idCounter1#104 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter1#104) <= 0 && __ste_client_idCounter2#105 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter2#105) <= 0 && __ste_client_outbuffer0#109 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_outbuffer0#109) <= 0 && __ste_client_outbuffer1#110 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_outbuffer1#110) <= 0 && __ste_client_outbuffer2#111 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_outbuffer2#111) <= 0 && __ste_client_outbuffer3#112 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_outbuffer3#112) <= 0 && __ste_client_privateKey0#113 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_privateKey0#113) <= 0 && __ste_client_privateKey1#114 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_privateKey1#114) <= 0 && __ste_client_privateKey2#115 <= 0 && -((signed __CPROVER_bitvector[33])__ste_client_privateKey2#115) <= 0 && __ste_email_encryptionKey0#118 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_encryptionKey0#118) <= 0 && __ste_email_encryptionKey1#119 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_encryptionKey1#119) <= 0 && __ste_email_from0#120 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_from0#120) <= 0 && __ste_email_from1#121 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_from1#121) <= 0 && __ste_email_id0#122 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_id0#122) <= 0 && __ste_email_id1#123 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_id1#123) <= 0 && __ste_email_isEncrypted0#124 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_isEncrypted0#124) <= 0 && __ste_email_isEncrypted1#125 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_isEncrypted1#125) <= 0 && __ste_email_isSignatureVerified0#126 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_isSignatureVerified0#126) <= 0 && __ste_email_isSignatureVerified1#127 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_isSignatureVerified1#127) <= 0 && __ste_email_isSigned0#128 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_isSigned0#128) <= 0 && __ste_email_isSigned1#129 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_isSigned1#129) <= 0 && __ste_email_signKey0#130 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_signKey0#130) <= 0 && __ste_email_signKey1#131 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_signKey1#131) <= 0 && __ste_email_to0#134 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_to0#134) <= 0 && __ste_email_to1#135 <= 0 && -((signed __CPROVER_bitvector[33])__ste_email_to1#135) <= 0 && bob#136 <= 0 && -((signed __CPROVER_bitvector[33])bob#136) <= 0 && chuck#137 <= 0 && -((signed __CPROVER_bitvector[33])chuck#137) <= 0 && queue_empty#139 <= 1 && -((signed __CPROVER_bitvector[33])queue_empty#139) <= -1 && queued_client#140 <= 0 && -((signed __CPROVER_bitvector[33])queued_client#140) <= 0 && queued_message#141 <= 0 && -((signed __CPROVER_bitvector[33])queued_message#141) <= 0 && rjh#142 <= 0 && -((signed __CPROVER_bitvector[33])rjh#142) <= 0 && __ste_client_name0'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_client_name0'obj) <= 128 && __ste_client_name1'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_client_name1'obj) <= 128 && __ste_client_name2'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_client_name2'obj) <= 128 && __ste_email_body0'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_email_body0'obj) <= 128 && __ste_email_body1'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_email_body1'obj) <= 128 && __ste_email_subject0'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_email_subject0'obj) <= 128 && __ste_email_subject1'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_email_subject1'obj) <= 128 && __CPROVER_pipe_count#35 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#35) <= 0 && __CPROVER_max_malloc_size#31 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#31) <= -36028797018963968 && __CPROVER_next_thread_id#33 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#33) <= 0 && __CPROVER_next_thread_key#34 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#34) <= 0 && __CPROVER_thread_id#37 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#37) <= 0
+forward invariant: __ste_client_name0'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_client_name0'obj) <= 128 && __ste_client_name1'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_client_name1'obj) <= 128 && __ste_client_name2'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_client_name2'obj) <= 128 && __ste_email_body0'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_email_body0'obj) <= 128 && __ste_email_body1'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_email_body1'obj) <= 128 && __ste_email_subject0'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_email_subject0'obj) <= 128 && __ste_email_subject1'obj <= 127 && -((signed __CPROVER_bitvector[9])__ste_email_subject1'obj) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of select_helpers
+Function select_helpers not analyzed yet
+Recursively summarizing function select_helpers
+Analyzing function select_helpers
+Computing summary
+Computing termination argument for select_helpers
+Function trivially terminates
+
+Summary for function select_helpers
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of select_features
+Function select_features not analyzed yet
+Recursively summarizing function select_features
+Analyzing function select_features
+Computing summary
+Computing termination argument for select_features
+Function trivially terminates
+
+Summary for function select_features
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of valid_product
+Function valid_product not analyzed yet
+Recursively summarizing function valid_product
+Analyzing function valid_product
+Computing summary
+Computing termination argument for valid_product
+Function trivially terminates
+
+Summary for function valid_product
+params: 
+globals_in: 
+globals_out: valid_product#return_value#185 
+forward precondition: TRUE
+forward transformer: valid_product#return_value#185 <= 1 && -((signed __CPROVER_bitvector[33])valid_product#return_value#185) <= -1
+forward invariant: valid_product#return_value#185 <= 1 && -((signed __CPROVER_bitvector[33])valid_product#return_value#185) <= -1
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setup
+Function setup not analyzed yet
+Recursively summarizing function setup
+Checking precondition of setup_bob
+Function setup_bob not analyzed yet
+Recursively summarizing function setup_bob
+Checking precondition of setClientId
+Function setClientId not analyzed yet
+Recursively summarizing function setClientId
+Analyzing function setClientId
+Computing summary
+Computing termination argument for setClientId
+Function trivially terminates
+
+Summary for function setClientId
+params: handle value 
+globals_in: __ste_client_idCounter0 __ste_client_idCounter1 __ste_client_idCounter2 
+globals_out: __ste_client_idCounter0#phi180 __ste_client_idCounter1#phi180 __ste_client_idCounter2#phi180 
+forward precondition: TRUE
+forward transformer: __ste_client_idCounter0#phi180 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter0#phi180) <= 2147483648 && __ste_client_idCounter1#phi180 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter1#phi180) <= 2147483648 && __ste_client_idCounter2#phi180 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter2#phi180) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function setup_bob
+Computing summary
+Computing termination argument for setup_bob
+Function terminates
+
+Summary for function setup_bob
+params: bob___0 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of printf
+Function printf not analyzed yet
+Recursively summarizing function printf
+Analyzing function printf
+Computing summary
+Computing termination argument for printf
+Function trivially terminates
+
+Summary for function printf
+params: format 
+globals_in: list'obj'obj list'obj format'obj 
+globals_out: list'obj'obj list'obj printf#return_value#22 format'obj 
+forward precondition: TRUE
+forward transformer: printf#return_value#22 <= 2147483647 && -((signed __CPROVER_bitvector[33])printf#return_value#22) <= 2147483648 && format'obj <= 127 && -((signed __CPROVER_bitvector[9])format'obj) <= 128
+forward invariant: format'obj <= 127 && -((signed __CPROVER_bitvector[9])format'obj) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of setup_rjh
+Function setup_rjh not analyzed yet
+Recursively summarizing function setup_rjh
+Checking precondition of setClientId
+Precondition trivially holds, replacing by summary.
+Analyzing function setup_rjh
+Computing summary
+Computing termination argument for setup_rjh
+Function terminates
+
+Summary for function setup_rjh
+params: rjh___0 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of printf
+Precondition trivially holds, replacing by summary.
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of setup_chuck
+Function setup_chuck not analyzed yet
+Recursively summarizing function setup_chuck
+Checking precondition of setClientId
+Precondition trivially holds, replacing by summary.
+Analyzing function setup_chuck
+Computing summary
+Computing termination argument for setup_chuck
+Function terminates
+
+Summary for function setup_chuck
+params: chuck___0 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of printf
+Precondition trivially holds, replacing by summary.
+Analyzing function setup
+Computing summary
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Computing termination argument for setup
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Function terminates
+
+Summary for function setup
+params: 
+globals_in: bob chuck rjh __cil_tmp1'obj __cil_tmp2'obj __cil_tmp3'obj 
+globals_out: bob#408 chuck#416 rjh#412 __cil_tmp1'obj __cil_tmp2'obj __cil_tmp3'obj 
+forward precondition: TRUE
+forward transformer: bob#408 <= 1 && -((signed __CPROVER_bitvector[33])bob#408) <= -1 && chuck#416 <= 3 && -((signed __CPROVER_bitvector[33])chuck#416) <= -3 && rjh#412 <= 2 && -((signed __CPROVER_bitvector[33])rjh#412) <= -2 && __cil_tmp1'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp1'obj) <= 128 && __cil_tmp2'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp2'obj) <= 128 && __cil_tmp3'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp3'obj) <= 128
+forward invariant: __cil_tmp1'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp1'obj) <= 128 && __cil_tmp2'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp2'obj) <= 128 && __cil_tmp3'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp3'obj) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of test
+Function test not analyzed yet
+Recursively summarizing function test
+Checking precondition of rjhEnableForwarding
+Function rjhEnableForwarding not analyzed yet
+Recursively summarizing function rjhEnableForwarding
+Checking precondition of setClientForwardReceiver
+Function setClientForwardReceiver not analyzed yet
+Recursively summarizing function setClientForwardReceiver
+Analyzing function setClientForwardReceiver
+Computing summary
+Computing termination argument for setClientForwardReceiver
+Function trivially terminates
+
+Summary for function setClientForwardReceiver
+params: handle value 
+globals_in: __ste_client_forwardReceiver0 __ste_client_forwardReceiver1 __ste_client_forwardReceiver2 
+globals_out: __ste_client_forwardReceiver0#phi171 __ste_client_forwardReceiver1#phi171 __ste_client_forwardReceiver2#phi171 
+forward precondition: TRUE
+forward transformer: __ste_client_forwardReceiver0#phi171 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver0#phi171) <= 2147483648 && __ste_client_forwardReceiver1#phi171 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver1#phi171) <= 2147483648 && __ste_client_forwardReceiver2#phi171 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver2#phi171) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function rjhEnableForwarding
+Computing summary
+Computing termination argument for rjhEnableForwarding
+Function terminates
+
+Summary for function rjhEnableForwarding
+params: 
+globals_in: chuck rjh 
+globals_out: chuck rjh 
+forward precondition: TRUE
+forward transformer: chuck <= 2147483647 && -((signed __CPROVER_bitvector[33])chuck) <= 2147483648 && rjh <= 2147483647 && -((signed __CPROVER_bitvector[33])rjh) <= 2147483648
+forward invariant: chuck <= 2147483647 && -((signed __CPROVER_bitvector[33])chuck) <= 2147483648 && rjh <= 2147483647 && -((signed __CPROVER_bitvector[33])rjh) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of bobToRjh
+Function bobToRjh not analyzed yet
+Recursively summarizing function bobToRjh
+Checking precondition of puts
+Function puts not analyzed yet
+Recursively summarizing function puts
+Analyzing function puts
+Computing summary
+Computing termination argument for puts
+Function trivially terminates
+
+Summary for function puts
+params: s 
+globals_in: s'obj 
+globals_out: puts#return_value#157 s'obj 
+forward precondition: TRUE
+forward transformer: puts#return_value#157 <= 2147483647 && -((signed __CPROVER_bitvector[33])puts#return_value#157) <= 1 && s'obj <= 127 && -((signed __CPROVER_bitvector[9])s'obj) <= 128
+forward invariant: s'obj <= 127 && -((signed __CPROVER_bitvector[9])s'obj) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of sendEmail
+Function sendEmail not analyzed yet
+Recursively summarizing function sendEmail
+Checking precondition of createEmail
+Function createEmail not analyzed yet
+Recursively summarizing function createEmail
+Checking precondition of setEmailFrom
+Function setEmailFrom not analyzed yet
+Recursively summarizing function setEmailFrom
+Analyzing function setEmailFrom
+Computing summary
+Computing termination argument for setEmailFrom
+Function trivially terminates
+
+Summary for function setEmailFrom
+params: handle value 
+globals_in: __ste_email_from0 __ste_email_from1 
+globals_out: __ste_email_from0#phi496 __ste_email_from1#phi496 
+forward precondition: TRUE
+forward transformer: __ste_email_from0#phi496 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_from0#phi496) <= 2147483648 && __ste_email_from1#phi496 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_from1#phi496) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setEmailTo
+Function setEmailTo not analyzed yet
+Recursively summarizing function setEmailTo
+Analyzing function setEmailTo
+Computing summary
+Computing termination argument for setEmailTo
+Function trivially terminates
+
+Summary for function setEmailTo
+params: handle value 
+globals_in: __ste_email_to0 __ste_email_to1 
+globals_out: __ste_email_to0#phi522 __ste_email_to1#phi522 
+forward precondition: TRUE
+forward transformer: __ste_email_to0#phi522 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_to0#phi522) <= 2147483648 && __ste_email_to1#phi522 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_to1#phi522) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function createEmail
+Computing summary
+Computing termination argument for createEmail
+Function terminates
+
+Summary for function createEmail
+params: from to 
+globals_in: 
+globals_out: createEmail#return_value#2131 
+forward precondition: TRUE
+forward transformer: createEmail#return_value#2131 <= 1 && -((signed __CPROVER_bitvector[33])createEmail#return_value#2131) <= -1
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of outgoing
+Function outgoing not analyzed yet
+Recursively summarizing function outgoing
+Checking precondition of getClientId
+Function getClientId not analyzed yet
+Recursively summarizing function getClientId
+Analyzing function getClientId
+Computing summary
+Computing termination argument for getClientId
+Function trivially terminates
+
+Summary for function getClientId
+params: handle 
+globals_in: __ste_client_idCounter0 __ste_client_idCounter1 __ste_client_idCounter2 
+globals_out: __ste_client_idCounter0 __ste_client_idCounter1 __ste_client_idCounter2 getClientId#return_value#phi1936 
+forward precondition: TRUE
+forward transformer: __ste_client_idCounter0 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter0) <= 2147483648 && __ste_client_idCounter1 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter1) <= 2147483648 && __ste_client_idCounter2 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter2) <= 2147483648 && getClientId#return_value#phi1936 <= 2147483647 && -((signed __CPROVER_bitvector[33])getClientId#return_value#phi1936) <= 2147483648
+forward invariant: __ste_client_idCounter0 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter0) <= 2147483648 && __ste_client_idCounter1 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter1) <= 2147483648 && __ste_client_idCounter2 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_idCounter2) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setEmailFrom
+Precondition trivially holds, replacing by summary.
+Checking precondition of mail
+Function mail not analyzed yet
+Recursively summarizing function mail
+Checking precondition of puts
+Precondition trivially holds, replacing by summary.
+Checking precondition of getEmailTo
+Function getEmailTo not analyzed yet
+Recursively summarizing function getEmailTo
+Analyzing function getEmailTo
+Computing summary
+Computing termination argument for getEmailTo
+Function trivially terminates
+
+Summary for function getEmailTo
+params: handle 
+globals_in: __ste_email_to0 __ste_email_to1 
+globals_out: __ste_email_to0 __ste_email_to1 getEmailTo#return_value#phi516 
+forward precondition: TRUE
+forward transformer: __ste_email_to0 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_to0) <= 2147483648 && __ste_email_to1 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_to1) <= 2147483648 && getEmailTo#return_value#phi516 <= 2147483647 && -((signed __CPROVER_bitvector[33])getEmailTo#return_value#phi516) <= 2147483648
+forward invariant: __ste_email_to0 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_to0) <= 2147483648 && __ste_email_to1 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_to1) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of incoming
+Function incoming not analyzed yet
+Recursively summarizing function incoming
+Checking precondition of incoming__wrappee__Base
+Function incoming__wrappee__Base not analyzed yet
+Recursively summarizing function incoming__wrappee__Base
+Checking precondition of deliver
+Function deliver not analyzed yet
+Recursively summarizing function deliver
+Checking precondition of puts
+Precondition trivially holds, replacing by summary.
+Analyzing function deliver
+Computing summary
+Computing termination argument for deliver
+Function terminates
+
+Summary for function deliver
+params: client msg 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function incoming__wrappee__Base
+Computing summary
+Computing termination argument for incoming__wrappee__Base
+Function terminates
+
+Summary for function incoming__wrappee__Base
+params: client msg 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getClientForwardReceiver
+Function getClientForwardReceiver not analyzed yet
+Recursively summarizing function getClientForwardReceiver
+Analyzing function getClientForwardReceiver
+Computing summary
+Computing termination argument for getClientForwardReceiver
+Function trivially terminates
+
+Summary for function getClientForwardReceiver
+params: handle 
+globals_in: __ste_client_forwardReceiver0 __ste_client_forwardReceiver1 __ste_client_forwardReceiver2 
+globals_out: __ste_client_forwardReceiver0 __ste_client_forwardReceiver1 __ste_client_forwardReceiver2 getClientForwardReceiver#return_value#phi1910 
+forward precondition: TRUE
+forward transformer: __ste_client_forwardReceiver0 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver0) <= 2147483648 && __ste_client_forwardReceiver1 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver1) <= 2147483648 && __ste_client_forwardReceiver2 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver2) <= 2147483648 && getClientForwardReceiver#return_value#phi1910 <= 2147483647 && -((signed __CPROVER_bitvector[33])getClientForwardReceiver#return_value#phi1910) <= 2147483648
+forward invariant: __ste_client_forwardReceiver0 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver0) <= 2147483648 && __ste_client_forwardReceiver1 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver1) <= 2147483648 && __ste_client_forwardReceiver2 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_client_forwardReceiver2) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setEmailTo
+Precondition trivially holds, replacing by summary.
+Checking precondition of forward
+Function forward not analyzed yet
+Recursively summarizing function forward
+Checking precondition of puts
+Precondition trivially holds, replacing by summary.
+Checking precondition of isReadable
+Function isReadable not analyzed yet
+Recursively summarizing function isReadable
+Analyzing function isReadable
+Computing summary
+Computing termination argument for isReadable
+Function trivially terminates
+
+Summary for function isReadable
+params: msg 
+globals_in: 
+globals_out: isReadable#return_value#1197 
+forward precondition: TRUE
+forward transformer: isReadable#return_value#1197 <= 1 && -((signed __CPROVER_bitvector[33])isReadable#return_value#1197) <= -1
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of puts
+Precondition trivially holds, replacing by summary.
+Checking precondition of printMail
+Function printMail not analyzed yet
+Recursively summarizing function printMail
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of getEmailId
+Function getEmailId not analyzed yet
+Recursively summarizing function getEmailId
+Analyzing function getEmailId
+Computing summary
+Computing termination argument for getEmailId
+Function trivially terminates
+
+Summary for function getEmailId
+params: handle 
+globals_in: __ste_email_id0 __ste_email_id1 
+globals_out: __ste_email_id0 __ste_email_id1 getEmailId#return_value#phi464 
+forward precondition: TRUE
+forward transformer: __ste_email_id0 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_id0) <= 2147483648 && __ste_email_id1 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_id1) <= 2147483648 && getEmailId#return_value#phi464 <= 2147483647 && -((signed __CPROVER_bitvector[33])getEmailId#return_value#phi464) <= 2147483648
+forward invariant: __ste_email_id0 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_id0) <= 2147483648 && __ste_email_id1 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_id1) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of printf
+Precondition trivially holds, replacing by summary.
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of getEmailFrom
+Function getEmailFrom not analyzed yet
+Recursively summarizing function getEmailFrom
+Analyzing function getEmailFrom
+Computing summary
+Computing termination argument for getEmailFrom
+Function trivially terminates
+
+Summary for function getEmailFrom
+params: handle 
+globals_in: __ste_email_from0 __ste_email_from1 
+globals_out: __ste_email_from0 __ste_email_from1 getEmailFrom#return_value#phi490 
+forward precondition: TRUE
+forward transformer: __ste_email_from0 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_from0) <= 2147483648 && __ste_email_from1 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_from1) <= 2147483648 && getEmailFrom#return_value#phi490 <= 2147483647 && -((signed __CPROVER_bitvector[33])getEmailFrom#return_value#phi490) <= 2147483648
+forward invariant: __ste_email_from0 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_from0) <= 2147483648 && __ste_email_from1 <= 2147483647 && -((signed __CPROVER_bitvector[33])__ste_email_from1) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of printf
+Precondition trivially holds, replacing by summary.
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of getEmailTo
+Precondition trivially holds, replacing by summary.
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of printf
+Precondition trivially holds, replacing by summary.
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of isReadable
+Precondition trivially holds, replacing by summary.
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Checking precondition of printf
+Precondition trivially holds, replacing by summary.
+Analyzing function printMail
+Computing summary
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Computing termination argument for printMail
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+ignoring excess function arguments
+Function terminates
+
+Summary for function printMail
+params: msg 
+globals_in: __cil_tmp6'obj __cil_tmp7'obj __cil_tmp8'obj __cil_tmp9'obj 
+globals_out: __cil_tmp6'obj __cil_tmp7'obj __cil_tmp8'obj __cil_tmp9'obj 
+forward precondition: TRUE
+forward transformer: __cil_tmp6'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp6'obj) <= 128 && __cil_tmp7'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp7'obj) <= 128 && __cil_tmp8'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp8'obj) <= 128 && __cil_tmp9'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp9'obj) <= 128
+forward invariant: __cil_tmp6'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp6'obj) <= 128 && __cil_tmp7'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp7'obj) <= 128 && __cil_tmp8'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp8'obj) <= 128 && __cil_tmp9'obj <= 127 && -((signed __CPROVER_bitvector[9])__cil_tmp9'obj) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of queue
+Function queue not analyzed yet
+Recursively summarizing function queue
+Analyzing function queue
+Computing summary
+Computing termination argument for queue
+Function trivially terminates
+
+Summary for function queue
+params: client msg 
+globals_in: queue_empty queued_client queued_message 
+globals_out: queue_empty#2139 queued_client#2141 queued_message#2140 
+forward precondition: TRUE
+forward transformer: queue_empty#2139 <= 0 && -((signed __CPROVER_bitvector[33])queue_empty#2139) <= 0 && queued_client#2141 <= 2147483647 && -((signed __CPROVER_bitvector[33])queued_client#2141) <= 2147483648 && queued_message#2140 <= 2147483647 && -((signed __CPROVER_bitvector[33])queued_message#2140) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function forward
+Computing summary
+Computing termination argument for forward
+Function terminates
+
+Summary for function forward
+params: client msg 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function incoming
+Computing summary
+Computing termination argument for incoming
+Function terminates
+
+Summary for function incoming
+params: client msg 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function mail
+Computing summary
+Computing termination argument for mail
+Function terminates
+
+Summary for function mail
+params: client msg 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function outgoing
+Computing summary
+Computing termination argument for outgoing
+Function terminates
+
+Summary for function outgoing
+params: client msg 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function sendEmail
+Computing summary
+Computing termination argument for sendEmail
+Function terminates
+
+Summary for function sendEmail
+params: sender receiver 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of is_queue_empty
+Function is_queue_empty not analyzed yet
+Recursively summarizing function is_queue_empty
+Analyzing function is_queue_empty
+Computing summary
+Computing termination argument for is_queue_empty
+Function trivially terminates
+
+Summary for function is_queue_empty
+params: 
+globals_in: queue_empty 
+globals_out: is_queue_empty#return_value#193 queue_empty 
+forward precondition: TRUE
+forward transformer: is_queue_empty#return_value#193 <= 2147483647 && -((signed __CPROVER_bitvector[33])is_queue_empty#return_value#193) <= 2147483648 && queue_empty <= 2147483647 && -((signed __CPROVER_bitvector[33])queue_empty) <= 2147483648
+forward invariant: queue_empty <= 2147483647 && -((signed __CPROVER_bitvector[33])queue_empty) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of get_queued_email
+Function get_queued_email not analyzed yet
+Recursively summarizing function get_queued_email
+Analyzing function get_queued_email
+Computing summary
+Computing termination argument for get_queued_email
+Function trivially terminates
+
+Summary for function get_queued_email
+params: 
+globals_in: queued_message 
+globals_out: get_queued_email#return_value#209 queued_message 
+forward precondition: TRUE
+forward transformer: get_queued_email#return_value#209 <= 2147483647 && -((signed __CPROVER_bitvector[33])get_queued_email#return_value#209) <= 2147483648 && queued_message <= 2147483647 && -((signed __CPROVER_bitvector[33])queued_message) <= 2147483648
+forward invariant: queued_message <= 2147483647 && -((signed __CPROVER_bitvector[33])queued_message) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of get_queued_client
+Function get_queued_client not analyzed yet
+Recursively summarizing function get_queued_client
+Analyzing function get_queued_client
+Computing summary
+Computing termination argument for get_queued_client
+Function trivially terminates
+
+Summary for function get_queued_client
+params: 
+globals_in: queued_client 
+globals_out: get_queued_client#return_value#201 queued_client 
+forward precondition: TRUE
+forward transformer: get_queued_client#return_value#201 <= 2147483647 && -((signed __CPROVER_bitvector[33])get_queued_client#return_value#201) <= 2147483648 && queued_client <= 2147483647 && -((signed __CPROVER_bitvector[33])queued_client) <= 2147483648
+forward invariant: queued_client <= 2147483647 && -((signed __CPROVER_bitvector[33])queued_client) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of outgoing
+Precondition trivially holds, replacing by summary.
+Analyzing function bobToRjh
+Computing summary
+Computing termination argument for bobToRjh
+Function terminates
+
+Summary for function bobToRjh
+params: 
+globals_in: bob rjh 
+globals_out: bob rjh 
+forward precondition: TRUE
+forward transformer: bob <= 2147483647 && -((signed __CPROVER_bitvector[33])bob) <= 2147483648 && rjh <= 2147483647 && -((signed __CPROVER_bitvector[33])rjh) <= 2147483648
+forward invariant: bob <= 2147483647 && -((signed __CPROVER_bitvector[33])bob) <= 2147483648 && rjh <= 2147483647 && -((signed __CPROVER_bitvector[33])rjh) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function test
+Computing summary
+Computing termination argument for test
+Synthesizing ranking function to prove termination
+
+Summary for function test
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: ($guard#297 && $guard#ls379 ==> op1#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op1#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op2#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op2#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op3#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op3#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op4#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op4#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op5#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op5#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op6#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op6#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op7#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op7#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op8#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op8#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op9#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op9#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op10#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op10#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op11#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op11#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> splverifierCounter#lb379 <= 4) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])splverifierCounter#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> tmp#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___0#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___0#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___1#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___1#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___2#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___2#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___3#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___3#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___4#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___4#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___5#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___5#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___6#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___6#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___7#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___7#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___8#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___8#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___9#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___9#lb379) <= 2147483648)
+forward invariant: ($guard#297 && $guard#ls379 ==> op1#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op1#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op2#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op2#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op3#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op3#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op4#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op4#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op5#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op5#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op6#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op6#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op7#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op7#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op8#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op8#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op9#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op9#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op10#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op10#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> op11#lb379 <= 1) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])op11#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> splverifierCounter#lb379 <= 4) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])splverifierCounter#lb379) <= 0) && ($guard#297 && $guard#ls379 ==> tmp#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___0#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___0#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___1#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___1#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___2#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___2#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___3#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___3#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___4#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___4#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___5#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___5#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___6#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___6#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___7#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___7#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___8#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___8#lb379) <= 2147483648) && ($guard#297 && $guard#ls379 ==> tmp___9#lb379 <= 2147483647) && ($guard#297 && $guard#ls379 ==> -((signed __CPROVER_bitvector[33])tmp___9#lb379) <= 2147483648)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#297 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 && $guard#379 && $cond#379 ==> (signed __CPROVER_bitvector[66])((signed __CPROVER_bitvector[65])((long int)((signed __CPROVER_bitvector[63])((signed __CPROVER_bitvector[62])((signed __CPROVER_bitvector[61])((signed __CPROVER_bitvector[60])((signed __CPROVER_bitvector[59])((signed __CPROVER_bitvector[58])((signed __CPROVER_bitvector[57])((signed __CPROVER_bitvector[56])((signed __CPROVER_bitvector[55])((signed __CPROVER_bitvector[54])((signed __CPROVER_bitvector[53])((signed __CPROVER_bitvector[52])((signed __CPROVER_bitvector[51])((signed __CPROVER_bitvector[50])((signed __CPROVER_bitvector[49])((signed __CPROVER_bitvector[48])((signed __CPROVER_bitvector[47])((signed __CPROVER_bitvector[46])((signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op1#phi297 - (signed __CPROVER_bitvector[33])op1#phi379)) + (signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op2#phi297 - (signed __CPROVER_bitvector[33])op2#phi379))) + (signed __CPROVER_bitvector[46])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op3#phi297 - (signed __CPROVER_bitvector[33])op3#phi379))) + (signed __CPROVER_bitvector[47])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op4#phi297 - (signed __CPROVER_bitvector[33])op4#phi379))) + (signed __CPROVER_bitvector[48])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op5#phi297 - (signed __CPROVER_bitvector[33])op5#phi379))) + (signed __CPROVER_bitvector[49])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op6#phi297 - (signed __CPROVER_bitvector[33])op6#phi379))) + (signed __CPROVER_bitvector[50])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op7#phi297 - (signed __CPROVER_bitvector[33])op7#phi379))) + (signed __CPROVER_bitvector[51])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op8#phi297 - (signed __CPROVER_bitvector[33])op8#phi379))) + (signed __CPROVER_bitvector[52])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op9#phi297 - (signed __CPROVER_bitvector[33])op9#phi379))) + (signed __CPROVER_bitvector[53])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op10#phi297 - (signed __CPROVER_bitvector[33])op10#phi379))) + (signed __CPROVER_bitvector[54])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])op11#phi297 - (signed __CPROVER_bitvector[33])op11#phi379))) + (signed __CPROVER_bitvector[55])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])splverifierCounter#phi297 - (signed __CPROVER_bitvector[33])splverifierCounter#299))) + (signed __CPROVER_bitvector[56])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp#phi297 - (signed __CPROVER_bitvector[33])tmp#phi379))) + (signed __CPROVER_bitvector[57])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___0#phi297 - (signed __CPROVER_bitvector[33])tmp___0#phi379))) + (signed __CPROVER_bitvector[58])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___1#phi297 - (signed __CPROVER_bitvector[33])tmp___1#phi379))) + (signed __CPROVER_bitvector[59])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___2#phi297 - (signed __CPROVER_bitvector[33])tmp___2#phi379))) + (signed __CPROVER_bitvector[60])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___3#phi297 - (signed __CPROVER_bitvector[33])tmp___3#phi379))) + (signed __CPROVER_bitvector[61])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___4#phi297 - (signed __CPROVER_bitvector[33])tmp___4#phi379))) + (signed __CPROVER_bitvector[62])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___5#phi297 - (signed __CPROVER_bitvector[33])tmp___5#phi379))) + (signed __CPROVER_bitvector[63])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___6#phi297 - (signed __CPROVER_bitvector[33])tmp___6#phi379))) + (long int)((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___7#phi297 - (signed __CPROVER_bitvector[33])tmp___7#phi379))) + (signed __CPROVER_bitvector[65])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___8#phi297 - (signed __CPROVER_bitvector[33])tmp___8#phi379))) + (signed __CPROVER_bitvector[66])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])tmp___9#phi297 - (signed __CPROVER_bitvector[33])tmp___9#phi379)) > 0
+
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Function terminates
+
+Summary for function main
+params: 
+globals_in: 
+globals_out: main#return_value#10 
+forward precondition: TRUE
+forward transformer: main#return_value#10 <= 2147483647 && -((signed __CPROVER_bitvector[33])main#return_value#10) <= 2147483648
+forward invariant: main#return_value#10 <= 2147483647 && -((signed __CPROVER_bitvector[33])main#return_value#10) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+Function terminates
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+** statistics: 
+  number of solver instances: 3571339554
+  number of solver calls: 3301950901
+  number of summaries used: 54
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[main]: yes
+[printf]: yes
+[__CPROVER_initialize]: yes
+[puts]: yes
+[setClientForwardReceiver]: yes
+[setClientId]: yes
+[select_features]: yes
+[select_helpers]: yes
+[valid_product]: yes
+[is_queue_empty]: yes
+[get_queued_client]: yes
+[get_queued_email]: yes
+[outgoing]: yes
+[sendEmail]: yes
+[setup_bob]: yes
+[setup_rjh]: yes
+[setup_chuck]: yes
+[bobToRjh]: yes
+[rjhToBob]: not computed
+[test]: yes
+[setup]: yes
+[rjhEnableForwarding]: yes
+[__automaton_fail]: not computed
+[initEmail]: not computed
+[getEmailId]: yes
+[setEmailId]: not computed
+[getEmailFrom]: yes
+[setEmailFrom]: yes
+[getEmailTo]: yes
+[setEmailTo]: yes
+[getEmailSubject]: not computed
+[setEmailSubject]: not computed
+[getEmailBody]: not computed
+[setEmailBody]: not computed
+[isEncrypted]: not computed
+[setEmailIsEncrypted]: not computed
+[getEmailEncryptionKey]: not computed
+[setEmailEncryptionKey]: not computed
+[isSigned]: not computed
+[setEmailIsSigned]: not computed
+[getEmailSignKey]: not computed
+[setEmailSignKey]: not computed
+[isVerified]: not computed
+[setEmailIsSignatureVerified]: not computed
+[__utac__exception__cf_handler_set]: not computed
+[__utac__exception__cf_handler_free]: not computed
+[__utac__exception__cf_handler_reset]: not computed
+[__utac__error_stack_mgt]: not computed
+[__utac__get_this_arg]: not computed
+[__utac__get_this_argtype]: not computed
+[isReadable]: yes
+[__utac_acc__DecryptForward_spec__1]: not computed
+[initClient]: not computed
+[getClientName]: not computed
+[setClientName]: not computed
+[getClientOutbuffer]: not computed
+[setClientOutbuffer]: not computed
+[getClientAddressBookSize]: not computed
+[setClientAddressBookSize]: not computed
+[createClientAddressBookEntry]: not computed
+[getClientAddressBookAlias]: not computed
+[setClientAddressBookAlias]: not computed
+[getClientAddressBookAddress]: not computed
+[setClientAddressBookAddress]: not computed
+[getClientAutoResponse]: not computed
+[setClientAutoResponse]: not computed
+[getClientPrivateKey]: not computed
+[setClientPrivateKey]: not computed
+[getClientKeyringSize]: not computed
+[createClientKeyringEntry]: not computed
+[getClientKeyringUser]: not computed
+[setClientKeyringUser]: not computed
+[getClientKeyringPublicKey]: not computed
+[setClientKeyringPublicKey]: not computed
+[getClientForwardReceiver]: yes
+[getClientId]: yes
+[findPublicKey]: not computed
+[findClientAddressBookAlias]: not computed
+[setClientKeyringSize]: not computed
+[printMail]: yes
+[createEmail]: yes
+[queue]: yes
+[mail]: yes
+[deliver]: yes
+[incoming]: yes
+[createClient]: not computed
+[forward]: yes
+[incoming__wrappee__Base]: yes
+[prompt]: not computed
+[cloneEmail]: not computed
+[select_one]: not computed
+[__CPROVER__start]: yes
+VERIFICATION SUCCESSFUL
+Runtime: 2640 milliseconds

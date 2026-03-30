@@ -1,0 +1,122 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.WwwlpH
+
+Input File is : Piecewise_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 08.10.2013
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ * An example tailored to the piecewise ranking template.
+ *
+ * A ranking function is
+ *
+ * f(p, q) = min(p, q).
+ *
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+    int p, q;
+	q = __VERIFIER_nondet_int();
+	p = __VERIFIER_nondet_int();
+	while (q > 0 && p > 0 && p != q) {
+		{if (q < p) {
+			q = q - 1;
+			p = __VERIFIER_nondet_int();
+		} else {{if (p < q) {
+			p = p - 1;
+			q = __VERIFIER_nondet_int();
+		}}}}
+	}
+	return 0;
+}
+
+End Main   
+
+Input File is : Piecewise_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 08.10.2013
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ * An example tailored to the piecewise ranking template.
+ *
+ * A ranking function is
+ *
+ * f(p, q) = min(p, q).
+ *
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+    int p, q;
+	q = __VERIFIER_nondet_int();
+	p = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(22, __func__);
+	while (q > 0 && p > 0 && p != q) { __VERIFIER_loop_head(22, __func__);
+printf("CBMC Instrumentation @ line22");myBool flag=__VERIFIER_nondet_myBool();static int op;static int oq;if(pStored0){__CPROVER_assert(!(op==p && oq==q),"recurrent state found");} if(flag){op=p;oq=q;pStored0=myTrue;} 
+		{ __VERIFIER_reached_control(23, __func__);
+if (q < p) { __VERIFIER_control_true(23, __func__);
+
+			q = q - 1;
+			p = __VERIFIER_nondet_int();
+		} else { __VERIFIER_control_false(26, __func__);
+{ __VERIFIER_reached_control(26, __func__);
+if (p < q) { __VERIFIER_control_true(26, __func__);
+
+			p = p - 1;
+			q = __VERIFIER_nondet_int();
+		}}}}
+	}
+	return 0;
+}
+
+End Main 
+ Piecewise_true-termination_braced_instrumented.c
+NTFILE is Piecewise_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Piecewise_true-termination.c
+FILE=Piecewise_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182342 milliseconds

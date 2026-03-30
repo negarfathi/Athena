@@ -1,0 +1,143 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.OXpujY
+
+Input File is : svcomp_cstrcmp_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/* Returns some null-terminated string. */
+char* __VERIFIER_nondet_String(void) {
+    int length = __VERIFIER_nondet_int();
+    {if (length < 1) {
+        length = 1;
+    }}
+    char* nondetString = (char*) malloc(length * sizeof(char));
+    nondetString[length-1] = '\0';
+    return nondetString;
+}
+
+
+
+
+
+int (cstrcmp)(const char *s1, const char *s2)
+ {
+     unsigned char uc1, uc2;
+     /* Move s1 and s2 to the first differing characters 
+        in each string, or the ends of the strings if they
+        are identical.  */
+     while (*s1 != '\0' && *s1 == *s2) {
+         s1++;
+         s2++;
+     }
+     /* Compare the characters as unsigned char and
+        return the difference.  */
+     uc1 = (*(unsigned char *) s1);
+     uc2 = (*(unsigned char *) s2);
+     return ((uc1 < uc2) ? -1 : (uc1 > uc2));
+ }
+
+int main() {
+    return cstrcmp(__VERIFIER_nondet_String(),__VERIFIER_nondet_String());
+}
+
+
+./proton: line 26:    90 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_cstrcmp_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/* Returns some null-terminated string. */
+char* __VERIFIER_nondet_String(void) {
+    int length = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(12, __func__);
+if (length < 1) { __VERIFIER_control_true(12, __func__);
+
+        length = 1;
+    }}
+    char* nondetString = (char*) malloc(length * sizeof(char));
+    nondetString[length-1] = '\0';
+    return nondetString;
+}
+
+
+
+
+
+int (cstrcmp)(const char *s1, const char *s2)
+ {
+     unsigned char uc1, uc2;
+     /* Move s1 and s2 to the first differing characters 
+        in each string, or the ends of the strings if they
+        are identical.  */
+    myBool pStored0 = myFalse; __VERIFIER_reached_control(30, __func__);
+ while (*s1 != '\0' && *s1 == *s2) { __VERIFIER_loop_head(30, __func__);
+printf("CBMC Instrumentation @ line30");myBool flag=__VERIFIER_nondet_myBool();static const char * os1;static const char * os2;static unsigned char ouc1;static unsigned char ouc2;if(pStored0){__CPROVER_assert(!(os1==s1 && os2==s2 && ouc1==uc1 && ouc2==uc2),"recurrent state found");} if(flag){os1=s1;os2=s2;ouc1=uc1;ouc2=uc2;pStored0=myTrue;} 
+         s1++;
+         s2++;
+     }
+     /* Compare the characters as unsigned char and
+        return the difference.  */
+     uc1 = (*(unsigned char *) s1);
+     uc2 = (*(unsigned char *) s2);
+     return ((uc1 < uc2) ? -1 : (uc1 > uc2));
+ }
+
+int main() {
+    return cstrcmp(__VERIFIER_nondet_String(),__VERIFIER_nondet_String());
+}
+
+
+./proton: line 26:   102 Aborted                 instrumenter -in *braced.c -c
+svcomp_cstrcmp_true-termination_braced_instrumented.c
+NTFILE is svcomp_cstrcmp_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_cstrcmp_true-termination.c
+FILE=svcomp_cstrcmp_true-termination_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 41959 milliseconds

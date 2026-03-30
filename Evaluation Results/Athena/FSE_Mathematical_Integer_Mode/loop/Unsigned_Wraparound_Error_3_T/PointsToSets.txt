@@ -1,0 +1,55 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %pathlen = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %pathlen = alloca i32, align 4 + 0
+NODE   4:   %newbufsize = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %newbufsize = alloca i32, align 4 + 0
+NODE   5:   %len = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %len = alloca i32, align 4 + 0
+NODE   6:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   7:   %call = call i32 @__VERIFIER_nondet_uint() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   8:   store i32 %call, i32* %pathlen, align 4 (points-to size: 0)
+NODE   9:   %call1 = call i32 @__VERIFIER_nondet_uint() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  10:   store i32 %call1, i32* %newbufsize, align 4 (points-to size: 0)
+NODE  11:   %call2 = call i32 @__VERIFIER_nondet_uint() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  12:   store i32 %call2, i32* %len, align 4 (points-to size: 0)
+NODE  13:   %0 = load i32, i32* %newbufsize, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  14:   %1 = load i32, i32* %len, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  15:   %add = add i32 %0, %1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  16:   %add3 = add i32 %add, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  17:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  18:   %8 = load i32, i32* %retval, align 4 (points-to size: 1)
+    -> null + 0
+NODE  19:   ret i32 %8 (points-to size: 0)
+NODE  20:   %2 = load i32, i32* %newbufsize, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  21:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  22:   %3 = load i32, i32* %newbufsize, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  23:   %4 = load i32, i32* %pathlen, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  24:   %5 = load i32, i32* %len, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  25:   %add7 = add i32 %4, %5 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  26:   %add8 = add i32 %add7, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  27:   %6 = load i32, i32* %newbufsize, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  28:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  29:   store i32 -1, i32* %newbufsize, align 4 (points-to size: 0)
+NODE  30:   %7 = load i32, i32* %newbufsize, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  31:   %mul = mul i32 %7, 2 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  32:   store i32 %mul, i32* %newbufsize, align 4 (points-to size: 0)
+NODE  33: main (points-to size: 1)
+    -> main + 0

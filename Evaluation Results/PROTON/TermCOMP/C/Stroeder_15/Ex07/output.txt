@@ -1,0 +1,112 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.ikAslp
+
+Input File is : Ex07.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  typedef enum { false, true } bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i;
+    i = __VERIFIER_nondet_int();
+    
+    while (true) {
+        {if (i > 0) {
+            i = i-1;
+        }}
+        {if (i < 0) {
+            i = i+1;
+        }}
+    }
+    
+    return 0;
+}
+
+End Main   
+
+Input File is : Ex07_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+typedef enum { false, true } bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i;
+    i = __VERIFIER_nondet_int();
+    
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(9, __func__);
+ while (true) { __VERIFIER_loop_head(9, __func__);
+printf("CBMC Instrumentation @ line9");myBool flag=__VERIFIER_nondet_myBool();static int oi;if(pStored0){__CPROVER_assert(!(oi==i),"recurrent state found");} if(flag){oi=i;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(10, __func__);
+if (i > 0) { __VERIFIER_control_true(10, __func__);
+
+            i = i-1;
+        }}
+        { __VERIFIER_reached_control(13, __func__);
+if (i < 0) { __VERIFIER_control_true(13, __func__);
+
+            i = i+1;
+        }}
+    }
+    
+    return 0;
+}
+
+End Main 
+ Ex07_braced_instrumented.c
+NTFILE is Ex07_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Ex07.c
+b'e1ac7230c5e382093d26c98e7b6016147f69412c389a30284fe416f8f9568f8d  Ex07.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Ex07/Ex07.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 9 reachedControl
+main 9 loopHead
+main 10 reachedControl
+enteringLasso
+main 13 reachedControl
+main 9 loopHead
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 163, in generateViolationWitness
+    nextLineNo = nextLineWords[-2]
+IndexError: list index out of range
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Ex07.c
+FILE=Ex07_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2023 milliseconds

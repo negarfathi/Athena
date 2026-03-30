@@ -1,0 +1,184 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %length1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %length1 = alloca i32, align 4 + 0
+NODE   4:   %length2 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %length2 = alloca i32, align 4 + 0
+NODE   5:   %n = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %n = alloca i32, align 4 + 0
+NODE   6:   %nondetString1 = alloca i8*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %nondetString1 = alloca i8*, align 8 + 0
+NODE   7:   %nondetString2 = alloca i8*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %nondetString2 = alloca i8*, align 8 + 0
+NODE   8:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   9:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  10:   store i32 %call, i32* %length1, align 4 (points-to size: 0)
+NODE  11:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  12:   store i32 %call1, i32* %length2, align 4 (points-to size: 0)
+NODE  13:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  14:   store i32 %call2, i32* %n, align 4 (points-to size: 0)
+NODE  15:   %0 = load i32, i32* %length1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  16:   store i32 1, i32* %length1, align 4 (points-to size: 0)
+NODE  17:   %1 = load i32, i32* %length2, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  18:   store i32 1, i32* %length2, align 4 (points-to size: 0)
+NODE  19:   %2 = load i32, i32* %n, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  20:   store i32 1, i32* %n, align 4 (points-to size: 0)
+NODE  21:   %3 = load i32, i32* %length1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  22:   %4 = load i32, i32* %n, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  23:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  24:   %20 = load i32, i32* %retval, align 4 (points-to size: 1)
+    -> null + 0
+NODE  25:   ret i32 %20 (points-to size: 0)
+NODE  26:   %5 = load i32, i32* %length1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  27:   %6 = load i32, i32* %n, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  28:   %sub = sub nsw i32 %5, %6 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  29:   %7 = load i32, i32* %length2, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  30:   %8 = load i32, i32* %length1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  31:   %conv = sext i32 %8 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  32:   %mul = mul i64 %conv, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  33:   %9 = alloca i8, i64 %mul, align 16 (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+NODE  34:   store i8* %9, i8** %nondetString1, align 8 (points-to size: 0)
+NODE  35:   %10 = load i32, i32* %length2, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  36:   %conv13 = sext i32 %10 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  37:   %mul14 = mul i64 %conv13, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  38:   %11 = alloca i8, i64 %mul14, align 16 (points-to size: 1)
+    ->   %11 = alloca i8, i64 %mul14, align 16 + 0
+NODE  39:   store i8* %11, i8** %nondetString2, align 8 (points-to size: 0)
+NODE  40:   %12 = load i8*, i8** %nondetString1, align 8 (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+NODE  41:   %13 = load i32, i32* %length1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  42:   %14 = load i32, i32* %n, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  43:   %sub15 = sub nsw i32 %13, %14 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  44:   %sub16 = sub nsw i32 %sub15, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  45:   %idxprom = sext i32 %sub16 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  46:   %arrayidx = getelementptr inbounds i8, i8* %12, i64 %idxprom (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + Offset::UNKNOWN
+NODE  47:   store i8 0, i8* %arrayidx, align 1 (points-to size: 0)
+NODE  48:   %15 = load i8*, i8** %nondetString2, align 8 (points-to size: 1)
+    ->   %11 = alloca i8, i64 %mul14, align 16 + 0
+NODE  49:   %16 = load i32, i32* %length2, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  50:   %sub17 = sub nsw i32 %16, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  51:   %idxprom18 = sext i32 %sub17 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  52:   %arrayidx19 = getelementptr inbounds i8, i8* %15, i64 %idxprom18 (points-to size: 1)
+    ->   %11 = alloca i8, i64 %mul14, align 16 + Offset::UNKNOWN
+NODE  53:   store i8 0, i8* %arrayidx19, align 1 (points-to size: 0)
+NODE  54:   %17 = load i8*, i8** %nondetString1, align 8 (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+NODE  55:   %18 = load i8*, i8** %nondetString2, align 8 (points-to size: 1)
+    ->   %11 = alloca i8, i64 %mul14, align 16 + 0
+NODE  56:   %19 = load i32, i32* %n, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  57: <57> PSNodeType::CALL (points-to size: 0)
+NODE  58: <58> PSNodeType::ENTRY (points-to size: 0)
+NODE  59: i8* %s1 (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+NODE  60: i8* %s2 (points-to size: 1)
+    ->   %11 = alloca i8, i64 %mul14, align 16 + 0
+NODE  61: i32 %n (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  62:   %s1.addr = alloca i8*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s1.addr = alloca i8*, align 8 + 0
+NODE  63:   %s2.addr = alloca i8*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s2.addr = alloca i8*, align 8 + 0
+NODE  64:   %n.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %n.addr = alloca i32, align 4 + 0
+NODE  65:   %s = alloca i8*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s = alloca i8*, align 8 + 0
+NODE  66:   store i8* %s1, i8** %s1.addr, align 8 (points-to size: 0)
+NODE  67:   store i8* %s2, i8** %s2.addr, align 8 (points-to size: 0)
+NODE  68:   store i32 %n, i32* %n.addr, align 4 (points-to size: 0)
+NODE  69:   %0 = load i8*, i8** %s1.addr, align 8 (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+NODE  70:   store i8* %0, i8** %s, align 8 (points-to size: 0)
+NODE  71:   %1 = load i8*, i8** %s, align 8 (points-to size: 2)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+    ->   %9 = alloca i8, i64 %mul, align 16 + Offset::UNKNOWN
+NODE  72:   %2 = load i8, i8* %1, align 1 (points-to size: 1)
+    -> null + 0
+NODE  73:   %conv = sext i8 %2 to i32 (points-to size: 1)
+    -> null + 0
+NODE  74:   %3 = load i8*, i8** %s, align 8 (points-to size: 2)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+    ->   %9 = alloca i8, i64 %mul, align 16 + Offset::UNKNOWN
+NODE  75:   %incdec.ptr = getelementptr inbounds i8, i8* %3, i32 1 (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + Offset::UNKNOWN
+NODE  76:   store i8* %incdec.ptr, i8** %s, align 8 (points-to size: 0)
+NODE  77:   %4 = load i32, i32* %n.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  78:   %5 = load i8*, i8** %s2.addr, align 8 (points-to size: 2)
+    ->   %11 = alloca i8, i64 %mul14, align 16 + 0
+    ->   %11 = alloca i8, i64 %mul14, align 16 + Offset::UNKNOWN
+NODE  79:   %incdec.ptr5 = getelementptr inbounds i8, i8* %5, i32 1 (points-to size: 1)
+    ->   %11 = alloca i8, i64 %mul14, align 16 + Offset::UNKNOWN
+NODE  80:   store i8* %incdec.ptr5, i8** %s2.addr, align 8 (points-to size: 0)
+NODE  81:   %6 = load i8, i8* %5, align 1 (points-to size: 1)
+    -> null + 0
+NODE  82:   %7 = load i8*, i8** %s, align 8 (points-to size: 2)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+    ->   %9 = alloca i8, i64 %mul, align 16 + Offset::UNKNOWN
+NODE  83:   store i8 %6, i8* %7, align 1 (points-to size: 0)
+NODE  84:   %conv6 = sext i8 %6 to i32 (points-to size: 1)
+    -> null + 0
+NODE  85:   %8 = phi i1 [ false, %while.cond2 ], [ %cmp7, %land.rhs ] (points-to size: 1)
+    -> null + 0
+NODE  86:   %9 = load i32, i32* %n.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  87:   %dec = add nsw i32 %9, -1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  88:   store i32 %dec, i32* %n.addr, align 4 (points-to size: 0)
+NODE  89:   %10 = load i8*, i8** %s, align 8 (points-to size: 2)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+    ->   %9 = alloca i8, i64 %mul, align 16 + Offset::UNKNOWN
+NODE  90:   %incdec.ptr10 = getelementptr inbounds i8, i8* %10, i32 1 (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + Offset::UNKNOWN
+NODE  91:   store i8* %incdec.ptr10, i8** %s, align 8 (points-to size: 0)
+NODE  92:   %11 = load i8*, i8** %s, align 8 (points-to size: 2)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+    ->   %9 = alloca i8, i64 %mul, align 16 + Offset::UNKNOWN
+NODE  93:   %12 = load i8, i8* %11, align 1 (points-to size: 1)
+    -> null + 0
+NODE  94:   %conv12 = sext i8 %12 to i32 (points-to size: 1)
+    -> null + 0
+NODE  95:   %13 = load i8*, i8** %s, align 8 (points-to size: 2)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+    ->   %9 = alloca i8, i64 %mul, align 16 + Offset::UNKNOWN
+NODE  96:   store i8 0, i8* %13, align 1 (points-to size: 0)
+NODE  97:   %14 = load i8*, i8** %s1.addr, align 8 (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+NODE  98:   ret i8* %14 (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+NODE  99: cstrncat (points-to size: 1)
+    -> cstrncat + 0
+NODE 100: main (points-to size: 1)
+    -> main + 0
+NODE 101:   %call20 = call i8* @cstrncat(i8* %17, i8* %18, i32 %19) (points-to size: 1)
+    ->   %9 = alloca i8, i64 %mul, align 16 + 0
+NODE 102:   store i32 0, i32* %retval, align 4 (points-to size: 0)

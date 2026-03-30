@@ -1,0 +1,153 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.KIB08m
+
+Input File is : Binomial_true.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  // public class Binomial {
+    
+    // public static int fact(int n) {
+	// if (n <= 0) return 1;
+	// else return n * fact(n - 1);
+    // }
+
+    // public static int binomialCoefficient(int n, int k) {
+	// return fact(n) / (fact(k) * fact(n - k));
+    // }
+
+    // public static void main(String args[]) {
+	// for (int n = 0; n <= args.length; n++)
+	    // for (int k = 0; k <= args.length; k++)
+		// if (k <= n) binomialCoefficient(n, k);
+		// else binomialCoefficient(k, n);
+    // }
+	
+	
+// }
+
+extern int __VERIFIER_nondet_int(void);
+
+int fact(int n) {
+	{if (n <= 0) {return 1;}
+	else {return n * fact(n - 1);}}
+}
+	
+int binomialCoefficient(int n, int k) {
+	return fact(n) / (fact(k) * fact(n - k));
+}
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	{if(x < 0)
+		{return 0;}}
+	int y = __VERIFIER_nondet_int();
+	{if(y < 0) 
+		{return 0;}}
+	int z = __VERIFIER_nondet_int();
+	for (int n = 0; n <= x; n++)
+	    {for (int k = 0; k <= x; k++)
+		{{if (k <= n) {binomialCoefficient(n, k);}
+		else {binomialCoefficient(k, n);}}}}
+    }
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Binomial_true_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+// public class Binomial {
+    
+    // public static int fact(int n) {
+	// if (n <= 0) return 1;
+	// else return n * fact(n - 1);
+    // }
+
+    // public static int binomialCoefficient(int n, int k) {
+	// return fact(n) / (fact(k) * fact(n - k));
+    // }
+
+    // public static void main(String args[]) {
+	// for (int n = 0; n <= args.length; n++)
+	    // for (int k = 0; k <= args.length; k++)
+		// if (k <= n) binomialCoefficient(n, k);
+		// else binomialCoefficient(k, n);
+    // }
+	
+	
+// }
+
+extern int __VERIFIER_nondet_int(void);
+
+int fact(int n) {
+	{ __VERIFIER_reached_control(25, __func__);
+if (n <= 0) { __VERIFIER_control_true(25, __func__);
+return 1;}
+	else { __VERIFIER_control_false(26, __func__);
+return n * fact(n - 1);}}
+}
+	
+int binomialCoefficient(int n, int k) {
+	return fact(n) / (fact(k) * fact(n - k));
+}
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(35, __func__);
+if(x < 0)
+		{ __VERIFIER_control_true(36, __func__);
+return 0;}}
+	int y = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(38, __func__);
+if(y < 0) 
+		{ __VERIFIER_control_true(39, __func__);
+return 0;}}
+	int z = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(42, __func__);
+	for (int n = 0; n <= x; n++)
+	    { __VERIFIER_loop_head(42, __func__);
+printf("CBMC Instrumentation @ line42");myBool flag=__VERIFIER_nondet_myBool();static int on;static int ox;static int oy;static int oz;if(pStored0){__CPROVER_assert(!(on==n && ox==x && oy==y && oz==z),"recurrent state found");} if(flag){on=n;ox=x;oy=y;oz=z;pStored0=myTrue;} myBool pStored1 = myFalse; __VERIFIER_reached_control(43, __func__);
+for (int k = 0; k <= x; k++)
+		{ __VERIFIER_loop_head(43, __func__);
+printf("CBMC Instrumentation @ line43");myBool flag=__VERIFIER_nondet_myBool();static int ok;static int on;static int ox;static int oy;static int oz;if(pStored1){__CPROVER_assert(!(ok==k && on==n && ox==x && oy==y && oz==z),"recurrent state found");} if(flag){ok=k;on=n;ox=x;oy=y;oz=z;pStored1=myTrue;} { __VERIFIER_reached_control(43, __func__);
+if (k <= n) { __VERIFIER_control_true(43, __func__);
+binomialCoefficient(n, k);}
+		else { __VERIFIER_control_false(44, __func__);
+binomialCoefficient(k, n);}}}}
+    }
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Binomial_true_braced_instrumented.c
+NTFILE is Binomial_true_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Binomial_true.c
+FILE=Binomial_true_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 184089 milliseconds

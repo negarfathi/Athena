@@ -1,0 +1,121 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.6VCidG
+
+Input File is : svcomp_cstrncpy_unsafe.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+
+char *(cstrncpy)(char *s1, const char *s2, int n)
+ {
+     char *dst = s1;
+     const char *src = s2;
+     char *us;
+     int n2;
+     /* Copy bytes, one at a time.  */
+     while (n > 0) {
+         n--;
+         {if ((*dst++ = *src++) == '\0') {
+             /* If we get here, we found a null character at the end
+                of s2, so use memset to put null bytes at the end of
+                s1.  */
+             us = dst;
+             n2 = n;
+             while (n2-- != 0)
+                 {*us++ = '\0';}
+             break;
+         }}
+     }
+     return s1;
+ }
+
+int main() {
+  char *s1;
+  char *s2;
+  int n = __VERIFIER_nondet_int();
+  cstrncpy(s1, s2, n);
+  return 0;
+}
+
+End Main   
+
+Input File is : svcomp_cstrncpy_unsafe_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+
+char *(cstrncpy)(char *s1, const char *s2, int n)
+ {
+     char *dst = s1;
+     const char *src = s2;
+     char *us;
+     int n2;
+     /* Copy bytes, one at a time.  */
+    myBool pStored0 = myFalse; __VERIFIER_reached_control(10, __func__);
+ while (n > 0) { __VERIFIER_loop_head(10, __func__);
+printf("CBMC Instrumentation @ line10");myBool flag=__VERIFIER_nondet_myBool();static char * odst;static int on;static int on2;static char * os1;static const char * os2;static const char * osrc;static char * ous;if(pStored0){__CPROVER_assert(!(odst==dst && on==n && on2==n2 && os1==s1 && os2==s2 && osrc==src && ous==us),"recurrent state found");} if(flag){odst=dst;on=n;on2=n2;os1=s1;os2=s2;osrc=src;ous=us;pStored0=myTrue;} 
+         n--;
+         { __VERIFIER_reached_control(12, __func__);
+if ((*dst++ = *src++) == '\0') { __VERIFIER_control_true(12, __func__);
+
+             /* If we get here, we found a null character at the end
+                of s2, so use memset to put null bytes at the end of
+                s1.  */
+             us = dst;
+             n2 = n;
+            myBool pStored1 = myFalse; __VERIFIER_reached_control(19, __func__);
+ while (n2-- != 0)
+                 { __VERIFIER_loop_head(19, __func__);
+printf("CBMC Instrumentation @ line19");myBool flag=__VERIFIER_nondet_myBool();static char * odst;static int on;static int on2;static char * os1;static const char * os2;static const char * osrc;static char * ous;if(pStored1){__CPROVER_assert(!(odst==dst && on==n && on2==n2 && os1==s1 && os2==s2 && osrc==src && ous==us),"recurrent state found");} if(flag){odst=dst;on=n;on2=n2;os1=s1;os2=s2;osrc=src;ous=us;pStored1=myTrue;} *us++ = '\0';}
+             break;
+         }}
+     }
+     return s1;
+ }
+
+int main() {
+  char *s1;
+  char *s2;
+  int n = __VERIFIER_nondet_int();
+  cstrncpy(s1, s2, n);
+  return 0;
+}
+
+End Main 
+ svcomp_cstrncpy_unsafe_braced_instrumented.c
+NTFILE is svcomp_cstrncpy_unsafe_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_cstrncpy_unsafe.c
+FILE=svcomp_cstrncpy_unsafe_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182730 milliseconds

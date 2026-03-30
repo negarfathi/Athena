@@ -1,0 +1,150 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/960521-1_1_true-valid-memsafety/960521-1_1_true-valid-memsafety.c
+Converting
+Type-checking 960521-1_1_true-valid-memsafety
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_deallocate
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of foo
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object a b __CPROVER_rounding_mode a'obj b'obj n __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#246 __CPROVER_thread_key_dtors#244 __CPROVER_thread_keys#245 __CPROVER_malloc_is_new_array#236 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#233 __CPROVER_dead_object#234 __CPROVER_deallocated#235 __CPROVER_new_object#238 a#247 b#248 __CPROVER_rounding_mode#242 a'obj b'obj n#249 __CPROVER_pipe_count#241 __CPROVER_max_malloc_size#237 __CPROVER_next_thread_id#239 __CPROVER_next_thread_key#240 __CPROVER_thread_id#243 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#242 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#242) <= 0 && a'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])a'obj) <= 2147483648 && b'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])b'obj) <= 2147483648 && n#249 <= 0 && -((signed __CPROVER_bitvector[33])n#249) <= 0 && __CPROVER_pipe_count#241 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#241) <= 0 && __CPROVER_max_malloc_size#237 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#237) <= -36028797018963968 && __CPROVER_next_thread_id#239 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#239) <= 0 && __CPROVER_next_thread_key#240 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#240) <= 0 && __CPROVER_thread_id#243 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#243) <= 0
+forward invariant: a'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])a'obj) <= 2147483648 && b'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])b'obj) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of foo
+Function foo not analyzed yet
+Recursively summarizing function foo
+Analyzing function foo
+Computing summary
+Computing termination argument for foo
+Synthesizing ranking function to prove termination
+
+Summary for function foo
+params: 
+globals_in: a b a'obj b'obj n 
+globals_out: a b a'obj b'obj n 
+forward precondition: TRUE
+forward transformer: a'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])a'obj) <= 2147483648 && b'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])b'obj) <= 2147483648 && n <= 2147483647 && -((signed __CPROVER_bitvector[33])n) <= 2147483648
+forward invariant: ($guard#253 && $guard#ls256 ==> i#lb256 <= 2147483647) && ($guard#253 && $guard#ls256 ==> -((signed __CPROVER_bitvector[33])i#lb256) <= 0) && ($guard#258 && $guard#ls261 ==> i#lb261 <= 2147483647) && ($guard#258 && $guard#ls261 ==> -((signed __CPROVER_bitvector[33])i#lb261) <= 0) && a'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])a'obj) <= 2147483648 && b'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])b'obj) <= 2147483648 && n <= 2147483647 && -((signed __CPROVER_bitvector[33])n) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#253 && $guard#254 && $cond#256 ==> (signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])i#phi253 - (signed __CPROVER_bitvector[33])i#255) > 0) && ($guard#258 && $guard#259 && $cond#261 ==> (signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])i#phi258 - (signed __CPROVER_bitvector[33])i#260) > 0)
+
+terminates: yes
+
+Checking precondition of __CPROVER_deallocate
+Function __CPROVER_deallocate not analyzed yet
+Recursively summarizing function __CPROVER_deallocate
+Analyzing function __CPROVER_deallocate
+Computing summary
+Computing termination argument for __CPROVER_deallocate
+Function trivially terminates
+
+Summary for function __CPROVER_deallocate
+params: ptr 
+globals_in: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated 
+globals_out: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated#phi230 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Synthesizing ranking function to prove termination
+
+Summary for function main
+params: 
+globals_in: dynamic_object$37 dynamic_object$92 __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_memory_leak$104'obj __CPROVER_memory_leak$49'obj ptr'obj return_value_malloc$0'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_memory_leak$104 __CPROVER_memory_leak$49 a b a'obj b'obj tmp_post_b'obj n __CPROVER_max_malloc_size 
+globals_out: dynamic_object$37#phi61 dynamic_object$92#126 __CPROVER_malloc_is_new_array#phi118 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_memory_leak$104'obj __CPROVER_memory_leak$49'obj ptr'obj return_value_malloc$0'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated#phi118 __CPROVER_memory_leak$104#phi218 __CPROVER_memory_leak$49#phi218 a#65 b#125 a'obj b'obj main#return_value#218 tmp_post_b'obj#126 n#phi3 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: a'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])a'obj) <= 2147483648 && b'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])b'obj) <= 2147483648 && main#return_value#218 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#218) <= 0 && tmp_post_b'obj#126 <= 2147483647 && -((signed __CPROVER_bitvector[33])tmp_post_b'obj#126) <= 2147483648 && n#phi3 <= 30 && -((signed __CPROVER_bitvector[33])n#phi3) <= -1 && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: ($guard#3 && $guard#ls8 ==> n#lb8 <= 30) && ($guard#3 && $guard#ls8 ==> -((signed __CPROVER_bitvector[33])n#lb8) <= -1) && ($guard#3 && $guard#ls8 ==> return_value___VERIFIER_nondet_int#lb8 <= 2147483647) && ($guard#3 && $guard#ls8 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb8) <= 2147483648) && a'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])a'obj) <= 2147483648 && b'obj <= 2147483647 && -((signed __CPROVER_bitvector[33])b'obj) <= 2147483648 && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#3 && $guard#3 && $guard#7 && $cond#8 && $guard#7 && $cond#8 ==> (signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])n#phi3 - (signed __CPROVER_bitvector[33])n#7)) + (signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#phi3 - (signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#4)) > 0
+
+terminates: yes
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+Function terminates
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+** statistics: 
+  number of solver instances: 3538313165
+  number of solver calls: 350266
+  number of summaries used: 6
+  number of termination arguments computed: 2
+
+
+** Termination: 
+[main]: yes
+[__CPROVER_deallocate]: yes
+[__CPROVER_initialize]: yes
+[foo]: yes
+[__CPROVER__start]: yes
+VERIFICATION SUCCESSFUL
+Runtime: 889 milliseconds

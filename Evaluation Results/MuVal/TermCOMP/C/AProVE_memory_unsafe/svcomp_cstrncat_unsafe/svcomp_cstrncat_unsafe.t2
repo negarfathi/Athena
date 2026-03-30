@@ -1,0 +1,75 @@
+///*** 1_main ***///
+START: main_bb10;
+
+FROM: main_bb10;
+v17 := nondet();
+TO: main_bb11;
+
+FROM: main_bb11;
+v18 := nondef.3;
+var__temp_v.01.i := v17;
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(v19 != 0);
+TO: main_bb12;
+
+FROM: main_bb11_end;
+assume(v19 == 0);
+TO: main_bb13;
+
+FROM: main_bb12;
+TO: main_bb11;
+
+FROM: main_bb13;
+v.01.i := var__temp_v.01.i;
+TO: main_bb13_end;
+
+FROM: main_bb13_end;
+assume(v.01.i != 0);
+TO: main_bb14;
+
+FROM: main_bb13_end;
+assume(v.01.i == 0);
+TO: main_bb15;
+
+FROM: main_bb14;
+v24 := nondef.4;
+vs.1.i := v24;
+TO: main_bb15;
+
+FROM: main_bb15;
+TO: main_bb15_end;
+
+FROM: main_bb15_end;
+assume(nondet());
+TO: main_bb16;
+
+FROM: main_bb15_end;
+assume(nondet());
+TO: main_bb17;
+
+FROM: main_bb16;
+v28 := v.01.i + -1;
+var__temp_v.01.i := v28;
+TO: main_bb13;
+
+FROM: main_bb17;
+v30 := nondef.5;
+TO: main_bb17_end;
+
+FROM: main_bb17_end;
+assume(v31 != 0);
+TO: main_bb18;
+
+FROM: main_bb17_end;
+assume(v31 == 0);
+TO: main_cstrncat.exit;
+
+FROM: main_bb18;
+vs.1.i := 0;
+TO: main_cstrncat.exit;
+
+FROM: main_cstrncat.exit;
+TO: main_cstrncat.exit_ret;
+

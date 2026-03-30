@@ -1,0 +1,14 @@
+
+StructureField, next
+Function, init_list
+Macro, MEMORY0_SIZE
+GlobalVariable, memory0_freeIndex
+Function, allocate_memory0
+FunctionParameter, allocate_memory0, size
+LocalVariable, allocate_memory0, allocatedIndex
+LocalVariable, init_list, curr
+LocalVariable, init_list, last
+LocalVariable, init_list, tail
+FunctionParameter, search, head
+LocalVariable, search, curr
+LocalVariable, main, head

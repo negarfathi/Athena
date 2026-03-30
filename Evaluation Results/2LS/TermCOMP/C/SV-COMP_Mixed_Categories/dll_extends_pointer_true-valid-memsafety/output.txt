@@ -1,0 +1,122 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/dll_extends_pointer_true-valid-memsafety/dll_extends_pointer_true-valid-memsafety.c
+Converting
+Type-checking dll_extends_pointer_true-valid-memsafety
+file Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/dll_extends_pointer_true-valid-memsafety/dll_extends_pointer_true-valid-memsafety.c line 639 function main: function '__VERIFIER_nondet_int' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_deallocate
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#280 __CPROVER_thread_key_dtors#278 __CPROVER_thread_keys#279 __CPROVER_malloc_is_new_array#270 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#267 __CPROVER_dead_object#268 __CPROVER_deallocated#269 __CPROVER_new_object#272 __CPROVER_rounding_mode#276 __CPROVER_pipe_count#275 __CPROVER_max_malloc_size#271 __CPROVER_next_thread_id#273 __CPROVER_next_thread_key#274 __CPROVER_thread_id#277 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#276 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#276) <= 0 && __CPROVER_pipe_count#275 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#275) <= 0 && __CPROVER_max_malloc_size#271 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#271) <= -36028797018963968 && __CPROVER_next_thread_id#273 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#273) <= 0 && __CPROVER_next_thread_key#274 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#274) <= 0 && __CPROVER_thread_id#277 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#277) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of __CPROVER_deallocate
+Function __CPROVER_deallocate not analyzed yet
+Recursively summarizing function __CPROVER_deallocate
+Analyzing function __CPROVER_deallocate
+Computing summary
+Computing termination argument for __CPROVER_deallocate
+Function trivially terminates
+
+Summary for function __CPROVER_deallocate
+params: ptr 
+globals_in: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated 
+globals_out: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated#phi264 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Synthesizing ranking function to prove termination
+
+Summary for function main
+params: 
+globals_in: __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_memory_leak$108'obj __CPROVER_memory_leak$168'obj __CPROVER_memory_leak$46'obj ptr'obj return_value_malloc$0'obj return_value_malloc$1'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_memory_leak$108 __CPROVER_memory_leak$168 __CPROVER_memory_leak$46 list'obj.pData y'obj.pData dynamic_object$34.pData dynamic_object$96$0.pData dynamic_object$96$1.pData dynamic_object$96$2.pData list'obj.next list'obj.prev y'obj.next y'obj.prev dynamic_object$34.next dynamic_object$34.prev dynamic_object$96$0.next dynamic_object$96$0.prev dynamic_object$96$1.next dynamic_object$96$1.prev dynamic_object$96$2.next dynamic_object$96$2.prev $symderef_tmp0'obj.x $symderef_tmp1'obj.x dynamic_object$156.x $symderef_tmp0'obj $symderef_tmp1'obj list'obj y'obj list'obj.data y'obj.data dynamic_object$156 dynamic_object$34 dynamic_object$96$0 dynamic_object$96$1 dynamic_object$96$2 list'obj.$pad4 y'obj.$pad4 dynamic_object$34.$pad4 dynamic_object$96$0.$pad4 dynamic_object$96$1.$pad4 dynamic_object$96$2.$pad4 __CPROVER_max_malloc_size 
+globals_out: __CPROVER_malloc_is_new_array#phi69 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_memory_leak$108'obj __CPROVER_memory_leak$168'obj __CPROVER_memory_leak$46'obj ptr'obj return_value_malloc$0'obj return_value_malloc$1'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated#phi69 __CPROVER_memory_leak$108#phi199 __CPROVER_memory_leak$168#phi199 __CPROVER_memory_leak$46#phi199 list'obj.pData y'obj.pData#phi199 dynamic_object$34.pData#67 dynamic_object$96$0.pData#phi69 dynamic_object$96$1.pData#phi69 dynamic_object$96$2.pData#phi69 list'obj.next#phi199 list'obj.prev#phi69 y'obj.next#phi69 y'obj.prev#65 dynamic_object$34.next#64 dynamic_object$34.prev#phi69 dynamic_object$96$0.next#phi69 dynamic_object$96$0.prev#phi69 dynamic_object$96$1.next#phi69 dynamic_object$96$1.prev#phi69 dynamic_object$96$2.next#phi69 dynamic_object$96$2.prev#phi69 main#return_value#252 $symderef_tmp0'obj.x $symderef_tmp1'obj.x dynamic_object$156.x#phi69 $symderef_tmp0'obj $symderef_tmp1'obj list'obj y'obj list'obj.data y'obj.data dynamic_object$156 dynamic_object$34 dynamic_object$96$0 dynamic_object$96$1 dynamic_object$96$2 list'obj.$pad4 y'obj.$pad4 dynamic_object$34.$pad4#phi59 dynamic_object$96$0.$pad4#phi69 dynamic_object$96$1.$pad4#phi69 dynamic_object$96$2.$pad4#phi69 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: main#return_value#252 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#252) <= 0 && dynamic_object$156.x#phi69 <= 127 && -((signed __CPROVER_bitvector[9])dynamic_object$156.x#phi69) <= 128 && dynamic_object$34.$pad4#phi59 <= 72057594037927935 && -((signed __CPROVER_bitvector[57])dynamic_object$34.$pad4#phi59) <= 0 && dynamic_object$96$0.$pad4#phi69 <= 72057594037927935 && -((signed __CPROVER_bitvector[57])dynamic_object$96$0.$pad4#phi69) <= 0 && dynamic_object$96$1.$pad4#phi69 <= 72057594037927935 && -((signed __CPROVER_bitvector[57])dynamic_object$96$1.$pad4#phi69) <= 0 && dynamic_object$96$2.$pad4#phi69 <= 72057594037927935 && -((signed __CPROVER_bitvector[57])dynamic_object$96$2.$pad4#phi69) <= 0 && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: ($guard#69 && $guard#ls198 ==> return_value___VERIFIER_nondet_int#lb198 <= 2147483647) && ($guard#69 && $guard#ls198 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb198) <= 2147483648) && ($guard#69 && $guard#ls198 ==> dynamic_object$96$0.data.x#lb198 <= 127) && ($guard#69 && $guard#ls198 ==> -((signed __CPROVER_bitvector[9])dynamic_object$96$0.data.x#lb198) <= 128) && ($guard#69 && $guard#ls198 ==> dynamic_object$96$0.$pad4#lb198 <= 72057594037927935) && ($guard#69 && $guard#ls198 ==> -((signed __CPROVER_bitvector[57])dynamic_object$96$0.$pad4#lb198) <= 0) && ($guard#69 && $guard#ls198 ==> dynamic_object$96$1.data.x#lb198 <= 127) && ($guard#69 && $guard#ls198 ==> -((signed __CPROVER_bitvector[9])dynamic_object$96$1.data.x#lb198) <= 128) && ($guard#69 && $guard#ls198 ==> dynamic_object$96$1.$pad4#lb198 <= 72057594037927935) && ($guard#69 && $guard#ls198 ==> -((signed __CPROVER_bitvector[57])dynamic_object$96$1.$pad4#lb198) <= 0) && ($guard#69 && $guard#ls198 ==> dynamic_object$96$2.data.x#lb198 <= 127) && ($guard#69 && $guard#ls198 ==> -((signed __CPROVER_bitvector[9])dynamic_object$96$2.data.x#lb198) <= 128) && ($guard#69 && $guard#ls198 ==> dynamic_object$96$2.$pad4#lb198 <= 72057594037927935) && ($guard#69 && $guard#ls198 ==> -((signed __CPROVER_bitvector[57])dynamic_object$96$2.$pad4#lb198) <= 0) && ($guard#69 && $guard#ls198 ==> dynamic_object$156.x#lb198 <= 127) && ($guard#69 && $guard#ls198 ==> -((signed __CPROVER_bitvector[9])dynamic_object$156.x#lb198) <= 128) && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#69 && $guard#69 && $guard#69 && $guard#69 && $guard#69 && $guard#69 && $guard#69 && $guard#69 && $guard#69 && $guard#195 && $cond#198 && $guard#195 && $cond#198 && $guard#195 && $cond#198 && $guard#195 && $cond#198 && $guard#195 && $cond#198 && $guard#195 && $cond#198 && $guard#195 && $cond#198 && $guard#195 && $cond#198 && $guard#195 && $cond#198 ==> TRUE
+
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 3964398284
+  number of solver calls: 262748
+  number of summaries used: 4
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_deallocate]: yes
+[__CPROVER_initialize]: yes
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 26193 milliseconds

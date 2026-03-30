@@ -1,0 +1,89 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.pCW870
+
+Input File is : svcomp_java_AG313.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i, x, y;
+    i = 0;
+    x = __VERIFIER_nondet_int();
+    y = __VERIFIER_nondet_int();
+    {if (x!=0) {
+        while (x > 0 && y > 0) {
+            i = i + 1;
+            x = (x - 1)- (y - 1);
+        }
+    }}
+    return 0;
+}
+
+End Main   
+
+Input File is : svcomp_java_AG313_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i, x, y;
+    i = 0;
+    x = __VERIFIER_nondet_int();
+    y = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(10, __func__);
+if (x!=0) { __VERIFIER_control_true(10, __func__);
+
+       myBool pStored0 = myFalse; __VERIFIER_reached_control(11, __func__);
+ while (x > 0 && y > 0) { __VERIFIER_loop_head(11, __func__);
+printf("CBMC Instrumentation @ line11");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int ox;static int oy;if(pStored0){__CPROVER_assert(!(oi==i && ox==x && oy==y),"recurrent state found");} if(flag){oi=i;ox=x;oy=y;pStored0=myTrue;} 
+            i = i + 1;
+            x = (x - 1)- (y - 1);
+        }
+    }}
+    return 0;
+}
+
+End Main 
+ svcomp_java_AG313_braced_instrumented.c
+NTFILE is svcomp_java_AG313_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_java_AG313.c
+FILE=svcomp_java_AG313_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 46852 milliseconds

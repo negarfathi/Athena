@@ -1,0 +1,145 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.RX2VGp
+
+Input File is : sanfoundry_02_true-unreach-call_ground.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+void __VERIFIER_assert(int cond) { {if(!(cond)) { ERROR: __VERIFIER_error(); }} }
+int main()
+{
+    int array[100000];
+    int i;
+    int largest1;
+    int largest2;
+    int temp;
+    largest1 = array[0];
+    largest2 = array[1];
+    {if (largest1 < largest2)
+    {
+        temp = largest1;
+        largest1 = largest2;
+        largest2 = temp;
+    }}
+    for (i = 2; i < 100000; i++)
+    {
+        {if (array[i] >= largest1)
+        {
+            largest2 = largest1;
+            largest1 = array[i];
+        }
+        else {if (array[i] > largest2)
+        {
+            largest2 = array[i];
+        }}}
+    }
+    int x;
+    for( x = 0 ; x < 100000 ; x++ ) {
+      __VERIFIER_assert( array[ x ] <= largest1 );
+    }
+    for( x = 0 ; x < 100000 ; x++ ) {
+      __VERIFIER_assert( array[x] <= largest2 || array[x] == largest1 );
+    }
+  return 0;
+}
+
+End Main   
+
+Input File is : sanfoundry_02_true-unreach-call_ground_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+void __VERIFIER_assert(int cond) { { __VERIFIER_reached_control(2, __func__);
+if(!(cond)) { __VERIFIER_control_true(2, __func__);
+ ERROR: __VERIFIER_error(); }} }
+int main()
+{
+    int array[100000];
+    int i;
+    int largest1;
+    int largest2;
+    int temp;
+    largest1 = array[0];
+    largest2 = array[1];
+    { __VERIFIER_reached_control(12, __func__);
+if (largest1 < largest2)
+    { __VERIFIER_control_true(13, __func__);
+
+        temp = largest1;
+        largest1 = largest2;
+        largest2 = temp;
+    }}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(19, __func__);
+ for (i = 2; i < 100000; i++)
+    { __VERIFIER_loop_head(19, __func__);
+printf("CBMC Instrumentation @ line19");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int olargest1;static int olargest2;static int otemp;if(pStored0){__CPROVER_assert(!(oi==i && olargest1==largest1 && olargest2==largest2 && otemp==temp),"recurrent state found");} if(flag){oi=i;olargest1=largest1;olargest2=largest2;otemp=temp;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(20, __func__);
+if (array[i] >= largest1)
+        { __VERIFIER_control_true(21, __func__);
+
+            largest2 = largest1;
+            largest1 = array[i];
+        }
+        else { __VERIFIER_control_false(25, __func__);
+ __VERIFIER_reached_control(25, __func__);
+if (array[i] > largest2)
+        { __VERIFIER_control_true(26, __func__);
+
+            largest2 = array[i];
+        }}}
+    }
+    int x;
+   myBool pStored1 = myFalse; __VERIFIER_reached_control(31, __func__);
+ for( x = 0 ; x < 100000 ; x++ ) { __VERIFIER_loop_head(31, __func__);
+printf("CBMC Instrumentation @ line31");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int olargest1;static int olargest2;static int otemp;static int ox;if(pStored1){__CPROVER_assert(!(oi==i && olargest1==largest1 && olargest2==largest2 && otemp==temp && ox==x),"recurrent state found");} if(flag){oi=i;olargest1=largest1;olargest2=largest2;otemp=temp;ox=x;pStored1=myTrue;} 
+      __VERIFIER_assert( array[ x ] <= largest1 );
+    }
+   myBool pStored2 = myFalse; __VERIFIER_reached_control(34, __func__);
+ for( x = 0 ; x < 100000 ; x++ ) { __VERIFIER_loop_head(34, __func__);
+printf("CBMC Instrumentation @ line34");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int olargest1;static int olargest2;static int otemp;static int ox;if(pStored2){__CPROVER_assert(!(oi==i && olargest1==largest1 && olargest2==largest2 && otemp==temp && ox==x),"recurrent state found");} if(flag){oi=i;olargest1=largest1;olargest2=largest2;otemp=temp;ox=x;pStored2=myTrue;} 
+      __VERIFIER_assert( array[x] <= largest2 || array[x] == largest1 );
+    }
+  return 0;
+}
+
+End Main 
+ sanfoundry_02_true-unreach-call_ground_braced_instrumented.c
+NTFILE is sanfoundry_02_true-unreach-call_ground_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for sanfoundry_02_true-unreach-call_ground.c
+FILE=sanfoundry_02_true-unreach-call_ground_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 131002 milliseconds

@@ -1,0 +1,155 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.KNDuAt
+
+Input File is : LeUserDefRec_true.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  // public class LeUserDefRec {
+	// public static void main(String[] args) {
+		// int x = args[0].length();
+		// int y = args[1].length();
+		// le(x, y);
+	// }
+
+	// public static boolean le(int x, int y) {
+		// if (x > 0 && y > 0) {
+			// return le(x-1, y-1);
+		// } else {
+			// return (x == 0);
+		// }
+	// }
+// }
+
+extern int __VERIFIER_nondet_int(void);
+int le(int x, int y);
+int random(void);
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	{if(x < 0)
+		{return 0;}}
+	int y = __VERIFIER_nondet_int();
+	{if(y < 0) 
+		{return 0;}}
+	int z = __VERIFIER_nondet_int();
+	le(x,y);
+
+}
+
+int random() {
+	int x = __VERIFIER_nondet_int();
+	{if (x < 0)
+		{return -x;}
+	else
+		{return x;}}
+}
+
+int le(int x, int y) {
+		{if (x > 0 && y > 0) {
+			return le(x-1, y-1);
+		} else {
+			return (x == 0);
+		}}
+}
+
+End Main   
+
+Input File is : LeUserDefRec_true_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+// public class LeUserDefRec {
+	// public static void main(String[] args) {
+		// int x = args[0].length();
+		// int y = args[1].length();
+		// le(x, y);
+	// }
+
+	// public static boolean le(int x, int y) {
+		// if (x > 0 && y > 0) {
+			// return le(x-1, y-1);
+		// } else {
+			// return (x == 0);
+		// }
+	// }
+// }
+
+extern int __VERIFIER_nondet_int(void);
+int le(int x, int y);
+int random(void);
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(23, __func__);
+if(x < 0)
+		{ __VERIFIER_control_true(24, __func__);
+return 0;}}
+	int y = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(26, __func__);
+if(y < 0) 
+		{ __VERIFIER_control_true(27, __func__);
+return 0;}}
+	int z = __VERIFIER_nondet_int();
+	le(x,y);
+
+}
+
+int random() {
+	int x = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(35, __func__);
+if (x < 0)
+		{ __VERIFIER_control_true(36, __func__);
+return -x;}
+	else
+		{ __VERIFIER_control_false(38, __func__);
+return x;}}
+}
+
+int le(int x, int y) {
+		{ __VERIFIER_reached_control(42, __func__);
+if (x > 0 && y > 0) { __VERIFIER_control_true(42, __func__);
+
+			return le(x-1, y-1);
+		} else { __VERIFIER_control_false(44, __func__);
+
+			return (x == 0);
+		}}
+}
+
+End Main 
+ LeUserDefRec_true_braced_instrumented.c
+NTFILE is LeUserDefRec_true_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for LeUserDefRec_true.c
+FILE=LeUserDefRec_true_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 2451 milliseconds

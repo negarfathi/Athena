@@ -1,0 +1,513 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/minepump_spec1_product01_true-unreach-call.cil/minepump_spec1_product01_true-unreach-call.cil.c
+Converting
+Type-checking minepump_spec1_product01_true-unreach-call.cil
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+file libacc.c line 65 function __utac__exception__cf_handler_reset: replacing function pointer by 0 possible targets
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of timeShift
+Simplifying
+Computing SSA of cleanup
+Simplifying
+Computing SSA of printPump
+Simplifying
+Computing SSA of waterRise
+Simplifying
+Computing SSA of changeMethaneLevel
+Simplifying
+Computing SSA of Specification2
+Simplifying
+Computing SSA of setup
+Simplifying
+Computing SSA of test
+Simplifying
+Computing SSA of runTest
+Simplifying
+Computing SSA of select_helpers
+Simplifying
+Computing SSA of select_features
+Simplifying
+Computing SSA of valid_product
+Simplifying
+Computing SSA of lowerWaterLevel
+Simplifying
+Computing SSA of isMethaneLevelCritical
+Simplifying
+Computing SSA of getWaterLevel
+Simplifying
+Computing SSA of printEnvironment
+Simplifying
+Computing SSA of select_one
+Simplifying
+Computing SSA of activatePump
+Simplifying
+Computing SSA of deactivatePump
+Simplifying
+Computing SSA of isPumpRunning
+Simplifying
+Computing SSA of __utac_acc__Specification1_spec__1
+Simplifying
+Computing SSA of processEnvironment
+Simplifying
+Computing SSA of isMethaneAlarm
+Simplifying
+Computing SSA of __automaton_fail
+Simplifying
+Computing SSA of __utac__exception__cf_handler_set
+Simplifying
+Computing SSA of __utac__exception__cf_handler_free
+Simplifying
+Computing SSA of __utac__exception__cf_handler_reset
+Simplifying
+Computing SSA of __utac__error_stack_mgt
+Simplifying
+Computing SSA of __utac__get_this_arg
+Simplifying
+Computing SSA of __utac__get_this_argtype
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object head'obj.v head head'obj.next __CPROVER_rounding_mode cleanupTimeShifts methaneLevelCritical pumpRunning systemActive waterLevel head'obj __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#32 __CPROVER_thread_key_dtors#30 __CPROVER_thread_keys#31 __CPROVER_malloc_is_new_array#22 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#19 __CPROVER_dead_object#20 __CPROVER_deallocated#21 __CPROVER_new_object#24 head'obj.v head#34 head'obj.next __CPROVER_rounding_mode#28 cleanupTimeShifts#33 methaneLevelCritical#35 pumpRunning#36 waterLevel#38 head'obj __CPROVER_pipe_count#27 __CPROVER_max_malloc_size#23 __CPROVER_next_thread_id#25 __CPROVER_next_thread_key#26 __CPROVER_thread_id#29 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#28 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#28) <= 0 && cleanupTimeShifts#33 <= 4 && -((signed __CPROVER_bitvector[33])cleanupTimeShifts#33) <= -4 && methaneLevelCritical#35 <= 0 && -((signed __CPROVER_bitvector[33])methaneLevelCritical#35) <= 0 && pumpRunning#36 <= 0 && -((signed __CPROVER_bitvector[33])pumpRunning#36) <= 0 && waterLevel#38 <= 1 && -((signed __CPROVER_bitvector[33])waterLevel#38) <= -1 && __CPROVER_pipe_count#27 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#27) <= 0 && __CPROVER_max_malloc_size#23 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#23) <= -36028797018963968 && __CPROVER_next_thread_id#25 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#25) <= 0 && __CPROVER_next_thread_key#26 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#26) <= 0 && __CPROVER_thread_id#29 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#29) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of select_helpers
+Function select_helpers not analyzed yet
+Recursively summarizing function select_helpers
+Analyzing function select_helpers
+Computing summary
+Computing termination argument for select_helpers
+Function trivially terminates
+
+Summary for function select_helpers
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of select_features
+Function select_features not analyzed yet
+Recursively summarizing function select_features
+Analyzing function select_features
+Computing summary
+Computing termination argument for select_features
+Function trivially terminates
+
+Summary for function select_features
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of valid_product
+Function valid_product not analyzed yet
+Recursively summarizing function valid_product
+Analyzing function valid_product
+Computing summary
+Computing termination argument for valid_product
+Function trivially terminates
+
+Summary for function valid_product
+params: 
+globals_in: 
+globals_out: valid_product#return_value#131 
+forward precondition: TRUE
+forward transformer: valid_product#return_value#131 <= 1 && -((signed __CPROVER_bitvector[33])valid_product#return_value#131) <= -1
+forward invariant: valid_product#return_value#131 <= 1 && -((signed __CPROVER_bitvector[33])valid_product#return_value#131) <= -1
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setup
+Function setup not analyzed yet
+Recursively summarizing function setup
+Analyzing function setup
+Computing summary
+Computing termination argument for setup
+Function trivially terminates
+
+Summary for function setup
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of runTest
+Function runTest not analyzed yet
+Recursively summarizing function runTest
+Checking precondition of test
+Function test not analyzed yet
+Recursively summarizing function test
+Checking precondition of waterRise
+Function waterRise not analyzed yet
+Recursively summarizing function waterRise
+Analyzing function waterRise
+Computing summary
+Computing termination argument for waterRise
+Function trivially terminates
+
+Summary for function waterRise
+params: 
+globals_in: waterLevel 
+globals_out: waterLevel#phi75 
+forward precondition: TRUE
+forward transformer: waterLevel#phi75 <= 2147483647 && -((signed __CPROVER_bitvector[33])waterLevel#phi75) <= 2147483647
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of changeMethaneLevel
+Function changeMethaneLevel not analyzed yet
+Recursively summarizing function changeMethaneLevel
+Analyzing function changeMethaneLevel
+Computing summary
+Computing termination argument for changeMethaneLevel
+Function trivially terminates
+
+Summary for function changeMethaneLevel
+params: 
+globals_in: methaneLevelCritical 
+globals_out: methaneLevelCritical#phi80 
+forward precondition: TRUE
+forward transformer: methaneLevelCritical#phi80 <= 1 && -((signed __CPROVER_bitvector[33])methaneLevelCritical#phi80) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of timeShift
+Function timeShift not analyzed yet
+Recursively summarizing function timeShift
+Checking precondition of lowerWaterLevel
+Function lowerWaterLevel not analyzed yet
+Recursively summarizing function lowerWaterLevel
+Analyzing function lowerWaterLevel
+Computing summary
+Computing termination argument for lowerWaterLevel
+Function trivially terminates
+
+Summary for function lowerWaterLevel
+params: 
+globals_in: waterLevel 
+globals_out: waterLevel#phi139 
+forward precondition: TRUE
+forward transformer: waterLevel#phi139 <= 2147483646 && -((signed __CPROVER_bitvector[33])waterLevel#phi139) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of processEnvironment
+Function processEnvironment not analyzed yet
+Recursively summarizing function processEnvironment
+Analyzing function processEnvironment
+Computing summary
+Computing termination argument for processEnvironment
+Function trivially terminates
+
+Summary for function processEnvironment
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __utac_acc__Specification1_spec__1
+Function __utac_acc__Specification1_spec__1 not analyzed yet
+Recursively summarizing function __utac_acc__Specification1_spec__1
+Checking precondition of isMethaneLevelCritical
+Function isMethaneLevelCritical not analyzed yet
+Recursively summarizing function isMethaneLevelCritical
+Analyzing function isMethaneLevelCritical
+Computing summary
+Computing termination argument for isMethaneLevelCritical
+Function trivially terminates
+
+Summary for function isMethaneLevelCritical
+params: 
+globals_in: methaneLevelCritical 
+globals_out: isMethaneLevelCritical#return_value#142 methaneLevelCritical 
+forward precondition: TRUE
+forward transformer: isMethaneLevelCritical#return_value#142 <= 2147483647 && -((signed __CPROVER_bitvector[33])isMethaneLevelCritical#return_value#142) <= 2147483648 && methaneLevelCritical <= 2147483647 && -((signed __CPROVER_bitvector[33])methaneLevelCritical) <= 2147483648
+forward invariant: methaneLevelCritical <= 2147483647 && -((signed __CPROVER_bitvector[33])methaneLevelCritical) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of isPumpRunning
+Function isPumpRunning not analyzed yet
+Recursively summarizing function isPumpRunning
+Analyzing function isPumpRunning
+Computing summary
+Computing termination argument for isPumpRunning
+Function trivially terminates
+
+Summary for function isPumpRunning
+params: 
+globals_in: pumpRunning 
+globals_out: isPumpRunning#return_value#186 pumpRunning 
+forward precondition: TRUE
+forward transformer: isPumpRunning#return_value#186 <= 2147483647 && -((signed __CPROVER_bitvector[33])isPumpRunning#return_value#186) <= 2147483648 && pumpRunning <= 2147483647 && -((signed __CPROVER_bitvector[33])pumpRunning) <= 2147483648
+forward invariant: pumpRunning <= 2147483647 && -((signed __CPROVER_bitvector[33])pumpRunning) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __automaton_fail
+Function __automaton_fail not analyzed yet
+Recursively summarizing function __automaton_fail
+Analyzing function __automaton_fail
+Computing summary
+Computing termination argument for __automaton_fail
+Function never terminates normally
+
+Summary for function __automaton_fail
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function __utac_acc__Specification1_spec__1
+Computing summary
+Computing termination argument for __utac_acc__Specification1_spec__1
+
+Summary for function __utac_acc__Specification1_spec__1
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function timeShift
+Computing summary
+Computing termination argument for timeShift
+
+Summary for function timeShift
+params: 
+globals_in: pumpRunning systemActive 
+globals_out: pumpRunning 
+forward precondition: TRUE
+forward transformer: pumpRunning <= 2147483647 && -((signed __CPROVER_bitvector[33])pumpRunning) <= 2147483648
+forward invariant: pumpRunning <= 2147483647 && -((signed __CPROVER_bitvector[33])pumpRunning) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function test
+Computing summary
+Computing termination argument for test
+Function never terminates normally
+
+Summary for function test
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: ($guard#104 && $guard#ls117 ==> tmp#lb117 <= 2147483647) && ($guard#104 && $guard#ls117 ==> -((signed __CPROVER_bitvector[33])tmp#lb117) <= 2147483648) && ($guard#104 && $guard#ls117 ==> tmp___0#lb117 <= 2147483647) && ($guard#104 && $guard#ls117 ==> -((signed __CPROVER_bitvector[33])tmp___0#lb117) <= 2147483648) && ($guard#104 && $guard#ls117 ==> tmp___1#lb117 <= 2147483647) && ($guard#104 && $guard#ls117 ==> -((signed __CPROVER_bitvector[33])tmp___1#lb117) <= 2147483648) && ($guard#104 && $guard#ls117 ==> tmp___2#lb117 <= 2147483647) && ($guard#104 && $guard#ls117 ==> -((signed __CPROVER_bitvector[33])tmp___2#lb117) <= 2147483648)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function runTest
+Computing summary
+Computing termination argument for runTest
+Function never terminates normally
+
+Summary for function runTest
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Function never terminates normally
+
+Summary for function main
+params: 
+globals_in: 
+globals_out: main#return_value#11 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: FALSE && FALSE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+Function never terminates normally
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+** statistics: 
+  number of solver instances: 1395941566
+  number of solver calls: 808794
+  number of summaries used: 17
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[main]: no
+[__CPROVER_initialize]: yes
+[timeShift]: unknown
+[cleanup]: not computed
+[printPump]: not computed
+[waterRise]: yes
+[changeMethaneLevel]: yes
+[Specification2]: not computed
+[setup]: yes
+[test]: no
+[runTest]: no
+[select_helpers]: yes
+[select_features]: yes
+[valid_product]: yes
+[lowerWaterLevel]: yes
+[isMethaneLevelCritical]: yes
+[getWaterLevel]: not computed
+[printEnvironment]: not computed
+[select_one]: not computed
+[activatePump]: not computed
+[deactivatePump]: not computed
+[isPumpRunning]: yes
+[__utac_acc__Specification1_spec__1]: unknown
+[processEnvironment]: yes
+[isMethaneAlarm]: not computed
+[__automaton_fail]: no
+[__utac__exception__cf_handler_set]: not computed
+[__utac__exception__cf_handler_free]: not computed
+[__utac__exception__cf_handler_reset]: not computed
+[__utac__error_stack_mgt]: not computed
+[__utac__get_this_arg]: not computed
+[__utac__get_this_argtype]: not computed
+[__CPROVER__start]: no
+VERIFICATION INCONCLUSIVE
+Runtime: 544 milliseconds

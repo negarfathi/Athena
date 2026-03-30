@@ -1,0 +1,125 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.eN9DA3
+
+Input File is : svcomp_openbsd_cstrnlen_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int
+cstrnlen(const char *str, int maxlen)
+{
+	const char *cp;
+
+	for (cp = str; maxlen != 0 && *cp != '\0'; cp++, maxlen--)
+		{;}
+
+	return (int)(cp - str);
+}
+
+
+int main() {
+    int length1 = __VERIFIER_nondet_int();
+    int n = __VERIFIER_nondet_int();
+    {if (length1 < 1) {
+        length1 = 1;
+    }}
+    {if (n < 1) {
+        n = 1;
+    }}
+    char* nondetString1 = (char*) alloca(length1 * sizeof(char));
+    nondetString1[length1-1] = '\0';
+    return cstrnlen(nondetString1,n);
+}
+
+
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_openbsd_cstrnlen_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int
+cstrnlen(const char *str, int maxlen)
+{
+	const char *cp;
+
+myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+	for (cp = str; maxlen != 0 && *cp != '\0'; cp++, maxlen--)
+		{ __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static const char * ocp;static int omaxlen;static const char * ostr;if(pStored0){__CPROVER_assert(!(ocp==cp && omaxlen==maxlen && ostr==str),"recurrent state found");} if(flag){ocp=cp;omaxlen=maxlen;ostr=str;pStored0=myTrue;} ;}
+
+	return (int)(cp - str);
+}
+
+
+int main() {
+    int length1 = __VERIFIER_nondet_int();
+    int n = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(24, __func__);
+if (length1 < 1) { __VERIFIER_control_true(24, __func__);
+
+        length1 = 1;
+    }}
+    { __VERIFIER_reached_control(27, __func__);
+if (n < 1) { __VERIFIER_control_true(27, __func__);
+
+        n = 1;
+    }}
+    char* nondetString1 = (char*) alloca(length1 * sizeof(char));
+    nondetString1[length1-1] = '\0';
+    return cstrnlen(nondetString1,n);
+}
+
+
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_openbsd_cstrnlen_alloca_braced_instrumented.c
+NTFILE is svcomp_openbsd_cstrnlen_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_openbsd_cstrnlen_alloca.c
+FILE=svcomp_openbsd_cstrnlen_alloca_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 37955 milliseconds

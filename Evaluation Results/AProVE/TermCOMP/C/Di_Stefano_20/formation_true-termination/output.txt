@@ -1,0 +1,45 @@
+/liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/formation_true-termination/formation_true-termination.c:82:3: warning: implicit declaration of function '__VERIFIER_assume' is invalid in C99 [-Wimplicit-function-declaration]
+  __VERIFIER_assume((!check) || (HoutCnt[id] == 0));
+  ^
+1 warning generated.
+
+line 1701:5 extraneous input 'metadata' expecting EXCLAMATION
+line 1701:25 no viable alternative at input '!'
+Instruction count:1357
+deleted entry node of now
+Aborted 1755925272Exec. 4, LLVMToSEGraph with some error. Reason: java.lang.UnsupportedOperationException: cannot return sum of symbolic var and constant number  here although we would have to!.
+            aprove.InputModules.Programs.llvm.states.LLVMAbstractState.getSimpleTermForLiteral(LLVMAbstractState.java:1144)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.getSimpleTermForLiteral(LLVMHeuristicState.java:2373)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.getSimpleTermForLiteral(LLVMHeuristicState.java:58)
+            aprove.InputModules.Programs.llvm.internalStructures.instructions.LLVMLoadInstruction.evaluate(LLVMLoadInstruction.java:97)
+            aprove.InputModules.Programs.llvm.states.LLVMAbstractState.evaluate(LLVMAbstractState.java:531)
+            aprove.InputModules.Programs.llvm.segraph.graphConstructionSteps.LLVMStandardStep.perform(LLVMStandardStep.java:98)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.executeStepAndPutSucessorStepsInQueue(LLVMSEGraph.java:1087)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:243)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:216)
+            aprove.InputModules.Programs.llvm.segraph.LLVMGraphBuilder.buildGraph(LLVMGraphBuilder.java:84)
+            aprove.InputModules.Programs.llvm.processors.LLVMToSEGraphProcessor.process(LLVMToSEGraphProcessor.java:110)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            java.base/java.lang.Thread.run(Thread.java:840)
+java.lang.UnsupportedOperationException: cannot return sum of symbolic var and constant number  here although we would have to!
+	at aprove.InputModules.Programs.llvm.states.LLVMAbstractState.getSimpleTermForLiteral(LLVMAbstractState.java:1144)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.getSimpleTermForLiteral(LLVMHeuristicState.java:2373)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.getSimpleTermForLiteral(LLVMHeuristicState.java:58)
+	at aprove.InputModules.Programs.llvm.internalStructures.instructions.LLVMLoadInstruction.evaluate(LLVMLoadInstruction.java:97)
+	at aprove.InputModules.Programs.llvm.states.LLVMAbstractState.evaluate(LLVMAbstractState.java:531)
+	at aprove.InputModules.Programs.llvm.segraph.graphConstructionSteps.LLVMStandardStep.perform(LLVMStandardStep.java:98)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.executeStepAndPutSucessorStepsInQueue(LLVMSEGraph.java:1087)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:243)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:216)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMGraphBuilder.buildGraph(LLVMGraphBuilder.java:84)
+	at aprove.InputModules.Programs.llvm.processors.LLVMToSEGraphProcessor.process(LLVMToSEGraphProcessor.java:110)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+MAYBE
+Runtime: 15926 milliseconds

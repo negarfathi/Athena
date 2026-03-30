@@ -1,0 +1,48 @@
+floppy_simpl3.cil.c:129:14: warning: implicit declaration of function 'PsCreateSystemThread' is invalid in C99 [-Wimplicit-function-declaration]
+    status = PsCreateSystemThread(threadHandle, 0, ObjAttributes, 0, 0, FloppyThread,
+             ^
+floppy_simpl3.cil.c:145:14: warning: implicit declaration of function 'ObReferenceObjectByHandle' is invalid in C99 [-Wimplicit-function-declaration]
+    status = ObReferenceObjectByHandle(threadHandle, 1048576, 0, KernelMode, DisketteExtension__FloppyThread,
+             ^
+floppy_simpl3.cil.c:147:5: warning: implicit declaration of function 'ZwClose' is invalid in C99 [-Wimplicit-function-declaration]
+    ZwClose(threadHandle);
+    ^
+floppy_simpl3.cil.c:243:30: warning: implicit declaration of function 'FloppyStartDevice' is invalid in C99 [-Wimplicit-function-declaration]
+                  ntStatus = FloppyStartDevice(DeviceObject, Irp);
+                             ^
+floppy_simpl3.cil.c:264:32: warning: implicit declaration of function 'IofCallDriver' is invalid in
+ C99 [-Wimplicit-function-declaration]
+                    ntStatus = IofCallDriver(disketteExtension__TargetObject, Irp);
+                               ^
+floppy_simpl3.cil.c:276:21: warning: implicit declaration of function 'KeWaitForSingleObject' is invalid in C99 [-Wimplicit-function-declaration]
+                    KeWaitForSingleObject(disketteExtension__FloppyThread, Executive,
+                    ^
+floppy_simpl3.cil.c:413:21: warning: implicit declaration of function 'IoSetDeviceInterfaceState' is invalid in C99 [-Wimplicit-function-declaration]
+                    IoSetDeviceInterfaceState(disketteExtension__InterfaceString,
+                    ^
+floppy_simpl3.cil.c:421:21: warning: implicit declaration of function 'IoDeleteSymbolicLink' is invalid in C99 [-Wimplicit-function-declaration]
+                    IoDeleteSymbolicLink(disketteExtension__ArcName);
+                    ^
+floppy_simpl3.cil.c:543:14: warning: implicit declaration of function 'FlFdcDeviceIo' is invalid in C99 [-Wimplicit-functio
+n-declaration]
+  ntStatus = FlFdcDeviceIo(disketteExtension__TargetObject, __cil_tmp46, fdcInfo);
+             ^
+floppy_simpl3.cil.c:579:20: warning: implicit declaration of function 'IoQueryDeviceDescription' is invalid in C99 [-Wimplicit-function-declaration]
+        ntStatus = IoQueryDeviceDescription(fdcInfo__BusType, fdcInfo__BusNumber,
+                   ^
+floppy_simpl3.cil.c:602:19: warning: implicit declaration of function 'IoRegisterDeviceInterface' is invalid in C99 [-Wimplicit-function-declaration]
+      pnpStatus = IoRegisterDeviceInterface(disketteExtension__UnderlyingPDO, MOUNTDEV_MOUNTED_DEVICE_GUID,
+                  ^
+floppy_simpl3.cil.c:634:3: warning: implicit declaration of function 'KeSetEvent' is invalid in C99 [-Wimplicit-function-declaration]
+  KeSetEvent(Context, 1, 0);
+  ^
+floppy_simpl3.cil.c:650:9: warning: implicit declaration of function 'IoBuildDeviceIoControlRequest' is invalid in C99 [-Wimplicit-function-declaration]
+  irp = IoBuildDeviceIoControlRequest(Ioctl, DeviceObject, 0,
+ 0, 0, 0, 1, doneEvent,
+        ^
+13 warnings generated.
+
+line 2213:5 extraneous input 'metadata' expecting EXCLAMATION
+line 2213:25 no viable alternative at input '!'
+Instruction count:1431
+Runtime: 900178 milliseconds

@@ -1,0 +1,246 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/cs_stateful_false-unreach-call/cs_stateful_false-unreach-call.c
+Converting
+Type-checking cs_stateful_false-unreach-call
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+file Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/cs_stateful_false-unreach-call/cs_stateful_false-unreach-call.c line 873 function main: replacing function pointer by 3 possible targets
+file Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/cs_stateful_false-unreach-call/cs_stateful_false-unreach-call.c line 879 function main: replacing function pointer by 3 possible targets
+file Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/cs_stateful_false-unreach-call/cs_stateful_false-unreach-call.c line 885 function main: replacing function pointer by 3 possible targets
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __VERIFIER_assert
+Simplifying
+Computing SSA of __CS_cs
+Simplifying
+Computing SSA of __CS_pthread_mutex_init
+Simplifying
+Computing SSA of __CS_pthread_mutex_destroy
+Simplifying
+Computing SSA of __CS_pthread_mutex_lock
+Simplifying
+Computing SSA of __CS_pthread_mutex_unlock
+Simplifying
+Computing SSA of __CS_pthread_cond_init
+Simplifying
+Computing SSA of __CS_pthread_cond_signal
+Simplifying
+Computing SSA of __CS_pthread_cond_broadcast
+Simplifying
+Computing SSA of __CS_pthread_cond_wait
+Simplifying
+Computing SSA of __CS_assert
+Simplifying
+Computing SSA of __CS_assume
+Simplifying
+Computing SSA of __CS_pthread_join
+Simplifying
+Computing SSA of __CS_pthread_create
+Simplifying
+Computing SSA of thread1
+Simplifying
+Computing SSA of thread2
+Simplifying
+Computing SSA of main_thread
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CS_thread_lockedon __CS_thread_status __CPROVER_threads_exited __CPROVER_thread_key_dtors __CS_thread __CPROVER_thread_keys data1 data2 ma mb __CS_thread_allocated __CS_thread_born_round __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CS_u __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id __CS_error __CS_ret __CS_ret_ERROR __CS_ret_FINISHED __CS_ret_PREEMPTED __CS_round __CS_thread_index __THREAD_FINISHED __THREAD_RUNNING __THREAD_UNUSED 
+globals_out: __CS_thread_lockedon#112 __CS_thread_status#113 __CPROVER_threads_exited#101 __CPROVER_thread_key_dtors#99 __CS_thread#108 __CPROVER_thread_keys#100 data1#118 data2#119 ma#120 mb#121 __CS_thread_allocated#109 __CS_thread_born_round#110 __CPROVER_malloc_is_new_array#91 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#88 __CPROVER_dead_object#89 __CPROVER_deallocated#90 __CPROVER_new_object#93 __CPROVER_rounding_mode#97 __CS_u#114 __CPROVER_pipe_count#96 __CPROVER_max_malloc_size#92 __CPROVER_next_thread_id#94 __CPROVER_next_thread_key#95 __CPROVER_thread_id#98 __CS_error#102 __CS_ret#103 __CS_ret_ERROR#104 __CS_ret_FINISHED#105 __CS_ret_PREEMPTED#106 __CS_round#107 __CS_thread_index#111 __THREAD_FINISHED#115 __THREAD_RUNNING#116 __THREAD_UNUSED#117 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#97 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#97) <= 0 && __CPROVER_pipe_count#96 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#96) <= 0 && __CPROVER_max_malloc_size#92 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#92) <= -36028797018963968 && __CPROVER_next_thread_id#94 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#94) <= 0 && __CPROVER_next_thread_key#95 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#95) <= 0 && __CPROVER_thread_id#98 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#98) <= 0 && __CS_error#102 <= 0 && -((signed __CPROVER_bitvector[9])__CS_error#102) <= 0 && __CS_ret#103 <= 0 && -((signed __CPROVER_bitvector[9])__CS_ret#103) <= 0 && __CS_ret_ERROR#104 <= 2 && -((signed __CPROVER_bitvector[9])__CS_ret_ERROR#104) <= -2 && __CS_ret_FINISHED#105 <= 4 && -((signed __CPROVER_bitvector[9])__CS_ret_FINISHED#105) <= -4 && __CS_ret_PREEMPTED#106 <= 1 && -((signed __CPROVER_bitvector[9])__CS_ret_PREEMPTED#106) <= -1 && __CS_round#107 <= 0 && -((signed __CPROVER_bitvector[9])__CS_round#107) <= 0 && __CS_thread_index#111 <= 0 && -((signed __CPROVER_bitvector[9])__CS_thread_index#111) <= 0 && __THREAD_FINISHED#115 <= 2 && -((signed __CPROVER_bitvector[9])__THREAD_FINISHED#115) <= -2 && __THREAD_RUNNING#116 <= 1 && -((signed __CPROVER_bitvector[9])__THREAD_RUNNING#116) <= -1 && __THREAD_UNUSED#117 <= 0 && -((signed __CPROVER_bitvector[9])__THREAD_UNUSED#117) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of main_thread
+Function main_thread not analyzed yet
+Recursively summarizing function main_thread
+Checking precondition of __CS_cs
+Function __CS_cs not analyzed yet
+Recursively summarizing function __CS_cs
+Analyzing function __CS_cs
+Computing summary
+Computing termination argument for __CS_cs
+Function trivially terminates
+
+Summary for function __CS_cs
+params: 
+globals_in: __CS_ret __CS_ret_PREEMPTED __CS_round 
+globals_out: __CS_ret#133 __CS_ret_PREEMPTED __CS_round#130 
+forward precondition: TRUE
+forward transformer: __CS_ret#133 <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret#133) <= 0 && __CS_ret_PREEMPTED <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret_PREEMPTED) <= 0 && __CS_round#130 <= 1 && -((signed __CPROVER_bitvector[9])__CS_round#130) <= 0
+forward invariant: __CS_ret_PREEMPTED <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret_PREEMPTED) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CS_pthread_mutex_init
+Function __CS_pthread_mutex_init not analyzed yet
+Recursively summarizing function __CS_pthread_mutex_init
+Analyzing function __CS_pthread_mutex_init
+Computing summary
+Computing termination argument for __CS_pthread_mutex_init
+Function trivially terminates
+
+Summary for function __CS_pthread_mutex_init
+params: mutex attr 
+globals_in: attr'obj mutex'obj 
+globals_out: attr'obj __CS_pthread_mutex_init#return_value#137 mutex'obj 
+forward precondition: TRUE
+forward transformer: __CS_pthread_mutex_init#return_value#137 <= 0 && -((signed __CPROVER_bitvector[33])__CS_pthread_mutex_init#return_value#137) <= 0 && mutex'obj <= 255 && -((signed __CPROVER_bitvector[9])mutex'obj) <= 0
+forward invariant: mutex'obj <= 255 && -((signed __CPROVER_bitvector[9])mutex'obj) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CS_cs
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_pthread_mutex_init
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_cs
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_cs
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_cs
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_pthread_create
+Function __CS_pthread_create not analyzed yet
+Recursively summarizing function __CS_pthread_create
+Analyzing function __CS_pthread_create
+Computing summary
+Computing termination argument for __CS_pthread_create
+Function trivially terminates
+
+Summary for function __CS_pthread_create
+params: id1 attr t1 arg 
+globals_in: __CS_thread_status __CS_thread __CS_thread_allocated __CS_thread_born_round arg'obj attr'obj id1'obj __CS_round __CS_thread_index __THREAD_RUNNING 
+globals_out: __CS_thread_status#phi250 __CS_thread#phi250 __CS_thread_allocated#phi250 __CS_thread_born_round#phi250 arg'obj attr'obj __CS_pthread_create#return_value#phi250 id1'obj#phi250 __CS_round __CS_thread_index#phi250 __THREAD_RUNNING 
+forward precondition: TRUE
+forward transformer: __CS_pthread_create#return_value#phi250 <= 255 && -((signed __CPROVER_bitvector[33])__CS_pthread_create#return_value#phi250) <= 1 && id1'obj#phi250 <= 255 && -((signed __CPROVER_bitvector[9])id1'obj#phi250) <= 0 && __CS_round <= 255 && -((signed __CPROVER_bitvector[9])__CS_round) <= 0 && __CS_thread_index#phi250 <= 255 && -((signed __CPROVER_bitvector[9])__CS_thread_index#phi250) <= 0 && __THREAD_RUNNING <= 255 && -((signed __CPROVER_bitvector[9])__THREAD_RUNNING) <= 0
+forward invariant: __CS_round <= 255 && -((signed __CPROVER_bitvector[9])__CS_round) <= 0 && __THREAD_RUNNING <= 255 && -((signed __CPROVER_bitvector[9])__THREAD_RUNNING) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CS_cs
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_pthread_create
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_cs
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_pthread_join
+Function __CS_pthread_join not analyzed yet
+Recursively summarizing function __CS_pthread_join
+Analyzing function __CS_pthread_join
+Computing summary
+Computing termination argument for __CS_pthread_join
+Function trivially terminates
+
+Summary for function __CS_pthread_join
+params: thread value_ptr 
+globals_in: __CS_thread_status value_ptr'obj'obj value_ptr'obj __CS_error __CS_ret __CS_ret_ERROR __CS_ret_PREEMPTED __CS_round __THREAD_FINISHED __THREAD_RUNNING __THREAD_UNUSED 
+globals_out: __CS_thread_status value_ptr'obj'obj value_ptr'obj __CS_pthread_join#return_value#phi238 __CS_error#phi238 __CS_ret#phi238 __CS_ret_ERROR __CS_ret_PREEMPTED __CS_round __THREAD_FINISHED __THREAD_RUNNING __THREAD_UNUSED 
+forward precondition: TRUE
+forward transformer: __CS_pthread_join#return_value#phi238 <= 0 && -((signed __CPROVER_bitvector[33])__CS_pthread_join#return_value#phi238) <= 0 && __CS_error#phi238 <= 255 && -((signed __CPROVER_bitvector[9])__CS_error#phi238) <= 0 && __CS_ret#phi238 <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret#phi238) <= 0 && __CS_ret_ERROR <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret_ERROR) <= 0 && __CS_ret_PREEMPTED <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret_PREEMPTED) <= 0 && __CS_round <= 255 && -((signed __CPROVER_bitvector[9])__CS_round) <= 0 && __THREAD_FINISHED <= 255 && -((signed __CPROVER_bitvector[9])__THREAD_FINISHED) <= 0 && __THREAD_RUNNING <= 255 && -((signed __CPROVER_bitvector[9])__THREAD_RUNNING) <= 0 && __THREAD_UNUSED <= 255 && -((signed __CPROVER_bitvector[9])__THREAD_UNUSED) <= 0
+forward invariant: __CS_ret_ERROR <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret_ERROR) <= 0 && __CS_ret_PREEMPTED <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret_PREEMPTED) <= 0 && __CS_round <= 255 && -((signed __CPROVER_bitvector[9])__CS_round) <= 0 && __THREAD_FINISHED <= 255 && -((signed __CPROVER_bitvector[9])__THREAD_FINISHED) <= 0 && __THREAD_RUNNING <= 255 && -((signed __CPROVER_bitvector[9])__THREAD_RUNNING) <= 0 && __THREAD_UNUSED <= 255 && -((signed __CPROVER_bitvector[9])__THREAD_UNUSED) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CS_cs
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_pthread_join
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_cs
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CS_cs
+Precondition trivially holds, replacing by summary.
+Analyzing function main_thread
+Computing summary
+Computing termination argument for main_thread
+Synthesizing ranking function to prove termination
+
+Summary for function main_thread
+params: arg 
+globals_in: data1 data2 ma mb main_thread#return_value'obj arg'obj __CS_error __CS_ret __CS_ret_ERROR __CS_round 
+globals_out: data1#phi429 data2#phi429 ma mb main_thread#return_value'obj arg'obj main_thread#return_value#phi429 __CS_error#phi429 __CS_ret#phi429 __CS_ret_ERROR __CS_round 
+forward precondition: TRUE
+forward transformer: __CS_error#phi429 <= 255 && -((signed __CPROVER_bitvector[9])__CS_error#phi429) <= 0 && __CS_ret#phi429 <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret#phi429) <= 0 && __CS_ret_ERROR <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret_ERROR) <= 0 && __CS_round <= 1 && -((signed __CPROVER_bitvector[9])__CS_round) <= 0
+forward invariant: __CS_ret_ERROR <= 255 && -((signed __CPROVER_bitvector[9])__CS_ret_ERROR) <= 0 && __CS_round <= 1 && -((signed __CPROVER_bitvector[9])__CS_round) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+--- begin invariant violation report ---
+Invariant check failed
+File: ../../lib/cbmc/src/util/std_expr.h:1311 function: equal_exprt
+Condition: lhs().type() == rhs().type()
+Reason: Precondition
+Backtrace:
+/root/2ls/src/2ls/2ls(+0x3ee1ac) [0xaaaacc00e1ac]
+/root/2ls/src/2ls/2ls(+0x3eedb8) [0xaaaacc00edb8]
+/root/2ls/src/2ls/2ls(+0x3cd6c) [0xaaaacbc5cd6c]
+/root/2ls/src/2ls/2ls(+0x6e2c8) [0xaaaacbc8e2c8]
+/root/2ls/src/2ls/2ls(+0x4f5380) [0xaaaacc115380]
+/root/2ls/src/2ls/2ls(+0x4fb428) [0xaaaacc11b428]
+/root/2ls/src/2ls/2ls(+0x4fbb88) [0xaaaacc11bb88]
+/root/2ls/src/2ls/2ls(+0x4fbd74) [0xaaaacc11bd74]
+/root/2ls/src/2ls/2ls(+0x53bb40) [0xaaaacc15bb40]
+/root/2ls/src/2ls/2ls(+0x533db4) [0xaaaacc153db4]
+/root/2ls/src/2ls/2ls(+0x535954) [0xaaaacc155954]
+/root/2ls/src/2ls/2ls(+0x533ef0) [0xaaaacc153ef0]
+/root/2ls/src/2ls/2ls(+0x535954) [0xaaaacc155954]
+/root/2ls/src/2ls/2ls(+0x53b618) [0xaaaacc15b618]
+/root/2ls/src/2ls/2ls(+0x5cd8c) [0xaaaacbc7cd8c]
+/root/2ls/src/2ls/2ls(+0x647c4) [0xaaaacbc847c4]
+/root/2ls/src/2ls/2ls(+0x463e4) [0xaaaacbc663e4]
+/root/2ls/src/2ls/2ls(+0x38d80) [0xaaaacbc58d80]
+/root/2ls/src/2ls/2ls(+0x32844) [0xaaaacbc52844]
+/lib/aarch64-linux-gnu/libc.so.6(+0x273fc) [0xffff920d73fc]
+/lib/aarch64-linux-gnu/libc.so.6(__libc_start_main+0x98) [0xffff920d74cc]
+/root/2ls/src/2ls/2ls(+0x3c0f0) [0xaaaacbc5c0f0]
+
+
+--- end invariant violation report ---
+Runtime: 1122 milliseconds

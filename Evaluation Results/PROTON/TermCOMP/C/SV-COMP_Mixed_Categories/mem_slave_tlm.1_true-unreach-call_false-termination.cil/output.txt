@@ -1,0 +1,3448 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.3DhGi3
+
+Input File is : mem_slave_tlm.1_true-unreach-call_false-termination.cil.c
+
+ CBMC instrumentation
+
+Rewriter Init
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+extern int __VERIFIER_nondet_int();
+
+
+void error(void) 
+{ 
+
+  {
+  ERROR: __VERIFIER_error();
+  return;
+}
+}
+
+int m_run_st  ;
+int m_run_i  ;
+int m_run_pc  ;
+int s_memory0  ;
+
+int s_run_st  ;
+int s_run_i  ;
+int s_run_pc  ;
+int c_m_lock  ;
+int c_m_ev  ;
+int c_req_type  ;
+int c_req_a  ;
+int c_req_d  ;
+int c_rsp_type  ;
+int c_rsp_status  ;
+int c_rsp_d  ;
+int c_empty_req  ;
+int c_empty_rsp  ;
+int c_read_req_ev  ;
+int c_write_req_ev  ;
+int c_read_rsp_ev  ;
+int c_write_rsp_ev  ;
+static int d_t  ;
+static int a_t  ;
+static int req_t_type  ;
+static int req_t_a  ;
+static int req_t_d  ;
+static int rsp_t_type  ;
+static int rsp_t_status  ;
+static int rsp_t_d  ;
+static int req_tt_type  ;
+static int req_tt_a  ;
+static int req_tt_d  ;
+static int rsp_tt_type  ;
+static int rsp_tt_status  ;
+static int rsp_tt_d  ;
+
+int s_memory_read(int i)
+{
+  int x;
+
+  {if (i==0)
+    {x = s_memory0;}
+  else
+    {error();}}
+
+  return (x);
+}
+
+void s_memory_write(int i, int v)
+{
+  {if (i==0)
+    {s_memory0 = v;}
+  else
+    {error();}}
+
+  return;
+}
+
+
+void m_run(void) 
+{ int d ;
+  int a ;
+  int req_type ;
+  int req_a ;
+  int req_d ;
+  int rsp_type ;
+  int rsp_status ;
+  int rsp_d ;
+  int req_type___0 ;
+  int req_a___0 ;
+  int req_d___0 ;
+  int rsp_type___0 ;
+  int rsp_status___0 ;
+  int rsp_d___0 ;
+
+  {
+  {if ((int )m_run_pc == 0) {
+    goto L_MASTER_RUN_ENTRY;
+  } else {
+    {if ((int )m_run_pc == 1) {
+      goto L_MASTER_RUN_MUTEX;
+    } else {
+      {if ((int )m_run_pc == 2) {
+        goto L_MASTER_RUN_PUT;
+      } else {
+        {if ((int )m_run_pc == 3) {
+          goto L_MASTER_RUN_GET;
+        } else {
+          {if ((int )m_run_pc == 4) {
+            goto L_MASTER_RUN_MUTEX2;
+          } else {
+            {if ((int )m_run_pc == 5) {
+              goto L_MASTER_RUN_PUT2;
+            } else {
+              {if ((int )m_run_pc == 6) {
+                goto L_MASTER_RUN_GET2;
+              } else {
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+  }}
+  L_MASTER_RUN_ENTRY: 
+  a = 0;
+  {
+  while (1) {
+    while_0_continue: /* CIL Label */ ;
+    {if (a < 1) {
+
+    } else {
+      goto while_0_break;
+    }}
+    req_type = 1;
+    req_a = a;
+    req_d = a + 50;
+    {
+    while (1) {
+      while_1_continue: /* CIL Label */ ;
+      {if (c_m_lock == 1) {
+
+      } else {
+        goto while_1_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 1;
+      req_t_type = req_type;
+      req_t_a = req_a;
+      req_t_d = req_d;
+      rsp_t_type = rsp_type;
+      rsp_t_status = rsp_status;
+      rsp_t_d = rsp_d;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_MUTEX: 
+      req_type = req_t_type;
+      req_a = req_t_a;
+      req_d = req_t_d;
+      rsp_type = rsp_t_type;
+      rsp_status = rsp_t_status;
+      rsp_d = rsp_t_d;
+      d = d_t;
+      a = a_t;
+    }
+    while_1_break: /* CIL Label */ ;
+    }
+    c_m_lock = 1;
+    {
+    while (1) {
+      while_2_continue: /* CIL Label */ ;
+      {if ((int )c_empty_req == 0) {
+
+      } else {
+        goto while_2_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 2;
+      req_t_type = req_type;
+      req_t_a = req_a;
+      req_t_d = req_d;
+      rsp_t_type = rsp_type;
+      rsp_t_status = rsp_status;
+      rsp_t_d = rsp_d;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_PUT: 
+      req_type = req_t_type;
+      req_a = req_t_a;
+      req_d = req_t_d;
+      rsp_type = rsp_t_type;
+      rsp_status = rsp_t_status;
+      rsp_d = rsp_t_d;
+      a = a_t;
+      d = d_t;
+    }
+    while_2_break: /* CIL Label */ ;
+    }
+    c_req_type = req_type;
+    c_req_a = req_a;
+    c_req_d = req_d;
+    c_empty_req = 0;
+    c_write_req_ev = 1;
+    {if ((int )m_run_pc == 1) {
+      {if ((int )c_m_ev == 1) {
+        m_run_st = 0;
+      } else {
+        goto _L___3;
+      }}
+    } else {
+      _L___3: /* CIL Label */ 
+      {if ((int )m_run_pc == 2) {
+        {if ((int )c_read_req_ev == 1) {
+          m_run_st = 0;
+        } else {
+          goto _L___2;
+        }}
+      } else {
+        _L___2: /* CIL Label */ 
+        {if ((int )m_run_pc == 3) {
+          {if ((int )c_write_rsp_ev == 1) {
+            m_run_st = 0;
+          } else {
+            goto _L___1;
+          }}
+        } else {
+          _L___1: /* CIL Label */ 
+          {if ((int )m_run_pc == 4) {
+            {if ((int )c_m_ev == 1) {
+              m_run_st = 0;
+            } else {
+              goto _L___0;
+            }}
+          } else {
+            _L___0: /* CIL Label */ 
+            {if ((int )m_run_pc == 5) {
+              {if ((int )c_read_req_ev == 1) {
+                m_run_st = 0;
+              } else {
+                goto _L;
+              }}
+            } else {
+              _L: /* CIL Label */ 
+              {if ((int )m_run_pc == 6) {
+                {if ((int )c_write_rsp_ev == 1) {
+                  m_run_st = 0;
+                } else {
+
+                }}
+              } else {
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    {if ((int )s_run_pc == 2) {
+      {if ((int )c_write_req_ev == 1) {
+        s_run_st = 0;
+      } else {
+        goto _L___4;
+      }}
+    } else {
+      _L___4: /* CIL Label */ 
+      {if ((int )s_run_pc == 1) {
+        {if ((int )c_read_rsp_ev == 1) {
+          s_run_st = 0;
+        } else {
+
+        }}
+      } else {
+
+      }}
+    }}
+    c_write_req_ev = 2;
+    {
+    while (1) {
+      while_3_continue: /* CIL Label */ ;
+      {if ((int )c_empty_rsp == 1) {
+
+      } else {
+        goto while_3_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 3;
+      req_t_type = req_type;
+      req_t_a = req_a;
+      req_t_d = req_d;
+      rsp_t_type = rsp_type;
+      rsp_t_status = rsp_status;
+      rsp_t_d = rsp_d;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_GET: 
+      req_type = req_t_type;
+      req_a = req_t_a;
+      req_d = req_t_d;
+      rsp_type = rsp_t_type;
+      rsp_status = rsp_t_status;
+      rsp_d = rsp_t_d;
+      d = d_t;
+      a = a_t;
+    }
+    while_3_break: /* CIL Label */ ;
+    }
+    rsp_type = c_rsp_type;
+    rsp_status = c_rsp_status;
+    rsp_d = c_rsp_d;
+    c_empty_rsp = 1;
+    c_read_rsp_ev = 1;
+    {if ((int )m_run_pc == 1) {
+      {if ((int )c_m_ev == 1) {
+        m_run_st = 0;
+      } else {
+        goto _L___9;
+      }}
+    } else {
+      _L___9: /* CIL Label */ 
+      {if ((int )m_run_pc == 2) {
+        {if ((int )c_read_req_ev == 1) {
+          m_run_st = 0;
+        } else {
+          goto _L___8;
+        }}
+      } else {
+        _L___8: /* CIL Label */ 
+        {if ((int )m_run_pc == 3) {
+          {if ((int )c_write_rsp_ev == 1) {
+            m_run_st = 0;
+          } else {
+            goto _L___7;
+          }}
+        } else {
+          _L___7: /* CIL Label */ 
+          {if ((int )m_run_pc == 4) {
+            {if ((int )c_m_ev == 1) {
+              m_run_st = 0;
+            } else {
+              goto _L___6;
+            }}
+          } else {
+            _L___6: /* CIL Label */ 
+            {if ((int )m_run_pc == 5) {
+              {if ((int )c_read_req_ev == 1) {
+                m_run_st = 0;
+              } else {
+                goto _L___5;
+              }}
+            } else {
+              _L___5: /* CIL Label */ 
+              {if ((int )m_run_pc == 6) {
+                {if ((int )c_write_rsp_ev == 1) {
+                  m_run_st = 0;
+                } else {
+
+                }}
+              } else {
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    {if ((int )s_run_pc == 2) {
+      {if ((int )c_write_req_ev == 1) {
+        s_run_st = 0;
+      } else {
+        goto _L___10;
+      }}
+    } else {
+      _L___10: /* CIL Label */ 
+      {if ((int )s_run_pc == 1) {
+        {if ((int )c_read_rsp_ev == 1) {
+          s_run_st = 0;
+        } else {
+
+        }}
+      } else {
+
+      }}
+    }}
+    c_read_rsp_ev = 2;
+    {if (c_m_lock == 0) {
+      {
+      error();
+      }
+    } else {
+
+    }}
+    c_m_lock = 0;
+    c_m_ev = 1;
+    {if ((int )m_run_pc == 1) {
+      {if ((int )c_m_ev == 1) {
+        m_run_st = 0;
+      } else {
+        goto _L___15;
+      }}
+    } else {
+      _L___15: /* CIL Label */ 
+      {if ((int )m_run_pc == 2) {
+        {if ((int )c_read_req_ev == 1) {
+          m_run_st = 0;
+        } else {
+          goto _L___14;
+        }}
+      } else {
+        _L___14: /* CIL Label */ 
+        {if ((int )m_run_pc == 3) {
+          {if ((int )c_write_rsp_ev == 1) {
+            m_run_st = 0;
+          } else {
+            goto _L___13;
+          }}
+        } else {
+          _L___13: /* CIL Label */ 
+          {if ((int )m_run_pc == 4) {
+            {if ((int )c_m_ev == 1) {
+              m_run_st = 0;
+            } else {
+              goto _L___12;
+            }}
+          } else {
+            _L___12: /* CIL Label */ 
+            {if ((int )m_run_pc == 5) {
+              {if ((int )c_read_req_ev == 1) {
+                m_run_st = 0;
+              } else {
+                goto _L___11;
+              }}
+            } else {
+              _L___11: /* CIL Label */ 
+              {if ((int )m_run_pc == 6) {
+                {if ((int )c_write_rsp_ev == 1) {
+                  m_run_st = 0;
+                } else {
+
+                }}
+              } else {
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    {if ((int )s_run_pc == 2) {
+      {if ((int )c_write_req_ev == 1) {
+        s_run_st = 0;
+      } else {
+        goto _L___16;
+      }}
+    } else {
+      _L___16: /* CIL Label */ 
+      {if ((int )s_run_pc == 1) {
+        {if ((int )c_read_rsp_ev == 1) {
+          s_run_st = 0;
+        } else {
+
+        }}
+      } else {
+
+      }}
+    }}
+    c_m_ev = 2;
+    a += 1;
+  }
+  while_0_break: /* CIL Label */ ;
+  }
+  a = 0;
+  {
+  while (1) {
+    while_4_continue: /* CIL Label */ ;
+    {if (a < 1) {
+
+    } else {
+      goto while_4_break;
+    }}
+    req_type___0 = 0;
+    req_a___0 = a;
+    {
+    while (1) {
+      while_5_continue: /* CIL Label */ ;
+      {if (c_m_lock == 1) {
+
+      } else {
+        goto while_5_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 4;
+      req_tt_type = req_type___0;
+      req_tt_a = req_a___0;
+      req_tt_d = req_d___0;
+      rsp_tt_type = rsp_type___0;
+      rsp_tt_status = rsp_status___0;
+      rsp_tt_d = rsp_d___0;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_MUTEX2: 
+      req_type___0 = req_tt_type;
+      req_a___0 = req_tt_a;
+      req_d___0 = req_tt_d;
+      rsp_type___0 = rsp_tt_type;
+      rsp_status___0 = rsp_tt_status;
+      rsp_d___0 = rsp_tt_d;
+      d = d_t;
+      a = a_t;
+    }
+    while_5_break: /* CIL Label */ ;
+    }
+    c_m_lock = 1;
+    {
+    while (1) {
+      while_6_continue: /* CIL Label */ ;
+      {if ((int )c_empty_req == 0) {
+
+      } else {
+        goto while_6_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 5;
+      req_tt_type = req_type___0;
+      req_tt_a = req_a___0;
+      req_tt_d = req_d___0;
+      rsp_tt_type = rsp_type___0;
+      rsp_tt_status = rsp_status___0;
+      rsp_tt_d = rsp_d___0;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_PUT2: 
+      req_type___0 = req_tt_type;
+      req_a___0 = req_tt_a;
+      req_d___0 = req_tt_d;
+      rsp_type___0 = rsp_tt_type;
+      rsp_status___0 = rsp_tt_status;
+      rsp_d___0 = rsp_tt_d;
+      d = d_t;
+      a = a_t;
+    }
+    while_6_break: /* CIL Label */ ;
+    }
+    c_req_type = req_type___0;
+    c_req_a = req_a___0;
+    c_req_d = req_d___0;
+    c_empty_req = 0;
+    c_write_req_ev = 1;
+    {if ((int )m_run_pc == 1) {
+      {if ((int )c_m_ev == 1) {
+        m_run_st = 0;
+      } else {
+        goto _L___21;
+      }}
+    } else {
+      _L___21: /* CIL Label */ 
+      {if ((int )m_run_pc == 2) {
+        {if ((int )c_read_req_ev == 1) {
+          m_run_st = 0;
+        } else {
+          goto _L___20;
+        }}
+      } else {
+        _L___20: /* CIL Label */ 
+        {if ((int )m_run_pc == 3) {
+          {if ((int )c_write_rsp_ev == 1) {
+            m_run_st = 0;
+          } else {
+            goto _L___19;
+          }}
+        } else {
+          _L___19: /* CIL Label */ 
+          {if ((int )m_run_pc == 4) {
+            {if ((int )c_m_ev == 1) {
+              m_run_st = 0;
+            } else {
+              goto _L___18;
+            }}
+          } else {
+            _L___18: /* CIL Label */ 
+            {if ((int )m_run_pc == 5) {
+              {if ((int )c_read_req_ev == 1) {
+                m_run_st = 0;
+              } else {
+                goto _L___17;
+              }}
+            } else {
+              _L___17: /* CIL Label */ 
+              {if ((int )m_run_pc == 6) {
+                {if ((int )c_write_rsp_ev == 1) {
+                  m_run_st = 0;
+                } else {
+
+                }}
+              } else {
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    {if ((int )s_run_pc == 2) {
+      {if ((int )c_write_req_ev == 1) {
+        s_run_st = 0;
+      } else {
+        goto _L___22;
+      }}
+    } else {
+      _L___22: /* CIL Label */ 
+      {if ((int )s_run_pc == 1) {
+        {if ((int )c_read_rsp_ev == 1) {
+          s_run_st = 0;
+        } else {
+
+        }}
+      } else {
+
+      }}
+    }}
+    c_write_req_ev = 2;
+    {
+    while (1) {
+      while_7_continue: /* CIL Label */ ;
+      {if ((int )c_empty_rsp == 1) {
+
+      } else {
+        goto while_7_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 6;
+      req_tt_type = req_type___0;
+      req_tt_a = req_a___0;
+      req_tt_d = req_d___0;
+      rsp_tt_type = rsp_type___0;
+      rsp_tt_status = rsp_status___0;
+      rsp_tt_d = rsp_d___0;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_GET2: 
+      req_type___0 = req_tt_type;
+      req_a___0 = req_tt_a;
+      req_d___0 = req_tt_d;
+      rsp_type___0 = rsp_tt_type;
+      rsp_status___0 = rsp_tt_status;
+      rsp_d___0 = rsp_tt_d;
+      d = d_t;
+      a = a_t;
+    }
+    while_7_break: /* CIL Label */ ;
+    }
+    rsp_type___0 = c_rsp_type;
+    rsp_status___0 = c_rsp_status;
+    rsp_d___0 = c_rsp_d;
+    c_empty_rsp = 1;
+    c_read_rsp_ev = 1;
+    {if ((int )m_run_pc == 1) {
+      {if ((int )c_m_ev == 1) {
+        m_run_st = 0;
+      } else {
+        goto _L___27;
+      }}
+    } else {
+      _L___27: /* CIL Label */ 
+      {if ((int )m_run_pc == 2) {
+        {if ((int )c_read_req_ev == 1) {
+          m_run_st = 0;
+        } else {
+          goto _L___26;
+        }}
+      } else {
+        _L___26: /* CIL Label */ 
+        {if ((int )m_run_pc == 3) {
+          {if ((int )c_write_rsp_ev == 1) {
+            m_run_st = 0;
+          } else {
+            goto _L___25;
+          }}
+        } else {
+          _L___25: /* CIL Label */ 
+          {if ((int )m_run_pc == 4) {
+            {if ((int )c_m_ev == 1) {
+              m_run_st = 0;
+            } else {
+              goto _L___24;
+            }}
+          } else {
+            _L___24: /* CIL Label */ 
+            {if ((int )m_run_pc == 5) {
+              {if ((int )c_read_req_ev == 1) {
+                m_run_st = 0;
+              } else {
+                goto _L___23;
+              }}
+            } else {
+              _L___23: /* CIL Label */ 
+              {if ((int )m_run_pc == 6) {
+                {if ((int )c_write_rsp_ev == 1) {
+                  m_run_st = 0;
+                } else {
+
+                }}
+              } else {
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    {if ((int )s_run_pc == 2) {
+      {if ((int )c_write_req_ev == 1) {
+        s_run_st = 0;
+      } else {
+        goto _L___28;
+      }}
+    } else {
+      _L___28: /* CIL Label */ 
+      {if ((int )s_run_pc == 1) {
+        {if ((int )c_read_rsp_ev == 1) {
+          s_run_st = 0;
+        } else {
+
+        }}
+      } else {
+
+      }}
+    }}
+    c_read_rsp_ev = 2;
+    {if (c_m_lock == 0) {
+      {
+      error();
+      }
+    } else {
+
+    }}
+    c_m_lock = 0;
+    c_m_ev = 1;
+    {if ((int )m_run_pc == 1) {
+      {if ((int )c_m_ev == 1) {
+        m_run_st = 0;
+      } else {
+        goto _L___33;
+      }}
+    } else {
+      _L___33: /* CIL Label */ 
+      {if ((int )m_run_pc == 2) {
+        {if ((int )c_read_req_ev == 1) {
+          m_run_st = 0;
+        } else {
+          goto _L___32;
+        }}
+      } else {
+        _L___32: /* CIL Label */ 
+        {if ((int )m_run_pc == 3) {
+          {if ((int )c_write_rsp_ev == 1) {
+            m_run_st = 0;
+          } else {
+            goto _L___31;
+          }}
+        } else {
+          _L___31: /* CIL Label */ 
+          {if ((int )m_run_pc == 4) {
+            {if ((int )c_m_ev == 1) {
+              m_run_st = 0;
+            } else {
+              goto _L___30;
+            }}
+          } else {
+            _L___30: /* CIL Label */ 
+            {if ((int )m_run_pc == 5) {
+              {if ((int )c_read_req_ev == 1) {
+                m_run_st = 0;
+              } else {
+                goto _L___29;
+              }}
+            } else {
+              _L___29: /* CIL Label */ 
+              {if ((int )m_run_pc == 6) {
+                {if ((int )c_write_rsp_ev == 1) {
+                  m_run_st = 0;
+                } else {
+
+                }}
+              } else {
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    {if ((int )s_run_pc == 2) {
+      {if ((int )c_write_req_ev == 1) {
+        s_run_st = 0;
+      } else {
+        goto _L___34;
+      }}
+    } else {
+      _L___34: /* CIL Label */ 
+      {if ((int )s_run_pc == 1) {
+        {if ((int )c_read_rsp_ev == 1) {
+          s_run_st = 0;
+        } else {
+
+        }}
+      } else {
+
+      }}
+    }}
+    c_m_ev = 2;
+    {if (! (req_a___0 + 50 == rsp_d___0)) {
+      {
+      error();
+      }
+    } else {
+
+    }}
+    a += 1;
+  }
+  while_4_break: /* CIL Label */ ;
+  }
+
+  return_label: /* CIL Label */ 
+  return;
+}
+}
+static int req_t_type___0  ;
+static int req_t_a___0  ;
+static int req_t_d___0  ;
+static int rsp_t_type___0  ;
+static int rsp_t_status___0  ;
+static int rsp_t_d___0  ;
+void s_run(void) 
+{ int req_type ;
+  int req_a ;
+  int req_d ;
+  int rsp_type ;
+  int rsp_status ;
+  int rsp_d ;
+  int dummy ;
+
+  {
+  {if ((int )s_run_pc == 0) {
+    goto L_SLAVE_RUN_ENTRY;
+  } else {
+    {if ((int )s_run_pc == 1) {
+      goto L_SLAVE_RUN_PUT;
+    } else {
+      {if ((int )s_run_pc == 2) {
+        goto L_SLAVE_RUN_GET;
+      } else {
+
+      }}
+    }}
+  }}
+  L_SLAVE_RUN_ENTRY: 
+  {
+  while (1) {
+    while_8_continue: /* CIL Label */ ;
+    {
+    while (1) {
+      while_9_continue: /* CIL Label */ ;
+      {if ((int )c_empty_req == 1) {
+
+      } else {
+        goto while_9_break;
+      }}
+      s_run_st = 2;
+      s_run_pc = 2;
+      req_t_type___0 = req_type;
+      req_t_a___0 = req_a;
+      req_t_d___0 = req_d;
+      rsp_t_type___0 = rsp_type;
+      rsp_t_status___0 = rsp_status;
+      rsp_t_d___0 = rsp_d;
+
+      goto return_label;
+      L_SLAVE_RUN_GET: 
+      req_type = req_t_type___0;
+      req_a = req_t_a___0;
+      req_d = req_t_d___0;
+      rsp_type = rsp_t_type___0;
+      rsp_status = rsp_t_status___0;
+      rsp_d = rsp_t_d___0;
+    }
+    while_9_break: /* CIL Label */ ;
+    }
+    req_type = c_req_type;
+    req_a = c_req_a;
+    req_d = c_req_d;
+    c_empty_req = 1;
+    c_read_req_ev = 1;
+    {if ((int )m_run_pc == 1) {
+      {if ((int )c_m_ev == 1) {
+        m_run_st = 0;
+      } else {
+        goto _L___3;
+      }}
+    } else {
+      _L___3: /* CIL Label */ 
+      {if ((int )m_run_pc == 2) {
+        {if ((int )c_read_req_ev == 1) {
+          m_run_st = 0;
+        } else {
+          goto _L___2;
+        }}
+      } else {
+        _L___2: /* CIL Label */ 
+        {if ((int )m_run_pc == 3) {
+          {if ((int )c_write_rsp_ev == 1) {
+            m_run_st = 0;
+          } else {
+            goto _L___1;
+          }}
+        } else {
+          _L___1: /* CIL Label */ 
+          {if ((int )m_run_pc == 4) {
+            {if ((int )c_m_ev == 1) {
+              m_run_st = 0;
+            } else {
+              goto _L___0;
+            }}
+          } else {
+            _L___0: /* CIL Label */ 
+            {if ((int )m_run_pc == 5) {
+              {if ((int )c_read_req_ev == 1) {
+                m_run_st = 0;
+              } else {
+                goto _L;
+              }}
+            } else {
+              _L: /* CIL Label */ 
+              {if ((int )m_run_pc == 6) {
+                {if ((int )c_write_rsp_ev == 1) {
+                  m_run_st = 0;
+                } else {
+
+                }}
+              } else {
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    {if ((int )s_run_pc == 2) {
+      {if ((int )c_write_req_ev == 1) {
+        s_run_st = 0;
+      } else {
+        goto _L___4;
+      }}
+    } else {
+      _L___4: /* CIL Label */ 
+      {if ((int )s_run_pc == 1) {
+        {if ((int )c_read_rsp_ev == 1) {
+          s_run_st = 0;
+        } else {
+
+        }}
+      } else {
+
+      }}
+    }}
+    c_read_req_ev = 2;
+    rsp_type = req_type;
+    {if ((int )req_type == 0) {
+
+      rsp_d = s_memory_read(req_a);
+
+      rsp_status = 1;
+    } else {
+      {if ((int )req_type == 1) {
+
+	s_memory_write(req_a,req_d);
+
+        rsp_status = 1;
+      } else {
+        rsp_status = 0;
+      }}
+    }}
+    {
+    while (1) {
+      while_10_continue: /* CIL Label */ ;
+      {if ((int )c_empty_rsp == 0) {
+
+      } else {
+        goto while_10_break;
+      }}
+      s_run_st = 2;
+      s_run_pc = 1;
+      req_t_type___0 = req_type;
+      req_t_a___0 = req_a;
+      req_t_d___0 = req_d;
+      rsp_t_type___0 = rsp_type;
+      rsp_t_status___0 = rsp_status;
+      rsp_t_d___0 = rsp_d;
+
+      goto return_label;
+      L_SLAVE_RUN_PUT: 
+      req_type = req_t_type___0;
+      req_a = req_t_a___0;
+      req_d = req_t_d___0;
+      rsp_type = rsp_t_type___0;
+      rsp_status = rsp_t_status___0;
+      rsp_d = rsp_t_d___0;
+    }
+    while_10_break: /* CIL Label */ ;
+    }
+    c_rsp_type = rsp_type;
+    c_rsp_status = rsp_status;
+    c_rsp_d = rsp_d;
+    c_empty_rsp = 0;
+    c_write_rsp_ev = 1;
+    {if ((int )m_run_pc == 1) {
+      {if ((int )c_m_ev == 1) {
+        m_run_st = 0;
+      } else {
+        goto _L___9;
+      }}
+    } else {
+      _L___9: /* CIL Label */ 
+      {if ((int )m_run_pc == 2) {
+        {if ((int )c_read_req_ev == 1) {
+          m_run_st = 0;
+        } else {
+          goto _L___8;
+        }}
+      } else {
+        _L___8: /* CIL Label */ 
+        {if ((int )m_run_pc == 3) {
+          {if ((int )c_write_rsp_ev == 1) {
+            m_run_st = 0;
+          } else {
+            goto _L___7;
+          }}
+        } else {
+          _L___7: /* CIL Label */ 
+          {if ((int )m_run_pc == 4) {
+            {if ((int )c_m_ev == 1) {
+              m_run_st = 0;
+            } else {
+              goto _L___6;
+            }}
+          } else {
+            _L___6: /* CIL Label */ 
+            {if ((int )m_run_pc == 5) {
+              {if ((int )c_read_req_ev == 1) {
+                m_run_st = 0;
+              } else {
+                goto _L___5;
+              }}
+            } else {
+              _L___5: /* CIL Label */ 
+              {if ((int )m_run_pc == 6) {
+                {if ((int )c_write_rsp_ev == 1) {
+                  m_run_st = 0;
+                } else {
+
+                }}
+              } else {
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    {if ((int )s_run_pc == 2) {
+      {if ((int )c_write_req_ev == 1) {
+        s_run_st = 0;
+      } else {
+        goto _L___10;
+      }}
+    } else {
+      _L___10: /* CIL Label */ 
+      {if ((int )s_run_pc == 1) {
+        {if ((int )c_read_rsp_ev == 1) {
+          s_run_st = 0;
+        } else {
+
+        }}
+      } else {
+
+      }}
+    }}
+    c_write_rsp_ev = 2;
+  }
+  while_8_break: /* CIL Label */ ;
+  }
+  return_label: /* CIL Label */ 
+  return;
+}
+}
+void eval(void) 
+{ int tmp ;
+  int tmp___0 ;
+
+  {
+  {
+  while (1) {
+    while_11_continue: /* CIL Label */ ;
+    {if ((int )m_run_st == 0) {
+
+    } else {
+      {if ((int )s_run_st == 0) {
+
+      } else {
+        goto while_11_break;
+      }}
+    }}
+    {if ((int )m_run_st == 0) {
+      {
+	tmp = __VERIFIER_nondet_int();
+      }
+      {if (tmp) {
+        {
+        m_run_st = 1;
+        m_run();
+        }
+      } else {
+
+      }}
+    } else {
+
+    }}
+    {if ((int )s_run_st == 0) {
+      {
+	tmp___0 = __VERIFIER_nondet_int();
+      }
+      {if (tmp___0) {
+        {
+        s_run_st = 1;
+        s_run();
+        }
+      } else {
+
+      }}
+    } else {
+
+    }}
+  }
+  while_11_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+void start_simulation(void) 
+{ int kernel_st ;
+
+  {
+  kernel_st = 0;
+  {if ((int )m_run_i == 1) {
+    m_run_st = 0;
+  } else {
+    m_ru
+Rewrite Buffer is not NULL
+
+Finished Rewriting  n_st = 2;
+  }}
+  {if ((int )s_run_i == 1) {
+    s_run_st = 0;
+  } else {
+    s_run_st = 2;
+  }}
+  {if ((int )m_run_pc == 1) {
+    {if ((int )c_m_ev == 1) {
+      m_run_st = 0;
+    } else {
+      goto _L___3;
+    }}
+  } else {
+    _L___3: /* CIL Label */ 
+    {if ((int )m_run_pc == 2) {
+      {if ((int )c_read_req_ev == 1) {
+        m_run_st = 0;
+      } else {
+        goto _L___2;
+      }}
+    } else {
+      _L___2: /* CIL Label */ 
+      {if ((int )m_run_pc == 3) {
+        {if ((int )c_write_rsp_ev == 1) {
+          m_run_st = 0;
+        } else {
+          goto _L___1;
+        }}
+      } else {
+        _L___1: /* CIL Label */ 
+        {if ((int )m_run_pc == 4) {
+          {if ((int )c_m_ev == 1) {
+            m_run_st = 0;
+          } else {
+            goto _L___0;
+          }}
+        } else {
+          _L___0: /* CIL Label */ 
+          {if ((int )m_run_pc == 5) {
+            {if ((int )c_read_req_ev == 1) {
+              m_run_st = 0;
+            } else {
+              goto _L;
+            }}
+          } else {
+            _L: /* CIL Label */ 
+            {if ((int )m_run_pc == 6) {
+              {if ((int )c_write_rsp_ev == 1) {
+                m_run_st = 0;
+              } else {
+
+              }}
+            } else {
+
+            }}
+          }}
+        }}
+      }}
+    }}
+  }}
+  {if ((int )s_run_pc == 2) {
+    {if ((int )c_write_req_ev == 1) {
+      s_run_st = 0;
+    } else {
+      goto _L___4;
+    }}
+  } else {
+    _L___4: /* CIL Label */ 
+    {if ((int )s_run_pc == 1) {
+      {if ((int )c_read_rsp_ev == 1) {
+        s_run_st = 0;
+      } else {
+
+      }}
+    } else {
+
+    }}
+  }}
+  {
+  while (1) {
+    while_12_continue: /* CIL Label */ ;
+    {
+    kernel_st = 1;
+    eval();
+    }
+    kernel_st = 2;
+    kernel_st = 3;
+    {if ((int )m_run_pc == 1) {
+      {if ((int )c_m_ev == 1) {
+        m_run_st = 0;
+      } else {
+        goto _L___9;
+      }}
+    } else {
+      _L___9: /* CIL Label */ 
+      {if ((int )m_run_pc == 2) {
+        {if ((int )c_read_req_ev == 1) {
+          m_run_st = 0;
+        } else {
+          goto _L___8;
+        }}
+      } else {
+        _L___8: /* CIL Label */ 
+        {if ((int )m_run_pc == 3) {
+          {if ((int )c_write_rsp_ev == 1) {
+            m_run_st = 0;
+          } else {
+            goto _L___7;
+          }}
+        } else {
+          _L___7: /* CIL Label */ 
+          {if ((int )m_run_pc == 4) {
+            {if ((int )c_m_ev == 1) {
+              m_run_st = 0;
+            } else {
+              goto _L___6;
+            }}
+          } else {
+            _L___6: /* CIL Label */ 
+            {if ((int )m_run_pc == 5) {
+              {if ((int )c_read_req_ev == 1) {
+                m_run_st = 0;
+              } else {
+                goto _L___5;
+              }}
+            } else {
+              _L___5: /* CIL Label */ 
+              {if ((int )m_run_pc == 6) {
+                {if ((int )c_write_rsp_ev == 1) {
+                  m_run_st = 0;
+                } else {
+
+                }}
+              } else {
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    {if ((int )s_run_pc == 2) {
+      {if ((int )c_write_req_ev == 1) {
+        s_run_st = 0;
+      } else {
+        goto _L___10;
+      }}
+    } else {
+      _L___10: /* CIL Label */ 
+      {if ((int )s_run_pc == 1) {
+        {if ((int )c_read_rsp_ev == 1) {
+          s_run_st = 0;
+        } else {
+
+        }}
+      } else {
+
+      }}
+    }}
+    {if ((int )m_run_st == 0) {
+
+    } else {
+      {if ((int )s_run_st == 0) {
+
+      } else {
+        goto while_12_break;
+      }}
+    }}
+  }
+  while_12_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+int main(void) 
+{ int __retres1 ;
+
+  {
+  {
+ c_m_lock  =    0;
+ c_m_ev  =    2;
+
+  m_run_i = 1;
+  m_run_pc = 0;
+  s_run_i = 1;
+  s_run_pc = 0;
+  c_empty_req = 1;
+  c_empty_rsp = 1;
+  c_read_req_ev = 2;
+  c_write_req_ev = 2;
+  c_read_rsp_ev = 2;
+  c_write_rsp_ev = 2;
+  c_m_lock = 0;
+  c_m_ev = 2;
+  start_simulation();
+  }
+  __retres1 = 0;
+  return (__retres1);
+}
+}
+
+End Main   
+
+Input File is : mem_slave_tlm.1_true-unreach-call_false-termination.cil_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+extern int __VERIFIER_nondet_int();
+
+
+void error(void) 
+{ 
+
+  {
+  ERROR: __VERIFIER_error();
+  return;
+}
+}
+
+int m_run_st  ;
+int m_run_i  ;
+int m_run_pc  ;
+int s_memory0  ;
+
+int s_run_st  ;
+int s_run_i  ;
+int s_run_pc  ;
+int c_m_lock  ;
+int c_m_ev  ;
+int c_req_type  ;
+int c_req_a  ;
+int c_req_d  ;
+int c_rsp_type  ;
+int c_rsp_status  ;
+int c_rsp_d  ;
+int c_empty_req  ;
+int c_empty_rsp  ;
+int c_read_req_ev  ;
+int c_write_req_ev  ;
+int c_read_rsp_ev  ;
+int c_write_rsp_ev  ;
+static int d_t  ;
+static int a_t  ;
+static int req_t_type  ;
+static int req_t_a  ;
+static int req_t_d  ;
+static int rsp_t_type  ;
+static int rsp_t_status  ;
+static int rsp_t_d  ;
+static int req_tt_type  ;
+static int req_tt_a  ;
+static int req_tt_d  ;
+static int rsp_tt_type  ;
+static int rsp_tt_status  ;
+static int rsp_tt_d  ;
+
+int s_memory_read(int i)
+{
+  int x;
+
+  { __VERIFIER_reached_control(56, __func__);
+if (i==0)
+    { __VERIFIER_control_true(57, __func__);
+x = s_memory0;}
+  else
+    { __VERIFIER_control_false(59, __func__);
+error();}}
+
+  return (x);
+}
+
+void s_memory_write(int i, int v)
+{
+  { __VERIFIER_reached_control(66, __func__);
+if (i==0)
+    { __VERIFIER_control_true(67, __func__);
+s_memory0 = v;}
+  else
+    { __VERIFIER_control_false(69, __func__);
+error();}}
+
+  return;
+}
+
+
+void m_run(void) 
+{ int d ;
+  int a ;
+  int req_type ;
+  int req_a ;
+  int req_d ;
+  int rsp_type ;
+  int rsp_status ;
+  int rsp_d ;
+  int req_type___0 ;
+  int req_a___0 ;
+  int req_d___0 ;
+  int rsp_type___0 ;
+  int rsp_status___0 ;
+  int rsp_d___0 ;
+
+  {
+  { __VERIFIER_reached_control(92, __func__);
+if ((int )m_run_pc == 0) { __VERIFIER_control_true(92, __func__);
+
+    goto L_MASTER_RUN_ENTRY;
+  } else { __VERIFIER_control_false(94, __func__);
+
+    { __VERIFIER_reached_control(95, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(95, __func__);
+
+      goto L_MASTER_RUN_MUTEX;
+    } else { __VERIFIER_control_false(97, __func__);
+
+      { __VERIFIER_reached_control(98, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(98, __func__);
+
+        goto L_MASTER_RUN_PUT;
+      } else { __VERIFIER_control_false(100, __func__);
+
+        { __VERIFIER_reached_control(101, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(101, __func__);
+
+          goto L_MASTER_RUN_GET;
+        } else { __VERIFIER_control_false(103, __func__);
+
+          { __VERIFIER_reached_control(104, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(104, __func__);
+
+            goto L_MASTER_RUN_MUTEX2;
+          } else { __VERIFIER_control_false(106, __func__);
+
+            { __VERIFIER_reached_control(107, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(107, __func__);
+
+              goto L_MASTER_RUN_PUT2;
+            } else { __VERIFIER_control_false(109, __func__);
+
+              { __VERIFIER_reached_control(110, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(110, __func__);
+
+                goto L_MASTER_RUN_GET2;
+              } else { __VERIFIER_control_false(112, __func__);
+
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+  }}
+  L_MASTER_RUN_ENTRY: 
+  a = 0;
+  {
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(124, __func__);
+ while (1) { __VERIFIER_loop_head(124, __func__);
+printf("CBMC Instrumentation @ line124");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od;static int od_t;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_a___0;static int oreq_d;static int oreq_d___0;static int oreq_t_a;static int oreq_t_d;static int oreq_t_type;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int oreq_type___0;static int orsp_d;static int orsp_d___0;static int orsp_status;static int orsp_status___0;static int orsp_t_d;static int orsp_t_status;static int orsp_t_type;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int orsp_type___0;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored0){__CPROVER_assert(!(oa==a && oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od==d && od_t==d_t && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_a___0==req_a___0 && oreq_d==req_d && oreq_d___0==req_d___0 && oreq_t_a==req_t_a && oreq_t_d==req_t_d && oreq_t_type==req_t_type && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && oreq_type___0==req_type___0 && orsp_d==rsp_d && orsp_d___0==rsp_d___0 && orsp_status==rsp_status && orsp_status___0==rsp_status___0 && orsp_t_d==rsp_t_d && orsp_t_status==rsp_t_status && orsp_t_type==rsp_t_type && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && orsp_type___0==rsp_type___0 && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa=a;oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od=d;od_t=d_t;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_a___0=req_a___0;oreq_d=req_d;oreq_d___0=req_d___0;oreq_t_a=req_t_a;oreq_t_d=req_t_d;oreq_t_type=req_t_type;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;oreq_type___0=req_type___0;orsp_d=rsp_d;orsp_d___0=rsp_d___0;orsp_status=rsp_status;orsp_status___0=rsp_status___0;orsp_t_d=rsp_t_d;orsp_t_status=rsp_t_status;orsp_t_type=rsp_t_type;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;orsp_type___0=rsp_type___0;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored0=myTrue;} 
+    while_0_continue: /* CIL Label */ ;
+    { __VERIFIER_reached_control(126, __func__);
+if (a < 1) { __VERIFIER_control_true(126, __func__);
+
+
+    } else { __VERIFIER_control_false(128, __func__);
+
+      goto while_0_break;
+    }}
+    req_type = 1;
+    req_a = a;
+    req_d = a + 50;
+    {
+   myBool pStored1 = myFalse; __VERIFIER_reached_control(135, __func__);
+ while (1) { __VERIFIER_loop_head(135, __func__);
+printf("CBMC Instrumentation @ line135");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od;static int od_t;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_a___0;static int oreq_d;static int oreq_d___0;static int oreq_t_a;static int oreq_t_d;static int oreq_t_type;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int oreq_type___0;static int orsp_d;static int orsp_d___0;static int orsp_status;static int orsp_status___0;static int orsp_t_d;static int orsp_t_status;static int orsp_t_type;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int orsp_type___0;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored1){__CPROVER_assert(!(oa==a && oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od==d && od_t==d_t && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_a___0==req_a___0 && oreq_d==req_d && oreq_d___0==req_d___0 && oreq_t_a==req_t_a && oreq_t_d==req_t_d && oreq_t_type==req_t_type && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && oreq_type___0==req_type___0 && orsp_d==rsp_d && orsp_d___0==rsp_d___0 && orsp_status==rsp_status && orsp_status___0==rsp_status___0 && orsp_t_d==rsp_t_d && orsp_t_status==rsp_t_status && orsp_t_type==rsp_t_type && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && orsp_type___0==rsp_type___0 && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa=a;oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od=d;od_t=d_t;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_a___0=req_a___0;oreq_d=req_d;oreq_d___0=req_d___0;oreq_t_a=req_t_a;oreq_t_d=req_t_d;oreq_t_type=req_t_type;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;oreq_type___0=req_type___0;orsp_d=rsp_d;orsp_d___0=rsp_d___0;orsp_status=rsp_status;orsp_status___0=rsp_status___0;orsp_t_d=rsp_t_d;orsp_t_status=rsp_t_status;orsp_t_type=rsp_t_type;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;orsp_type___0=rsp_type___0;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored1=myTrue;} 
+      while_1_continue: /* CIL Label */ ;
+      { __VERIFIER_reached_control(137, __func__);
+if (c_m_lock == 1) { __VERIFIER_control_true(137, __func__);
+
+
+      } else { __VERIFIER_control_false(139, __func__);
+
+        goto while_1_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 1;
+      req_t_type = req_type;
+      req_t_a = req_a;
+      req_t_d = req_d;
+      rsp_t_type = rsp_type;
+      rsp_t_status = rsp_status;
+      rsp_t_d = rsp_d;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_MUTEX: 
+      req_type = req_t_type;
+      req_a = req_t_a;
+      req_d = req_t_d;
+      rsp_type = rsp_t_type;
+      rsp_status = rsp_t_status;
+      rsp_d = rsp_t_d;
+      d = d_t;
+      a = a_t;
+    }
+    while_1_break: /* CIL Label */ ;
+    }
+    c_m_lock = 1;
+    {
+   myBool pStored2 = myFalse; __VERIFIER_reached_control(168, __func__);
+ while (1) { __VERIFIER_loop_head(168, __func__);
+printf("CBMC Instrumentation @ line168");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od;static int od_t;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_a___0;static int oreq_d;static int oreq_d___0;static int oreq_t_a;static int oreq_t_d;static int oreq_t_type;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int oreq_type___0;static int orsp_d;static int orsp_d___0;static int orsp_status;static int orsp_status___0;static int orsp_t_d;static int orsp_t_status;static int orsp_t_type;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int orsp_type___0;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored2){__CPROVER_assert(!(oa==a && oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od==d && od_t==d_t && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_a___0==req_a___0 && oreq_d==req_d && oreq_d___0==req_d___0 && oreq_t_a==req_t_a && oreq_t_d==req_t_d && oreq_t_type==req_t_type && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && oreq_type___0==req_type___0 && orsp_d==rsp_d && orsp_d___0==rsp_d___0 && orsp_status==rsp_status && orsp_status___0==rsp_status___0 && orsp_t_d==rsp_t_d && orsp_t_status==rsp_t_status && orsp_t_type==rsp_t_type && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && orsp_type___0==rsp_type___0 && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa=a;oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od=d;od_t=d_t;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_a___0=req_a___0;oreq_d=req_d;oreq_d___0=req_d___0;oreq_t_a=req_t_a;oreq_t_d=req_t_d;oreq_t_type=req_t_type;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;oreq_type___0=req_type___0;orsp_d=rsp_d;orsp_d___0=rsp_d___0;orsp_status=rsp_status;orsp_status___0=rsp_status___0;orsp_t_d=rsp_t_d;orsp_t_status=rsp_t_status;orsp_t_type=rsp_t_type;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;orsp_type___0=rsp_type___0;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored2=myTrue;} 
+      while_2_continue: /* CIL Label */ ;
+      { __VERIFIER_reached_control(170, __func__);
+if ((int )c_empty_req == 0) { __VERIFIER_control_true(170, __func__);
+
+
+      } else { __VERIFIER_control_false(172, __func__);
+
+        goto while_2_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 2;
+      req_t_type = req_type;
+      req_t_a = req_a;
+      req_t_d = req_d;
+      rsp_t_type = rsp_type;
+      rsp_t_status = rsp_status;
+      rsp_t_d = rsp_d;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_PUT: 
+      req_type = req_t_type;
+      req_a = req_t_a;
+      req_d = req_t_d;
+      rsp_type = rsp_t_type;
+      rsp_status = rsp_t_status;
+      rsp_d = rsp_t_d;
+      a = a_t;
+      d = d_t;
+    }
+    while_2_break: /* CIL Label */ ;
+    }
+    c_req_type = req_type;
+    c_req_a = req_a;
+    c_req_d = req_d;
+    c_empty_req = 0;
+    c_write_req_ev = 1;
+    { __VERIFIER_reached_control(204, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(204, __func__);
+
+      { __VERIFIER_reached_control(205, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(205, __func__);
+
+        m_run_st = 0;
+      } else { __VERIFIER_control_false(207, __func__);
+
+        goto _L___3;
+      }}
+    } else { __VERIFIER_control_false(210, __func__);
+
+      _L___3: /* CIL Label */ 
+      { __VERIFIER_reached_control(212, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(212, __func__);
+
+        { __VERIFIER_reached_control(213, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(213, __func__);
+
+          m_run_st = 0;
+        } else { __VERIFIER_control_false(215, __func__);
+
+          goto _L___2;
+        }}
+      } else { __VERIFIER_control_false(218, __func__);
+
+        _L___2: /* CIL Label */ 
+        { __VERIFIER_reached_control(220, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(220, __func__);
+
+          { __VERIFIER_reached_control(221, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(221, __func__);
+
+            m_run_st = 0;
+          } else { __VERIFIER_control_false(223, __func__);
+
+            goto _L___1;
+          }}
+        } else { __VERIFIER_control_false(226, __func__);
+
+          _L___1: /* CIL Label */ 
+          { __VERIFIER_reached_control(228, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(228, __func__);
+
+            { __VERIFIER_reached_control(229, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(229, __func__);
+
+              m_run_st = 0;
+            } else { __VERIFIER_control_false(231, __func__);
+
+              goto _L___0;
+            }}
+          } else { __VERIFIER_control_false(234, __func__);
+
+            _L___0: /* CIL Label */ 
+            { __VERIFIER_reached_control(236, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(236, __func__);
+
+              { __VERIFIER_reached_control(237, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(237, __func__);
+
+                m_run_st = 0;
+              } else { __VERIFIER_control_false(239, __func__);
+
+                goto _L;
+              }}
+            } else { __VERIFIER_control_false(242, __func__);
+
+              _L: /* CIL Label */ 
+              { __VERIFIER_reached_control(244, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(244, __func__);
+
+                { __VERIFIER_reached_control(245, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(245, __func__);
+
+                  m_run_st = 0;
+                } else { __VERIFIER_control_false(247, __func__);
+
+
+                }}
+              } else { __VERIFIER_control_false(250, __func__);
+
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    { __VERIFIER_reached_control(258, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(258, __func__);
+
+      { __VERIFIER_reached_control(259, __func__);
+if ((int )c_write_req_ev == 1) { __VERIFIER_control_true(259, __func__);
+
+        s_run_st = 0;
+      } else { __VERIFIER_control_false(261, __func__);
+
+        goto _L___4;
+      }}
+    } else { __VERIFIER_control_false(264, __func__);
+
+      _L___4: /* CIL Label */ 
+      { __VERIFIER_reached_control(266, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_true(266, __func__);
+
+        { __VERIFIER_reached_control(267, __func__);
+if ((int )c_read_rsp_ev == 1) { __VERIFIER_control_true(267, __func__);
+
+          s_run_st = 0;
+        } else { __VERIFIER_control_false(269, __func__);
+
+
+        }}
+      } else { __VERIFIER_control_false(272, __func__);
+
+
+      }}
+    }}
+    c_write_req_ev = 2;
+    {
+   myBool pStored3 = myFalse; __VERIFIER_reached_control(278, __func__);
+ while (1) { __VERIFIER_loop_head(278, __func__);
+printf("CBMC Instrumentation @ line278");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od;static int od_t;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_a___0;static int oreq_d;static int oreq_d___0;static int oreq_t_a;static int oreq_t_d;static int oreq_t_type;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int oreq_type___0;static int orsp_d;static int orsp_d___0;static int orsp_status;static int orsp_status___0;static int orsp_t_d;static int orsp_t_status;static int orsp_t_type;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int orsp_type___0;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored3){__CPROVER_assert(!(oa==a && oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od==d && od_t==d_t && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_a___0==req_a___0 && oreq_d==req_d && oreq_d___0==req_d___0 && oreq_t_a==req_t_a && oreq_t_d==req_t_d && oreq_t_type==req_t_type && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && oreq_type___0==req_type___0 && orsp_d==rsp_d && orsp_d___0==rsp_d___0 && orsp_status==rsp_status && orsp_status___0==rsp_status___0 && orsp_t_d==rsp_t_d && orsp_t_status==rsp_t_status && orsp_t_type==rsp_t_type && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && orsp_type___0==rsp_type___0 && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa=a;oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od=d;od_t=d_t;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_a___0=req_a___0;oreq_d=req_d;oreq_d___0=req_d___0;oreq_t_a=req_t_a;oreq_t_d=req_t_d;oreq_t_type=req_t_type;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;oreq_type___0=req_type___0;orsp_d=rsp_d;orsp_d___0=rsp_d___0;orsp_status=rsp_status;orsp_status___0=rsp_status___0;orsp_t_d=rsp_t_d;orsp_t_status=rsp_t_status;orsp_t_type=rsp_t_type;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;orsp_type___0=rsp_type___0;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored3=myTrue;} 
+      while_3_continue: /* CIL Label */ ;
+      { __VERIFIER_reached_control(280, __func__);
+if ((int )c_empty_rsp == 1) { __VERIFIER_control_true(280, __func__);
+
+
+      } else { __VERIFIER_control_false(282, __func__);
+
+        goto while_3_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 3;
+      req_t_type = req_type;
+      req_t_a = req_a;
+      req_t_d = req_d;
+      rsp_t_type = rsp_type;
+      rsp_t_status = rsp_status;
+      rsp_t_d = rsp_d;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_GET: 
+      req_type = req_t_type;
+      req_a = req_t_a;
+      req_d = req_t_d;
+      rsp_type = rsp_t_type;
+      rsp_status = rsp_t_status;
+      rsp_d = rsp_t_d;
+      d = d_t;
+      a = a_t;
+    }
+    while_3_break: /* CIL Label */ ;
+    }
+    rsp_type = c_rsp_type;
+    rsp_status = c_rsp_status;
+    rsp_d = c_rsp_d;
+    c_empty_rsp = 1;
+    c_read_rsp_ev = 1;
+    { __VERIFIER_reached_control(314, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(314, __func__);
+
+      { __VERIFIER_reached_control(315, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(315, __func__);
+
+        m_run_st = 0;
+      } else { __VERIFIER_control_false(317, __func__);
+
+        goto _L___9;
+      }}
+    } else { __VERIFIER_control_false(320, __func__);
+
+      _L___9: /* CIL Label */ 
+      { __VERIFIER_reached_control(322, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(322, __func__);
+
+        { __VERIFIER_reached_control(323, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(323, __func__);
+
+          m_run_st = 0;
+        } else { __VERIFIER_control_false(325, __func__);
+
+          goto _L___8;
+        }}
+      } else { __VERIFIER_control_false(328, __func__);
+
+        _L___8: /* CIL Label */ 
+        { __VERIFIER_reached_control(330, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(330, __func__);
+
+          { __VERIFIER_reached_control(331, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(331, __func__);
+
+            m_run_st = 0;
+          } else { __VERIFIER_control_false(333, __func__);
+
+            goto _L___7;
+          }}
+        } else { __VERIFIER_control_false(336, __func__);
+
+          _L___7: /* CIL Label */ 
+          { __VERIFIER_reached_control(338, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(338, __func__);
+
+            { __VERIFIER_reached_control(339, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(339, __func__);
+
+              m_run_st = 0;
+            } else { __VERIFIER_control_false(341, __func__);
+
+              goto _L___6;
+            }}
+          } else { __VERIFIER_control_false(344, __func__);
+
+            _L___6: /* CIL Label */ 
+            { __VERIFIER_reached_control(346, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(346, __func__);
+
+              { __VERIFIER_reached_control(347, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(347, __func__);
+
+                m_run_st = 0;
+              } else { __VERIFIER_control_false(349, __func__);
+
+                goto _L___5;
+              }}
+            } else { __VERIFIER_control_false(352, __func__);
+
+              _L___5: /* CIL Label */ 
+              { __VERIFIER_reached_control(354, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(354, __func__);
+
+                { __VERIFIER_reached_control(355, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(355, __func__);
+
+                  m_run_st = 0;
+                } else { __VERIFIER_control_false(357, __func__);
+
+
+                }}
+              } else { __VERIFIER_control_false(360, __func__);
+
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    { __VERIFIER_reached_control(368, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(368, __func__);
+
+      { __VERIFIER_reached_control(369, __func__);
+if ((int )c_write_req_ev == 1) { __VERIFIER_control_true(369, __func__);
+
+        s_run_st = 0;
+      } else { __VERIFIER_control_false(371, __func__);
+
+        goto _L___10;
+      }}
+    } else { __VERIFIER_control_false(374, __func__);
+
+      _L___10: /* CIL Label */ 
+      { __VERIFIER_reached_control(376, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_true(376, __func__);
+
+        { __VERIFIER_reached_control(377, __func__);
+if ((int )c_read_rsp_ev == 1) { __VERIFIER_control_true(377, __func__);
+
+          s_run_st = 0;
+        } else { __VERIFIER_control_false(379, __func__);
+
+
+        }}
+      } else { __VERIFIER_control_false(382, __func__);
+
+
+      }}
+    }}
+    c_read_rsp_ev = 2;
+    { __VERIFIER_reached_control(387, __func__);
+if (c_m_lock == 0) { __VERIFIER_control_true(387, __func__);
+
+      {
+      error();
+      }
+    } else { __VERIFIER_control_false(391, __func__);
+
+
+    }}
+    c_m_lock = 0;
+    c_m_ev = 1;
+    { __VERIFIER_reached_control(396, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(396, __func__);
+
+      { __VERIFIER_reached_control(397, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(397, __func__);
+
+        m_run_st = 0;
+      } else { __VERIFIER_control_false(399, __func__);
+
+        goto _L___15;
+      }}
+    } else { __VERIFIER_control_false(402, __func__);
+
+      _L___15: /* CIL Label */ 
+      { __VERIFIER_reached_control(404, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(404, __func__);
+
+        { __VERIFIER_reached_control(405, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(405, __func__);
+
+          m_run_st = 0;
+        } else { __VERIFIER_control_false(407, __func__);
+
+          goto _L___14;
+        }}
+      } else { __VERIFIER_control_false(410, __func__);
+
+        _L___14: /* CIL Label */ 
+        { __VERIFIER_reached_control(412, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(412, __func__);
+
+          { __VERIFIER_reached_control(413, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(413, __func__);
+
+            m_run_st = 0;
+          } else { __VERIFIER_control_false(415, __func__);
+
+            goto _L___13;
+          }}
+        } else { __VERIFIER_control_false(418, __func__);
+
+          _L___13: /* CIL Label */ 
+          { __VERIFIER_reached_control(420, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(420, __func__);
+
+            { __VERIFIER_reached_control(421, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(421, __func__);
+
+              m_run_st = 0;
+            } else { __VERIFIER_control_false(423, __func__);
+
+              goto _L___12;
+            }}
+          } else { __VERIFIER_control_false(426, __func__);
+
+            _L___12: /* CIL Label */ 
+            { __VERIFIER_reached_control(428, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(428, __func__);
+
+              { __VERIFIER_reached_control(429, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(429, __func__);
+
+                m_run_st = 0;
+              } else { __VERIFIER_control_false(431, __func__);
+
+                goto _L___11;
+              }}
+            } else { __VERIFIER_control_false(434, __func__);
+
+              _L___11: /* CIL Label */ 
+              { __VERIFIER_reached_control(436, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(436, __func__);
+
+                { __VERIFIER_reached_control(437, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(437, __func__);
+
+                  m_run_st = 0;
+                } else { __VERIFIER_control_false(439, __func__);
+
+
+                }}
+              } else { __VERIFIER_control_false(442, __func__);
+
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    { __VERIFIER_reached_control(450, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(450, __func__);
+
+      { __VERIFIER_reached_control(451, __func__);
+if ((int )c_write_req_ev == 1) { __VERIFIER_control_true(451, __func__);
+
+        s_run_st = 0;
+      } else { __VERIFIER_control_false(453, __func__);
+
+        goto _L___16;
+      }}
+    } else { __VERIFIER_control_false(456, __func__);
+
+      _L___16: /* CIL Label */ 
+      { __VERIFIER_reached_control(458, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_true(458, __func__);
+
+        { __VERIFIER_reached_control(459, __func__);
+if ((int )c_read_rsp_ev == 1) { __VERIFIER_control_true(459, __func__);
+
+          s_run_st = 0;
+        } else { __VERIFIER_control_false(461, __func__);
+
+
+        }}
+      } else { __VERIFIER_control_false(464, __func__);
+
+
+      }}
+    }}
+    c_m_ev = 2;
+    a += 1;
+  }
+  while_0_break: /* CIL Label */ ;
+  }
+  a = 0;
+  {
+ myBool pStored4 = myFalse; __VERIFIER_reached_control(475, __func__);
+ while (1) { __VERIFIER_loop_head(475, __func__);
+printf("CBMC Instrumentation @ line475");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od;static int od_t;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_a___0;static int oreq_d;static int oreq_d___0;static int oreq_t_a;static int oreq_t_d;static int oreq_t_type;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int oreq_type___0;static int orsp_d;static int orsp_d___0;static int orsp_status;static int orsp_status___0;static int orsp_t_d;static int orsp_t_status;static int orsp_t_type;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int orsp_type___0;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored4){__CPROVER_assert(!(oa==a && oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od==d && od_t==d_t && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_a___0==req_a___0 && oreq_d==req_d && oreq_d___0==req_d___0 && oreq_t_a==req_t_a && oreq_t_d==req_t_d && oreq_t_type==req_t_type && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && oreq_type___0==req_type___0 && orsp_d==rsp_d && orsp_d___0==rsp_d___0 && orsp_status==rsp_status && orsp_status___0==rsp_status___0 && orsp_t_d==rsp_t_d && orsp_t_status==rsp_t_status && orsp_t_type==rsp_t_type && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && orsp_type___0==rsp_type___0 && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa=a;oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od=d;od_t=d_t;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_a___0=req_a___0;oreq_d=req_d;oreq_d___0=req_d___0;oreq_t_a=req_t_a;oreq_t_d=req_t_d;oreq_t_type=req_t_type;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;oreq_type___0=req_type___0;orsp_d=rsp_d;orsp_d___0=rsp_d___0;orsp_status=rsp_status;orsp_status___0=rsp_status___0;orsp_t_d=rsp_t_d;orsp_t_status=rsp_t_status;orsp_t_type=rsp_t_type;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;orsp_type___0=rsp_type___0;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored4=myTrue;} 
+    while_4_continue: /* CIL Label */ ;
+    { __VERIFIER_reached_control(477, __func__);
+if (a < 1) { __VERIFIER_control_true(477, __func__);
+
+
+    } else { __VERIFIER_control_false(479, __func__);
+
+      goto while_4_break;
+    }}
+    req_type___0 = 0;
+    req_a___0 = a;
+    {
+   myBool pStored5 = myFalse; __VERIFIER_reached_control(485, __func__);
+ while (1) { __VERIFIER_loop_head(485, __func__);
+printf("CBMC Instrumentation @ line485");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od;static int od_t;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_a___0;static int oreq_d;static int oreq_d___0;static int oreq_t_a;static int oreq_t_d;static int oreq_t_type;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int oreq_type___0;static int orsp_d;static int orsp_d___0;static int orsp_status;static int orsp_status___0;static int orsp_t_d;static int orsp_t_status;static int orsp_t_type;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int orsp_type___0;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored5){__CPROVER_assert(!(oa==a && oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od==d && od_t==d_t && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_a___0==req_a___0 && oreq_d==req_d && oreq_d___0==req_d___0 && oreq_t_a==req_t_a && oreq_t_d==req_t_d && oreq_t_type==req_t_type && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && oreq_type___0==req_type___0 && orsp_d==rsp_d && orsp_d___0==rsp_d___0 && orsp_status==rsp_status && orsp_status___0==rsp_status___0 && orsp_t_d==rsp_t_d && orsp_t_status==rsp_t_status && orsp_t_type==rsp_t_type && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && orsp_type___0==rsp_type___0 && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa=a;oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od=d;od_t=d_t;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_a___0=req_a___0;oreq_d=req_d;oreq_d___0=req_d___0;oreq_t_a=req_t_a;oreq_t_d=req_t_d;oreq_t_type=req_t_type;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;oreq_type___0=req_type___0;orsp_d=rsp_d;orsp_d___0=rsp_d___0;orsp_status=rsp_status;orsp_status___0=rsp_status___0;orsp_t_d=rsp_t_d;orsp_t_status=rsp_t_status;orsp_t_type=rsp_t_type;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;orsp_type___0=rsp_type___0;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored5=myTrue;} 
+      while_5_continue: /* CIL Label */ ;
+      { __VERIFIER_reached_control(487, __func__);
+if (c_m_lock == 1) { __VERIFIER_control_true(487, __func__);
+
+
+      } else { __VERIFIER_control_false(489, __func__);
+
+        goto while_5_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 4;
+      req_tt_type = req_type___0;
+      req_tt_a = req_a___0;
+      req_tt_d = req_d___0;
+      rsp_tt_type = rsp_type___0;
+      rsp_tt_status = rsp_status___0;
+      rsp_tt_d = rsp_d___0;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_MUTEX2: 
+      req_type___0 = req_tt_type;
+      req_a___0 = req_tt_a;
+      req_d___0 = req_tt_d;
+      rsp_type___0 = rsp_tt_type;
+      rsp_status___0 = rsp_tt_status;
+      rsp_d___0 = rsp_tt_d;
+      d = d_t;
+      a = a_t;
+    }
+    while_5_break: /* CIL Label */ ;
+    }
+    c_m_lock = 1;
+    {
+   myBool pStored6 = myFalse; __VERIFIER_reached_control(518, __func__);
+ while (1) { __VERIFIER_loop_head(518, __func__);
+printf("CBMC Instrumentation @ line518");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od;static int od_t;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_a___0;static int oreq_d;static int oreq_d___0;static int oreq_t_a;static int oreq_t_d;static int oreq_t_type;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int oreq_type___0;static int orsp_d;static int orsp_d___0;static int orsp_status;static int orsp_status___0;static int orsp_t_d;static int orsp_t_status;static int orsp_t_type;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int orsp_type___0;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored6){__CPROVER_assert(!(oa==a && oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od==d && od_t==d_t && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_a___0==req_a___0 && oreq_d==req_d && oreq_d___0==req_d___0 && oreq_t_a==req_t_a && oreq_t_d==req_t_d && oreq_t_type==req_t_type && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && oreq_type___0==req_type___0 && orsp_d==rsp_d && orsp_d___0==rsp_d___0 && orsp_status==rsp_status && orsp_status___0==rsp_status___0 && orsp_t_d==rsp_t_d && orsp_t_status==rsp_t_status && orsp_t_type==rsp_t_type && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && orsp_type___0==rsp_type___0 && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa=a;oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od=d;od_t=d_t;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_a___0=req_a___0;oreq_d=req_d;oreq_d___0=req_d___0;oreq_t_a=req_t_a;oreq_t_d=req_t_d;oreq_t_type=req_t_type;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;oreq_type___0=req_type___0;orsp_d=rsp_d;orsp_d___0=rsp_d___0;orsp_status=rsp_status;orsp_status___0=rsp_status___0;orsp_t_d=rsp_t_d;orsp_t_status=rsp_t_status;orsp_t_type=rsp_t_type;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;orsp_type___0=rsp_type___0;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored6=myTrue;} 
+      while_6_continue: /* CIL Label */ ;
+      { __VERIFIER_reached_control(520, __func__);
+if ((int )c_empty_req == 0) { __VERIFIER_control_true(520, __func__);
+
+
+      } else { __VERIFIER_control_false(522, __func__);
+
+        goto while_6_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 5;
+      req_tt_type = req_type___0;
+      req_tt_a = req_a___0;
+      req_tt_d = req_d___0;
+      rsp_tt_type = rsp_type___0;
+      rsp_tt_status = rsp_status___0;
+      rsp_tt_d = rsp_d___0;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_PUT2: 
+      req_type___0 = req_tt_type;
+      req_a___0 = req_tt_a;
+      req_d___0 = req_tt_d;
+      rsp_type___0 = rsp_tt_type;
+      rsp_status___0 = rsp_tt_status;
+      rsp_d___0 = rsp_tt_d;
+      d = d_t;
+      a = a_t;
+    }
+    while_6_break: /* CIL Label */ ;
+    }
+    c_req_type = req_type___0;
+    c_req_a = req_a___0;
+    c_req_d = req_d___0;
+    c_empty_req = 0;
+    c_write_req_ev = 1;
+    { __VERIFIER_reached_control(554, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(554, __func__);
+
+      { __VERIFIER_reached_control(555, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(555, __func__);
+
+        m_run_st = 0;
+      } else { __VERIFIER_control_false(557, __func__);
+
+        goto _L___21;
+      }}
+    } else { __VERIFIER_control_false(560, __func__);
+
+      _L___21: /* CIL Label */ 
+      { __VERIFIER_reached_control(562, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(562, __func__);
+
+        { __VERIFIER_reached_control(563, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(563, __func__);
+
+          m_run_st = 0;
+        } else { __VERIFIER_control_false(565, __func__);
+
+          goto _L___20;
+        }}
+      } else { __VERIFIER_control_false(568, __func__);
+
+        _L___20: /* CIL Label */ 
+        { __VERIFIER_reached_control(570, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(570, __func__);
+
+          { __VERIFIER_reached_control(571, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(571, __func__);
+
+            m_run_st = 0;
+          } else { __VERIFIER_control_false(573, __func__);
+
+            goto _L___19;
+          }}
+        } else { __VERIFIER_control_false(576, __func__);
+
+          _L___19: /* CIL Label */ 
+          { __VERIFIER_reached_control(578, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(578, __func__);
+
+            { __VERIFIER_reached_control(579, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(579, __func__);
+
+              m_run_st = 0;
+            } else { __VERIFIER_control_false(581, __func__);
+
+              goto _L___18;
+            }}
+          } else { __VERIFIER_control_false(584, __func__);
+
+            _L___18: /* CIL Label */ 
+            { __VERIFIER_reached_control(586, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(586, __func__);
+
+              { __VERIFIER_reached_control(587, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(587, __func__);
+
+                m_run_st = 0;
+              } else { __VERIFIER_control_false(589, __func__);
+
+                goto _L___17;
+              }}
+            } else { __VERIFIER_control_false(592, __func__);
+
+              _L___17: /* CIL Label */ 
+              { __VERIFIER_reached_control(594, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(594, __func__);
+
+                { __VERIFIER_reached_control(595, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(595, __func__);
+
+                  m_run_st = 0;
+                } else { __VERIFIER_control_false(597, __func__);
+
+
+                }}
+              } else { __VERIFIER_control_false(600, __func__);
+
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    { __VERIFIER_reached_control(608, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(608, __func__);
+
+      { __VERIFIER_reached_control(609, __func__);
+if ((int )c_write_req_ev == 1) { __VERIFIER_control_true(609, __func__);
+
+        s_run_st = 0;
+      } else { __VERIFIER_control_false(611, __func__);
+
+        goto _L___22;
+      }}
+    } else { __VERIFIER_control_false(614, __func__);
+
+      _L___22: /* CIL Label */ 
+      { __VERIFIER_reached_control(616, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_true(616, __func__);
+
+        { __VERIFIER_reached_control(617, __func__);
+if ((int )c_read_rsp_ev == 1) { __VERIFIER_control_true(617, __func__);
+
+          s_run_st = 0;
+        } else { __VERIFIER_control_false(619, __func__);
+
+
+        }}
+      } else { __VERIFIER_control_false(622, __func__);
+
+
+      }}
+    }}
+    c_write_req_ev = 2;
+    {
+   myBool pStored7 = myFalse; __VERIFIER_reached_control(628, __func__);
+ while (1) { __VERIFIER_loop_head(628, __func__);
+printf("CBMC Instrumentation @ line628");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od;static int od_t;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_a___0;static int oreq_d;static int oreq_d___0;static int oreq_t_a;static int oreq_t_d;static int oreq_t_type;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int oreq_type___0;static int orsp_d;static int orsp_d___0;static int orsp_status;static int orsp_status___0;static int orsp_t_d;static int orsp_t_status;static int orsp_t_type;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int orsp_type___0;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored7){__CPROVER_assert(!(oa==a && oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od==d && od_t==d_t && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_a___0==req_a___0 && oreq_d==req_d && oreq_d___0==req_d___0 && oreq_t_a==req_t_a && oreq_t_d==req_t_d && oreq_t_type==req_t_type && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && oreq_type___0==req_type___0 && orsp_d==rsp_d && orsp_d___0==rsp_d___0 && orsp_status==rsp_status && orsp_status___0==rsp_status___0 && orsp_t_d==rsp_t_d && orsp_t_status==rsp_t_status && orsp_t_type==rsp_t_type && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && orsp_type___0==rsp_type___0 && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa=a;oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od=d;od_t=d_t;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_a___0=req_a___0;oreq_d=req_d;oreq_d___0=req_d___0;oreq_t_a=req_t_a;oreq_t_d=req_t_d;oreq_t_type=req_t_type;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;oreq_type___0=req_type___0;orsp_d=rsp_d;orsp_d___0=rsp_d___0;orsp_status=rsp_status;orsp_status___0=rsp_status___0;orsp_t_d=rsp_t_d;orsp_t_status=rsp_t_status;orsp_t_type=rsp_t_type;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;orsp_type___0=rsp_type___0;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored7=myTrue;} 
+      while_7_continue: /* CIL Label */ ;
+      { __VERIFIER_reached_control(630, __func__);
+if ((int )c_empty_rsp == 1) { __VERIFIER_control_true(630, __func__);
+
+
+      } else { __VERIFIER_control_false(632, __func__);
+
+        goto while_7_break;
+      }}
+      m_run_st = 2;
+      m_run_pc = 6;
+      req_tt_type = req_type___0;
+      req_tt_a = req_a___0;
+      req_tt_d = req_d___0;
+      rsp_tt_type = rsp_type___0;
+      rsp_tt_status = rsp_status___0;
+      rsp_tt_d = rsp_d___0;
+      d_t = d;
+      a_t = a;
+
+      goto return_label;
+      L_MASTER_RUN_GET2: 
+      req_type___0 = req_tt_type;
+      req_a___0 = req_tt_a;
+      req_d___0 = req_tt_d;
+      rsp_type___0 = rsp_tt_type;
+      rsp_status___0 = rsp_tt_status;
+      rsp_d___0 = rsp_tt_d;
+      d = d_t;
+      a = a_t;
+    }
+    while_7_break: /* CIL Label */ ;
+    }
+    rsp_type___0 = c_rsp_type;
+    rsp_status___0 = c_rsp_status;
+    rsp_d___0 = c_rsp_d;
+    c_empty_rsp = 1;
+    c_read_rsp_ev = 1;
+    { __VERIFIER_reached_control(664, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(664, __func__);
+
+      { __VERIFIER_reached_control(665, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(665, __func__);
+
+        m_run_st = 0;
+      } else { __VERIFIER_control_false(667, __func__);
+
+        goto _L___27;
+      }}
+    } else { __VERIFIER_control_false(670, __func__);
+
+      _L___27: /* CIL Label */ 
+      { __VERIFIER_reached_control(672, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(672, __func__);
+
+        { __VERIFIER_reached_control(673, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(673, __func__);
+
+          m_run_st = 0;
+        } else { __VERIFIER_control_false(675, __func__);
+
+          goto _L___26;
+        }}
+      } else { __VERIFIER_control_false(678, __func__);
+
+        _L___26: /* CIL Label */ 
+        { __VERIFIER_reached_control(680, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(680, __func__);
+
+          { __VERIFIER_reached_control(681, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(681, __func__);
+
+            m_run_st = 0;
+          } else { __VERIFIER_control_false(683, __func__);
+
+            goto _L___25;
+          }}
+        } else { __VERIFIER_control_false(686, __func__);
+
+          _L___25: /* CIL Label */ 
+          { __VERIFIER_reached_control(688, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(688, __func__);
+
+            { __VERIFIER_reached_control(689, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(689, __func__);
+
+              m_run_st = 0;
+            } else { __VERIFIER_control_false(691, __func__);
+
+              goto _L___24;
+            }}
+          } else { __VERIFIER_control_false(694, __func__);
+
+            _L___24: /* CIL Label */ 
+            { __VERIFIER_reached_control(696, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(696, __func__);
+
+              { __VERIFIER_reached_control(697, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(697, __func__);
+
+                m_run_st = 0;
+              } else { __VERIFIER_control_false(699, __func__);
+
+                goto _L___23;
+              }}
+            } else { __VERIFIER_control_false(702, __func__);
+
+              _L___23: /* CIL Label */ 
+              { __VERIFIER_reached_control(704, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(704, __func__);
+
+                { __VERIFIER_reached_control(705, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(705, __func__);
+
+                  m_run_st = 0;
+                } else { __VERIFIER_control_false(707, __func__);
+
+
+                }}
+              } else { __VERIFIER_control_false(710, __func__);
+
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    { __VERIFIER_reached_control(718, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(718, __func__);
+
+      { __VERIFIER_reached_control(719, __func__);
+if ((int )c_write_req_ev == 1) { __VERIFIER_control_true(719, __func__);
+
+        s_run_st = 0;
+      } else { __VERIFIER_control_false(721, __func__);
+
+        goto _L___28;
+      }}
+    } else { __VERIFIER_control_false(724, __func__);
+
+      _L___28: /* CIL Label */ 
+      { __VERIFIER_reached_control(726, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_true(726, __func__);
+
+        { __VERIFIER_reached_control(727, __func__);
+if ((int )c_read_rsp_ev == 1) { __VERIFIER_control_true(727, __func__);
+
+          s_run_st = 0;
+        } else { __VERIFIER_control_false(729, __func__);
+
+
+        }}
+      } else { __VERIFIER_control_false(732, __func__);
+
+
+      }}
+    }}
+    c_read_rsp_ev = 2;
+    { __VERIFIER_reached_control(737, __func__);
+if (c_m_lock == 0) { __VERIFIER_control_true(737, __func__);
+
+      {
+      error();
+      }
+    } else { __VERIFIER_control_false(741, __func__);
+
+
+    }}
+    c_m_lock = 0;
+    c_m_ev = 1;
+    { __VERIFIER_reached_control(746, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(746, __func__);
+
+      { __VERIFIER_reached_control(747, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(747, __func__);
+
+        m_run_st = 0;
+      } else { __VERIFIER_control_false(749, __func__);
+
+        goto _L___33;
+      }}
+    } else { __VERIFIER_control_false(752, __func__);
+
+      _L___33: /* CIL Label */ 
+      { __VERIFIER_reached_control(754, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(754, __func__);
+
+        { __VERIFIER_reached_control(755, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(755, __func__);
+
+          m_run_st = 0;
+        } else { __VERIFIER_control_false(757, __func__);
+
+          goto _L___32;
+        }}
+      } else { __VERIFIER_control_false(760, __func__);
+
+        _L___32: /* CIL Label */ 
+        { __VERIFIER_reached_control(762, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(762, __func__);
+
+          { __VERIFIER_reached_control(763, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(763, __func__);
+
+            m_run_st = 0;
+          } else { __VERIFIER_control_false(765, __func__);
+
+            goto _L___31;
+          }}
+        } else { __VERIFIER_control_false(768, __func__);
+
+          _L___31: /* CIL Label */ 
+          { __VERIFIER_reached_control(770, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(770, __func__);
+
+            { __VERIFIER_reached_control(771, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(771, __func__);
+
+              m_run_st = 0;
+            } else { __VERIFIER_control_false(773, __func__);
+
+              goto _L___30;
+            }}
+          } else { __VERIFIER_control_false(776, __func__);
+
+            _L___30: /* CIL Label */ 
+            { __VERIFIER_reached_control(778, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(778, __func__);
+
+              { __VERIFIER_reached_control(779, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(779, __func__);
+
+                m_run_st = 0;
+              } else { __VERIFIER_control_false(781, __func__);
+
+                goto _L___29;
+              }}
+            } else { __VERIFIER_control_false(784, __func__);
+
+              _L___29: /* CIL Label */ 
+              { __VERIFIER_reached_control(786, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(786, __func__);
+
+                { __VERIFIER_reached_control(787, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(787, __func__);
+
+                  m_run_st = 0;
+                } else { __VERIFIER_control_false(789, __func__);
+
+
+                }}
+              } else { __VERIFIER_control_false(792, __func__);
+
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    { __VERIFIER_reached_control(800, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(800, __func__);
+
+      { __VERIFIER_reached_control(801, __func__);
+if ((int )c_write_req_ev == 1) { __VERIFIER_control_true(801, __func__);
+
+        s_run_st = 0;
+      } else { __VERIFIER_control_false(803, __func__);
+
+        goto _L___34;
+      }}
+    } else { __VERIFIER_control_false(806, __func__);
+
+      _L___34: /* CIL Label */ 
+      { __VERIFIER_reached_control(808, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_true(808, __func__);
+
+        { __VERIFIER_reached_control(809, __func__);
+if ((int )c_read_rsp_ev == 1) { __VERIFIER_control_true(809, __func__);
+
+          s_run_st = 0;
+        } else { __VERIFIER_control_false(811, __func__);
+
+
+        }}
+      } else { __VERIFIER_control_false(814, __func__);
+
+
+      }}
+    }}
+    c_m_ev = 2;
+    { __VERIFIER_reached_control(819, __func__);
+if (! (req_a___0 + 50 == rsp_d___0)) { __VERIFIER_control_true(819, __func__);
+
+      {
+      error();
+      }
+    } else { __VERIFIER_control_false(823, __func__);
+
+
+    }}
+    a += 1;
+  }
+  while_4_break: /* CIL Label */ ;
+  }
+
+  return_label: /* CIL Label */ 
+  return;
+}
+}
+static int req_t_type___0  ;
+static int req_t_a___0  ;
+static int req_t_d___0  ;
+static int rsp_t_type___0  ;
+static int rsp_t_status___0  ;
+static int rsp_t_d___0  ;
+void s_run(void) 
+{ int req_type ;
+  int req_a ;
+  int req_d ;
+  int rsp_type ;
+  int rsp_status ;
+  int rsp_d ;
+  int dummy ;
+
+  {
+  { __VERIFIER_reached_control(851, __func__);
+if ((int )s_run_pc == 0) { __VERIFIER_control_true(851, __func__);
+
+    goto L_SLAVE_RUN_ENTRY;
+  } else { __VERIFIER_control_false(853, __func__);
+
+    { __VERIFIER_reached_control(854, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_true(854, __func__);
+
+      goto L_SLAVE_RUN_PUT;
+    } else { __VERIFIER_control_false(856, __func__);
+
+      { __VERIFIER_reached_control(857, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(857, __func__);
+
+        goto L_SLAVE_RUN_GET;
+      } else { __VERIFIER_control_false(859, __func__);
+
+
+      }}
+    }}
+  }}
+  L_SLAVE_RUN_ENTRY: 
+  {
+ myBool pStored8 = myFalse; __VERIFIER_reached_control(866, __func__);
+ while (1) { __VERIFIER_loop_head(866, __func__);
+printf("CBMC Instrumentation @ line866");myBool flag=__VERIFIER_nondet_myBool();static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od_t;static int odummy;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_d;static int oreq_t_a;static int oreq_t_a___0;static int oreq_t_d;static int oreq_t_d___0;static int oreq_t_type;static int oreq_t_type___0;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int orsp_d;static int orsp_status;static int orsp_t_d;static int orsp_t_d___0;static int orsp_t_status;static int orsp_t_status___0;static int orsp_t_type;static int orsp_t_type___0;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored8){__CPROVER_assert(!(oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od_t==d_t && odummy==dummy && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_d==req_d && oreq_t_a==req_t_a && oreq_t_a___0==req_t_a___0 && oreq_t_d==req_t_d && oreq_t_d___0==req_t_d___0 && oreq_t_type==req_t_type && oreq_t_type___0==req_t_type___0 && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && orsp_d==rsp_d && orsp_status==rsp_status && orsp_t_d==rsp_t_d && orsp_t_d___0==rsp_t_d___0 && orsp_t_status==rsp_t_status && orsp_t_status___0==rsp_t_status___0 && orsp_t_type==rsp_t_type && orsp_t_type___0==rsp_t_type___0 && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od_t=d_t;odummy=dummy;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_d=req_d;oreq_t_a=req_t_a;oreq_t_a___0=req_t_a___0;oreq_t_d=req_t_d;oreq_t_d___0=req_t_d___0;oreq_t_type=req_t_type;oreq_t_type___0=req_t_type___0;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;orsp_d=rsp_d;orsp_status=rsp_status;orsp_t_d=rsp_t_d;orsp_t_d___0=rsp_t_d___0;orsp_t_status=rsp_t_status;orsp_t_status___0=rsp_t_status___0;orsp_t_type=rsp_t_type;orsp_t_type___0=rsp_t_type___0;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored8=myTrue;} 
+    while_8_continue: /* CIL Label */ ;
+    {
+   myBool pStored9 = myFalse; __VERIFIER_reached_control(869, __func__);
+ while (1) { __VERIFIER_loop_head(869, __func__);
+printf("CBMC Instrumentation @ line869");myBool flag=__VERIFIER_nondet_myBool();static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od_t;static int odummy;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_d;static int oreq_t_a;static int oreq_t_a___0;static int oreq_t_d;static int oreq_t_d___0;static int oreq_t_type;static int oreq_t_type___0;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int orsp_d;static int orsp_status;static int orsp_t_d;static int orsp_t_d___0;static int orsp_t_status;static int orsp_t_status___0;static int orsp_t_type;static int orsp_t_type___0;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored9){__CPROVER_assert(!(oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od_t==d_t && odummy==dummy && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_d==req_d && oreq_t_a==req_t_a && oreq_t_a___0==req_t_a___0 && oreq_t_d==req_t_d && oreq_t_d___0==req_t_d___0 && oreq_t_type==req_t_type && oreq_t_type___0==req_t_type___0 && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && orsp_d==rsp_d && orsp_status==rsp_status && orsp_t_d==rsp_t_d && orsp_t_d___0==rsp_t_d___0 && orsp_t_status==rsp_t_status && orsp_t_status___0==rsp_t_status___0 && orsp_t_type==rsp_t_type && orsp_t_type___0==rsp_t_type___0 && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od_t=d_t;odummy=dummy;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_d=req_d;oreq_t_a=req_t_a;oreq_t_a___0=req_t_a___0;oreq_t_d=req_t_d;oreq_t_d___0=req_t_d___0;oreq_t_type=req_t_type;oreq_t_type___0=req_t_type___0;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;orsp_d=rsp_d;orsp_status=rsp_status;orsp_t_d=rsp_t_d;orsp_t_d___0=rsp_t_d___0;orsp_t_status=rsp_t_status;orsp_t_status___0=rsp_t_status___0;orsp_t_type=rsp_t_type;orsp_t_type___0=rsp_t_type___0;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored9=myTrue;} 
+      while_9_continue: /* CIL Label */ ;
+      { __VERIFIER_reached_control(871, __func__);
+if ((int )c_empty_req == 1) { __VERIFIER_control_true(871, __func__);
+
+
+      } else { __VERIFIER_control_false(873, __func__);
+
+        goto while_9_break;
+      }}
+      s_run_st = 2;
+      s_run_pc = 2;
+      req_t_type___0 = req_type;
+      req_t_a___0 = req_a;
+      req_t_d___0 = req_d;
+      rsp_t_type___0 = rsp_type;
+      rsp_t_status___0 = rsp_status;
+      rsp_t_d___0 = rsp_d;
+
+      goto return_label;
+      L_SLAVE_RUN_GET: 
+      req_type = req_t_type___0;
+      req_a = req_t_a___0;
+      req_d = req_t_d___0;
+      rsp_type = rsp_t_type___0;
+      rsp_status = rsp_t_status___0;
+      rsp_d = rsp_t_d___0;
+    }
+    while_9_break: /* CIL Label */ ;
+    }
+    req_type = c_req_type;
+    req_a = c_req_a;
+    req_d = c_req_d;
+    c_empty_req = 1;
+    c_read_req_ev = 1;
+    { __VERIFIER_reached_control(901, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(901, __func__);
+
+      { __VERIFIER_reached_control(902, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(902, __func__);
+
+        m_run_st = 0;
+      } else { __VERIFIER_control_false(904, __func__);
+
+        goto _L___3;
+      }}
+    } else { __VERIFIER_control_false(907, __func__);
+
+      _L___3: /* CIL Label */ 
+      { __VERIFIER_reached_control(909, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(909, __func__);
+
+        { __VERIFIER_reached_control(910, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(910, __func__);
+
+          m_run_st = 0;
+        } else { __VERIFIER_control_false(912, __func__);
+
+          goto _L___2;
+        }}
+      } else { __VERIFIER_control_false(915, __func__);
+
+        _L___2: /* CIL Label */ 
+        { __VERIFIER_reached_control(917, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(917, __func__);
+
+          { __VERIFIER_reached_control(918, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(918, __func__);
+
+            m_run_st = 0;
+          } else { __VERIFIER_control_false(920, __func__);
+
+            goto _L___1;
+          }}
+        } else { __VERIFIER_control_false(923, __func__);
+
+          _L___1: /* CIL Label */ 
+          { __VERIFIER_reached_control(925, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(925, __func__);
+
+            { __VERIFIER_reached_control(926, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(926, __func__);
+
+              m_run_st = 0;
+            } else { __VERIFIER_control_false(928, __func__);
+
+              goto _L___0;
+            }}
+          } else { __VERIFIER_control_false(931, __func__);
+
+            _L___0: /* CIL Label */ 
+            { __VERIFIER_reached_control(933, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(933, __func__);
+
+              { __VERIFIER_reached_control(934, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(934, __func__);
+
+                m_run_st = 0;
+              } else { __VERIFIER_control_false(936, __func__);
+
+                goto _L;
+              }}
+            } else { __VERIFIER_control_false(939, __func__);
+
+              _L: /* CIL Label */ 
+              { __VERIFIER_reached_control(941, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(941, __func__);
+
+                { __VERIFIER_reached_control(942, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(942, __func__);
+
+                  m_run_st = 0;
+                } else { __VERIFIER_control_false(944, __func__);
+
+
+                }}
+              } else { __VERIFIER_control_false(947, __func__);
+
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    { __VERIFIER_reached_control(955, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(955, __func__);
+
+      { __VERIFIER_reached_control(956, __func__);
+if ((int )c_write_req_ev == 1) { __VERIFIER_control_true(956, __func__);
+
+        s_run_st = 0;
+      } else { __VERIFIER_control_false(958, __func__);
+
+        goto _L___4;
+      }}
+    } else { __VERIFIER_control_false(961, __func__);
+
+      _L___4: /* CIL Label */ 
+      { __VERIFIER_reached_control(963, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_true(963, __func__);
+
+        { __VERIFIER_reached_control(964, __func__);
+if ((int )c_read_rsp_ev == 1) { __VERIFIER_control_true(964, __func__);
+
+          s_run_st = 0;
+        } else { __VERIFIER_control_false(966, __func__);
+
+
+        }}
+      } else { __VERIFIER_control_false(969, __func__);
+
+
+      }}
+    }}
+    c_read_req_ev = 2;
+    rsp_type = req_type;
+    { __VERIFIER_reached_control(975, __func__);
+if ((int )req_type == 0) { __VERIFIER_control_true(975, __func__);
+
+
+      rsp_d = s_memory_read(req_a);
+
+      rsp_status = 1;
+    } else { __VERIFIER_control_false(980, __func__);
+
+      { __VERIFIER_reached_control(981, __func__);
+if ((int )req_type == 1) { __VERIFIER_control_true(981, __func__);
+
+
+	s_memory_write(req_a,req_d);
+
+        rsp_status = 1;
+      } else { __VERIFIER_control_false(986, __func__);
+
+        rsp_status = 0;
+      }}
+    }}
+    {
+   myBool pStored10 = myFalse; __VERIFIER_reached_control(991, __func__);
+ while (1) { __VERIFIER_loop_head(991, __func__);
+printf("CBMC Instrumentation @ line991");myBool flag=__VERIFIER_nondet_myBool();static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od_t;static int odummy;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_a;static int oreq_d;static int oreq_t_a;static int oreq_t_a___0;static int oreq_t_d;static int oreq_t_d___0;static int oreq_t_type;static int oreq_t_type___0;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int oreq_type;static int orsp_d;static int orsp_status;static int orsp_t_d;static int orsp_t_d___0;static int orsp_t_status;static int orsp_t_status___0;static int orsp_t_type;static int orsp_t_type___0;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int orsp_type;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored10){__CPROVER_assert(!(oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od_t==d_t && odummy==dummy && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_a==req_a && oreq_d==req_d && oreq_t_a==req_t_a && oreq_t_a___0==req_t_a___0 && oreq_t_d==req_t_d && oreq_t_d___0==req_t_d___0 && oreq_t_type==req_t_type && oreq_t_type___0==req_t_type___0 && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && oreq_type==req_type && orsp_d==rsp_d && orsp_status==rsp_status && orsp_t_d==rsp_t_d && orsp_t_d___0==rsp_t_d___0 && orsp_t_status==rsp_t_status && orsp_t_status___0==rsp_t_status___0 && orsp_t_type==rsp_t_type && orsp_t_type___0==rsp_t_type___0 && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && orsp_type==rsp_type && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od_t=d_t;odummy=dummy;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_a=req_a;oreq_d=req_d;oreq_t_a=req_t_a;oreq_t_a___0=req_t_a___0;oreq_t_d=req_t_d;oreq_t_d___0=req_t_d___0;oreq_t_type=req_t_type;oreq_t_type___0=req_t_type___0;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;oreq_type=req_type;orsp_d=rsp_d;orsp_status=rsp_status;orsp_t_d=rsp_t_d;orsp_t_d___0=rsp_t_d___0;orsp_t_status=rsp_t_status;orsp_t_status___0=rsp_t_status___0;orsp_t_type=rsp_t_type;orsp_t_type___0=rsp_t_type___0;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;orsp_type=rsp_type;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored10=myTrue;} 
+      while_10_continue: /* CIL Label */ ;
+      { __VERIFIER_reached_control(993, __func__);
+if ((int )c_empty_rsp == 0) { __VERIFIER_control_true(993, __func__);
+
+
+      } else { __VERIFIER_control_false(995, __func__);
+
+        goto while_10_break;
+      }}
+      s_run_st = 2;
+      s_run_pc = 1;
+      req_t_type___0 = req_type;
+      req_t_a___0 = req_a;
+      req_t_d___0 = req_d;
+      rsp_t_type___0 = rsp_type;
+      rsp_t_status___0 = rsp_status;
+      rsp_t_d___0 = rsp_d;
+
+      goto return_label;
+      L_SLAVE_RUN_PUT: 
+      req_type = req_t_type___0;
+      req_a = req_t_a___0;
+      req_d = req_t_d___0;
+      rsp_type = rsp_t_type___0;
+      rsp_status = rsp_t_status___0;
+      rsp_d = rsp_t_d___0;
+    }
+    while_10_break: /* CIL Label */ ;
+    }
+    c_rsp_type = rsp_type;
+    c_rsp_status = rsp_status;
+    c_rsp_d = rsp_d;
+    c_empty_rsp = 0;
+    c_write_rsp_ev = 1;
+    { __VERIFIER_reached_control(1023, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(1023, __func__);
+
+      { __VERIFIER_reached_control(1024, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(1024, __func__);
+
+        m_run_st = 0;
+      } else { __VERIFIER_control_false(1026, __func__);
+
+        goto _L___9;
+      }}
+    } else { __VERIFIER_control_false(1029, __func__);
+
+      _L___9: /* CIL Label */ 
+      { __VERIFIER_reached_control(1031, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(1031, __func__);
+
+        { __VERIFIER_reached_control(1032, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(1032, __func__);
+
+          m_run_st = 0;
+        } else { __VERIFIER_control_false(1034, __func__);
+
+          goto _L___8;
+        }}
+      } else { __VERIFIER_control_false(1037, __func__);
+
+        _L___8: /* CIL Label */ 
+        { __VERIFIER_reached_control(1039, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(1039, __func__);
+
+          { __VERIFIER_reached_control(1040, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(1040, __func__);
+
+            m_run_st = 0;
+          } else { __VERIFIER_control_false(1042, __func__);
+
+            goto _L___7;
+          }}
+        } else { __VERIFIER_control_false(1045, __func__);
+
+          _L___7: /* CIL Label */ 
+          { __VERIFIER_reached_control(1047, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(1047, __func__);
+
+            { __VERIFIER_reached_control(1048, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(1048, __func__);
+
+              m_run_st = 0;
+            } else { __VERIFIER_control_false(1050, __func__);
+
+              goto _L___6;
+            }}
+          } else { __VERIFIER_control_false(1053, __func__);
+
+            _L___6: /* CIL Label */ 
+            { __VERIFIER_reached_control(1055, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(1055, __func__);
+
+              { __VERIFIER_reached_control(1056, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(1056, __func__);
+
+                m_run_st = 0;
+              } else { __VERIFIER_control_false(1058, __func__);
+
+                goto _L___5;
+              }}
+            } else { __VERIFIER_control_false(1061, __func__);
+
+              _L___5: /* CIL Label */ 
+              { __VERIFIER_reached_control(1063, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(1063, __func__);
+
+                { __VERIFIER_reached_control(1064, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(1064, __func__);
+
+                  m_run_st = 0;
+                } else { __VERIFIER_control_false(1066, __func__);
+
+
+                }}
+              } else { __VERIFIER_control_false(1069, __func__);
+
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    { __VERIFIER_reached_control(1077, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(1077, __func__);
+
+      { __VERIFIER_reached_control(1078, __func__);
+if ((int )c_write_req_ev == 1) { __VERIFIER_control_true(1078, __func__);
+
+        s_run_st = 0;
+      } else { __VERIFIER_control_false(1080, __func__);
+
+        goto _L___10;
+      }}
+    } else { __VERIFIER_control_false(1083, __func__);
+
+      _L___10: /* CIL Label */ 
+      { __VERIFIER_reached_control(1085, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_true(1085, __func__);
+
+        { __VERIFIER_reached_control(1086, __func__);
+if ((int )c_read_rsp_ev == 1) { __VERIFIER_control_true(1086, __func__);
+
+          s_run_st = 0;
+        } else { __VERIFIER_control_false(1088, __func__);
+
+
+        }}
+      } else { __VERIFIER_control_false(1091, __func__);
+
+
+      }}
+    }}
+    c_write_rsp_ev = 2;
+  }
+  while_8_break: /* CIL Label */ ;
+  }
+  return_label: /* CIL Label */ 
+  return;
+}
+}
+void eval(void) 
+{ int tmp ;
+  int tmp___0 ;
+
+  {
+  {
+ myBool pStored11 = myFalse; __VERIFIER_reached_control(1109, __func__);
+ while (1) { __VERIFIER_loop_head(1109, __func__);
+printf("CBMC Instrumentation @ line1109");myBool flag=__VERIFIER_nondet_myBool();static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od_t;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_t_a;static int oreq_t_a___0;static int oreq_t_d;static int oreq_t_d___0;static int oreq_t_type;static int oreq_t_type___0;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int orsp_t_d;static int orsp_t_d___0;static int orsp_t_status;static int orsp_t_status___0;static int orsp_t_type;static int orsp_t_type___0;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;static int otmp;static int otmp___0;if(pStored11){__CPROVER_assert(!(oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od_t==d_t && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_t_a==req_t_a && oreq_t_a___0==req_t_a___0 && oreq_t_d==req_t_d && oreq_t_d___0==req_t_d___0 && oreq_t_type==req_t_type && oreq_t_type___0==req_t_type___0 && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && orsp_t_d==rsp_t_d && orsp_t_d___0==rsp_t_d___0 && orsp_t_status==rsp_t_status && orsp_t_status___0==rsp_t_status___0 && orsp_t_type==rsp_t_type && orsp_t_type___0==rsp_t_type___0 && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st && otmp==tmp && otmp___0==tmp___0),"recurrent state found");} if(flag){oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od_t=d_t;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_t_a=req_t_a;oreq_t_a___0=req_t_a___0;oreq_t_d=req_t_d;oreq_t_d___0=req_t_d___0;oreq_t_type=req_t_type;oreq_t_type___0=req_t_type___0;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;orsp_t_d=rsp_t_d;orsp_t_d___0=rsp_t_d___0;orsp_t_status=rsp_t_status;orsp_t_status___0=rsp_t_status___0;orsp_t_type=rsp_t_type;orsp_t_type___0=rsp_t_type___0;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;otmp=tmp;otmp___0=tmp___0;pStored11=myTrue;} 
+    while_11_continue: /* CIL Label */ ;
+    { __VERIFIER_reached_control(1111, __func__);
+if ((int )m_run_st == 0) { __VERIFIER_control_true(1111, __func__);
+
+
+    } else { __VERIFIER_control_false(1113, __func__);
+
+      { __VERIFIER_reached_control(1114, __func__);
+if ((int )s_run_st == 0) { __VERIFIER_control_true(1114, __func__);
+
+
+      } else { __VERIFIER_control_false(1116, __func__);
+
+        goto while_11_break;
+      }}
+    }}
+    { __VERIFIER_reached_control(1120, __func__);
+if ((int )m_run_st == 0) { __VERIFIER_control_true(1120, __func__);
+
+      {
+	tmp = __VERIFIER_nondet_int();
+      }
+      { __VERIFIER_reached_control(1124, __func__);
+if (tmp) { __VERIFIER_control_true(1124, __func__);
+
+        {
+        m_run_st = 1;
+        m_run();
+        }
+      } else { __VERIFIER_control_false(1129, __func__);
+
+
+      }}
+    } else { __VERIFIER_control_false(1132, __func__);
+
+
+    }}
+    { __VERIFIER_reached_control(1135, __func__);
+if ((int )s_run_st == 0) { __VERIFIER_control_true(1135, __func__);
+
+      {
+	tmp___0 = __VERIFIER_nondet_int();
+      }
+      { __VERIFIER_reached_control(1139, __func__);
+if (tmp___0) { __VERIFIER_control_true(1139, __func__);
+
+        {
+        s_run_st = 1;
+        s_run();
+        }
+      } else { __VERIFIER_control_false(1144, __func__);
+
+
+      }}
+    } else { __VERIFIER_control_false(1147, __func__);
+
+
+    }}
+  }
+  while_11_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+void start_simulation(void) 
+{ int kernel_st ;
+
+  {
+  kernel_st = 0;
+  { __VERIFIER_reached_control(1162, __func__);
+if ((int )m_run_i == 1) { __VERIFIER_control_true(1162, __func__);
+
+    m_run_st = 0;
+  } else { __VERIFIER_control_false(1164, __func__);
+
+    m_run_st = 2;
+  }}
+  { __VERIFIER_reached_control(1167, __func__);
+if ((int )s_run_i == 1) { __VERIFIER_control_true(1167, __func__);
+
+    s_run_st = 0;
+  } else { __VERIFIER_control_false(1169, __func__);
+
+    s_run_st = 2;
+  }}
+  { __VERIFIER_reached_control(1172, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(1172, __func__);
+
+    { __VERIFIER_reached_control(1173, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(1173, __func__);
+
+      m_run_st = 0;
+    } else { __VERIFIER_control_false(1175, __func__);
+
+      goto _L___3;
+    }}
+  } else { __VERIFIER_control_false(1178, __func__);
+
+    _L___3: /* CIL Label */ 
+    { __VERIFIER_reached_control(1180, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(1180, __func__);
+
+      { __VERIFIER_reached_control(1181, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(1181, __func__);
+
+        m_run_st = 0;
+      } else { __VERIFIER_control_false(1183, __func__);
+
+        goto _L___2;
+      }}
+    } else { __VERIFIER_control_false(1186, __func__);
+
+      _L___2: /* CIL Label */ 
+      { __VERIFIER_reached_control(1188, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(1188, __func__);
+
+        { __VERIFIER_reached_control(1189, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(1189, __func__);
+
+          m_run_st = 0;
+        } else { __VERIFIER_control_false(1191, __func__);
+
+          goto _L___1;
+        }}
+      } else { __VERIFIER_control_false(1194, __func__);
+
+        _L___1: /* CIL Label */ 
+        { __VERIFIER_reached_control(1196, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(1196, __func__);
+
+          { __VERIFIER_reached_control(1197, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(1197, __func__);
+
+            m_run_st = 0;
+          } else { __VERIFIER_control_false(1199, __func__);
+
+            goto _L___0;
+          }}
+        } else { __VERIFIER_control_false(1202, __func__);
+
+          _L___0: /* CIL Label */ 
+          { __VERIFIER_reached_control(1204, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(1204, __func__);
+
+            { __VERIFIER_reached_control(1205, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(1205, __func__);
+
+              m_run_st = 0;
+            } else { __VERIFIER_control_false(1207, __func__);
+
+              goto _L;
+            }}
+          } else { __VERIFIER_control_false(1210, __func__);
+
+            _L: /* CIL Label */ 
+            { __VERIFIER_reached_control(1212, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(1212, __func__);
+
+              { __VERIFIER_reached_control(1213, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(1213, __func__);
+
+                m_run_st = 0;
+              } else { __VERIFIER_control_false(1215, __func__);
+
+
+              }}
+            } else { __VERIFIER_control_false(1218, __func__);
+
+
+            }}
+          }}
+        }}
+      }}
+    }}
+  }}
+  { __VERIFIER_reached_control(1226, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(1226, __func__);
+
+    { __VERIFIER_reached_control(1227, __func__);
+if ((int )c_write_req_ev == 1) { __VERIFIER_control_true(1227, __func__);
+
+      s_run_st = 0;
+    } else { __VERIFIER_control_false(1229, __func__);
+
+      goto _L___4;
+    }}
+  } else { __VERIFIER_control_false(1232, __func__);
+
+    _L___4: /* CIL Label */ 
+    { __VERIFIER_reached_control(1234, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_true(1234, __func__);
+
+      { __VERIFIER_reached_control(1235, __func__);
+if ((int )c_read_rsp_ev == 1) { __VERIFIER_control_true(1235, __func__);
+
+        s_run_st = 0;
+      } else { __VERIFIER_control_false(1237, __func__);
+
+
+      }}
+    } else { __VERIFIER_control_false(1240, __func__);
+
+
+    }}
+  }}
+  {
+ myBool pStored12 = myFalse; __VERIFIER_reached_control(1245, __func__);
+ while (1) { __VERIFIER_loop_head(1245, __func__);
+printf("CBMC Instrumentation @ line1245");myBool flag=__VERIFIER_nondet_myBool();static int oa_t;static int oc_empty_req;static int oc_empty_rsp;static int oc_m_ev;static int oc_m_lock;static int oc_read_req_ev;static int oc_read_rsp_ev;static int oc_req_a;static int oc_req_d;static int oc_req_type;static int oc_rsp_d;static int oc_rsp_status;static int oc_rsp_type;static int oc_write_req_ev;static int oc_write_rsp_ev;static int od_t;static int okernel_st;static int om_run_i;static int om_run_pc;static int om_run_st;static int oreq_t_a;static int oreq_t_a___0;static int oreq_t_d;static int oreq_t_d___0;static int oreq_t_type;static int oreq_t_type___0;static int oreq_tt_a;static int oreq_tt_d;static int oreq_tt_type;static int orsp_t_d;static int orsp_t_d___0;static int orsp_t_status;static int orsp_t_status___0;static int orsp_t_type;static int orsp_t_type___0;static int orsp_tt_d;static int orsp_tt_status;static int orsp_tt_type;static int os_memory0;static int os_run_i;static int os_run_pc;static int os_run_st;if(pStored12){__CPROVER_assert(!(oa_t==a_t && oc_empty_req==c_empty_req && oc_empty_rsp==c_empty_rsp && oc_m_ev==c_m_ev && oc_m_lock==c_m_lock && oc_read_req_ev==c_read_req_ev && oc_read_rsp_ev==c_read_rsp_ev && oc_req_a==c_req_a && oc_req_d==c_req_d && oc_req_type==c_req_type && oc_rsp_d==c_rsp_d && oc_rsp_status==c_rsp_status && oc_rsp_type==c_rsp_type && oc_write_req_ev==c_write_req_ev && oc_write_rsp_ev==c_write_rsp_ev && od_t==d_t && okernel_st==kernel_st && om_run_i==m_run_i && om_run_pc==m_run_pc && om_run_st==m_run_st && oreq_t_a==req_t_a && oreq_t_a___0==req_t_a___0 && oreq_t_d==req_t_d && oreq_t_d___0==req_t_d___0 && oreq_t_type==req_t_type && oreq_t_type___0==req_t_type___0 && oreq_tt_a==req_tt_a && oreq_tt_d==req_tt_d && oreq_tt_type==req_tt_type && orsp_t_d==rsp_t_d && orsp_t_d___0==rsp_t_d___0 && orsp_t_status==rsp_t_status && orsp_t_status___0==rsp_t_status___0 && orsp_t_type==rsp_t_type && orsp_t_type___0==rsp_t_type___0 && orsp_tt_d==rsp_tt_d && orsp_tt_status==rsp_tt_status && orsp_tt_type==rsp_tt_type && os_memory0==s_memory0 && os_run_i==s_run_i && os_run_pc==s_run_pc && os_run_st==s_run_st),"recurrent state found");} if(flag){oa_t=a_t;oc_empty_req=c_empty_req;oc_empty_rsp=c_empty_rsp;oc_m_ev=c_m_ev;oc_m_lock=c_m_lock;oc_read_req_ev=c_read_req_ev;oc_read_rsp_ev=c_read_rsp_ev;oc_req_a=c_req_a;oc_req_d=c_req_d;oc_req_type=c_req_type;oc_rsp_d=c_rsp_d;oc_rsp_status=c_rsp_status;oc_rsp_type=c_rsp_type;oc_write_req_ev=c_write_req_ev;oc_write_rsp_ev=c_write_rsp_ev;od_t=d_t;okernel_st=kernel_st;om_run_i=m_run_i;om_run_pc=m_run_pc;om_run_st=m_run_st;oreq_t_a=req_t_a;oreq_t_a___0=req_t_a___0;oreq_t_d=req_t_d;oreq_t_d___0=req_t_d___0;oreq_t_type=req_t_type;oreq_t_type___0=req_t_type___0;oreq_tt_a=req_tt_a;oreq_tt_d=req_tt_d;oreq_tt_type=req_tt_type;orsp_t_d=rsp_t_d;orsp_t_d___0=rsp_t_d___0;orsp_t_status=rsp_t_status;orsp_t_status___0=rsp_t_status___0;orsp_t_type=rsp_t_type;orsp_t_type___0=rsp_t_type___0;orsp_tt_d=rsp_tt_d;orsp_tt_status=rsp_tt_status;orsp_tt_type=rsp_tt_type;os_memory0=s_memory0;os_run_i=s_run_i;os_run_pc=s_run_pc;os_run_st=s_run_st;pStored12=myTrue;} 
+    while_12_continue: /* CIL Label */ ;
+    {
+    kernel_st = 1;
+    eval();
+    }
+    kernel_st = 2;
+    kernel_st = 3;
+    { __VERIFIER_reached_control(1253, __func__);
+if ((int )m_run_pc == 1) { __VERIFIER_control_true(1253, __func__);
+
+      { __VERIFIER_reached_control(1254, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(1254, __func__);
+
+        m_run_st = 0;
+      } else { __VERIFIER_control_false(1256, __func__);
+
+        goto _L___9;
+      }}
+    } else { __VERIFIER_control_false(1259, __func__);
+
+      _L___9: /* CIL Label */ 
+      { __VERIFIER_reached_control(1261, __func__);
+if ((int )m_run_pc == 2) { __VERIFIER_control_true(1261, __func__);
+
+        { __VERIFIER_reached_control(1262, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(1262, __func__);
+
+          m_run_st = 0;
+        } else { __VERIFIER_control_false(1264, __func__);
+
+          goto _L___8;
+        }}
+      } else { __VERIFIER_control_false(1267, __func__);
+
+        _L___8: /* CIL Label */ 
+        { __VERIFIER_reached_control(1269, __func__);
+if ((int )m_run_pc == 3) { __VERIFIER_control_true(1269, __func__);
+
+          { __VERIFIER_reached_control(1270, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(1270, __func__);
+
+            m_run_st = 0;
+          } else { __VERIFIER_control_false(1272, __func__);
+
+            goto _L___7;
+          }}
+        } else { __VERIFIER_control_false(1275, __func__);
+
+          _L___7: /* CIL Label */ 
+          { __VERIFIER_reached_control(1277, __func__);
+if ((int )m_run_pc == 4) { __VERIFIER_control_true(1277, __func__);
+
+            { __VERIFIER_reached_control(1278, __func__);
+if ((int )c_m_ev == 1) { __VERIFIER_control_true(1278, __func__);
+
+              m_run_st = 0;
+            } else { __VERIFIER_control_false(1280, __func__);
+
+              goto _L___6;
+            }}
+          } else { __VERIFIER_control_false(1283, __func__);
+
+            _L___6: /* CIL Label */ 
+            { __VERIFIER_reached_control(1285, __func__);
+if ((int )m_run_pc == 5) { __VERIFIER_control_true(1285, __func__);
+
+              { __VERIFIER_reached_control(1286, __func__);
+if ((int )c_read_req_ev == 1) { __VERIFIER_control_true(1286, __func__);
+
+                m_run_st = 0;
+              } else { __VERIFIER_control_false(1288, __func__);
+
+                goto _L___5;
+              }}
+            } else { __VERIFIER_control_false(1291, __func__);
+
+              _L___5: /* CIL Label */ 
+              { __VERIFIER_reached_control(1293, __func__);
+if ((int )m_run_pc == 6) { __VERIFIER_control_true(1293, __func__);
+
+                { __VERIFIER_reached_control(1294, __func__);
+if ((int )c_write_rsp_ev == 1) { __VERIFIER_control_true(1294, __func__);
+
+                  m_run_st = 0;
+                } else { __VERIFIER_control_false(1296, __func__);
+
+
+                }}
+              } else { __VERIFIER_control_false(1299, __func__);
+
+
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    { __VERIFIER_reached_control(1307, __func__);
+if ((int )s_run_pc == 2) { __VERIFIER_control_true(1307, __func__);
+
+      { __VERIFIER_reached_control(1308, __func__);
+if ((int )c_write_req_ev == 1) { __VERIFIER_control_true(1308, __func__);
+
+        s_run_st = 0;
+      } else { __VERIFIER_control_false(1310, __func__);
+
+        goto _L___10;
+      }}
+    } else { __VERIFIER_control_false(1313, __func__);
+
+      _L___10: /* CIL Label */ 
+      { __VERIFIER_reached_control(1315, __func__);
+if ((int )s_run_pc == 1) { __VERIFIER_control_
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+true(1315, __func__);
+
+        { __VERIFIER_reached_control(1316, __func__);
+if ((int )c_read_rsp_ev == 1) { __VERIFIER_control_true(1316, __func__);
+
+          s_run_st = 0;
+        } else { __VERIFIER_control_false(1318, __func__);
+
+
+        }}
+      } else { __VERIFIER_control_false(1321, __func__);
+
+
+      }}
+    }}
+    { __VERIFIER_reached_control(1325, __func__);
+if ((int )m_run_st == 0) { __VERIFIER_control_true(1325, __func__);
+
+
+    } else { __VERIFIER_control_false(1327, __func__);
+
+      { __VERIFIER_reached_control(1328, __func__);
+if ((int )s_run_st == 0) { __VERIFIER_control_true(1328, __func__);
+
+
+      } else { __VERIFIER_control_false(1330, __func__);
+
+        goto while_12_break;
+      }}
+    }}
+  }
+  while_12_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+int main(void) 
+{ int __retres1 ;
+
+  {
+  {
+ c_m_lock  =    0;
+ c_m_ev  =    2;
+
+  m_run_i = 1;
+  m_run_pc = 0;
+  s_run_i = 1;
+  s_run_pc = 0;
+  c_empty_req = 1;
+  c_empty_rsp = 1;
+  c_read_req_ev = 2;
+  c_write_req_ev = 2;
+  c_read_rsp_ev = 2;
+  c_write_rsp_ev = 2;
+  c_m_lock = 0;
+  c_m_ev = 2;
+  start_simulation();
+  }
+  __retres1 = 0;
+  return (__retres1);
+}
+}
+
+End Main 
+ mem_slave_tlm.1_true-unreach-call_false-termination.cil_braced_instrumented.c
+NTFILE is mem_slave_tlm.1_true-unreach-call_false-termination.cil_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = mem_slave_tlm.1_true-unreach-call_false-termination.cil.c
+b'4667155585f57897f599de75134aa519f0d36bbb66ce64c9d2a621f67f9be9a2  mem_slave_tlm.1_true-unreach-call_false-termination.cil.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/mem_slave_tlm.1_true-unreach-call_false-termination.cil/mem_slave_tlm.1_true-unreach-call_false-termination.cil.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+start_simulation 1162 reachedControl
+start_simulation 1162 trueBranch
+start_simulation 1167 reachedControl
+start_simulation 1167 trueBranch
+start_simulation 1172 reachedControl
+start_simulation 1178 falseBranch
+start_simulation 1180 reachedControl
+start_simulation 1186 falseBranch
+start_simulation 1188 reachedControl
+start_simulation 1194 falseBranch
+start_simulation 1196 reachedControl
+start_simulation 1202 falseBranch
+start_simulation 1204 reachedControl
+start_simulation 1210 falseBranch
+start_simulation 1212 reachedControl
+start_simulation 1218 falseBranch
+start_simulation 1226 reachedControl
+start_simulation 1232 falseBranch
+start_simulation 1234 reachedControl
+start_simulation 1240 falseBranch
+start_simulation 1245 reachedControl
+start_simulation 1245 loopHead
+enteringLasso
+eval 1109 reachedControl
+eval 1109 loopHead
+eval 1111 reachedControl
+eval 1111 trueBranch
+eval 1120 reachedControl
+eval 1120 trueBranch
+eval 1124 reachedControl
+eval 1129 falseBranch
+eval 1135 reachedControl
+eval 1135 trueBranch
+eval 1139 reachedControl
+eval 1144 falseBranch
+eval 1109 loopHead
+Trace file line inside enterred lasso check : eval 1109 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/mem_slave_tlm.1_true-unreach-call_false-termination.cil/mem_slave_tlm.1_true-unreach-call_false-termination.cil.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for mem_slave_tlm.1_true-unreach-call_false-termination.cil.c
+FILE=mem_slave_tlm.1_true-unreach-call_false-termination.cil_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 6297 milliseconds

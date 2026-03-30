@@ -1,0 +1,883 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.hDODIJ
+
+Input File is : pc_sfifo_1_false-unreach-call_false-termination.cil.c
+
+ CBMC instrumentation
+
+Rewriter Init
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+extern int __VERIFIER_nondet_int();
+
+void error(void) 
+{ 
+
+  {
+  ERROR: __VERIFIER_error();
+  return;
+}
+}
+
+int q_buf_0  ;
+int q_free  ;
+int q_read_ev  ;
+int q_write_ev  ;
+int p_num_write  ;
+int p_last_write  ;
+int p_dw_st  ;
+int p_dw_pc  ;
+int p_dw_i  ;
+int c_num_read  ;
+int c_last_read  ;
+int c_dr_st  ;
+int c_dr_pc  ;
+int c_dr_i  ;
+int is_do_write_p_triggered(void) 
+{ int __retres1 ;
+
+  {
+  {if ((int )p_dw_pc == 1) {
+    {if ((int )q_read_ev == 1) {
+      __retres1 = 1;
+      goto return_label;
+    } else {
+
+    }}
+  } else {
+
+  }}
+  __retres1 = 0;
+  return_label: /* CIL Label */ 
+  return (__retres1);
+}
+}
+int is_do_read_c_triggered(void) 
+{ int __retres1 ;
+
+  {
+  {if ((int )c_dr_pc == 1) {
+    {if ((int )q_write_ev == 1) {
+      __retres1 = 1;
+      goto return_label;
+    } else {
+
+    }}
+  } else {
+
+  }}
+  __retres1 = 0;
+  return_label: /* CIL Label */ 
+  return (__retres1);
+}
+}
+void immediate_notify_threads(void) 
+{ int tmp ;
+  int tmp___0 ;
+
+  {
+  {
+  tmp = is_do_write_p_triggered();
+  }
+  {if (tmp) {
+    p_dw_st = 0;
+  } else {
+
+  }}
+  {
+  tmp___0 = is_do_read_c_triggered();
+  }
+  {if (tmp___0) {
+    c_dr_st = 0;
+  } else {
+
+  }}
+
+  return;
+}
+}
+void do_write_p(void) 
+{ 
+
+
+  {
+  {if ((int )p_dw_pc == 0) {
+    goto DW_ENTRY;
+  } else {
+    {if ((int )p_dw_pc == 1) {
+      goto DW_WAIT_READ;
+    } else {
+
+    }}
+  }}
+  DW_ENTRY: 
+  {
+  while (1) {
+    while_0_continue: /* CIL Label */ ;
+    {if ((int )q_free == 0) {
+      p_dw_st = 2;
+      p_dw_pc = 1;
+
+      goto return_label;
+      DW_WAIT_READ: ;
+    } else {
+
+    }}
+    {
+    q_buf_0 = __VERIFIER_nondet_int();
+    p_last_write = q_buf_0;
+    p_num_write += 1;
+    q_free = 0;
+    q_write_ev = 1;
+    immediate_notify_threads();
+    q_write_ev = 2;
+    }
+  }
+  while_0_break: /* CIL Label */ ;
+  }
+  return_label: /* CIL Label */ 
+  return;
+}
+}
+static int a_t  ;
+void do_read_c(void) 
+{ int a ;
+
+  {
+  {if ((int )c_dr_pc == 0) {
+    goto DR_ENTRY;
+  } else {
+    {if ((int )c_dr_pc == 1) {
+      goto DR_WAIT_WRITE;
+    } else {
+
+    }}
+  }}
+  DR_ENTRY: 
+  {
+  while (1) {
+    while_1_continue: /* CIL Label */ ;
+    {if ((int )q_free == 1) {
+      c_dr_st = 2;
+      c_dr_pc = 1;
+      a_t = a;
+
+      goto return_label;
+      DR_WAIT_WRITE: 
+      a = a_t;
+    } else {
+
+    }}
+    {
+    a = q_buf_0;
+    c_last_read = a;
+    c_num_read += 1;
+    q_free = 1;
+    q_read_ev = 1;
+    immediate_notify_threads();
+    q_read_ev = 2;
+    }
+    {if (p_last_write == c_last_read) {
+      {if (p_num_write == c_num_read) {
+
+      } else {
+        {
+        error();
+        }
+      }}
+    } else {
+      {
+      error();
+      }
+    }}
+  }
+  while_1_break: /* CIL Label */ ;
+  }
+  return_label: /* CIL Label */ 
+  return;
+}
+}
+void init_threads(void) 
+{ 
+
+  {
+  {if ((int )p_dw_i == 1) {
+    p_dw_st = 0;
+  } else {
+    p_dw_st = 2;
+  }}
+  {if ((int )c_dr_i == 1) {
+    c_dr_st = 0;
+  } else {
+    c_dr_st = 2;
+  }}
+
+  return;
+}
+}
+int exists_runnable_thread(void) 
+{ int __retres1 ;
+
+  {
+  {if ((int )p_dw_st == 0) {
+    __retres1 = 1;
+    goto return_label;
+  } else {
+    {if ((int )c_dr_st == 0) {
+      __retres1 = 1;
+      goto return_label;
+    } else {
+
+    }}
+  }}
+  __retres1 = 0;
+  return_label: /* CIL Label */ 
+  return (__retres1);
+}
+}
+void eval(void) 
+{ int tmp ;
+  int tmp___0 ;
+  int tmp___1 ;
+
+  {
+  {
+  while (1) {
+    while_2_continue: /* CIL Label */ ;
+    {
+    tmp___1 = exists_runnable_thread();
+    }
+    {if (tmp___1) {
+
+    } else {
+      goto while_2_break;
+    }}
+    {if ((int )p_dw_st == 0) {
+      {
+	tmp = __VERIFIER_nondet_int();
+      }
+      {if (tmp) {
+        {
+        p_dw_st = 1;
+        do_write_p();
+        }
+      } else {
+        error();
+      }}
+    } else {
+
+    }}
+    {if ((int )c_dr_st == 0) {
+      {
+	tmp___0 = __VERIFIER_nondet_int();
+      }
+      {if (tmp___0) {
+        {
+        c_dr_st = 1;
+        do_read_c();
+        }
+      } else {
+
+      }}
+    } else {
+
+    }}
+  }
+  while_2_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+int stop_simulation(void) 
+{ int tmp ;
+  int __retres2 ;
+
+  {
+  {
+  tm
+Rewrite Buffer is not NULL
+
+Finished Rewriting  p = exists_runnable_thread();
+  }
+  {if (tmp) {
+    __retres2 = 0;
+    goto return_label;
+  } else {
+
+  }}
+  __retres2 = 1;
+  return_label: /* CIL Label */ 
+  return (__retres2);
+}
+}
+void start_simulation(void) 
+{ int kernel_st ;
+  int tmp ;
+
+  {
+  {
+  kernel_st = 0;
+  init_threads();
+  }
+  {
+  while (1) {
+    while_3_continue: /* CIL Label */ ;
+    {
+    kernel_st = 1;
+    eval();
+    tmp = stop_simulation();
+    }
+    {if (tmp) {
+      goto while_3_break;
+    } else {
+
+    }}
+  }
+  while_3_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+void init_model(void) 
+{ 
+
+  {
+  q_free = 1;
+  q_write_ev = 2;
+  q_read_ev = q_write_ev;
+  p_num_write = 0;
+  p_dw_pc = 0;
+  p_dw_i = 1;
+  c_num_read = 0;
+  c_dr_pc = 0;
+  c_dr_i = 1;
+
+  return;
+}
+}
+int main(void) 
+{ int __retres1 ;
+
+  {
+  {
+  init_model();
+  start_simulation();
+  }
+  __retres1 = 0;
+  return (__retres1);
+}
+}
+
+End Main   
+
+Input File is : pc_sfifo_1_false-unreach-call_false-termination.cil_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+extern int __VERIFIER_nondet_int();
+
+void error(void) 
+{ 
+
+  {
+  ERROR: __VERIFIER_error();
+  return;
+}
+}
+
+int q_buf_0  ;
+int q_free  ;
+int q_read_ev  ;
+int q_write_ev  ;
+int p_num_write  ;
+int p_last_write  ;
+int p_dw_st  ;
+int p_dw_pc  ;
+int p_dw_i  ;
+int c_num_read  ;
+int c_last_read  ;
+int c_dr_st  ;
+int c_dr_pc  ;
+int c_dr_i  ;
+int is_do_write_p_triggered(void) 
+{ int __retres1 ;
+
+  {
+  { __VERIFIER_reached_control(32, __func__);
+if ((int )p_dw_pc == 1) { __VERIFIER_control_true(32, __func__);
+
+    { __VERIFIER_reached_control(33, __func__);
+if ((int )q_read_ev == 1) { __VERIFIER_control_true(33, __func__);
+
+      __retres1 = 1;
+      goto return_label;
+    } else { __VERIFIER_control_false(36, __func__);
+
+
+    }}
+  } else { __VERIFIER_control_false(39, __func__);
+
+
+  }}
+  __retres1 = 0;
+  return_label: /* CIL Label */ 
+  return (__retres1);
+}
+}
+int is_do_read_c_triggered(void) 
+{ int __retres1 ;
+
+  {
+  { __VERIFIER_reached_control(51, __func__);
+if ((int )c_dr_pc == 1) { __VERIFIER_control_true(51, __func__);
+
+    { __VERIFIER_reached_control(52, __func__);
+if ((int )q_write_ev == 1) { __VERIFIER_control_true(52, __func__);
+
+      __retres1 = 1;
+      goto return_label;
+    } else { __VERIFIER_control_false(55, __func__);
+
+
+    }}
+  } else { __VERIFIER_control_false(58, __func__);
+
+
+  }}
+  __retres1 = 0;
+  return_label: /* CIL Label */ 
+  return (__retres1);
+}
+}
+void immediate_notify_threads(void) 
+{ int tmp ;
+  int tmp___0 ;
+
+  {
+  {
+  tmp = is_do_write_p_triggered();
+  }
+  { __VERIFIER_reached_control(74, __func__);
+if (tmp) { __VERIFIER_control_true(74, __func__);
+
+    p_dw_st = 0;
+  } else { __VERIFIER_control_false(76, __func__);
+
+
+  }}
+  {
+  tmp___0 = is_do_read_c_triggered();
+  }
+  { __VERIFIER_reached_control(82, __func__);
+if (tmp___0) { __VERIFIER_control_true(82, __func__);
+
+    c_dr_st = 0;
+  } else { __VERIFIER_control_false(84, __func__);
+
+
+  }}
+
+  return;
+}
+}
+void do_write_p(void) 
+{ 
+
+
+  {
+  { __VERIFIER_reached_control(96, __func__);
+if ((int )p_dw_pc == 0) { __VERIFIER_control_true(96, __func__);
+
+    goto DW_ENTRY;
+  } else { __VERIFIER_control_false(98, __func__);
+
+    { __VERIFIER_reached_control(99, __func__);
+if ((int )p_dw_pc == 1) { __VERIFIER_control_true(99, __func__);
+
+      goto DW_WAIT_READ;
+    } else { __VERIFIER_control_false(101, __func__);
+
+
+    }}
+  }}
+  DW_ENTRY: 
+  {
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(107, __func__);
+ while (1) { __VERIFIER_loop_head(107, __func__);
+printf("CBMC Instrumentation @ line107");myBool flag=__VERIFIER_nondet_myBool();static int oc_dr_i;static int oc_dr_pc;static int oc_dr_st;static int oc_last_read;static int oc_num_read;static int op_dw_i;static int op_dw_pc;static int op_dw_st;static int op_last_write;static int op_num_write;static int oq_buf_0;static int oq_free;static int oq_read_ev;static int oq_write_ev;if(pStored0){__CPROVER_assert(!(oc_dr_i==c_dr_i && oc_dr_pc==c_dr_pc && oc_dr_st==c_dr_st && oc_last_read==c_last_read && oc_num_read==c_num_read && op_dw_i==p_dw_i && op_dw_pc==p_dw_pc && op_dw_st==p_dw_st && op_last_write==p_last_write && op_num_write==p_num_write && oq_buf_0==q_buf_0 && oq_free==q_free && oq_read_ev==q_read_ev && oq_write_ev==q_write_ev),"recurrent state found");} if(flag){oc_dr_i=c_dr_i;oc_dr_pc=c_dr_pc;oc_dr_st=c_dr_st;oc_last_read=c_last_read;oc_num_read=c_num_read;op_dw_i=p_dw_i;op_dw_pc=p_dw_pc;op_dw_st=p_dw_st;op_last_write=p_last_write;op_num_write=p_num_write;oq_buf_0=q_buf_0;oq_free=q_free;oq_read_ev=q_read_ev;oq_write_ev=q_write_ev;pStored0=myTrue;} 
+    while_0_continue: /* CIL Label */ ;
+    { __VERIFIER_reached_control(109, __func__);
+if ((int )q_free == 0) { __VERIFIER_control_true(109, __func__);
+
+      p_dw_st = 2;
+      p_dw_pc = 1;
+
+      goto return_label;
+      DW_WAIT_READ: ;
+    } else { __VERIFIER_control_false(115, __func__);
+
+
+    }}
+    {
+    q_buf_0 = __VERIFIER_nondet_int();
+    p_last_write = q_buf_0;
+    p_num_write += 1;
+    q_free = 0;
+    q_write_ev = 1;
+    immediate_notify_threads();
+    q_write_ev = 2;
+    }
+  }
+  while_0_break: /* CIL Label */ ;
+  }
+  return_label: /* CIL Label */ 
+  return;
+}
+}
+static int a_t  ;
+void do_read_c(void) 
+{ int a ;
+
+  {
+  { __VERIFIER_reached_control(139, __func__);
+if ((int )c_dr_pc == 0) { __VERIFIER_control_true(139, __func__);
+
+    goto DR_ENTRY;
+  } else { __VERIFIER_control_false(141, __func__);
+
+    { __VERIFIER_reached_control(142, __func__);
+if ((int )c_dr_pc == 1) { __VERIFIER_control_true(142, __func__);
+
+      goto DR_WAIT_WRITE;
+    } else { __VERIFIER_control_false(144, __func__);
+
+
+    }}
+  }}
+  DR_ENTRY: 
+  {
+ myBool pStored1 = myFalse; __VERIFIER_reached_control(150, __func__);
+ while (1) { __VERIFIER_loop_head(150, __func__);
+printf("CBMC Instrumentation @ line150");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int oa_t;static int oc_dr_i;static int oc_dr_pc;static int oc_dr_st;static int oc_last_read;static int oc_num_read;static int op_dw_i;static int op_dw_pc;static int op_dw_st;static int op_last_write;static int op_num_write;static int oq_buf_0;static int oq_free;static int oq_read_ev;static int oq_write_ev;if(pStored1){__CPROVER_assert(!(oa==a && oa_t==a_t && oc_dr_i==c_dr_i && oc_dr_pc==c_dr_pc && oc_dr_st==c_dr_st && oc_last_read==c_last_read && oc_num_read==c_num_read && op_dw_i==p_dw_i && op_dw_pc==p_dw_pc && op_dw_st==p_dw_st && op_last_write==p_last_write && op_num_write==p_num_write && oq_buf_0==q_buf_0 && oq_free==q_free && oq_read_ev==q_read_ev && oq_write_ev==q_write_ev),"recurrent state found");} if(flag){oa=a;oa_t=a_t;oc_dr_i=c_dr_i;oc_dr_pc=c_dr_pc;oc_dr_st=c_dr_st;oc_last_read=c_last_read;oc_num_read=c_num_read;op_dw_i=p_dw_i;op_dw_pc=p_dw_pc;op_dw_st=p_dw_st;op_last_write=p_last_write;op_num_write=p_num_write;oq_buf_0=q_buf_0;oq_free=q_free;oq_read_ev=q_read_ev;oq_write_ev=q_write_ev;pStored1=myTrue;} 
+    while_1_continue: /* CIL Label */ ;
+    { __VERIFIER_reached_control(152, __func__);
+if ((int )q_free == 1) { __VERIFIER_control_true(152, __func__);
+
+      c_dr_st = 2;
+      c_dr_pc = 1;
+      a_t = a;
+
+      goto return_label;
+      DR_WAIT_WRITE: 
+      a = a_t;
+    } else { __VERIFIER_control_false(160, __func__);
+
+
+    }}
+    {
+    a = q_buf_0;
+    c_last_read = a;
+    c_num_read += 1;
+    q_free = 1;
+    q_read_ev = 1;
+    immediate_notify_threads();
+    q_read_ev = 2;
+    }
+    { __VERIFIER_reached_control(172, __func__);
+if (p_last_write == c_last_read) { __VERIFIER_control_true(172, __func__);
+
+      { __VERIFIER_reached_control(173, __func__);
+if (p_num_write == c_num_read) { __VERIFIER_control_true(173, __func__);
+
+
+      } else { __VERIFIER_control_false(175, __func__);
+
+        {
+        error();
+        }
+      }}
+    } else { __VERIFIER_control_false(180, __func__);
+
+      {
+      error();
+      }
+    }}
+  }
+  while_1_break: /* CIL Label */ ;
+  }
+  return_label: /* CIL Label */ 
+  return;
+}
+}
+void init_threads(void) 
+{ 
+
+  {
+  { __VERIFIER_reached_control(196, __func__);
+if ((int )p_dw_i == 1) { __VERIFIER_control_true(196, __func__);
+
+    p_dw_st = 0;
+  } else { __VERIFIER_control_false(198, __func__);
+
+    p_dw_st = 2;
+  }}
+  { __VERIFIER_reached_control(201, __func__);
+if ((int )c_dr_i == 1) { __VERIFIER_control_true(201, __func__);
+
+    c_dr_st = 0;
+  } else { __VERIFIER_control_false(203, __func__);
+
+    c_dr_st = 2;
+  }}
+
+  return;
+}
+}
+int exists_runnable_thread(void) 
+{ int __retres1 ;
+
+  {
+  { __VERIFIER_reached_control(214, __func__);
+if ((int )p_dw_st == 0) { __VERIFIER_control_true(214, __func__);
+
+    __retres1 = 1;
+    goto return_label;
+  } else { __VERIFIER_control_false(217, __func__);
+
+    { __VERIFIER_reached_control(218, __func__);
+if ((int )c_dr_st == 0) { __VERIFIER_control_true(218, __func__);
+
+      __retres1 = 1;
+      goto return_label;
+    } else { __VERIFIER_control_false(221, __func__);
+
+
+    }}
+  }}
+  __retres1 = 0;
+  return_label: /* CIL Label */ 
+  return (__retres1);
+}
+}
+void eval(void) 
+{ int tmp ;
+  int tmp___0 ;
+  int tmp___1 ;
+
+  {
+  {
+ myBool pStored2 = myFalse; __VERIFIER_reached_control(237, __func__);
+ while (1) { __VERIFIER_loop_head(237, __func__);
+printf("CBMC Instrumentation @ line237");myBool flag=__VERIFIER_nondet_myBool();static int oa_t;static int oc_dr_i;static int oc_dr_pc;static int oc_dr_st;static int oc_last_read;static int oc_num_read;static int op_dw_i;static int op_dw_pc;static int op_dw_st;static int op_last_write;static int op_num_write;static int oq_buf_0;static int oq_free;static int oq_read_ev;static int oq_write_ev;static int otmp;static int otmp___0;static int otmp___1;if(pStored2){__CPROVER_assert(!(oa_t==a_t && oc_dr_i==c_dr_i && oc_dr_pc==c_dr_pc && oc_dr_st==c_dr_st && oc_last_read==c_last_read && oc_num_read==c_num_read && op_dw_i==p_dw_i && op_dw_pc==p_dw_pc && op_dw_st==p_dw_st && op_last_write==p_last_write && op_num_write==p_num_write && oq_buf_0==q_buf_0 && oq_free==q_free && oq_read_ev==q_read_ev && oq_write_ev==q_write_ev && otmp==tmp && otmp___0==tmp___0 && otmp___1==tmp___1),"recurrent state found");} if(flag){oa_t=a_t;oc_dr_i=c_dr_i;oc_dr_pc=c_dr_pc;oc_dr_st=c_dr_st;oc_last_read=c_last_read;oc_num_read=c_num_read;op_dw_i=p_dw_i;op_dw_pc=p_dw_pc;op_dw_st=p_dw_st;op_last_write=p_last_write;op_num_write=p_num_write;oq_buf_0=q_buf_0;oq_free=q_free;oq_read_ev=q_read_ev;oq_write_ev=q_write_ev;otmp=tmp;otmp___0=tmp___0;otmp___1=tmp___1;pStored2=myTrue;} 
+    while_2_continue: /* CIL Label */ ;
+    {
+    tmp___1 = exists_runnable_thread();
+    }
+    { __VERIFIER_reached_control(242, __func__);
+if (tmp___1) { __VERIFIER_control_true(242, __func__);
+
+
+    } else { __VERIFIER_control_false(244, __func__);
+
+      goto while_2_break;
+    }}
+    { __VERIFIER_reached_control(247, __func__);
+if ((int )p_dw_st == 0) { __VERIFIER_control_true(247, __func__);
+
+      {
+	tmp = __VERIFIER_nondet_int();
+      }
+      { __VERIFIER_reached_control(251, __func__);
+if (tmp) { __VERIFIER_control_true(251, __func__);
+
+        {
+        p_dw_st = 1;
+        do_write_p();
+        }
+      } else { __VERIFIER_control_false(256, __func__);
+
+        error();
+      }}
+    } else { __VERIFIER_control_false(259, __func__);
+
+
+    }}
+    { __VERIFIER_reached_control(262, __func__);
+if ((int )c_dr_st == 0) { __VERIFIER_control_true(262, __func__);
+
+      {
+	tmp___0 = __VERIFIER_nondet_int();
+      }
+      { __VERIFIER_reached_control(266, __func__);
+if (tmp___0) { __VERIFIER_control_true(266, __func__);
+
+        {
+        c_dr_st = 1;
+        do_read_c();
+        }
+      } else { __VERIFIER_control_false(271, __func__);
+
+
+      }}
+    } else { __VERIFIER_control_false(274, __func__);
+
+
+    }}
+  }
+  while_2_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+int stop_simulation(void) 
+{ int tmp ;
+  int __retres2 ;
+
+  {
+  {
+  tmp = exists_runnable_thread();
+  }
+  { __VERIFIER_reached_control(292, __func__);
+if (tmp) { __VERIFIER_control_true(292, __func__);
+
+    __retres2 = 0;
+    goto return_label;
+  } else { __VERIFIER_control_false(295, __func__);
+
+
+  }}
+  __retres2 = 1;
+  return_label: /* CIL Label */ 
+  return (__retres2);
+}
+}
+void start_simulation(void) 
+{ int kernel_st ;
+  int tmp ;
+
+  {
+  {
+  kernel_st = 0;
+  init_threads();
+  }
+  {
+ myBool pStored3 = myFalse; __VERIFIER_reached_control(313, __func__);
+ while (1) { __VERIFIER_loop_head(313, __func__);
+printf("CBMC Instrumentation @ line313");myBool flag=__VERIFIER_nondet_myBool();static int oa_t;static int oc_dr_i;static int oc_dr_pc;static int oc_dr_st;static int oc_last_read;static int oc_num_read;static int okernel_st;static int op_dw_i;static int op_dw_pc;static int op_dw_st;static int op_last_write;static int op_num_write;static int oq_buf_0;static int oq_free;static int oq_read_ev;static int oq_write_ev;static int otmp;if(pStored3){__CPROVER_assert(!(oa_t==a_t && oc_dr_i==c_dr_i && oc_dr_pc==c_dr_pc && oc_dr_st==c_dr_st && oc_last_read==c_last_read && oc_num_read==c_num_read && okernel_st==kernel_st && op_dw_i==p_dw_i && op_dw_pc==p_dw_pc && op_dw_st==
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+p_dw_st && op_last_write==p_last_write && op_num_write==p_num_write && oq_buf_0==q_buf_0 && oq_free==q_free && oq_read_ev==q_read_ev && oq_write_ev==q_write_ev && otmp==tmp),"recurrent state found");} if(flag){oa_t=a_t;oc_dr_i=c_dr_i;oc_dr_pc=c_dr_pc;oc_dr_st=c_dr_st;oc_last_read=c_last_read;oc_num_read=c_num_read;okernel_st=kernel_st;op_dw_i=p_dw_i;op_dw_pc=p_dw_pc;op_dw_st=p_dw_st;op_last_write=p_last_write;op_num_write=p_num_write;oq_buf_0=q_buf_0;oq_free=q_free;oq_read_ev=q_read_ev;oq_write_ev=q_write_ev;otmp=tmp;pStored3=myTrue;} 
+    while_3_continue: /* CIL Label */ ;
+    {
+    kernel_st = 1;
+    eval();
+    tmp = stop_simulation();
+    }
+    { __VERIFIER_reached_control(320, __func__);
+if (tmp) { __VERIFIER_control_true(320, __func__);
+
+      goto while_3_break;
+    } else { __VERIFIER_control_false(322, __func__);
+
+
+    }}
+  }
+  while_3_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+void init_model(void) 
+{ 
+
+  {
+  q_free = 1;
+  q_write_ev = 2;
+  q_read_ev = q_write_ev;
+  p_num_write = 0;
+  p_dw_pc = 0;
+  p_dw_i = 1;
+  c_num_read = 0;
+  c_dr_pc = 0;
+  c_dr_i = 1;
+
+  return;
+}
+}
+int main(void) 
+{ int __retres1 ;
+
+  {
+  {
+  init_model();
+  start_simulation();
+  }
+  __retres1 = 0;
+  return (__retres1);
+}
+}
+
+End Main 
+ pc_sfifo_1_false-unreach-call_false-termination.cil_braced_instrumented.c
+NTFILE is pc_sfifo_1_false-unreach-call_false-termination.cil_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = pc_sfifo_1_false-unreach-call_false-termination.cil.c
+b'abc4e320f27658e15ba094ce1403d725b8cec2e1ed10c4e938abb2712f72059a  pc_sfifo_1_false-unreach-call_false-termination.cil.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/pc_sfifo_1_false-unreach-call_false-termination.cil/pc_sfifo_1_false-unreach-call_false-termination.cil.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+init_threads 196 reachedControl
+init_threads 196 trueBranch
+init_threads 201 reachedControl
+init_threads 201 trueBranch
+start_simulation 313 reachedControl
+start_simulation 313 loopHead
+enteringLasso
+eval 237 reachedControl
+eval 237 loopHead
+exists_runnable_thread 214 reachedControl
+exists_runnable_thread 214 trueBranch
+eval 242 reachedControl
+eval 242 trueBranch
+eval 247 reachedControl
+eval 247 trueBranch
+eval 251 reachedControl
+eval 256 falseBranch
+Trace file line inside enterred lasso check : eval 237 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/pc_sfifo_1_false-unreach-call_false-termination.cil/pc_sfifo_1_false-unreach-call_false-termination.cil.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for pc_sfifo_1_false-unreach-call_false-termination.cil.c
+FILE=pc_sfifo_1_false-unreach-call_false-termination.cil_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2234 milliseconds

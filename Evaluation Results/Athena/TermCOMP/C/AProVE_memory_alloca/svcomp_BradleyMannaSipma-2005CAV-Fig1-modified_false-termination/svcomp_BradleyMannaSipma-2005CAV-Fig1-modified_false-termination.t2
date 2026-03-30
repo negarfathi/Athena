@@ -1,0 +1,119 @@
+///*** 1_main ***///
+START: main_bb8;
+
+
+
+FROM: main_bb8;
+memory0_freeIndex := 1;
+memory1_freeIndex := 1;
+vmemory1 := nondet();
+vmemory0 := nondet();
+v41 := memory1_freeIndex;
+v42 := memory1_freeIndex;
+v43 := v42 + 1;
+memory1_freeIndex := v43;
+v44 := memory0_freeIndex;
+v45 := memory0_freeIndex;
+v46 := v45 + 1;
+memory0_freeIndex := v46;
+v47 := nondet();
+v48 := v41;
+v49 := v48;
+vmemory1 := store_array(vmemory1, v49, v47);
+v50 := nondet();
+v51 := v44;
+v52 := v51;
+vmemory0 := store_array(vmemory0, v52, v50);
+v53 := v41;
+v54 := v53;
+v55 := select_array(vmemory1, v54);
+TO: main_bb8_end;
+
+FROM: main_bb8_end;
+assume(v55 >= 0);
+TO: main_bb9;
+
+FROM: main_bb8_end;
+assume(v55 < 0);
+TO: main_gcd.exit;
+
+FROM: main_bb9;
+v57 := v44;
+v58 := v57;
+v59 := select_array(vmemory0, v58);
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(v59 >= 0);
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(v59 < 0);
+TO: main_gcd.exit;
+
+FROM: main_bb10;
+v61 := v41;
+v62 := v61;
+v63 := v44;
+v64 := v63;
+v65 := v41;
+v66 := v65;
+v67 := v44;
+v68 := v67;
+v69 := v41;
+v70 := v69;
+v71 := v44;
+v72 := v71;
+v73 := v41;
+v74 := v73;
+v75 := v44;
+v76 := v75;
+v77 := v41;
+v78 := v77;
+v79 := v44;
+v80 := v79;
+TO: main_bb11;
+
+FROM: main_bb11;
+v81 := select_array(vmemory1, v62);
+v82 := select_array(vmemory0, v64);
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(v81 != v82);
+TO: main_bb12;
+
+FROM: main_bb11_end;
+assume(v81 == v82);
+TO: main_gcd.exit;
+
+FROM: main_bb12;
+v84 := select_array(vmemory1, v66);
+v85 := select_array(vmemory0, v68);
+TO: main_bb12_end;
+
+FROM: main_bb12_end;
+assume(v84 > v85);
+TO: main_bb13;
+
+FROM: main_bb12_end;
+assume(v84 <= v85);
+TO: main_bb14;
+
+FROM: main_bb13;
+v87 := select_array(vmemory1, v70);
+v88 := select_array(vmemory0, v72);
+v89 := v87 - v88;
+vmemory1 := store_array(vmemory1, v74, v89);
+TO: main_bb11;
+
+FROM: main_bb14;
+v90 := select_array(vmemory0, v76);
+v91 := select_array(vmemory1, v78);
+v92 := v90 - v91;
+vmemory0 := store_array(vmemory0, v80, v92);
+TO: main_bb11;
+
+FROM: main_gcd.exit;
+TO: main_gcd.exit_ret;
+

@@ -1,0 +1,114 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.gDj8hK
+
+Input File is : svcomp_b.09_assume.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+
+int test_fun(int x, int y)
+{
+    int c = 0;
+    {if(x <= 0 || y <= 0) {
+       // replace assume
+       return x + y;
+    }}
+    while (!(x == 0)) {
+        {if (x > y) {
+            x = y;
+        } else {
+	    {if(x <= 0) {
+	       // replace assume
+	       return x;
+	    }}
+            x = x - 1;
+        }}
+        c = c + 1;
+    }
+    return c;
+}
+
+int main() {
+    return test_fun(__VERIFIER_nondet_int(), __VERIFIER_nondet_int());
+}
+
+End Main   
+
+Input File is : svcomp_b.09_assume_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+
+int test_fun(int x, int y)
+{
+    int c = 0;
+    { __VERIFIER_reached_control(6, __func__);
+if(x <= 0 || y <= 0) { __VERIFIER_control_true(6, __func__);
+
+       // replace assume
+       return x + y;
+    }}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(10, __func__);
+ while (!(x == 0)) { __VERIFIER_loop_head(10, __func__);
+printf("CBMC Instrumentation @ line10");myBool flag=__VERIFIER_nondet_myBool();static int oc;static int ox;static int oy;if(pStored0){__CPROVER_assert(!(oc==c && ox==x && oy==y),"recurrent state found");} if(flag){oc=c;ox=x;oy=y;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(11, __func__);
+if (x > y) { __VERIFIER_control_true(11, __func__);
+
+            x = y;
+        } else { __VERIFIER_control_false(13, __func__);
+
+	    { __VERIFIER_reached_control(14, __func__);
+if(x <= 0) { __VERIFIER_control_true(14, __func__);
+
+	       // replace assume
+	       return x;
+	    }}
+            x = x - 1;
+        }}
+        c = c + 1;
+    }
+    return c;
+}
+
+int main() {
+    return test_fun(__VERIFIER_nondet_int(), __VERIFIER_nondet_int());
+}
+
+End Main 
+ svcomp_b.09_assume_braced_instrumented.c
+NTFILE is svcomp_b.09_assume_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_b.09_assume.c
+FILE=svcomp_b.09_assume_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182298 milliseconds

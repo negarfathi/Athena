@@ -1,0 +1,65 @@
+///*** 1_main ***///
+START: main_bb8;
+
+FROM: main_bb8;
+v20 := nondet();
+TO: main_bb8_end;
+
+FROM: main_bb8_end;
+assume(v20 < 1);
+TO: main_search.exit;
+
+FROM: main_bb8_end;
+assume(v20 >= 1);
+TO: main_bb9;
+
+FROM: main_bb9;
+v22 := nondet();
+var__temp_vj.0.i := 0;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume((v22 < 1) || (v22 >= v20));
+TO: main_search.exit;
+
+FROM: main_bb9_end;
+assume((v22 >= 1) && (v22 < v20));
+TO: main_bb10;
+
+FROM: main_bb10;
+vj.0.i := var__temp_vj.0.i;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(vj.0.i < v20);
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(vj.0.i >= v20);
+TO: main_init_list.exit;
+
+FROM: main_bb11;
+v28 := vj.0.i;
+v29 := vtail.0.i;
+v30 := vj.0.i + 1;
+var__temp_vj.0.i := v30;
+TO: main_bb10;
+
+FROM: main_init_list.exit;
+v33 := nondef.2;
+TO: main_init_list.exit_end;
+
+FROM: main_init_list.exit_end;
+assume(v33 != v22);
+TO: main_bb12;
+
+FROM: main_init_list.exit_end;
+assume(v33 == v22);
+TO: main_search.exit;
+
+FROM: main_bb12;
+TO: main_init_list.exit;
+
+FROM: main_search.exit;
+TO: main_search.exit_ret;
+

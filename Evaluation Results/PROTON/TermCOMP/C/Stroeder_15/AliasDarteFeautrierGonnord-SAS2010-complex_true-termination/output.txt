@@ -1,0 +1,127 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.s0kHqB
+
+Input File is : AliasDarteFeautrierGonnord-SAS2010-complex_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program used in the experimental evaluation of the following paper.
+ * 2010SAS - Alias,Darte,Feautrier,Gonnord, Multi-dimensional Rankings, Program Termination, and Complexity Bounds of Flowchart Programs
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int a, b;
+	a = __VERIFIER_nondet_int();
+	b = __VERIFIER_nondet_int();
+	while (a < 30) {
+		while (b < a) {
+			{if (b > 5) {
+				b = b + 7;
+			} else {
+				b = b + 2;
+            }}
+			{if (b >= 10 && b <= 12) {
+				a = a + 10;
+			} else {
+				a = a + 1;
+            }}
+		}
+		a = a + 2;
+		b = b - 10;
+	}
+	return 0;
+}
+
+End Main   
+
+Input File is : AliasDarteFeautrierGonnord-SAS2010-complex_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program used in the experimental evaluation of the following paper.
+ * 2010SAS - Alias,Darte,Feautrier,Gonnord, Multi-dimensional Rankings, Program Termination, and Complexity Bounds of Flowchart Programs
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int a, b;
+	a = __VERIFIER_nondet_int();
+	b = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(16, __func__);
+	while (a < 30) { __VERIFIER_loop_head(16, __func__);
+printf("CBMC Instrumentation @ line16");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;if(pStored0){__CPROVER_assert(!(oa==a && ob==b),"recurrent state found");} if(flag){oa=a;ob=b;pStored0=myTrue;} 
+	myBool pStored1 = myFalse; __VERIFIER_reached_control(17, __func__);
+	while (b < a) { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;if(pStored1){__CPROVER_assert(!(oa==a && ob==b),"recurrent state found");} if(flag){oa=a;ob=b;pStored1=myTrue;} 
+			{ __VERIFIER_reached_control(18, __func__);
+if (b > 5) { __VERIFIER_control_true(18, __func__);
+
+				b = b + 7;
+			} else { __VERIFIER_control_false(20, __func__);
+
+				b = b + 2;
+            }}
+			{ __VERIFIER_reached_control(23, __func__);
+if (b >= 10 && b <= 12) { __VERIFIER_control_true(23, __func__);
+
+				a = a + 10;
+			} else { __VERIFIER_control_false(25, __func__);
+
+				a = a + 1;
+            }}
+		}
+		a = a + 2;
+		b = b - 10;
+	}
+	return 0;
+}
+
+End Main 
+ AliasDarteFeautrierGonnord-SAS2010-complex_true-termination_braced_instrumented.c
+NTFILE is AliasDarteFeautrierGonnord-SAS2010-complex_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for AliasDarteFeautrierGonnord-SAS2010-complex_true-termination.c
+FILE=AliasDarteFeautrierGonnord-SAS2010-complex_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 190631 milliseconds

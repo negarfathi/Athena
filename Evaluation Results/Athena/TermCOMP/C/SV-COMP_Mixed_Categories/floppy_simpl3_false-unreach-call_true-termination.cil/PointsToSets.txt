@@ -1,0 +1,1917 @@
+NODE  27: <27> PSNodeType::ENTRY (points-to size: 0)
+NODE  28:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE  29:   %status = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %status = alloca i32, align 4 + 0
+NODE  30:   %irp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irp = alloca i32, align 4 + 0
+NODE  31:   %pirp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %pirp = alloca i32, align 4 + 0
+NODE  32:   %pirp__IoStatus__Status = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %pirp__IoStatus__Status = alloca i32, align 4 + 0
+NODE  33:   %irp_choice = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irp_choice = alloca i32, align 4 + 0
+NODE  34:   %devobj = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %devobj = alloca i32, align 4 + 0
+NODE  35:   %__cil_tmp8 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp8 = alloca i32, align 4 + 0
+NODE  36:   %tmp_ndt_1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_1 = alloca i32, align 4 + 0
+NODE  37:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  38:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  39:   store i32 %call, i32* %irp, align 4 (points-to size: 0)
+NODE  40:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  41:   store i32 %call1, i32* %irp_choice, align 4 (points-to size: 0)
+NODE  42:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  43:   store i32 %call2, i32* %devobj, align 4 (points-to size: 0)
+NODE  44:   store i32 0, i32* @FloppyThread, align 4 (points-to size: 0)
+NODE  45:   store i32 0, i32* @KernelMode, align 4 (points-to size: 0)
+NODE  46:   store i32 0, i32* @Suspended, align 4 (points-to size: 0)
+NODE  47:   store i32 0, i32* @Executive, align 4 (points-to size: 0)
+NODE  48:   store i32 0, i32* @DiskController, align 4 (points-to size: 0)
+NODE  49:   store i32 0, i32* @FloppyDiskPeripheral, align 4 (points-to size: 0)
+NODE  50:   store i32 0, i32* @FlConfigCallBack, align 4 (points-to size: 0)
+NODE  51:   store i32 0, i32* @MaximumInterfaceType, align 4 (points-to size: 0)
+NODE  52:   store i32 0, i32* @MOUNTDEV_MOUNTED_DEVICE_GUID, align 4 (points-to size: 0)
+NODE  53:   store i32 0, i32* @myStatus, align 4 (points-to size: 0)
+NODE  54:   store i32 0, i32* @s, align 4 (points-to size: 0)
+NODE  55:   store i32 0, i32* @UNLOADED, align 4 (points-to size: 0)
+NODE  56:   store i32 0, i32* @NP, align 4 (points-to size: 0)
+NODE  57:   store i32 0, i32* @DC, align 4 (points-to size: 0)
+NODE  58:   store i32 0, i32* @SKIP1, align 4 (points-to size: 0)
+NODE  59:   store i32 0, i32* @SKIP2, align 4 (points-to size: 0)
+NODE  60:   store i32 0, i32* @MPR1, align 4 (points-to size: 0)
+NODE  61:   store i32 0, i32* @MPR3, align 4 (points-to size: 0)
+NODE  62:   store i32 0, i32* @IPC, align 4 (points-to size: 0)
+NODE  63:   store i32 0, i32* @pended, align 4 (points-to size: 0)
+NODE  64:   store i32 0, i32* @compRegistered, align 4 (points-to size: 0)
+NODE  65:   store i32 0, i32* @lowerDriverReturn, align 4 (points-to size: 0)
+NODE  66:   store i32 0, i32* @setEventCalled, align 4 (points-to size: 0)
+NODE  67:   store i32 0, i32* @customIrp, align 4 (points-to size: 0)
+NODE  68:   store i32 0, i32* %status, align 4 (points-to size: 0)
+NODE  69:   %0 = load i32, i32* %irp, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  70:   store i32 %0, i32* %pirp, align 4 (points-to size: 0)
+NODE  71: <71> PSNodeType::CALL (points-to size: 0)
+NODE  72: <72> PSNodeType::ENTRY (points-to size: 0)
+NODE  73:   store i32 0, i32* @UNLOADED, align 4 (points-to size: 0)
+NODE  74:   store i32 1, i32* @NP, align 4 (points-to size: 0)
+NODE  75:   store i32 2, i32* @DC, align 4 (points-to size: 0)
+NODE  76:   store i32 3, i32* @SKIP1, align 4 (points-to size: 0)
+NODE  77:   store i32 4, i32* @SKIP2, align 4 (points-to size: 0)
+NODE  78:   store i32 5, i32* @MPR1, align 4 (points-to size: 0)
+NODE  79:   store i32 6, i32* @MPR3, align 4 (points-to size: 0)
+NODE  80:   store i32 7, i32* @IPC, align 4 (points-to size: 0)
+NODE  81:   %0 = load i32, i32* @UNLOADED, align 4 (points-to size: 1)
+    -> null + 0
+NODE  82:   store i32 %0, i32* @s, align 4 (points-to size: 0)
+NODE  83:   store i32 0, i32* @pended, align 4 (points-to size: 0)
+NODE  84:   store i32 0, i32* @compRegistered, align 4 (points-to size: 0)
+NODE  85:   store i32 0, i32* @lowerDriverReturn, align 4 (points-to size: 0)
+NODE  86:   store i32 0, i32* @setEventCalled, align 4 (points-to size: 0)
+NODE  87:   store i32 0, i32* @customIrp, align 4 (points-to size: 0)
+NODE  88:   ret void (points-to size: 0)
+NODE  89: _BLAST_init (points-to size: 1)
+    -> _BLAST_init + 0
+NODE  90: main (points-to size: 1)
+    -> main + 0
+NODE  91:   call void @_BLAST_init() (points-to size: 0)
+NODE  92:   %1 = load i32, i32* %status, align 4 (points-to size: 1)
+    -> null + 0
+NODE  93:   %2 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  94:   store i32 %2, i32* @s, align 4 (points-to size: 0)
+NODE  95:   store i32 0, i32* @customIrp, align 4 (points-to size: 0)
+NODE  96:   %3 = load i32, i32* @customIrp, align 4 (points-to size: 1)
+    -> null + 0
+NODE  97:   store i32 %3, i32* @setEventCalled, align 4 (points-to size: 0)
+NODE  98:   %4 = load i32, i32* @setEventCalled, align 4 (points-to size: 1)
+    -> null + 0
+NODE  99:   store i32 %4, i32* @lowerDriverReturn, align 4 (points-to size: 0)
+NODE 100:   %5 = load i32, i32* @lowerDriverReturn, align 4 (points-to size: 1)
+    -> null + 0
+NODE 101:   store i32 %5, i32* @compRegistered, align 4 (points-to size: 0)
+NODE 102:   %6 = load i32, i32* @compRegistered, align 4 (points-to size: 1)
+    -> null + 0
+NODE 103:   store i32 %6, i32* @pended, align 4 (points-to size: 0)
+NODE 104:   store i32 0, i32* %pirp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 105:   store i32 0, i32* @myStatus, align 4 (points-to size: 0)
+NODE 106:   %7 = load i32, i32* %irp_choice, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 107:   %38 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 108:   ret i32 %38 (points-to size: 0)
+NODE 109:   %13 = load i32, i32* @pended, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 110:   store i32 -1073741637, i32* %pirp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 111:   store i32 -1073741637, i32* @myStatus, align 4 (points-to size: 0)
+NODE 112: <112> PSNodeType::CALL (points-to size: 0)
+NODE 113: <113> PSNodeType::ENTRY (points-to size: 0)
+NODE 114:   %0 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 115:   store i32 %0, i32* @s, align 4 (points-to size: 0)
+NODE 116:   store i32 0, i32* @pended, align 4 (points-to size: 0)
+NODE 117:   store i32 0, i32* @compRegistered, align 4 (points-to size: 0)
+NODE 118:   store i32 0, i32* @lowerDriverReturn, align 4 (points-to size: 0)
+NODE 119:   store i32 0, i32* @setEventCalled, align 4 (points-to size: 0)
+NODE 120:   store i32 0, i32* @customIrp, align 4 (points-to size: 0)
+NODE 121:   ret void (points-to size: 0)
+NODE 122: stub_driver_init (points-to size: 1)
+    -> stub_driver_init + 0
+NODE 123:   call void @stub_driver_init() (points-to size: 0)
+NODE 124:   %8 = load i32, i32* %status, align 4 (points-to size: 1)
+    -> null + 0
+NODE 125:   %14 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 126:   %15 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 127:   store i32 0, i32* %status, align 4 (points-to size: 0)
+NODE 128:   %37 = load i32, i32* %status, align 4 (points-to size: 1)
+    -> null + 0
+NODE 129:   store i32 %37, i32* %retval, align 4 (points-to size: 0)
+NODE 130:   %17 = load i32, i32* @pended, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 131:   store i32 -1, i32* %retval, align 4 (points-to size: 0)
+NODE 132:   %call8 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 133:   store i32 %call8, i32* %tmp_ndt_1, align 4 (points-to size: 0)
+NODE 134:   %9 = load i32, i32* %tmp_ndt_1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 135:   %16 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 136:   store i32 %16, i32* @s, align 4 (points-to size: 0)
+NODE 137:   %18 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 138:   %19 = load i32, i32* @MPR3, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 139:   %21 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 140:   %22 = load i32, i32* @UNLOADED, align 4 (points-to size: 1)
+    -> null + 0
+NODE 141:   %20 = load i32, i32* @MPR3, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 142:   store i32 %20, i32* @s, align 4 (points-to size: 0)
+NODE 143:   %23 = load i32, i32* %status, align 4 (points-to size: 1)
+    -> null + 0
+NODE 144:   %11 = load i32, i32* %devobj, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 145:   %12 = load i32, i32* %pirp, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 146: <146> PSNodeType::CALL (points-to size: 0)
+NODE 147: <147> PSNodeType::ENTRY (points-to size: 0)
+NODE 148: i32 %DeviceObject (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 149: i32 %Irp (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 150:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 151:   %DeviceObject.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DeviceObject.addr = alloca i32, align 4 + 0
+NODE 152:   %Irp.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp.addr = alloca i32, align 4 + 0
+NODE 153:   %DeviceObject__DeviceExtension = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DeviceObject__DeviceExtension = alloca i32, align 4 + 0
+NODE 154:   %Irp__Tail__Overlay__CurrentStackLocation = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp__Tail__Overlay__CurrentStackLocation = alloca i32, align 4 + 0
+NODE 155:   %Irp__IoStatus__Information = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp__IoStatus__Information = alloca i32, align 4 + 0
+NODE 156:   %Irp__IoStatus__Status = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp__IoStatus__Status = alloca i32, align 4 + 0
+NODE 157:   %Irp__CurrentLocation = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp__CurrentLocation = alloca i32, align 4 + 0
+NODE 158:   %disketteExtension__IsRemoved = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__IsRemoved = alloca i32, align 4 + 0
+NODE 159:   %disketteExtension__IsStarted = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__IsStarted = alloca i32, align 4 + 0
+NODE 160:   %disketteExtension__TargetObject = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__TargetObject = alloca i32, align 4 + 0
+NODE 161:   %disketteExtension__HoldNewRequests = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__HoldNewRequests = alloca i32, align 4 + 0
+NODE 162:   %disketteExtension__FloppyThread = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__FloppyThread = alloca i32, align 4 + 0
+NODE 163:   %disketteExtension__InterfaceString__Buffer = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__InterfaceString__Buffer = alloca i32, align 4 + 0
+NODE 164:   %disketteExtension__InterfaceString = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__InterfaceString = alloca i32, align 4 + 0
+NODE 165:   %disketteExtension__ArcName__Length = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__ArcName__Length = alloca i32, align 4 + 0
+NODE 166:   %disketteExtension__ArcName = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__ArcName = alloca i32, align 4 + 0
+NODE 167:   %irpSp__MinorFunction = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp__MinorFunction = alloca i32, align 4 + 0
+NODE 168:   %IoGetConfigurationInformation__FloppyCount = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %IoGetConfigurationInformation__FloppyCount = alloca i32, align 4 + 0
+NODE 169:   %irpSp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp = alloca i32, align 4 + 0
+NODE 170:   %disketteExtension = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension = alloca i32, align 4 + 0
+NODE 171:   %ntStatus = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ntStatus = alloca i32, align 4 + 0
+NODE 172:   %doneEvent = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %doneEvent = alloca i32, align 4 + 0
+NODE 173:   %irpSp___0 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp___0 = alloca i32, align 4 + 0
+NODE 174:   %nextIrpSp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %nextIrpSp = alloca i32, align 4 + 0
+NODE 175:   %nextIrpSp__Control = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %nextIrpSp__Control = alloca i32, align 4 + 0
+NODE 176:   %irpSp___1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp___1 = alloca i32, align 4 + 0
+NODE 177:   %irpSp__Context = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp__Context = alloca i32, align 4 + 0
+NODE 178:   %irpSp__Control = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp__Control = alloca i32, align 4 + 0
+NODE 179:   %__cil_tmp29 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp29 = alloca i64, align 8 + 0
+NODE 180:   %__cil_tmp30 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp30 = alloca i64, align 8 + 0
+NODE 181:   store i32 %DeviceObject, i32* %DeviceObject.addr, align 4 (points-to size: 0)
+NODE 182:   store i32 %Irp, i32* %Irp.addr, align 4 (points-to size: 0)
+NODE 183:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 184:   store i32 %call, i32* %DeviceObject__DeviceExtension, align 4 (points-to size: 0)
+NODE 185:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 186:   store i32 %call1, i32* %Irp__Tail__Overlay__CurrentStackLocation, al ... (points-to size: 0)
+NODE 187:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 188:   store i32 %call2, i32* %Irp__CurrentLocation, align 4 (points-to size: 0)
+NODE 189:   %call3 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 190:   store i32 %call3, i32* %disketteExtension__IsRemoved, align 4 (points-to size: 0)
+NODE 191:   %call4 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 192:   store i32 %call4, i32* %disketteExtension__IsStarted, align 4 (points-to size: 0)
+NODE 193:   %call5 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 194:   store i32 %call5, i32* %disketteExtension__TargetObject, align 4 (points-to size: 0)
+NODE 195:   %call6 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 196:   store i32 %call6, i32* %disketteExtension__FloppyThread, align 4 (points-to size: 0)
+NODE 197:   %call7 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 198:   store i32 %call7, i32* %disketteExtension__InterfaceString__Buffer,  ... (points-to size: 0)
+NODE 199:   %call8 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 200:   store i32 %call8, i32* %disketteExtension__InterfaceString, align 4 (points-to size: 0)
+NODE 201:   %call9 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 202:   store i32 %call9, i32* %disketteExtension__ArcName__Length, align 4 (points-to size: 0)
+NODE 203:   %call10 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 204:   store i32 %call10, i32* %disketteExtension__ArcName, align 4 (points-to size: 0)
+NODE 205:   %call11 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 206:   store i32 %call11, i32* %irpSp__MinorFunction, align 4 (points-to size: 0)
+NODE 207:   %call12 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 208:   store i32 %call12, i32* %IoGetConfigurationInformation__FloppyCount, ... (points-to size: 0)
+NODE 209:   %call13 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 210:   store i32 %call13, i32* %doneEvent, align 4 (points-to size: 0)
+NODE 211:   store i32 0, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 212:   %0 = load i32, i32* @PagingReferenceCount, align 4 (points-to size: 1)
+    -> null + 0
+NODE 213:   %inc = add nsw i32 %0, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 214:   store i32 %inc, i32* @PagingReferenceCount, align 4 (points-to size: 0)
+NODE 215:   %1 = load i32, i32* @PagingReferenceCount, align 4 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 216:   %2 = load i32, i32* %DeviceObject__DeviceExtension, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 217:   store i32 %2, i32* %disketteExtension, align 4 (points-to size: 0)
+NODE 218:   %3 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, align ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 219:   store i32 %3, i32* %irpSp, align 4 (points-to size: 0)
+NODE 220:   %4 = load i32, i32* %disketteExtension__IsRemoved, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 221:   store i32 0, i32* %Irp__IoStatus__Information, align 4 (points-to size: 0)
+NODE 222:   store i32 -1073741738, i32* %Irp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 223:   store i32 -1073741738, i32* @myStatus, align 4 (points-to size: 0)
+NODE 224:   %5 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 225: <225> PSNodeType::CALL (points-to size: 0)
+NODE 226: <226> PSNodeType::ENTRY (points-to size: 0)
+NODE 227: i32 %Irp (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 228: i32 %PriorityBoost (points-to size: 1)
+    -> null + 0
+NODE 229:   %Irp.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp.addr = alloca i32, align 4 + 0
+NODE 230:   %PriorityBoost.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %PriorityBoost.addr = alloca i32, align 4 + 0
+NODE 231:   store i32 %Irp, i32* %Irp.addr, align 4 (points-to size: 0)
+NODE 232:   store i32 %PriorityBoost, i32* %PriorityBoost.addr, align 4 (points-to size: 0)
+NODE 233:   %0 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 234:   %1 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 235:   %2 = load i32, i32* @DC, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 236:   store i32 %2, i32* @s, align 4 (points-to size: 0)
+NODE 237:   ret void (points-to size: 0)
+NODE 238: <238> PSNodeType::CALL (points-to size: 0)
+NODE 239: <239> PSNodeType::ENTRY (points-to size: 0)
+NODE 240: errorFn (points-to size: 1)
+    -> errorFn + 0
+NODE 241: IofCompleteRequest (points-to size: 1)
+    -> IofCompleteRequest + 0
+NODE 242:   call void @errorFn() (points-to size: 0)
+NODE 243: FloppyPnp (points-to size: 1)
+    -> FloppyPnp + 0
+NODE 244:   call void @IofCompleteRequest(i32 %5, i32 0) (points-to size: 0)
+NODE 245:   store i32 -1073741738, i32* %retval, align 4 (points-to size: 0)
+NODE 246:   %100 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 247:   ret i32 %100 (points-to size: 0)
+NODE 248:   %6 = load i32, i32* %irpSp__MinorFunction, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 249:   %7 = load i32, i32* %irpSp__MinorFunction, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 250:   %14 = load i32, i32* %DeviceObject.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 251:   %15 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 252: <252> PSNodeType::CALL (points-to size: 0)
+NODE 253: <253> PSNodeType::ENTRY (points-to size: 0)
+NODE 254: i32 %DeviceObject (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 255: i32 %Irp (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 256:   %DeviceObject.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DeviceObject.addr = alloca i32, align 4 + 0
+NODE 257:   %Irp.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp.addr = alloca i32, align 4 + 0
+NODE 258:   %DeviceObject__DeviceExtension = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DeviceObject__DeviceExtension = alloca i32, align 4 + 0
+NODE 259:   %Irp__Tail__Overlay__CurrentStackLocation = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp__Tail__Overlay__CurrentStackLocation = alloca i32, align 4 + 0
+NODE 260:   %Irp__IoStatus__Status = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp__IoStatus__Status = alloca i32, align 4 + 0
+NODE 261:   %disketteExtension__TargetObject = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__TargetObject = alloca i32, align 4 + 0
+NODE 262:   %disketteExtension__MaxTransferSize = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__MaxTransferSize = alloca i32, align 4 + 0
+NODE 263:   %disketteExtension__DriveType = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__DriveType = alloca i32, align 4 + 0
+NODE 264:   %disketteExtension__PerpendicularMode = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__PerpendicularMode = alloca i32, align 4 + 0
+NODE 265:   %disketteExtension__DeviceUnit = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__DeviceUnit = alloca i32, align 4 + 0
+NODE 266:   %disketteExtension__DriveOnValue = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__DriveOnValue = alloca i32, align 4 + 0
+NODE 267:   %disketteExtension__UnderlyingPDO = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__UnderlyingPDO = alloca i32, align 4 + 0
+NODE 268:   %disketteExtension__InterfaceString = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__InterfaceString = alloca i32, align 4 + 0
+NODE 269:   %disketteExtension__IsStarted = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__IsStarted = alloca i32, align 4 + 0
+NODE 270:   %disketteExtension__HoldNewRequests = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension__HoldNewRequests = alloca i32, align 4 + 0
+NODE 271:   %ntStatus = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ntStatus = alloca i32, align 4 + 0
+NODE 272:   %pnpStatus = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %pnpStatus = alloca i32, align 4 + 0
+NODE 273:   %doneEvent = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %doneEvent = alloca i32, align 4 + 0
+NODE 274:   %fdcInfo = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo = alloca i32, align 4 + 0
+NODE 275:   %fdcInfo__BufferCount = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo__BufferCount = alloca i32, align 4 + 0
+NODE 276:   %fdcInfo__BufferSize = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo__BufferSize = alloca i32, align 4 + 0
+NODE 277:   %fdcInfo__MaxTransferSize = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo__MaxTransferSize = alloca i32, align 4 + 0
+NODE 278:   %fdcInfo__AcpiBios = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo__AcpiBios = alloca i32, align 4 + 0
+NODE 279:   %fdcInfo__AcpiFdiSupported = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo__AcpiFdiSupported = alloca i32, align 4 + 0
+NODE 280:   %fdcInfo__PeripheralNumber = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo__PeripheralNumber = alloca i32, align 4 + 0
+NODE 281:   %fdcInfo__BusType = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo__BusType = alloca i32, align 4 + 0
+NODE 282:   %fdcInfo__ControllerNumber = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo__ControllerNumber = alloca i32, align 4 + 0
+NODE 283:   %fdcInfo__UnitNumber = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo__UnitNumber = alloca i32, align 4 + 0
+NODE 284:   %fdcInfo__BusNumber = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %fdcInfo__BusNumber = alloca i32, align 4 + 0
+NODE 285:   %Dc = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Dc = alloca i32, align 4 + 0
+NODE 286:   %Fp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Fp = alloca i32, align 4 + 0
+NODE 287:   %disketteExtension = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %disketteExtension = alloca i32, align 4 + 0
+NODE 288:   %irpSp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp = alloca i32, align 4 + 0
+NODE 289:   %irpSp___0 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp___0 = alloca i32, align 4 + 0
+NODE 290:   %nextIrpSp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %nextIrpSp = alloca i32, align 4 + 0
+NODE 291:   %nextIrpSp__Control = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %nextIrpSp__Control = alloca i32, align 4 + 0
+NODE 292:   %irpSp___1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp___1 = alloca i32, align 4 + 0
+NODE 293:   %irpSp__Control = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp__Control = alloca i32, align 4 + 0
+NODE 294:   %irpSp__Context = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpSp__Context = alloca i32, align 4 + 0
+NODE 295:   %InterfaceType = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %InterfaceType = alloca i32, align 4 + 0
+NODE 296:   %KUSER_SHARED_DATA__AlternativeArchitecture_NEC98x86 = alloca i32, a ... [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %KUSER_SHARED_DATA__AlternativeArchitecture_NEC98x86 = alloca i32, a ... + 0
+NODE 297:   %__cil_tmp42 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp42 = alloca i64, align 8 + 0
+NODE 298:   %__cil_tmp43 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp43 = alloca i32, align 4 + 0
+NODE 299:   %__cil_tmp44 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp44 = alloca i32, align 4 + 0
+NODE 300:   %__cil_tmp45 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp45 = alloca i32, align 4 + 0
+NODE 301:   %__cil_tmp46 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp46 = alloca i32, align 4 + 0
+NODE 302:   %__cil_tmp47 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp47 = alloca i32, align 4 + 0
+NODE 303:   %__cil_tmp48 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp48 = alloca i32, align 4 + 0
+NODE 304:   %__cil_tmp49 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp49 = alloca i32, align 4 + 0
+NODE 305:   store i32 %DeviceObject, i32* %DeviceObject.addr, align 4 (points-to size: 0)
+NODE 306:   store i32 %Irp, i32* %Irp.addr, align 4 (points-to size: 0)
+NODE 307:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 308:   store i32 %call, i32* %DeviceObject__DeviceExtension, align 4 (points-to size: 0)
+NODE 309:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 310:   store i32 %call1, i32* %Irp__Tail__Overlay__CurrentStackLocation, al ... (points-to size: 0)
+NODE 311:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 312:   store i32 %call2, i32* %disketteExtension__TargetObject, align 4 (points-to size: 0)
+NODE 313:   %call3 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 314:   store i32 %call3, i32* %disketteExtension__DriveType, align 4 (points-to size: 0)
+NODE 315:   %call4 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 316:   store i32 %call4, i32* %disketteExtension__UnderlyingPDO, align 4 (points-to size: 0)
+NODE 317:   %call5 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 318:   store i32 %call5, i32* %disketteExtension__InterfaceString, align 4 (points-to size: 0)
+NODE 319:   %call6 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 320:   store i32 %call6, i32* %doneEvent, align 4 (points-to size: 0)
+NODE 321:   %call7 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 322:   store i32 %call7, i32* %fdcInfo, align 4 (points-to size: 0)
+NODE 323:   %call8 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 324:   store i32 %call8, i32* %fdcInfo__MaxTransferSize, align 4 (points-to size: 0)
+NODE 325:   %call9 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 326:   store i32 %call9, i32* %fdcInfo__AcpiBios, align 4 (points-to size: 0)
+NODE 327:   %call10 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 328:   store i32 %call10, i32* %fdcInfo__AcpiFdiSupported, align 4 (points-to size: 0)
+NODE 329:   %call11 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 330:   store i32 %call11, i32* %fdcInfo__PeripheralNumber, align 4 (points-to size: 0)
+NODE 331:   %call12 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 332:   store i32 %call12, i32* %fdcInfo__ControllerNumber, align 4 (points-to size: 0)
+NODE 333:   %call13 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 334:   store i32 %call13, i32* %fdcInfo__UnitNumber, align 4 (points-to size: 0)
+NODE 335:   %call14 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 336:   store i32 %call14, i32* %fdcInfo__BusNumber, align 4 (points-to size: 0)
+NODE 337:   %call15 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 338:   store i32 %call15, i32* %KUSER_SHARED_DATA__AlternativeArchitecture_ ... (points-to size: 0)
+NODE 339:   %0 = load i32, i32* @DiskController, align 4 (points-to size: 1)
+    -> null + 0
+NODE 340:   store i32 %0, i32* %Dc, align 4 (points-to size: 0)
+NODE 341:   %1 = load i32, i32* @FloppyDiskPeripheral, align 4 (points-to size: 1)
+    -> null + 0
+NODE 342:   store i32 %1, i32* %Fp, align 4 (points-to size: 0)
+NODE 343:   %2 = load i32, i32* %DeviceObject__DeviceExtension, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 344:   store i32 %2, i32* %disketteExtension, align 4 (points-to size: 0)
+NODE 345:   %3 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, align ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 346:   store i32 %3, i32* %irpSp, align 4 (points-to size: 0)
+NODE 347:   %4 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, align ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 348:   store i32 %4, i32* %irpSp___0, align 4 (points-to size: 0)
+NODE 349:   %5 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, align ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 350:   %sub = sub nsw i32 %5, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 351:   store i32 %sub, i32* %nextIrpSp, align 4 (points-to size: 0)
+NODE 352:   store i32 0, i32* %nextIrpSp__Control, align 4 (points-to size: 0)
+NODE 353:   %6 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 354:   %7 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 355: <355> PSNodeType::CALL (points-to size: 0)
+NODE 356: FloppyStartDevice (points-to size: 1)
+    -> FloppyStartDevice + 0
+NODE 357:   call void @errorFn() (points-to size: 0)
+NODE 358:   %9 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, align ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 359:   %sub20 = sub nsw i32 %9, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 360:   store i32 %sub20, i32* %irpSp___1, align 4 (points-to size: 0)
+NODE 361:   %10 = load i32, i32* %doneEvent, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 362:   store i32 %10, i32* %irpSp__Context, align 4 (points-to size: 0)
+NODE 363:   store i32 224, i32* %irpSp__Control, align 4 (points-to size: 0)
+NODE 364:   %11 = load i32, i32* %disketteExtension__TargetObject, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 365:   %12 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 366: <366> PSNodeType::CALL (points-to size: 0)
+NODE 367: <367> PSNodeType::ENTRY (points-to size: 0)
+NODE 368: i32 %DeviceObject (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 369: i32 %Irp (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 370:   %DeviceObject.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DeviceObject.addr = alloca i32, align 4 + 0
+NODE 371:   %Irp.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp.addr = alloca i32, align 4 + 0
+NODE 372:   %returnVal2 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %returnVal2 = alloca i32, align 4 + 0
+NODE 373:   %compRetStatus1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %compRetStatus1 = alloca i32, align 4 + 0
+NODE 374:   %lcontext = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %lcontext = alloca i32, align 4 + 0
+NODE 375:   %__cil_tmp7 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp7 = alloca i64, align 8 + 0
+NODE 376:   %tmp_ndt_12 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_12 = alloca i32, align 4 + 0
+NODE 377:   %tmp_ndt_7 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_7 = alloca i32, align 4 + 0
+NODE 378:   store i32 %DeviceObject, i32* %DeviceObject.addr, align 4 (points-to size: 0)
+NODE 379:   store i32 %Irp, i32* %Irp.addr, align 4 (points-to size: 0)
+NODE 380:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 381:   store i32 %call, i32* %lcontext, align 4 (points-to size: 0)
+NODE 382:   %0 = load i32, i32* @compRegistered, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 383:   %1 = load i32, i32* %DeviceObject.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 384:   %2 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 385:   %3 = load i32, i32* %lcontext, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 386: <386> PSNodeType::CALL (points-to size: 0)
+NODE 387: <387> PSNodeType::ENTRY (points-to size: 0)
+NODE 388: i32 %DeviceObject (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 389: i32 %Irp (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 390: i32 %Context (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 391:   %DeviceObject.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DeviceObject.addr = alloca i32, align 4 + 0
+NODE 392:   %Irp.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp.addr = alloca i32, align 4 + 0
+NODE 393:   %Context.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Context.addr = alloca i32, align 4 + 0
+NODE 394:   store i32 %DeviceObject, i32* %DeviceObject.addr, align 4 (points-to size: 0)
+NODE 395:   store i32 %Irp, i32* %Irp.addr, align 4 (points-to size: 0)
+NODE 396:   store i32 %Context, i32* %Context.addr, align 4 (points-to size: 0)
+NODE 397:   %0 = load i32, i32* %Context.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 398: <398> PSNodeType::CALL (points-to size: 0)
+NODE 399: <399> PSNodeType::ENTRY (points-to size: 0)
+NODE 400: i32 %Event (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 401: i32 %Increment (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 402: i32 %Wait (points-to size: 1)
+    -> null + 0
+NODE 403:   %Event.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Event.addr = alloca i32, align 4 + 0
+NODE 404:   %Increment.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Increment.addr = alloca i32, align 4 + 0
+NODE 405:   %Wait.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Wait.addr = alloca i32, align 4 + 0
+NODE 406:   %l = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %l = alloca i32, align 4 + 0
+NODE 407:   store i32 %Event, i32* %Event.addr, align 4 (points-to size: 0)
+NODE 408:   store i32 %Increment, i32* %Increment.addr, align 4 (points-to size: 0)
+NODE 409:   store i32 %Wait, i32* %Wait.addr, align 4 (points-to size: 0)
+NODE 410:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 411:   store i32 %call, i32* %l, align 4 (points-to size: 0)
+NODE 412:   store i32 1, i32* @setEventCalled, align 4 (points-to size: 0)
+NODE 413:   %0 = load i32, i32* %l, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 414:   ret i32 %0 (points-to size: 0)
+NODE 415: KeSetEvent (points-to size: 1)
+    -> KeSetEvent + 0
+NODE 416: FloppyPnpComplete (points-to size: 1)
+    -> FloppyPnpComplete + 0
+NODE 417:   %call = call i32 @KeSetEvent(i32 %0, i32 1, i32 0) (points-to size: 0)
+NODE 418:   ret i32 -1073741802 (points-to size: 0)
+NODE 419: IofCallDriver (points-to size: 1)
+    -> IofCallDriver + 0
+NODE 420:   %call1 = call i32 @FloppyPnpComplete(i32 %1, i32 %2, i32 %3) (points-to size: 0)
+NODE 421:   store i32 %call1, i32* %compRetStatus1, align 4 (points-to size: 0)
+NODE 422:   %4 = load i32, i32* %compRetStatus1, align 4 (points-to size: 0)
+NODE 423:   %conv = sext i32 %4 to i64 (points-to size: 0)
+NODE 424:   store i64 %conv, i64* %__cil_tmp7, align 8 (points-to size: 0)
+NODE 425:   %5 = load i64, i64* %__cil_tmp7, align 8 (points-to size: 0)
+NODE 426:   %call5 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 427:   store i32 %call5, i32* %tmp_ndt_12, align 4 (points-to size: 0)
+NODE 428:   %6 = load i32, i32* %tmp_ndt_12, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 429: <429> PSNodeType::CALL (points-to size: 0)
+NODE 430: <430> PSNodeType::ENTRY (points-to size: 0)
+NODE 431:   %0 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 432:   %1 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 433:   %2 = load i32, i32* @MPR1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 434:   store i32 %2, i32* @s, align 4 (points-to size: 0)
+NODE 435:   ret void (points-to size: 0)
+NODE 436: <436> PSNodeType::CALL (points-to size: 0)
+NODE 437: stubMoreProcessingRequired (points-to size: 1)
+    -> stubMoreProcessingRequired + 0
+NODE 438:   call void @errorFn() (points-to size: 0)
+NODE 439:   call void @stubMoreProcessingRequired() (points-to size: 0)
+NODE 440:   %call9 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 441:   store i32 %call9, i32* %tmp_ndt_7, align 4 (points-to size: 0)
+NODE 442:   %7 = load i32, i32* %tmp_ndt_7, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 443:   store i32 0, i32* %returnVal2, align 4 (points-to size: 0)
+NODE 444:   store i32 -1073741823, i32* %returnVal2, align 4 (points-to size: 0)
+NODE 445:   store i32 259, i32* %returnVal2, align 4 (points-to size: 0)
+NODE 446:   %9 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 447:   %10 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 448:   %11 = load i32, i32* @IPC, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 449:   store i32 %11, i32* @s, align 4 (points-to size: 0)
+NODE 450:   %12 = load i32, i32* %returnVal2, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 451:   store i32 %12, i32* @lowerDriverReturn, align 4 (points-to size: 0)
+NODE 452:   %24 = load i32, i32* %returnVal2, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 453:   ret i32 %24 (points-to size: 0)
+NODE 454:   %13 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 455:   %14 = load i32, i32* @MPR1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 456:   %15 = load i32, i32* %returnVal2, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 457:   %20 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 458:   %21 = load i32, i32* @SKIP1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 459:   %16 = load i32, i32* @MPR3, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 460:   store i32 %16, i32* @s, align 4 (points-to size: 0)
+NODE 461:   %17 = load i32, i32* %returnVal2, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 462:   store i32 %17, i32* @lowerDriverReturn, align 4 (points-to size: 0)
+NODE 463:   %18 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 464:   store i32 %18, i32* @s, align 4 (points-to size: 0)
+NODE 465:   %19 = load i32, i32* %returnVal2, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 466:   store i32 %19, i32* @lowerDriverReturn, align 4 (points-to size: 0)
+NODE 467:   %22 = load i32, i32* @SKIP2, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 468:   store i32 %22, i32* @s, align 4 (points-to size: 0)
+NODE 469:   %23 = load i32, i32* %returnVal2, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 470:   store i32 %23, i32* @lowerDriverReturn, align 4 (points-to size: 0)
+NODE 471: <471> PSNodeType::CALL (points-to size: 0)
+NODE 472:   call void @errorFn() (points-to size: 0)
+NODE 473:   %call21 = call i32 @IofCallDriver(i32 %11, i32 %12) (points-to size: 0)
+NODE 474:   store i32 %call21, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 475:   %13 = load i32, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 476:   %conv = sext i32 %13 to i64 (points-to size: 0)
+NODE 477:   store i64 %conv, i64* %__cil_tmp42, align 8 (points-to size: 0)
+NODE 478:   %14 = load i64, i64* %__cil_tmp42, align 8 (points-to size: 0)
+NODE 479:   %8 = load i32, i32* @compRegistered, align 4 (points-to size: 1)
+    -> null + 0
+NODE 480:   %15 = load i32, i32* %doneEvent, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 481:   %16 = load i32, i32* @Executive, align 4 (points-to size: 1)
+    -> null + 0
+NODE 482:   %17 = load i32, i32* @KernelMode, align 4 (points-to size: 1)
+    -> null + 0
+NODE 483: <483> PSNodeType::CALL (points-to size: 0)
+NODE 484: <484> PSNodeType::ENTRY (points-to size: 0)
+NODE 485: i32 %Object (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 486: i32 %WaitReason (points-to size: 1)
+    -> null + 0
+NODE 487: i32 %WaitMode (points-to size: 1)
+    -> null + 0
+NODE 488: i32 %Alertable (points-to size: 1)
+    -> null + 0
+NODE 489: i32 %Timeout (points-to size: 1)
+    -> null + 0
+NODE 490:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 491:   %Object.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Object.addr = alloca i32, align 4 + 0
+NODE 492:   %WaitReason.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %WaitReason.addr = alloca i32, align 4 + 0
+NODE 493:   %WaitMode.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %WaitMode.addr = alloca i32, align 4 + 0
+NODE 494:   %Alertable.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Alertable.addr = alloca i32, align 4 + 0
+NODE 495:   %Timeout.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Timeout.addr = alloca i32, align 4 + 0
+NODE 496:   %tmp_ndt_8 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_8 = alloca i32, align 4 + 0
+NODE 497:   store i32 %Object, i32* %Object.addr, align 4 (points-to size: 0)
+NODE 498:   store i32 %WaitReason, i32* %WaitReason.addr, align 4 (points-to size: 0)
+NODE 499:   store i32 %WaitMode, i32* %WaitMode.addr, align 4 (points-to size: 0)
+NODE 500:   store i32 %Alertable, i32* %Alertable.addr, align 4 (points-to size: 0)
+NODE 501:   store i32 %Timeout, i32* %Timeout.addr, align 4 (points-to size: 0)
+NODE 502:   %0 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 503:   %1 = load i32, i32* @MPR3, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 504:   %2 = load i32, i32* @setEventCalled, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 505:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 506:   store i32 %call, i32* %tmp_ndt_8, align 4 (points-to size: 0)
+NODE 507:   %8 = load i32, i32* %tmp_ndt_8, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 508:   %4 = load i32, i32* @customIrp, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 509:   %3 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 510:   store i32 %3, i32* @s, align 4 (points-to size: 0)
+NODE 511:   store i32 0, i32* @setEventCalled, align 4 (points-to size: 0)
+NODE 512:   %10 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 513:   ret i32 %10 (points-to size: 0)
+NODE 514:   %5 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 515:   store i32 %5, i32* @s, align 4 (points-to size: 0)
+NODE 516:   store i32 0, i32* @customIrp, align 4 (points-to size: 0)
+NODE 517:   %6 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 518:   %7 = load i32, i32* @MPR3, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 519:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE 520:   store i32 -1073741823, i32* %retval, align 4 (points-to size: 0)
+NODE 521: <521> PSNodeType::CALL (points-to size: 0)
+NODE 522: KeWaitForSingleObject (points-to size: 1)
+    -> KeWaitForSingleObject + 0
+NODE 523:   call void @errorFn() (points-to size: 0)
+NODE 524:   %call25 = call i32 @KeWaitForSingleObject(i32 %15, i32 %16, i32 %17, ... (points-to size: 0)
+NODE 525:   store i32 %call25, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 526:   %18 = load i32, i32* @myStatus, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 527:   store i32 %18, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 528:   store i32 0, i32* %fdcInfo__BufferCount, align 4 (points-to size: 0)
+NODE 529:   store i32 0, i32* %fdcInfo__BufferSize, align 4 (points-to size: 0)
+NODE 530:   store i32 3080, i32* %__cil_tmp43, align 4 (points-to size: 0)
+NODE 531:   store i32 458752, i32* %__cil_tmp44, align 4 (points-to size: 0)
+NODE 532:   store i32 461832, i32* %__cil_tmp45, align 4 (points-to size: 0)
+NODE 533:   store i32 461835, i32* %__cil_tmp46, align 4 (points-to size: 0)
+NODE 534:   %19 = load i32, i32* %disketteExtension__TargetObject, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 535:   %20 = load i32, i32* %__cil_tmp46, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 536:   %21 = load i32, i32* %fdcInfo, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 537: <537> PSNodeType::CALL (points-to size: 0)
+NODE 538: <538> PSNodeType::ENTRY (points-to size: 0)
+NODE 539: i32 %DeviceObject (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 540: i32 %Ioctl (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 541: i32 %Data (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 542:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 543:   %DeviceObject.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DeviceObject.addr = alloca i32, align 4 + 0
+NODE 544:   %Ioctl.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Ioctl.addr = alloca i32, align 4 + 0
+NODE 545:   %Data.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Data.addr = alloca i32, align 4 + 0
+NODE 546:   %ntStatus = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ntStatus = alloca i32, align 4 + 0
+NODE 547:   %irp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irp = alloca i32, align 4 + 0
+NODE 548:   %irpStack = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpStack = alloca i32, align 4 + 0
+NODE 549:   %doneEvent = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %doneEvent = alloca i32, align 4 + 0
+NODE 550:   %ioStatus = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ioStatus = alloca i32, align 4 + 0
+NODE 551:   %irp__Tail__Overlay__CurrentStackLocation = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irp__Tail__Overlay__CurrentStackLocation = alloca i32, align 4 + 0
+NODE 552:   %irpStack__Parameters__DeviceIoControl__Type3InputBuffer = alloca i3 ... [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %irpStack__Parameters__DeviceIoControl__Type3InputBuffer = alloca i3 ... + 0
+NODE 553:   %__cil_tmp11 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp11 = alloca i64, align 8 + 0
+NODE 554:   store i32 %DeviceObject, i32* %DeviceObject.addr, align 4 (points-to size: 0)
+NODE 555:   store i32 %Ioctl, i32* %Ioctl.addr, align 4 (points-to size: 0)
+NODE 556:   store i32 %Data, i32* %Data.addr, align 4 (points-to size: 0)
+NODE 557:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 558:   store i32 %call, i32* %doneEvent, align 4 (points-to size: 0)
+NODE 559:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 560:   store i32 %call1, i32* %ioStatus, align 4 (points-to size: 0)
+NODE 561:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 562:   store i32 %call2, i32* %irp__Tail__Overlay__CurrentStackLocation, al ... (points-to size: 0)
+NODE 563:   %0 = load i32, i32* %Ioctl.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 564:   %1 = load i32, i32* %DeviceObject.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 565:   %2 = load i32, i32* %doneEvent, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 566:   %3 = load i32, i32* %ioStatus, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 567: <567> PSNodeType::CALL (points-to size: 0)
+NODE 568: <568> PSNodeType::ENTRY (points-to size: 0)
+NODE 569: i32 %IoControlCode (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 570: i32 %DeviceObject (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 571: i32 %InputBuffer (points-to size: 1)
+    -> null + 0
+NODE 572: i32 %InputBufferLength (points-to size: 1)
+    -> null + 0
+NODE 573: i32 %OutputBuffer (points-to size: 1)
+    -> null + 0
+NODE 574: i32 %OutputBufferLength (points-to size: 1)
+    -> null + 0
+NODE 575: i32 %InternalDeviceIoControl (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 576: i32 %Event (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 577: i32 %IoStatusBlock (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 578:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 579:   %IoControlCode.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %IoControlCode.addr = alloca i32, align 4 + 0
+NODE 580:   %DeviceObject.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DeviceObject.addr = alloca i32, align 4 + 0
+NODE 581:   %InputBuffer.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %InputBuffer.addr = alloca i32, align 4 + 0
+NODE 582:   %InputBufferLength.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %InputBufferLength.addr = alloca i32, align 4 + 0
+NODE 583:   %OutputBuffer.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %OutputBuffer.addr = alloca i32, align 4 + 0
+NODE 584:   %OutputBufferLength.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %OutputBufferLength.addr = alloca i32, align 4 + 0
+NODE 585:   %InternalDeviceIoControl.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %InternalDeviceIoControl.addr = alloca i32, align 4 + 0
+NODE 586:   %Event.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Event.addr = alloca i32, align 4 + 0
+NODE 587:   %IoStatusBlock.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %IoStatusBlock.addr = alloca i32, align 4 + 0
+NODE 588:   %malloc = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %malloc = alloca i32, align 4 + 0
+NODE 589:   %tmp_ndt_2 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_2 = alloca i32, align 4 + 0
+NODE 590:   store i32 %IoControlCode, i32* %IoControlCode.addr, align 4 (points-to size: 0)
+NODE 591:   store i32 %DeviceObject, i32* %DeviceObject.addr, align 4 (points-to size: 0)
+NODE 592:   store i32 %InputBuffer, i32* %InputBuffer.addr, align 4 (points-to size: 0)
+NODE 593:   store i32 %InputBufferLength, i32* %InputBufferLength.addr, align 4 (points-to size: 0)
+NODE 594:   store i32 %OutputBuffer, i32* %OutputBuffer.addr, align 4 (points-to size: 0)
+NODE 595:   store i32 %OutputBufferLength, i32* %OutputBufferLength.addr, align  ... (points-to size: 0)
+NODE 596:   store i32 %InternalDeviceIoControl, i32* %InternalDeviceIoControl.ad ... (points-to size: 0)
+NODE 597:   store i32 %Event, i32* %Event.addr, align 4 (points-to size: 0)
+NODE 598:   store i32 %IoStatusBlock, i32* %IoStatusBlock.addr, align 4 (points-to size: 0)
+NODE 599:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 600:   store i32 %call, i32* %malloc, align 4 (points-to size: 0)
+NODE 601:   store i32 1, i32* @customIrp, align 4 (points-to size: 0)
+NODE 602:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 603:   store i32 %call1, i32* %tmp_ndt_2, align 4 (points-to size: 0)
+NODE 604:   %0 = load i32, i32* %tmp_ndt_2, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 605:   %3 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 606:   ret i32 %3 (points-to size: 0)
+NODE 607:   %2 = load i32, i32* %malloc, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 608:   store i32 %2, i32* %retval, align 4 (points-to size: 0)
+NODE 609:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE 610: IoBuildDeviceIoControlRequest (points-to size: 1)
+    -> IoBuildDeviceIoControlRequest + 0
+NODE 611: FlFdcDeviceIo (points-to size: 1)
+    -> FlFdcDeviceIo + 0
+NODE 612:   %call3 = call i32 @IoBuildDeviceIoControlRequest(i32 %0, i32 %1, i32 ... (points-to size: 0)
+NODE 613:   store i32 %call3, i32* %irp, align 4 (points-to size: 0)
+NODE 614:   %4 = load i32, i32* %irp, align 4 (points-to size: 0)
+NODE 615:   store i32 -1073741670, i32* %retval, align 4 (points-to size: 0)
+NODE 616:   %16 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 617:   ret i32 %16 (points-to size: 0)
+NODE 618:   %5 = load i32, i32* %irp__Tail__Overlay__CurrentStackLocation, align ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 619:   %sub = sub nsw i32 %5, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 620:   store i32 %sub, i32* %irpStack, align 4 (points-to size: 0)
+NODE 621:   %6 = load i32, i32* %Data.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 622:   store i32 %6, i32* %irpStack__Parameters__DeviceIoControl__Type3Inpu ... (points-to size: 0)
+NODE 623:   %7 = load i32, i32* %DeviceObject.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 624:   %8 = load i32, i32* %irp, align 4 (points-to size: 0)
+NODE 625: <625> PSNodeType::CALL (points-to size: 0)
+NODE 626:   %call4 = call i32 @IofCallDriver(i32 %7, i32 %8) (points-to size: 0)
+NODE 627:   store i32 %call4, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 628:   %9 = load i32, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 629:   %conv = sext i32 %9 to i64 (points-to size: 0)
+NODE 630:   store i64 %conv, i64* %__cil_tmp11, align 8 (points-to size: 0)
+NODE 631:   %10 = load i64, i64* %__cil_tmp11, align 8 (points-to size: 0)
+NODE 632:   %11 = load i32, i32* %doneEvent, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 633:   %12 = load i32, i32* @Suspended, align 4 (points-to size: 1)
+    -> null + 0
+NODE 634:   %13 = load i32, i32* @KernelMode, align 4 (points-to size: 1)
+    -> null + 0
+NODE 635: <635> PSNodeType::CALL (points-to size: 0)
+NODE 636:   %call8 = call i32 @KeWaitForSingleObject(i32 %11, i32 %12, i32 %13,  ... (points-to size: 0)
+NODE 637:   %14 = load i32, i32* @myStatus, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 638:   store i32 %14, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 639:   %15 = load i32, i32* %ntStatus, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 640:   store i32 %15, i32* %retval, align 4 (points-to size: 0)
+NODE 641:   %call27 = call i32 @FlFdcDeviceIo(i32 %19, i32 %20, i32 %21) (points-to size: 0)
+NODE 642:   store i32 %call27, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 643:   %22 = load i32, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 644: <644> PSNodeType::CALL (points-to size: 0)
+NODE 645:   call void @errorFn() (points-to size: 0)
+NODE 646:   store i32 1, i32* @compRegistered, align 4 (points-to size: 0)
+NODE 647:   %23 = load i32, i32* %fdcInfo__MaxTransferSize, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 648:   store i32 %23, i32* %disketteExtension__MaxTransferSize, align 4 (points-to size: 0)
+NODE 649:   %24 = load i32, i32* %fdcInfo__AcpiBios, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 650:   %52 = load i32, i32* %ntStatus, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 651:   store i32 %52, i32* %Irp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 652:   %53 = load i32, i32* %ntStatus, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 653:   store i32 %53, i32* @myStatus, align 4 (points-to size: 0)
+NODE 654:   %54 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 655: <655> PSNodeType::CALL (points-to size: 0)
+NODE 656:   call void @IofCompleteRequest(i32 %54, i32 0) (points-to size: 0)
+NODE 657:   %55 = load i32, i32* %ntStatus, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 658:   ret i32 %55 (points-to size: 0)
+NODE 659:   %25 = load i32, i32* %fdcInfo__AcpiFdiSupported, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 660:   %43 = load i32, i32* %ntStatus, align 4 (points-to size: 1)
+    -> null + 0
+NODE 661:   %29 = load i32, i32* %disketteExtension__DriveType, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 662:   %26 = load i32, i32* %disketteExtension, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 663:   %27 = load i32, i32* %fdcInfo, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 664: <664> PSNodeType::CALL (points-to size: 0)
+NODE 665: <665> PSNodeType::ENTRY (points-to size: 0)
+NODE 666: i32 %DisketteExtension (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 667: i32 %FdcInfo (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 668:   %DisketteExtension.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DisketteExtension.addr = alloca i32, align 4 + 0
+NODE 669:   %FdcInfo.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %FdcInfo.addr = alloca i32, align 4 + 0
+NODE 670:   store i32 %DisketteExtension, i32* %DisketteExtension.addr, align 4 (points-to size: 0)
+NODE 671:   store i32 %FdcInfo, i32* %FdcInfo.addr, align 4 (points-to size: 0)
+NODE 672:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE 673: FlAcpiConfigureFloppy (points-to size: 1)
+    -> FlAcpiConfigureFloppy + 0
+NODE 674:   %call34 = call i32 @FlAcpiConfigureFloppy(i32 %26, i32 %27) (points-to size: 1)
+    -> null + 0
+NODE 675:   store i32 %call34, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 676:   %28 = load i32, i32* %disketteExtension__DriveType, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 677:   %44 = load i32, i32* %KUSER_SHARED_DATA__AlternativeArchitecture_NEC ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 678:   store i32 0, i32* %InterfaceType, align 4 (points-to size: 0)
+NODE 679:   %45 = load i32, i32* %fdcInfo__UnitNumber, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 680:   store i32 %45, i32* %disketteExtension__DeviceUnit, align 4 (points-to size: 0)
+NODE 681:   %47 = load i32, i32* %disketteExtension__UnderlyingPDO, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 682:   %48 = load i32, i32* @MOUNTDEV_MOUNTED_DEVICE_GUID, align 4 (points-to size: 1)
+    -> null + 0
+NODE 683:   %49 = load i32, i32* %disketteExtension__InterfaceString, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 684: <684> PSNodeType::CALL (points-to size: 0)
+NODE 685: <685> PSNodeType::ENTRY (points-to size: 0)
+NODE 686: i32 %PhysicalDeviceObject (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 687: i32 %InterfaceClassGuid (points-to size: 1)
+    -> null + 0
+NODE 688: i32 %ReferenceString (points-to size: 1)
+    -> null + 0
+NODE 689: i32 %SymbolicLinkName (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 690:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 691:   %PhysicalDeviceObject.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %PhysicalDeviceObject.addr = alloca i32, align 4 + 0
+NODE 692:   %InterfaceClassGuid.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %InterfaceClassGuid.addr = alloca i32, align 4 + 0
+NODE 693:   %ReferenceString.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ReferenceString.addr = alloca i32, align 4 + 0
+NODE 694:   %SymbolicLinkName.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %SymbolicLinkName.addr = alloca i32, align 4 + 0
+NODE 695:   %tmp_ndt_5 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_5 = alloca i32, align 4 + 0
+NODE 696:   store i32 %PhysicalDeviceObject, i32* %PhysicalDeviceObject.addr, al ... (points-to size: 0)
+NODE 697:   store i32 %InterfaceClassGuid, i32* %InterfaceClassGuid.addr, align  ... (points-to size: 0)
+NODE 698:   store i32 %ReferenceString, i32* %ReferenceString.addr, align 4 (points-to size: 0)
+NODE 699:   store i32 %SymbolicLinkName, i32* %SymbolicLinkName.addr, align 4 (points-to size: 0)
+NODE 700:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 701:   store i32 %call, i32* %tmp_ndt_5, align 4 (points-to size: 0)
+NODE 702:   %0 = load i32, i32* %tmp_ndt_5, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 703:   %2 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 704:   ret i32 %2 (points-to size: 0)
+NODE 705:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE 706:   store i32 -1073741808, i32* %retval, align 4 (points-to size: 0)
+NODE 707: IoRegisterDeviceInterface (points-to size: 1)
+    -> IoRegisterDeviceInterface + 0
+NODE 708:   %call64 = call i32 @IoRegisterDeviceInterface(i32 %47, i32 %48, i32  ... (points-to size: 0)
+NODE 709:   store i32 %call64, i32* %pnpStatus, align 4 (points-to size: 0)
+NODE 710:   %50 = load i32, i32* %pnpStatus, align 4 (points-to size: 0)
+NODE 711:   %46 = load i32, i32* %fdcInfo__PeripheralNumber, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 712:   store i32 %46, i32* %disketteExtension__DeviceUnit, align 4 (points-to size: 0)
+NODE 713:   %51 = load i32, i32* %disketteExtension__InterfaceString, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 714: <714> PSNodeType::CALL (points-to size: 0)
+NODE 715: <715> PSNodeType::ENTRY (points-to size: 0)
+NODE 716: i32 %SymbolicLinkName (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 717: i32 %Enable (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 718:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 719:   %SymbolicLinkName.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %SymbolicLinkName.addr = alloca i32, align 4 + 0
+NODE 720:   %Enable.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Enable.addr = alloca i32, align 4 + 0
+NODE 721:   %tmp_ndt_6 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_6 = alloca i32, align 4 + 0
+NODE 722:   store i32 %SymbolicLinkName, i32* %SymbolicLinkName.addr, align 4 (points-to size: 0)
+NODE 723:   store i32 %Enable, i32* %Enable.addr, align 4 (points-to size: 0)
+NODE 724:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 725:   store i32 %call, i32* %tmp_ndt_6, align 4 (points-to size: 0)
+NODE 726:   %0 = load i32, i32* %tmp_ndt_6, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 727:   %2 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 728:   ret i32 %2 (points-to size: 0)
+NODE 729:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE 730:   store i32 -1073741823, i32* %retval, align 4 (points-to size: 0)
+NODE 731: IoSetDeviceInterfaceState (points-to size: 1)
+    -> IoSetDeviceInterfaceState + 0
+NODE 732:   %call68 = call i32 @IoSetDeviceInterfaceState(i32 %51, i32 1) (points-to size: 0)
+NODE 733:   store i32 %call68, i32* %pnpStatus, align 4 (points-to size: 0)
+NODE 734:   store i32 1, i32* %disketteExtension__IsStarted, align 4 (points-to size: 0)
+NODE 735:   store i32 0, i32* %disketteExtension__HoldNewRequests, align 4 (points-to size: 0)
+NODE 736:   %30 = load i32, i32* %InterfaceType, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 737:   %31 = load i32, i32* @MaximumInterfaceType, align 4 (points-to size: 1)
+    -> null + 0
+NODE 738:   %32 = load i32, i32* %InterfaceType, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 739:   store i32 %32, i32* %fdcInfo__BusType, align 4 (points-to size: 0)
+NODE 740:   %33 = load i32, i32* %fdcInfo__BusType, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 741:   %34 = load i32, i32* %fdcInfo__BusNumber, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 742:   %35 = load i32, i32* %Dc, align 4 (points-to size: 1)
+    -> null + 0
+NODE 743:   %36 = load i32, i32* %fdcInfo__ControllerNumber, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 744:   %37 = load i32, i32* %Fp, align 4 (points-to size: 1)
+    -> null + 0
+NODE 745:   %38 = load i32, i32* %fdcInfo__PeripheralNumber, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 746:   %39 = load i32, i32* @FlConfigCallBack, align 4 (points-to size: 1)
+    -> null + 0
+NODE 747:   %40 = load i32, i32* %disketteExtension, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 748: <748> PSNodeType::CALL (points-to size: 0)
+NODE 749: <749> PSNodeType::ENTRY (points-to size: 0)
+NODE 750: i32 %BusType (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 751: i32 %BusNumber (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 752: i32 %ControllerType (points-to size: 1)
+    -> null + 0
+NODE 753: i32 %ControllerNumber (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 754: i32 %PeripheralType (points-to size: 1)
+    -> null + 0
+NODE 755: i32 %PeripheralNumber (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 756: i32 %CalloutRoutine (points-to size: 1)
+    -> null + 0
+NODE 757: i32 %Context (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 758:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 759:   %BusType.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %BusType.addr = alloca i32, align 4 + 0
+NODE 760:   %BusNumber.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %BusNumber.addr = alloca i32, align 4 + 0
+NODE 761:   %ControllerType.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ControllerType.addr = alloca i32, align 4 + 0
+NODE 762:   %ControllerNumber.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ControllerNumber.addr = alloca i32, align 4 + 0
+NODE 763:   %PeripheralType.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %PeripheralType.addr = alloca i32, align 4 + 0
+NODE 764:   %PeripheralNumber.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %PeripheralNumber.addr = alloca i32, align 4 + 0
+NODE 765:   %CalloutRoutine.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %CalloutRoutine.addr = alloca i32, align 4 + 0
+NODE 766:   %Context.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Context.addr = alloca i32, align 4 + 0
+NODE 767:   %tmp_ndt_4 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_4 = alloca i32, align 4 + 0
+NODE 768:   store i32 %BusType, i32* %BusType.addr, align 4 (points-to size: 0)
+NODE 769:   store i32 %BusNumber, i32* %BusNumber.addr, align 4 (points-to size: 0)
+NODE 770:   store i32 %ControllerType, i32* %ControllerType.addr, align 4 (points-to size: 0)
+NODE 771:   store i32 %ControllerNumber, i32* %ControllerNumber.addr, align 4 (points-to size: 0)
+NODE 772:   store i32 %PeripheralType, i32* %PeripheralType.addr, align 4 (points-to size: 0)
+NODE 773:   store i32 %PeripheralNumber, i32* %PeripheralNumber.addr, align 4 (points-to size: 0)
+NODE 774:   store i32 %CalloutRoutine, i32* %CalloutRoutine.addr, align 4 (points-to size: 0)
+NODE 775:   store i32 %Context, i32* %Context.addr, align 4 (points-to size: 0)
+NODE 776:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 777:   store i32 %call, i32* %tmp_ndt_4, align 4 (points-to size: 0)
+NODE 778:   %0 = load i32, i32* %tmp_ndt_4, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 779:   %2 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 780:   ret i32 %2 (points-to size: 0)
+NODE 781:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE 782:   store i32 -1073741823, i32* %retval, align 4 (points-to size: 0)
+NODE 783: IoQueryDeviceDescription (points-to size: 1)
+    -> IoQueryDeviceDescription + 0
+NODE 784:   %call50 = call i32 @IoQueryDeviceDescription(i32 %33, i32 %34, i32 % ... (points-to size: 0)
+NODE 785:   store i32 %call50, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 786:   %41 = load i32, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 787:   %42 = load i32, i32* %InterfaceType, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 788:   %inc = add nsw i32 %42, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 789:   store i32 %inc, i32* %InterfaceType, align 4 (points-to size: 0)
+NODE 790:   %call37 = call i32 @FloppyStartDevice(i32 %14, i32 %15) (points-to size: 0)
+NODE 791:   store i32 %call37, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 792:   %16 = load i32, i32* %irpSp__MinorFunction, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 793:   %8 = load i32, i32* %irpSp__MinorFunction, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 794:   %17 = load i32, i32* %disketteExtension__IsStarted, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 795:   %9 = load i32, i32* %irpSp__MinorFunction, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 796:   store i32 1, i32* %disketteExtension__HoldNewRequests, align 4 (points-to size: 0)
+NODE 797:   %26 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 798:   %27 = load i32, i32* %disketteExtension, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 799: <799> PSNodeType::CALL (points-to size: 0)
+NODE 800: <800> PSNodeType::ENTRY (points-to size: 0)
+NODE 801: i32 %Irp (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 802: i32 %DisketteExtension (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 803:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 804:   %Irp.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp.addr = alloca i32, align 4 + 0
+NODE 805:   %DisketteExtension.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DisketteExtension.addr = alloca i32, align 4 + 0
+NODE 806:   %status = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %status = alloca i32, align 4 + 0
+NODE 807:   %threadHandle = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %threadHandle = alloca i32, align 4 + 0
+NODE 808:   %DisketteExtension__PoweringDown = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DisketteExtension__PoweringDown = alloca i32, align 4 + 0
+NODE 809:   %DisketteExtension__ThreadReferenceCount = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DisketteExtension__ThreadReferenceCount = alloca i32, align 4 + 0
+NODE 810:   %DisketteExtension__FloppyThread = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DisketteExtension__FloppyThread = alloca i32, align 4 + 0
+NODE 811:   %Irp__IoStatus__Status = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp__IoStatus__Status = alloca i32, align 4 + 0
+NODE 812:   %Irp__IoStatus__Information = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp__IoStatus__Information = alloca i32, align 4 + 0
+NODE 813:   %Irp__Tail__Overlay__CurrentStackLocation__Control = alloca i32, ali ... [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Irp__Tail__Overlay__CurrentStackLocation__Control = alloca i32, ali ... + 0
+NODE 814:   %ObjAttributes = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ObjAttributes = alloca i32, align 4 + 0
+NODE 815:   %__cil_tmp12 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp12 = alloca i32, align 4 + 0
+NODE 816:   %__cil_tmp13 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp13 = alloca i32, align 4 + 0
+NODE 817:   store i32 %Irp, i32* %Irp.addr, align 4 (points-to size: 0)
+NODE 818:   store i32 %DisketteExtension, i32* %DisketteExtension.addr, align 4 (points-to size: 0)
+NODE 819:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 820:   store i32 %call, i32* %threadHandle, align 4 (points-to size: 0)
+NODE 821:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 822:   store i32 %call1, i32* %DisketteExtension__PoweringDown, align 4 (points-to size: 0)
+NODE 823:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 824:   store i32 %call2, i32* %DisketteExtension__ThreadReferenceCount, ali ... (points-to size: 0)
+NODE 825:   %call3 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 826:   store i32 %call3, i32* %DisketteExtension__FloppyThread, align 4 (points-to size: 0)
+NODE 827:   %call4 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 828:   store i32 %call4, i32* %ObjAttributes, align 4 (points-to size: 0)
+NODE 829:   %0 = load i32, i32* %DisketteExtension__PoweringDown, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 830:   store i32 -1073741101, i32* @myStatus, align 4 (points-to size: 0)
+NODE 831:   store i32 -1073741101, i32* %Irp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 832:   store i32 0, i32* %Irp__IoStatus__Information, align 4 (points-to size: 0)
+NODE 833:   store i32 -1073741101, i32* %retval, align 4 (points-to size: 0)
+NODE 834:   %21 = load i32, i32* %retval, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 835:   ret i32 %21 (points-to size: 0)
+NODE 836:   %1 = load i32, i32* %DisketteExtension__ThreadReferenceCount, align  ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 837:   %inc = add nsw i32 %1, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 838:   store i32 %inc, i32* %DisketteExtension__ThreadReferenceCount, align ... (points-to size: 0)
+NODE 839:   %2 = load i32, i32* %DisketteExtension__ThreadReferenceCount, align  ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 840:   %3 = load i32, i32* %DisketteExtension__ThreadReferenceCount, align  ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 841:   %inc7 = add nsw i32 %3, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 842:   store i32 %inc7, i32* %DisketteExtension__ThreadReferenceCount, alig ... (points-to size: 0)
+NODE 843:   %4 = load i32, i32* @PagingReferenceCount, align 4 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 844:   %inc8 = add nsw i32 %4, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 845:   store i32 %inc8, i32* @PagingReferenceCount, align 4 (points-to size: 0)
+NODE 846:   %5 = load i32, i32* @PagingReferenceCount, align 4 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 847:   %20 = load i32, i32* @pended, align 4 (points-to size: 1)
+    -> null + 0
+NODE 848:   %6 = load i32, i32* %threadHandle, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 849:   %7 = load i32, i32* %ObjAttributes, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 850:   %8 = load i32, i32* @FloppyThread, align 4 (points-to size: 1)
+    -> null + 0
+NODE 851:   %9 = load i32, i32* %DisketteExtension.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 852: <852> PSNodeType::CALL (points-to size: 0)
+NODE 853: <853> PSNodeType::ENTRY (points-to size: 0)
+NODE 854: i32 %ThreadHandle (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 855: i32 %DesiredAccess (points-to size: 1)
+    -> null + 0
+NODE 856: i32 %ObjectAttributes (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 857: i32 %ProcessHandle (points-to size: 1)
+    -> null + 0
+NODE 858: i32 %ClientId (points-to size: 1)
+    -> null + 0
+NODE 859: i32 %StartRoutine (points-to size: 1)
+    -> null + 0
+NODE 860: i32 %StartContext (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 861:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 862:   %ThreadHandle.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ThreadHandle.addr = alloca i32, align 4 + 0
+NODE 863:   %DesiredAccess.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DesiredAccess.addr = alloca i32, align 4 + 0
+NODE 864:   %ObjectAttributes.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ObjectAttributes.addr = alloca i32, align 4 + 0
+NODE 865:   %ProcessHandle.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ProcessHandle.addr = alloca i32, align 4 + 0
+NODE 866:   %ClientId.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ClientId.addr = alloca i32, align 4 + 0
+NODE 867:   %StartRoutine.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %StartRoutine.addr = alloca i32, align 4 + 0
+NODE 868:   %StartContext.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %StartContext.addr = alloca i32, align 4 + 0
+NODE 869:   %tmp_ndt_10 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_10 = alloca i32, align 4 + 0
+NODE 870:   store i32 %ThreadHandle, i32* %ThreadHandle.addr, align 4 (points-to size: 0)
+NODE 871:   store i32 %DesiredAccess, i32* %DesiredAccess.addr, align 4 (points-to size: 0)
+NODE 872:   store i32 %ObjectAttributes, i32* %ObjectAttributes.addr, align 4 (points-to size: 0)
+NODE 873:   store i32 %ProcessHandle, i32* %ProcessHandle.addr, align 4 (points-to size: 0)
+NODE 874:   store i32 %ClientId, i32* %ClientId.addr, align 4 (points-to size: 0)
+NODE 875:   store i32 %StartRoutine, i32* %StartRoutine.addr, align 4 (points-to size: 0)
+NODE 876:   store i32 %StartContext, i32* %StartContext.addr, align 4 (points-to size: 0)
+NODE 877:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 878:   store i32 %call, i32* %tmp_ndt_10, align 4 (points-to size: 0)
+NODE 879:   %0 = load i32, i32* %tmp_ndt_10, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 880:   %2 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 881:   ret i32 %2 (points-to size: 0)
+NODE 882:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE 883:   store i32 -1073741823, i32* %retval, align 4 (points-to size: 0)
+NODE 884: PsCreateSystemThread (points-to size: 1)
+    -> PsCreateSystemThread + 0
+NODE 885: FlQueueIrpToThread (points-to size: 1)
+    -> FlQueueIrpToThread + 0
+NODE 886:   %call12 = call i32 @PsCreateSystemThread(i32 %6, i32 0, i32 %7, i32  ... (points-to size: 0)
+NODE 887:   store i32 %call12, i32* %status, align 4 (points-to size: 0)
+NODE 888:   %10 = load i32, i32* %status, align 4 (points-to size: 0)
+NODE 889:   store i32 1, i32* @pended, align 4 (points-to size: 0)
+NODE 890:   store i32 259, i32* %retval, align 4 (points-to size: 0)
+NODE 891: <891> PSNodeType::CALL (points-to size: 0)
+NODE 892:   call void @errorFn() (points-to size: 0)
+NODE 893:   store i32 -1, i32* %DisketteExtension__ThreadReferenceCount, align 4 (points-to size: 0)
+NODE 894:   %11 = load i32, i32* @PagingReferenceCount, align 4 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 895:   %dec = add nsw i32 %11, -1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 896:   store i32 %dec, i32* @PagingReferenceCount, align 4 (points-to size: 0)
+NODE 897:   %12 = load i32, i32* @PagingReferenceCount, align 4 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 898:   %14 = load i32, i32* %threadHandle, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 899:   %15 = load i32, i32* @KernelMode, align 4 (points-to size: 1)
+    -> null + 0
+NODE 900:   %16 = load i32, i32* %DisketteExtension__FloppyThread, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 901: <901> PSNodeType::CALL (points-to size: 0)
+NODE 902: <902> PSNodeType::ENTRY (points-to size: 0)
+NODE 903: i32 %Handle (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 904: i32 %DesiredAccess (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 905: i32 %ObjectType (points-to size: 1)
+    -> null + 0
+NODE 906: i32 %AccessMode (points-to size: 1)
+    -> null + 0
+NODE 907: i32 %Object (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 908: i32 %HandleInformation (points-to size: 1)
+    -> null + 0
+NODE 909:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 910:   %Handle.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Handle.addr = alloca i32, align 4 + 0
+NODE 911:   %DesiredAccess.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %DesiredAccess.addr = alloca i32, align 4 + 0
+NODE 912:   %ObjectType.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ObjectType.addr = alloca i32, align 4 + 0
+NODE 913:   %AccessMode.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %AccessMode.addr = alloca i32, align 4 + 0
+NODE 914:   %Object.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Object.addr = alloca i32, align 4 + 0
+NODE 915:   %HandleInformation.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %HandleInformation.addr = alloca i32, align 4 + 0
+NODE 916:   %tmp_ndt_9 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_9 = alloca i32, align 4 + 0
+NODE 917:   store i32 %Handle, i32* %Handle.addr, align 4 (points-to size: 0)
+NODE 918:   store i32 %DesiredAccess, i32* %DesiredAccess.addr, align 4 (points-to size: 0)
+NODE 919:   store i32 %ObjectType, i32* %ObjectType.addr, align 4 (points-to size: 0)
+NODE 920:   store i32 %AccessMode, i32* %AccessMode.addr, align 4 (points-to size: 0)
+NODE 921:   store i32 %Object, i32* %Object.addr, align 4 (points-to size: 0)
+NODE 922:   store i32 %HandleInformation, i32* %HandleInformation.addr, align 4 (points-to size: 0)
+NODE 923:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 924:   store i32 %call, i32* %tmp_ndt_9, align 4 (points-to size: 0)
+NODE 925:   %0 = load i32, i32* %tmp_ndt_9, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 926:   %2 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 927:   ret i32 %2 (points-to size: 0)
+NODE 928:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE 929:   store i32 -1073741823, i32* %retval, align 4 (points-to size: 0)
+NODE 930: ObReferenceObjectByHandle (points-to size: 1)
+    -> ObReferenceObjectByHandle + 0
+NODE 931:   %call19 = call i32 @ObReferenceObjectByHandle(i32 %14, i32 1048576,  ... (points-to size: 0)
+NODE 932:   store i32 %call19, i32* %status, align 4 (points-to size: 0)
+NODE 933:   %17 = load i32, i32* %threadHandle, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 934: <934> PSNodeType::CALL (points-to size: 0)
+NODE 935: <935> PSNodeType::ENTRY (points-to size: 0)
+NODE 936: i32 %Handle (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 937:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 938:   %Handle.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %Handle.addr = alloca i32, align 4 + 0
+NODE 939:   %tmp_ndt_11 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_11 = alloca i32, align 4 + 0
+NODE 940:   store i32 %Handle, i32* %Handle.addr, align 4 (points-to size: 0)
+NODE 941:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 942:   store i32 %call, i32* %tmp_ndt_11, align 4 (points-to size: 0)
+NODE 943:   %0 = load i32, i32* %tmp_ndt_11, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 944:   %2 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 945:   ret i32 %2 (points-to size: 0)
+NODE 946:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE 947:   store i32 -1073741823, i32* %retval, align 4 (points-to size: 0)
+NODE 948: ZwClose (points-to size: 1)
+    -> ZwClose + 0
+NODE 949:   %call20 = call i32 @ZwClose(i32 %17) (points-to size: 0)
+NODE 950:   %18 = load i32, i32* %status, align 4 (points-to size: 0)
+NODE 951:   %13 = load i32, i32* %status, align 4 (points-to size: 0)
+NODE 952:   store i32 %13, i32* %retval, align 4 (points-to size: 0)
+NODE 953:   %19 = load i32, i32* %status, align 4 (points-to size: 0)
+NODE 954:   store i32 %19, i32* %retval, align 4 (points-to size: 0)
+NODE 955:   %call51 = call i32 @FlQueueIrpToThread(i32 %26, i32 %27) (points-to size: 0)
+NODE 956:   store i32 %call51, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 957:   %28 = load i32, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 958:   %conv = sext i32 %28 to i64 (points-to size: 0)
+NODE 959:   store i64 %conv, i64* %__cil_tmp29, align 8 (points-to size: 0)
+NODE 960:   %29 = load i64, i64* %__cil_tmp29, align 8 (points-to size: 0)
+NODE 961:   %18 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 962:   %19 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 963:   %44 = load i32, i32* %irpSp__MinorFunction, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 964:   %10 = load i32, i32* %irpSp__MinorFunction, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 965:   %30 = load i32, i32* %disketteExtension__FloppyThread, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 966:   %31 = load i32, i32* @Executive, align 4 (points-to size: 1)
+    -> null + 0
+NODE 967:   %32 = load i32, i32* @KernelMode, align 4 (points-to size: 1)
+    -> null + 0
+NODE 968: <968> PSNodeType::CALL (points-to size: 0)
+NODE 969:   %call55 = call i32 @KeWaitForSingleObject(i32 %30, i32 %31, i32 %32, ... (points-to size: 0)
+NODE 970:   %33 = load i32, i32* %disketteExtension__FloppyThread, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 971:   store i32 -1073741823, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 972:   %41 = load i32, i32* %ntStatus, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 973:   store i32 %41, i32* %Irp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 974:   %42 = load i32, i32* %ntStatus, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 975:   store i32 %42, i32* @myStatus, align 4 (points-to size: 0)
+NODE 976:   store i32 0, i32* %Irp__IoStatus__Information, align 4 (points-to size: 0)
+NODE 977:   %43 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 978: <978> PSNodeType::CALL (points-to size: 0)
+NODE 979:   call void @IofCompleteRequest(i32 %43, i32 0) (points-to size: 0)
+NODE 980:   %20 = load i32, i32* @SKIP1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 981:   store i32 %20, i32* @s, align 4 (points-to size: 0)
+NODE 982:   %21 = load i32, i32* %Irp__CurrentLocation, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 983:   %inc47 = add nsw i32 %21, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 984:   store i32 %inc47, i32* %Irp__CurrentLocation, align 4 (points-to size: 0)
+NODE 985:   %22 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, alig ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 986:   %inc48 = add nsw i32 %22, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 987:   store i32 %inc48, i32* %Irp__Tail__Overlay__CurrentStackLocation, al ... (points-to size: 0)
+NODE 988:   %23 = load i32, i32* %disketteExtension__TargetObject, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 989:   %24 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 990: <990> PSNodeType::CALL (points-to size: 0)
+NODE 991:   %call49 = call i32 @IofCallDriver(i32 %23, i32 %24) (points-to size: 0)
+NODE 992:   store i32 %call49, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 993:   %25 = load i32, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 994:   store i32 %25, i32* %retval, align 4 (points-to size: 0)
+NODE 995: <995> PSNodeType::CALL (points-to size: 0)
+NODE 996:   call void @errorFn() (points-to size: 0)
+NODE 997:   %45 = load i32, i32* %disketteExtension__IsStarted, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 998:   %11 = load i32, i32* %irpSp__MinorFunction, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 999:   store i32 0, i32* %disketteExtension__FloppyThread, align 4 (points-to size: 0)
+NODE 1000:   store i32 0, i32* %Irp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 1001:   store i32 0, i32* @myStatus, align 4 (points-to size: 0)
+NODE 1002:   %34 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1003:   %35 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1004:   store i32 0, i32* %Irp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 1005:   store i32 0, i32* @myStatus, align 4 (points-to size: 0)
+NODE 1006:   %53 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, alig ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1007:   store i32 %53, i32* %irpSp___0, align 4 (points-to size: 0)
+NODE 1008:   %54 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, alig ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1009:   %sub = sub nsw i32 %54, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1010:   store i32 %sub, i32* %nextIrpSp, align 4 (points-to size: 0)
+NODE 1011:   store i32 0, i32* %nextIrpSp__Control, align 4 (points-to size: 0)
+NODE 1012:   %55 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1013:   %56 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1014:   store i32 0, i32* %Irp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 1015:   store i32 0, i32* @myStatus, align 4 (points-to size: 0)
+NODE 1016:   %46 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1017:   %47 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1018:   %12 = load i32, i32* %irpSp__MinorFunction, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1019:   %36 = load i32, i32* @SKIP1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1020:   store i32 %36, i32* @s, align 4 (points-to size: 0)
+NODE 1021:   %37 = load i32, i32* %Irp__CurrentLocation, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1022:   %inc65 = add nsw i32 %37, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1023:   store i32 %inc65, i32* %Irp__CurrentLocation, align 4 (points-to size: 0)
+NODE 1024:   %38 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, alig ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1025:   %inc66 = add nsw i32 %38, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1026:   store i32 %inc66, i32* %Irp__Tail__Overlay__CurrentStackLocation, al ... (points-to size: 0)
+NODE 1027:   %39 = load i32, i32* %disketteExtension__TargetObject, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1028:   %40 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1029: <1029> PSNodeType::CALL (points-to size: 0)
+NODE 1030:   %call67 = call i32 @IofCallDriver(i32 %39, i32 %40) (points-to size: 0)
+NODE 1031:   store i32 %call67, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 1032: <1032> PSNodeType::CALL (points-to size: 0)
+NODE 1033:   call void @errorFn() (points-to size: 0)
+NODE 1034: <1034> PSNodeType::CALL (points-to size: 0)
+NODE 1035:   call void @errorFn() (points-to size: 0)
+NODE 1036:   %58 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, alig ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1037:   %sub95 = sub nsw i32 %58, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1038:   store i32 %sub95, i32* %irpSp___1, align 4 (points-to size: 0)
+NODE 1039:   %59 = load i32, i32* %doneEvent, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1040:   store i32 %59, i32* %irpSp__Context, align 4 (points-to size: 0)
+NODE 1041:   store i32 224, i32* %irpSp__Control, align 4 (points-to size: 0)
+NODE 1042:   %60 = load i32, i32* %disketteExtension__TargetObject, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1043:   %61 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1044: <1044> PSNodeType::CALL (points-to size: 0)
+NODE 1045:   %call96 = call i32 @IofCallDriver(i32 %60, i32 %61) (points-to size: 0)
+NODE 1046:   store i32 %call96, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 1047:   %62 = load i32, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 1048:   %conv97 = sext i32 %62 to i64 (points-to size: 0)
+NODE 1049:   store i64 %conv97, i64* %__cil_tmp30, align 8 (points-to size: 0)
+NODE 1050:   %63 = load i64, i64* %__cil_tmp30, align 8 (points-to size: 0)
+NODE 1051:   %57 = load i32, i32* @compRegistered, align 4 (points-to size: 1)
+    -> null + 0
+NODE 1052:   %48 = load i32, i32* @SKIP1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1053:   store i32 %48, i32* @s, align 4 (points-to size: 0)
+NODE 1054:   %49 = load i32, i32* %Irp__CurrentLocation, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1055:   %inc81 = add nsw i32 %49, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1056:   store i32 %inc81, i32* %Irp__CurrentLocation, align 4 (points-to size: 0)
+NODE 1057:   %50 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, alig ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1058:   %inc82 = add nsw i32 %50, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1059:   store i32 %inc82, i32* %Irp__Tail__Overlay__CurrentStackLocation, al ... (points-to size: 0)
+NODE 1060:   %51 = load i32, i32* %disketteExtension__TargetObject, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1061:   %52 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1062: <1062> PSNodeType::CALL (points-to size: 0)
+NODE 1063:   %call83 = call i32 @IofCallDriver(i32 %51, i32 %52) (points-to size: 0)
+NODE 1064:   store i32 %call83, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 1065: <1065> PSNodeType::CALL (points-to size: 0)
+NODE 1066:   call void @errorFn() (points-to size: 0)
+NODE 1067:   store i32 0, i32* %disketteExtension__IsStarted, align 4 (points-to size: 0)
+NODE 1068:   store i32 0, i32* %Irp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 1069:   store i32 0, i32* @myStatus, align 4 (points-to size: 0)
+NODE 1070:   %71 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1071:   %72 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1072:   %97 = load i32, i32* @PagingReferenceCount, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 1073:   %dec147 = add nsw i32 %97, -1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 1074:   store i32 %dec147, i32* @PagingReferenceCount, align 4 (points-to size: 0)
+NODE 1075:   %98 = load i32, i32* @PagingReferenceCount, align 4 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 1076:   %64 = load i32, i32* %doneEvent, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1077:   %65 = load i32, i32* @Executive, align 4 (points-to size: 1)
+    -> null + 0
+NODE 1078:   %66 = load i32, i32* @KernelMode, align 4 (points-to size: 1)
+    -> null + 0
+NODE 1079: <1079> PSNodeType::CALL (points-to size: 0)
+NODE 1080:   %call101 = call i32 @KeWaitForSingleObject(i32 %64, i32 %65, i32 %66 ... (points-to size: 0)
+NODE 1081:   %67 = load i32, i32* @myStatus, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1082:   store i32 %67, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 1083:   store i32 0, i32* %disketteExtension__HoldNewRequests, align 4 (points-to size: 0)
+NODE 1084:   %68 = load i32, i32* %ntStatus, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1085:   store i32 %68, i32* %Irp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 1086:   %69 = load i32, i32* %ntStatus, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1087:   store i32 %69, i32* @myStatus, align 4 (points-to size: 0)
+NODE 1088:   store i32 0, i32* %Irp__IoStatus__Information, align 4 (points-to size: 0)
+NODE 1089:   %70 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1090: <1090> PSNodeType::CALL (points-to size: 0)
+NODE 1091:   call void @IofCompleteRequest(i32 %70, i32 0) (points-to size: 0)
+NODE 1092: <1092> PSNodeType::CALL (points-to size: 0)
+NODE 1093:   call void @errorFn() (points-to size: 0)
+NODE 1094:   store i32 1, i32* @compRegistered, align 4 (points-to size: 0)
+NODE 1095:   %73 = load i32, i32* @SKIP1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1096:   store i32 %73, i32* @s, align 4 (points-to size: 0)
+NODE 1097:   %74 = load i32, i32* %Irp__CurrentLocation, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1098:   %inc109 = add nsw i32 %74, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1099:   store i32 %inc109, i32* %Irp__CurrentLocation, align 4 (points-to size: 0)
+NODE 1100:   %75 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, alig ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1101:   %inc110 = add nsw i32 %75, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1102:   store i32 %inc110, i32* %Irp__Tail__Overlay__CurrentStackLocation, a ... (points-to size: 0)
+NODE 1103:   %76 = load i32, i32* %disketteExtension__TargetObject, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1104:   %77 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1105: <1105> PSNodeType::CALL (points-to size: 0)
+NODE 1106:   %call111 = call i32 @IofCallDriver(i32 %76, i32 %77) (points-to size: 0)
+NODE 1107:   store i32 %call111, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 1108: <1108> PSNodeType::CALL (points-to size: 0)
+NODE 1109:   call void @errorFn() (points-to size: 0)
+NODE 1110:   store i32 0, i32* %disketteExtension__HoldNewRequests, align 4 (points-to size: 0)
+NODE 1111:   store i32 0, i32* %disketteExtension__IsStarted, align 4 (points-to size: 0)
+NODE 1112:   store i32 1, i32* %disketteExtension__IsRemoved, align 4 (points-to size: 0)
+NODE 1113:   %78 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1114:   %79 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1115:   %90 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1116:   %91 = load i32, i32* @NP, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1117:   %99 = load i32, i32* %ntStatus, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1118:   store i32 %99, i32* %retval, align 4 (points-to size: 0)
+NODE 1119:   %80 = load i32, i32* @SKIP1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1120:   store i32 %80, i32* @s, align 4 (points-to size: 0)
+NODE 1121:   %81 = load i32, i32* %Irp__CurrentLocation, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1122:   %inc117 = add nsw i32 %81, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1123:   store i32 %inc117, i32* %Irp__CurrentLocation, align 4 (points-to size: 0)
+NODE 1124:   %82 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, alig ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1125:   %inc118 = add nsw i32 %82, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1126:   store i32 %inc118, i32* %Irp__Tail__Overlay__CurrentStackLocation, a ... (points-to size: 0)
+NODE 1127:   store i32 0, i32* %Irp__IoStatus__Status, align 4 (points-to size: 0)
+NODE 1128:   store i32 0, i32* @myStatus, align 4 (points-to size: 0)
+NODE 1129:   %83 = load i32, i32* %disketteExtension__TargetObject, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1130:   %84 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1131: <1131> PSNodeType::CALL (points-to size: 0)
+NODE 1132:   %call119 = call i32 @IofCallDriver(i32 %83, i32 %84) (points-to size: 0)
+NODE 1133:   store i32 %call119, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 1134:   %85 = load i32, i32* %disketteExtension__InterfaceString__Buffer, al ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1135: <1135> PSNodeType::CALL (points-to size: 0)
+NODE 1136:   call void @errorFn() (points-to size: 0)
+NODE 1137:   %92 = load i32, i32* @SKIP1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1138:   store i32 %92, i32* @s, align 4 (points-to size: 0)
+NODE 1139:   %93 = load i32, i32* %Irp__CurrentLocation, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1140:   %inc135 = add nsw i32 %93, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1141:   store i32 %inc135, i32* %Irp__CurrentLocation, align 4 (points-to size: 0)
+NODE 1142:   %94 = load i32, i32* %Irp__Tail__Overlay__CurrentStackLocation, alig ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1143:   %inc136 = add nsw i32 %94, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1144:   store i32 %inc136, i32* %Irp__Tail__Overlay__CurrentStackLocation, a ... (points-to size: 0)
+NODE 1145:   %95 = load i32, i32* %disketteExtension__TargetObject, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1146:   %96 = load i32, i32* %Irp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1147: <1147> PSNodeType::CALL (points-to size: 0)
+NODE 1148:   %call137 = call i32 @IofCallDriver(i32 %95, i32 %96) (points-to size: 0)
+NODE 1149:   store i32 %call137, i32* %ntStatus, align 4 (points-to size: 0)
+NODE 1150: <1150> PSNodeType::CALL (points-to size: 0)
+NODE 1151:   call void @errorFn() (points-to size: 0)
+NODE 1152:   %86 = load i32, i32* %disketteExtension__InterfaceString, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1153: <1153> PSNodeType::CALL (points-to size: 0)
+NODE 1154:   %call123 = call i32 @IoSetDeviceInterfaceState(i32 %86, i32 0) (points-to size: 0)
+NODE 1155:   %87 = load i32, i32* %disketteExtension__ArcName__Length, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1156:   %88 = load i32, i32* %disketteExtension__ArcName, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1157: <1157> PSNodeType::CALL (points-to size: 0)
+NODE 1158: <1158> PSNodeType::ENTRY (points-to size: 0)
+NODE 1159: i32 %SymbolicLinkName (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1160:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE 1161:   %SymbolicLinkName.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %SymbolicLinkName.addr = alloca i32, align 4 + 0
+NODE 1162:   %tmp_ndt_3 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_3 = alloca i32, align 4 + 0
+NODE 1163:   store i32 %SymbolicLinkName, i32* %SymbolicLinkName.addr, align 4 (points-to size: 0)
+NODE 1164:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1165:   store i32 %call, i32* %tmp_ndt_3, align 4 (points-to size: 0)
+NODE 1166:   %0 = load i32, i32* %tmp_ndt_3, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1167:   %2 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1168:   ret i32 %2 (points-to size: 0)
+NODE 1169:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE 1170:   store i32 -1073741823, i32* %retval, align 4 (points-to size: 0)
+NODE 1171: IoDeleteSymbolicLink (points-to size: 1)
+    -> IoDeleteSymbolicLink + 0
+NODE 1172:   %call128 = call i32 @IoDeleteSymbolicLink(i32 %88) (points-to size: 0)
+NODE 1173:   %89 = load i32, i32* %IoGetConfigurationInformation__FloppyCount, al ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1174:   %dec = add nsw i32 %89, -1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 1175:   store i32 %dec, i32* %IoGetConfigurationInformation__FloppyCount, al ... (points-to size: 0)
+NODE 1176:   %call12 = call i32 @FloppyPnp(i32 %11, i32 %12) (points-to size: 0)
+NODE 1177:   store i32 %call12, i32* %status, align 4 (points-to size: 0)
+NODE 1178:   store i32 -1, i32* %retval, align 4 (points-to size: 0)
+NODE 1179:   %24 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1180:   %25 = load i32, i32* @SKIP2, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1181:   %26 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1182:   %27 = load i32, i32* @IPC, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1183:   %30 = load i32, i32* @pended, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1184:   %28 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1185:   %29 = load i32, i32* @DC, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1186:   %31 = load i32, i32* %status, align 4 (points-to size: 1)
+    -> null + 0
+NODE 1187:   %32 = load i32, i32* @s, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1188:   %33 = load i32, i32* @DC, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1189: <1189> PSNodeType::CALL (points-to size: 0)
+NODE 1190:   call void @errorFn() (points-to size: 0)
+NODE 1191: <1191> PSNodeType::CALL (points-to size: 0)
+NODE 1192:   call void @errorFn() (points-to size: 0)
+NODE 1193:   %34 = load i32, i32* %status, align 4 (points-to size: 1)
+    -> null + 0
+NODE 1194:   %35 = load i32, i32* %status, align 4 (points-to size: 1)
+    -> null + 0
+NODE 1195:   %36 = load i32, i32* @lowerDriverReturn, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 1196: <1196> PSNodeType::CALL (points-to size: 0)
+NODE 1197:   call void @errorFn() (points-to size: 0)
+NODE 1198: <1198> PSNodeType::CALL (points-to size: 0)
+NODE 1199:   call void @errorFn() (points-to size: 0)

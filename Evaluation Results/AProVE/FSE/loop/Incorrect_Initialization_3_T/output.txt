@@ -1,0 +1,11 @@
+/liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_3_T/Incorrect_Initialization_3_T.c:8:7: warning: incompatible redeclaration of library function 'strchr' [-Wincompatible-library-redeclaration]
+char* strchr(char* str, int c) {
+      ^
+/liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_3_T/Incorrect_Initialization_3_T.c:8:7: note: 'strchr' is a builtin with type 'char *(const char *, int)'
+1 warning generated.
+
+line 122:5 extraneous input 'metadata' expecting EXCLAMATION
+line 122:25 no viable alternative at input '!'
+Accessing possible trap value at node 680.
+MAYBE
+Runtime: 7678 milliseconds

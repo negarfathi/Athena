@@ -1,0 +1,329 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+Running CPAchecker with Java heap of size 10000M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with --stack if needed.
+Language C detected and set for analysis (CPAMain.detectFrontendLanguageIfNecessary, INFO)
+
+CPAchecker 4.0 / terminationAnalysis (OpenJDK 64-Bit Server VM 17.0.15) started (CPAchecker.run, INFO)
+
+Parsing CFA from file(s) "Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/rekcba_aso_false-unreach-call.1.M1/rekcba_aso_false-unreach-call.1.M1.c" (CPAchecker.parse, INFO)
+
+Using Restarting Algorithm (CoreComponentsFactory.createAlgorithm, INFO)
+
+The following configuration options were specified but are not used:
+ cpa.arg.lateMerge
+ counterexample.export.exportWitness 
+ (CPAchecker.printConfigurationWarnings, WARNING)
+
+Starting analysis ... (CPAchecker.runAlgorithm, INFO)
+
+Loading analysis 1 from file /cpachecker/config/components/combinations-parallel-termination.properties ... (RestartAlgorithm.run, INFO)
+
+Using the following resource limits: Thread CPU-time limit of 300s (Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:ResourceLimitChecker.fromConfiguration, INFO)
+
+Using predicate analysis with MathSAT5 version 5.6.10 (9293adc746be) (May 31 2023 12:38:06, gmp 6.2.0, gcc 7.5.0, 64-bit, reentrant) and JFactory 1.21. (Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:PredicateCPA:PredicateCPA.<init>, INFO)
+
+Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy. (Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:PredicateCPA:PredicateCPARefiner.<init>, INFO)
+
+Warning: Skipping one analysis because the configuration file /cpachecker/config/components/combinations-parallel-termination.properties is invalid (TerminationAlgorithm needs a TerminationCPA) (CPAs.retrieveCPAOrFail, WARNING)
+
+Loading analysis 1 from file /cpachecker/config/components/termination-recursion.properties ... (RestartAlgorithm.run, INFO)
+
+Mismatch of configuration options when loading from '/cpachecker/config/components/termination-recursion.properties': 'termination.config' has two values 'terminationAnalysis.properties' and 'termination-recursion.properties'. Using 'termination-recursion.properties'. (NestingAlgorithm.checkConfigs, INFO)
+
+Using unsound approximation of ints with unbounded integers and floats with rationals for encoding program semantics. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:FormulaManagerView.<init>, WARNING)
+
+Using predicate analysis with MathSAT5 version 5.6.10 (9293adc746be) (May 31 2023 12:38:06, gmp 6.2.0, gcc 7.5.0, 64-bit, reentrant) and JFactory 1.21. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:PredicateCPA.<init>, INFO)
+
+Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:PredicateCPARefiner.<init>, INFO)
+
+Using unsound approximation of ints with unbounded integers and floats with rationals for encoding program semantics. (Analysis /cpachecker/config/components/termination-recursion.properties:FormulaManagerView.<init>, WARNING)
+
+Starting analysis 1 ... (RestartAlgorithm.run, INFO)
+
+Starting termination algorithm. (Analysis /cpachecker/config/components/termination-recursion.properties:TerminationAlgorithm.run0, INFO)
+
+Assuming external function ecrobot_bt_data_logger to be a pure function. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:ExpressionToFormulaVisitor.visit, INFO)
+
+Warning: Could not extract lasso (Loop with heads [N228]
+  incoming: [src/aso.bug1.c, line 205:	N227 -{while}-> N228]
+  outgoing: [src/aso.bug1.c, line 205:	N228 -{[!(i < 2)]}-> N230]
+  nodes:    [N228, N229, N231, N232, N233, N234]
+). (Unknown sort in equality) (Analysis /cpachecker/config/components/termination-recursion.properties:InequalityConverter.convert, WARNING)
+
+Could not synthesize a termination or non-termination argument. (Analysis /cpachecker/config/components/termination-recursion.properties:TerminationAlgorithm.proveLoopTermination, WARNING)
+
+Assuming external function nxt_motor_set_speed to be a pure function. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:ExpressionToFormulaVisitor.visit, INFO)
+
+Assuming external function ecrobot_sound_tone to be a pure function. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:ExpressionToFormulaVisitor.visit, INFO)
+
+Assuming external function nxt_motor_set_count to be a pure function. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:ExpressionToFormulaVisitor.visit, INFO)
+
+Termination algorithm did not find a non-terminating loop. (Analysis /cpachecker/config/components/termination-recursion.properties:TerminationAlgorithm.run0, INFO)
+
+Analysis 1 terminated, but result is unsound. (RestartAlgorithm.run, INFO)
+
+No further configuration available. (RestartAlgorithm.run, INFO)
+
+Stopping analysis ... (CPAchecker.runAlgorithm, INFO)
+
+Analysis incomplete: no errors found, but not everything could be checked. (CPAchecker.analyzeResult, WARNING)
+
+
+Restart Algorithm statistics
+----------------------------
+Number of algorithms provided:    2
+Number of algorithms used:        1
+Last algorithm used:        /cpachecker/config/components/combinations-parallel-termination.properties
+Total time for algorithm 1:   242.785s
+
+PredicateCPA statistics
+-----------------------
+Number of abstractions:            5 (0% of all post computations)
+  Times abstraction was reused:    0
+  Because of function entry/exit:  0 (0%)
+  Because of loop head:            4 (80%)
+  Because of join nodes:           0 (0%)
+  Because of threshold:            0 (0%)
+  Because of target state:         1 (20%)
+  Times precision was empty:       5 (100%)
+  Times precision was {false}:     0 (0%)
+  Times result was cached:         0 (0%)
+  Times cartesian abs was used:    0 (0%)
+  Times boolean abs was used:      0 (0%)
+  Times result was 'false':        0 (0%)
+Number of strengthen sat checks:   0
+Number of coverage checks:         12800
+  BDD entailment checks:           2
+Number of SMT sat checks:          0
+  trivial:                         0
+  cached:                          0
+
+Max ABE block size:                       824
+Avg ABE block size:                                183.60 (sum: 918, count: 5, min: 0, max: 824)
+Number of predicates discovered:          0
+
+Time for post operator:                                2.610s
+  Time for path formula creation:                      2.591s
+Time for strengthen operator:                          0.058s
+Time for prec operator:                                0.073s
+  Time for abstraction:                  0.001s (Max:     0.001s, Count: 5)
+    Solving time:                        0.000s (Max:     0.000s)
+    Model enumeration time:              0.000s
+    Time for BDD construction:           0.000s (Max:     0.000s)
+Time for merge operator:                               0.429s
+Time for coverage checks:                              0.004s
+  Time for BDD entailment checks:                      0.003s
+Total time for SMT solver (w/o itp):     0.000s
+
+Number of path formula cache hits:   156 (0%)
+
+Inside post operator:                  
+  Inside path formula creation:        
+    Time for path formula computation:     2.482s
+
+Total number of created targets for pointer analysis: 0
+
+
+Number of BDD nodes:                               202
+Size of BDD node table:                            466043
+Size of BDD cache:                                 46619
+Size of BDD node cleanup queue:                    0.00 (sum: 0, count: 23, min: 0, max: 0)
+Time for BDD node cleanup:                             0.000s
+Time for BDD garbage collection:                       0.000s (in 0 runs)
+
+KeyValue statistics
+-------------------
+Init. function predicates:                         0
+Init. global predicates:                           0
+Init. location predicates:                         0
+
+Invariant Generation statistics
+-------------------------------
+
+AutomatonAnalysis (NonTerminationLabelAutomaton) statistics
+-----------------------------------------------------------
+Number of states:                                  1
+Total time for successor computation:                  0.084s
+Automaton transfers with branching:                0
+Automaton transfer successors:                     1.00 (sum: 49180, count: 49234, min: 0, max: 1) [0 x 54, 1 x 49180]
+Number of states with assumption transitions:      0
+
+AutomatonAnalysis (TerminatingFunctions) statistics
+---------------------------------------------------
+Number of states:                                  1
+Total time for successor computation:                  0.025s
+Automaton transfers with branching:                0
+Automaton transfer successors:                     1.00 (sum: 49180, count: 49180, min: 1, max: 1) [1 x 49180]
+Number of states with assumption transitions:      0
+
+Termination Algorithm statistics
+--------------------------------
+Total time :                                          241.421s
+Time for recursion analysis:                            0.000s
+
+Number of analysed loops:                               1 (100%)
+Total time for loop analysis:                         241.412s
+  Avg time per loop analysis:                         241.412s
+  Max time per loop analysis:                         241.412s
+
+Number of safety analysis runs:                         2
+  Avg safety analysis run per loop:                     2.00
+  Max safety analysis run per loop:                     2 	 for loops [N228]
+Total time for safety analysis:                        17.879s
+  Avg time per safety analysis run:                     8.939s
+  Max time per safety analysis run:                    12.531s
+
+Number of analysed lassos:                              0
+  Avg number of lassos per loop:                        0.00
+  Max number of lassos per loop:                        0 	 for loops 
+  Avg number of lassos per iteration:                   0.00
+  Max number of lassos per iteration:                   0
+
+Total time for lassos analysis:                       223.500s
+  Avg time per iteration:                             223.500s
+  Max time per iteration:                             223.500s
+  Time for lassos construction:                       223.500s
+    Avg time for lasso construction per iteration:    223.500s
+    Max time for lasso construction per iteration:    223.500s
+      Time for stem and loop construction:                         0.320s
+        Avg time for stem and loop construction per iteration:      0.320s
+        Max time for stem and loop construction per iteration:      0.320s
+      Time for lassos creation:                       223.147s
+        Avg time for lassos creation per iteration:    223.147s
+        Max time for lassos creation per iteration:    223.147s
+  Total time for non-termination analysis:              0.000s
+    Avg time for non-termination analysis per lasso:    0.000s
+    Max time for non-termination analysis per lasso:    0.000s
+  Total time for termination analysis:                  0.000s
+    Avg time for termination analysis per lasso:        0.000s
+    Max time for termination analysis per lasso:        0.000s
+
+Total number of termination arguments:                  0
+  Avg termination arguments per loop:                   0.00
+  Max termination arguments per loop:                   0 	 for loops 
+
+
+Counterexample-Check Algorithm statistics
+-----------------------------------------
+Number of counterexample checks:    0
+
+Termination Algorithm statistics
+--------------------------------
+Total time :                                          241.421s
+Time for recursion analysis:                            0.000s
+
+Number of analysed loops:                               1 (100%)
+Total time for loop analysis:                         241.412s
+  Avg time per loop analysis:                         241.412s
+  Max time per loop analysis:                         241.412s
+
+Number of safety analysis runs:                         2
+  Avg safety analysis run per loop:                     2.00
+  Max safety analysis run per loop:                     2 	 for loops [N228]
+Total time for safety analysis:                        17.879s
+  Avg time per safety analysis run:                     8.939s
+  Max time per safety analysis run:                    12.531s
+
+Number of analysed lassos:                              0
+  Avg number of lassos per loop:                        0.00
+  Max number of lassos per loop:                        0 	 for loops 
+  Avg number of lassos per iteration:                   0.00
+  Max number of lassos per iteration:                   0
+
+Total time for lassos analysis:                       223.500s
+  Avg time per iteration:                             223.500s
+  Max time per iteration:                             223.500s
+  Time for lassos construction:                       223.500s
+    Avg time for lasso construction per iteration:    223.500s
+    Max time for lasso construction per iteration:    223.500s
+      Time for stem and loop construction:                         0.320s
+        Avg time for stem and loop construction per iteration:      0.320s
+        Max time for stem and loop construction per iteration:      0.320s
+      Time for lassos creation:                       223.147s
+        Avg time for lassos creation per iteration:    223.147s
+        Max time for lassos creation per iteration:    223.147s
+  Total time for non-termination analysis:              0.000s
+    Avg time for non-termination analysis per lasso:    0.000s
+    Max time for non-termination analysis per lasso:    0.000s
+  Total time for termination analysis:                  0.000s
+    Avg time for termination analysis per lasso:        0.000s
+    Max time for termination analysis per lasso:        0.000s
+
+Total number of termination arguments:                  0
+  Avg termination arguments per loop:                   0.00
+  Max termination arguments per loop:                   0 	 for loops 
+
+
+Counterexample-Check Algorithm statistics
+-----------------------------------------
+Number of counterexample checks:    0
+
+Code Coverage
+-----------------------------
+  Function coverage:      0.897
+  Visited lines:          182
+  Total lines:            182
+  Line coverage:          1.000
+  Visited conditions:     1196
+  Total conditions:       1196
+  Condition coverage:     1.000
+
+CPAchecker general statistics
+-----------------------------
+Number of program locations:                       2192
+Number of CFA edges (per node):                        2505 (count: 2192, min: 0, max: 27, avg: 1.14)
+Number of relevant variables:                      120
+Number of functions:                               39
+Number of loops (and loop nodes):                         1 (sum: 6, min: 6, max: 6, avg: 6.00)
+Size of reached set:             33258
+  Number of reached locations:   1592 (73%)
+    Avg states per location:     20
+    Max states per location:     410 (at node N1133)
+  Number of reached functions:   36 (92%)
+  Number of partitions:          1592
+    Avg size of partitions:      20
+    Max size of partitions:      410 (with key N1133)
+  Number of target states:       0
+
+Time for analysis setup:          2.189s
+  Time for loading CPAs:          0.045s
+  Time for loading parser:        0.214s
+  Time for CFA construction:      1.879s
+    Time for parsing file(s):     0.434s
+    Time for AST to CFA:          0.609s
+    Time for CFA sanity check:    0.143s
+    Time for post-processing:     0.469s
+    Time for loop structure:      0.017s
+    Time for AST structure:       0.000s
+    Time for CFA export:          0.851s
+      Time for function pointers resolving:            0.006s
+        Function calls via function pointers:             0 (count: 1, min: 0, max: 0, avg: 0.00)
+        Instrumented function pointer calls:              0 (count: 1, min: 0, max: 0, avg: 0.00)
+        Function calls with function pointer arguments:        0 (count: 1, min: 0, max: 0, avg: 0.00)
+        Instrumented function pointer arguments:          0 (count: 1, min: 0, max: 0, avg: 0.00)
+      Time for classifying variables:                  0.310s
+        Time for collecting variables:                 0.223s
+        Time for solving dependencies:                 0.004s
+        Time for building hierarchy:                   0.001s
+        Time for building classification:              0.067s
+        Time for exporting data:                       0.015s
+Time for Analysis:              242.786s
+CPU time for analysis:          299.780s
+Time for analyzing result:        0.007s
+Total time for CPAchecker:      244.991s
+Total CPU time for CPAchecker:  304.420s
+Time for statistics:              0.422s
+
+Time for Garbage Collector:       5.070s (in 1805 runs)
+Garbage Collector(s) used:    PS MarkSweep, PS Scavenge
+Used heap memory:                394MB (   376 MiB) max;    193MB (   184 MiB) avg;    429MB (   409 MiB) peak
+Used non-heap memory:             68MB (    65 MiB) max;     63MB (    60 MiB) avg;     71MB (    67 MiB) peak
+Used in PS Old Gen pool:         281MB (   268 MiB) max;    136MB (   129 MiB) avg;    281MB (   268 MiB) peak
+Allocated heap memory:           429MB (   409 MiB) max;    368MB (   351 MiB) avg
+Allocated non-heap memory:        72MB (    69 MiB) max;     68MB (    65 MiB) avg
+Total process virtual memory:  14914MB ( 14223 MiB) max;  14897MB ( 14207 MiB) avg
+
+Verification result: UNKNOWN, incomplete analysis.
+More details about the verification run can be found in the directory "./output".
+Graphical representation included in the file "./output/Report.html".
+Runtime: 249166 milliseconds

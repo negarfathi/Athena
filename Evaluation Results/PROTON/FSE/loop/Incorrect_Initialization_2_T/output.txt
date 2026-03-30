@@ -1,0 +1,184 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.e01x9g
+
+Input File is : Incorrect_Initialization_2_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+d37b2f4794acf1b0b431110c5e1fb23d652c5962
+https://github.com/acassen/keepalived/commit/d37b2f4794acf1b0b431110c5e1fb23d652c5962
+termination: true
+*/
+int matroska_deliver_packet( int q )
+{
+    {if( q == 1 )
+        {return 0;}
+    else
+        {return 1;}}
+}
+int flag = 0;
+int res_return()
+{
+    {if( flag++ < 100 )
+        {return __VERIFIER_nondet_int();}}
+    return -1;
+}
+int main()
+{
+    int matroska =  __VERIFIER_nondet_int();
+    int res = 0;
+    while( matroska_deliver_packet( matroska) )
+    {
+        res = 0;
+        while( res == 0 )
+        {
+            int id =  __VERIFIER_nondet_int();
+            switch( id ){
+                case 1:
+                    {if( res = res_return() < 0 )
+                        {break;}}
+                    {if( res = res_return() == 0 )
+                        {res = 1;}}
+                    break;
+
+                default:
+                case 2:
+                    res = res_return();
+                    break;
+            }
+        }
+        {if( res == -1 )
+            {matroska = 1;}}
+    }
+    return 0;
+}
+./proton: line 26:    90 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Incorrect_Initialization_2_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+d37b2f4794acf1b0b431110c5e1fb23d652c5962
+https://github.com/acassen/keepalived/commit/d37b2f4794acf1b0b431110c5e1fb23d652c5962
+termination: true
+*/
+int matroska_deliver_packet( int q )
+{
+    { __VERIFIER_reached_control(9, __func__);
+if( q == 1 )
+        { __VERIFIER_control_true(10, __func__);
+return 0;}
+    else
+        { __VERIFIER_control_false(12, __func__);
+return 1;}}
+}
+int flag = 0;
+int res_return()
+{
+    { __VERIFIER_reached_control(17, __func__);
+if( flag++ < 100 )
+        { __VERIFIER_control_true(18, __func__);
+return __VERIFIER_nondet_int();}}
+    return -1;
+}
+int main()
+{
+    int matroska =  __VERIFIER_nondet_int();
+    int res = 0;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(26, __func__);
+ while( matroska_deliver_packet( matroska) )
+    { __VERIFIER_loop_head(26, __func__);
+printf("CBMC Instrumentation @ line26");myBool flag=__VERIFIER_nondet_myBool();static int oflag;static int omatroska;static int ores;if(pStored0){__CPROVER_assert(!(oflag==flag && omatroska==matroska && ores==res),"recurrent state found");} if(flag){oflag=flag;omatroska=matroska;ores=res;pStored0=myTrue;} 
+        res = 0;
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(29, __func__);
+ while( res == 0 )
+        { __VERIFIER_loop_head(29, __func__);
+printf("CBMC Instrumentation @ line29");myBool flag=__VERIFIER_nondet_myBool();static int oflag;static int omatroska;static int ores;if(pStored1){__CPROVER_assert(!(oflag==flag && omatroska==matroska && ores==res),"recurrent state found");} if(flag){oflag=flag;omatroska=matroska;ores=res;pStored1=myTrue;} 
+            int id =  __VERIFIER_nondet_int();
+            switch( id ){
+                case 1:
+                    { __VERIFIER_reached_control(33, __func__);
+if( res = res_return() < 0 )
+                        { __VERIFIER_control_true(34, __func__);
+break;}}
+                    { __VERIFIER_reached_control(35, __func__);
+if( res = res_return() == 0 )
+                        { __VERIFIER_control_true(36, __func__);
+res = 1;}}
+                    break;
+
+                default:
+                case 2:
+                    res = res_return();
+                    break;
+            }
+        }
+        { __VERIFIER_reached_control(45, __func__);
+if( res == -1 )
+            { __VERIFIER_control_true(46, __func__);
+matroska = 1;}}
+    }
+    return 0;
+}
+./proton: line 26:   102 Aborted                 instrumenter -in *braced.c -c
+Incorrect_Initialization_2_T_braced_instrumented.c
+NTFILE is Incorrect_Initialization_2_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Incorrect_Initialization_2_T.c
+b'cd408ad7feb63564ba2246fd255b8885a397f7103bb3bfb71e101d81c643ff17  Incorrect_Initialization_2_T.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_2_T/Incorrect_Initialization_2_T.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 26 reachedControl
+matroska_deliver_packet 9 reachedControl
+matroska_deliver_packet 12 falseBranch
+main 26 loopHead
+enteringLasso
+main 29 reachedControl
+main 29 loopHead
+res_return 17 reachedControl
+res_return 18 trueBranch
+main 29 loopHead
+Trace file line inside enterred lasso check : main 29 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_2_T/Incorrect_Initialization_2_T.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Incorrect_Initialization_2_T.c
+FILE=Incorrect_Initialization_2_T_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2136 milliseconds

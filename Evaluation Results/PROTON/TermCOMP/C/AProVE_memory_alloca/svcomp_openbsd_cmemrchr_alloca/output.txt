@@ -1,0 +1,133 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.3iEJ97
+
+Input File is : svcomp_openbsd_cmemrchr_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/*
+ * Reverse memchr()
+ * Find the last occurrence of 'c' in the buffer 's' of size 'n'.
+ */
+void *
+cmemrchr(const void *s, int c, int n)
+{
+	const unsigned char *cp;
+
+	{if (n != 0) {
+		cp = (unsigned char *)s + n;
+		do {
+			{if (*(--cp) == (unsigned char)c)
+				{return((void *)cp);}}
+		} while (--n != 0);
+	}}
+	return(NULL);
+}
+
+int main() {
+  int length = __VERIFIER_nondet_int();
+  int n = __VERIFIER_nondet_int();
+  int c = __VERIFIER_nondet_int();
+  {if (length < 1) {
+      length = 1;
+  }}
+  {if (n < 1) {
+      n = 1;
+  }}
+  char* nondetArea = (char*) alloca(n * sizeof(char));
+  cmemrchr(nondetArea, c, n);
+  return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_openbsd_cmemrchr_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/*
+ * Reverse memchr()
+ * Find the last occurrence of 'c' in the buffer 's' of size 'n'.
+ */
+void *
+cmemrchr(const void *s, int c, int n)
+{
+	const unsigned char *cp;
+
+	{ __VERIFIER_reached_control(14, __func__);
+if (n != 0) { __VERIFIER_control_true(14, __func__);
+
+		cp = (unsigned char *)s + n;
+	myBool pStored0 = myFalse; __VERIFIER_reached_control(16, __func__);
+	do { __VERIFIER_loop_head(16, __func__);
+printf("CBMC Instrumentation @ line16");myBool flag=__VERIFIER_nondet_myBool();static int oc;static const unsigned char * ocp;static int on;if(pStored0){__CPROVER_assert(!(oc==c && ocp==cp && on==n),"recurrent state found");} if(flag){oc=c;ocp=cp;on=n;pStored0=myTrue;} 
+			{ __VERIFIER_reached_control(17, __func__);
+if (*(--cp) == (unsigned char)c)
+				{ __VERIFIER_control_true(18, __func__);
+return((void *)cp);}}
+		} while (--n != 0);
+	}}
+	return(NULL);
+}
+
+int main() {
+  int length = __VERIFIER_nondet_int();
+  int n = __VERIFIER_nondet_int();
+  int c = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(28, __func__);
+if (length < 1) { __VERIFIER_control_true(28, __func__);
+
+      length = 1;
+  }}
+  { __VERIFIER_reached_control(31, __func__);
+if (n < 1) { __VERIFIER_control_true(31, __func__);
+
+      n = 1;
+  }}
+  char* nondetArea = (char*) alloca(n * sizeof(char));
+  cmemrchr(nondetArea, c, n);
+  return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_openbsd_cmemrchr_alloca_braced_instrumented.c
+NTFILE is svcomp_openbsd_cmemrchr_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_openbsd_cmemrchr_alloca.c
+FILE=svcomp_openbsd_cmemrchr_alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182763 milliseconds

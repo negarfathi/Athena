@@ -1,0 +1,178 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.04zxNz
+
+Input File is : Unsigned_Wraparound_Error_2_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+
+Commit Number: 8852f5f8ff3d521897175ddeb711d6b77e03fa8a
+URL: https://github.com/GNUnet-Mirror/GNUnet/commit/8852f5f8ff3d521897175ddeb711d6b77e03fa8a
+Project Name: GNUnet
+License: AGPL-3.0
+termination: FALSE
+*/
+int main()
+{
+    unsigned int ui = 1;
+    unsigned int size = __VERIFIER_nondet_uint();
+    unsigned int BUFFSIZE = __VERIFIER_nondet_uint();
+    {if( size < BUFFSIZE )
+        {size = BUFFSIZE;}}
+    while( ui < size )
+        {ui *= 2;}
+    return 0;
+}
+
+End Main   
+
+Input File is : Unsigned_Wraparound_Error_2_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+
+Commit Number: 8852f5f8ff3d521897175ddeb711d6b77e03fa8a
+URL: https://github.com/GNUnet-Mirror/GNUnet/commit/8852f5f8ff3d521897175ddeb711d6b77e03fa8a
+Project Name: GNUnet
+License: AGPL-3.0
+termination: FALSE
+*/
+int main()
+{
+    unsigned int ui = 1;
+    unsigned int size = __VERIFIER_nondet_uint();
+    unsigned int BUFFSIZE = __VERIFIER_nondet_uint();
+    { __VERIFIER_reached_control(15, __func__);
+if( size < BUFFSIZE )
+        { __VERIFIER_control_true(16, __func__);
+size = BUFFSIZE;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(18, __func__);
+ while( ui < size )
+        { __VERIFIER_loop_head(18, __func__);
+printf("CBMC Instrumentation @ line18");myBool flag=__VERIFIER_nondet_myBool();static unsigned int oBUFFSIZE;static unsigned int osize;static unsigned int oui;if(pStored0){__CPROVER_assert(!(oBUFFSIZE==BUFFSIZE && osize==size && oui==ui),"recurrent state found");} if(flag){oBUFFSIZE=BUFFSIZE;osize=size;oui=ui;pStored0=myTrue;} ui *= 2;}
+    return 0;
+}
+
+End Main 
+ Unsigned_Wraparound_Error_2_NT_braced_instrumented.c
+NTFILE is Unsigned_Wraparound_Error_2_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Unsigned_Wraparound_Error_2_NT.c
+b'a86ba3d0e2916482f1a3251530072f226cadc2cdad8bc41c48d595fe7f210887  Unsigned_Wraparound_Error_2_NT.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Unsigned_Wraparound_Error_2_NT/Unsigned_Wraparound_Error_2_NT.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 15 reachedControl
+main 16 trueBranch
+enteringLasso
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 18 reachedControl
+main 18 loopHead
+Trace file line inside enterred lasso check : main 18 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Unsigned_Wraparound_Error_2_NT/Unsigned_Wraparound_Error_2_NT.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Unsigned_Wraparound_Error_2_NT.c
+FILE=Unsigned_Wraparound_Error_2_NT_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 6033 milliseconds

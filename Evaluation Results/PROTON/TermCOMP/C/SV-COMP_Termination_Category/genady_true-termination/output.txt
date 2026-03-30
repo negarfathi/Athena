@@ -1,0 +1,62 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.m5HtV4
+
+Input File is : genady_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : genady_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/* An example that looks simple, given to me by Genady Trifon
+ * Date: 15.12.2013
+ * Author: Amir Ben-Amram, amirben@cs.mta.ac.il
+ *
+ */
+
+  
+int main() {
+   int j = 1;
+  myBool pStored0 = myFalse; __VERIFIER_reached_control(10, __func__);
+ for (int i = 10000; i-j >= 1; i--) { __VERIFIER_loop_head(10, __func__);
+printf("CBMC Instrumentation @ line10");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int oj;if(pStored0){__CPROVER_assert(!(oi==i && oj==j),"recurrent state found");} if(flag){oi=i;oj=j;pStored0=myTrue;} 
+     j++;
+   }  
+}
+
+./proton: line 26:   103 Aborted                 instrumenter -in $FILE_NAME -c
+genady_true-termination_instrumented.c
+NTFILE is genady_true-termination_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for genady_true-termination.c
+FILE=genady_true-termination_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 13181 milliseconds

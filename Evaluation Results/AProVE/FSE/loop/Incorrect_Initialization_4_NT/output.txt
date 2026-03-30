@@ -1,0 +1,134 @@
+line 92:5 extraneous input 'metadata' expecting EXCLAMATION
+line 92:25 no viable alternative at input '!'
+Graph finished, checking  consistency
+Graph finished, checked consistency, took 0.002s
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+Running Thread.stop() against 1755895337Exec. 12, LLVMLassoToIntTRS[]
+Stack trace:
+    app//aprove.Framework.IRSwT.IRSwTFormatTransformer.killOR(IRSwTFormatTransformer.java:412)
+    app//aprove.Framework.IRSwT.IRSwTFormatTransformer.removeDivModAndNotAndNotEqualAndOrAndFalse(IRSwTFormatTransformer.java:598)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:189)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMLassoToIntTRSProcessor.process(LLVMLassoToIntTRSProcessor.java:53)
+    app//aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+    app//aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Aborted 1755895337Exec. 12, LLVMLassoToIntTRS[] with a hard timeout.
+Running Thread.stop() against 1755895337Exec. 14, LLVMLassoToIntTRS[]
+Stack trace:
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSFunctionApplication.collectPositionsAndSubTerms(TRSFunctionApplication.java:668)
+    app//aprove.DPFramework.BasicStructures.TRSTerm.getPositionsWithSubTerms(TRSTerm.java:455)
+    app//aprove.Framework.IRSwT.IRSwTFormatTransformer.killOR(IRSwTFormatTransformer.java:409)
+    app//aprove.Framework.IRSwT.IRSwTFormatTransformer.removeDivModAndNotAndNotEqualAndOrAndFalse(IRSwTFormatTransformer.java:598)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:189)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+    app//aprove.InputModules.Programs.llvm.processors.LLVMLassoToIntTRSProcessor.process(LLVMLassoToIntTRSProcessor.java:53)
+    app//aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+    app//aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Aborted 1755895337Exec. 14, LLVMLassoToIntTRS[] with a hard timeout.
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:157)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:157)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Time refresher thread died
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.iterator(ArrayList.java:947)
+	at java.base/java.util.AbstractCollection.addAll(AbstractCollection.java:335)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.updatePollSet(TimeRefresher.java:76)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.doPoll(TimeRefresher.java:63)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.run(TimeRefresher.java:54)
+Aborted 1755895337Exec. 5, LLVMSEGraphToIntTRS with some error. Reason: java.lang.OutOfMemoryError: Java heap space.
+            java.base/java.util.HashMap.resize(HashMap.java:702)
+            java.base/java.util.HashMap.putVal(HashMap.java:661)
+            java.base/java.util.HashMap.put(HashMap.java:610)
+            aprove.DPFramework.BasicStructures.TRSVariable.renumberVariables(TRSVariable.java:232)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+            aprove.DPFramework.BasicStructures.GeneralizedRule.<init>(GeneralizedRule.java:101)
+            aprove.DPFramework.BasicStructures.GeneralizedRule.create(GeneralizedRule.java:123)
+            aprove.DPFramework.IDPProblem.IGeneralizedRule.toFullGeneralizedRule(IGeneralizedRule.java:173)
+            aprove.DPFramework.IDPProblem.IGeneralizedRule.hashCode(IGeneralizedRule.java:372)
+            java.base/java.util.HashMap.hash(HashMap.java:338)
+            java.base/java.util.HashMap.put(HashMap.java:610)
+            java.base/java.util.HashSet.add(HashSet.java:221)
+            aprove.Framework.IRSwT.IRSwTFormatTransformer.removeDivModAndNotAndNotEqualAndOrAndFalse(IRSwTFormatTransformer.java:612)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:189)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+            aprove.InputModules.Programs.llvm.processors.LLVMSEGraphToIntTRSProcessor.process(LLVMSEGraphToIntTRSProcessor.java:43)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.HashMap.resize(HashMap.java:702)
+	at java.base/java.util.HashMap.putVal(HashMap.java:661)
+	at java.base/java.util.HashMap.put(HashMap.java:610)
+	at aprove.DPFramework.BasicStructures.TRSVariable.renumberVariables(TRSVariable.java:232)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.TRSCompoundTerm.renumberVariables(TRSCompoundTerm.java:82)
+	at aprove.DPFramework.BasicStructures.GeneralizedRule.<init>(GeneralizedRule.java:101)
+	at aprove.DPFramework.BasicStructures.GeneralizedRule.create(GeneralizedRule.java:123)
+	at aprove.DPFramework.IDPProblem.IGeneralizedRule.toFullGeneralizedRule(IGeneralizedRule.java:173)
+	at aprove.DPFramework.IDPProblem.IGeneralizedRule.hashCode(IGeneralizedRule.java:372)
+	at java.base/java.util.HashMap.hash(HashMap.java:338)
+	at java.base/java.util.HashMap.put(HashMap.java:610)
+	at java.base/java.util.HashSet.add(HashSet.java:221)
+	at aprove.Framework.IRSwT.IRSwTFormatTransformer.removeDivModAndNotAndNotEqualAndOrAndFalse(IRSwTFormatTransformer.java:612)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:189)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+	at aprove.InputModules.Programs.llvm.processors.LLVMSEGraphToIntTRSProcessor.process(LLVMSEGraphToIntTRSProcessor.java:43)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+MAYBE
+Runtime: 106323 milliseconds

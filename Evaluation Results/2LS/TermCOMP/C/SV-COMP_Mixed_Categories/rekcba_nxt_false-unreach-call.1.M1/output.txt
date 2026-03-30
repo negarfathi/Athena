@@ -1,0 +1,554 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/rekcba_nxt_false-unreach-call.1.M1/rekcba_nxt_false-unreach-call.1.M1.c
+Converting
+Type-checking rekcba_nxt_false-unreach-call.1.M1
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of assert
+Simplifying
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __startrek_init_shared
+Simplifying
+Computing SSA of __startrek_cs_t2
+Simplifying
+Computing SSA of __startrek_cs_t1
+Simplifying
+Computing SSA of __startrek_cs_t0
+Simplifying
+Computing SSA of balance_init
+Simplifying
+Computing SSA of balance_control
+Simplifying
+Computing SSA of __startrek_read_nxtway_gs_mode
+Simplifying
+Computing SSA of __startrek_write_nxtway_gs_mode
+Simplifying
+Computing SSA of __startrek_read_obstacle_flag
+Simplifying
+Computing SSA of __startrek_write_obstacle_flag
+Simplifying
+Computing SSA of nxt_motor_get_count
+Simplifying
+Computing SSA of ecrobot_get_systick_ms
+Simplifying
+Computing SSA of ecrobot_get_gyro_sensor
+Simplifying
+Computing SSA of ecrobot_read_bt_packet
+Simplifying
+Computing SSA of ecrobot_get_battery_voltage
+Simplifying
+Computing SSA of OSEK_Task_ts1
+Simplifying
+Computing SSA of ecrobot_get_sonar_sensor
+Simplifying
+Computing SSA of OSEK_Task_ts2
+Simplifying
+Computing SSA of __startrek_user_final
+Simplifying
+Computing SSA of __startrek_entry_pt_OSEK_Task_ts2
+Simplifying
+Computing SSA of cil_keeperOSEK_Task_ts2
+Simplifying
+Computing SSA of __startrek_entry_pt_OSEK_Task_ts1
+Simplifying
+Computing SSA of cil_keeperOSEK_Task_ts1
+Simplifying
+Computing SSA of OSEK_Task_Background
+Simplifying
+Computing SSA of __startrek_entry_pt_OSEK_Task_Background
+Simplifying
+Computing SSA of cil_keeperOSEK_Task_Background
+Simplifying
+Computing SSA of __startrek_schedule_jobs
+Simplifying
+Computing SSA of __startrek_init_globals
+Simplifying
+Computing SSA of __startrek_check_assumptions
+Simplifying
+Computing SSA of __startrek_user_init
+Simplifying
+Computing SSA of __startrek_check_assertions
+Simplifying
+Computing SSA of __main
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited _i_obstacle_flag_ _obstacle_flag_ __CPROVER_thread_key_dtors __CPROVER_thread_keys K_F __startrek_end_t0 __startrek_start_t0 __startrek_end_t2 __startrek_start_t2 _i_nxtway_gs_mode_ _nxtway_gs_mode_ __startrek_end_t1 __startrek_start_t1 bt_receive_buf __CPROVER_malloc_is_new_array __startrek_hidden_obstacle_flag __startrek_is_first_cs __startrek_lock __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __startrek_arrival_max_OSEK_Task_Background __startrek_arrival_max_OSEK_Task_ts1 __startrek_arrival_max_OSEK_Task_ts2 __startrek_arrival_min_OSEK_Task_Background __startrek_arrival_min_OSEK_Task_ts1 __startrek_arrival_min_OSEK_Task_ts2 __startrek_period_OSEK_Task_Background __startrek_period_OSEK_Task_ts1 __startrek_period_OSEK_Task_ts2 __startrek_time_bound __startrek_wcet_OSEK_Task_Background __startrek_wcet_OSEK_Task_ts1 __startrek_wcet_OSEK_Task_ts2 __startrek_base_priority_OSEK_Task_Background __startrek_base_priority_OSEK_Task_ts1 __startrek_base_priority_OSEK_Task_ts2 A_D A_R BATTERY_GAIN BATTERY_OFFSET K_I K_PHIDOT K_THETADOT __CPROVER_pipe_count avg_cnt cal_start_time gyro_offset timer ud_err_theta ud_psi ud_theta_lpf ud_theta_ref ud_thetadot_cmd_lpf __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id __startrek_error_round __startrek_hidden_nxtway_gs_mode __startrek_hyper_period __startrek_job __startrek_job_end __startrek_round __startrek_task 
+globals_out: __CPROVER_threads_exited#28 _i_obstacle_flag_#70 _obstacle_flag_#72 __CPROVER_thread_key_dtors#26 __CPROVER_thread_keys#27 K_F#33 __startrek_end_t0#46 __startrek_start_t0#61 __startrek_end_t2#48 __startrek_start_t2#63 _i_nxtway_gs_mode_#69 _nxtway_gs_mode_#71 __startrek_end_t1#47 __startrek_start_t1#62 bt_receive_buf#74 __CPROVER_malloc_is_new_array#18 __startrek_hidden_obstacle_flag#51 __startrek_is_first_cs#53 __startrek_lock#56 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#15 __CPROVER_dead_object#16 __CPROVER_deallocated#17 __CPROVER_new_object#20 __CPROVER_rounding_mode#24 __startrek_arrival_max_OSEK_Task_Background#37 __startrek_arrival_max_OSEK_Task_ts1#38 __startrek_arrival_max_OSEK_Task_ts2#39 __startrek_arrival_min_OSEK_Task_Background#40 __startrek_arrival_min_OSEK_Task_ts1#41 __startrek_arrival_min_OSEK_Task_ts2#42 __startrek_period_OSEK_Task_Background#57 __startrek_period_OSEK_Task_ts1#58 __startrek_period_OSEK_Task_ts2#59 __startrek_time_bound#65 __startrek_wcet_OSEK_Task_Background#66 __startrek_wcet_OSEK_Task_ts1#67 __startrek_wcet_OSEK_Task_ts2#68 __startrek_base_priority_OSEK_Task_Background#43 __startrek_base_priority_OSEK_Task_ts1#44 __startrek_base_priority_OSEK_Task_ts2#45 A_D#29 A_R#30 BATTERY_OFFSET#32 K_I#34 K_PHIDOT#35 K_THETADOT#36 __CPROVER_pipe_count#23 avg_cnt#73 cal_start_time#75 gyro_offset#76 timer#77 ud_psi#79 ud_thetadot_cmd_lpf#82 __CPROVER_max_malloc_size#19 __CPROVER_next_thread_id#21 __CPROVER_next_thread_key#22 __CPROVER_thread_id#25 __startrek_error_round#49 __startrek_hidden_nxtway_gs_mode#50 __startrek_hyper_period#52 __startrek_job#54 __startrek_job_end#55 __startrek_round#60 __startrek_task#64 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#24 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#24) <= 0 && __startrek_arrival_max_OSEK_Task_Background#37 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_max_OSEK_Task_Background#37) <= 0 && __startrek_arrival_max_OSEK_Task_ts1#38 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_max_OSEK_Task_ts1#38) <= 0 && __startrek_arrival_max_OSEK_Task_ts2#39 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_max_OSEK_Task_ts2#39) <= 0 && __startrek_arrival_min_OSEK_Task_Background#40 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_min_OSEK_Task_Background#40) <= 0 && __startrek_arrival_min_OSEK_Task_ts1#41 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_min_OSEK_Task_ts1#41) <= 0 && __startrek_arrival_min_OSEK_Task_ts2#42 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_min_OSEK_Task_ts2#42) <= 0 && __startrek_period_OSEK_Task_Background#57 <= 96 && -((signed __CPROVER_bitvector[33])__startrek_period_OSEK_Task_Background#57) <= -96 && __startrek_period_OSEK_Task_ts1#58 <= 4 && -((signed __CPROVER_bitvector[33])__startrek_period_OSEK_Task_ts1#58) <= -4 && __startrek_period_OSEK_Task_ts2#59 <= 48 && -((signed __CPROVER_bitvector[33])__startrek_period_OSEK_Task_ts2#59) <= -48 && __startrek_time_bound#65 <= 96 && -((signed __CPROVER_bitvector[33])__startrek_time_bound#65) <= -96 && __startrek_wcet_OSEK_Task_Background#66 <= 3 && -((signed __CPROVER_bitvector[33])__startrek_wcet_OSEK_Task_Background#66) <= -3 && __startrek_wcet_OSEK_Task_ts1#67 <= 1 && -((signed __CPROVER_bitvector[33])__startrek_wcet_OSEK_Task_ts1#67) <= -1 && __startrek_wcet_OSEK_Task_ts2#68 <= 4 && -((signed __CPROVER_bitvector[33])__startrek_wcet_OSEK_Task_ts2#68) <= -4 && __startrek_base_priority_OSEK_Task_Background#43 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_OSEK_Task_Background#43) <= 0 && __startrek_base_priority_OSEK_Task_ts1#44 <= 2 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_OSEK_Task_ts1#44) <= -2 && __startrek_base_priority_OSEK_Task_ts2#45 <= 1 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_OSEK_Task_ts2#45) <= -1 && A_D#29 <= 4294967295u && -((signed __CPROVER_bitvector[33])A_D#29) <= 0 && A_R#30 <= 4294967295u && -((signed __CPROVER_bitvector[33])A_R#30) <= 0 && BATTERY_OFFSET#32 <= 4294967295u && -((signed __CPROVER_bitvector[33])BATTERY_OFFSET#32) <= 0 && K_I#34 <= 4294967295u && -((signed __CPROVER_bitvector[33])K_I#34) <= 0 && K_PHIDOT#35 <= 4294967295u && -((signed __CPROVER_bitvector[33])K_PHIDOT#35) <= 0 && K_THETADOT#36 <= 4294967295u && -((signed __CPROVER_bitvector[33])K_THETADOT#36) <= 0 && __CPROVER_pipe_count#23 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#23) <= 0 && avg_cnt#73 <= 0u && -((signed __CPROVER_bitvector[33])avg_cnt#73) <= 0 && cal_start_time#75 <= 0u && -((signed __CPROVER_bitvector[33])cal_start_time#75) <= 0 && gyro_offset#76 <= 0u && -((signed __CPROVER_bitvector[33])gyro_offset#76) <= 0 && timer#77 <= 0u && -((signed __CPROVER_bitvector[33])timer#77) <= 0 && ud_psi#79 <= 0u && -((signed __CPROVER_bitvector[33])ud_psi#79) <= 0 && ud_thetadot_cmd_lpf#82 <= 0u && -((signed __CPROVER_bitvector[33])ud_thetadot_cmd_lpf#82) <= 0 && __CPROVER_max_malloc_size#19 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#19) <= -36028797018963968 && __CPROVER_next_thread_id#21 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#21) <= 0 && __CPROVER_next_thread_key#22 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#22) <= 0 && __CPROVER_thread_id#25 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#25) <= 0 && __startrek_error_round#49 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_error_round#49) <= 0 && __startrek_hidden_nxtway_gs_mode#50 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden_nxtway_gs_mode#50) <= 0 && __startrek_hyper_period#52 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hyper_period#52) <= 0 && __startrek_job#54 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_job#54) <= 0 && __startrek_job_end#55 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_job_end#55) <= 0 && __startrek_round#60 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_round#60) <= 0 && __startrek_task#64 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_task#64) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of __main
+Function __main not analyzed yet
+Recursively summarizing function __main
+Checking precondition of OSEK_Task_Background
+Function OSEK_Task_Background not analyzed yet
+Recursively summarizing function OSEK_Task_Background
+Checking precondition of ecrobot_status_monitor
+Function ecrobot_status_monitor not found
+Checking precondition of write_mode_on_lcd
+Function write_mode_on_lcd not found
+Analyzing function OSEK_Task_Background
+Computing summary
+Computing termination argument for OSEK_Task_Background
+Function terminates
+
+Summary for function OSEK_Task_Background
+params: 
+globals_in: _nxtway_gs_mode_ __startrek_end_t1 __startrek_start_t1 __startrek_is_first_cs __startrek_lock __startrek_job_end __startrek_round __startrek_task 
+globals_out: _nxtway_gs_mode_ __startrek_end_t1 __startrek_start_t1 __startrek_is_first_cs#phi1351 __startrek_lock __startrek_job_end __startrek_round#phi1351 __startrek_task 
+forward precondition: TRUE
+forward transformer: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi1351 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi1351) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of OSEK_Task_ts2
+Function OSEK_Task_ts2 not analyzed yet
+Recursively summarizing function OSEK_Task_ts2
+Checking precondition of ecrobot_get_sonar_sensor
+Function ecrobot_get_sonar_sensor not analyzed yet
+Recursively summarizing function ecrobot_get_sonar_sensor
+Analyzing function ecrobot_get_sonar_sensor
+Computing summary
+Computing termination argument for ecrobot_get_sonar_sensor
+Function trivially terminates
+
+Summary for function ecrobot_get_sonar_sensor
+params: port 
+globals_in: 
+globals_out: ecrobot_get_sonar_sensor#return_value#987 
+forward precondition: TRUE
+forward transformer: ecrobot_get_sonar_sensor#return_value#987 <= 255 && -((signed __CPROVER_bitvector[9])ecrobot_get_sonar_sensor#return_value#987) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function OSEK_Task_ts2
+Computing summary
+Computing termination argument for OSEK_Task_ts2
+Function terminates
+
+Summary for function OSEK_Task_ts2
+params: 
+globals_in: _obstacle_flag_ _nxtway_gs_mode_ __startrek_end_t1 __startrek_start_t1 __startrek_is_first_cs __startrek_lock __startrek_job_end __startrek_round __startrek_task 
+globals_out: _obstacle_flag_#phi1248 _nxtway_gs_mode_ __startrek_end_t1 __startrek_start_t1 __startrek_is_first_cs#phi1248 __startrek_lock __startrek_job_end __startrek_round#phi1248 __startrek_task 
+forward precondition: TRUE
+forward transformer: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi1248 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi1248) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of OSEK_Task_ts2
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Function OSEK_Task_ts1 not analyzed yet
+Recursively summarizing function OSEK_Task_ts1
+Checking precondition of balance_init
+Function balance_init not analyzed yet
+Recursively summarizing function balance_init
+Analyzing function balance_init
+Computing summary
+Computing termination argument for balance_init
+Function trivially terminates
+
+Summary for function balance_init
+params: 
+globals_in: ud_err_theta ud_psi ud_theta_lpf ud_theta_ref ud_thetadot_cmd_lpf 
+globals_out: ud_psi#144 ud_thetadot_cmd_lpf#143 
+forward precondition: TRUE
+forward transformer: ud_psi#144 <= 0u && -((signed __CPROVER_bitvector[33])ud_psi#144) <= 0 && ud_thetadot_cmd_lpf#143 <= 0u && -((signed __CPROVER_bitvector[33])ud_thetadot_cmd_lpf#143) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of nxt_motor_set_count
+Function nxt_motor_set_count not found
+Checking precondition of nxt_motor_set_count
+Function nxt_motor_set_count not found
+Checking precondition of ecrobot_get_systick_ms
+Function ecrobot_get_systick_ms not analyzed yet
+Recursively summarizing function ecrobot_get_systick_ms
+Analyzing function ecrobot_get_systick_ms
+Computing summary
+Computing termination argument for ecrobot_get_systick_ms
+Function trivially terminates
+
+Summary for function ecrobot_get_systick_ms
+params: 
+globals_in: timer 
+globals_out: ecrobot_get_systick_ms#return_value#544 timer#543 
+forward precondition: TRUE
+forward transformer: ecrobot_get_systick_ms#return_value#544 <= 4294967295u && -((signed __CPROVER_bitvector[33])ecrobot_get_systick_ms#return_value#544) <= 0 && timer#543 <= 4294967295u && -((signed __CPROVER_bitvector[33])timer#543) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of ecrobot_get_gyro_sensor
+Function ecrobot_get_gyro_sensor not analyzed yet
+Recursively summarizing function ecrobot_get_gyro_sensor
+Analyzing function ecrobot_get_gyro_sensor
+Computing summary
+Computing termination argument for ecrobot_get_gyro_sensor
+Function trivially terminates
+
+Summary for function ecrobot_get_gyro_sensor
+params: port 
+globals_in: 
+globals_out: ecrobot_get_gyro_sensor#return_value#549 
+forward precondition: TRUE
+forward transformer: ecrobot_get_gyro_sensor#return_value#549 <= 4294967295u && -((signed __CPROVER_bitvector[33])ecrobot_get_gyro_sensor#return_value#549) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of ecrobot_get_systick_ms
+Precondition trivially holds, replacing by summary.
+Checking precondition of ecrobot_sound_tone
+Function ecrobot_sound_tone not found
+Checking precondition of ecrobot_read_bt_packet
+Function ecrobot_read_bt_packet not analyzed yet
+Recursively summarizing function ecrobot_read_bt_packet
+Analyzing function ecrobot_read_bt_packet
+Computing summary
+Computing termination argument for ecrobot_read_bt_packet
+Function trivially terminates
+
+Summary for function ecrobot_read_bt_packet
+params: ecrobot_read_bt_packet$$bt_receive_buf sz 
+globals_in: bt_receive_buf'obj 
+globals_out: bt_receive_buf'obj 
+forward precondition: TRUE
+forward transformer: bt_receive_buf'obj <= 255 && -((signed __CPROVER_bitvector[9])bt_receive_buf'obj) <= 0
+forward invariant: bt_receive_buf'obj <= 255 && -((signed __CPROVER_bitvector[9])bt_receive_buf'obj) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of ecrobot_get_battery_voltage
+Function ecrobot_get_battery_voltage not analyzed yet
+Recursively summarizing function ecrobot_get_battery_voltage
+Analyzing function ecrobot_get_battery_voltage
+Computing summary
+Computing termination argument for ecrobot_get_battery_voltage
+Function trivially terminates
+
+Summary for function ecrobot_get_battery_voltage
+params: 
+globals_in: 
+globals_out: ecrobot_get_battery_voltage#return_value#563 
+forward precondition: TRUE
+forward transformer: ecrobot_get_battery_voltage#return_value#563 <= 4294967295u && -((signed __CPROVER_bitvector[33])ecrobot_get_battery_voltage#return_value#563) <= 0
+forward invariant: ecrobot_get_battery_voltage#return_value#563 <= 4294967295u && -((signed __CPROVER_bitvector[33])ecrobot_get_battery_voltage#return_value#563) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of nxt_motor_get_count
+Function nxt_motor_get_count not analyzed yet
+Recursively summarizing function nxt_motor_get_count
+Analyzing function nxt_motor_get_count
+Computing summary
+Computing termination argument for nxt_motor_get_count
+Function trivially terminates
+
+Summary for function nxt_motor_get_count
+params: port 
+globals_in: 
+globals_out: nxt_motor_get_count#return_value#538 
+forward precondition: TRUE
+forward transformer: nxt_motor_get_count#return_value#538 <= 127 && -((signed __CPROVER_bitvector[9])nxt_motor_get_count#return_value#538) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of nxt_motor_get_count
+Precondition trivially holds, replacing by summary.
+Checking precondition of ecrobot_get_gyro_sensor
+Precondition trivially holds, replacing by summary.
+Checking precondition of balance_control
+Function balance_control not analyzed yet
+Recursively summarizing function balance_control
+Analyzing function balance_control
+Computing summary
+Computing termination argument for balance_control
+Function trivially terminates
+
+Summary for function balance_control
+params: args_cmd_forward args_cmd_turn args_gyro args_gyro_offset args_theta_m_l args_theta_m_r args_battery ret_pwm_l ret_pwm_r 
+globals_in: K_F ret_pwm_l'obj ret_pwm_r'obj A_D A_R BATTERY_GAIN BATTERY_OFFSET K_I K_PHIDOT K_THETADOT ud_err_theta ud_psi ud_theta_lpf ud_theta_ref ud_thetadot_cmd_lpf 
+globals_out: K_F ret_pwm_l'obj#188 ret_pwm_r'obj#192 A_D A_R BATTERY_OFFSET K_I K_PHIDOT K_THETADOT ud_psi#199 ud_thetadot_cmd_lpf#198 
+forward precondition: TRUE
+forward transformer: ret_pwm_l'obj#188 <= 127 && -((signed __CPROVER_bitvector[9])ret_pwm_l'obj#188) <= 128 && ret_pwm_r'obj#192 <= 127 && -((signed __CPROVER_bitvector[9])ret_pwm_r'obj#192) <= 128 && A_D <= 4294967295u && -((signed __CPROVER_bitvector[33])A_D) <= 0 && A_R <= 4294967295u && -((signed __CPROVER_bitvector[33])A_R) <= 0 && BATTERY_OFFSET <= 4294967295u && -((signed __CPROVER_bitvector[33])BATTERY_OFFSET) <= 0 && K_I <= 4294967295u && -((signed __CPROVER_bitvector[33])K_I) <= 0 && K_PHIDOT <= 4294967295u && -((signed __CPROVER_bitvector[33])K_PHIDOT) <= 0 && K_THETADOT <= 4294967295u && -((signed __CPROVER_bitvector[33])K_THETADOT) <= 0 && ud_psi#199 <= 4294967040u && -((signed __CPROVER_bitvector[33])ud_psi#199) <= 0 && ud_thetadot_cmd_lpf#198 <= 4294967040u && -((signed __CPROVER_bitvector[33])ud_thetadot_cmd_lpf#198) <= 0
+forward invariant: A_D <= 4294967295u && -((signed __CPROVER_bitvector[33])A_D) <= 0 && A_R <= 4294967295u && -((signed __CPROVER_bitvector[33])A_R) <= 0 && BATTERY_OFFSET <= 4294967295u && -((signed __CPROVER_bitvector[33])BATTERY_OFFSET) <= 0 && K_I <= 4294967295u && -((signed __CPROVER_bitvector[33])K_I) <= 0 && K_PHIDOT <= 4294967295u && -((signed __CPROVER_bitvector[33])K_PHIDOT) <= 0 && K_THETADOT <= 4294967295u && -((signed __CPROVER_bitvector[33])K_THETADOT) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of nxt_motor_set_speed
+Function nxt_motor_set_speed not found
+Checking precondition of nxt_motor_set_speed
+Function nxt_motor_set_speed not found
+Checking precondition of ecrobot_bt_data_logger
+Function ecrobot_bt_data_logger not found
+Checking precondition of nxt_motor_set_speed
+Function nxt_motor_set_speed not found
+Checking precondition of nxt_motor_set_speed
+Function nxt_motor_set_speed not found
+Analyzing function OSEK_Task_ts1
+Computing summary
+Computing termination argument for OSEK_Task_ts1
+Synthesizing ranking function to prove termination
+
+Summary for function OSEK_Task_ts1
+params: 
+globals_in: _obstacle_flag_ _nxtway_gs_mode_ __startrek_end_t1 __startrek_start_t1 bt_receive_buf __startrek_is_first_cs __startrek_lock avg_cnt cal_start_time gyro_offset __startrek_job_end __startrek_round __startrek_task 
+globals_out: _obstacle_flag_ _nxtway_gs_mode_#phi971 __startrek_end_t1 __startrek_start_t1 bt_receive_buf#phi971 __startrek_is_first_cs#phi971 __startrek_lock avg_cnt#phi971 cal_start_time#phi971 gyro_offset#phi971 __startrek_job_end __startrek_round#phi971 __startrek_task 
+forward precondition: TRUE
+forward transformer: avg_cnt#phi971 <= 4294967295u && -((signed __CPROVER_bitvector[33])avg_cnt#phi971) <= 0 && cal_start_time#phi971 <= 4294967295u && -((signed __CPROVER_bitvector[33])cal_start_time#phi971) <= 0 && gyro_offset#phi971 <= 4294967295u && -((signed __CPROVER_bitvector[33])gyro_offset#phi971) <= 0 && __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi971 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi971) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: ($guard#672 && $guard#ls675 ==> i#lb675 <= 2) && ($guard#672 && $guard#ls675 ==> -((signed __CPROVER_bitvector[33])i#lb675) <= 0) && __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#672 && $guard#673 && $cond#675 ==> (signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])i#phi672 - (signed __CPROVER_bitvector[33])i#674) > 0
+
+terminates: yes
+
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of OSEK_Task_ts1
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Function assert not analyzed yet
+Recursively summarizing function assert
+Analyzing function assert
+Computing summary
+Computing termination argument for assert
+Function trivially terminates
+
+Summary for function assert
+params: arg 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function __main
+Computing summary
+Computing termination argument for __main
+Function terminates
+
+Summary for function __main
+params: 
+globals_in: _i_obstacle_flag_ _obstacle_flag_ __startrek_end_t0 __startrek_start_t0 __startrek_end_t2 __startrek_start_t2 _i_nxtway_gs_mode_ _nxtway_gs_mode_ __startrek_end_t1 __startrek_start_t1 __startrek_is_first_cs __startrek_lock __startrek_error_round __startrek_hyper_period __startrek_job __startrek_job_end __startrek_round __startrek_task 
+globals_out: _i_obstacle_flag_#2875 _obstacle_flag_#2876 __startrek_end_t0#2237 __startrek_start_t0#2234 __startrek_end_t2#2362 __startrek_start_t2#2361 _i_nxtway_gs_mode_#2979 _nxtway_gs_mode_#2980 __startrek_end_t1#2252 __startrek_start_t1#2249 __startrek_is_first_cs#3376 __startrek_lock#phi3388 __startrek_error_round#2230 __startrek_hyper_period __startrek_job#3375 __startrek_job_end#phi3388 __startrek_round#3388 __startrek_task#3075 
+forward precondition: TRUE
+forward transformer: __startrek_error_round#2230 <= 27 && -((signed __CPROVER_bitvector[9])__startrek_error_round#2230) <= -27 && __startrek_hyper_period <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hyper_period) <= 0 && __startrek_job#3375 <= 23 && -((signed __CPROVER_bitvector[9])__startrek_job#3375) <= -23 && __startrek_job_end#phi3388 <= 26 && -((signed __CPROVER_bitvector[9])__startrek_job_end#phi3388) <= -23 && __startrek_round#3388 <= 27 && -((signed __CPROVER_bitvector[9])__startrek_round#3388) <= -27 && __startrek_task#3075 <= 2 && -((signed __CPROVER_bitvector[9])__startrek_task#3075) <= -2
+forward invariant: __startrek_hyper_period <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hyper_period) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Function terminates
+
+Summary for function main
+params: 
+globals_in: _obstacle_flag_ _nxtway_gs_mode_ __startrek_hidden_obstacle_flag __startrek_hidden_nxtway_gs_mode __startrek_hyper_period 
+globals_out: _obstacle_flag_#6 _nxtway_gs_mode_#7 __startrek_hidden_obstacle_flag main#return_value#13 __startrek_hidden_nxtway_gs_mode __startrek_hyper_period#11 
+forward precondition: TRUE
+forward transformer: main#return_value#13 <= 2147483647 && -((signed __CPROVER_bitvector[33])main#return_value#13) <= 2147483648 && __startrek_hidden_nxtway_gs_mode <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_nxtway_gs_mode) <= 0 && __startrek_hyper_period#11 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hyper_period#11) <= 0
+forward invariant: __startrek_hidden_nxtway_gs_mode <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_nxtway_gs_mode) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+Function terminates
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+** statistics: 
+  number of solver instances: 171613304
+  number of solver calls: 2904927573
+  number of summaries used: 42
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[assert]: yes
+[main]: yes
+[__CPROVER_initialize]: yes
+[__startrek_init_shared]: not computed
+[__startrek_cs_t2]: not computed
+[__startrek_cs_t1]: not computed
+[__startrek_cs_t0]: not computed
+[balance_init]: yes
+[balance_control]: yes
+[__startrek_read_nxtway_gs_mode]: not computed
+[__startrek_write_nxtway_gs_mode]: not computed
+[__startrek_read_obstacle_flag]: not computed
+[__startrek_write_obstacle_flag]: not computed
+[nxt_motor_get_count]: yes
+[ecrobot_get_systick_ms]: yes
+[ecrobot_get_gyro_sensor]: yes
+[ecrobot_read_bt_packet]: yes
+[ecrobot_get_battery_voltage]: yes
+[OSEK_Task_ts1]: yes
+[ecrobot_get_sonar_sensor]: yes
+[OSEK_Task_ts2]: yes
+[__startrek_user_final]: not computed
+[__startrek_entry_pt_OSEK_Task_ts2]: not computed
+[cil_keeperOSEK_Task_ts2]: not computed
+[__startrek_entry_pt_OSEK_Task_ts1]: not computed
+[cil_keeperOSEK_Task_ts1]: not computed
+[OSEK_Task_Background]: yes
+[__startrek_entry_pt_OSEK_Task_Background]: not computed
+[cil_keeperOSEK_Task_Background]: not computed
+[__startrek_schedule_jobs]: not computed
+[__startrek_init_globals]: not computed
+[__startrek_check_assumptions]: not computed
+[__startrek_user_init]: not computed
+[__startrek_check_assertions]: not computed
+[__main]: yes
+[__CPROVER__start]: yes
+VERIFICATION SUCCESSFUL
+Runtime: 13150 milliseconds

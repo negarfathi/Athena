@@ -1,0 +1,564 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/pals_STARTPALS_ActiveStandby_false-unreach-call.1.ufo.BOUNDED-10.pals/pals_STARTPALS_ActiveStandby_false-unreach-call.1.ufo.BOUNDED-10.pals.c
+Converting
+Type-checking pals_STARTPALS_ActiveStandby_false-unreach-call.1.ufo.BOUNDED-10.pals
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of assert
+Simplifying
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __VERIFIER_assume
+Simplifying
+Computing SSA of write_side1_failed_history
+Simplifying
+Computing SSA of read_side1_failed_history
+Simplifying
+Computing SSA of write_side2_failed_history
+Simplifying
+Computing SSA of read_side2_failed_history
+Simplifying
+Computing SSA of write_active_side_history
+Simplifying
+Computing SSA of read_active_side_history
+Simplifying
+Computing SSA of write_manual_selection_history
+Simplifying
+Computing SSA of read_manual_selection_history
+Simplifying
+Computing SSA of init
+Simplifying
+Computing SSA of flip_the_side
+Simplifying
+Computing SSA of Console_task_each_pals_period
+Simplifying
+Computing SSA of Side1_activestandby_task_each_pals_period
+Simplifying
+Computing SSA of Side2_activestandby_task_each_pals_period
+Simplifying
+Computing SSA of Pendulum_prism_task_each_pals_period
+Simplifying
+Computing SSA of check
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited nodes __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array side1Failed side1Failed_History_0 side1Failed_History_1 side1Failed_History_2 side2Failed side2Failed_History_0 side2Failed_History_1 side2Failed_History_2 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode cs1 cs2 s1p s1s1 s1s2 s2p s2s1 s2s2 active_side_History_0 active_side_History_1 active_side_History_2 cs1_new cs1_old cs2_new cs2_old manual_selection_History_0 manual_selection_History_1 manual_selection_History_2 nomsg s1p_new s1p_old s1s1_new s1s1_old s1s2_new s1s2_old s2p_new s2p_old s2s1_new s2s1_old s2s2_new s2s2_old side1_written side2_written __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#89 nodes#102 __CPROVER_thread_key_dtors#87 __CPROVER_thread_keys#88 __CPROVER_malloc_is_new_array#79 side1Failed#122 side1Failed_History_0#123 side1Failed_History_1#124 side1Failed_History_2#125 side2Failed#127 side2Failed_History_0#128 side2Failed_History_1#129 side2Failed_History_2#130 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#76 __CPROVER_dead_object#77 __CPROVER_deallocated#78 __CPROVER_new_object#81 __CPROVER_rounding_mode#85 cs1#93 cs2#96 s1p#104 s1s1#107 s1s2#110 s2p#113 s2s1#116 s2s2#119 active_side_History_0#90 active_side_History_1#91 active_side_History_2#92 cs1_new#94 cs1_old#95 cs2_new#97 cs2_old#98 manual_selection_History_0#99 manual_selection_History_1#100 manual_selection_History_2#101 nomsg#103 s1p_new#105 s1p_old#106 s1s1_new#108 s1s1_old#109 s1s2_new#111 s1s2_old#112 s2p_new#114 s2p_old#115 s2s1_new#117 s2s1_old#118 s2s2_new#120 s2s2_old#121 side1_written#126 side2_written#131 __CPROVER_pipe_count#84 __CPROVER_max_malloc_size#80 __CPROVER_next_thread_id#82 __CPROVER_next_thread_key#83 __CPROVER_thread_id#86 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#85 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#85) <= 0 && cs1#93 <= 0 && -((signed __CPROVER_bitvector[33])cs1#93) <= 0 && cs2#96 <= 0 && -((signed __CPROVER_bitvector[33])cs2#96) <= 0 && s1p#104 <= 0 && -((signed __CPROVER_bitvector[33])s1p#104) <= 0 && s1s1#107 <= 0 && -((signed __CPROVER_bitvector[33])s1s1#107) <= 0 && s1s2#110 <= 0 && -((signed __CPROVER_bitvector[33])s1s2#110) <= 0 && s2p#113 <= 0 && -((signed __CPROVER_bitvector[33])s2p#113) <= 0 && s2s1#116 <= 0 && -((signed __CPROVER_bitvector[33])s2s1#116) <= 0 && s2s2#119 <= 0 && -((signed __CPROVER_bitvector[33])s2s2#119) <= 0 && active_side_History_0#90 <= 0 && -((signed __CPROVER_bitvector[9])active_side_History_0#90) <= 0 && active_side_History_1#91 <= 0 && -((signed __CPROVER_bitvector[9])active_side_History_1#91) <= 0 && active_side_History_2#92 <= 0 && -((signed __CPROVER_bitvector[9])active_side_History_2#92) <= 0 && cs1_new#94 <= 0 && -((signed __CPROVER_bitvector[9])cs1_new#94) <= 0 && cs1_old#95 <= 0 && -((signed __CPROVER_bitvector[9])cs1_old#95) <= 0 && cs2_new#97 <= 0 && -((signed __CPROVER_bitvector[9])cs2_new#97) <= 0 && cs2_old#98 <= 0 && -((signed __CPROVER_bitvector[9])cs2_old#98) <= 0 && manual_selection_History_0#99 <= 0 && -((signed __CPROVER_bitvector[9])manual_selection_History_0#99) <= 0 && manual_selection_History_1#100 <= 0 && -((signed __CPROVER_bitvector[9])manual_selection_History_1#100) <= 0 && manual_selection_History_2#101 <= 0 && -((signed __CPROVER_bitvector[9])manual_selection_History_2#101) <= 0 && nomsg#103 <= -1 && -((signed __CPROVER_bitvector[9])nomsg#103) <= 1 && s1p_new#105 <= 0 && -((signed __CPROVER_bitvector[9])s1p_new#105) <= 0 && s1p_old#106 <= 0 && -((signed __CPROVER_bitvector[9])s1p_old#106) <= 0 && s1s1_new#108 <= 0 && -((signed __CPROVER_bitvector[9])s1s1_new#108) <= 0 && s1s1_old#109 <= 0 && -((signed __CPROVER_bitvector[9])s1s1_old#109) <= 0 && s1s2_new#111 <= 0 && -((signed __CPROVER_bitvector[9])s1s2_new#111) <= 0 && s1s2_old#112 <= 0 && -((signed __CPROVER_bitvector[9])s1s2_old#112) <= 0 && s2p_new#114 <= 0 && -((signed __CPROVER_bitvector[9])s2p_new#114) <= 0 && s2p_old#115 <= 0 && -((signed __CPROVER_bitvector[9])s2p_old#115) <= 0 && s2s1_new#117 <= 0 && -((signed __CPROVER_bitvector[9])s2s1_new#117) <= 0 && s2s1_old#118 <= 0 && -((signed __CPROVER_bitvector[9])s2s1_old#118) <= 0 && s2s2_new#120 <= 0 && -((signed __CPROVER_bitvector[9])s2s2_new#120) <= 0 && s2s2_old#121 <= 0 && -((signed __CPROVER_bitvector[9])s2s2_old#121) <= 0 && side1_written#126 <= 0 && -((signed __CPROVER_bitvector[9])side1_written#126) <= 0 && side2_written#131 <= 0 && -((signed __CPROVER_bitvector[9])side2_written#131) <= 0 && __CPROVER_pipe_count#84 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#84) <= 0 && __CPROVER_max_malloc_size#80 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#80) <= -36028797018963968 && __CPROVER_next_thread_id#82 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#82) <= 0 && __CPROVER_next_thread_key#83 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#83) <= 0 && __CPROVER_thread_id#86 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#86) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of init
+Function init not analyzed yet
+Recursively summarizing function init
+Analyzing function init
+Computing summary
+Computing termination argument for init
+Function trivially terminates
+
+Summary for function init
+params: 
+globals_in: side1Failed_History_0 side1Failed_History_1 side1Failed_History_2 side2Failed_History_0 side2Failed_History_1 side2Failed_History_2 active_side_History_0 active_side_History_1 active_side_History_2 manual_selection_History_0 manual_selection_History_1 manual_selection_History_2 
+globals_out: side1Failed_History_0 side1Failed_History_1 side1Failed_History_2 side2Failed_History_0 side2Failed_History_1 side2Failed_History_2 init#return_value#phi258 active_side_History_0 active_side_History_1 active_side_History_2 manual_selection_History_0 manual_selection_History_1 manual_selection_History_2 
+forward precondition: TRUE
+forward transformer: init#return_value#phi258 <= 1 && -((signed __CPROVER_bitvector[33])init#return_value#phi258) <= 0 && active_side_History_0 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_0) <= 128 && active_side_History_1 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_1) <= 128 && active_side_History_2 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_2) <= 128 && manual_selection_History_0 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_0) <= 128 && manual_selection_History_1 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_1) <= 128 && manual_selection_History_2 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_2) <= 128
+forward invariant: active_side_History_0 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_0) <= 128 && active_side_History_1 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_1) <= 128 && active_side_History_2 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_2) <= 128 && manual_selection_History_0 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_0) <= 128 && manual_selection_History_1 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_1) <= 128 && manual_selection_History_2 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_2) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __VERIFIER_assume
+Function __VERIFIER_assume not analyzed yet
+Recursively summarizing function __VERIFIER_assume
+Analyzing function __VERIFIER_assume
+Computing summary
+Computing termination argument for __VERIFIER_assume
+Synthesizing ranking function to prove termination
+
+Summary for function __VERIFIER_assume
+params: arg 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of Console_task_each_pals_period
+Function Console_task_each_pals_period not analyzed yet
+Recursively summarizing function Console_task_each_pals_period
+Checking precondition of write_manual_selection_history
+Function write_manual_selection_history not analyzed yet
+Recursively summarizing function write_manual_selection_history
+Analyzing function write_manual_selection_history
+Computing summary
+Computing termination argument for write_manual_selection_history
+Function trivially terminates
+
+Summary for function write_manual_selection_history
+params: val 
+globals_in: manual_selection_History_0 manual_selection_History_1 manual_selection_History_2 
+globals_out: manual_selection_History_0#202 manual_selection_History_1#201 manual_selection_History_2#200 
+forward precondition: TRUE
+forward transformer: manual_selection_History_0#202 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_0#202) <= 128 && manual_selection_History_1#201 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_1#201) <= 128 && manual_selection_History_2#200 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_2#200) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function Console_task_each_pals_period
+Computing summary
+Computing termination argument for Console_task_each_pals_period
+Function terminates
+
+Summary for function Console_task_each_pals_period
+params: 
+globals_in: cs1_new cs2_new nomsg 
+globals_out: cs1_new#272 cs2_new#273 nomsg 
+forward precondition: TRUE
+forward transformer: cs1_new#272 <= 127 && -((signed __CPROVER_bitvector[9])cs1_new#272) <= 128 && cs2_new#273 <= 127 && -((signed __CPROVER_bitvector[9])cs2_new#273) <= 128 && nomsg <= 127 && -((signed __CPROVER_bitvector[9])nomsg) <= 128
+forward invariant: nomsg <= 127 && -((signed __CPROVER_bitvector[9])nomsg) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of Side1_activestandby_task_each_pals_period
+Function Side1_activestandby_task_each_pals_period not analyzed yet
+Recursively summarizing function Side1_activestandby_task_each_pals_period
+Checking precondition of write_side1_failed_history
+Function write_side1_failed_history not analyzed yet
+Recursively summarizing function write_side1_failed_history
+Analyzing function write_side1_failed_history
+Computing summary
+Computing termination argument for write_side1_failed_history
+Function trivially terminates
+
+Summary for function write_side1_failed_history
+params: val 
+globals_in: side1Failed_History_0 side1Failed_History_1 side1Failed_History_2 
+globals_out: side1Failed_History_0#139 side1Failed_History_1#138 side1Failed_History_2#137 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of flip_the_side
+Function flip_the_side not analyzed yet
+Recursively summarizing function flip_the_side
+Analyzing function flip_the_side
+Computing summary
+Computing termination argument for flip_the_side
+Function trivially terminates
+
+Summary for function flip_the_side
+params: side 
+globals_in: 
+globals_out: flip_the_side#return_value#264 
+forward precondition: TRUE
+forward transformer: flip_the_side#return_value#264 <= 1 && -((signed __CPROVER_bitvector[9])flip_the_side#return_value#264) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function Side1_activestandby_task_each_pals_period
+Computing summary
+Computing termination argument for Side1_activestandby_task_each_pals_period
+Function terminates
+
+Summary for function Side1_activestandby_task_each_pals_period
+params: 
+globals_in: side1Failed cs1_old nomsg s1p_new s1s1_new s1s1_old s1s2_new s2s1_old side1_written 
+globals_out: side1Failed#285 cs1_old#phi332 nomsg s1p_new#phi332 s1s1_new#phi332 s1s1_old#phi332 s1s2_new#phi332 s2s1_old#phi332 side1_written#phi332 
+forward precondition: TRUE
+forward transformer: cs1_old#phi332 <= 127 && -((signed __CPROVER_bitvector[9])cs1_old#phi332) <= 128 && nomsg <= 127 && -((signed __CPROVER_bitvector[9])nomsg) <= 128 && s1p_new#phi332 <= 127 && -((signed __CPROVER_bitvector[9])s1p_new#phi332) <= 128 && s1s1_new#phi332 <= 127 && -((signed __CPROVER_bitvector[9])s1s1_new#phi332) <= 128 && s1s1_old#phi332 <= 127 && -((signed __CPROVER_bitvector[9])s1s1_old#phi332) <= 128 && s1s2_new#phi332 <= 127 && -((signed __CPROVER_bitvector[9])s1s2_new#phi332) <= 128 && s2s1_old#phi332 <= 127 && -((signed __CPROVER_bitvector[9])s2s1_old#phi332) <= 128 && side1_written#phi332 <= 127 && -((signed __CPROVER_bitvector[9])side1_written#phi332) <= 128
+forward invariant: nomsg <= 127 && -((signed __CPROVER_bitvector[9])nomsg) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of Side2_activestandby_task_each_pals_period
+Function Side2_activestandby_task_each_pals_period not analyzed yet
+Recursively summarizing function Side2_activestandby_task_each_pals_period
+Checking precondition of write_side2_failed_history
+Function write_side2_failed_history not analyzed yet
+Recursively summarizing function write_side2_failed_history
+Analyzing function write_side2_failed_history
+Computing summary
+Computing termination argument for write_side2_failed_history
+Function trivially terminates
+
+Summary for function write_side2_failed_history
+params: val 
+globals_in: side2Failed_History_0 side2Failed_History_1 side2Failed_History_2 
+globals_out: side2Failed_History_0#160 side2Failed_History_1#159 side2Failed_History_2#158 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of flip_the_side
+Precondition trivially holds, replacing by summary.
+Analyzing function Side2_activestandby_task_each_pals_period
+Computing summary
+Computing termination argument for Side2_activestandby_task_each_pals_period
+Function terminates
+
+Summary for function Side2_activestandby_task_each_pals_period
+params: 
+globals_in: side2Failed cs2_old nomsg s1s2_old s2p_new s2s1_new s2s2_new s2s2_old side2_written 
+globals_out: side2Failed#340 cs2_old#phi387 nomsg s1s2_old#phi387 s2p_new#phi387 s2s1_new#phi387 s2s2_new#phi387 s2s2_old#phi387 side2_written#phi387 
+forward precondition: TRUE
+forward transformer: cs2_old#phi387 <= 127 && -((signed __CPROVER_bitvector[9])cs2_old#phi387) <= 128 && nomsg <= 127 && -((signed __CPROVER_bitvector[9])nomsg) <= 128 && s1s2_old#phi387 <= 127 && -((signed __CPROVER_bitvector[9])s1s2_old#phi387) <= 128 && s2p_new#phi387 <= 127 && -((signed __CPROVER_bitvector[9])s2p_new#phi387) <= 128 && s2s1_new#phi387 <= 127 && -((signed __CPROVER_bitvector[9])s2s1_new#phi387) <= 128 && s2s2_new#phi387 <= 127 && -((signed __CPROVER_bitvector[9])s2s2_new#phi387) <= 128 && s2s2_old#phi387 <= 127 && -((signed __CPROVER_bitvector[9])s2s2_old#phi387) <= 128 && side2_written#phi387 <= 127 && -((signed __CPROVER_bitvector[9])side2_written#phi387) <= 128
+forward invariant: nomsg <= 127 && -((signed __CPROVER_bitvector[9])nomsg) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of Pendulum_prism_task_each_pals_period
+Function Pendulum_prism_task_each_pals_period not analyzed yet
+Recursively summarizing function Pendulum_prism_task_each_pals_period
+Checking precondition of read_active_side_history
+Function read_active_side_history not analyzed yet
+Recursively summarizing function read_active_side_history
+Checking precondition of assert
+Function assert not analyzed yet
+Recursively summarizing function assert
+Analyzing function assert
+Computing summary
+Computing termination argument for assert
+Function trivially terminates
+
+Summary for function assert
+params: arg 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function read_active_side_history
+Computing summary
+Computing termination argument for read_active_side_history
+Function terminates
+
+Summary for function read_active_side_history
+params: index 
+globals_in: active_side_History_0 active_side_History_1 active_side_History_2 
+globals_out: active_side_History_0 active_side_History_1 active_side_History_2 read_active_side_history#return_value#phi199 
+forward precondition: TRUE
+forward transformer: active_side_History_0 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_0) <= 128 && active_side_History_1 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_1) <= 128 && active_side_History_2 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_2) <= 128 && read_active_side_history#return_value#phi199 <= 127 && -((signed __CPROVER_bitvector[9])read_active_side_history#return_value#phi199) <= 128
+forward invariant: active_side_History_0 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_0) <= 128 && active_side_History_1 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_1) <= 128 && active_side_History_2 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_2) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of write_active_side_history
+Function write_active_side_history not analyzed yet
+Recursively summarizing function write_active_side_history
+Analyzing function write_active_side_history
+Computing summary
+Computing termination argument for write_active_side_history
+Function trivially terminates
+
+Summary for function write_active_side_history
+params: val 
+globals_in: active_side_History_0 active_side_History_1 active_side_History_2 
+globals_out: active_side_History_0#181 active_side_History_1#180 active_side_History_2#179 
+forward precondition: TRUE
+forward transformer: active_side_History_0#181 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_0#181) <= 128 && active_side_History_1#180 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_1#180) <= 128 && active_side_History_2#179 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_2#179) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function Pendulum_prism_task_each_pals_period
+Computing summary
+Computing termination argument for Pendulum_prism_task_each_pals_period
+Function terminates
+
+Summary for function Pendulum_prism_task_each_pals_period
+params: 
+globals_in: nomsg s1p_old s2p_old 
+globals_out: nomsg s1p_old#399 s2p_old#401 
+forward precondition: TRUE
+forward transformer: nomsg <= 127 && -((signed __CPROVER_bitvector[9])nomsg) <= 128 && s1p_old#399 <= 127 && -((signed __CPROVER_bitvector[9])s1p_old#399) <= 128 && s2p_old#401 <= 127 && -((signed __CPROVER_bitvector[9])s2p_old#401) <= 128
+forward invariant: nomsg <= 127 && -((signed __CPROVER_bitvector[9])nomsg) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of check
+Function check not analyzed yet
+Recursively summarizing function check
+Checking precondition of __VERIFIER_assume
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_manual_selection_history
+Function read_manual_selection_history not analyzed yet
+Recursively summarizing function read_manual_selection_history
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Analyzing function read_manual_selection_history
+Computing summary
+Computing termination argument for read_manual_selection_history
+Function terminates
+
+Summary for function read_manual_selection_history
+params: index 
+globals_in: manual_selection_History_0 manual_selection_History_1 manual_selection_History_2 
+globals_out: manual_selection_History_0 manual_selection_History_1 manual_selection_History_2 read_manual_selection_history#return_value#phi220 
+forward precondition: TRUE
+forward transformer: manual_selection_History_0 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_0) <= 128 && manual_selection_History_1 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_1) <= 128 && manual_selection_History_2 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_2) <= 128 && read_manual_selection_history#return_value#phi220 <= 127 && -((signed __CPROVER_bitvector[9])read_manual_selection_history#return_value#phi220) <= 128
+forward invariant: manual_selection_History_0 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_0) <= 128 && manual_selection_History_1 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_1) <= 128 && manual_selection_History_2 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_2) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of read_side1_failed_history
+Function read_side1_failed_history not analyzed yet
+Recursively summarizing function read_side1_failed_history
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Analyzing function read_side1_failed_history
+Computing summary
+Computing termination argument for read_side1_failed_history
+Function terminates
+
+Summary for function read_side1_failed_history
+params: index 
+globals_in: side1Failed_History_0 side1Failed_History_1 side1Failed_History_2 
+globals_out: read_side1_failed_history#return_value#phi157 side1Failed_History_0 side1Failed_History_1 side1Failed_History_2 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of read_side1_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side2_failed_history
+Function read_side2_failed_history not analyzed yet
+Recursively summarizing function read_side2_failed_history
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Analyzing function read_side2_failed_history
+Computing summary
+Computing termination argument for read_side2_failed_history
+Function terminates
+
+Summary for function read_side2_failed_history
+params: index 
+globals_in: side2Failed_History_0 side2Failed_History_1 side2Failed_History_2 
+globals_out: read_side2_failed_history#return_value#phi178 side2Failed_History_0 side2Failed_History_1 side2Failed_History_2 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of read_side2_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side1_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side2_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_active_side_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side2_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side1_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side2_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_active_side_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side1_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_active_side_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_manual_selection_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side1_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side1_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side2_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_side2_failed_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_active_side_history
+Precondition trivially holds, replacing by summary.
+Checking precondition of read_active_side_history
+Precondition trivially holds, replacing by summary.
+Analyzing function check
+Computing summary
+Computing termination argument for check
+
+Summary for function check
+params: 
+globals_in: side1Failed side2Failed side1_written side2_written 
+globals_out: side1Failed side2Failed check#return_value#phi761 side1_written side2_written 
+forward precondition: TRUE
+forward transformer: check#return_value#phi761 <= 1 && -((signed __CPROVER_bitvector[33])check#return_value#phi761) <= 0 && side1_written <= 127 && -((signed __CPROVER_bitvector[9])side1_written) <= 128 && side2_written <= 127 && -((signed __CPROVER_bitvector[9])side2_written) <= 128
+forward invariant: side1_written <= 127 && -((signed __CPROVER_bitvector[9])side1_written) <= 128 && side2_written <= 127 && -((signed __CPROVER_bitvector[9])side2_written) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Analyzing function main
+Computing summary
+Computing termination argument for main
+
+Summary for function main
+params: 
+globals_in: side1Failed side1Failed_History_0 side1Failed_History_1 side1Failed_History_2 side2Failed side2Failed_History_0 side2Failed_History_1 side2Failed_History_2 active_side_History_0 active_side_History_1 active_side_History_2 cs1_new cs1_old cs2_new cs2_old manual_selection_History_0 manual_selection_History_1 manual_selection_History_2 nomsg s1p_new s1p_old s1s1_new s1s1_old s1s2_new s1s2_old s2p_new s2p_old s2s1_new s2s1_old s2s2_new s2s2_old side1_written side2_written 
+globals_out: side1Failed#8 side1Failed_History_0#12 side1Failed_History_1#13 side1Failed_History_2#14 side2Failed#9 side2Failed_History_0#15 side2Failed_History_1#16 side2Failed_History_2#17 main#return_value#74 active_side_History_0#18 active_side_History_1#19 active_side_History_2#20 cs1_new#phi45 cs1_old#phi45 cs2_new#phi45 cs2_old#phi45 manual_selection_History_0#21 manual_selection_History_1#22 manual_selection_History_2#23 nomsg s1p_new#phi45 s1p_old#phi45 s1s1_new#phi45 s1s1_old#phi45 s1s2_new#phi45 s1s2_old#phi45 s2p_new#phi45 s2p_old#phi45 s2s1_new#phi45 s2s1_old#phi45 s2s2_new#phi45 s2s2_old#phi45 side1_written#10 side2_written#11 
+forward precondition: TRUE
+forward transformer: main#return_value#74 <= 2147483647 && -((signed __CPROVER_bitvector[33])main#return_value#74) <= 2147483648 && active_side_History_0#18 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_0#18) <= 128 && active_side_History_1#19 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_1#19) <= 128 && active_side_History_2#20 <= 127 && -((signed __CPROVER_bitvector[9])active_side_History_2#20) <= 128 && cs1_new#phi45 <= 127 && -((signed __CPROVER_bitvector[9])cs1_new#phi45) <= 128 && cs1_old#phi45 <= 127 && -((signed __CPROVER_bitvector[9])cs1_old#phi45) <= 128 && cs2_new#phi45 <= 127 && -((signed __CPROVER_bitvector[9])cs2_new#phi45) <= 128 && cs2_old#phi45 <= 127 && -((signed __CPROVER_bitvector[9])cs2_old#phi45) <= 128 && manual_selection_History_0#21 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_0#21) <= 128 && manual_selection_History_1#22 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_1#22) <= 128 && manual_selection_History_2#23 <= 127 && -((signed __CPROVER_bitvector[9])manual_selection_History_2#23) <= 128 && nomsg <= 127 && -((signed __CPROVER_bitvector[9])nomsg) <= 128 && s1p_new#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s1p_new#phi45) <= 128 && s1p_old#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s1p_old#phi45) <= 128 && s1s1_new#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s1s1_new#phi45) <= 128 && s1s1_old#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s1s1_old#phi45) <= 128 && s1s2_new#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s1s2_new#phi45) <= 128 && s1s2_old#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s1s2_old#phi45) <= 128 && s2p_new#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s2p_new#phi45) <= 128 && s2p_old#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s2p_old#phi45) <= 128 && s2s1_new#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s2s1_new#phi45) <= 128 && s2s1_old#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s2s1_old#phi45) <= 128 && s2s2_new#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s2s2_new#phi45) <= 128 && s2s2_old#phi45 <= 127 && -((signed __CPROVER_bitvector[9])s2s2_old#phi45) <= 128 && side1_written#10 <= 127 && -((signed __CPROVER_bitvector[9])side1_written#10) <= 128 && side2_written#11 <= 127 && -((signed __CPROVER_bitvector[9])side2_written#11) <= 128
+forward invariant: ($guard#45 && $guard#ls71 ==> cs1_old#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])cs1_old#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> cs1_new#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])cs1_new#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> cs2_old#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])cs2_old#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> cs2_new#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])cs2_new#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s1s2_old#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s1s2_old#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s1s2_new#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s1s2_new#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s1s1_old#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s1s1_old#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s1s1_new#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s1s1_new#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s2s1_old#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s2s1_old#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s2s1_new#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s2s1_new#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s2s2_old#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s2s2_old#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s2s2_new#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s2s2_new#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s1p_old#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s1p_old#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s1p_new#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s1p_new#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s2p_old#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s2p_old#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> s2p_new#lb71 <= 127) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[9])s2p_new#lb71) <= 128) && ($guard#45 && $guard#ls71 ==> c1#lb71 <= 1) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[33])c1#lb71) <= 0) && ($guard#45 && $guard#ls71 ==> i2#lb71 <= 10) && ($guard#45 && $guard#ls71 ==> -((signed __CPROVER_bitvector[33])i2#lb71) <= 0) && nomsg <= 127 && -((signed __CPROVER_bitvector[9])nomsg) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 282793272
+  number of solver calls: 1949308888
+  number of summaries used: 43
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[assert]: yes
+[main]: unknown
+[__CPROVER_initialize]: yes
+[__VERIFIER_assume]: unknown
+[write_side1_failed_history]: yes
+[read_side1_failed_history]: yes
+[write_side2_failed_history]: yes
+[read_side2_failed_history]: yes
+[write_active_side_history]: yes
+[read_active_side_history]: yes
+[write_manual_selection_history]: yes
+[read_manual_selection_history]: yes
+[init]: yes
+[flip_the_side]: yes
+[Console_task_each_pals_period]: yes
+[Side1_activestandby_task_each_pals_period]: yes
+[Side2_activestandby_task_each_pals_period]: yes
+[Pendulum_prism_task_each_pals_period]: yes
+[check]: unknown
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 1391 milliseconds

@@ -1,0 +1,2 @@
+/Users/nfathi2/Desktop/run_MuVal.sh: line 43: 62782 Killed: 9               timeout --kill-after=10 "$timeout" docker run --rm -v "$root_directory":/liveness_analysis muval-original /bin/bash -c "             cd /root/coar &&             ./main.exe -c ./config/solver/muval_parallel_exc_tbq_ar.json -p ltsterm /liveness_analysis/Benchmarks/\"$t2_file_path\""
+Runtime: 910063 milliseconds

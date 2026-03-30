@@ -1,0 +1,49 @@
+NODE   2: <2> PSNodeType::ENTRY (points-to size: 0)
+NODE   3:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   4:   %ret = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ret = alloca i32, align 4 + 0
+NODE   5:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   6: <6> PSNodeType::CALL (points-to size: 0)
+NODE   7: <7> PSNodeType::ENTRY (points-to size: 0)
+NODE   8:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   9:   %num = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %num = alloca i32, align 4 + 0
+NODE  10:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  11:   store i32 %call, i32* %num, align 4 (points-to size: 0)
+NODE  12:   %0 = load i32, i32* %num, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  13:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  14:   %4 = load i32, i32* %retval, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  15:   ret i32 %4 (points-to size: 0)
+NODE  16:   %3 = load i32, i32* %num, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  17:   store i32 %3, i32* %retval, align 4 (points-to size: 0)
+NODE  18:   %1 = load i32, i32* @errno, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  19:   %2 = load i32, i32* %num, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  20:   store i32 %2, i32* %retval, align 4 (points-to size: 0)
+NODE  21:   store i32 2, i32* @errno, align 4 (points-to size: 0)
+NODE  22:   store i32 1, i32* @errno, align 4 (points-to size: 0)
+NODE  23: waitpid (points-to size: 1)
+    -> waitpid + 0
+NODE  24: main (points-to size: 1)
+    -> main + 0
+NODE  25:   %call = call i32 @waitpid() (points-to size: 0)
+NODE  26:   store i32 %call, i32* %ret, align 4 (points-to size: 0)
+NODE  27:   %0 = load i32, i32* %ret, align 4 (points-to size: 0)
+NODE  28: <28> PSNodeType::CALL (points-to size: 0)
+NODE  29:   %call1 = call i32 @waitpid() (points-to size: 0)
+NODE  30:   store i32 %call1, i32* %ret, align 4 (points-to size: 0)
+NODE  31:   %1 = load i32, i32* %ret, align 4 (points-to size: 0)
+NODE  32:   %2 = load i32, i32* @errno, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  33:   ret i32 0 (points-to size: 1)
+    -> null + 0

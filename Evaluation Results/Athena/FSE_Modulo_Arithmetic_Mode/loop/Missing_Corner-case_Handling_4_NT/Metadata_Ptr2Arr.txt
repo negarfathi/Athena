@@ -1,0 +1,22 @@
+
+StructureField, next
+Function, initLink
+Macro, MEMORY0_SIZE
+GlobalVariable, memory0_freeIndex
+Function, allocate_memory0
+FunctionParameter, allocate_memory0, size
+LocalVariable, allocate_memory0, allocatedIndex
+Macro, MEMORY1_SIZE
+GlobalVariable, memory1_freeIndex
+Function, allocate_memory1
+FunctionParameter, allocate_memory1, size
+LocalVariable, allocate_memory1, allocatedIndex
+LocalVariable, initLink, head
+LocalVariable, initLink, cyclic
+LocalVariable, initLink, body
+Function, findEnd
+FunctionParameter, findEnd, list
+LocalVariable, findEnd, begin
+LocalVariable, main, list
+LocalVariable, main, node
+LocalVariable, main, end

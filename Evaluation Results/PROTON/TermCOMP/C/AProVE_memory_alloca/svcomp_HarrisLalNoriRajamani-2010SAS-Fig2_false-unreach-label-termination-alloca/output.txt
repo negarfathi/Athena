@@ -1,0 +1,273 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.x5VCcQ
+
+Input File is : svcomp_HarrisLalNoriRajamani-2010SAS-Fig2_false-unreach-label-termination-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int foo(void) {
+    int* y = alloca(sizeof(int));
+    {if (__VERIFIER_nondet_int()) {
+        {if (__VERIFIER_nondet_int()) {
+            {if (__VERIFIER_nondet_int()) {
+                *y = 0;
+            } else {
+                *y = 1;
+            }}
+        } else {
+            {if (__VERIFIER_nondet_int()) {
+                *y = 2;
+            } else {
+                *y = 3;
+            }}
+        }}
+    } else {
+        {if (__VERIFIER_nondet_int()) {
+            {if (__VERIFIER_nondet_int()) {
+                *y = 4;
+            } else {
+                *y = 5;
+            }}
+        } else {
+            {if (__VERIFIER_nondet_int()) {
+                *y = 6;
+            } else {
+                *y = 7;
+            }}
+        }}
+    }} return *y;
+}
+
+int main() {
+    int* d = alloca(sizeof(int));
+    int* x = alloca(sizeof(int));
+    *d = 1;
+    
+    {if (__VERIFIER_nondet_int()) {
+        *d = *d - 1;
+    }}
+    
+    {if (__VERIFIER_nondet_int()) {
+        foo();
+    }}
+    {if (__VERIFIER_nondet_int()) {
+        foo();
+    }}
+    {if (__VERIFIER_nondet_int()) {
+        foo();
+    }}
+    {if (__VERIFIER_nondet_int()) {
+        foo();
+    }}
+    
+    // I think there is a typo in the paper and the following
+    // decrement can be omitted.
+    {if (__VERIFIER_nondet_int()) {
+        *d = *d - 1;
+    }}
+    
+    while (*x > 0) {
+        *x = *x - *d;
+    }
+    return 0;
+}./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_HarrisLalNoriRajamani-2010SAS-Fig2_false-unreach-label-termination-alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int foo(void) {
+    int* y = alloca(sizeof(int));
+    { __VERIFIER_reached_control(7, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(7, __func__);
+
+        { __VERIFIER_reached_control(8, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(8, __func__);
+
+            { __VERIFIER_reached_control(9, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(9, __func__);
+
+                *y = 0;
+            } else { __VERIFIER_control_false(11, __func__);
+
+                *y = 1;
+            }}
+        } else { __VERIFIER_control_false(14, __func__);
+
+            { __VERIFIER_reached_control(15, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(15, __func__);
+
+                *y = 2;
+            } else { __VERIFIER_control_false(17, __func__);
+
+                *y = 3;
+            }}
+        }}
+    } else { __VERIFIER_control_false(21, __func__);
+
+        { __VERIFIER_reached_control(22, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(22, __func__);
+
+            { __VERIFIER_reached_control(23, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(23, __func__);
+
+                *y = 4;
+            } else { __VERIFIER_control_false(25, __func__);
+
+                *y = 5;
+            }}
+        } else { __VERIFIER_control_false(28, __func__);
+
+            { __VERIFIER_reached_control(29, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(29, __func__);
+
+                *y = 6;
+            } else { __VERIFIER_control_false(31, __func__);
+
+                *y = 7;
+            }}
+        }}
+    }} return *y;
+}
+
+int main() {
+    int* d = alloca(sizeof(int));
+    int* x = alloca(sizeof(int));
+    *d = 1;
+    
+    { __VERIFIER_reached_control(43, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(43, __func__);
+
+        *d = *d - 1;
+    }}
+    
+    { __VERIFIER_reached_control(47, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(47, __func__);
+
+        foo();
+    }}
+    { __VERIFIER_reached_control(50, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(50, __func__);
+
+        foo();
+    }}
+    { __VERIFIER_reached_control(53, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(53, __func__);
+
+        foo();
+    }}
+    { __VERIFIER_reached_control(56, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(56, __func__);
+
+        foo();
+    }}
+    
+    // I think there is a typo in the paper and the following
+    // decrement can be omitted.
+    { __VERIFIER_reached_control(62, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(62, __func__);
+
+        *d = *d - 1;
+    }}
+    
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(66, __func__);
+ while (*x > 0) { __VERIFIER_loop_head(66, __func__);
+printf("CBMC Instrumentation @ line66");myBool flag=__VERIFIER_nondet_myBool();static int * od;static int od_val;static int * ox;static int ox_val;if(pStored0){__CPROVER_assert(!(od==d && *od==*d && od_val==*d && ox==x && *ox==*x && ox_val==*x),"recurrent state found");} if(flag){od=d;*od=*d;od_val=*d;ox=x;*ox=*x;ox_val=*x;pStored0=myTrue;} 
+        *x = *x - *d;
+    }
+    return 0;
+}./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_HarrisLalNoriRajamani-2010SAS-Fig2_false-unreach-label-termination-alloca_braced_instrumented.c
+NTFILE is svcomp_HarrisLalNoriRajamani-2010SAS-Fig2_false-unreach-label-termination-alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = svcomp_HarrisLalNoriRajamani-2010SAS-Fig2_false-unreach-label-termination-alloca.c
+b'7e5670852258973a926006c2625500c2f84cfd0490615e64855eb1f257708f75  svcomp_HarrisLalNoriRajamani-2010SAS-Fig2_false-unreach-label-termination-alloca.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/AProVE_memory_alloca/svcomp_HarrisLalNoriRajamani-2010SAS-Fig2_false-unreach-label-termination-alloca/svcomp_HarrisLalNoriRajamani-2010SAS-Fig2_false-unreach-label-termination-alloca.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 43 reachedControl
+main 43 trueBranch
+main 47 reachedControl
+main 47 trueBranch
+foo 7 reachedControl
+foo 7 trueBranch
+foo 8 reachedControl
+foo 8 trueBranch
+foo 9 reachedControl
+foo 9 trueBranch
+main 50 reachedControl
+main 50 trueBranch
+foo 7 reachedControl
+foo 7 trueBranch
+foo 8 reachedControl
+foo 8 trueBranch
+foo 9 reachedControl
+foo 9 trueBranch
+main 53 reachedControl
+main 53 trueBranch
+foo 7 reachedControl
+foo 7 trueBranch
+foo 8 reachedControl
+foo 8 trueBranch
+foo 9 reachedControl
+foo 9 trueBranch
+main 56 reachedControl
+main 56 trueBranch
+foo 7 reachedControl
+foo 7 trueBranch
+foo 8 reachedControl
+foo 8 trueBranch
+foo 9 reachedControl
+foo 9 trueBranch
+main 62 reachedControl
+enteringLasso
+main 66 reachedControl
+main 66 loopHead
+main 66 reachedControl
+main 66 loopHead
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 163, in generateViolationWitness
+    nextLineNo = nextLineWords[-2]
+IndexError: list index out of range
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for svcomp_HarrisLalNoriRajamani-2010SAS-Fig2_false-unreach-label-termination-alloca.c
+FILE=svcomp_HarrisLalNoriRajamani-2010SAS-Fig2_false-unreach-label-termination-alloca_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2196 milliseconds

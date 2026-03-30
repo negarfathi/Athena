@@ -1,0 +1,65 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.LsKeIB
+
+Input File is : svcomp_Urban-2013WST-Fig2_true-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_Urban-2013WST-Fig2_true-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+int main() {
+    int* x1 = alloca(sizeof(int));
+    int* x2 = alloca(sizeof(int));
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(6, __func__);
+ while (*x1 <= 10) { __VERIFIER_loop_head(6, __func__);
+printf("CBMC Instrumentation @ line6");myBool flag=__VERIFIER_nondet_myBool();static int * ox1;static int ox1_val;static int * ox2;static int ox2_val;if(pStored0){__CPROVER_assert(!(ox1==x1 && *ox1==*x1 && ox1_val==*x1 && ox2==x2 && *ox2==*x2 && ox2_val==*x2),"recurrent state found");} if(flag){ox1=x1;*ox1=*x1;ox1_val=*x1;ox2=x2;*ox2=*x2;ox2_val=*x2;pStored0=myTrue;} 
+        *x2 = 10;
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(8, __func__);
+ while (*x2 > 1) { __VERIFIER_loop_head(8, __func__);
+printf("CBMC Instrumentation @ line8");myBool flag=__VERIFIER_nondet_myBool();static int * ox1;static int ox1_val;static int * ox2;static int ox2_val;if(pStored1){__CPROVER_assert(!(ox1==x1 && *ox1==*x1 && ox1_val==*x1 && ox2==x2 && *ox2==*x2 && ox2_val==*x2),"recurrent state found");} if(flag){ox1=x1;*ox1=*x1;ox1_val=*x1;ox2=x2;*ox2=*x2;ox2_val=*x2;pStored1=myTrue;} 
+            *x2 = *x2 - 1;
+        }
+        *x1 = *x1 + 1;
+    }
+}./proton: line 26:   103 Aborted                 instrumenter -in $FILE_NAME -c
+svcomp_Urban-2013WST-Fig2_true-alloca_instrumented.c
+NTFILE is svcomp_Urban-2013WST-Fig2_true-alloca_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for svcomp_Urban-2013WST-Fig2_true-alloca.c
+FILE=svcomp_Urban-2013WST-Fig2_true-alloca_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 302325 milliseconds

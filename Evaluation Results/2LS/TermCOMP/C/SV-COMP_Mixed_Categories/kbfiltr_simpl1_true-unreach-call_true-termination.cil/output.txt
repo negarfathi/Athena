@@ -1,0 +1,149 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/kbfiltr_simpl1_true-unreach-call_true-termination.cil/kbfiltr_simpl1_true-unreach-call_true-termination.cil.c
+Converting
+Type-checking kbfiltr_simpl1_true-unreach-call_true-termination.cil
+file kbfiltr_simpl1.cil.c line 192 function KbFilter_PnP: function 'IofCallDriver' is not declared
+file kbfiltr_simpl1.cil.c line 199 function KbFilter_PnP: function 'KeWaitForSingleObject' is not declared
+file kbfiltr_simpl1.cil.c line 463 function IofCallDriver: function 'KbFilter_Complete' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of stub_driver_init
+Simplifying
+Computing SSA of _BLAST_init
+Simplifying
+Computing SSA of IofCompleteRequest
+Simplifying
+Computing SSA of errorFn
+Simplifying
+Computing SSA of KbFilter_PnP
+Simplifying
+Computing SSA of IofCallDriver
+Simplifying
+Computing SSA of KeWaitForSingleObject
+Simplifying
+Computing SSA of stubMoreProcessingRequired
+Simplifying
+Computing SSA of KbFilter_Complete
+Simplifying
+Computing SSA of KeSetEvent
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object DC Executive IPC KernelMode MPR1 MPR3 NP SKIP1 SKIP2 UNLOADED __CPROVER_rounding_mode compFptr compRegistered customIrp lowerDriverReturn myStatus pended s setEventCalled __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#145 __CPROVER_thread_key_dtors#143 __CPROVER_thread_keys#144 __CPROVER_malloc_is_new_array#135 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#132 __CPROVER_dead_object#133 __CPROVER_deallocated#134 __CPROVER_new_object#137 DC#146 Executive#147 IPC#148 KernelMode#149 MPR1#150 MPR3#151 NP#152 SKIP1#153 SKIP2#154 UNLOADED#155 __CPROVER_rounding_mode#141 compFptr#156 compRegistered#157 customIrp#158 lowerDriverReturn#159 myStatus#160 pended#161 s#162 setEventCalled#163 __CPROVER_pipe_count#140 __CPROVER_max_malloc_size#136 __CPROVER_next_thread_id#138 __CPROVER_next_thread_key#139 __CPROVER_thread_id#142 
+forward precondition: TRUE
+forward transformer: DC#146 <= 0 && -((signed __CPROVER_bitvector[33])DC#146) <= 0 && Executive#147 <= 0 && -((signed __CPROVER_bitvector[33])Executive#147) <= 0 && IPC#148 <= 0 && -((signed __CPROVER_bitvector[33])IPC#148) <= 0 && KernelMode#149 <= 0 && -((signed __CPROVER_bitvector[33])KernelMode#149) <= 0 && MPR1#150 <= 0 && -((signed __CPROVER_bitvector[33])MPR1#150) <= 0 && MPR3#151 <= 0 && -((signed __CPROVER_bitvector[33])MPR3#151) <= 0 && NP#152 <= 0 && -((signed __CPROVER_bitvector[33])NP#152) <= 0 && SKIP1#153 <= 0 && -((signed __CPROVER_bitvector[33])SKIP1#153) <= 0 && SKIP2#154 <= 0 && -((signed __CPROVER_bitvector[33])SKIP2#154) <= 0 && UNLOADED#155 <= 0 && -((signed __CPROVER_bitvector[33])UNLOADED#155) <= 0 && __CPROVER_rounding_mode#141 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#141) <= 0 && compFptr#156 <= 0 && -((signed __CPROVER_bitvector[33])compFptr#156) <= 0 && compRegistered#157 <= 0 && -((signed __CPROVER_bitvector[33])compRegistered#157) <= 0 && customIrp#158 <= 0 && -((signed __CPROVER_bitvector[33])customIrp#158) <= 0 && lowerDriverReturn#159 <= 0 && -((signed __CPROVER_bitvector[33])lowerDriverReturn#159) <= 0 && myStatus#160 <= 0 && -((signed __CPROVER_bitvector[33])myStatus#160) <= 0 && pended#161 <= 0 && -((signed __CPROVER_bitvector[33])pended#161) <= 0 && s#162 <= 0 && -((signed __CPROVER_bitvector[33])s#162) <= 0 && setEventCalled#163 <= 0 && -((signed __CPROVER_bitvector[33])setEventCalled#163) <= 0 && __CPROVER_pipe_count#140 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#140) <= 0 && __CPROVER_max_malloc_size#136 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#136) <= -36028797018963968 && __CPROVER_next_thread_id#138 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#138) <= 0 && __CPROVER_next_thread_key#139 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#139) <= 0 && __CPROVER_thread_id#142 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#142) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of _BLAST_init
+Function _BLAST_init not analyzed yet
+Recursively summarizing function _BLAST_init
+Analyzing function _BLAST_init
+Computing summary
+Computing termination argument for _BLAST_init
+Function trivially terminates
+
+Summary for function _BLAST_init
+params: 
+globals_in: DC IPC MPR1 MPR3 NP SKIP1 SKIP2 UNLOADED compFptr compRegistered customIrp lowerDriverReturn pended s setEventCalled 
+globals_out: DC#175 IPC#180 MPR1#178 MPR3#179 NP#174 SKIP1#176 SKIP2#177 UNLOADED#173 compFptr#183 compRegistered#184 customIrp#187 lowerDriverReturn#185 pended#182 s#181 setEventCalled#186 
+forward precondition: TRUE
+forward transformer: DC#175 <= 2 && -((signed __CPROVER_bitvector[33])DC#175) <= -2 && IPC#180 <= 7 && -((signed __CPROVER_bitvector[33])IPC#180) <= -7 && MPR1#178 <= 5 && -((signed __CPROVER_bitvector[33])MPR1#178) <= -5 && MPR3#179 <= 6 && -((signed __CPROVER_bitvector[33])MPR3#179) <= -6 && NP#174 <= 1 && -((signed __CPROVER_bitvector[33])NP#174) <= -1 && SKIP1#176 <= 3 && -((signed __CPROVER_bitvector[33])SKIP1#176) <= -3 && SKIP2#177 <= 4 && -((signed __CPROVER_bitvector[33])SKIP2#177) <= -4 && UNLOADED#173 <= 0 && -((signed __CPROVER_bitvector[33])UNLOADED#173) <= 0 && compFptr#183 <= 0 && -((signed __CPROVER_bitvector[33])compFptr#183) <= 0 && compRegistered#184 <= 0 && -((signed __CPROVER_bitvector[33])compRegistered#184) <= 0 && customIrp#187 <= 0 && -((signed __CPROVER_bitvector[33])customIrp#187) <= 0 && lowerDriverReturn#185 <= 0 && -((signed __CPROVER_bitvector[33])lowerDriverReturn#185) <= 0 && pended#182 <= 0 && -((signed __CPROVER_bitvector[33])pended#182) <= 0 && s#181 <= 0 && -((signed __CPROVER_bitvector[33])s#181) <= 0 && setEventCalled#186 <= 0 && -((signed __CPROVER_bitvector[33])setEventCalled#186) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Function never terminates normally
+
+Summary for function main
+params: 
+globals_in: DC Executive IPC KernelMode MPR1 MPR3 NP SKIP1 SKIP2 UNLOADED compFptr compRegistered customIrp lowerDriverReturn myStatus pended s setEventCalled 
+globals_out: DC#21 Executive#17 IPC#26 KernelMode#16 MPR1#24 MPR3#25 NP#20 SKIP1#22 SKIP2#23 UNLOADED#19 compFptr#28 compRegistered#phi131 customIrp#phi131 lowerDriverReturn#phi131 main#return_value#phi131 myStatus#phi131 pended#phi131 s#phi131 setEventCalled#phi131 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+Function never terminates normally
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+** statistics: 
+  number of solver instances: 2286028072
+  number of solver calls: 240905
+  number of summaries used: 3
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[main]: no
+[__CPROVER_initialize]: yes
+[stub_driver_init]: not computed
+[_BLAST_init]: yes
+[IofCompleteRequest]: not computed
+[errorFn]: not computed
+[KbFilter_PnP]: not computed
+[IofCallDriver]: not computed
+[KeWaitForSingleObject]: not computed
+[stubMoreProcessingRequired]: not computed
+[KbFilter_Complete]: not computed
+[KeSetEvent]: not computed
+[__CPROVER__start]: no
+VERIFICATION INCONCLUSIVE
+Runtime: 540 milliseconds

@@ -1,0 +1,103 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.XXAodL
+
+Input File is : svcomp_insertionsort_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+void insertionSort(int a[], int array_size)
+{
+    int i, j, index;
+    for (i = 1; i < array_size; ++i)
+    {
+        index = a[i];
+        for (j = i; j > 0 && ((a[j-1]) > index); j--)
+            {a[j] = a[j-1];}
+
+        a[j] = index;
+    }
+}
+
+int main() {
+  int array_size = __VERIFIER_nondet_int();
+  {if (array_size < 1) {
+     array_size = 1;
+  }}
+  int* a = (int*) alloca(array_size * sizeof(int));
+  insertionSort(a, array_size);
+  return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_insertionsort_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+void insertionSort(int a[], int array_size)
+{
+    int i, j, index;
+    for (i = 1; i < array_size; ++i)
+    {printf("ArrayNT State @ line9: Array Found\n");
+        index = a[i];
+        for (j = i; j > 0 && ((a[j-1]) > index); j--)
+            {printf("ArrayNT State @ line12: Array Found\n");a[j] = a[j-1];}
+
+        a[j] = index;
+    }
+}
+
+int main() {
+  int array_size = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(20, __func__);
+if (array_size < 1) { __VERIFIER_control_true(20, __func__);
+
+     array_size = 1;
+  }}
+  int* a = (int*) alloca(array_size * sizeof(int));
+  insertionSort(a, array_size);
+  return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_insertionsort_alloca_braced_instrumented.c
+NTFILE is svcomp_insertionsort_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_insertionsort_alloca.c
+FILE=svcomp_insertionsort_alloca_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 1670 milliseconds

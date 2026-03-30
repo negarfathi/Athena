@@ -1,0 +1,91 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/standard_compare_true-unreach-call_ground/standard_compare_true-unreach-call_ground.c
+Converting
+Type-checking standard_compare_true-unreach-call_ground
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __VERIFIER_assert
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#40 __CPROVER_thread_key_dtors#38 __CPROVER_thread_keys#39 __CPROVER_malloc_is_new_array#30 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#27 __CPROVER_dead_object#28 __CPROVER_deallocated#29 __CPROVER_new_object#32 __CPROVER_rounding_mode#36 __CPROVER_pipe_count#35 __CPROVER_max_malloc_size#31 __CPROVER_next_thread_id#33 __CPROVER_next_thread_key#34 __CPROVER_thread_id#37 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#36 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#36) <= 0 && __CPROVER_pipe_count#35 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#35) <= 0 && __CPROVER_max_malloc_size#31 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#31) <= -36028797018963968 && __CPROVER_next_thread_id#33 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#33) <= 0 && __CPROVER_next_thread_key#34 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#34) <= 0 && __CPROVER_thread_id#37 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#37) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+--- begin invariant violation report ---
+Invariant check failed
+File: flattening/boolbv_map.cpp:68 function: get_literals
+Condition: map_entry.literal_map.size() == width
+Reason: number of literals in the literal map shall equal the bitvector width
+Backtrace:
+/root/2ls/src/2ls/2ls(+0x3ee1ac) [0xaaaace10e1ac]
+/root/2ls/src/2ls/2ls(+0x3eedb8) [0xaaaace10edb8]
+/root/2ls/src/2ls/2ls(+0x3cd6c) [0xaaaacdd5cd6c]
+/root/2ls/src/2ls/2ls(+0x346df8) [0xaaaace066df8]
+/root/2ls/src/2ls/2ls(+0x31fd40) [0xaaaace03fd40]
+/root/2ls/src/2ls/2ls(+0x31d99c) [0xaaaace03d99c]
+/root/2ls/src/2ls/2ls(+0x35da24) [0xaaaace07da24]
+/root/2ls/src/2ls/2ls(+0x3213c4) [0xaaaace0413c4]
+/root/2ls/src/2ls/2ls(+0x33e808) [0xaaaace05e808]
+/root/2ls/src/2ls/2ls(+0x31d854) [0xaaaace03d854]
+/root/2ls/src/2ls/2ls(+0x35da24) [0xaaaace07da24]
+/root/2ls/src/2ls/2ls(+0x3213c4) [0xaaaace0413c4]
+/root/2ls/src/2ls/2ls(+0x3328b0) [0xaaaace0528b0]
+/root/2ls/src/2ls/2ls(+0x2be4fc) [0xaaaacdfde4fc]
+/root/2ls/src/2ls/2ls(+0x33c710) [0xaaaace05c710]
+/root/2ls/src/2ls/2ls(+0x31d8ec) [0xaaaace03d8ec]
+/root/2ls/src/2ls/2ls(+0x35da24) [0xaaaace07da24]
+/root/2ls/src/2ls/2ls(+0x3213c4) [0xaaaace0413c4]
+/root/2ls/src/2ls/2ls(+0x3328b0) [0xaaaace0528b0]
+/root/2ls/src/2ls/2ls(+0x2be4fc) [0xaaaacdfde4fc]
+/root/2ls/src/2ls/2ls(+0x2bc060) [0xaaaacdfdc060]
+/root/2ls/src/2ls/2ls(+0x4c204c) [0xaaaace1e204c]
+/root/2ls/src/2ls/2ls(+0x53bacc) [0xaaaace25bacc]
+/root/2ls/src/2ls/2ls(+0x533db4) [0xaaaace253db4]
+/root/2ls/src/2ls/2ls(+0x535954) [0xaaaace255954]
+/root/2ls/src/2ls/2ls(+0x533ef0) [0xaaaace253ef0]
+/root/2ls/src/2ls/2ls(+0x535954) [0xaaaace255954]
+/root/2ls/src/2ls/2ls(+0x53b618) [0xaaaace25b618]
+/root/2ls/src/2ls/2ls(+0x5cd8c) [0xaaaacdd7cd8c]
+/root/2ls/src/2ls/2ls(+0x647c4) [0xaaaacdd847c4]
+/root/2ls/src/2ls/2ls(+0x463e4) [0xaaaacdd663e4]
+/root/2ls/src/2ls/2ls(+0x38d80) [0xaaaacdd58d80]
+/root/2ls/src/2ls/2ls(+0x32844) [0xaaaacdd52844]
+/lib/aarch64-linux-gnu/libc.so.6(+0x273fc) [0xffff93a073fc]
+/lib/aarch64-linux-gnu/libc.so.6(__libc_start_main+0x98) [0xffff93a074cc]
+/root/2ls/src/2ls/2ls(+0x3c0f0) [0xaaaacdd5c0f0]
+
+
+--- end invariant violation report ---
+Runtime: 270 milliseconds

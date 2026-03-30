@@ -1,0 +1,81 @@
+///*** 1_main ***///
+START: main_bb6;
+
+FROM: main_bb6;
+v22 := nondet();
+TO: main_bb6_v.;
+FROM: main_bb6_v.;
+assume(v22 < 1);
+v. := 1;
+TO: main_bb6_sv.;
+
+FROM: main_bb6_v.;
+assume(v22 >= 1);
+v. := v22;
+TO: main_bb6_sv.;
+
+FROM: main_bb6_sv.;
+v25 := v24 * 4;
+var__temp_vi.0.i := 0;
+TO: main_bb7;
+
+FROM: main_bb7;
+vi.0.i := var__temp_vi.0.i;
+v28 := v. - 1;
+var__temp_vj.0.sink.i := vi.0.i;
+var__temp_vmin.0.i := vi.0.i;
+TO: main_bb7_end;
+
+FROM: main_bb7_end;
+assume(vi.0.i < v28);
+TO: main_bb8;
+
+FROM: main_bb7_end;
+assume(vi.0.i >= v28);
+TO: main_SelectionSort.exit;
+
+FROM: main_bb8;
+vj.0.sink.i := var__temp_vj.0.sink.i;
+vmin.0.i := var__temp_vmin.0.i;
+v30 := vj.0.sink.i + 1;
+TO: main_bb8_end;
+
+FROM: main_bb8_end;
+assume(v30 < v.);
+TO: main_bb9;
+
+FROM: main_bb8_end;
+assume(v30 >= v.);
+TO: main_bb10;
+
+FROM: main_bb9;
+v34 := nondef.1;
+v37 := nondef.2;
+TO: main_bb9_vj.0.min.0.i;
+FROM: main_bb9_vj.0.min.0.i;
+assume(v34 < v37);
+vj.0.min.0.i := v30;
+TO: main_bb9_svj.0.min.0.i;
+
+FROM: main_bb9_vj.0.min.0.i;
+assume(v34 >= v37);
+vj.0.min.0.i := vmin.0.i;
+TO: main_bb9_svj.0.min.0.i;
+
+FROM: main_bb9_svj.0.min.0.i;
+var__temp_vj.0.sink.i := v30;
+var__temp_vmin.0.i := vj.0.min.0.i;
+TO: main_bb8;
+
+FROM: main_bb10;
+v41 := nondef.3;
+v44 := nondef.4;
+v46 := v44;
+v48 := v41;
+v49 := vi.0.i + 1;
+var__temp_vi.0.i := v49;
+TO: main_bb7;
+
+FROM: main_SelectionSort.exit;
+TO: main_SelectionSort.exit_ret;
+

@@ -1,0 +1,121 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.DjSkLl
+
+Input File is : NO_04.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : NO_04.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+typedef enum {false,true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i;
+    int j;
+    int k;
+    int l;
+    int m;
+    int a;
+    int b;
+    i = 0;
+    
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+ while (i < 100) { __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;static int oi;static int oj;static int ok;static int ol;static int om;if(pStored0){__CPROVER_assert(!(oa==a && ob==b && oi==i && oj==j && ok==k && ol==l && om==m),"recurrent state found");} if(flag){oa=a;ob=b;oi=i;oj=j;ok=k;ol=l;om=m;pStored0=myTrue;} 
+        a = i+2;
+        j = 0;
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(18, __func__);
+ while (j < a) { __VERIFIER_loop_head(18, __func__);
+printf("CBMC Instrumentation @ line18");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;static int oi;static int oj;static int ok;static int ol;static int om;if(pStored1){__CPROVER_assert(!(oa==a && ob==b && oi==i && oj==j && ok==k && ol==l && om==m),"recurrent state found");} if(flag){oa=a;ob=b;oi=i;oj=j;ok=k;ol=l;om=m;pStored1=myTrue;} 
+            k = i+j+3;
+           myBool pStored2 = myFalse; __VERIFIER_reached_control(20, __func__);
+ while (k >= 0) { __VERIFIER_loop_head(20, __func__);
+printf("CBMC Instrumentation @ line20");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;static int oi;static int oj;static int ok;static int ol;static int om;if(pStored2){__CPROVER_assert(!(oa==a && ob==b && oi==i && oj==j && ok==k && ol==l && om==m),"recurrent state found");} if(flag){oa=a;ob=b;oi=i;oj=j;ok=k;ol=l;om=m;pStored2=myTrue;} 
+                b = i+j+k+4;
+                l = 0;
+               myBool pStored3 = myFalse; __VERIFIER_reached_control(23, __func__);
+ while (l < b) { __VERIFIER_loop_head(23, __func__);
+printf("CBMC Instrumentation @ line23");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;static int oi;static int oj;static int ok;static int ol;static int om;if(pStored3){__CPROVER_assert(!(oa==a && ob==b && oi==i && oj==j && ok==k && ol==l && om==m),"recurrent state found");} if(flag){oa=a;ob=b;oi=i;oj=j;ok=k;ol=l;om=m;pStored3=myTrue;} 
+                    m = i+j+k+l+1000;
+                   myBool pStored4 = myFalse; __VERIFIER_reached_control(25, __func__);
+ while (m >= 0) { __VERIFIER_loop_head(25, __func__);
+printf("CBMC Instrumentation @ line25");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;static int oi;static int oj;static int ok;static int ol;static int om;if(pStored4){__CPROVER_assert(!(oa==a && ob==b && oi==i && oj==j && ok==k && ol==l && om==m),"recurrent state found");} if(flag){oa=a;ob=b;oi=i;oj=j;ok=k;ol=l;om=m;pStored4=myTrue;} 
+                        m = m-0;
+                    }
+                    l = l+1;
+                }
+                k = k-1;
+            }
+            j = j+1;
+        }
+        i = i+1;
+    }
+    
+    return 0;
+}
+
+End Main 
+ NO_04_instrumented.c
+NTFILE is NO_04_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = NO_04.c
+b'26441cee42562e2fd703b97b1a86d2baa847af9810285d31267fccda11d2ea67  NO_04.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/NO_04/NO_04.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 15 reachedControl
+main 15 loopHead
+main 18 reachedControl
+main 18 loopHead
+main 20 reachedControl
+main 20 loopHead
+main 23 reachedControl
+main 23 loopHead
+enteringLasso
+main 25 reachedControl
+main 25 loopHead
+main 25 reachedControl
+main 25 loopHead
+Trace file line inside enterred lasso check : main 25 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/NO_04/NO_04.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for NO_04.c
+FILE=NO_04_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2003 milliseconds

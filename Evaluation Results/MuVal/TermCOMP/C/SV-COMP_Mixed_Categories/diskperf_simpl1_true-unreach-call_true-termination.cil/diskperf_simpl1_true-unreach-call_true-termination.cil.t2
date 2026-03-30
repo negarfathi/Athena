@@ -1,0 +1,3453 @@
+///*** 1_main ***///
+START: main_bb628;
+
+FROM: main_bb628;
+v1563 := nondet();
+v1564 := nondet();
+v1565 := nondet();
+v1566 := nondet();
+v1567 := nondet();
+v1568 := nondet();
+s := 0;
+UNLOADED := 0;
+NP := 0;
+DC := 0;
+SKIP1 := 0;
+SKIP2 := 0;
+MPR1 := 0;
+MPR3 := 0;
+IPC := 0;
+pended := 0;
+compFptr := 0;
+compRegistered := 0;
+lowerDriverReturn := 0;
+setEventCalled := 0;
+customIrp := 0;
+myStatus := 0;
+routine := 0;
+pirp := 0;
+Executive := 0;
+KernelMode := 0;
+pirp := v1566;
+UNLOADED := 0;
+NP := 1;
+DC := 2;
+SKIP1 := 3;
+SKIP2 := 4;
+MPR1 := 5;
+MPR3 := 6;
+IPC := 7;
+v1569 := UNLOADED;
+s := v1569;
+pended := 0;
+compFptr := 0;
+compRegistered := 0;
+lowerDriverReturn := 0;
+setEventCalled := 0;
+customIrp := 0;
+var__temp_vstatus.1 := v1564;
+TO: main_bb628_end;
+
+FROM: main_bb628_end;
+assume(v1564 >= 0);
+TO: main_bb629;
+
+FROM: main_bb628_end;
+assume(v1564 < 0);
+TO: main_bb904;
+
+FROM: main_bb629;
+v1571 := NP;
+s := v1571;
+customIrp := 0;
+v1572 := customIrp;
+setEventCalled := v1572;
+v1573 := setEventCalled;
+lowerDriverReturn := v1573;
+v1574 := lowerDriverReturn;
+compRegistered := v1574;
+v1575 := compRegistered;
+compFptr := v1575;
+v1576 := compFptr;
+pended := v1576;
+myStatus := 0;
+TO: main_bb629_v.;
+FROM: main_bb629_v.;
+assume(v1567 == 0);
+v. := -1073741637;
+TO: main_bb629_sv.;
+
+FROM: main_bb629_v.;
+assume(v1567 != 0);
+v. := 0;
+TO: main_bb629_sv.;
+
+FROM: main_bb629_sv.;
+myStatus := v.;
+v1578 := NP;
+s := v1578;
+customIrp := 0;
+v1579 := customIrp;
+setEventCalled := v1579;
+v1580 := setEventCalled;
+lowerDriverReturn := v1580;
+v1581 := lowerDriverReturn;
+compRegistered := v1581;
+v1582 := compRegistered;
+compFptr := v1582;
+v1583 := compFptr;
+pended := v1583;
+var__temp_v.0 := -1;
+TO: main_bb629_end;
+
+FROM: main_bb629_end;
+assume(v1564 < 0);
+TO: main_bb923;
+
+FROM: main_bb629_end;
+assume(v1564 >= 0);
+TO: main_bb630;
+
+FROM: main_bb630;
+v1585 := nondet();
+TO: main_bb630_end;
+
+FROM: main_bb630_end;
+assume(v1585 == 0);
+TO: main_bb631;
+
+FROM: main_bb630_end;
+assume(v1585 != 0);
+TO: main_bb633;
+
+FROM: main_bb631;
+myStatus := 0;
+v1587 := s;
+v1588 := NP;
+TO: main_bb631_end;
+
+FROM: main_bb631_end;
+assume(v1587 == v1588);
+TO: main_DiskPerfCreate.exit;
+
+FROM: main_bb631_end;
+assume(v1587 != v1588);
+TO: main_bb632;
+
+FROM: main_DiskPerfCreate.exit;
+v1590 := DC;
+s := v1590;
+var__temp_vstatus.0 := 0;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb632;
+
+FROM: main_bb633;
+v1591 := nondet();
+TO: main_bb633_end;
+
+FROM: main_bb633_end;
+assume(v1591 == 2);
+TO: main_bb634;
+
+FROM: main_bb633_end;
+assume(v1591 != 2);
+TO: main_bb663;
+
+FROM: main_bb634;
+v1593 := nondet();
+v1594 := nondet();
+v1595 := nondet();
+v1596 := nondet();
+v1597 := nondet();
+v1598 := nondet();
+v1599 := nondet();
+v1600 := nondet();
+v1601 := nondet();
+v1602 := nondet();
+v1603 := nondet();
+TO: main_bb634_end;
+
+FROM: main_bb634_end;
+assume(v1597 == 458784);
+TO: main_bb635;
+
+FROM: main_bb634_end;
+assume(v1597 != 458784);
+TO: main_bb643;
+
+FROM: main_bb635;
+var__temp_vstatus.0.i := -1073741789;
+TO: main_bb635_end;
+
+FROM: main_bb635_end;
+assume(v1598 < v1599);
+TO: main_bb640;
+
+FROM: main_bb635_end;
+assume(v1598 >= v1599);
+TO: main_bb636;
+
+FROM: main_bb636;
+var__temp_vi.0.i := 0;
+TO: main_bb636_end;
+
+FROM: main_bb636_end;
+assume(v1600 == 0);
+TO: main_bb637;
+
+FROM: main_bb636_end;
+assume(v1600 != 0);
+TO: main_bb639;
+
+FROM: main_bb637;
+myStatus := -1073741823;
+v1607 := s;
+v1608 := NP;
+TO: main_bb637_end;
+
+FROM: main_bb637_end;
+assume(v1607 == v1608);
+TO: main_IofCompleteRequest.exit.i;
+
+FROM: main_bb637_end;
+assume(v1607 != v1608);
+TO: main_bb638;
+
+FROM: main_IofCompleteRequest.exit.i;
+v1610 := DC;
+s := v1610;
+var__temp_vstatus.0 := -1073741823;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb638;
+
+FROM: main_bb639;
+vi.0.i := var__temp_vi.0.i;
+var__temp_vstatus.0.i := 0;
+TO: main_bb639_end;
+
+FROM: main_bb639_end;
+assume(vi.0.i >= v1602);
+TO: main_bb640;
+
+FROM: main_bb639_end;
+assume(vi.0.i < v1602);
+TO: main_bb642;
+
+FROM: main_bb640;
+vstatus.0.i := var__temp_vstatus.0.i;
+myStatus := vstatus.0.i;
+v1612 := s;
+v1613 := NP;
+TO: main_bb640_end;
+
+FROM: main_bb640_end;
+assume(v1612 == v1613);
+TO: main_IofCompleteRequest.exit1.i;
+
+FROM: main_bb640_end;
+assume(v1612 != v1613);
+TO: main_bb641;
+
+FROM: main_IofCompleteRequest.exit1.i;
+v1615 := DC;
+s := v1615;
+var__temp_vstatus.0 := vstatus.0.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb641;
+
+FROM: main_bb642;
+v1616 := vi.0.i + 1;
+var__temp_vi.0.i := v1616;
+TO: main_bb639;
+
+FROM: main_bb643;
+v1617 := nondet();
+v1618 := compRegistered;
+TO: main_bb643_end;
+
+FROM: main_bb643_end;
+assume(v1618 != 0);
+TO: main_bb644;
+
+FROM: main_bb643_end;
+assume(v1618 == 0);
+TO: main_bb652;
+
+FROM: main_bb644;
+v1620 := routine;
+v1622 := nondet();
+TO: main_bb644_end;
+
+FROM: main_bb644_end;
+assume(v1620 == 0);
+TO: main_bb645;
+
+FROM: main_bb644_end;
+assume(v1620 != 0);
+TO: main_bb646;
+
+FROM: main_bb645;
+setEventCalled := 1;
+var__temp_vcompRetStatus.0.i.i := -1073741802;
+TO: main_DiskPerfIoCompletion.exit.i.i;
+
+FROM: main_bb646;
+v1623 := nondet();
+v1624 := nondet();
+v1625 := nondet();
+v1626 := nondet();
+v1627 := nondet();
+v1628 := nondet();
+v1629 := nondet();
+v1630 := nondet();
+v1631 := nondet();
+v1632 := nondet();
+v1633 := nondet();
+v1634 := nondet();
+v1635 := nondet();
+var__temp_vcompRetStatus.0.i.i := 0;
+TO: main_bb646_end;
+
+FROM: main_bb646_end;
+assume((v1634 != 0) && (v1633 != 0));
+TO: main_bb647;
+
+FROM: main_bb646_end;
+assume((v1634 == 0) || (v1633 == 0));
+TO: main_DiskPerfIoCompletion.exit.i.i;
+
+FROM: main_bb647;
+v1638 := pended;
+TO: main_bb647_end;
+
+FROM: main_bb647_end;
+assume(v1638 == 0);
+TO: main_bb648;
+
+FROM: main_bb647_end;
+assume(v1638 != 0);
+TO: main_bb649;
+
+FROM: main_bb648;
+pended := 1;
+var__temp_vcompRetStatus.0.i.i := 0;
+TO: main_DiskPerfIoCompletion.exit.i.i;
+
+FROM: main_bb649;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i;
+vcompRetStatus.0.i.i := var__temp_vcompRetStatus.0.i.i;
+TO: main_DiskPerfIoCompletion.exit.i.i_end;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i_end;
+assume(v1640 == -1073741802);
+TO: main_bb650;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i_end;
+assume(v1640 != -1073741802);
+TO: main_bb652;
+
+FROM: main_bb650;
+v1642 := s;
+v1643 := NP;
+TO: main_bb650_end;
+
+FROM: main_bb650_end;
+assume(v1642 == v1643);
+TO: main_stubMoreProcessingRequired.exit.i.i;
+
+FROM: main_bb650_end;
+assume(v1642 != v1643);
+TO: main_bb651;
+
+FROM: main_stubMoreProcessingRequired.exit.i.i;
+v1645 := MPR1;
+s := v1645;
+TO: main_bb652;
+
+FROM: main_bb651;
+
+FROM: main_bb652;
+v1646 := nondet();
+var__temp_vreturnVal2.0.i.i := 0;
+TO: main_bb652_end;
+
+FROM: main_bb652_end;
+assume(v1646 == 0);
+TO: main_bb654;
+
+FROM: main_bb652_end;
+assume(v1646 != 0);
+TO: main_bb653;
+
+FROM: main_bb653;
+v1648 := nondet();
+TO: main_bb653_v..i.i;
+FROM: main_bb653_v..i.i;
+assume(v1648 == 1);
+v..i.i := -1073741823;
+TO: main_bb653_sv..i.i;
+
+FROM: main_bb653_v..i.i;
+assume(v1648 != 1);
+v..i.i := 259;
+TO: main_bb653_sv..i.i;
+
+FROM: main_bb653_sv..i.i;
+var__temp_vreturnVal2.0.i.i := v..i.i;
+TO: main_bb654;
+
+FROM: main_bb654;
+vreturnVal2.0.i.i := var__temp_vreturnVal2.0.i.i;
+v1650 := s;
+v1651 := NP;
+TO: main_bb654_end;
+
+FROM: main_bb654_end;
+assume(v1650 == v1651);
+TO: main_bb655;
+
+FROM: main_bb654_end;
+assume(v1650 != v1651);
+TO: main_bb656;
+
+FROM: main_bb655;
+v1653 := IPC;
+s := v1653;
+lowerDriverReturn := vreturnVal2.0.i.i;
+var__temp_vstatus.0 := vreturnVal2.0.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb656;
+v1654 := s;
+v1655 := MPR1;
+TO: main_bb656_end;
+
+FROM: main_bb656_end;
+assume(v1654 == v1655);
+TO: main_bb657;
+
+FROM: main_bb656_end;
+assume(v1654 != v1655);
+TO: main_bb660;
+
+FROM: main_bb657;
+TO: main_bb657_end;
+
+FROM: main_bb657_end;
+assume(vreturnVal2.0.i.i == 259);
+TO: main_bb658;
+
+FROM: main_bb657_end;
+assume(vreturnVal2.0.i.i != 259);
+TO: main_bb659;
+
+FROM: main_bb658;
+v1658 := MPR3;
+s := v1658;
+lowerDriverReturn := vreturnVal2.0.i.i;
+var__temp_vstatus.0 := vreturnVal2.0.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb659;
+v1659 := NP;
+s := v1659;
+lowerDriverReturn := vreturnVal2.0.i.i;
+var__temp_vstatus.0 := vreturnVal2.0.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb660;
+v1660 := s;
+v1661 := SKIP1;
+TO: main_bb660_end;
+
+FROM: main_bb660_end;
+assume(v1660 == v1661);
+TO: main_bb661;
+
+FROM: main_bb660_end;
+assume(v1660 != v1661);
+TO: main_bb662;
+
+FROM: main_bb661;
+v1663 := SKIP2;
+s := v1663;
+lowerDriverReturn := vreturnVal2.0.i.i;
+var__temp_vstatus.0 := vreturnVal2.0.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb662;
+
+FROM: main_bb663;
+v1664 := nondet();
+TO: main_bb663_end;
+
+FROM: main_bb663_end;
+assume(v1664 == 3);
+TO: main_bb664;
+
+FROM: main_bb663_end;
+assume(v1664 != 3);
+TO: main_bb859;
+
+FROM: main_bb664;
+v1666 := nondet();
+v1667 := nondet();
+TO: main_bb664_end;
+
+FROM: main_bb664_end;
+assume(v1667 < 2);
+TO: main_LeafBlock.i;
+
+FROM: main_bb664_end;
+assume(v1667 >= 2);
+TO: main_LeafBlock12.i;
+
+FROM: main_LeafBlock.i;
+TO: main_LeafBlock.i_end;
+
+FROM: main_LeafBlock.i_end;
+assume(v1667 == 0);
+TO: main_bb665;
+
+FROM: main_LeafBlock.i_end;
+assume(v1667 != 0);
+TO: main_NewDefault.i;
+
+FROM: main_bb665;
+v1668 := nondet();
+v1669 := nondet();
+v1670 := nondet();
+v1671 := nondet();
+v1672 := nondet();
+v1673 := nondet();
+v1674 := s;
+v1675 := NP;
+TO: main_bb665_end;
+
+FROM: main_bb665_end;
+assume(v1674 != v1675);
+TO: main_bb666;
+
+FROM: main_bb665_end;
+assume(v1674 == v1675);
+TO: main_bb667;
+
+FROM: main_bb666;
+
+FROM: main_bb667;
+v1677 := compRegistered;
+TO: main_bb667_end;
+
+FROM: main_bb667_end;
+assume(v1677 != 0);
+TO: main_bb668;
+
+FROM: main_bb667_end;
+assume(v1677 == 0);
+TO: main_bb669;
+
+FROM: main_bb668;
+
+FROM: main_bb669;
+compRegistered := 1;
+routine := 0;
+v1679 := nondet();
+v1680 := compRegistered;
+TO: main_bb669_end;
+
+FROM: main_bb669_end;
+assume(v1680 != 0);
+TO: main_bb670;
+
+FROM: main_bb669_end;
+assume(v1680 == 0);
+TO: main_bb678;
+
+FROM: main_bb670;
+v1682 := routine;
+v1684 := nondet();
+TO: main_bb670_end;
+
+FROM: main_bb670_end;
+assume(v1682 == 0);
+TO: main_bb671;
+
+FROM: main_bb670_end;
+assume(v1682 != 0);
+TO: main_bb672;
+
+FROM: main_bb671;
+setEventCalled := 1;
+var__temp_vcompRetStatus.0.i.i.i.i := -1073741802;
+TO: main_DiskPerfIoCompletion.exit.i.i.i.i;
+
+FROM: main_bb672;
+v1685 := nondet();
+v1686 := nondet();
+v1687 := nondet();
+v1688 := nondet();
+v1689 := nondet();
+v1690 := nondet();
+v1691 := nondet();
+v1692 := nondet();
+v1693 := nondet();
+v1694 := nondet();
+v1695 := nondet();
+v1696 := nondet();
+v1697 := nondet();
+var__temp_vcompRetStatus.0.i.i.i.i := 0;
+TO: main_bb672_end;
+
+FROM: main_bb672_end;
+assume((v1696 != 0) && (v1695 != 0));
+TO: main_bb673;
+
+FROM: main_bb672_end;
+assume((v1696 == 0) || (v1695 == 0));
+TO: main_DiskPerfIoCompletion.exit.i.i.i.i;
+
+FROM: main_bb673;
+v1700 := pended;
+TO: main_bb673_end;
+
+FROM: main_bb673_end;
+assume(v1700 == 0);
+TO: main_bb674;
+
+FROM: main_bb673_end;
+assume(v1700 != 0);
+TO: main_bb675;
+
+FROM: main_bb674;
+pended := 1;
+var__temp_vcompRetStatus.0.i.i.i.i := 0;
+TO: main_DiskPerfIoCompletion.exit.i.i.i.i;
+
+FROM: main_bb675;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i.i.i;
+vcompRetStatus.0.i.i.i.i := var__temp_vcompRetStatus.0.i.i.i.i;
+TO: main_DiskPerfIoCompletion.exit.i.i.i.i_end;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i.i.i_end;
+assume(v1702 == -1073741802);
+TO: main_bb676;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i.i.i_end;
+assume(v1702 != -1073741802);
+TO: main_bb678;
+
+FROM: main_bb676;
+v1704 := s;
+v1705 := NP;
+TO: main_bb676_end;
+
+FROM: main_bb676_end;
+assume(v1704 == v1705);
+TO: main_stubMoreProcessingRequired.exit.i.i.i.i;
+
+FROM: main_bb676_end;
+assume(v1704 != v1705);
+TO: main_bb677;
+
+FROM: main_stubMoreProcessingRequired.exit.i.i.i.i;
+v1707 := MPR1;
+s := v1707;
+TO: main_bb678;
+
+FROM: main_bb677;
+
+FROM: main_bb678;
+v1708 := nondet();
+var__temp_vreturnVal2.0.i.i.i.i := 0;
+TO: main_bb678_end;
+
+FROM: main_bb678_end;
+assume(v1708 == 0);
+TO: main_bb680;
+
+FROM: main_bb678_end;
+assume(v1708 != 0);
+TO: main_bb679;
+
+FROM: main_bb679;
+v1710 := nondet();
+TO: main_bb679_v..i.i.i.i;
+FROM: main_bb679_v..i.i.i.i;
+assume(v1710 == 1);
+v..i.i.i.i := -1073741823;
+TO: main_bb679_sv..i.i.i.i;
+
+FROM: main_bb679_v..i.i.i.i;
+assume(v1710 != 1);
+v..i.i.i.i := 259;
+TO: main_bb679_sv..i.i.i.i;
+
+FROM: main_bb679_sv..i.i.i.i;
+var__temp_vreturnVal2.0.i.i.i.i := v..i.i.i.i;
+TO: main_bb680;
+
+FROM: main_bb680;
+vreturnVal2.0.i.i.i.i := var__temp_vreturnVal2.0.i.i.i.i;
+v1712 := s;
+v1713 := NP;
+TO: main_bb680_end;
+
+FROM: main_bb680_end;
+assume(v1712 == v1713);
+TO: main_bb681;
+
+FROM: main_bb680_end;
+assume(v1712 != v1713);
+TO: main_bb682;
+
+FROM: main_bb681;
+v1715 := IPC;
+s := v1715;
+lowerDriverReturn := vreturnVal2.0.i.i.i.i;
+TO: main_IofCallDriver.exit.i.i.i;
+
+FROM: main_bb682;
+v1716 := s;
+v1717 := MPR1;
+TO: main_bb682_end;
+
+FROM: main_bb682_end;
+assume(v1716 == v1717);
+TO: main_bb683;
+
+FROM: main_bb682_end;
+assume(v1716 != v1717);
+TO: main_bb686;
+
+FROM: main_bb683;
+TO: main_bb683_end;
+
+FROM: main_bb683_end;
+assume(vreturnVal2.0.i.i.i.i == 259);
+TO: main_bb684;
+
+FROM: main_bb683_end;
+assume(vreturnVal2.0.i.i.i.i != 259);
+TO: main_bb685;
+
+FROM: main_bb684;
+v1720 := MPR3;
+s := v1720;
+lowerDriverReturn := vreturnVal2.0.i.i.i.i;
+TO: main_IofCallDriver.exit.i.i.i;
+
+FROM: main_bb685;
+v1721 := NP;
+s := v1721;
+lowerDriverReturn := vreturnVal2.0.i.i.i.i;
+TO: main_IofCallDriver.exit.i.i.i;
+
+FROM: main_bb686;
+v1722 := s;
+v1723 := SKIP1;
+TO: main_bb686_end;
+
+FROM: main_bb686_end;
+assume(v1722 == v1723);
+TO: main_bb687;
+
+FROM: main_bb686_end;
+assume(v1722 != v1723);
+TO: main_bb806;
+
+FROM: main_bb687;
+v1725 := SKIP2;
+s := v1725;
+lowerDriverReturn := vreturnVal2.0.i.i.i.i;
+TO: main_IofCallDriver.exit.i.i.i;
+
+FROM: main_IofCallDriver.exit.i.i.i;
+var__temp_vstatus.0.i.i.i := vreturnVal2.0.i.i.i.i;
+TO: main_IofCallDriver.exit.i.i.i_end;
+
+FROM: main_IofCallDriver.exit.i.i.i_end;
+assume(v1726 == 259);
+TO: main_bb688;
+
+FROM: main_IofCallDriver.exit.i.i.i_end;
+assume(v1726 != 259);
+TO: main_DiskPerfForwardIrpSynchronous.exit.i.i;
+
+FROM: main_bb688;
+v1728 := s;
+v1729 := MPR3;
+v1731 := setEventCalled;
+TO: main_bb688_end;
+
+FROM: main_bb688_end;
+assume((v1728 == v1729) && (v1731 == 1));
+TO: main_bb689;
+
+FROM: main_bb688_end;
+assume((v1728 != v1729) || (v1731 != 1));
+TO: main_bb690;
+
+FROM: main_bb689;
+v1733 := NP;
+s := v1733;
+setEventCalled := 0;
+TO: main_KeWaitForSingleObject.exit.i.i.i;
+
+FROM: main_bb690;
+v1734 := customIrp;
+TO: main_bb690_end;
+
+FROM: main_bb690_end;
+assume(v1734 == 1);
+TO: main_bb691;
+
+FROM: main_bb690_end;
+assume(v1734 != 1);
+TO: main_bb692;
+
+FROM: main_bb691;
+v1736 := NP;
+s := v1736;
+customIrp := 0;
+TO: main_KeWaitForSingleObject.exit.i.i.i;
+
+FROM: main_bb692;
+v1737 := s;
+v1738 := MPR3;
+TO: main_bb692_end;
+
+FROM: main_bb692_end;
+assume(v1737 == v1738);
+TO: main_bb693;
+
+FROM: main_bb692_end;
+assume(v1737 != v1738);
+TO: main_KeWaitForSingleObject.exit.i.i.i;
+
+FROM: main_bb693;
+
+FROM: main_KeWaitForSingleObject.exit.i.i.i;
+v1740 := nondet();
+v1741 := myStatus;
+var__temp_vstatus.0.i.i.i := v1741;
+TO: main_DiskPerfForwardIrpSynchronous.exit.i.i;
+
+FROM: main_DiskPerfForwardIrpSynchronous.exit.i.i;
+vstatus.0.i.i.i := var__temp_vstatus.0.i.i.i;
+v1742 := nondet();
+v1743 := nondet();
+v1744 := nondet();
+v1745 := nondet();
+v1746 := nondet();
+v1747 := nondet();
+v1748 := nondet();
+v1749 := nondet();
+v1750 := nondet();
+v1751 := nondet();
+v1752 := nondet();
+v1753 := nondet();
+v1754 := nondet();
+v1755 := nondet();
+customIrp := 1;
+v1756 := nondet();
+TO: main_DiskPerfForwardIrpSynchronous.exit.i.i_v.0.i.i.i.i;
+FROM: main_DiskPerfForwardIrpSynchronous.exit.i.i_v.0.i.i.i.i;
+assume(v1756 == 0);
+v.0.i.i.i.i := v1755;
+TO: main_DiskPerfForwardIrpSynchronous.exit.i.i_sv.0.i.i.i.i;
+
+FROM: main_DiskPerfForwardIrpSynchronous.exit.i.i_v.0.i.i.i.i;
+assume(v1756 != 0);
+v.0.i.i.i.i := 0;
+TO: main_DiskPerfForwardIrpSynchronous.exit.i.i_sv.0.i.i.i.i;
+
+FROM: main_DiskPerfForwardIrpSynchronous.exit.i.i_sv.0.i.i.i.i;
+TO: main_DiskPerfForwardIrpSynchronous.exit.i.i_end;
+
+FROM: main_DiskPerfForwardIrpSynchronous.exit.i.i_end;
+assume(v.0.i.i.i.i != 0);
+TO: main_bb694;
+
+FROM: main_DiskPerfForwardIrpSynchronous.exit.i.i_end;
+assume(v.0.i.i.i.i == 0);
+TO: main_DiskPerfRegisterDevice.exit.i.i;
+
+FROM: main_bb694;
+v1759 := nondet();
+v1760 := compRegistered;
+TO: main_bb694_end;
+
+FROM: main_bb694_end;
+assume(v1760 != 0);
+TO: main_bb695;
+
+FROM: main_bb694_end;
+assume(v1760 == 0);
+TO: main_bb703;
+
+FROM: main_bb695;
+v1762 := routine;
+v1764 := nondet();
+TO: main_bb695_end;
+
+FROM: main_bb695_end;
+assume(v1762 == 0);
+TO: main_bb696;
+
+FROM: main_bb695_end;
+assume(v1762 != 0);
+TO: main_bb697;
+
+FROM: main_bb696;
+setEventCalled := 1;
+var__temp_vcompRetStatus.0.i.i2.i.i := -1073741802;
+TO: main_DiskPerfIoCompletion.exit.i.i3.i.i;
+
+FROM: main_bb697;
+v1765 := nondet();
+v1766 := nondet();
+v1767 := nondet();
+v1768 := nondet();
+v1769 := nondet();
+v1770 := nondet();
+v1771 := nondet();
+v1772 := nondet();
+v1773 := nondet();
+v1774 := nondet();
+v1775 := nondet();
+v1776 := nondet();
+v1777 := nondet();
+var__temp_vcompRetStatus.0.i.i2.i.i := 0;
+TO: main_bb697_end;
+
+FROM: main_bb697_end;
+assume((v1776 != 0) && (v1775 != 0));
+TO: main_bb698;
+
+FROM: main_bb697_end;
+assume((v1776 == 0) || (v1775 == 0));
+TO: main_DiskPerfIoCompletion.exit.i.i3.i.i;
+
+FROM: main_bb698;
+v1780 := pended;
+TO: main_bb698_end;
+
+FROM: main_bb698_end;
+assume(v1780 == 0);
+TO: main_bb699;
+
+FROM: main_bb698_end;
+assume(v1780 != 0);
+TO: main_bb700;
+
+FROM: main_bb699;
+pended := 1;
+var__temp_vcompRetStatus.0.i.i2.i.i := 0;
+TO: main_DiskPerfIoCompletion.exit.i.i3.i.i;
+
+FROM: main_bb700;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i3.i.i;
+vcompRetStatus.0.i.i2.i.i := var__temp_vcompRetStatus.0.i.i2.i.i;
+TO: main_DiskPerfIoCompletion.exit.i.i3.i.i_end;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i3.i.i_end;
+assume(v1782 == -1073741802);
+TO: main_bb701;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i3.i.i_end;
+assume(v1782 != -1073741802);
+TO: main_bb703;
+
+FROM: main_bb701;
+v1784 := s;
+v1785 := NP;
+TO: main_bb701_end;
+
+FROM: main_bb701_end;
+assume(v1784 == v1785);
+TO: main_stubMoreProcessingRequired.exit.i.i4.i.i;
+
+FROM: main_bb701_end;
+assume(v1784 != v1785);
+TO: main_bb702;
+
+FROM: main_stubMoreProcessingRequired.exit.i.i4.i.i;
+v1787 := MPR1;
+s := v1787;
+TO: main_bb703;
+
+FROM: main_bb702;
+
+FROM: main_bb703;
+v1788 := nondet();
+var__temp_vreturnVal2.0.i.i6.i.i := 0;
+TO: main_bb703_end;
+
+FROM: main_bb703_end;
+assume(v1788 == 0);
+TO: main_bb705;
+
+FROM: main_bb703_end;
+assume(v1788 != 0);
+TO: main_bb704;
+
+FROM: main_bb704;
+v1790 := nondet();
+TO: main_bb704_v..i.i5.i.i;
+FROM: main_bb704_v..i.i5.i.i;
+assume(v1790 == 1);
+v..i.i5.i.i := -1073741823;
+TO: main_bb704_sv..i.i5.i.i;
+
+FROM: main_bb704_v..i.i5.i.i;
+assume(v1790 != 1);
+v..i.i5.i.i := 259;
+TO: main_bb704_sv..i.i5.i.i;
+
+FROM: main_bb704_sv..i.i5.i.i;
+var__temp_vreturnVal2.0.i.i6.i.i := v..i.i5.i.i;
+TO: main_bb705;
+
+FROM: main_bb705;
+vreturnVal2.0.i.i6.i.i := var__temp_vreturnVal2.0.i.i6.i.i;
+v1792 := s;
+v1793 := NP;
+TO: main_bb705_end;
+
+FROM: main_bb705_end;
+assume(v1792 == v1793);
+TO: main_bb706;
+
+FROM: main_bb705_end;
+assume(v1792 != v1793);
+TO: main_bb707;
+
+FROM: main_bb706;
+v1795 := IPC;
+s := v1795;
+lowerDriverReturn := vreturnVal2.0.i.i6.i.i;
+TO: main_IofCallDriver.exit.i7.i.i;
+
+FROM: main_bb707;
+v1796 := s;
+v1797 := MPR1;
+TO: main_bb707_end;
+
+FROM: main_bb707_end;
+assume(v1796 == v1797);
+TO: main_bb708;
+
+FROM: main_bb707_end;
+assume(v1796 != v1797);
+TO: main_bb711;
+
+FROM: main_bb708;
+TO: main_bb708_end;
+
+FROM: main_bb708_end;
+assume(vreturnVal2.0.i.i6.i.i == 259);
+TO: main_bb709;
+
+FROM: main_bb708_end;
+assume(vreturnVal2.0.i.i6.i.i != 259);
+TO: main_bb710;
+
+FROM: main_bb709;
+v1800 := MPR3;
+s := v1800;
+lowerDriverReturn := vreturnVal2.0.i.i6.i.i;
+TO: main_IofCallDriver.exit.i7.i.i;
+
+FROM: main_bb710;
+v1801 := NP;
+s := v1801;
+lowerDriverReturn := vreturnVal2.0.i.i6.i.i;
+TO: main_IofCallDriver.exit.i7.i.i;
+
+FROM: main_bb711;
+v1802 := s;
+v1803 := SKIP1;
+TO: main_bb711_end;
+
+FROM: main_bb711_end;
+assume(v1802 == v1803);
+TO: main_bb712;
+
+FROM: main_bb711_end;
+assume(v1802 != v1803);
+TO: main_bb804;
+
+FROM: main_bb712;
+v1805 := SKIP2;
+s := v1805;
+lowerDriverReturn := vreturnVal2.0.i.i6.i.i;
+TO: main_IofCallDriver.exit.i7.i.i;
+
+FROM: main_IofCallDriver.exit.i7.i.i;
+var__temp_vstatus.0.i9.i.i := vreturnVal2.0.i.i6.i.i;
+TO: main_IofCallDriver.exit.i7.i.i_end;
+
+FROM: main_IofCallDriver.exit.i7.i.i_end;
+assume(v1806 == 259);
+TO: main_bb713;
+
+FROM: main_IofCallDriver.exit.i7.i.i_end;
+assume(v1806 != 259);
+TO: main_bb719;
+
+FROM: main_bb713;
+v1808 := s;
+v1809 := MPR3;
+v1811 := setEventCalled;
+TO: main_bb713_end;
+
+FROM: main_bb713_end;
+assume((v1808 == v1809) && (v1811 == 1));
+TO: main_bb714;
+
+FROM: main_bb713_end;
+assume((v1808 != v1809) || (v1811 != 1));
+TO: main_bb715;
+
+FROM: main_bb714;
+v1813 := NP;
+s := v1813;
+setEventCalled := 0;
+TO: main_KeWaitForSingleObject.exit.i8.i.i;
+
+FROM: main_bb715;
+v1814 := customIrp;
+TO: main_bb715_end;
+
+FROM: main_bb715_end;
+assume(v1814 == 1);
+TO: main_bb716;
+
+FROM: main_bb715_end;
+assume(v1814 != 1);
+TO: main_bb717;
+
+FROM: main_bb716;
+v1816 := NP;
+s := v1816;
+customIrp := 0;
+TO: main_KeWaitForSingleObject.exit.i8.i.i;
+
+FROM: main_bb717;
+v1817 := s;
+v1818 := MPR3;
+TO: main_bb717_end;
+
+FROM: main_bb717_end;
+assume(v1817 == v1818);
+TO: main_bb718;
+
+FROM: main_bb717_end;
+assume(v1817 != v1818);
+TO: main_KeWaitForSingleObject.exit.i8.i.i;
+
+FROM: main_bb718;
+
+FROM: main_KeWaitForSingleObject.exit.i8.i.i;
+v1820 := nondet();
+var__temp_vstatus.0.i9.i.i := v1745;
+TO: main_bb719;
+
+FROM: main_bb719;
+vstatus.0.i9.i.i := var__temp_vstatus.0.i9.i.i;
+TO: main_bb719_end;
+
+FROM: main_bb719_end;
+assume((vstatus.0.i9.i.i < 0) && (v1753 != 0));
+TO: main_bb720;
+
+FROM: main_bb719_end;
+assume((vstatus.0.i9.i.i >= 0) || (v1753 == 0));
+TO: main_DiskPerfRegisterDevice.exit.i.i;
+
+FROM: main_bb720;
+v1823 := nondet();
+customIrp := 1;
+v1824 := nondet();
+TO: main_bb720_v.0.i3.i.i.i;
+FROM: main_bb720_v.0.i3.i.i.i;
+assume(v1824 == 0);
+v.0.i3.i.i.i := v1823;
+TO: main_bb720_sv.0.i3.i.i.i;
+
+FROM: main_bb720_v.0.i3.i.i.i;
+assume(v1824 != 0);
+v.0.i3.i.i.i := 0;
+TO: main_bb720_sv.0.i3.i.i.i;
+
+FROM: main_bb720_sv.0.i3.i.i.i;
+TO: main_bb720_end;
+
+FROM: main_bb720_end;
+assume(v.0.i3.i.i.i != 0);
+TO: main_bb721;
+
+FROM: main_bb720_end;
+assume(v.0.i3.i.i.i == 0);
+TO: main_DiskPerfRegisterDevice.exit.i.i;
+
+FROM: main_bb721;
+v1827 := nondet();
+v1828 := compRegistered;
+TO: main_bb721_end;
+
+FROM: main_bb721_end;
+assume(v1828 != 0);
+TO: main_bb722;
+
+FROM: main_bb721_end;
+assume(v1828 == 0);
+TO: main_bb730;
+
+FROM: main_bb722;
+v1830 := routine;
+v1832 := nondet();
+TO: main_bb722_end;
+
+FROM: main_bb722_end;
+assume(v1830 == 0);
+TO: main_bb723;
+
+FROM: main_bb722_end;
+assume(v1830 != 0);
+TO: main_bb724;
+
+FROM: main_bb723;
+setEventCalled := 1;
+var__temp_vcompRetStatus.0.i5.i.i.i := -1073741802;
+TO: main_DiskPerfIoCompletion.exit.i6.i.i.i;
+
+FROM: main_bb724;
+v1833 := nondet();
+v1834 := nondet();
+v1835 := nondet();
+v1836 := nondet();
+v1837 := nondet();
+v1838 := nondet();
+v1839 := nondet();
+v1840 := nondet();
+v1841 := nondet();
+v1842 := nondet();
+v1843 := nondet();
+v1844 := nondet();
+v1845 := nondet();
+var__temp_vcompRetStatus.0.i5.i.i.i := 0;
+TO: main_bb724_end;
+
+FROM: main_bb724_end;
+assume((v1844 != 0) && (v1843 != 0));
+TO: main_bb725;
+
+FROM: main_bb724_end;
+assume((v1844 == 0) || (v1843 == 0));
+TO: main_DiskPerfIoCompletion.exit.i6.i.i.i;
+
+FROM: main_bb725;
+v1848 := pended;
+TO: main_bb725_end;
+
+FROM: main_bb725_end;
+assume(v1848 == 0);
+TO: main_bb726;
+
+FROM: main_bb725_end;
+assume(v1848 != 0);
+TO: main_bb727;
+
+FROM: main_bb726;
+pended := 1;
+var__temp_vcompRetStatus.0.i5.i.i.i := 0;
+TO: main_DiskPerfIoCompletion.exit.i6.i.i.i;
+
+FROM: main_bb727;
+
+FROM: main_DiskPerfIoCompletion.exit.i6.i.i.i;
+vcompRetStatus.0.i5.i.i.i := var__temp_vcompRetStatus.0.i5.i.i.i;
+TO: main_DiskPerfIoCompletion.exit.i6.i.i.i_end;
+
+FROM: main_DiskPerfIoCompletion.exit.i6.i.i.i_end;
+assume(v1850 == -1073741802);
+TO: main_bb728;
+
+FROM: main_DiskPerfIoCompletion.exit.i6.i.i.i_end;
+assume(v1850 != -1073741802);
+TO: main_bb730;
+
+FROM: main_bb728;
+v1852 := s;
+v1853 := NP;
+TO: main_bb728_end;
+
+FROM: main_bb728_end;
+assume(v1852 == v1853);
+TO: main_stubMoreProcessingRequired.exit.i7.i.i.i;
+
+FROM: main_bb728_end;
+assume(v1852 != v1853);
+TO: main_bb729;
+
+FROM: main_stubMoreProcessingRequired.exit.i7.i.i.i;
+v1855 := MPR1;
+s := v1855;
+TO: main_bb730;
+
+FROM: main_bb729;
+
+FROM: main_bb730;
+v1856 := nondet();
+var__temp_vreturnVal2.0.i9.i.i.i := 0;
+TO: main_bb730_end;
+
+FROM: main_bb730_end;
+assume(v1856 == 0);
+TO: main_bb732;
+
+FROM: main_bb730_end;
+assume(v1856 != 0);
+TO: main_bb731;
+
+FROM: main_bb731;
+v1858 := nondet();
+TO: main_bb731_v..i8.i.i.i;
+FROM: main_bb731_v..i8.i.i.i;
+assume(v1858 == 1);
+v..i8.i.i.i := -1073741823;
+TO: main_bb731_sv..i8.i.i.i;
+
+FROM: main_bb731_v..i8.i.i.i;
+assume(v1858 != 1);
+v..i8.i.i.i := 259;
+TO: main_bb731_sv..i8.i.i.i;
+
+FROM: main_bb731_sv..i8.i.i.i;
+var__temp_vreturnVal2.0.i9.i.i.i := v..i8.i.i.i;
+TO: main_bb732;
+
+FROM: main_bb732;
+vreturnVal2.0.i9.i.i.i := var__temp_vreturnVal2.0.i9.i.i.i;
+v1860 := s;
+v1861 := NP;
+TO: main_bb732_end;
+
+FROM: main_bb732_end;
+assume(v1860 == v1861);
+TO: main_bb733;
+
+FROM: main_bb732_end;
+assume(v1860 != v1861);
+TO: main_bb734;
+
+FROM: main_bb733;
+v1863 := IPC;
+s := v1863;
+lowerDriverReturn := vreturnVal2.0.i9.i.i.i;
+TO: main_IofCallDriver.exit10.i.i.i;
+
+FROM: main_bb734;
+v1864 := s;
+v1865 := MPR1;
+TO: main_bb734_end;
+
+FROM: main_bb734_end;
+assume(v1864 == v1865);
+TO: main_bb735;
+
+FROM: main_bb734_end;
+assume(v1864 != v1865);
+TO: main_bb738;
+
+FROM: main_bb735;
+TO: main_bb735_end;
+
+FROM: main_bb735_end;
+assume(vreturnVal2.0.i9.i.i.i == 259);
+TO: main_bb736;
+
+FROM: main_bb735_end;
+assume(vreturnVal2.0.i9.i.i.i != 259);
+TO: main_bb737;
+
+FROM: main_bb736;
+v1868 := MPR3;
+s := v1868;
+lowerDriverReturn := vreturnVal2.0.i9.i.i.i;
+TO: main_IofCallDriver.exit10.i.i.i;
+
+FROM: main_bb737;
+v1869 := NP;
+s := v1869;
+lowerDriverReturn := vreturnVal2.0.i9.i.i.i;
+TO: main_IofCallDriver.exit10.i.i.i;
+
+FROM: main_bb738;
+v1870 := s;
+v1871 := SKIP1;
+TO: main_bb738_end;
+
+FROM: main_bb738_end;
+assume(v1870 == v1871);
+TO: main_bb739;
+
+FROM: main_bb738_end;
+assume(v1870 != v1871);
+TO: main_bb803;
+
+FROM: main_bb739;
+v1873 := SKIP2;
+s := v1873;
+lowerDriverReturn := vreturnVal2.0.i9.i.i.i;
+TO: main_IofCallDriver.exit10.i.i.i;
+
+FROM: main_IofCallDriver.exit10.i.i.i;
+var__temp_vstatus.1.i.i.i := vreturnVal2.0.i9.i.i.i;
+TO: main_IofCallDriver.exit10.i.i.i_end;
+
+FROM: main_IofCallDriver.exit10.i.i.i_end;
+assume(v1874 == 259);
+TO: main_bb740;
+
+FROM: main_IofCallDriver.exit10.i.i.i_end;
+assume(v1874 != 259);
+TO: main_bb746;
+
+FROM: main_bb740;
+v1876 := s;
+v1877 := MPR3;
+v1879 := setEventCalled;
+TO: main_bb740_end;
+
+FROM: main_bb740_end;
+assume((v1876 == v1877) && (v1879 == 1));
+TO: main_bb741;
+
+FROM: main_bb740_end;
+assume((v1876 != v1877) || (v1879 != 1));
+TO: main_bb742;
+
+FROM: main_bb741;
+v1881 := NP;
+s := v1881;
+setEventCalled := 0;
+TO: main_KeWaitForSingleObject.exit13.i.i.i;
+
+FROM: main_bb742;
+v1882 := customIrp;
+TO: main_bb742_end;
+
+FROM: main_bb742_end;
+assume(v1882 == 1);
+TO: main_bb743;
+
+FROM: main_bb742_end;
+assume(v1882 != 1);
+TO: main_bb744;
+
+FROM: main_bb743;
+v1884 := NP;
+s := v1884;
+customIrp := 0;
+TO: main_KeWaitForSingleObject.exit13.i.i.i;
+
+FROM: main_bb744;
+v1885 := s;
+v1886 := MPR3;
+TO: main_bb744_end;
+
+FROM: main_bb744_end;
+assume(v1885 == v1886);
+TO: main_bb745;
+
+FROM: main_bb744_end;
+assume(v1885 != v1886);
+TO: main_KeWaitForSingleObject.exit13.i.i.i;
+
+FROM: main_bb745;
+
+FROM: main_KeWaitForSingleObject.exit13.i.i.i;
+v1888 := nondet();
+var__temp_vstatus.1.i.i.i := v1745;
+TO: main_bb746;
+
+FROM: main_bb746;
+vstatus.1.i.i.i := var__temp_vstatus.1.i.i.i;
+var__temp_vstatus.3.i.i.i := vstatus.1.i.i.i;
+TO: main_bb746_end;
+
+FROM: main_bb746_end;
+assume(v1889 == -2147483643);
+TO: main_bb747;
+
+FROM: main_bb746_end;
+assume(v1889 != -2147483643);
+TO: main_bb775;
+
+FROM: main_bb747;
+TO: main_bb747_end;
+
+FROM: main_bb747_end;
+assume(v1753 != 0);
+TO: main_bb748;
+
+FROM: main_bb747_end;
+assume(v1753 == 0);
+TO: main_DiskPerfRegisterDevice.exit.i.i;
+
+FROM: main_bb748;
+v1892 := nondet();
+customIrp := 1;
+v1893 := nondet();
+TO: main_bb748_v.0.i14.i.i.i;
+FROM: main_bb748_v.0.i14.i.i.i;
+assume(v1893 == 0);
+v.0.i14.i.i.i := v1892;
+TO: main_bb748_sv.0.i14.i.i.i;
+
+FROM: main_bb748_v.0.i14.i.i.i;
+assume(v1893 != 0);
+v.0.i14.i.i.i := 0;
+TO: main_bb748_sv.0.i14.i.i.i;
+
+FROM: main_bb748_sv.0.i14.i.i.i;
+TO: main_bb748_end;
+
+FROM: main_bb748_end;
+assume(v.0.i14.i.i.i != 0);
+TO: main_bb749;
+
+FROM: main_bb748_end;
+assume(v.0.i14.i.i.i == 0);
+TO: main_DiskPerfRegisterDevice.exit.i.i;
+
+FROM: main_bb749;
+v1896 := nondet();
+v1897 := compRegistered;
+TO: main_bb749_end;
+
+FROM: main_bb749_end;
+assume(v1897 != 0);
+TO: main_bb750;
+
+FROM: main_bb749_end;
+assume(v1897 == 0);
+TO: main_bb758;
+
+FROM: main_bb750;
+v1899 := routine;
+v1901 := nondet();
+TO: main_bb750_end;
+
+FROM: main_bb750_end;
+assume(v1899 == 0);
+TO: main_bb751;
+
+FROM: main_bb750_end;
+assume(v1899 != 0);
+TO: main_bb752;
+
+FROM: main_bb751;
+setEventCalled := 1;
+var__temp_vcompRetStatus.0.i16.i.i.i := -1073741802;
+TO: main_DiskPerfIoCompletion.exit.i17.i.i.i;
+
+FROM: main_bb752;
+v1902 := nondet();
+v1903 := nondet();
+v1904 := nondet();
+v1905 := nondet();
+v1906 := nondet();
+v1907 := nondet();
+v1908 := nondet();
+v1909 := nondet();
+v1910 := nondet();
+v1911 := nondet();
+v1912 := nondet();
+v1913 := nondet();
+v1914 := nondet();
+var__temp_vcompRetStatus.0.i16.i.i.i := 0;
+TO: main_bb752_end;
+
+FROM: main_bb752_end;
+assume((v1913 != 0) && (v1912 != 0));
+TO: main_bb753;
+
+FROM: main_bb752_end;
+assume((v1913 == 0) || (v1912 == 0));
+TO: main_DiskPerfIoCompletion.exit.i17.i.i.i;
+
+FROM: main_bb753;
+v1917 := pended;
+TO: main_bb753_end;
+
+FROM: main_bb753_end;
+assume(v1917 == 0);
+TO: main_bb754;
+
+FROM: main_bb753_end;
+assume(v1917 != 0);
+TO: main_bb755;
+
+FROM: main_bb754;
+pended := 1;
+var__temp_vcompRetStatus.0.i16.i.i.i := 0;
+TO: main_DiskPerfIoCompletion.exit.i17.i.i.i;
+
+FROM: main_bb755;
+
+FROM: main_DiskPerfIoCompletion.exit.i17.i.i.i;
+vcompRetStatus.0.i16.i.i.i := var__temp_vcompRetStatus.0.i16.i.i.i;
+TO: main_DiskPerfIoCompletion.exit.i17.i.i.i_end;
+
+FROM: main_DiskPerfIoCompletion.exit.i17.i.i.i_end;
+assume(v1919 == -1073741802);
+TO: main_bb756;
+
+FROM: main_DiskPerfIoCompletion.exit.i17.i.i.i_end;
+assume(v1919 != -1073741802);
+TO: main_bb758;
+
+FROM: main_bb756;
+v1921 := s;
+v1922 := NP;
+TO: main_bb756_end;
+
+FROM: main_bb756_end;
+assume(v1921 == v1922);
+TO: main_stubMoreProcessingRequired.exit.i18.i.i.i;
+
+FROM: main_bb756_end;
+assume(v1921 != v1922);
+TO: main_bb757;
+
+FROM: main_stubMoreProcessingRequired.exit.i18.i.i.i;
+v1924 := MPR1;
+s := v1924;
+TO: main_bb758;
+
+FROM: main_bb757;
+
+FROM: main_bb758;
+v1925 := nondet();
+var__temp_vreturnVal2.0.i20.i.i.i := 0;
+TO: main_bb758_end;
+
+FROM: main_bb758_end;
+assume(v1925 == 0);
+TO: main_bb760;
+
+FROM: main_bb758_end;
+assume(v1925 != 0);
+TO: main_bb759;
+
+FROM: main_bb759;
+v1927 := nondet();
+TO: main_bb759_v..i19.i.i.i;
+FROM: main_bb759_v..i19.i.i.i;
+assume(v1927 == 1);
+v..i19.i.i.i := -1073741823;
+TO: main_bb759_sv..i19.i.i.i;
+
+FROM: main_bb759_v..i19.i.i.i;
+assume(v1927 != 1);
+v..i19.i.i.i := 259;
+TO: main_bb759_sv..i19.i.i.i;
+
+FROM: main_bb759_sv..i19.i.i.i;
+var__temp_vreturnVal2.0.i20.i.i.i := v..i19.i.i.i;
+TO: main_bb760;
+
+FROM: main_bb760;
+vreturnVal2.0.i20.i.i.i := var__temp_vreturnVal2.0.i20.i.i.i;
+v1929 := s;
+v1930 := NP;
+TO: main_bb760_end;
+
+FROM: main_bb760_end;
+assume(v1929 == v1930);
+TO: main_bb761;
+
+FROM: main_bb760_end;
+assume(v1929 != v1930);
+TO: main_bb762;
+
+FROM: main_bb761;
+v1932 := IPC;
+s := v1932;
+lowerDriverReturn := vreturnVal2.0.i20.i.i.i;
+TO: main_IofCallDriver.exit21.i.i.i;
+
+FROM: main_bb762;
+v1933 := s;
+v1934 := MPR1;
+TO: main_bb762_end;
+
+FROM: main_bb762_end;
+assume(v1933 == v1934);
+TO: main_bb763;
+
+FROM: main_bb762_end;
+assume(v1933 != v1934);
+TO: main_bb766;
+
+FROM: main_bb763;
+TO: main_bb763_end;
+
+FROM: main_bb763_end;
+assume(vreturnVal2.0.i20.i.i.i == 259);
+TO: main_bb764;
+
+FROM: main_bb763_end;
+assume(vreturnVal2.0.i20.i.i.i != 259);
+TO: main_bb765;
+
+FROM: main_bb764;
+v1937 := MPR3;
+s := v1937;
+lowerDriverReturn := vreturnVal2.0.i20.i.i.i;
+TO: main_IofCallDriver.exit21.i.i.i;
+
+FROM: main_bb765;
+v1938 := NP;
+s := v1938;
+lowerDriverReturn := vreturnVal2.0.i20.i.i.i;
+TO: main_IofCallDriver.exit21.i.i.i;
+
+FROM: main_bb766;
+v1939 := s;
+v1940 := SKIP1;
+TO: main_bb766_end;
+
+FROM: main_bb766_end;
+assume(v1939 == v1940);
+TO: main_bb767;
+
+FROM: main_bb766_end;
+assume(v1939 != v1940);
+TO: main_bb774;
+
+FROM: main_bb767;
+v1942 := SKIP2;
+s := v1942;
+lowerDriverReturn := vreturnVal2.0.i20.i.i.i;
+TO: main_IofCallDriver.exit21.i.i.i;
+
+FROM: main_IofCallDriver.exit21.i.i.i;
+var__temp_vstatus.3.i.i.i := vreturnVal2.0.i20.i.i.i;
+TO: main_IofCallDriver.exit21.i.i.i_end;
+
+FROM: main_IofCallDriver.exit21.i.i.i_end;
+assume(v1943 == 259);
+TO: main_bb768;
+
+FROM: main_IofCallDriver.exit21.i.i.i_end;
+assume(v1943 != 259);
+TO: main_bb775;
+
+FROM: main_bb768;
+v1945 := s;
+v1946 := MPR3;
+v1948 := setEventCalled;
+TO: main_bb768_end;
+
+FROM: main_bb768_end;
+assume((v1945 == v1946) && (v1948 == 1));
+TO: main_bb769;
+
+FROM: main_bb768_end;
+assume((v1945 != v1946) || (v1948 != 1));
+TO: main_bb770;
+
+FROM: main_bb769;
+v1950 := NP;
+s := v1950;
+setEventCalled := 0;
+TO: main_KeWaitForSingleObject.exit24.i.i.i;
+
+FROM: main_bb770;
+v1951 := customIrp;
+TO: main_bb770_end;
+
+FROM: main_bb770_end;
+assume(v1951 == 1);
+TO: main_bb771;
+
+FROM: main_bb770_end;
+assume(v1951 != 1);
+TO: main_bb772;
+
+FROM: main_bb771;
+v1953 := NP;
+s := v1953;
+customIrp := 0;
+TO: main_KeWaitForSingleObject.exit24.i.i.i;
+
+FROM: main_bb772;
+v1954 := s;
+v1955 := MPR3;
+TO: main_bb772_end;
+
+FROM: main_bb772_end;
+assume(v1954 == v1955);
+TO: main_bb773;
+
+FROM: main_bb772_end;
+assume(v1954 != v1955);
+TO: main_KeWaitForSingleObject.exit24.i.i.i;
+
+FROM: main_bb773;
+
+FROM: main_KeWaitForSingleObject.exit24.i.i.i;
+v1957 := nondet();
+var__temp_vstatus.3.i.i.i := v1745;
+TO: main_bb775;
+
+FROM: main_bb774;
+
+FROM: main_bb775;
+vstatus.3.i.i.i := var__temp_vstatus.3.i.i.i;
+TO: main_bb775_end;
+
+FROM: main_bb775_end;
+assume(vstatus.3.i.i.i < 0);
+TO: main_DiskPerfRegisterDevice.exit.i.i;
+
+FROM: main_bb775_end;
+assume(vstatus.3.i.i.i >= 0);
+TO: main_bb776;
+
+FROM: main_bb776;
+v1959 := nondet();
+customIrp := 1;
+v1960 := nondet();
+TO: main_bb776_v.0.i25.i.i.i;
+FROM: main_bb776_v.0.i25.i.i.i;
+assume(v1960 == 0);
+v.0.i25.i.i.i := v1959;
+TO: main_bb776_sv.0.i25.i.i.i;
+
+FROM: main_bb776_v.0.i25.i.i.i;
+assume(v1960 != 0);
+v.0.i25.i.i.i := 0;
+TO: main_bb776_sv.0.i25.i.i.i;
+
+FROM: main_bb776_sv.0.i25.i.i.i;
+TO: main_bb776_end;
+
+FROM: main_bb776_end;
+assume(v.0.i25.i.i.i != 0);
+TO: main_bb777;
+
+FROM: main_bb776_end;
+assume(v.0.i25.i.i.i == 0);
+TO: main_DiskPerfRegisterDevice.exit.i.i;
+
+FROM: main_bb777;
+v1963 := nondet();
+v1964 := compRegistered;
+TO: main_bb777_end;
+
+FROM: main_bb777_end;
+assume(v1964 != 0);
+TO: main_bb778;
+
+FROM: main_bb777_end;
+assume(v1964 == 0);
+TO: main_bb786;
+
+FROM: main_bb778;
+v1966 := routine;
+v1968 := nondet();
+TO: main_bb778_end;
+
+FROM: main_bb778_end;
+assume(v1966 == 0);
+TO: main_bb779;
+
+FROM: main_bb778_end;
+assume(v1966 != 0);
+TO: main_bb780;
+
+FROM: main_bb779;
+setEventCalled := 1;
+var__temp_vcompRetStatus.0.i27.i.i.i := -1073741802;
+TO: main_DiskPerfIoCompletion.exit.i28.i.i.i;
+
+FROM: main_bb780;
+v1969 := nondet();
+v1970 := nondet();
+v1971 := nondet();
+v1972 := nondet();
+v1973 := nondet();
+v1974 := nondet();
+v1975 := nondet();
+v1976 := nondet();
+v1977 := nondet();
+v1978 := nondet();
+v1979 := nondet();
+v1980 := nondet();
+v1981 := nondet();
+var__temp_vcompRetStatus.0.i27.i.i.i := 0;
+TO: main_bb780_end;
+
+FROM: main_bb780_end;
+assume((v1980 != 0) && (v1979 != 0));
+TO: main_bb781;
+
+FROM: main_bb780_end;
+assume((v1980 == 0) || (v1979 == 0));
+TO: main_DiskPerfIoCompletion.exit.i28.i.i.i;
+
+FROM: main_bb781;
+v1984 := pended;
+TO: main_bb781_end;
+
+FROM: main_bb781_end;
+assume(v1984 == 0);
+TO: main_bb782;
+
+FROM: main_bb781_end;
+assume(v1984 != 0);
+TO: main_bb783;
+
+FROM: main_bb782;
+pended := 1;
+var__temp_vcompRetStatus.0.i27.i.i.i := 0;
+TO: main_DiskPerfIoCompletion.exit.i28.i.i.i;
+
+FROM: main_bb783;
+
+FROM: main_DiskPerfIoCompletion.exit.i28.i.i.i;
+vcompRetStatus.0.i27.i.i.i := var__temp_vcompRetStatus.0.i27.i.i.i;
+TO: main_DiskPerfIoCompletion.exit.i28.i.i.i_end;
+
+FROM: main_DiskPerfIoCompletion.exit.i28.i.i.i_end;
+assume(v1986 == -1073741802);
+TO: main_bb784;
+
+FROM: main_DiskPerfIoCompletion.exit.i28.i.i.i_end;
+assume(v1986 != -1073741802);
+TO: main_bb786;
+
+FROM: main_bb784;
+v1988 := s;
+v1989 := NP;
+TO: main_bb784_end;
+
+FROM: main_bb784_end;
+assume(v1988 == v1989);
+TO: main_stubMoreProcessingRequired.exit.i29.i.i.i;
+
+FROM: main_bb784_end;
+assume(v1988 != v1989);
+TO: main_bb785;
+
+FROM: main_stubMoreProcessingRequired.exit.i29.i.i.i;
+v1991 := MPR1;
+s := v1991;
+TO: main_bb786;
+
+FROM: main_bb785;
+
+FROM: main_bb786;
+v1992 := nondet();
+var__temp_vreturnVal2.0.i31.i.i.i := 0;
+TO: main_bb786_end;
+
+FROM: main_bb786_end;
+assume(v1992 == 0);
+TO: main_bb788;
+
+FROM: main_bb786_end;
+assume(v1992 != 0);
+TO: main_bb787;
+
+FROM: main_bb787;
+v1994 := nondet();
+TO: main_bb787_v..i30.i.i.i;
+FROM: main_bb787_v..i30.i.i.i;
+assume(v1994 == 1);
+v..i30.i.i.i := -1073741823;
+TO: main_bb787_sv..i30.i.i.i;
+
+FROM: main_bb787_v..i30.i.i.i;
+assume(v1994 != 1);
+v..i30.i.i.i := 259;
+TO: main_bb787_sv..i30.i.i.i;
+
+FROM: main_bb787_sv..i30.i.i.i;
+var__temp_vreturnVal2.0.i31.i.i.i := v..i30.i.i.i;
+TO: main_bb788;
+
+FROM: main_bb788;
+vreturnVal2.0.i31.i.i.i := var__temp_vreturnVal2.0.i31.i.i.i;
+v1996 := s;
+v1997 := NP;
+TO: main_bb788_end;
+
+FROM: main_bb788_end;
+assume(v1996 == v1997);
+TO: main_bb789;
+
+FROM: main_bb788_end;
+assume(v1996 != v1997);
+TO: main_bb790;
+
+FROM: main_bb789;
+v1999 := IPC;
+s := v1999;
+lowerDriverReturn := vreturnVal2.0.i31.i.i.i;
+TO: main_IofCallDriver.exit32.i.i.i;
+
+FROM: main_bb790;
+v2000 := s;
+v2001 := MPR1;
+TO: main_bb790_end;
+
+FROM: main_bb790_end;
+assume(v2000 == v2001);
+TO: main_bb791;
+
+FROM: main_bb790_end;
+assume(v2000 != v2001);
+TO: main_bb794;
+
+FROM: main_bb791;
+TO: main_bb791_end;
+
+FROM: main_bb791_end;
+assume(vreturnVal2.0.i31.i.i.i == 259);
+TO: main_bb792;
+
+FROM: main_bb791_end;
+assume(vreturnVal2.0.i31.i.i.i != 259);
+TO: main_bb793;
+
+FROM: main_bb792;
+v2004 := MPR3;
+s := v2004;
+lowerDriverReturn := vreturnVal2.0.i31.i.i.i;
+TO: main_IofCallDriver.exit32.i.i.i;
+
+FROM: main_bb793;
+v2005 := NP;
+s := v2005;
+lowerDriverReturn := vreturnVal2.0.i31.i.i.i;
+TO: main_IofCallDriver.exit32.i.i.i;
+
+FROM: main_bb794;
+v2006 := s;
+v2007 := SKIP1;
+TO: main_bb794_end;
+
+FROM: main_bb794_end;
+assume(v2006 == v2007);
+TO: main_bb795;
+
+FROM: main_bb794_end;
+assume(v2006 != v2007);
+TO: main_bb802;
+
+FROM: main_bb795;
+v2009 := SKIP2;
+s := v2009;
+lowerDriverReturn := vreturnVal2.0.i31.i.i.i;
+TO: main_IofCallDriver.exit32.i.i.i;
+
+FROM: main_IofCallDriver.exit32.i.i.i;
+TO: main_IofCallDriver.exit32.i.i.i_end;
+
+FROM: main_IofCallDriver.exit32.i.i.i_end;
+assume(v2010 == 259);
+TO: main_bb796;
+
+FROM: main_IofCallDriver.exit32.i.i.i_end;
+assume(v2010 != 259);
+TO: main_DiskPerfRegisterDevice.exit.i.i;
+
+FROM: main_bb796;
+v2012 := s;
+v2013 := MPR3;
+v2015 := setEventCalled;
+TO: main_bb796_end;
+
+FROM: main_bb796_end;
+assume((v2012 == v2013) && (v2015 == 1));
+TO: main_bb797;
+
+FROM: main_bb796_end;
+assume((v2012 != v2013) || (v2015 != 1));
+TO: main_bb798;
+
+FROM: main_bb797;
+v2017 := NP;
+s := v2017;
+setEventCalled := 0;
+TO: main_KeWaitForSingleObject.exit35.i.i.i;
+
+FROM: main_bb798;
+v2018 := customIrp;
+TO: main_bb798_end;
+
+FROM: main_bb798_end;
+assume(v2018 == 1);
+TO: main_bb799;
+
+FROM: main_bb798_end;
+assume(v2018 != 1);
+TO: main_bb800;
+
+FROM: main_bb799;
+v2020 := NP;
+s := v2020;
+customIrp := 0;
+TO: main_KeWaitForSingleObject.exit35.i.i.i;
+
+FROM: main_bb800;
+v2021 := s;
+v2022 := MPR3;
+TO: main_bb800_end;
+
+FROM: main_bb800_end;
+assume(v2021 == v2022);
+TO: main_bb801;
+
+FROM: main_bb800_end;
+assume(v2021 != v2022);
+TO: main_KeWaitForSingleObject.exit35.i.i.i;
+
+FROM: main_bb801;
+
+FROM: main_KeWaitForSingleObject.exit35.i.i.i;
+v2024 := nondet();
+TO: main_DiskPerfRegisterDevice.exit.i.i;
+
+FROM: main_bb802;
+
+FROM: main_bb803;
+
+FROM: main_bb804;
+
+FROM: main_DiskPerfRegisterDevice.exit.i.i;
+myStatus := vstatus.0.i.i.i;
+v2025 := s;
+v2026 := NP;
+TO: main_DiskPerfRegisterDevice.exit.i.i_end;
+
+FROM: main_DiskPerfRegisterDevice.exit.i.i_end;
+assume(v2025 == v2026);
+TO: main_DiskPerfStartDevice.exit.i;
+
+FROM: main_DiskPerfRegisterDevice.exit.i.i_end;
+assume(v2025 != v2026);
+TO: main_bb805;
+
+FROM: main_DiskPerfStartDevice.exit.i;
+v2028 := DC;
+s := v2028;
+var__temp_vstatus.0 := vstatus.0.i.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb805;
+
+FROM: main_bb806;
+
+FROM: main_LeafBlock12.i;
+TO: main_LeafBlock12.i_end;
+
+FROM: main_LeafBlock12.i_end;
+assume(v1667 == 2);
+TO: main_bb807;
+
+FROM: main_LeafBlock12.i_end;
+assume(v1667 != 2);
+TO: main_NewDefault.i;
+
+FROM: main_bb807;
+v2029 := nondet();
+v2030 := nondet();
+v2031 := nondet();
+v2032 := nondet();
+v2033 := nondet();
+v2034 := nondet();
+v2035 := s;
+v2036 := NP;
+TO: main_bb807_end;
+
+FROM: main_bb807_end;
+assume(v2035 != v2036);
+TO: main_bb808;
+
+FROM: main_bb807_end;
+assume(v2035 == v2036);
+TO: main_bb809;
+
+FROM: main_bb808;
+
+FROM: main_bb809;
+v2038 := compRegistered;
+TO: main_bb809_end;
+
+FROM: main_bb809_end;
+assume(v2038 != 0);
+TO: main_bb810;
+
+FROM: main_bb809_end;
+assume(v2038 == 0);
+TO: main_bb811;
+
+FROM: main_bb810;
+
+FROM: main_bb811;
+compRegistered := 1;
+routine := 0;
+v2040 := nondet();
+v2041 := compRegistered;
+TO: main_bb811_end;
+
+FROM: main_bb811_end;
+assume(v2041 != 0);
+TO: main_bb812;
+
+FROM: main_bb811_end;
+assume(v2041 == 0);
+TO: main_bb820;
+
+FROM: main_bb812;
+v2043 := routine;
+v2045 := nondet();
+TO: main_bb812_end;
+
+FROM: main_bb812_end;
+assume(v2043 == 0);
+TO: main_bb813;
+
+FROM: main_bb812_end;
+assume(v2043 != 0);
+TO: main_bb814;
+
+FROM: main_bb813;
+setEventCalled := 1;
+var__temp_vcompRetStatus.0.i.i.i2.i := -1073741802;
+TO: main_DiskPerfIoCompletion.exit.i.i.i3.i;
+
+FROM: main_bb814;
+v2046 := nondet();
+v2047 := nondet();
+v2048 := nondet();
+v2049 := nondet();
+v2050 := nondet();
+v2051 := nondet();
+v2052 := nondet();
+v2053 := nondet();
+v2054 := nondet();
+v2055 := nondet();
+v2056 := nondet();
+v2057 := nondet();
+v2058 := nondet();
+var__temp_vcompRetStatus.0.i.i.i2.i := 0;
+TO: main_bb814_end;
+
+FROM: main_bb814_end;
+assume((v2057 != 0) && (v2056 != 0));
+TO: main_bb815;
+
+FROM: main_bb814_end;
+assume((v2057 == 0) || (v2056 == 0));
+TO: main_DiskPerfIoCompletion.exit.i.i.i3.i;
+
+FROM: main_bb815;
+v2061 := pended;
+TO: main_bb815_end;
+
+FROM: main_bb815_end;
+assume(v2061 == 0);
+TO: main_bb816;
+
+FROM: main_bb815_end;
+assume(v2061 != 0);
+TO: main_bb817;
+
+FROM: main_bb816;
+pended := 1;
+var__temp_vcompRetStatus.0.i.i.i2.i := 0;
+TO: main_DiskPerfIoCompletion.exit.i.i.i3.i;
+
+FROM: main_bb817;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i.i3.i;
+vcompRetStatus.0.i.i.i2.i := var__temp_vcompRetStatus.0.i.i.i2.i;
+TO: main_DiskPerfIoCompletion.exit.i.i.i3.i_end;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i.i3.i_end;
+assume(v2063 == -1073741802);
+TO: main_bb818;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i.i3.i_end;
+assume(v2063 != -1073741802);
+TO: main_bb820;
+
+FROM: main_bb818;
+v2065 := s;
+v2066 := NP;
+TO: main_bb818_end;
+
+FROM: main_bb818_end;
+assume(v2065 == v2066);
+TO: main_stubMoreProcessingRequired.exit.i.i.i4.i;
+
+FROM: main_bb818_end;
+assume(v2065 != v2066);
+TO: main_bb819;
+
+FROM: main_stubMoreProcessingRequired.exit.i.i.i4.i;
+v2068 := MPR1;
+s := v2068;
+TO: main_bb820;
+
+FROM: main_bb819;
+
+FROM: main_bb820;
+v2069 := nondet();
+var__temp_vreturnVal2.0.i.i.i6.i := 0;
+TO: main_bb820_end;
+
+FROM: main_bb820_end;
+assume(v2069 == 0);
+TO: main_bb822;
+
+FROM: main_bb820_end;
+assume(v2069 != 0);
+TO: main_bb821;
+
+FROM: main_bb821;
+v2071 := nondet();
+TO: main_bb821_v..i.i.i5.i;
+FROM: main_bb821_v..i.i.i5.i;
+assume(v2071 == 1);
+v..i.i.i5.i := -1073741823;
+TO: main_bb821_sv..i.i.i5.i;
+
+FROM: main_bb821_v..i.i.i5.i;
+assume(v2071 != 1);
+v..i.i.i5.i := 259;
+TO: main_bb821_sv..i.i.i5.i;
+
+FROM: main_bb821_sv..i.i.i5.i;
+var__temp_vreturnVal2.0.i.i.i6.i := v..i.i.i5.i;
+TO: main_bb822;
+
+FROM: main_bb822;
+vreturnVal2.0.i.i.i6.i := var__temp_vreturnVal2.0.i.i.i6.i;
+v2073 := s;
+v2074 := NP;
+TO: main_bb822_end;
+
+FROM: main_bb822_end;
+assume(v2073 == v2074);
+TO: main_bb823;
+
+FROM: main_bb822_end;
+assume(v2073 != v2074);
+TO: main_bb824;
+
+FROM: main_bb823;
+v2076 := IPC;
+s := v2076;
+lowerDriverReturn := vreturnVal2.0.i.i.i6.i;
+TO: main_IofCallDriver.exit.i.i7.i;
+
+FROM: main_bb824;
+v2077 := s;
+v2078 := MPR1;
+TO: main_bb824_end;
+
+FROM: main_bb824_end;
+assume(v2077 == v2078);
+TO: main_bb825;
+
+FROM: main_bb824_end;
+assume(v2077 != v2078);
+TO: main_bb828;
+
+FROM: main_bb825;
+TO: main_bb825_end;
+
+FROM: main_bb825_end;
+assume(vreturnVal2.0.i.i.i6.i == 259);
+TO: main_bb826;
+
+FROM: main_bb825_end;
+assume(vreturnVal2.0.i.i.i6.i != 259);
+TO: main_bb827;
+
+FROM: main_bb826;
+v2081 := MPR3;
+s := v2081;
+lowerDriverReturn := vreturnVal2.0.i.i.i6.i;
+TO: main_IofCallDriver.exit.i.i7.i;
+
+FROM: main_bb827;
+v2082 := NP;
+s := v2082;
+lowerDriverReturn := vreturnVal2.0.i.i.i6.i;
+TO: main_IofCallDriver.exit.i.i7.i;
+
+FROM: main_bb828;
+v2083 := s;
+v2084 := SKIP1;
+TO: main_bb828_end;
+
+FROM: main_bb828_end;
+assume(v2083 == v2084);
+TO: main_bb829;
+
+FROM: main_bb828_end;
+assume(v2083 != v2084);
+TO: main_bb837;
+
+FROM: main_bb829;
+v2086 := SKIP2;
+s := v2086;
+lowerDriverReturn := vreturnVal2.0.i.i.i6.i;
+TO: main_IofCallDriver.exit.i.i7.i;
+
+FROM: main_IofCallDriver.exit.i.i7.i;
+var__temp_vstatus.0.i.i10.i := vreturnVal2.0.i.i.i6.i;
+TO: main_IofCallDriver.exit.i.i7.i_end;
+
+FROM: main_IofCallDriver.exit.i.i7.i_end;
+assume(v2087 == 259);
+TO: main_bb830;
+
+FROM: main_IofCallDriver.exit.i.i7.i_end;
+assume(v2087 != 259);
+TO: main_DiskPerfForwardIrpSynchronous.exit.i11.i;
+
+FROM: main_bb830;
+v2089 := s;
+v2090 := MPR3;
+v2092 := setEventCalled;
+TO: main_bb830_end;
+
+FROM: main_bb830_end;
+assume((v2089 == v2090) && (v2092 == 1));
+TO: main_bb831;
+
+FROM: main_bb830_end;
+assume((v2089 != v2090) || (v2092 != 1));
+TO: main_bb832;
+
+FROM: main_bb831;
+v2094 := NP;
+s := v2094;
+setEventCalled := 0;
+TO: main_KeWaitForSingleObject.exit.i.i9.i;
+
+FROM: main_bb832;
+v2095 := customIrp;
+TO: main_bb832_end;
+
+FROM: main_bb832_end;
+assume(v2095 == 1);
+TO: main_bb833;
+
+FROM: main_bb832_end;
+assume(v2095 != 1);
+TO: main_bb834;
+
+FROM: main_bb833;
+v2097 := NP;
+s := v2097;
+customIrp := 0;
+TO: main_KeWaitForSingleObject.exit.i.i9.i;
+
+FROM: main_bb834;
+v2098 := s;
+v2099 := MPR3;
+TO: main_bb834_end;
+
+FROM: main_bb834_end;
+assume(v2098 == v2099);
+TO: main_bb835;
+
+FROM: main_bb834_end;
+assume(v2098 != v2099);
+TO: main_KeWaitForSingleObject.exit.i.i9.i;
+
+FROM: main_bb835;
+
+FROM: main_KeWaitForSingleObject.exit.i.i9.i;
+v2101 := nondet();
+v2102 := myStatus;
+var__temp_vstatus.0.i.i10.i := v2102;
+TO: main_DiskPerfForwardIrpSynchronous.exit.i11.i;
+
+FROM: main_DiskPerfForwardIrpSynchronous.exit.i11.i;
+vstatus.0.i.i10.i := var__temp_vstatus.0.i.i10.i;
+myStatus := vstatus.0.i.i10.i;
+v2103 := s;
+v2104 := NP;
+TO: main_DiskPerfForwardIrpSynchronous.exit.i11.i_end;
+
+FROM: main_DiskPerfForwardIrpSynchronous.exit.i11.i_end;
+assume(v2103 == v2104);
+TO: main_DiskPerfRemoveDevice.exit.i;
+
+FROM: main_DiskPerfForwardIrpSynchronous.exit.i11.i_end;
+assume(v2103 != v2104);
+TO: main_bb836;
+
+FROM: main_DiskPerfRemoveDevice.exit.i;
+v2106 := DC;
+s := v2106;
+var__temp_vstatus.0 := vstatus.0.i.i10.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb836;
+
+FROM: main_bb837;
+
+FROM: main_NewDefault.i;
+v2107 := nondet();
+v2108 := nondet();
+v2109 := nondet();
+v2110 := nondet();
+v2111 := s;
+v2112 := NP;
+TO: main_NewDefault.i_end;
+
+FROM: main_NewDefault.i_end;
+assume(v2111 == v2112);
+TO: main_bb838;
+
+FROM: main_NewDefault.i_end;
+assume(v2111 != v2112);
+TO: main_bb858;
+
+FROM: main_bb838;
+v2114 := SKIP1;
+s := v2114;
+v2115 := nondet();
+v2116 := compRegistered;
+TO: main_bb838_end;
+
+FROM: main_bb838_end;
+assume(v2116 != 0);
+TO: main_bb839;
+
+FROM: main_bb838_end;
+assume(v2116 == 0);
+TO: main_bb847;
+
+FROM: main_bb839;
+v2118 := routine;
+v2120 := nondet();
+TO: main_bb839_end;
+
+FROM: main_bb839_end;
+assume(v2118 == 0);
+TO: main_bb840;
+
+FROM: main_bb839_end;
+assume(v2118 != 0);
+TO: main_bb841;
+
+FROM: main_bb840;
+setEventCalled := 1;
+var__temp_vcompRetStatus.0.i.i.i := -1073741802;
+TO: main_DiskPerfIoCompletion.exit.i.i.i;
+
+FROM: main_bb841;
+v2121 := nondet();
+v2122 := nondet();
+v2123 := nondet();
+v2124 := nondet();
+v2125 := nondet();
+v2126 := nondet();
+v2127 := nondet();
+v2128 := nondet();
+v2129 := nondet();
+v2130 := nondet();
+v2131 := nondet();
+v2132 := nondet();
+v2133 := nondet();
+var__temp_vcompRetStatus.0.i.i.i := 0;
+TO: main_bb841_end;
+
+FROM: main_bb841_end;
+assume((v2132 != 0) && (v2131 != 0));
+TO: main_bb842;
+
+FROM: main_bb841_end;
+assume((v2132 == 0) || (v2131 == 0));
+TO: main_DiskPerfIoCompletion.exit.i.i.i;
+
+FROM: main_bb842;
+v2136 := pended;
+TO: main_bb842_end;
+
+FROM: main_bb842_end;
+assume(v2136 == 0);
+TO: main_bb843;
+
+FROM: main_bb842_end;
+assume(v2136 != 0);
+TO: main_bb844;
+
+FROM: main_bb843;
+pended := 1;
+var__temp_vcompRetStatus.0.i.i.i := 0;
+TO: main_DiskPerfIoCompletion.exit.i.i.i;
+
+FROM: main_bb844;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i.i;
+vcompRetStatus.0.i.i.i := var__temp_vcompRetStatus.0.i.i.i;
+TO: main_DiskPerfIoCompletion.exit.i.i.i_end;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i.i_end;
+assume(v2138 == -1073741802);
+TO: main_bb845;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i.i_end;
+assume(v2138 != -1073741802);
+TO: main_bb847;
+
+FROM: main_bb845;
+v2140 := s;
+v2141 := NP;
+TO: main_bb845_end;
+
+FROM: main_bb845_end;
+assume(v2140 == v2141);
+TO: main_stubMoreProcessingRequired.exit.i.i.i;
+
+FROM: main_bb845_end;
+assume(v2140 != v2141);
+TO: main_bb846;
+
+FROM: main_stubMoreProcessingRequired.exit.i.i.i;
+v2143 := MPR1;
+s := v2143;
+TO: main_bb847;
+
+FROM: main_bb846;
+
+FROM: main_bb847;
+v2144 := nondet();
+var__temp_vreturnVal2.0.i.i.i := 0;
+TO: main_bb847_end;
+
+FROM: main_bb847_end;
+assume(v2144 == 0);
+TO: main_bb849;
+
+FROM: main_bb847_end;
+assume(v2144 != 0);
+TO: main_bb848;
+
+FROM: main_bb848;
+v2146 := nondet();
+TO: main_bb848_v..i.i.i;
+FROM: main_bb848_v..i.i.i;
+assume(v2146 == 1);
+v..i.i.i := -1073741823;
+TO: main_bb848_sv..i.i.i;
+
+FROM: main_bb848_v..i.i.i;
+assume(v2146 != 1);
+v..i.i.i := 259;
+TO: main_bb848_sv..i.i.i;
+
+FROM: main_bb848_sv..i.i.i;
+var__temp_vreturnVal2.0.i.i.i := v..i.i.i;
+TO: main_bb849;
+
+FROM: main_bb849;
+vreturnVal2.0.i.i.i := var__temp_vreturnVal2.0.i.i.i;
+v2148 := s;
+v2149 := NP;
+TO: main_bb849_end;
+
+FROM: main_bb849_end;
+assume(v2148 == v2149);
+TO: main_bb850;
+
+FROM: main_bb849_end;
+assume(v2148 != v2149);
+TO: main_bb851;
+
+FROM: main_bb850;
+v2151 := IPC;
+s := v2151;
+lowerDriverReturn := vreturnVal2.0.i.i.i;
+var__temp_vstatus.0 := vreturnVal2.0.i.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb851;
+v2152 := s;
+v2153 := MPR1;
+TO: main_bb851_end;
+
+FROM: main_bb851_end;
+assume(v2152 == v2153);
+TO: main_bb852;
+
+FROM: main_bb851_end;
+assume(v2152 != v2153);
+TO: main_bb855;
+
+FROM: main_bb852;
+TO: main_bb852_end;
+
+FROM: main_bb852_end;
+assume(vreturnVal2.0.i.i.i == 259);
+TO: main_bb853;
+
+FROM: main_bb852_end;
+assume(vreturnVal2.0.i.i.i != 259);
+TO: main_bb854;
+
+FROM: main_bb853;
+v2156 := MPR3;
+s := v2156;
+lowerDriverReturn := vreturnVal2.0.i.i.i;
+var__temp_vstatus.0 := vreturnVal2.0.i.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb854;
+v2157 := NP;
+s := v2157;
+lowerDriverReturn := vreturnVal2.0.i.i.i;
+var__temp_vstatus.0 := vreturnVal2.0.i.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb855;
+v2158 := s;
+v2159 := SKIP1;
+TO: main_bb855_end;
+
+FROM: main_bb855_end;
+assume(v2158 == v2159);
+TO: main_bb856;
+
+FROM: main_bb855_end;
+assume(v2158 != v2159);
+TO: main_bb857;
+
+FROM: main_bb856;
+v2161 := SKIP2;
+s := v2161;
+lowerDriverReturn := vreturnVal2.0.i.i.i;
+var__temp_vstatus.0 := vreturnVal2.0.i.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb857;
+
+FROM: main_bb858;
+
+FROM: main_bb859;
+v2162 := nondet();
+TO: main_bb859_end;
+
+FROM: main_bb859_end;
+assume(v2162 == 4);
+TO: main_bb860;
+
+FROM: main_bb859_end;
+assume(v2162 != 4);
+TO: main_bb883;
+
+FROM: main_bb860;
+v2164 := nondet();
+v2165 := nondet();
+v2166 := nondet();
+v2167 := nondet();
+v2168 := s;
+v2169 := NP;
+TO: main_bb860_end;
+
+FROM: main_bb860_end;
+assume(v2168 == v2169);
+TO: main_bb861;
+
+FROM: main_bb860_end;
+assume(v2168 != v2169);
+TO: main_bb882;
+
+FROM: main_bb861;
+v2171 := SKIP1;
+s := v2171;
+v2173 := nondet();
+v2174 := compRegistered;
+TO: main_bb861_end;
+
+FROM: main_bb861_end;
+assume(v2174 != 0);
+TO: main_bb862;
+
+FROM: main_bb861_end;
+assume(v2174 == 0);
+TO: main_bb871;
+
+FROM: main_bb862;
+v2176 := routine;
+TO: main_bb862_end;
+
+FROM: main_bb862_end;
+assume(v2176 == 0);
+TO: main_bb863;
+
+FROM: main_bb862_end;
+assume(v2176 != 0);
+TO: main_bb864;
+
+FROM: main_bb863;
+v2178 := nondet();
+setEventCalled := 1;
+var__temp_vcompRetStatus.1.i.i := -1073741802;
+TO: main_DiskPerfIoCompletion.exit.i.i5;
+
+FROM: main_bb864;
+v2179 := routine;
+var__temp_vcompRetStatus.1.i.i := v2172;
+TO: main_bb864_end;
+
+FROM: main_bb864_end;
+assume(v2179 == 1);
+TO: main_bb865;
+
+FROM: main_bb864_end;
+assume(v2179 != 1);
+TO: main_DiskPerfIoCompletion.exit.i.i5;
+
+FROM: main_bb865;
+v2181 := nondet();
+v2182 := nondet();
+v2183 := nondet();
+v2184 := nondet();
+v2185 := nondet();
+v2186 := nondet();
+v2187 := nondet();
+v2188 := nondet();
+v2189 := nondet();
+v2190 := nondet();
+v2191 := nondet();
+v2192 := nondet();
+v2193 := nondet();
+v2194 := nondet();
+var__temp_vcompRetStatus.1.i.i := 0;
+TO: main_bb865_end;
+
+FROM: main_bb865_end;
+assume((v2193 != 0) && (v2192 != 0));
+TO: main_bb866;
+
+FROM: main_bb865_end;
+assume((v2193 == 0) || (v2192 == 0));
+TO: main_DiskPerfIoCompletion.exit.i.i5;
+
+FROM: main_bb866;
+v2197 := pended;
+TO: main_bb866_end;
+
+FROM: main_bb866_end;
+assume(v2197 == 0);
+TO: main_bb867;
+
+FROM: main_bb866_end;
+assume(v2197 != 0);
+TO: main_bb868;
+
+FROM: main_bb867;
+pended := 1;
+var__temp_vcompRetStatus.1.i.i := 0;
+TO: main_DiskPerfIoCompletion.exit.i.i5;
+
+FROM: main_bb868;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i5;
+vcompRetStatus.1.i.i := var__temp_vcompRetStatus.1.i.i;
+TO: main_DiskPerfIoCompletion.exit.i.i5_end;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i5_end;
+assume(v2199 == -1073741802);
+TO: main_bb869;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i5_end;
+assume(v2199 != -1073741802);
+TO: main_bb871;
+
+FROM: main_bb869;
+v2201 := s;
+v2202 := NP;
+TO: main_bb869_end;
+
+FROM: main_bb869_end;
+assume(v2201 == v2202);
+TO: main_stubMoreProcessingRequired.exit.i.i6;
+
+FROM: main_bb869_end;
+assume(v2201 != v2202);
+TO: main_bb870;
+
+FROM: main_stubMoreProcessingRequired.exit.i.i6;
+v2204 := MPR1;
+s := v2204;
+TO: main_bb871;
+
+FROM: main_bb870;
+
+FROM: main_bb871;
+v2205 := nondet();
+var__temp_vreturnVal.0.i.i := 0;
+TO: main_bb871_end;
+
+FROM: main_bb871_end;
+assume(v2205 == 0);
+TO: main_bb873;
+
+FROM: main_bb871_end;
+assume(v2205 != 0);
+TO: main_bb872;
+
+FROM: main_bb872;
+v2207 := nondet();
+TO: main_bb872_v..i.i7;
+FROM: main_bb872_v..i.i7;
+assume(v2207 == 1);
+v..i.i7 := -1073741823;
+TO: main_bb872_sv..i.i7;
+
+FROM: main_bb872_v..i.i7;
+assume(v2207 != 1);
+v..i.i7 := 259;
+TO: main_bb872_sv..i.i7;
+
+FROM: main_bb872_sv..i.i7;
+var__temp_vreturnVal.0.i.i := v..i.i7;
+TO: main_bb873;
+
+FROM: main_bb873;
+vreturnVal.0.i.i := var__temp_vreturnVal.0.i.i;
+v2209 := s;
+v2210 := NP;
+TO: main_bb873_end;
+
+FROM: main_bb873_end;
+assume(v2209 == v2210);
+TO: main_bb874;
+
+FROM: main_bb873_end;
+assume(v2209 != v2210);
+TO: main_bb875;
+
+FROM: main_bb874;
+v2212 := IPC;
+s := v2212;
+lowerDriverReturn := vreturnVal.0.i.i;
+var__temp_vstatus.0 := vreturnVal.0.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb875;
+v2213 := s;
+v2214 := MPR1;
+TO: main_bb875_end;
+
+FROM: main_bb875_end;
+assume(v2213 == v2214);
+TO: main_bb876;
+
+FROM: main_bb875_end;
+assume(v2213 != v2214);
+TO: main_bb879;
+
+FROM: main_bb876;
+TO: main_bb876_end;
+
+FROM: main_bb876_end;
+assume(v2216 == 259);
+TO: main_bb877;
+
+FROM: main_bb876_end;
+assume(v2216 != 259);
+TO: main_bb878;
+
+FROM: main_bb877;
+v2218 := MPR3;
+s := v2218;
+lowerDriverReturn := vreturnVal.0.i.i;
+var__temp_vstatus.0 := vreturnVal.0.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb878;
+v2219 := NP;
+s := v2219;
+lowerDriverReturn := vreturnVal.0.i.i;
+var__temp_vstatus.0 := vreturnVal.0.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb879;
+v2220 := s;
+v2221 := SKIP1;
+TO: main_bb879_end;
+
+FROM: main_bb879_end;
+assume(v2220 == v2221);
+TO: main_bb880;
+
+FROM: main_bb879_end;
+assume(v2220 != v2221);
+TO: main_bb881;
+
+FROM: main_bb880;
+v2223 := SKIP2;
+s := v2223;
+lowerDriverReturn := vreturnVal.0.i.i;
+var__temp_vstatus.0 := vreturnVal.0.i.i;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb881;
+
+FROM: main_bb882;
+
+FROM: main_bb883;
+v2224 := nondet();
+var__temp_v.0 := -1;
+TO: main_bb883_end;
+
+FROM: main_bb883_end;
+assume(v2224 == 12);
+TO: main_bb884;
+
+FROM: main_bb883_end;
+assume(v2224 != 12);
+TO: main_bb923;
+
+FROM: main_bb884;
+v2226 := nondet();
+v2227 := nondet();
+v2228 := nondet();
+v2229 := nondet();
+v2230 := nondet();
+v2231 := compRegistered;
+TO: main_bb884_end;
+
+FROM: main_bb884_end;
+assume(v2231 != 0);
+TO: main_bb885;
+
+FROM: main_bb884_end;
+assume(v2231 == 0);
+TO: main_bb893;
+
+FROM: main_bb885;
+v2233 := routine;
+v2235 := nondet();
+TO: main_bb885_end;
+
+FROM: main_bb885_end;
+assume(v2233 == 0);
+TO: main_bb886;
+
+FROM: main_bb885_end;
+assume(v2233 != 0);
+TO: main_bb887;
+
+FROM: main_bb886;
+setEventCalled := 1;
+var__temp_vcompRetStatus.0.i.i9 := -1073741802;
+TO: main_DiskPerfIoCompletion.exit.i.i10;
+
+FROM: main_bb887;
+v2236 := nondet();
+v2237 := nondet();
+v2238 := nondet();
+v2239 := nondet();
+v2240 := nondet();
+v2241 := nondet();
+v2242 := nondet();
+v2243 := nondet();
+v2244 := nondet();
+v2245 := nondet();
+v2246 := nondet();
+v2247 := nondet();
+v2248 := nondet();
+var__temp_vcompRetStatus.0.i.i9 := 0;
+TO: main_bb887_end;
+
+FROM: main_bb887_end;
+assume((v2247 != 0) && (v2246 != 0));
+TO: main_bb888;
+
+FROM: main_bb887_end;
+assume((v2247 == 0) || (v2246 == 0));
+TO: main_DiskPerfIoCompletion.exit.i.i10;
+
+FROM: main_bb888;
+v2251 := pended;
+TO: main_bb888_end;
+
+FROM: main_bb888_end;
+assume(v2251 == 0);
+TO: main_bb889;
+
+FROM: main_bb888_end;
+assume(v2251 != 0);
+TO: main_bb890;
+
+FROM: main_bb889;
+pended := 1;
+var__temp_vcompRetStatus.0.i.i9 := 0;
+TO: main_DiskPerfIoCompletion.exit.i.i10;
+
+FROM: main_bb890;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i10;
+vcompRetStatus.0.i.i9 := var__temp_vcompRetStatus.0.i.i9;
+TO: main_DiskPerfIoCompletion.exit.i.i10_end;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i10_end;
+assume(v2253 == -1073741802);
+TO: main_bb891;
+
+FROM: main_DiskPerfIoCompletion.exit.i.i10_end;
+assume(v2253 != -1073741802);
+TO: main_bb893;
+
+FROM: main_bb891;
+v2255 := s;
+v2256 := NP;
+TO: main_bb891_end;
+
+FROM: main_bb891_end;
+assume(v2255 == v2256);
+TO: main_stubMoreProcessingRequired.exit.i.i11;
+
+FROM: main_bb891_end;
+assume(v2255 != v2256);
+TO: main_bb892;
+
+FROM: main_stubMoreProcessingRequired.exit.i.i11;
+v2258 := MPR1;
+s := v2258;
+TO: main_bb893;
+
+FROM: main_bb892;
+
+FROM: main_bb893;
+v2259 := nondet();
+var__temp_vreturnVal2.0.i.i13 := 0;
+TO: main_bb893_end;
+
+FROM: main_bb893_end;
+assume(v2259 == 0);
+TO: main_bb895;
+
+FROM: main_bb893_end;
+assume(v2259 != 0);
+TO: main_bb894;
+
+FROM: main_bb894;
+v2261 := nondet();
+TO: main_bb894_v..i.i12;
+FROM: main_bb894_v..i.i12;
+assume(v2261 == 1);
+v..i.i12 := -1073741823;
+TO: main_bb894_sv..i.i12;
+
+FROM: main_bb894_v..i.i12;
+assume(v2261 != 1);
+v..i.i12 := 259;
+TO: main_bb894_sv..i.i12;
+
+FROM: main_bb894_sv..i.i12;
+var__temp_vreturnVal2.0.i.i13 := v..i.i12;
+TO: main_bb895;
+
+FROM: main_bb895;
+vreturnVal2.0.i.i13 := var__temp_vreturnVal2.0.i.i13;
+v2263 := s;
+v2264 := NP;
+TO: main_bb895_end;
+
+FROM: main_bb895_end;
+assume(v2263 == v2264);
+TO: main_bb896;
+
+FROM: main_bb895_end;
+assume(v2263 != v2264);
+TO: main_bb897;
+
+FROM: main_bb896;
+v2266 := IPC;
+s := v2266;
+lowerDriverReturn := vreturnVal2.0.i.i13;
+var__temp_vstatus.0 := vreturnVal2.0.i.i13;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb897;
+v2267 := s;
+v2268 := MPR1;
+TO: main_bb897_end;
+
+FROM: main_bb897_end;
+assume(v2267 == v2268);
+TO: main_bb898;
+
+FROM: main_bb897_end;
+assume(v2267 != v2268);
+TO: main_bb901;
+
+FROM: main_bb898;
+TO: main_bb898_end;
+
+FROM: main_bb898_end;
+assume(vreturnVal2.0.i.i13 == 259);
+TO: main_bb899;
+
+FROM: main_bb898_end;
+assume(vreturnVal2.0.i.i13 != 259);
+TO: main_bb900;
+
+FROM: main_bb899;
+v2271 := MPR3;
+s := v2271;
+lowerDriverReturn := vreturnVal2.0.i.i13;
+var__temp_vstatus.0 := vreturnVal2.0.i.i13;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb900;
+v2272 := NP;
+s := v2272;
+lowerDriverReturn := vreturnVal2.0.i.i13;
+var__temp_vstatus.0 := vreturnVal2.0.i.i13;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_bb901;
+v2273 := s;
+v2274 := SKIP1;
+TO: main_bb901_end;
+
+FROM: main_bb901_end;
+assume(v2273 == v2274);
+TO: main_bb902;
+
+FROM: main_bb901_end;
+assume(v2273 != v2274);
+TO: main_bb903;
+
+FROM: main_bb902;
+v2276 := SKIP2;
+s := v2276;
+lowerDriverReturn := vreturnVal2.0.i.i13;
+var__temp_vstatus.0 := vreturnVal2.0.i.i13;
+TO: main_DiskPerfDeviceControl.exit;
+
+FROM: main_DiskPerfDeviceControl.exit;
+vstatus.0 := var__temp_vstatus.0;
+var__temp_vstatus.1 := vstatus.0;
+TO: main_bb904;
+
+FROM: main_bb903;
+
+FROM: main_bb904;
+vstatus.1 := var__temp_vstatus.1;
+v2277 := pended;
+TO: main_bb904_end;
+
+FROM: main_bb904_end;
+assume(v2277 == 1);
+TO: main_bb905;
+
+FROM: main_bb904_end;
+assume(v2277 != 1);
+TO: main_bb907;
+
+FROM: main_bb905;
+v2279 := s;
+v2280 := NP;
+TO: main_bb905_end;
+
+FROM: main_bb905_end;
+assume(v2279 == v2280);
+TO: main_bb906;
+
+FROM: main_bb905_end;
+assume(v2279 != v2280);
+TO: main_bb907;
+
+FROM: main_bb906;
+v2282 := NP;
+s := v2282;
+var__temp_v.0 := vstatus.1;
+TO: main_bb923;
+
+FROM: main_bb907;
+v2283 := pended;
+TO: main_bb907_end;
+
+FROM: main_bb907_end;
+assume(v2283 == 1);
+TO: main_bb908;
+
+FROM: main_bb907_end;
+assume(v2283 != 1);
+TO: main_bb910;
+
+FROM: main_bb908;
+v2285 := s;
+v2286 := MPR3;
+TO: main_bb908_end;
+
+FROM: main_bb908_end;
+assume(v2285 == v2286);
+TO: main_bb909;
+
+FROM: main_bb908_end;
+assume(v2285 != v2286);
+TO: main_bb910;
+
+FROM: main_bb909;
+v2288 := MPR3;
+s := v2288;
+var__temp_v.0 := vstatus.1;
+TO: main_bb923;
+
+FROM: main_bb910;
+v2289 := s;
+v2290 := UNLOADED;
+var__temp_v.0 := vstatus.1;
+TO: main_bb910_end;
+
+FROM: main_bb910_end;
+assume((v2289 != v2290) && (vstatus.1 != -1));
+TO: main_bb911;
+
+FROM: main_bb910_end;
+assume((v2289 == v2290) || (vstatus.1 == -1));
+TO: main_bb923;
+
+FROM: main_bb911;
+v2293 := s;
+v2294 := SKIP2;
+TO: main_bb911_end;
+
+FROM: main_bb911_end;
+assume(v2293 != v2294);
+TO: main_bb912;
+
+FROM: main_bb911_end;
+assume(v2293 == v2294);
+TO: main_bb915;
+
+FROM: main_bb912;
+v2296 := s;
+v2297 := IPC;
+TO: main_bb912_end;
+
+FROM: main_bb912_end;
+assume(v2296 != v2297);
+TO: main_bb913;
+
+FROM: main_bb912_end;
+assume(v2296 == v2297);
+TO: main_bb915;
+
+FROM: main_bb913;
+v2299 := s;
+v2300 := DC;
+TO: main_bb913_end;
+
+FROM: main_bb913_end;
+assume(v2299 != v2300);
+TO: main_bb914;
+
+FROM: main_bb913_end;
+assume(v2299 == v2300);
+TO: main_bb915;
+
+FROM: main_bb914;
+
+FROM: main_bb915;
+v2302 := pended;
+TO: main_bb915_end;
+
+FROM: main_bb915_end;
+assume(v2302 == 1);
+TO: main_bb916;
+
+FROM: main_bb915_end;
+assume(v2302 != 1);
+TO: main_bb918;
+
+FROM: main_bb916;
+var__temp_v.0 := vstatus.1;
+TO: main_bb916_end;
+
+FROM: main_bb916_end;
+assume(vstatus.1 != 259);
+TO: main_bb917;
+
+FROM: main_bb916_end;
+assume(vstatus.1 == 259);
+TO: main_bb923;
+
+FROM: main_bb917;
+
+FROM: main_bb918;
+v2305 := s;
+v2306 := DC;
+TO: main_bb918_end;
+
+FROM: main_bb918_end;
+assume(v2305 == v2306);
+TO: main_bb919;
+
+FROM: main_bb918_end;
+assume(v2305 != v2306);
+TO: main_bb921;
+
+FROM: main_bb919;
+var__temp_v.0 := vstatus.1;
+TO: main_bb919_end;
+
+FROM: main_bb919_end;
+assume(vstatus.1 == 259);
+TO: main_bb920;
+
+FROM: main_bb919_end;
+assume(vstatus.1 != 259);
+TO: main_bb923;
+
+FROM: main_bb920;
+
+FROM: main_bb921;
+v2309 := lowerDriverReturn;
+var__temp_v.0 := vstatus.1;
+TO: main_bb921_end;
+
+FROM: main_bb921_end;
+assume(vstatus.1 != v2309);
+TO: main_bb922;
+
+FROM: main_bb921_end;
+assume(vstatus.1 == v2309);
+TO: main_bb923;
+
+FROM: main_bb922;
+
+FROM: main_bb923;
+v.0 := var__temp_v.0;
+TO: main_bb923_ret;
+

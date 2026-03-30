@@ -1,0 +1,831 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/Di_Stefano_20/flock-noarray_true-termination/flock-noarray_true-termination.c
+Converting
+Type-checking flock-noarray_true-termination
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of mod
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of getI
+Simplifying
+Computing SSA of getpc
+Simplifying
+Computing SSA of setpc
+Simplifying
+Computing SSA of getHin
+Simplifying
+Computing SSA of getHout
+Simplifying
+Computing SSA of getHinCnt
+Simplifying
+Computing SSA of setHinCnt
+Simplifying
+Computing SSA of getHoutCnt
+Simplifying
+Computing SSA of setHoutCnt
+Simplifying
+Computing SSA of now
+Simplifying
+Computing SSA of link
+Simplifying
+Computing SSA of getLvalue
+Simplifying
+Computing SSA of setLvalue
+Simplifying
+Computing SSA of getLtstamp
+Simplifying
+Computing SSA of setLtstamp
+Simplifying
+Computing SSA of timeof
+Simplifying
+Computing SSA of setHin
+Simplifying
+Computing SSA of clearHin
+Simplifying
+Computing SSA of setHout
+Simplifying
+Computing SSA of clearHout
+Simplifying
+Computing SSA of attr
+Simplifying
+Computing SSA of lstig
+Simplifying
+Computing SSA of confirm
+Simplifying
+Computing SSA of propagate
+Simplifying
+Computing SSA of init
+Simplifying
+Computing SSA of _0_2
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array Hin_0_0 Hin_1_0 Hin_2_0 Hout_0_0 Hout_1_0 Hout_2_0 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode I_0_0 I_0_1 I_1_0 I_1_1 I_2_0 I_2_1 Ltstamp_0_0 Ltstamp_1_0 Ltstamp_2_0 Lvalue_0_0 Lvalue_0_1 Lvalue_1_0 Lvalue_1_1 Lvalue_2_0 Lvalue_2_1 __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id HinCnt_0 HinCnt_1 HinCnt_2 HoutCnt_0 HoutCnt_1 HoutCnt_2 __LABS_time pc_0_0 pc_1_0 pc_2_0 tupleEnd tupleStart 
+globals_out: __CPROVER_threads_exited#55 __CPROVER_thread_key_dtors#53 __CPROVER_thread_keys#54 __CPROVER_malloc_is_new_array#45 Hin_0_0#59 Hin_1_0#60 Hin_2_0#61 Hout_0_0#65 Hout_1_0#66 Hout_2_0#67 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#42 __CPROVER_dead_object#43 __CPROVER_deallocated#44 __CPROVER_new_object#47 __CPROVER_rounding_mode#51 I_0_0#68 I_0_1#69 I_1_0#70 I_1_1#71 I_2_0#72 I_2_1#73 Ltstamp_0_0#74 Ltstamp_1_0#75 Ltstamp_2_0#76 Lvalue_0_0#77 Lvalue_0_1#78 Lvalue_1_0#79 Lvalue_1_1#80 Lvalue_2_0#81 Lvalue_2_1#82 __CPROVER_pipe_count#50 __CPROVER_max_malloc_size#46 __CPROVER_next_thread_id#48 __CPROVER_next_thread_key#49 __CPROVER_thread_id#52 HinCnt_0#56 HinCnt_1#57 HinCnt_2#58 HoutCnt_0#62 HoutCnt_1#63 HoutCnt_2#64 __LABS_time#83 pc_0_0#84 pc_1_0#85 pc_2_0#86 tupleEnd#87 tupleStart#88 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#51 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#51) <= 0 && I_0_0#68 <= 0 && -((signed __CPROVER_bitvector[9])I_0_0#68) <= 0 && I_0_1#69 <= 0 && -((signed __CPROVER_bitvector[9])I_0_1#69) <= 0 && I_1_0#70 <= 0 && -((signed __CPROVER_bitvector[9])I_1_0#70) <= 0 && I_1_1#71 <= 0 && -((signed __CPROVER_bitvector[9])I_1_1#71) <= 0 && I_2_0#72 <= 0 && -((signed __CPROVER_bitvector[9])I_2_0#72) <= 0 && I_2_1#73 <= 0 && -((signed __CPROVER_bitvector[9])I_2_1#73) <= 0 && Ltstamp_0_0#74 <= 0 && -((signed __CPROVER_bitvector[9])Ltstamp_0_0#74) <= 0 && Ltstamp_1_0#75 <= 0 && -((signed __CPROVER_bitvector[9])Ltstamp_1_0#75) <= 0 && Ltstamp_2_0#76 <= 0 && -((signed __CPROVER_bitvector[9])Ltstamp_2_0#76) <= 0 && Lvalue_0_0#77 <= 0 && -((signed __CPROVER_bitvector[9])Lvalue_0_0#77) <= 0 && Lvalue_0_1#78 <= 0 && -((signed __CPROVER_bitvector[9])Lvalue_0_1#78) <= 0 && Lvalue_1_0#79 <= 0 && -((signed __CPROVER_bitvector[9])Lvalue_1_0#79) <= 0 && Lvalue_1_1#80 <= 0 && -((signed __CPROVER_bitvector[9])Lvalue_1_1#80) <= 0 && Lvalue_2_0#81 <= 0 && -((signed __CPROVER_bitvector[9])Lvalue_2_0#81) <= 0 && Lvalue_2_1#82 <= 0 && -((signed __CPROVER_bitvector[9])Lvalue_2_1#82) <= 0 && __CPROVER_pipe_count#50 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#50) <= 0 && __CPROVER_max_malloc_size#46 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#46) <= -36028797018963968 && __CPROVER_next_thread_id#48 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#48) <= 0 && __CPROVER_next_thread_key#49 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#49) <= 0 && __CPROVER_thread_id#52 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#52) <= 0 && HinCnt_0#56 <= 0 && -((signed __CPROVER_bitvector[9])HinCnt_0#56) <= 0 && HinCnt_1#57 <= 0 && -((signed __CPROVER_bitvector[9])HinCnt_1#57) <= 0 && HinCnt_2#58 <= 0 && -((signed __CPROVER_bitvector[9])HinCnt_2#58) <= 0 && HoutCnt_0#62 <= 0 && -((signed __CPROVER_bitvector[9])HoutCnt_0#62) <= 0 && HoutCnt_1#63 <= 0 && -((signed __CPROVER_bitvector[9])HoutCnt_1#63) <= 0 && HoutCnt_2#64 <= 0 && -((signed __CPROVER_bitvector[9])HoutCnt_2#64) <= 0 && __LABS_time#83 <= 0 && -((signed __CPROVER_bitvector[9])__LABS_time#83) <= 0 && pc_0_0#84 <= 0 && -((signed __CPROVER_bitvector[9])pc_0_0#84) <= 0 && pc_1_0#85 <= 0 && -((signed __CPROVER_bitvector[9])pc_1_0#85) <= 0 && pc_2_0#86 <= 0 && -((signed __CPROVER_bitvector[9])pc_2_0#86) <= 0 && tupleEnd#87 <= 1 && -((signed __CPROVER_bitvector[9])tupleEnd#87) <= -1 && tupleStart#88 <= 0 && -((signed __CPROVER_bitvector[9])tupleStart#88) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of init
+Function init not analyzed yet
+Recursively summarizing function init
+Checking precondition of now
+Function now not analyzed yet
+Recursively summarizing function now
+Analyzing function now
+Computing summary
+Computing termination argument for now
+Function trivially terminates
+
+Summary for function now
+params: 
+globals_in: __LABS_time 
+globals_out: __LABS_time#201 now#return_value#202 
+forward precondition: TRUE
+forward transformer: __LABS_time#201 <= 255 && -((signed __CPROVER_bitvector[9])__LABS_time#201) <= 0 && now#return_value#202 <= 255 && -((signed __CPROVER_bitvector[9])now#return_value#202) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Analyzing function init
+Computing summary
+Computing termination argument for init
+Function terminates
+
+Summary for function init
+params: 
+globals_in: Hin_0_0 Hin_1_0 Hin_2_0 Hout_0_0 Hout_1_0 Hout_2_0 I_0_0 I_0_1 I_1_0 I_1_1 I_2_0 I_2_1 Ltstamp_0_0 Ltstamp_1_0 Ltstamp_2_0 Lvalue_0_0 Lvalue_0_1 Lvalue_1_0 Lvalue_1_1 Lvalue_2_0 Lvalue_2_1 HinCnt_0 HinCnt_1 HinCnt_2 HoutCnt_0 HoutCnt_1 HoutCnt_2 pc_0_0 pc_1_0 pc_2_0 
+globals_out: Hin_0_0#657 Hin_1_0#658 Hin_2_0#659 Hout_0_0#660 Hout_1_0#661 Hout_2_0#662 I_0_0#674 I_0_1#677 I_1_0#680 I_1_1#683 I_2_0#686 I_2_1#689 Ltstamp_0_0#724 Ltstamp_1_0#729 Ltstamp_2_0#734 Lvalue_0_0#692 Lvalue_0_1#695 Lvalue_1_0#698 Lvalue_1_1#701 Lvalue_2_0#704 Lvalue_2_1#707 HinCnt_0#663 HinCnt_1#664 HinCnt_2#665 HoutCnt_0#666 HoutCnt_1#667 HoutCnt_2#668 pc_0_0#669 pc_1_0#670 pc_2_0#671 
+forward precondition: TRUE
+forward transformer: I_0_0#674 <= 4 && -((signed __CPROVER_bitvector[9])I_0_0#674) <= 0 && I_0_1#677 <= 4 && -((signed __CPROVER_bitvector[9])I_0_1#677) <= 0 && I_1_0#680 <= 4 && -((signed __CPROVER_bitvector[9])I_1_0#680) <= 0 && I_1_1#683 <= 4 && -((signed __CPROVER_bitvector[9])I_1_1#683) <= 0 && I_2_0#686 <= 4 && -((signed __CPROVER_bitvector[9])I_2_0#686) <= 0 && I_2_1#689 <= 4 && -((signed __CPROVER_bitvector[9])I_2_1#689) <= 0 && Ltstamp_0_0#724 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_0_0#724) <= 128 && Ltstamp_1_0#729 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_1_0#729) <= 128 && Ltstamp_2_0#734 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_2_0#734) <= 128 && Lvalue_0_0#692 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_0_0#692) <= 1 && Lvalue_0_1#695 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_0_1#695) <= 1 && Lvalue_1_0#698 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_1_0#698) <= 1 && Lvalue_1_1#701 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_1_1#701) <= 1 && Lvalue_2_0#704 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_2_0#704) <= 1 && Lvalue_2_1#707 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_2_1#707) <= 1 && HinCnt_0#663 <= 0 && -((signed __CPROVER_bitvector[9])HinCnt_0#663) <= 0 && HinCnt_1#664 <= 0 && -((signed __CPROVER_bitvector[9])HinCnt_1#664) <= 0 && HinCnt_2#665 <= 0 && -((signed __CPROVER_bitvector[9])HinCnt_2#665) <= 0 && HoutCnt_0#666 <= 0 && -((signed __CPROVER_bitvector[9])HoutCnt_0#666) <= 0 && HoutCnt_1#667 <= 0 && -((signed __CPROVER_bitvector[9])HoutCnt_1#667) <= 0 && HoutCnt_2#668 <= 0 && -((signed __CPROVER_bitvector[9])HoutCnt_2#668) <= 0 && pc_0_0#669 <= 2 && -((signed __CPROVER_bitvector[9])pc_0_0#669) <= -2 && pc_1_0#670 <= 2 && -((signed __CPROVER_bitvector[9])pc_1_0#670) <= -2 && pc_2_0#671 <= 2 && -((signed __CPROVER_bitvector[9])pc_2_0#671) <= -2
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getpc
+Function getpc not analyzed yet
+Recursively summarizing function getpc
+Analyzing function getpc
+Computing summary
+Computing termination argument for getpc
+Function trivially terminates
+
+Summary for function getpc
+params: i j 
+globals_in: pc_0_0 pc_1_0 pc_2_0 
+globals_out: getpc#return_value#phi115 pc_0_0 pc_1_0 pc_2_0 
+forward precondition: TRUE
+forward transformer: getpc#return_value#phi115 <= 127 && -((signed __CPROVER_bitvector[9])getpc#return_value#phi115) <= 128 && pc_0_0 <= 255 && -((signed __CPROVER_bitvector[9])pc_0_0) <= 0 && pc_1_0 <= 255 && -((signed __CPROVER_bitvector[9])pc_1_0) <= 0 && pc_2_0 <= 255 && -((signed __CPROVER_bitvector[9])pc_2_0) <= 0
+forward invariant: pc_0_0 <= 255 && -((signed __CPROVER_bitvector[9])pc_0_0) <= 0 && pc_1_0 <= 255 && -((signed __CPROVER_bitvector[9])pc_1_0) <= 0 && pc_2_0 <= 255 && -((signed __CPROVER_bitvector[9])pc_2_0) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_2
+Function _0_2 not analyzed yet
+Recursively summarizing function _0_2
+Checking precondition of getI
+Function getI not analyzed yet
+Recursively summarizing function getI
+Analyzing function getI
+Computing summary
+Computing termination argument for getI
+Function trivially terminates
+
+Summary for function getI
+params: i j 
+globals_in: I_0_0 I_0_1 I_1_0 I_1_1 I_2_0 I_2_1 
+globals_out: I_0_0 I_0_1 I_1_0 I_1_1 I_2_0 I_2_1 getI#return_value#phi102 
+forward precondition: TRUE
+forward transformer: I_0_0 <= 127 && -((signed __CPROVER_bitvector[9])I_0_0) <= 128 && I_0_1 <= 127 && -((signed __CPROVER_bitvector[9])I_0_1) <= 128 && I_1_0 <= 127 && -((signed __CPROVER_bitvector[9])I_1_0) <= 128 && I_1_1 <= 127 && -((signed __CPROVER_bitvector[9])I_1_1) <= 128 && I_2_0 <= 127 && -((signed __CPROVER_bitvector[9])I_2_0) <= 128 && I_2_1 <= 127 && -((signed __CPROVER_bitvector[9])I_2_1) <= 128 && getI#return_value#phi102 <= 127 && -((signed __CPROVER_bitvector[9])getI#return_value#phi102) <= 128
+forward invariant: I_0_0 <= 127 && -((signed __CPROVER_bitvector[9])I_0_0) <= 128 && I_0_1 <= 127 && -((signed __CPROVER_bitvector[9])I_0_1) <= 128 && I_1_0 <= 127 && -((signed __CPROVER_bitvector[9])I_1_0) <= 128 && I_1_1 <= 127 && -((signed __CPROVER_bitvector[9])I_1_1) <= 128 && I_2_0 <= 127 && -((signed __CPROVER_bitvector[9])I_2_0) <= 128 && I_2_1 <= 127 && -((signed __CPROVER_bitvector[9])I_2_1) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getLvalue
+Function getLvalue not analyzed yet
+Recursively summarizing function getLvalue
+Analyzing function getLvalue
+Computing summary
+Computing termination argument for getLvalue
+Function trivially terminates
+
+Summary for function getLvalue
+params: i j 
+globals_in: Lvalue_0_0 Lvalue_0_1 Lvalue_1_0 Lvalue_1_1 Lvalue_2_0 Lvalue_2_1 
+globals_out: Lvalue_0_0 Lvalue_0_1 Lvalue_1_0 Lvalue_1_1 Lvalue_2_0 Lvalue_2_1 getLvalue#return_value#phi262 
+forward precondition: TRUE
+forward transformer: Lvalue_0_0 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_0_0) <= 128 && Lvalue_0_1 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_0_1) <= 128 && Lvalue_1_0 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_1_0) <= 128 && Lvalue_1_1 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_1_1) <= 128 && Lvalue_2_0 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_2_0) <= 128 && Lvalue_2_1 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_2_1) <= 128 && getLvalue#return_value#phi262 <= 127 && -((signed __CPROVER_bitvector[9])getLvalue#return_value#phi262) <= 128
+forward invariant: Lvalue_0_0 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_0_0) <= 128 && Lvalue_0_1 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_0_1) <= 128 && Lvalue_1_0 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_1_0) <= 128 && Lvalue_1_1 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_1_1) <= 128 && Lvalue_2_0 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_2_0) <= 128 && Lvalue_2_1 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_2_1) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of mod
+Function mod not analyzed yet
+Recursively summarizing function mod
+Analyzing function mod
+Computing summary
+Computing termination argument for mod
+Function trivially terminates
+
+Summary for function mod
+params: n m 
+globals_in: 
+globals_out: mod#return_value#40 
+forward precondition: TRUE
+forward transformer: mod#return_value#40 <= 127 && -((signed __CPROVER_bitvector[9])mod#return_value#40) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getLvalue
+Precondition trivially holds, replacing by summary.
+Checking precondition of mod
+Precondition trivially holds, replacing by summary.
+Checking precondition of attr
+Function attr not analyzed yet
+Recursively summarizing function attr
+Checking precondition of getHoutCnt
+Function getHoutCnt not analyzed yet
+Recursively summarizing function getHoutCnt
+Analyzing function getHoutCnt
+Computing summary
+Computing termination argument for getHoutCnt
+Function trivially terminates
+
+Summary for function getHoutCnt
+params: i 
+globals_in: HoutCnt_0 HoutCnt_1 HoutCnt_2 
+globals_out: HoutCnt_0 HoutCnt_1 HoutCnt_2 getHoutCnt#return_value#phi189 
+forward precondition: TRUE
+forward transformer: HoutCnt_0 <= 255 && -((signed __CPROVER_bitvector[9])HoutCnt_0) <= 0 && HoutCnt_1 <= 255 && -((signed __CPROVER_bitvector[9])HoutCnt_1) <= 0 && HoutCnt_2 <= 255 && -((signed __CPROVER_bitvector[9])HoutCnt_2) <= 0 && getHoutCnt#return_value#phi189 <= 255 && -((signed __CPROVER_bitvector[9])getHoutCnt#return_value#phi189) <= 0
+forward invariant: HoutCnt_0 <= 255 && -((signed __CPROVER_bitvector[9])HoutCnt_0) <= 0 && HoutCnt_1 <= 255 && -((signed __CPROVER_bitvector[9])HoutCnt_1) <= 0 && HoutCnt_2 <= 255 && -((signed __CPROVER_bitvector[9])HoutCnt_2) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getHinCnt
+Function getHinCnt not analyzed yet
+Recursively summarizing function getHinCnt
+Analyzing function getHinCnt
+Computing summary
+Computing termination argument for getHinCnt
+Function trivially terminates
+
+Summary for function getHinCnt
+params: i 
+globals_in: HinCnt_0 HinCnt_1 HinCnt_2 
+globals_out: getHinCnt#return_value#phi165 HinCnt_0 HinCnt_1 HinCnt_2 
+forward precondition: TRUE
+forward transformer: getHinCnt#return_value#phi165 <= 127 && -((signed __CPROVER_bitvector[9])getHinCnt#return_value#phi165) <= 128 && HinCnt_0 <= 255 && -((signed __CPROVER_bitvector[9])HinCnt_0) <= 0 && HinCnt_1 <= 255 && -((signed __CPROVER_bitvector[9])HinCnt_1) <= 0 && HinCnt_2 <= 255 && -((signed __CPROVER_bitvector[9])HinCnt_2) <= 0
+forward invariant: HinCnt_0 <= 255 && -((signed __CPROVER_bitvector[9])HinCnt_0) <= 0 && HinCnt_1 <= 255 && -((signed __CPROVER_bitvector[9])HinCnt_1) <= 0 && HinCnt_2 <= 255 && -((signed __CPROVER_bitvector[9])HinCnt_2) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Analyzing function attr
+Computing summary
+Computing termination argument for attr
+Function terminates
+
+Summary for function attr
+params: id key value check 
+globals_in: I_0_0 I_0_1 I_1_0 I_1_1 I_2_0 I_2_1 
+globals_out: I_0_0#phi441 I_0_1#phi441 I_1_0#phi441 I_1_1#phi441 I_2_0#phi441 I_2_1#phi441 
+forward precondition: TRUE
+forward transformer: I_0_0#phi441 <= 127 && -((signed __CPROVER_bitvector[9])I_0_0#phi441) <= 128 && I_0_1#phi441 <= 127 && -((signed __CPROVER_bitvector[9])I_0_1#phi441) <= 128 && I_1_0#phi441 <= 127 && -((signed __CPROVER_bitvector[9])I_1_0#phi441) <= 128 && I_1_1#phi441 <= 127 && -((signed __CPROVER_bitvector[9])I_1_1#phi441) <= 128 && I_2_0#phi441 <= 127 && -((signed __CPROVER_bitvector[9])I_2_0#phi441) <= 128 && I_2_1#phi441 <= 127 && -((signed __CPROVER_bitvector[9])I_2_1#phi441) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of attr
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHin
+Function setHin not analyzed yet
+Recursively summarizing function setHin
+Checking precondition of getHinCnt
+Precondition trivially holds, replacing by summary.
+Checking precondition of getHin
+Function getHin not analyzed yet
+Recursively summarizing function getHin
+Analyzing function getHin
+Computing summary
+Computing termination argument for getHin
+Function trivially terminates
+
+Summary for function getHin
+params: i j 
+globals_in: Hin_0_0 Hin_1_0 Hin_2_0 
+globals_out: Hin_0_0 Hin_1_0 Hin_2_0 getHin#return_value#phi139 
+forward precondition: TRUE
+forward transformer: getHin#return_value#phi139 <= 127 && -((signed __CPROVER_bitvector[9])getHin#return_value#phi139) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setHinCnt
+Function setHinCnt not analyzed yet
+Recursively summarizing function setHinCnt
+Analyzing function setHinCnt
+Computing summary
+Computing termination argument for setHinCnt
+Function trivially terminates
+
+Summary for function setHinCnt
+params: i value 
+globals_in: HinCnt_0 HinCnt_1 HinCnt_2 
+globals_out: HinCnt_0#phi176 HinCnt_1#phi176 HinCnt_2#phi176 
+forward precondition: TRUE
+forward transformer: HinCnt_0#phi176 <= 255 && -((signed __CPROVER_bitvector[9])HinCnt_0#phi176) <= 0 && HinCnt_1#phi176 <= 255 && -((signed __CPROVER_bitvector[9])HinCnt_1#phi176) <= 0 && HinCnt_2#phi176 <= 255 && -((signed __CPROVER_bitvector[9])HinCnt_2#phi176) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function setHin
+Computing summary
+Computing termination argument for setHin
+Function terminates
+
+Summary for function setHin
+params: id key 
+globals_in: Hin_0_0 Hin_1_0 Hin_2_0 tupleStart 
+globals_out: Hin_0_0#phi333 Hin_1_0#phi333 Hin_2_0#phi333 tupleStart 
+forward precondition: TRUE
+forward transformer: tupleStart <= 255 && -((signed __CPROVER_bitvector[9])tupleStart) <= 0
+forward invariant: tupleStart <= 255 && -((signed __CPROVER_bitvector[9])tupleStart) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setHin
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Function setpc not analyzed yet
+Recursively summarizing function setpc
+Analyzing function setpc
+Computing summary
+Computing termination argument for setpc
+Function trivially terminates
+
+Summary for function setpc
+params: i j value 
+globals_in: pc_0_0 pc_1_0 pc_2_0 
+globals_out: pc_0_0#phi126 pc_1_0#phi126 pc_2_0#phi126 
+forward precondition: TRUE
+forward transformer: pc_0_0#phi126 <= 255 && -((signed __CPROVER_bitvector[9])pc_0_0#phi126) <= 0 && pc_1_0#phi126 <= 255 && -((signed __CPROVER_bitvector[9])pc_1_0#phi126) <= 0 && pc_2_0#phi126 <= 255 && -((signed __CPROVER_bitvector[9])pc_2_0#phi126) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function _0_2
+Computing summary
+Computing termination argument for _0_2
+Function terminates
+
+Summary for function _0_2
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of propagate
+Function propagate not analyzed yet
+Recursively summarizing function propagate
+Checking precondition of getHoutCnt
+Precondition trivially holds, replacing by summary.
+Checking precondition of getHout
+Function getHout not analyzed yet
+Recursively summarizing function getHout
+Analyzing function getHout
+Computing summary
+Computing termination argument for getHout
+Function trivially terminates
+
+Summary for function getHout
+params: i j 
+globals_in: Hout_0_0 Hout_1_0 Hout_2_0 
+globals_out: Hout_0_0 Hout_1_0 Hout_2_0 getHout#return_value#phi152 
+forward precondition: TRUE
+forward transformer: getHout#return_value#phi152 <= 127 && -((signed __CPROVER_bitvector[9])getHout#return_value#phi152) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of timeof
+Function timeof not analyzed yet
+Recursively summarizing function timeof
+Checking precondition of getLtstamp
+Function getLtstamp not analyzed yet
+Recursively summarizing function getLtstamp
+Analyzing function getLtstamp
+Computing summary
+Computing termination argument for getLtstamp
+Function trivially terminates
+
+Summary for function getLtstamp
+params: i j 
+globals_in: Ltstamp_0_0 Ltstamp_1_0 Ltstamp_2_0 
+globals_out: Ltstamp_0_0 Ltstamp_1_0 Ltstamp_2_0 getLtstamp#return_value#phi295 
+forward precondition: TRUE
+forward transformer: Ltstamp_0_0 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_0_0) <= 128 && Ltstamp_1_0 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_1_0) <= 128 && Ltstamp_2_0 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_2_0) <= 128 && getLtstamp#return_value#phi295 <= 255 && -((signed __CPROVER_bitvector[9])getLtstamp#return_value#phi295) <= 0
+forward invariant: Ltstamp_0_0 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_0_0) <= 128 && Ltstamp_1_0 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_1_0) <= 128 && Ltstamp_2_0 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_2_0) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function timeof
+Computing summary
+Computing termination argument for timeof
+Function terminates
+
+Summary for function timeof
+params: id key 
+globals_in: tupleStart 
+globals_out: timeof#return_value#311 tupleStart 
+forward precondition: TRUE
+forward transformer: timeof#return_value#311 <= 255 && -((signed __CPROVER_bitvector[9])timeof#return_value#311) <= 0 && tupleStart <= 255 && -((signed __CPROVER_bitvector[9])tupleStart) <= 0
+forward invariant: tupleStart <= 255 && -((signed __CPROVER_bitvector[9])tupleStart) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of timeof
+Precondition trivially holds, replacing by summary.
+Checking precondition of link
+Function link not analyzed yet
+Recursively summarizing function link
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Analyzing function link
+Computing summary
+Computing termination argument for link
+Function terminates
+
+Summary for function link
+params: __LABS_link1 __LABS_link2 key 
+globals_in: 
+globals_out: link#return_value#phi249 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setHout
+Function setHout not analyzed yet
+Recursively summarizing function setHout
+Checking precondition of getHoutCnt
+Precondition trivially holds, replacing by summary.
+Checking precondition of getHout
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHoutCnt
+Function setHoutCnt not analyzed yet
+Recursively summarizing function setHoutCnt
+Analyzing function setHoutCnt
+Computing summary
+Computing termination argument for setHoutCnt
+Function trivially terminates
+
+Summary for function setHoutCnt
+params: i value 
+globals_in: HoutCnt_0 HoutCnt_1 HoutCnt_2 
+globals_out: HoutCnt_0#phi200 HoutCnt_1#phi200 HoutCnt_2#phi200 
+forward precondition: TRUE
+forward transformer: HoutCnt_0#phi200 <= 255 && -((signed __CPROVER_bitvector[9])HoutCnt_0#phi200) <= 0 && HoutCnt_1#phi200 <= 255 && -((signed __CPROVER_bitvector[9])HoutCnt_1#phi200) <= 0 && HoutCnt_2#phi200 <= 255 && -((signed __CPROVER_bitvector[9])HoutCnt_2#phi200) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function setHout
+Computing summary
+Computing termination argument for setHout
+Function terminates
+
+Summary for function setHout
+params: id key 
+globals_in: Hout_0_0 Hout_1_0 Hout_2_0 tupleStart 
+globals_out: Hout_0_0#phi377 Hout_1_0#phi377 Hout_2_0#phi377 tupleStart 
+forward precondition: TRUE
+forward transformer: tupleStart <= 255 && -((signed __CPROVER_bitvector[9])tupleStart) <= 0
+forward invariant: tupleStart <= 255 && -((signed __CPROVER_bitvector[9])tupleStart) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of clearHin
+Function clearHin not analyzed yet
+Recursively summarizing function clearHin
+Checking precondition of getHinCnt
+Precondition trivially holds, replacing by summary.
+Checking precondition of getHin
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHinCnt
+Precondition trivially holds, replacing by summary.
+Analyzing function clearHin
+Computing summary
+Computing termination argument for clearHin
+Function terminates
+
+Summary for function clearHin
+params: id key 
+globals_in: Hin_0_0 Hin_1_0 Hin_2_0 tupleStart 
+globals_out: Hin_0_0#phi355 Hin_1_0#phi355 Hin_2_0#phi355 tupleStart 
+forward precondition: TRUE
+forward transformer: tupleStart <= 255 && -((signed __CPROVER_bitvector[9])tupleStart) <= 0
+forward invariant: tupleStart <= 255 && -((signed __CPROVER_bitvector[9])tupleStart) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getLvalue
+Precondition trivially holds, replacing by summary.
+Checking precondition of setLvalue
+Function setLvalue not analyzed yet
+Recursively summarizing function setLvalue
+Analyzing function setLvalue
+Computing summary
+Computing termination argument for setLvalue
+Function trivially terminates
+
+Summary for function setLvalue
+params: id key value 
+globals_in: Lvalue_0_0 Lvalue_0_1 Lvalue_1_0 Lvalue_1_1 Lvalue_2_0 Lvalue_2_1 
+globals_out: Lvalue_0_0#phi282 Lvalue_0_1#phi282 Lvalue_1_0#phi282 Lvalue_1_1#phi282 Lvalue_2_0#phi282 Lvalue_2_1#phi282 
+forward precondition: TRUE
+forward transformer: Lvalue_0_0#phi282 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_0_0#phi282) <= 128 && Lvalue_0_1#phi282 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_0_1#phi282) <= 128 && Lvalue_1_0#phi282 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_1_0#phi282) <= 128 && Lvalue_1_1#phi282 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_1_1#phi282) <= 128 && Lvalue_2_0#phi282 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_2_0#phi282) <= 128 && Lvalue_2_1#phi282 <= 127 && -((signed __CPROVER_bitvector[9])Lvalue_2_1#phi282) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setLtstamp
+Function setLtstamp not analyzed yet
+Recursively summarizing function setLtstamp
+Analyzing function setLtstamp
+Computing summary
+Computing termination argument for setLtstamp
+Function trivially terminates
+
+Summary for function setLtstamp
+params: id key value 
+globals_in: Ltstamp_0_0 Ltstamp_1_0 Ltstamp_2_0 
+globals_out: Ltstamp_0_0#phi306 Ltstamp_1_0#phi306 Ltstamp_2_0#phi306 
+forward precondition: TRUE
+forward transformer: Ltstamp_0_0#phi306 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_0_0#phi306) <= 128 && Ltstamp_1_0#phi306 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_1_0#phi306) <= 128 && Ltstamp_2_0#phi306 <= 127 && -((signed __CPROVER_bitvector[9])Ltstamp_2_0#phi306) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of clearHout
+Function clearHout not analyzed yet
+Recursively summarizing function clearHout
+Checking precondition of getHoutCnt
+Precondition trivially holds, replacing by summary.
+Checking precondition of getHout
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHoutCnt
+Precondition trivially holds, replacing by summary.
+Analyzing function clearHout
+Computing summary
+Computing termination argument for clearHout
+Function terminates
+
+Summary for function clearHout
+params: id key 
+globals_in: Hout_0_0 Hout_1_0 Hout_2_0 tupleStart 
+globals_out: Hout_0_0#phi399 Hout_1_0#phi399 Hout_2_0#phi399 tupleStart 
+forward precondition: TRUE
+forward transformer: tupleStart <= 255 && -((signed __CPROVER_bitvector[9])tupleStart) <= 0
+forward invariant: tupleStart <= 255 && -((signed __CPROVER_bitvector[9])tupleStart) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function propagate
+Computing summary
+Computing termination argument for propagate
+Synthesizing ranking function to prove termination
+
+Summary for function propagate
+params: 
+globals_in: tupleEnd 
+globals_out: tupleEnd 
+forward precondition: TRUE
+forward transformer: tupleEnd <= 255 && -((signed __CPROVER_bitvector[9])tupleEnd) <= 0
+forward invariant: ($guard#622 && $guard#ls632 ==> k#lb632 <= 2) && ($guard#622 && $guard#ls632 ==> -((signed __CPROVER_bitvector[9])k#lb632) <= 0) && ($guard#622 && $guard#ls632 ==> next#lb632 <= 255) && ($guard#622 && $guard#ls632 ==> -((signed __CPROVER_bitvector[9])next#lb632) <= 0) && ($guard#607 && $guard#ls637 ==> i#lb637 <= 3) && ($guard#607 && $guard#ls637 ==> -((signed __CPROVER_bitvector[9])i#lb637) <= 0) && ($guard#607 && $guard#ls637 ==> k#lb637 <= 255) && ($guard#607 && $guard#ls637 ==> -((signed __CPROVER_bitvector[9])k#lb637) <= 0) && ($guard#607 && $guard#ls637 ==> next#lb637 <= 255) && ($guard#607 && $guard#ls637 ==> -((signed __CPROVER_bitvector[9])next#lb637) <= 0) && tupleEnd <= 255 && -((signed __CPROVER_bitvector[9])tupleEnd) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#622 && $guard#622 && $guard#630 && $cond#632 && $guard#630 && $cond#632 ==> (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])k#phi622 - (signed __CPROVER_bitvector[9])k#631)) + (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])next#phi622 - (signed __CPROVER_bitvector[9])next#623)) > 0) && ($guard#607 && $guard#607 && $guard#607 && $guard#634 && $cond#637 && $guard#634 && $cond#637 && $guard#634 && $cond#637 ==> (signed __CPROVER_bitvector[22])((signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])i#phi607 - (signed __CPROVER_bitvector[9])i#636)) + (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])k#phi607 - (signed __CPROVER_bitvector[9])k#phi634))) + (signed __CPROVER_bitvector[22])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])next#phi607 - (signed __CPROVER_bitvector[9])next#phi634)) > 0)
+
+terminates: yes
+
+Checking precondition of confirm
+Function confirm not analyzed yet
+Recursively summarizing function confirm
+Checking precondition of getHinCnt
+Precondition trivially holds, replacing by summary.
+Checking precondition of getHin
+Precondition trivially holds, replacing by summary.
+Checking precondition of timeof
+Precondition trivially holds, replacing by summary.
+Checking precondition of timeof
+Precondition trivially holds, replacing by summary.
+Checking precondition of link
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHout
+Precondition trivially holds, replacing by summary.
+Checking precondition of timeof
+Precondition trivially holds, replacing by summary.
+Checking precondition of clearHin
+Precondition trivially holds, replacing by summary.
+Checking precondition of getLvalue
+Precondition trivially holds, replacing by summary.
+Checking precondition of setLvalue
+Precondition trivially holds, replacing by summary.
+Checking precondition of setLtstamp
+Precondition trivially holds, replacing by summary.
+Checking precondition of clearHin
+Precondition trivially holds, replacing by summary.
+Analyzing function confirm
+Computing summary
+Computing termination argument for confirm
+Synthesizing ranking function to prove termination
+
+Summary for function confirm
+params: 
+globals_in: tupleEnd 
+globals_out: tupleEnd 
+forward precondition: TRUE
+forward transformer: tupleEnd <= 255 && -((signed __CPROVER_bitvector[9])tupleEnd) <= 0
+forward invariant: ($guard#534 && $guard#ls544 ==> k#lb544 <= 2) && ($guard#534 && $guard#ls544 ==> -((signed __CPROVER_bitvector[9])k#lb544) <= 0) && ($guard#534 && $guard#ls544 ==> next#lb544 <= 255) && ($guard#534 && $guard#ls544 ==> -((signed __CPROVER_bitvector[9])next#lb544) <= 0) && ($guard#514 && $guard#ls550 ==> i#lb550 <= 3) && ($guard#514 && $guard#ls550 ==> -((signed __CPROVER_bitvector[9])i#lb550) <= 0) && ($guard#514 && $guard#ls550 ==> k#lb550 <= 255) && ($guard#514 && $guard#ls550 ==> -((signed __CPROVER_bitvector[9])k#lb550) <= 0) && ($guard#514 && $guard#ls550 ==> next#lb550 <= 255) && ($guard#514 && $guard#ls550 ==> -((signed __CPROVER_bitvector[9])next#lb550) <= 0) && tupleEnd <= 255 && -((signed __CPROVER_bitvector[9])tupleEnd) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#534 && $guard#534 && $guard#542 && $cond#544 && $guard#542 && $cond#544 ==> (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])k#phi534 - (signed __CPROVER_bitvector[9])k#543)) + (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])next#phi534 - (signed __CPROVER_bitvector[9])next#535)) > 0) && ($guard#514 && $guard#514 && $guard#514 && $guard#547 && $cond#550 && $guard#547 && $cond#550 && $guard#547 && $cond#550 ==> (signed __CPROVER_bitvector[22])((signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])i#phi514 - (signed __CPROVER_bitvector[9])i#549)) + (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])k#phi514 - (signed __CPROVER_bitvector[9])k#phi547))) + (signed __CPROVER_bitvector[22])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])next#phi514 - (signed __CPROVER_bitvector[9])next#phi547)) > 0)
+
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Synthesizing ranking function to prove termination
+
+Summary for function main
+params: 
+globals_in: Lvalue_0_0 Lvalue_0_1 Lvalue_1_0 Lvalue_1_1 Lvalue_2_0 Lvalue_2_1 
+globals_out: main#return_value#phi39 Lvalue_0_0 Lvalue_0_1 Lvalue_1_0 Lvalue_1_1 Lvalue_2_0 Lvalue_2_1 
+forward precondition: TRUE
+forward transformer: main#return_value#phi39 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#phi39) <= 0 && Lvalue_0_0 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_0_0) <= 1 && Lvalue_0_1 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_0_1) <= 1 && Lvalue_1_0 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_1_0) <= 1 && Lvalue_1_1 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_1_1) <= 1 && Lvalue_2_0 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_2_0) <= 1 && Lvalue_2_1 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_2_1) <= 1
+forward invariant: ($guard#3 && $guard#ls36 ==> firstAgent#lb36 <= 255) && ($guard#3 && $guard#ls36 ==> -((signed __CPROVER_bitvector[9])firstAgent#lb36) <= 0) && Lvalue_0_0 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_0_0) <= 1 && Lvalue_0_1 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_0_1) <= 1 && Lvalue_1_0 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_1_0) <= 1 && Lvalue_1_1 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_1_1) <= 1 && Lvalue_2_0 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_2_0) <= 1 && Lvalue_2_1 <= 1 && -((signed __CPROVER_bitvector[9])Lvalue_2_1) <= 1
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#3 && $guard#35 && $cond#36 ==> TRUE
+
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 4226603725
+  number of solver calls: 2391285703
+  number of summaries used: 69
+  number of termination arguments computed: 3
+
+
+** Termination: 
+[main]: unknown
+[mod]: yes
+[__CPROVER_initialize]: yes
+[getI]: yes
+[getpc]: yes
+[setpc]: yes
+[getHin]: yes
+[getHout]: yes
+[getHinCnt]: yes
+[setHinCnt]: yes
+[getHoutCnt]: yes
+[setHoutCnt]: yes
+[now]: yes
+[link]: yes
+[getLvalue]: yes
+[setLvalue]: yes
+[getLtstamp]: yes
+[setLtstamp]: yes
+[timeof]: yes
+[setHin]: yes
+[clearHin]: yes
+[setHout]: yes
+[clearHout]: yes
+[attr]: yes
+[lstig]: not computed
+[confirm]: yes
+[propagate]: yes
+[init]: yes
+[_0_2]: yes
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 1049 milliseconds

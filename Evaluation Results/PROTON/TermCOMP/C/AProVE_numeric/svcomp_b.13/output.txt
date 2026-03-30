@@ -1,0 +1,105 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.pM5xs2
+
+Input File is : svcomp_b.13.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+
+int test_fun(int x, int y, int z)
+{
+    int c = 0;
+    while ((x > z) || (y > z)) {
+        {if (x > z) {
+            x = x - 1;
+        } else {
+            {if (y > z) {
+                y = y - 1;
+            } else {
+                
+            }}
+        }}
+        c = c + 1;
+    }
+    return c;
+}
+
+int main() {
+    return test_fun(__VERIFIER_nondet_int(), __VERIFIER_nondet_int(), __VERIFIER_nondet_int());
+}
+
+End Main   
+
+Input File is : svcomp_b.13_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+
+int test_fun(int x, int y, int z)
+{
+    int c = 0;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(6, __func__);
+ while ((x > z) || (y > z)) { __VERIFIER_loop_head(6, __func__);
+printf("CBMC Instrumentation @ line6");myBool flag=__VERIFIER_nondet_myBool();static int oc;static int ox;static int oy;static int oz;if(pStored0){__CPROVER_assert(!(oc==c && ox==x && oy==y && oz==z),"recurrent state found");} if(flag){oc=c;ox=x;oy=y;oz=z;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(7, __func__);
+if (x > z) { __VERIFIER_control_true(7, __func__);
+
+            x = x - 1;
+        } else { __VERIFIER_control_false(9, __func__);
+
+            { __VERIFIER_reached_control(10, __func__);
+if (y > z) { __VERIFIER_control_true(10, __func__);
+
+                y = y - 1;
+            } else { __VERIFIER_control_false(12, __func__);
+
+                
+            }}
+        }}
+        c = c + 1;
+    }
+    return c;
+}
+
+int main() {
+    return test_fun(__VERIFIER_nondet_int(), __VERIFIER_nondet_int(), __VERIFIER_nondet_int());
+}
+
+End Main 
+ svcomp_b.13_braced_instrumented.c
+NTFILE is svcomp_b.13_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_b.13.c
+FILE=svcomp_b.13_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 81553 milliseconds

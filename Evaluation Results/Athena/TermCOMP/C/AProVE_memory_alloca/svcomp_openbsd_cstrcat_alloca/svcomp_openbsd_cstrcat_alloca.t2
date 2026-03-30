@@ -1,0 +1,133 @@
+///*** 1_main ***///
+START: main_bb7;
+
+
+
+FROM: main_bb7;
+memory0_freeIndex := 1;
+memory1_freeIndex := 1;
+vmemory1 := nondet();
+vmemory0 := nondet();
+v20 := nondet();
+v21 := nondet();
+v22 := nondet();
+TO: main_bb7_v.;
+FROM: main_bb7_v.;
+assume(v20 < 1);
+v. := 1;
+TO: main_bb7_sv.;
+
+FROM: main_bb7_v.;
+assume(v20 >= 1);
+v. := v20;
+TO: main_bb7_sv.;
+
+FROM: main_bb7_sv.;
+TO: main_bb7_vlength2.0;
+FROM: main_bb7_vlength2.0;
+assume(v21 < 2);
+vlength2.0 := 2;
+TO: main_bb7_svlength2.0;
+
+FROM: main_bb7_vlength2.0;
+assume(v21 >= 2);
+vlength2.0 := v21;
+TO: main_bb7_svlength2.0;
+
+FROM: main_bb7_svlength2.0;
+TO: main_bb7_v.1;
+FROM: main_bb7_v.1;
+assume(v22 < 1);
+v.1 := 1;
+TO: main_bb7_sv.1;
+
+FROM: main_bb7_v.1;
+assume(v22 >= 1);
+v.1 := v22;
+TO: main_bb7_sv.1;
+
+FROM: main_bb7_sv.1;
+v26 := vlength2.0 - v.1;
+TO: main_bb7_end;
+
+FROM: main_bb7_end;
+assume((v26 < v.) || (v.1 > vlength2.0));
+TO: main_cstrcat.exit;
+
+FROM: main_bb7_end;
+assume((v26 >= v.) && (v.1 <= vlength2.0));
+TO: main_bb8;
+
+FROM: main_bb8;
+v29 := v. * 1;
+v30 := memory0_freeIndex;
+v31 := memory0_freeIndex;
+v32 := v31 + v29;
+memory0_freeIndex := v32;
+v33 := vlength2.0 * 1;
+v34 := memory1_freeIndex;
+v35 := memory1_freeIndex;
+v36 := v35 + v33;
+memory1_freeIndex := v36;
+v37 := v. - 1;
+v38 := v30 + v37;
+v39 := v38;
+v40 := v39;
+vmemory0 := store_array(vmemory0, v40, 0);
+v41 := v.1 - 1;
+v42 := v34 + v41;
+v43 := v42;
+v44 := v43;
+vmemory1 := store_array(vmemory1, v44, 0);
+var__temp_v.0.i := v34;
+TO: main_bb9;
+
+FROM: main_bb9;
+v.0.i := var__temp_v.0.i;
+v45 := v.0.i;
+v46 := v45;
+v47 := select_array(vmemory1, v46);
+var__temp_v.01.i := v30;
+var__temp_v.1.i := v.0.i;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(v47 != 0);
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(v47 == 0);
+TO: main_bb11;
+
+FROM: main_bb10;
+v49 := v.0.i + 1;
+var__temp_v.0.i := v49;
+TO: main_bb9;
+
+FROM: main_bb11;
+v.01.i := var__temp_v.01.i;
+v.1.i := var__temp_v.1.i;
+v50 := v.01.i + 1;
+v51 := v.01.i;
+v52 := v51;
+v53 := select_array(vmemory0, v52);
+v54 := v.1.i + 1;
+v55 := v.1.i;
+v56 := v55;
+vmemory1 := store_array(vmemory1, v56, v53);
+v57 := v53;
+var__temp_v.01.i := v50;
+var__temp_v.1.i := v54;
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(v57 != 0);
+TO: main_bb11;
+
+FROM: main_bb11_end;
+assume(v57 == 0);
+TO: main_cstrcat.exit;
+
+FROM: main_cstrcat.exit;
+TO: main_cstrcat.exit_ret;
+

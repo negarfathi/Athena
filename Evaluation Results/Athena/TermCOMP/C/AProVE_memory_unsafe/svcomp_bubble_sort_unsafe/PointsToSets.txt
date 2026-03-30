@@ -1,0 +1,109 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %a = alloca i32*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a = alloca i32*, align 8 + 0
+NODE   4:   %n = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %n = alloca i32, align 4 + 0
+NODE   5:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   6:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   7:   store i32 %call, i32* %n, align 4 (points-to size: 0)
+NODE   8:   %0 = load i32*, i32** %a, align 8 (points-to size: 0)
+NODE   9:   %1 = load i32, i32* %n, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  10: <10> PSNodeType::CALL (points-to size: 0)
+NODE  11: <11> PSNodeType::ENTRY (points-to size: 0)
+NODE  12: i32* %a (points-to size: 0)
+NODE  13: i32 %N (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  14:   %a.addr = alloca i32*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a.addr = alloca i32*, align 8 + 0
+NODE  15:   %N.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %N.addr = alloca i32, align 4 + 0
+NODE  16:   %i = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %i = alloca i32, align 4 + 0
+NODE  17:   %j = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %j = alloca i32, align 4 + 0
+NODE  18:   %t = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %t = alloca i32, align 4 + 0
+NODE  19:   store i32* %a, i32** %a.addr, align 8 (points-to size: 0)
+NODE  20:   store i32 %N, i32* %N.addr, align 4 (points-to size: 0)
+NODE  21:   %0 = load i32, i32* %N.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  22:   store i32 %0, i32* %i, align 4 (points-to size: 0)
+NODE  23:   %1 = load i32, i32* %i, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  24:   store i32 2, i32* %j, align 4 (points-to size: 0)
+NODE  25:   ret void (points-to size: 0)
+NODE  26:   %2 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  27:   %3 = load i32, i32* %i, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  28:   %4 = load i32*, i32** %a.addr, align 8 (points-to size: 0)
+NODE  29:   %5 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  30:   %sub = sub nsw i32 %5, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  31:   %idxprom = sext i32 %sub to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  32:   %arrayidx = getelementptr inbounds i32, i32* %4, i64 %idxprom (points-to size: 0)
+NODE  33:   %6 = load i32, i32* %arrayidx, align 4 (points-to size: 0)
+NODE  34:   %7 = load i32*, i32** %a.addr, align 8 (points-to size: 0)
+NODE  35:   %8 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  36:   %idxprom4 = sext i32 %8 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  37:   %arrayidx5 = getelementptr inbounds i32, i32* %7, i64 %idxprom4 (points-to size: 0)
+NODE  38:   %9 = load i32, i32* %arrayidx5, align 4 (points-to size: 0)
+NODE  39:   %10 = load i32*, i32** %a.addr, align 8 (points-to size: 0)
+NODE  40:   %11 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  41:   %sub7 = sub nsw i32 %11, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  42:   %idxprom8 = sext i32 %sub7 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  43:   %arrayidx9 = getelementptr inbounds i32, i32* %10, i64 %idxprom8 (points-to size: 0)
+NODE  44:   %12 = load i32, i32* %arrayidx9, align 4 (points-to size: 0)
+NODE  45:   store i32 %12, i32* %t, align 4 (points-to size: 0)
+NODE  46:   %13 = load i32*, i32** %a.addr, align 8 (points-to size: 0)
+NODE  47:   %14 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  48:   %idxprom10 = sext i32 %14 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  49:   %arrayidx11 = getelementptr inbounds i32, i32* %13, i64 %idxprom10 (points-to size: 0)
+NODE  50:   %15 = load i32, i32* %arrayidx11, align 4 (points-to size: 0)
+NODE  51:   %16 = load i32*, i32** %a.addr, align 8 (points-to size: 0)
+NODE  52:   %17 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  53:   %sub12 = sub nsw i32 %17, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  54:   %idxprom13 = sext i32 %sub12 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  55:   %arrayidx14 = getelementptr inbounds i32, i32* %16, i64 %idxprom13 (points-to size: 0)
+NODE  56:   store i32 %15, i32* %arrayidx14, align 4 (points-to size: 0)
+NODE  57:   %18 = load i32, i32* %t, align 4 (points-to size: 0)
+NODE  58:   %19 = load i32*, i32** %a.addr, align 8 (points-to size: 0)
+NODE  59:   %20 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  60:   %idxprom15 = sext i32 %20 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  61:   %arrayidx16 = getelementptr inbounds i32, i32* %19, i64 %idxprom15 (points-to size: 0)
+NODE  62:   store i32 %18, i32* %arrayidx16, align 4 (points-to size: 0)
+NODE  63:   %22 = load i32, i32* %i, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  64:   %dec = add nsw i32 %22, -1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  65:   store i32 %dec, i32* %i, align 4 (points-to size: 0)
+NODE  66:   %21 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  67:   %inc = add nsw i32 %21, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  68:   store i32 %inc, i32* %j, align 4 (points-to size: 0)
+NODE  69: bubble (points-to size: 1)
+    -> bubble + 0
+NODE  70: main (points-to size: 1)
+    -> main + 0
+NODE  71:   call void @bubble(i32* %0, i32 %1) (points-to size: 0)
+NODE  72:   ret i32 0 (points-to size: 1)
+    -> null + 0

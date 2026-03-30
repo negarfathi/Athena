@@ -1,0 +1,142 @@
+none:	N1 -{INIT GLOBAL VARS}-> N35
+line 1:	N35 -{int __VERIFIER_nondet_int();}-> N36
+lines 9-34:	N36 -{int main();}-> N37
+none:	N37 -{Function start dummy edge}-> N2
+line 11:	N2 -{int i = 0;}-> N3
+	i == 0;
+line 12:	N3 -{int base;}-> N4
+line 12:	N4 -{base = __VERIFIER_nondet_int();}-> N5
+	base == 2147483640;
+line 13:	N5 -{int count;}-> N6
+line 13:	N6 -{count = __VERIFIER_nondet_int();}-> N7
+	count == 2147483641;
+line 14:	N7 -{int old_[10];}-> N8
+	(&old_) == 4LL;
+line 14:	N8 -{int new_[10];}-> N9
+	(&new_) == 60LL;
+line 15:	N9 -{for}-> N10
+	i == 0;
+	base == 2147483640;
+	count == 2147483641;
+	(&old_) == 4LL;
+	(&new_) == 60LL;
+lines 15-19:	N10 -{int j = 0;}-> N11
+	j == 0;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 0;
+	j == 0;
+line 17:	N13 -{old_[j] = __VERIFIER_nondet_int();}-> N15
+line 18:	N15 -{new_[j] = __VERIFIER_nondet_int();}-> N16
+none:	N16 -{}-> N12
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 1;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 1;
+	j == 1;
+line 17:	N13 -{old_[j] = __VERIFIER_nondet_int();}-> N15
+line 18:	N15 -{new_[j] = __VERIFIER_nondet_int();}-> N16
+none:	N16 -{}-> N12
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 2;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 2;
+	j == 2;
+line 17:	N13 -{old_[j] = __VERIFIER_nondet_int();}-> N15
+line 18:	N15 -{new_[j] = __VERIFIER_nondet_int();}-> N16
+none:	N16 -{}-> N12
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 3;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 3;
+	j == 3;
+line 17:	N13 -{old_[j] = __VERIFIER_nondet_int();}-> N15
+line 18:	N15 -{new_[j] = __VERIFIER_nondet_int();}-> N16
+none:	N16 -{}-> N12
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 4;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 4;
+	j == 4;
+line 17:	N13 -{old_[j] = __VERIFIER_nondet_int();}-> N15
+	(old_[j]) == 16777216;
+line 18:	N15 -{new_[j] = __VERIFIER_nondet_int();}-> N16
+	(new_[j]) == 0;
+none:	N16 -{}-> N12
+	(old_[j]) == 16777216;
+	(new_[j]) == 0;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 5;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 5;
+	j == 5;
+line 17:	N13 -{old_[j] = __VERIFIER_nondet_int();}-> N15
+	(old_[j]) == 0;
+line 18:	N15 -{new_[j] = __VERIFIER_nondet_int();}-> N16
+	(new_[j]) == 0;
+none:	N16 -{}-> N12
+	(old_[j]) == 0;
+	(new_[j]) == 0;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 6;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 6;
+	j == 6;
+line 17:	N13 -{old_[j] = __VERIFIER_nondet_int();}-> N15
+	(old_[j]) == 0;
+line 18:	N15 -{new_[j] = __VERIFIER_nondet_int();}-> N16
+	(new_[j]) == 0;
+none:	N16 -{}-> N12
+	(old_[j]) == 0;
+	(new_[j]) == 0;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 7;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 7;
+	j == 7;
+line 17:	N13 -{old_[j] = __VERIFIER_nondet_int();}-> N15
+	(old_[j]) == 0;
+line 18:	N15 -{new_[j] = __VERIFIER_nondet_int();}-> N16
+	(new_[j]) == 0;
+none:	N16 -{}-> N12
+	(old_[j]) == 0;
+	(new_[j]) == 0;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 8;
+line 15:	N11 -{[j < 9]}-> N13
+	j == 8;
+	j == 8;
+line 17:	N13 -{old_[j] = __VERIFIER_nondet_int();}-> N15
+	(old_[j]) == 0;
+line 18:	N15 -{new_[j] = __VERIFIER_nondet_int();}-> N16
+	(new_[j]) == 1073741824;
+none:	N16 -{}-> N12
+	(old_[j]) == 0;
+	(new_[j]) == 1073741824;
+lines 15-19:	N12 -{j = j + 1;}-> N11
+	j == 9;
+line 15:	N11 -{[!(j < 9)]}-> N14
+	j == 9;
+	j == 9;
+line 20:	N14 -{old_[9] = 0;}-> N17
+	(old_[9]) == 0;
+line 21:	N17 -{new_[9] = 0;}-> N18
+	(old_[9]) == 0;
+	(new_[9]) == 0;
+line 22:	N18 -{while}-> N19
+line 22:	N19 -{[base < count]}-> N20
+	base == 2147483640;
+	count == 2147483641;
+	base == 2147483640;
+count == 2147483641;
+line 24:	N20 -{int number = base;}-> N22
+	number == 2147483640;
+line 25:	N22 -{while}-> N23
+line 25:	N23 -{[!((old_[i]) != (new_[i]))]}-> N25
+line 30:	N25 -{const int __CPAchecker_TMP_0 = i;}-> N30
+	__CPAchecker_TMP_0 == 0;
+line 30:	N30 -{i = i + 1;}-> N31
+	__CPAchecker_TMP_0 == 0;
+	i == 1;
+line 30:	N31 -{__CPAchecker_TMP_0;}-> N32
+line 31:	N32 -{base = base + 8;}-> N33
+	base == -2147483648U;

@@ -1,0 +1,124 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.XnW4Ep
+
+Input File is : Incorrect_Initialization_3_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+d37b2f4794acf1b0b431110c5e1fb23d652c5962
+https://github.com/acassen/keepalived/commit/d37b2f4794acf1b0b431110c5e1fb23d652c5962
+termination: true
+*/
+
+
+char* strchr(char* str, int c) {
+	for (; *str != 0; ++str) {
+		{if (*str == c) {
+			return str;
+		}}
+	}
+	return 0;
+}
+
+int main()
+{
+    char in[100];
+    for( int i = 0 ; i < 99 ; i++ )
+        {in[i] = '\n';}
+    char* p = in;
+    in[99] = 0;
+    while( *p )
+    {
+        char* n =strchr( p , '\n');
+        {if( n == 0 )
+            {n = p + 99;}}
+        p = n + 1;
+    }
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Incorrect_Initialization_3_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+d37b2f4794acf1b0b431110c5e1fb23d652c5962
+https://github.com/acassen/keepalived/commit/d37b2f4794acf1b0b431110c5e1fb23d652c5962
+termination: true
+*/
+
+
+char* strchr(char* str, int c) {
+myBool pStored0 = myFalse; __VERIFIER_reached_control(9, __func__);
+	for (; *str != 0; ++str) { __VERIFIER_loop_head(9, __func__);
+printf("CBMC Instrumentation @ line9");myBool flag=__VERIFIER_nondet_myBool();static int oc;static char * ostr;if(pStored0){__CPROVER_assert(!(oc==c && ostr==str),"recurrent state found");} if(flag){oc=c;ostr=str;pStored0=myTrue;} 
+		{ __VERIFIER_reached_control(10, __func__);
+if (*str == c) { __VERIFIER_control_true(10, __func__);
+
+			return str;
+		}}
+	}
+	return 0;
+}
+
+int main()
+{
+    char in[100];
+    for( int i = 0 ; i < 99 ; i++ )
+        {printf("ArrayNT State @ line21: Array Found\n");in[i] = '\n';}
+    char* p = in;
+    in[99] = 0;
+   myBool pStored1 = myFalse; __VERIFIER_reached_control(25, __func__);
+ while( *p )
+    { __VERIFIER_loop_head(25, __func__);
+printf("CBMC Instrumentation @ line25");myBool flag=__VERIFIER_nondet_myBool();static char * op;if(pStored1){__CPROVER_assert(!(op==p),"recurrent state found");} if(flag){op=p;pStored1=myTrue;} 
+        char* n =strchr( p , '\n');
+        { __VERIFIER_reached_control(27, __func__);
+if( n == 0 )
+            { __VERIFIER_control_true(28, __func__);
+n = p + 99;}}
+        p = n + 1;
+    }
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Incorrect_Initialization_3_T_braced_instrumented.c
+NTFILE is Incorrect_Initialization_3_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for Incorrect_Initialization_3_T.c
+FILE=Incorrect_Initialization_3_T_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 302106 milliseconds

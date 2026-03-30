@@ -1,0 +1,121 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.2gYRLJ
+
+Input File is : Missing_undef_Instruction_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+Commit Number: b546212a16a6ac3e9f40f332644345ceec96a0e7
+URL: https://github.com/mysql/mysql-server/commit/b546212a16a6ac3e9f40f332644345ceec96a0e7
+Project Name: mysql-server
+License: GPL-2.0
+termination: TRUE
+*/
+#define pthread_mutex_t int
+
+int pthread_mutex_trylock( pthread_mutex_t* mutex)
+{
+    //return __VERIFIER_nondet_int();
+    return 0;
+}
+
+#define pthread_mutex_trylock my_pthread_mutex_trylock
+
+#undef pthread_mutex_trylock
+int my_pthread_mutex_trylock(pthread_mutex_t *mutex)
+{
+  int error=pthread_mutex_trylock(mutex);
+  {if (error == 1)			/* Safety if the lib is fixed */
+    {return 0;}}				/* Mutex was locked */
+   return error;
+};
+
+
+int main()
+{
+    pthread_mutex_t mutex1 = 2;
+    pthread_mutex_t* mutex = &mutex1;
+    int rc = my_pthread_mutex_trylock(mutex);
+    return 0;
+}
+
+End Main   
+
+Input File is : Missing_undef_Instruction_1_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+Commit Number: b546212a16a6ac3e9f40f332644345ceec96a0e7
+URL: https://github.com/mysql/mysql-server/commit/b546212a16a6ac3e9f40f332644345ceec96a0e7
+Project Name: mysql-server
+License: GPL-2.0
+termination: TRUE
+*/
+#define pthread_mutex_t int
+
+int pthread_mutex_trylock( pthread_mutex_t* mutex)
+{
+    //return __VERIFIER_nondet_int();
+    return 0;
+}
+
+#define pthread_mutex_trylock my_pthread_mutex_trylock
+
+#undef pthread_mutex_trylock
+int my_pthread_mutex_trylock(pthread_mutex_t *mutex)
+{
+  int error=pthread_mutex_trylock(mutex);
+  { __VERIFIER_reached_control(22, __func__);
+if (error == 1)			/* Safety if the lib is fixed */
+    { __VERIFIER_control_true(23, __func__);
+return 0;}}				/* Mutex was locked */
+   return error;
+};
+
+
+int main()
+{
+    pthread_mutex_t mutex1 = 2;
+    pthread_mutex_t* mutex = &mutex1;
+    int rc = my_pthread_mutex_trylock(mutex);
+    return 0;
+}
+
+End Main 
+ Missing_undef_Instruction_1_T_braced_instrumented.c
+NTFILE is Missing_undef_Instruction_1_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Missing_undef_Instruction_1_T.c
+FILE=Missing_undef_Instruction_1_T_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 1641 milliseconds

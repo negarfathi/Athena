@@ -1,0 +1,46 @@
+///*** 1_main ***///
+START: main_bb0;
+
+
+
+FROM: main_bb0;
+v1 := nondet();
+var__temp_vx.0 := v1;
+var__temp_voldx.0 := v0;
+TO: main_bb1;
+
+FROM: main_bb1;
+vx.0 := var__temp_vx.0;
+voldx.0 := var__temp_voldx.0;
+TO: main_bb1_end;
+
+FROM: main_bb1_end;
+assume((vx.0 > 0) && (vx.0 < 100));
+TO: main_bb2;
+
+FROM: main_bb1_end;
+assume((vx.0 <= 0) || (vx.0 >= 100));
+TO: main_.critedge;
+
+FROM: main_bb2;
+v4 := 2 * voldx.0;
+v5 := v4 + 10;
+TO: main_bb2_end;
+
+FROM: main_bb2_end;
+assume(vx.0 >= v5);
+TO: main_bb3;
+
+FROM: main_bb2_end;
+assume(vx.0 < v5);
+TO: main_.critedge;
+
+FROM: main_bb3;
+v7 := nondet();
+var__temp_vx.0 := v7;
+var__temp_voldx.0 := vx.0;
+TO: main_bb1;
+
+FROM: main_.critedge;
+TO: main_.critedge_ret;
+

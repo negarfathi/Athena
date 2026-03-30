@@ -1,0 +1,94 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/Stroeder_15/NO_01/NO_01.c
+Converting
+Type-checking NO_01
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#41 __CPROVER_thread_key_dtors#39 __CPROVER_thread_keys#40 __CPROVER_malloc_is_new_array#31 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#28 __CPROVER_dead_object#29 __CPROVER_deallocated#30 __CPROVER_new_object#33 __CPROVER_rounding_mode#37 __CPROVER_pipe_count#36 __CPROVER_max_malloc_size#32 __CPROVER_next_thread_id#34 __CPROVER_next_thread_key#35 __CPROVER_thread_id#38 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#37 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#37) <= 0 && __CPROVER_pipe_count#36 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#36) <= 0 && __CPROVER_max_malloc_size#32 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#32) <= -36028797018963968 && __CPROVER_next_thread_id#34 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#34) <= 0 && __CPROVER_next_thread_key#35 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#35) <= 0 && __CPROVER_thread_id#38 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#38) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Function never terminates normally
+
+Summary for function main
+params: 
+globals_in: 
+globals_out: main#return_value#24 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: ($guard#5 && $guard#ls7 ==> FALSE) && ($guard#5 && $guard#ls7 ==> FALSE) && ($guard#11 && $guard#ls13 ==> FALSE) && ($guard#11 && $guard#ls13 ==> FALSE) && ($guard#16 && $guard#ls18 ==> FALSE) && ($guard#16 && $guard#ls18 ==> FALSE) && ($guard#21 && $guard#ls23 ==> i#lb23 <= 0) && ($guard#21 && $guard#ls23 ==> -((signed __CPROVER_bitvector[33])i#lb23) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+Function never terminates normally
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+** statistics: 
+  number of solver instances: 1619803231
+  number of solver calls: 152960
+  number of summaries used: 2
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[main]: no
+[__CPROVER_initialize]: yes
+[__CPROVER__start]: no
+VERIFICATION INCONCLUSIVE
+Runtime: 293 milliseconds

@@ -1,0 +1,173 @@
+line 174:5 extraneous input 'metadata' expecting EXCLAMATION
+line 174:25 no viable alternative at input '!'
+Graph finished, checking  consistency
+Graph finished, checked consistency, took 0.003s
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No LoAT installation found. 
+Set the 'LOAT_PATH' environment variable to point to the folder containing the executable loat file
+Running Thread.stop() against 1755930880Exec. 173, RankingReductionPairProcessor[GenerateFollowingInequalities=True]
+Stack trace:
+    app//aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:148)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at java.base/java.lang.Thread.stop(Thread.java:949)
+	at aprove.Strategies.Abortions.PooledJob.kill(PooledJob.java:174)
+	at aprove.Strategies.Abortions.TrackThreadPool.kill(TrackThreadPool.java:42)
+	at aprove.Strategies.Abortions.TrackThread.checkKill(TrackThread.java:173)
+	at aprove.Strategies.Abortions.TrackThread.checkTime(TrackThread.java:110)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.doPoll(TimeRefresher.java:65)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.run(TimeRefresher.java:54)
+Running Thread.stop() against 1755930944Exec. 252, IntTRSPeriodicNonterm[]
+Stack trace:
+    app//aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:148)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at java.base/java.lang.Thread.stop(Thread.java:949)
+	at aprove.Strategies.Abortions.PooledJob.kill(PooledJob.java:174)
+	at aprove.Strategies.Abortions.TrackThreadPool.kill(TrackThreadPool.java:42)
+	at aprove.Strategies.Abortions.TrackThread.checkKill(TrackThread.java:173)
+	at aprove.Strategies.Abortions.TrackThread.checkTime(TrackThread.java:110)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.doPoll(TimeRefresher.java:65)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.run(TimeRefresher.java:54)
+Running Thread.stop() against 1755931004Exec. 264, IntTRSPolynomialOrderProcessor[Degree=2, FactorBinomials=True]
+Stack trace:
+    java.base@17.0.15/java.util.AbstractCollection.containsAll(AbstractCollection.java:308)
+    app//immutables.Immutable.DefaultImmutableSet.containsAll(Unknown Source)
+    app//aprove.Framework.Algebra.Polynomials.IndefinitePart.divide(IndefinitePart.java:1097)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.checkBinomial(RuleAnalyzer.java:1535)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.huntForBinomials(RuleAnalyzer.java:1454)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.applySimplifications(RuleAnalyzer.java:1367)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.requireGEZero(RuleAnalyzer.java:1236)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.inferCoefficientConstraintsForPolynomial(RuleAnalyzer.java:1005)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.inferCoefficientConstraints(RuleAnalyzer.java:907)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.analyze(RuleAnalyzer.java:170)
+    app//aprove.Framework.IntTRS.PoloRedPair.IntTRSPolynomialOrderWorker.analyzeRules(IntTRSPolynomialOrderWorker.java:107)
+    app//aprove.Framework.IntTRS.PoloRedPair.IntTRSPolynomialOrderWorker.work(IntTRSPolynomialOrderWorker.java:83)
+    app//aprove.Framework.IntTRS.PoloRedPair.IntTRSPolynomialOrderProcessor.process(IntTRSPolynomialOrderProcessor.java:216)
+    app//aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+    app//aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Running Thread.stop() against 1755931004Exec. 271, RankingReductionPairProcessor[GenerateFollowingInequalities=True]
+Stack trace:
+    app//immutables.Immutable.ImmutableIterator.next(Unknown Source)
+    app//aprove.Framework.IntTRS.PoloRedPair.ToolBox.rewriteSimplePolynomialToSMTLIBRatValue(ToolBox.java:1114)
+    app//aprove.Framework.IntTRS.PoloRedPair.CoefficientConstraint.toSMTLIBRatTheoryAtom(CoefficientConstraint.java:109)
+    app//aprove.Framework.IntTRS.RankingRedPair.RankingRedPairWorker.toTheoryAtoms(RankingRedPairWorker.java:701)
+    app//aprove.Framework.IntTRS.RankingRedPair.RankingRedPairWorker.solveConstraints(RankingRedPairWorker.java:649)
+    app//aprove.Framework.IntTRS.RankingRedPair.RankingRedPairWorker.work(RankingRedPairWorker.java:200)
+    app//aprove.Framework.IntTRS.RankingRedPair.RankingRedPairProcessor.process(RankingRedPairProcessor.java:127)
+    app//aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+    app//aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Running Thread.stop() against 1755931004Exec. 272, IntTRSPolynomialOrderProcessor[Degree=2, FactorBinomials=True]
+Stack trace:
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.huntForBinomials(RuleAnalyzer.java:1433)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.applySimplifications(RuleAnalyzer.java:1367)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.requireGEZero(RuleAnalyzer.java:1236)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.inferCoefficientConstraintsForPolynomial(RuleAnalyzer.java:1005)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.inferCoefficientConstraints(RuleAnalyzer.java:907)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.analyze(RuleAnalyzer.java:170)
+    app//aprove.Framework.IntTRS.PoloRedPair.IntTRSPolynomialOrderWorker.analyzeRules(IntTRSPolynomialOrderWorker.java:107)
+    app//aprove.Framework.IntTRS.PoloRedPair.IntTRSPolynomialOrderWorker.work(IntTRSPolynomialOrderWorker.java:83)
+    app//aprove.Framework.IntTRS.PoloRedPair.IntTRSPolynomialOrderProcessor.process(IntTRSPolynomialOrderProcessor.java:216)
+    app//aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+    app//aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at java.base/java.lang.Thread.stop(Thread.java:949)
+	at aprove.Strategies.Abortions.PooledJob.kill(PooledJob.java:174)
+	at aprove.Strategies.Abortions.TrackThreadPool.kill(TrackThreadPool.java:42)
+	at aprove.Strategies.Abortions.TrackThread.checkKill(TrackThread.java:173)
+	at aprove.Strategies.Abortions.TrackThread.checkTime(TrackThread.java:110)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.doPoll(TimeRefresher.java:65)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.run(TimeRefresher.java:54)
+Running Thread.stop() against 1755931004Exec. 288, IntTRSPolynomialOrderProcessor[Degree=2, FactorBinomials=True]
+Stack trace:
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.checkBinomial(RuleAnalyzer.java:1557)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.huntForBinomials(RuleAnalyzer.java:1454)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.applySimplifications(RuleAnalyzer.java:1367)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.requireGEZero(RuleAnalyzer.java:1236)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.inferCoefficientConstraintsForPolynomial(RuleAnalyzer.java:1005)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.inferCoefficientConstraints(RuleAnalyzer.java:913)
+    app//aprove.Framework.IntTRS.PoloRedPair.RuleAnalyzer.analyze(RuleAnalyzer.java:170)
+    app//aprove.Framework.IntTRS.PoloRedPair.IntTRSPolynomialOrderWorker.analyzeRules(IntTRSPolynomialOrderWorker.java:107)
+    app//aprove.Framework.IntTRS.PoloRedPair.IntTRSPolynomialOrderWorker.work(IntTRSPolynomialOrderWorker.java:83)
+    app//aprove.Framework.IntTRS.PoloRedPair.IntTRSPolynomialOrderProcessor.process(IntTRSPolynomialOrderProcessor.java:216)
+    app//aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+    app//aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Aborted 1755931004Exec. 264, IntTRSPolynomialOrderProcessor[Degree=2, FactorBinomials=True] with a hard timeout.
+Aborted 1755931004Exec. 288, IntTRSPolynomialOrderProcessor[Degree=2, FactorBinomials=True] with a hard timeout.
+Aborted 1755931004Exec. 271, RankingReductionPairProcessor[GenerateFollowingInequalities=True] with a hard timeout.
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:157)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:157)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:157)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+/Users/nfathi2/Desktop/run_AProVE.sh: line 39: 81250 Killed: 9               timeout --kill-after=10 "$timeout" docker run --rm --platform linux/amd64 -v "$root_directory":/liveness_analysis --entrypoint java aprove -ea -jar /opt/aprove/aprove.jar -m wst --bit-width 64 "/liveness_analysis/Benchmarks/$path_postfix"
+Runtime: 910048 milliseconds

@@ -1,0 +1,165 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.x7XPtT
+
+Input File is : Incorrect_Arguments_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 084a7f4a5a5c859ab24e727ef92f9b2ed8611acf
+URL: https://github.com/tieto/pidgin/commit/084a7f4a5a5c859ab24e727ef92f9b2ed8611acf
+Project Name: pidgin
+License: GPL-2.0
+termination: TRUE
+*/
+#include <stdlib.h>
+typedef struct gaim_xfer{
+	int watcher;
+	int fd;
+	int bytes_remaining;
+}gaim_xfer;
+void gaim_xfer_destroy(struct gaim_xfer *xfer);
+
+void gaim_xfer_cancel(struct gaim_xfer *xfer)
+{
+	{if (xfer == 0)
+		{return;}}
+	{if (xfer->watcher != 0) {
+		xfer->watcher = 0;
+	}}
+	{if (xfer->fd != 0)
+		{xfer->fd = 0;}}
+	xfer->bytes_remaining = 0;
+	/* Delete the transfer. */
+	gaim_xfer_destroy(xfer);
+}
+
+void gaim_xfer_destroy(struct gaim_xfer *xfer)
+{
+
+	{if (xfer == 0)
+		{return;}}
+
+	{if (xfer->bytes_remaining > 0) {
+		gaim_xfer_cancel(xfer);
+		return;
+	}}
+	free(xfer);
+}
+
+int main()
+{
+	struct gaim_xfer a1;
+	struct gaim_xfer* a = &a1;
+	a->bytes_remaining =  __VERIFIER_nondet_int();
+	a->fd = __VERIFIER_nondet_int();
+	a->watcher = __VERIFIER_nondet_int();
+	gaim_xfer_cancel(a);
+	return 0;
+}
+./proton: line 26:    92 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Incorrect_Arguments_1_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 084a7f4a5a5c859ab24e727ef92f9b2ed8611acf
+URL: https://github.com/tieto/pidgin/commit/084a7f4a5a5c859ab24e727ef92f9b2ed8611acf
+Project Name: pidgin
+License: GPL-2.0
+termination: TRUE
+*/
+#include <stdlib.h>
+typedef struct gaim_xfer{
+	int watcher;
+	int fd;
+	int bytes_remaining;
+}gaim_xfer;
+void gaim_xfer_destroy(struct gaim_xfer *xfer);
+
+void gaim_xfer_cancel(struct gaim_xfer *xfer)
+{
+	{ __VERIFIER_reached_control(19, __func__);
+if (xfer == 0)
+		{ __VERIFIER_control_true(20, __func__);
+return;}}
+	{ __VERIFIER_reached_control(21, __func__);
+if (xfer->watcher != 0) { __VERIFIER_control_true(21, __func__);
+
+		xfer->watcher = 0;
+	}}
+	{ __VERIFIER_reached_control(24, __func__);
+if (xfer->fd != 0)
+		{ __VERIFIER_control_true(25, __func__);
+xfer->fd = 0;}}
+	xfer->bytes_remaining = 0;
+	/* Delete the transfer. */
+	gaim_xfer_destroy(xfer);
+}
+
+void gaim_xfer_destroy(struct gaim_xfer *xfer)
+{
+
+	{ __VERIFIER_reached_control(34, __func__);
+if (xfer == 0)
+		{ __VERIFIER_control_true(35, __func__);
+return;}}
+
+	{ __VERIFIER_reached_control(37, __func__);
+if (xfer->bytes_remaining > 0) { __VERIFIER_control_true(37, __func__);
+
+		gaim_xfer_cancel(xfer);
+		return;
+	}}
+	free(xfer);
+}
+
+int main()
+{
+	struct gaim_xfer a1;
+	struct gaim_xfer* a = &a1;
+	a->bytes_remaining =  __VERIFIER_nondet_int();
+	a->fd = __VERIFIER_nondet_int();
+	a->watcher = __VERIFIER_nondet_int();
+	gaim_xfer_cancel(a);
+	return 0;
+}
+./proton: line 26:   104 Aborted                 instrumenter -in *braced.c -c
+Incorrect_Arguments_1_T_braced_instrumented.c
+NTFILE is Incorrect_Arguments_1_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Incorrect_Arguments_1_T.c
+FILE=Incorrect_Arguments_1_T_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 1801 milliseconds

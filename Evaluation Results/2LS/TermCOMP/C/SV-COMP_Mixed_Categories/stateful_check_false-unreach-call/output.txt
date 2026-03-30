@@ -1,0 +1,319 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/stateful_check_false-unreach-call/stateful_check_false-unreach-call.c
+Converting
+Type-checking stateful_check_false-unreach-call
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __blast_assert
+Simplifying
+Computing SSA of mutex_lock
+Simplifying
+Computing SSA of mutex_unlock
+Simplifying
+Computing SSA of check_final_state
+Simplifying
+Computing SSA of misc_release
+Simplifying
+Computing SSA of misc_llseek
+Simplifying
+Computing SSA of misc_read
+Simplifying
+Computing SSA of misc_open
+Simplifying
+Computing SSA of my_init
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode ldv_mutex open_called __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#48 __CPROVER_thread_key_dtors#46 __CPROVER_thread_keys#47 __CPROVER_malloc_is_new_array#38 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#35 __CPROVER_dead_object#36 __CPROVER_deallocated#37 __CPROVER_new_object#40 __CPROVER_rounding_mode#44 ldv_mutex#49 open_called#50 __CPROVER_pipe_count#43 __CPROVER_max_malloc_size#39 __CPROVER_next_thread_id#41 __CPROVER_next_thread_key#42 __CPROVER_thread_id#45 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#44 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#44) <= 0 && ldv_mutex#49 <= 1 && -((signed __CPROVER_bitvector[33])ldv_mutex#49) <= -1 && open_called#50 <= 0 && -((signed __CPROVER_bitvector[33])open_called#50) <= 0 && __CPROVER_pipe_count#43 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#43) <= 0 && __CPROVER_max_malloc_size#39 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#39) <= -36028797018963968 && __CPROVER_next_thread_id#41 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#41) <= 0 && __CPROVER_next_thread_key#42 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#42) <= 0 && __CPROVER_thread_id#45 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#45) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of my_init
+Function my_init not analyzed yet
+Recursively summarizing function my_init
+Analyzing function my_init
+Computing summary
+Computing termination argument for my_init
+Function trivially terminates
+
+Summary for function my_init
+params: 
+globals_in: open_called 
+globals_out: my_init#return_value#93 open_called#92 
+forward precondition: TRUE
+forward transformer: my_init#return_value#93 <= 0 && -((signed __CPROVER_bitvector[33])my_init#return_value#93) <= 0 && open_called#92 <= 0 && -((signed __CPROVER_bitvector[33])open_called#92) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of misc_open
+Function misc_open not analyzed yet
+Recursively summarizing function misc_open
+Analyzing function misc_open
+Computing summary
+Computing termination argument for misc_open
+Function trivially terminates
+
+Summary for function misc_open
+params: 
+globals_in: open_called 
+globals_out: misc_open#return_value#phi91 open_called#phi91 
+forward precondition: TRUE
+forward transformer: misc_open#return_value#phi91 <= 1 && -((signed __CPROVER_bitvector[33])misc_open#return_value#phi91) <= 0 && open_called#phi91 <= 2147483647 && -((signed __CPROVER_bitvector[33])open_called#phi91) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of misc_read
+Function misc_read not analyzed yet
+Recursively summarizing function misc_read
+Analyzing function misc_read
+Computing summary
+Computing termination argument for misc_read
+Function trivially terminates
+
+Summary for function misc_read
+params: 
+globals_in: 
+globals_out: misc_read#return_value#78 
+forward precondition: TRUE
+forward transformer: misc_read#return_value#78 <= 0 && -((signed __CPROVER_bitvector[33])misc_read#return_value#78) <= 0
+forward invariant: misc_read#return_value#78 <= 0 && -((signed __CPROVER_bitvector[33])misc_read#return_value#78) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of misc_llseek
+Function misc_llseek not analyzed yet
+Recursively summarizing function misc_llseek
+Analyzing function misc_llseek
+Computing summary
+Computing termination argument for misc_llseek
+Function trivially terminates
+
+Summary for function misc_llseek
+params: 
+globals_in: 
+globals_out: misc_llseek#return_value#76 
+forward precondition: TRUE
+forward transformer: misc_llseek#return_value#76 <= 0 && -((signed __CPROVER_bitvector[33])misc_llseek#return_value#76) <= 0
+forward invariant: misc_llseek#return_value#76 <= 0 && -((signed __CPROVER_bitvector[33])misc_llseek#return_value#76) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of misc_release
+Function misc_release not analyzed yet
+Recursively summarizing function misc_release
+Checking precondition of mutex_lock
+Function mutex_lock not analyzed yet
+Recursively summarizing function mutex_lock
+Checking precondition of __blast_assert
+Function __blast_assert not analyzed yet
+Recursively summarizing function __blast_assert
+Analyzing function __blast_assert
+Computing summary
+Computing termination argument for __blast_assert
+Function never terminates normally
+
+Summary for function __blast_assert
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function mutex_lock
+Computing summary
+Computing termination argument for mutex_lock
+
+Summary for function mutex_lock
+params: 
+globals_in: ldv_mutex 
+globals_out: ldv_mutex#58 
+forward precondition: TRUE
+forward transformer: ldv_mutex#58 <= 2 && -((signed __CPROVER_bitvector[33])ldv_mutex#58) <= -2
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of mutex_unlock
+Function mutex_unlock not analyzed yet
+Recursively summarizing function mutex_unlock
+Analyzing function mutex_unlock
+Computing summary
+Computing termination argument for mutex_unlock
+Function trivially terminates
+
+Summary for function mutex_unlock
+params: 
+globals_in: ldv_mutex 
+globals_out: ldv_mutex#62 
+forward precondition: TRUE
+forward transformer: ldv_mutex#62 <= 1 && -((signed __CPROVER_bitvector[33])ldv_mutex#62) <= -1
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of mutex_lock
+Precondition trivially holds, replacing by summary.
+Checking precondition of mutex_lock
+Precondition trivially holds, replacing by summary.
+Analyzing function misc_release
+Computing summary
+Computing termination argument for misc_release
+
+Summary for function misc_release
+params: 
+globals_in: open_called 
+globals_out: misc_release#return_value#74 open_called#phi74 
+forward precondition: TRUE
+forward transformer: misc_release#return_value#74 <= 0 && -((signed __CPROVER_bitvector[33])misc_release#return_value#74) <= 0 && open_called#phi74 <= 0 && -((signed __CPROVER_bitvector[33])open_called#phi74) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of check_final_state
+Function check_final_state not analyzed yet
+Recursively summarizing function check_final_state
+Analyzing function check_final_state
+Computing summary
+Computing termination argument for check_final_state
+Function trivially terminates
+
+Summary for function check_final_state
+params: 
+globals_in: ldv_mutex 
+globals_out: ldv_mutex 
+forward precondition: TRUE
+forward transformer: ldv_mutex <= 1 && -((signed __CPROVER_bitvector[33])ldv_mutex) <= -1
+forward invariant: ldv_mutex <= 1 && -((signed __CPROVER_bitvector[33])ldv_mutex) <= -1
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+
+Summary for function main
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: ($guard#3 && $guard#ls30 ==> ldv_s_misc_fops_file_operations#lb30 <= 3) && ($guard#3 && $guard#ls30 ==> -((signed __CPROVER_bitvector[33])ldv_s_misc_fops_file_operations#lb30) <= 0) && ($guard#3 && $guard#ls30 ==> return_value___VERIFIER_nondet_int#lb30 <= 2147483647) && ($guard#3 && $guard#ls30 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb30) <= 2147483648)
+forward invariant: ($guard#3 && $guard#ls30 ==> ldv_s_misc_fops_file_operations#lb30 <= 3) && ($guard#3 && $guard#ls30 ==> -((signed __CPROVER_bitvector[33])ldv_s_misc_fops_file_operations#lb30) <= 0) && ($guard#3 && $guard#ls30 ==> return_value___VERIFIER_nondet_int#lb30 <= 2147483647) && ($guard#3 && $guard#ls30 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb30) <= 2147483648)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 499648536
+  number of solver calls: 546736
+  number of summaries used: 13
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_initialize]: yes
+[__blast_assert]: no
+[mutex_lock]: unknown
+[mutex_unlock]: yes
+[check_final_state]: yes
+[misc_release]: unknown
+[misc_llseek]: yes
+[misc_read]: yes
+[misc_open]: yes
+[my_init]: yes
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 606 milliseconds

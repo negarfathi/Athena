@@ -1,0 +1,901 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/rekcba_ctm_false-unreach-call.2/rekcba_ctm_false-unreach-call.2.c
+Converting
+Type-checking rekcba_ctm_false-unreach-call.2
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of assert
+Simplifying
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __startrek_init_shared
+Simplifying
+Computing SSA of __startrek_assert_i0
+Simplifying
+Computing SSA of __startrek_cs_t3
+Simplifying
+Computing SSA of __startrek_cs_t2
+Simplifying
+Computing SSA of __startrek_cs_t1
+Simplifying
+Computing SSA of __startrek_cs_t0
+Simplifying
+Computing SSA of __startrek_read___startrek_current_priority
+Simplifying
+Computing SSA of __startrek_write___startrek_current_priority
+Simplifying
+Computing SSA of __startrek_read_R_count
+Simplifying
+Computing SSA of __startrek_write_R_count
+Simplifying
+Computing SSA of __startrek_read_R_speed
+Simplifying
+Computing SSA of __startrek_write_R_speed
+Simplifying
+Computing SSA of __startrek_read_W_count
+Simplifying
+Computing SSA of __startrek_write_W_count
+Simplifying
+Computing SSA of __startrek_read_W_speed
+Simplifying
+Computing SSA of __startrek_write_W_speed
+Simplifying
+Computing SSA of __startrek_read_T_count
+Simplifying
+Computing SSA of __startrek_write_T_count
+Simplifying
+Computing SSA of __startrek_read_T_speed
+Simplifying
+Computing SSA of __startrek_write_T_speed
+Simplifying
+Computing SSA of calibrate
+Simplifying
+Computing SSA of __startrek_read_nxtcolorsensor_data_mode
+Simplifying
+Computing SSA of __startrek_write_nxtcolorsensor_data_mode
+Simplifying
+Computing SSA of __startrek_read_nxtcolorsensor_mode
+Simplifying
+Computing SSA of __startrek_write_nxtcolorsensor_mode
+Simplifying
+Computing SSA of ecrobot_set_nxtcolorsensor
+Simplifying
+Computing SSA of ecrobot_get_nxtcolorsensor_mode
+Simplifying
+Computing SSA of bg_nxtcolorsensor
+Simplifying
+Computing SSA of ecrobot_is_ENTER_button_pressed
+Simplifying
+Computing SSA of nxt_motor_set_speed
+Simplifying
+Computing SSA of nxt_motor_get_count
+Simplifying
+Computing SSA of nxt_motor_set_count
+Simplifying
+Computing SSA of ecrobot_get_nxtcolorsensor_light
+Simplifying
+Computing SSA of TerminateTask
+Simplifying
+Computing SSA of __startrek_read_input
+Simplifying
+Computing SSA of __startrek_write_input
+Simplifying
+Computing SSA of __startrek_read_output
+Simplifying
+Computing SSA of __startrek_write_output
+Simplifying
+Computing SSA of __startrek_read_dir
+Simplifying
+Computing SSA of __startrek_write_dir
+Simplifying
+Computing SSA of __startrek_read_need_to_read
+Simplifying
+Computing SSA of __startrek_write_need_to_read
+Simplifying
+Computing SSA of __startrek_read_need_to_run_nxtbg
+Simplifying
+Computing SSA of __startrek_write_need_to_run_nxtbg
+Simplifying
+Computing SSA of __startrek_read_threshold
+Simplifying
+Computing SSA of __startrek_write_threshold
+Simplifying
+Computing SSA of __startrek_read_R_state
+Simplifying
+Computing SSA of __startrek_write_R_state
+Simplifying
+Computing SSA of __startrek_read_W_state
+Simplifying
+Computing SSA of __startrek_write_W_state
+Simplifying
+Computing SSA of __startrek_read_T_state
+Simplifying
+Computing SSA of __startrek_write_T_state
+Simplifying
+Computing SSA of transition
+Simplifying
+Computing SSA of init
+Simplifying
+Computing SSA of move_motor
+Simplifying
+Computing SSA of Controller
+Simplifying
+Computing SSA of Reader
+Simplifying
+Computing SSA of Writer
+Simplifying
+Computing SSA of TapeMover
+Simplifying
+Computing SSA of __startrek_read___startrek_job_count_Controller
+Simplifying
+Computing SSA of __startrek_write___startrek_job_count_Controller
+Simplifying
+Computing SSA of __startrek_entry_pt_Controller
+Simplifying
+Computing SSA of cil_keeperController
+Simplifying
+Computing SSA of __startrek_read___startrek_job_count_TapeMover
+Simplifying
+Computing SSA of __startrek_write___startrek_job_count_TapeMover
+Simplifying
+Computing SSA of __startrek_entry_pt_TapeMover
+Simplifying
+Computing SSA of cil_keeperTapeMover
+Simplifying
+Computing SSA of __startrek_read___startrek_job_count_Reader
+Simplifying
+Computing SSA of __startrek_write___startrek_job_count_Reader
+Simplifying
+Computing SSA of __startrek_entry_pt_Reader
+Simplifying
+Computing SSA of cil_keeperReader
+Simplifying
+Computing SSA of __startrek_read___startrek_job_count_Writer
+Simplifying
+Computing SSA of __startrek_write___startrek_job_count_Writer
+Simplifying
+Computing SSA of __startrek_entry_pt_Writer
+Simplifying
+Computing SSA of cil_keeperWriter
+Simplifying
+Computing SSA of __startrek_schedule_jobs
+Simplifying
+Computing SSA of __startrek_init_globals
+Simplifying
+Computing SSA of __startrek_check_assumptions
+Simplifying
+Computing SSA of __startrek_user_init
+Simplifying
+Computing SSA of __startrek_user_final
+Simplifying
+Computing SSA of __startrek_check_assertions
+Simplifying
+Computing SSA of __main
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited _dir_ _i_dir_ _i_input_ _i_need_to_read_ _i_need_to_run_nxtbg_ _i_output_ _input_ _need_to_read_ _need_to_run_nxtbg_ _output_ __startrek_Assert_t0_i0 __startrek_Assert_t1_i0 __startrek_Assert_t2_i0 __startrek_Assert_t3_i0 __CPROVER_thread_key_dtors __CPROVER_thread_keys _R_count_ _T_count_ _W_count_ _i_R_count_ _i_T_count_ _i_W_count_ _R_speed_ _T_speed_ _W_speed_ ___startrek_current_priority_ ___startrek_job_count_Controller_ ___startrek_job_count_Reader_ ___startrek_job_count_TapeMover_ ___startrek_job_count_Writer_ _i_R_speed_ _i_T_speed_ _i_W_speed_ _i___startrek_current_priority_ _i___startrek_job_count_Controller_ _i___startrek_job_count_Reader_ _i___startrek_job_count_TapeMover_ _i___startrek_job_count_Writer_ _i_threshold_ _threshold_ _R_state_ _T_state_ _W_state_ _i_R_state_ _i_T_state_ _i_W_state_ _i_nxtcolorsensor_data_mode_ _i_nxtcolorsensor_mode_ _nxtcolorsensor_data_mode_ _nxtcolorsensor_mode_ __startrek_end_t0 __startrek_start_t0 __startrek_end_t1 __startrek_end_t2 __startrek_end_t3 __startrek_start_t1 __startrek_start_t2 __startrek_start_t3 __CPROVER_malloc_is_new_array __startrek_hidden_dir __startrek_hidden_input __startrek_hidden_need_to_read __startrek_hidden_need_to_run_nxtbg __startrek_hidden_output __startrek_is_first_cs __startrek_lock moved __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __startrek_arrival_max_Controller __startrek_arrival_max_Reader __startrek_arrival_max_TapeMover __startrek_arrival_max_Writer __startrek_arrival_min_Controller __startrek_arrival_min_Reader __startrek_arrival_min_TapeMover __startrek_arrival_min_Writer __startrek_hidden_R_count __startrek_hidden_T_count __startrek_hidden_W_count __startrek_period_Controller __startrek_period_Reader __startrek_period_TapeMover __startrek_period_Writer __startrek_pi_locks_held __startrek_time_bound __startrek_wcet_Controller __startrek_wcet_Reader __startrek_wcet_TapeMover __startrek_wcet_Writer sign __startrek_base_priority_Controller __startrek_base_priority_Reader __startrek_base_priority_TapeMover __startrek_base_priority_Writer __startrek_hidden_R_speed __startrek_hidden_T_speed __startrek_hidden_W_speed __startrek_hidden___startrek_current_priority __startrek_hidden___startrek_job_count_Controller __startrek_hidden___startrek_job_count_Reader __startrek_hidden___startrek_job_count_TapeMover __startrek_hidden___startrek_job_count_Writer __startrek_task_base_priority __startrek_hidden_threshold __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id C_state TM_mode __startrek_error_round __startrek_hidden_R_state __startrek_hidden_T_state __startrek_hidden_W_state __startrek_hidden_nxtcolorsensor_data_mode __startrek_hidden_nxtcolorsensor_mode __startrek_hyper_period __startrek_job __startrek_job_end __startrek_round __startrek_task state 
+globals_out: __CPROVER_threads_exited#48 _dir_#130 _i_dir_#145 _i_input_#146 _i_need_to_read_#147 _i_need_to_run_nxtbg_#148 _i_output_#151 _input_#153 _need_to_read_#154 _need_to_run_nxtbg_#155 _output_#158 __startrek_Assert_t0_i0#65 __startrek_Assert_t1_i0#66 __startrek_Assert_t2_i0#67 __startrek_Assert_t3_i0#68 __CPROVER_thread_key_dtors#46 __CPROVER_thread_keys#47 _R_count_#51 _T_count_#54 _W_count_#57 _i_R_count_#131 _i_T_count_#134 _i_W_count_#137 _R_speed_#52 _T_speed_#55 _W_speed_#58 ___startrek_current_priority_#60 ___startrek_job_count_Controller_#61 ___startrek_job_count_Reader_#62 ___startrek_job_count_TapeMover_#63 ___startrek_job_count_Writer_#64 _i_R_speed_#132 _i_T_speed_#135 _i_W_speed_#138 _i___startrek_current_priority_#140 _i___startrek_job_count_Controller_#141 _i___startrek_job_count_Reader_#142 _i___startrek_job_count_TapeMover_#143 _i___startrek_job_count_Writer_#144 _i_threshold_#152 _threshold_#159 _R_state_#53 _T_state_#56 _W_state_#59 _i_R_state_#133 _i_T_state_#136 _i_W_state_#139 _i_nxtcolorsensor_data_mode_#149 _i_nxtcolorsensor_mode_#150 _nxtcolorsensor_data_mode_#156 _nxtcolorsensor_mode_#157 __startrek_end_t0#81 __startrek_start_t0#119 __startrek_end_t1#82 __startrek_end_t2#83 __startrek_end_t3#84 __startrek_start_t1#120 __startrek_start_t2#121 __startrek_start_t3#122 __CPROVER_malloc_is_new_array#38 __startrek_hidden_dir#100 __startrek_hidden_input#101 __startrek_hidden_need_to_read#102 __startrek_hidden_need_to_run_nxtbg#103 __startrek_hidden_output#106 __startrek_is_first_cs#109 __startrek_lock#112 moved#160 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#35 __CPROVER_dead_object#36 __CPROVER_deallocated#37 __CPROVER_new_object#40 __CPROVER_rounding_mode#44 __startrek_arrival_max_Controller#69 __startrek_arrival_max_Reader#70 __startrek_arrival_max_TapeMover#71 __startrek_arrival_max_Writer#72 __startrek_arrival_min_Controller#73 __startrek_arrival_min_Reader#74 __startrek_arrival_min_TapeMover#75 __startrek_arrival_min_Writer#76 __startrek_hidden_R_count#86 __startrek_hidden_T_count#89 __startrek_hidden_W_count#92 __startrek_period_Controller#113 __startrek_period_Reader#114 __startrek_period_TapeMover#115 __startrek_period_Writer#116 __startrek_pi_locks_held#117 __startrek_time_bound#125 __startrek_wcet_Controller#126 __startrek_wcet_Reader#127 __startrek_wcet_TapeMover#128 __startrek_wcet_Writer#129 sign#161 __startrek_base_priority_Controller#77 __startrek_base_priority_Reader#78 __startrek_base_priority_TapeMover#79 __startrek_base_priority_Writer#80 __startrek_hidden_R_speed#87 __startrek_hidden_T_speed#90 __startrek_hidden_W_speed#93 __startrek_hidden___startrek_current_priority#95 __startrek_hidden___startrek_job_count_Controller#96 __startrek_hidden___startrek_job_count_Reader#97 __startrek_hidden___startrek_job_count_TapeMover#98 __startrek_hidden___startrek_job_count_Writer#99 __startrek_task_base_priority#124 __startrek_hidden_threshold#107 __CPROVER_pipe_count#43 __CPROVER_max_malloc_size#39 __CPROVER_next_thread_id#41 __CPROVER_next_thread_key#42 __CPROVER_thread_id#45 C_state#49 TM_mode#50 __startrek_error_round#85 __startrek_hidden_R_state#88 __startrek_hidden_T_state#91 __startrek_hidden_W_state#94 __startrek_hidden_nxtcolorsensor_data_mode#104 __startrek_hidden_nxtcolorsensor_mode#105 __startrek_hyper_period#108 __startrek_job#110 __startrek_job_end#111 __startrek_round#118 __startrek_task#123 state#162 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#44 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#44) <= 0 && __startrek_arrival_max_Controller#69 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_max_Controller#69) <= 0 && __startrek_arrival_max_Reader#70 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_max_Reader#70) <= 0 && __startrek_arrival_max_TapeMover#71 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_max_TapeMover#71) <= 0 && __startrek_arrival_max_Writer#72 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_max_Writer#72) <= 0 && __startrek_arrival_min_Controller#73 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_min_Controller#73) <= 0 && __startrek_arrival_min_Reader#74 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_min_Reader#74) <= 0 && __startrek_arrival_min_TapeMover#75 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_min_TapeMover#75) <= 0 && __startrek_arrival_min_Writer#76 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_arrival_min_Writer#76) <= 0 && __startrek_hidden_R_count#86 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_hidden_R_count#86) <= 0 && __startrek_hidden_T_count#89 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_hidden_T_count#89) <= 0 && __startrek_hidden_W_count#92 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_hidden_W_count#92) <= 0 && __startrek_period_Controller#113 <= 500 && -((signed __CPROVER_bitvector[33])__startrek_period_Controller#113) <= -500 && __startrek_period_Reader#114 <= 250 && -((signed __CPROVER_bitvector[33])__startrek_period_Reader#114) <= -250 && __startrek_period_TapeMover#115 <= 250 && -((signed __CPROVER_bitvector[33])__startrek_period_TapeMover#115) <= -250 && __startrek_period_Writer#116 <= 250 && -((signed __CPROVER_bitvector[33])__startrek_period_Writer#116) <= -250 && __startrek_pi_locks_held#117 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_pi_locks_held#117) <= 0 && __startrek_time_bound#125 <= 2000 && -((signed __CPROVER_bitvector[33])__startrek_time_bound#125) <= -2000 && __startrek_wcet_Controller#126 <= 440 && -((signed __CPROVER_bitvector[33])__startrek_wcet_Controller#126) <= -440 && __startrek_wcet_Reader#127 <= 10 && -((signed __CPROVER_bitvector[33])__startrek_wcet_Reader#127) <= -10 && __startrek_wcet_TapeMover#128 <= 10 && -((signed __CPROVER_bitvector[33])__startrek_wcet_TapeMover#128) <= -10 && __startrek_wcet_Writer#129 <= 10 && -((signed __CPROVER_bitvector[33])__startrek_wcet_Writer#129) <= -10 && sign#161 <= 0 && -((signed __CPROVER_bitvector[33])sign#161) <= 0 && __startrek_base_priority_Controller#77 <= 1 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_Controller#77) <= -1 && __startrek_base_priority_Reader#78 <= 3 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_Reader#78) <= -3 && __startrek_base_priority_TapeMover#79 <= 2 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_TapeMover#79) <= -2 && __startrek_base_priority_Writer#80 <= 4 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_Writer#80) <= -4 && __startrek_hidden_R_speed#87 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden_R_speed#87) <= 0 && __startrek_hidden_T_speed#90 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden_T_speed#90) <= 0 && __startrek_hidden_W_speed#93 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden_W_speed#93) <= 0 && __startrek_hidden___startrek_current_priority#95 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_current_priority#95) <= 0 && __startrek_hidden___startrek_job_count_Controller#96 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_Controller#96) <= 0 && __startrek_hidden___startrek_job_count_Reader#97 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_Reader#97) <= 0 && __startrek_hidden___startrek_job_count_TapeMover#98 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_TapeMover#98) <= 0 && __startrek_hidden___startrek_job_count_Writer#99 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_Writer#99) <= 0 && __startrek_task_base_priority#124 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_task_base_priority#124) <= 0 && __startrek_hidden_threshold#107 <= 200 && -((signed __CPROVER_bitvector[17])__startrek_hidden_threshold#107) <= -200 && __CPROVER_pipe_count#43 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#43) <= 0 && __CPROVER_max_malloc_size#39 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#39) <= -36028797018963968 && __CPROVER_next_thread_id#41 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#41) <= 0 && __CPROVER_next_thread_key#42 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#42) <= 0 && __CPROVER_thread_id#45 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#45) <= 0 && C_state#49 <= 0 && -((signed __CPROVER_bitvector[9])C_state#49) <= 0 && TM_mode#50 <= 2 && -((signed __CPROVER_bitvector[9])TM_mode#50) <= -2 && __startrek_error_round#85 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_error_round#85) <= 0 && __startrek_hidden_R_state#88 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden_R_state#88) <= 0 && __startrek_hidden_T_state#91 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden_T_state#91) <= 0 && __startrek_hidden_W_state#94 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden_W_state#94) <= 0 && __startrek_hidden_nxtcolorsensor_data_mode#104 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden_nxtcolorsensor_data_mode#104) <= 0 && __startrek_hidden_nxtcolorsensor_mode#105 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hidden_nxtcolorsensor_mode#105) <= 0 && __startrek_hyper_period#108 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hyper_period#108) <= 0 && __startrek_job#110 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_job#110) <= 0 && __startrek_job_end#111 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_job_end#111) <= 0 && __startrek_round#118 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_round#118) <= 0 && __startrek_task#123 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_task#123) <= 0 && state#162 <= 0 && -((signed __CPROVER_bitvector[9])state#162) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of __main
+Function __main not analyzed yet
+Recursively summarizing function __main
+Checking precondition of Controller
+Function Controller not analyzed yet
+Recursively summarizing function Controller
+Checking precondition of bg_nxtcolorsensor
+Function bg_nxtcolorsensor not analyzed yet
+Recursively summarizing function bg_nxtcolorsensor
+Analyzing function bg_nxtcolorsensor
+Computing summary
+Computing termination argument for bg_nxtcolorsensor
+Function trivially terminates
+
+Summary for function bg_nxtcolorsensor
+params: take_long_time 
+globals_in: _nxtcolorsensor_data_mode_ _nxtcolorsensor_mode_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock __startrek_job_end __startrek_round __startrek_task 
+globals_out: _nxtcolorsensor_data_mode_ _nxtcolorsensor_mode_#phi4072 __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi4072 __startrek_lock __startrek_job_end __startrek_round#phi4072 __startrek_task 
+forward precondition: TRUE
+forward transformer: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi4072 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi4072) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of calibrate
+Function calibrate not analyzed yet
+Recursively summarizing function calibrate
+Analyzing function calibrate
+Computing summary
+Computing termination argument for calibrate
+Function trivially terminates
+
+Summary for function calibrate
+params: 
+globals_in: 
+globals_out: calibrate#return_value#2492 
+forward precondition: TRUE
+forward transformer: calibrate#return_value#2492 <= 255 && -((signed __CPROVER_bitvector[33])calibrate#return_value#2492) <= 0
+forward invariant: calibrate#return_value#2492 <= 255 && -((signed __CPROVER_bitvector[33])calibrate#return_value#2492) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of init
+Function init not analyzed yet
+Recursively summarizing function init
+Checking precondition of nxt_motor_set_count
+Function nxt_motor_set_count not analyzed yet
+Recursively summarizing function nxt_motor_set_count
+Analyzing function nxt_motor_set_count
+Computing summary
+Computing termination argument for nxt_motor_set_count
+Function trivially terminates
+
+Summary for function nxt_motor_set_count
+params: n count 
+globals_in: _R_count_ _T_count_ _W_count_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock __startrek_job_end __startrek_round __startrek_task 
+globals_out: _R_count_#phi8023 _T_count_#phi8023 _W_count_#phi8023 __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi8023 __startrek_lock __startrek_job_end __startrek_round#phi8023 __startrek_task 
+forward precondition: TRUE
+forward transformer: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi8023 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi8023) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of nxt_motor_set_count
+Precondition trivially holds, replacing by summary.
+Checking precondition of nxt_motor_set_count
+Precondition trivially holds, replacing by summary.
+Analyzing function init
+Computing summary
+Computing termination argument for init
+Function terminates
+
+Summary for function init
+params: 
+globals_in: _need_to_read_ _need_to_run_nxtbg_ _R_state_ _T_state_ _W_state_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock moved C_state __startrek_job_end __startrek_round __startrek_task state 
+globals_out: _need_to_read_#12078 _need_to_run_nxtbg_#12235 _R_state_#11602 _T_state_#11916 _W_state_#11759 __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi12235 __startrek_lock moved#12240 C_state#11924 __startrek_job_end __startrek_round#phi12235 __startrek_task state#11925 
+forward precondition: TRUE
+forward transformer: C_state#11924 <= 0 && -((signed __CPROVER_bitvector[9])C_state#11924) <= 0 && __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi12235 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi12235) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0 && state#11925 <= 0 && -((signed __CPROVER_bitvector[9])state#11925) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of nxt_motor_get_count
+Function nxt_motor_get_count not analyzed yet
+Recursively summarizing function nxt_motor_get_count
+Analyzing function nxt_motor_get_count
+Computing summary
+Computing termination argument for nxt_motor_get_count
+Function trivially terminates
+
+Summary for function nxt_motor_get_count
+params: n 
+globals_in: _R_count_ _T_count_ _W_count_ _R_speed_ _T_speed_ _W_speed_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock __startrek_job_end __startrek_round __startrek_task 
+globals_out: _R_count_#phi7544 _T_count_#phi7544 _W_count_#phi7544 _R_speed_ _T_speed_ _W_speed_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi7544 __startrek_lock nxt_motor_get_count#return_value#phi7544 __startrek_job_end __startrek_round#phi7544 __startrek_task 
+forward precondition: TRUE
+forward transformer: nxt_motor_get_count#return_value#phi7544 <= 2147483647 && -((signed __CPROVER_bitvector[33])nxt_motor_get_count#return_value#phi7544) <= 2147483648 && __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi7544 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi7544) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of nxt_motor_get_count
+Precondition trivially holds, replacing by summary.
+Checking precondition of transition
+Function transition not analyzed yet
+Recursively summarizing function transition
+Analyzing function transition
+Computing summary
+Computing termination argument for transition
+Function trivially terminates
+
+Summary for function transition
+params: in_state input___0 
+globals_in: _dir_ _output_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock __startrek_job_end __startrek_round __startrek_task state 
+globals_out: _dir_#phi11447 _output_#phi11447 __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi11447 __startrek_lock transition#return_value#11447 __startrek_job_end __startrek_round#phi11447 __startrek_task state#phi11447 
+forward precondition: TRUE
+forward transformer: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi11447 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi11447) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0 && state#phi11447 <= 255 && -((signed __CPROVER_bitvector[9])state#phi11447) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of nxt_motor_get_count
+Precondition trivially holds, replacing by summary.
+Checking precondition of nxt_motor_get_count
+Precondition trivially holds, replacing by summary.
+Checking precondition of ecrobot_is_ENTER_button_pressed
+Function ecrobot_is_ENTER_button_pressed not analyzed yet
+Recursively summarizing function ecrobot_is_ENTER_button_pressed
+Analyzing function ecrobot_is_ENTER_button_pressed
+Computing summary
+Computing termination argument for ecrobot_is_ENTER_button_pressed
+Function trivially terminates
+
+Summary for function ecrobot_is_ENTER_button_pressed
+params: 
+globals_in: 
+globals_out: ecrobot_is_ENTER_button_pressed#return_value#4078 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of TerminateTask
+Function TerminateTask not analyzed yet
+Recursively summarizing function TerminateTask
+Analyzing function TerminateTask
+Computing summary
+Computing termination argument for TerminateTask
+Function trivially terminates
+
+Summary for function TerminateTask
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function Controller
+Computing summary
+Computing termination argument for Controller
+Function terminates
+
+Summary for function Controller
+params: 
+globals_in: _input_ _need_to_read_ _need_to_run_nxtbg_ _output_ _threshold_ _R_state_ _T_state_ _W_state_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock C_state TM_mode __startrek_job_end __startrek_round __startrek_task state 
+globals_out: _input_ _need_to_read_ _need_to_run_nxtbg_#phi12606 _output_ _threshold_#phi15839 _R_state_#phi15839 _T_state_#phi15839 _W_state_#phi15839 __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi15839 __startrek_lock C_state#phi15839 TM_mode#phi15839 __startrek_job_end __startrek_round#phi15839 __startrek_task state 
+forward precondition: TRUE
+forward transformer: C_state#phi15839 <= 255 && -((signed __CPROVER_bitvector[9])C_state#phi15839) <= 0 && TM_mode#phi15839 <= 255 && -((signed __CPROVER_bitvector[9])TM_mode#phi15839) <= 0 && __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi15839 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi15839) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0 && state <= 255 && -((signed __CPROVER_bitvector[9])state) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0 && state <= 255 && -((signed __CPROVER_bitvector[9])state) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of Controller
+Precondition trivially holds, replacing by summary.
+Checking precondition of Controller
+Precondition trivially holds, replacing by summary.
+Checking precondition of Controller
+Precondition trivially holds, replacing by summary.
+Checking precondition of TapeMover
+Function TapeMover not analyzed yet
+Recursively summarizing function TapeMover
+Checking precondition of move_motor
+Function move_motor not analyzed yet
+Recursively summarizing function move_motor
+Checking precondition of nxt_motor_get_count
+Precondition trivially holds, replacing by summary.
+Checking precondition of nxt_motor_set_speed
+Function nxt_motor_set_speed not analyzed yet
+Recursively summarizing function nxt_motor_set_speed
+Analyzing function nxt_motor_set_speed
+Computing summary
+Computing termination argument for nxt_motor_set_speed
+Function trivially terminates
+
+Summary for function nxt_motor_set_speed
+params: n speed b 
+globals_in: _R_count_ _T_count_ _W_count_ _R_speed_ _T_speed_ _W_speed_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock __startrek_job_end __startrek_round __startrek_task 
+globals_out: _R_count_#phi6043 _T_count_#phi6043 _W_count_#phi6043 _R_speed_#phi6043 _T_speed_#phi6043 _W_speed_#phi6043 __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi6043 __startrek_lock __startrek_job_end __startrek_round#phi6043 __startrek_task 
+forward precondition: TRUE
+forward transformer: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi6043 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi6043) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function move_motor
+Computing summary
+Computing termination argument for move_motor
+Function terminates
+
+Summary for function move_motor
+params: n speed_percent target_count move_motor$$sign 
+globals_in: 
+globals_out: move_motor#return_value#12261 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of nxt_motor_get_count
+Precondition trivially holds, replacing by summary.
+Checking precondition of nxt_motor_set_count
+Precondition trivially holds, replacing by summary.
+Checking precondition of TerminateTask
+Precondition trivially holds, replacing by summary.
+Analyzing function TapeMover
+Computing summary
+Computing termination argument for TapeMover
+Function terminates
+
+Summary for function TapeMover
+params: 
+globals_in: _dir_ _need_to_read_ _T_state_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock sign __startrek_job_end __startrek_round __startrek_task 
+globals_out: _dir_ _need_to_read_#phi18836 _T_state_#phi18836 __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi18836 __startrek_lock sign#phi18350 __startrek_job_end __startrek_round#phi18836 __startrek_task 
+forward precondition: TRUE
+forward transformer: sign#phi18350 <= 1 && -((signed __CPROVER_bitvector[33])sign#phi18350) <= 1 && __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi18836 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi18836) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of TapeMover
+Precondition trivially holds, replacing by summary.
+Checking precondition of TapeMover
+Precondition trivially holds, replacing by summary.
+Checking precondition of TapeMover
+Precondition trivially holds, replacing by summary.
+Checking precondition of TapeMover
+Precondition trivially holds, replacing by summary.
+Checking precondition of TapeMover
+Precondition trivially holds, replacing by summary.
+Checking precondition of TapeMover
+Precondition trivially holds, replacing by summary.
+Checking precondition of TapeMover
+Precondition trivially holds, replacing by summary.
+Checking precondition of Reader
+Function Reader not analyzed yet
+Recursively summarizing function Reader
+Checking precondition of move_motor
+Precondition trivially holds, replacing by summary.
+Checking precondition of move_motor
+Precondition trivially holds, replacing by summary.
+Checking precondition of ecrobot_get_nxtcolorsensor_mode
+Function ecrobot_get_nxtcolorsensor_mode not analyzed yet
+Recursively summarizing function ecrobot_get_nxtcolorsensor_mode
+Analyzing function ecrobot_get_nxtcolorsensor_mode
+Computing summary
+Computing termination argument for ecrobot_get_nxtcolorsensor_mode
+Function trivially terminates
+
+Summary for function ecrobot_get_nxtcolorsensor_mode
+params: port_id 
+globals_in: _nxtcolorsensor_mode_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock __startrek_job_end __startrek_round __startrek_task 
+globals_out: _nxtcolorsensor_mode_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi3423 __startrek_lock __startrek_job_end __startrek_round#phi3423 __startrek_task ecrobot_get_nxtcolorsensor_mode#return_value#3431 
+forward precondition: TRUE
+forward transformer: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi3423 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi3423) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0 && ecrobot_get_nxtcolorsensor_mode#return_value#3431 <= 255 && -((signed __CPROVER_bitvector[9])ecrobot_get_nxtcolorsensor_mode#return_value#3431) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of ecrobot_set_nxtcolorsensor
+Function ecrobot_set_nxtcolorsensor not analyzed yet
+Recursively summarizing function ecrobot_set_nxtcolorsensor
+Analyzing function ecrobot_set_nxtcolorsensor
+Computing summary
+Computing termination argument for ecrobot_set_nxtcolorsensor
+Function trivially terminates
+
+Summary for function ecrobot_set_nxtcolorsensor
+params: port_id mode 
+globals_in: _nxtcolorsensor_data_mode_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock __startrek_job_end __startrek_round __startrek_task 
+globals_out: _nxtcolorsensor_data_mode_#3265 __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi3265 __startrek_lock __startrek_job_end __startrek_round#phi3265 __startrek_task 
+forward precondition: TRUE
+forward transformer: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi3265 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi3265) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of ecrobot_get_nxtcolorsensor_mode
+Precondition trivially holds, replacing by summary.
+Checking precondition of bg_nxtcolorsensor
+Precondition trivially holds, replacing by summary.
+Checking precondition of ecrobot_get_nxtcolorsensor_light
+Function ecrobot_get_nxtcolorsensor_light not analyzed yet
+Recursively summarizing function ecrobot_get_nxtcolorsensor_light
+Analyzing function ecrobot_get_nxtcolorsensor_light
+Computing summary
+Computing termination argument for ecrobot_get_nxtcolorsensor_light
+Function trivially terminates
+
+Summary for function ecrobot_get_nxtcolorsensor_light
+params: port 
+globals_in: 
+globals_out: ecrobot_get_nxtcolorsensor_light#return_value#8026 
+forward precondition: TRUE
+forward transformer: ecrobot_get_nxtcolorsensor_light#return_value#8026 <= 255 && -((signed __CPROVER_bitvector[9])ecrobot_get_nxtcolorsensor_light#return_value#8026) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of ecrobot_set_nxtcolorsensor
+Precondition trivially holds, replacing by summary.
+Checking precondition of TerminateTask
+Precondition trivially holds, replacing by summary.
+Analyzing function Reader
+Computing summary
+Computing termination argument for Reader
+Function terminates
+
+Summary for function Reader
+params: 
+globals_in: _input_ _need_to_read_ _need_to_run_nxtbg_ __startrek_Assert_t0_i0 __startrek_Assert_t1_i0 __startrek_Assert_t2_i0 __startrek_Assert_t3_i0 _threshold_ _R_state_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock __startrek_error_round __startrek_hyper_period __startrek_job __startrek_job_end __startrek_round __startrek_task 
+globals_out: _input_#phi17344 _need_to_read_#phi17344 _need_to_run_nxtbg_#phi17344 __startrek_Assert_t0_i0#phi17344 __startrek_Assert_t1_i0#phi17344 __startrek_Assert_t2_i0#phi17344 __startrek_Assert_t3_i0#phi17344 _threshold_ _R_state_#phi17344 __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi17344 __startrek_lock __startrek_error_round#phi17344 __startrek_hyper_period __startrek_job __startrek_job_end __startrek_round#phi17344 __startrek_task 
+forward precondition: TRUE
+forward transformer: __startrek_error_round#phi17344 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_error_round#phi17344) <= 0 && __startrek_hyper_period <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hyper_period) <= 0 && __startrek_job <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job) <= 0 && __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi17344 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi17344) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: __startrek_hyper_period <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hyper_period) <= 0 && __startrek_job <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job) <= 0 && __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of Reader
+Precondition trivially holds, replacing by summary.
+Checking precondition of Reader
+Precondition trivially holds, replacing by summary.
+Checking precondition of Reader
+Precondition trivially holds, replacing by summary.
+Checking precondition of Reader
+Precondition trivially holds, replacing by summary.
+Checking precondition of Reader
+Precondition trivially holds, replacing by summary.
+Checking precondition of Reader
+Precondition trivially holds, replacing by summary.
+Checking precondition of Reader
+Precondition trivially holds, replacing by summary.
+Checking precondition of Writer
+Function Writer not analyzed yet
+Recursively summarizing function Writer
+Checking precondition of move_motor
+Precondition trivially holds, replacing by summary.
+Checking precondition of nxt_motor_get_count
+Precondition trivially holds, replacing by summary.
+Checking precondition of nxt_motor_set_count
+Precondition trivially holds, replacing by summary.
+Checking precondition of TerminateTask
+Precondition trivially holds, replacing by summary.
+Analyzing function Writer
+Computing summary
+Computing termination argument for Writer
+Function terminates
+
+Summary for function Writer
+params: 
+globals_in: _input_ _output_ _W_state_ __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs __startrek_lock __startrek_job_end __startrek_round __startrek_task 
+globals_out: _input_#phi18174 _output_ _W_state_#phi18174 __startrek_end_t1 __startrek_end_t2 __startrek_start_t1 __startrek_start_t2 __startrek_is_first_cs#phi18174 __startrek_lock __startrek_job_end __startrek_round#phi18174 __startrek_task 
+forward precondition: TRUE
+forward transformer: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_round#phi18174 <= 255 && -((signed __CPROVER_bitvector[9])__startrek_round#phi18174) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+forward invariant: __startrek_job_end <= 255 && -((signed __CPROVER_bitvector[9])__startrek_job_end) <= 0 && __startrek_task <= 255 && -((signed __CPROVER_bitvector[9])__startrek_task) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of Writer
+Precondition trivially holds, replacing by summary.
+Checking precondition of Writer
+Precondition trivially holds, replacing by summary.
+Checking precondition of Writer
+Precondition trivially holds, replacing by summary.
+Checking precondition of Writer
+Precondition trivially holds, replacing by summary.
+Checking precondition of Writer
+Precondition trivially holds, replacing by summary.
+Checking precondition of Writer
+Precondition trivially holds, replacing by summary.
+Checking precondition of Writer
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Function assert not analyzed yet
+Recursively summarizing function assert
+Analyzing function assert
+Computing summary
+Computing termination argument for assert
+Function trivially terminates
+
+Summary for function assert
+params: arg 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Checking precondition of assert
+Precondition trivially holds, replacing by summary.
+Analyzing function __main
+Computing summary
+Computing termination argument for __main
+Function terminates
+
+Summary for function __main
+params: 
+globals_in: _dir_ _i_dir_ _i_input_ _i_need_to_read_ _i_need_to_run_nxtbg_ _i_output_ _input_ _need_to_read_ _need_to_run_nxtbg_ _output_ __startrek_Assert_t0_i0 __startrek_Assert_t1_i0 __startrek_Assert_t2_i0 __startrek_Assert_t3_i0 _R_count_ _T_count_ _W_count_ _i_R_count_ _i_T_count_ _i_W_count_ _R_speed_ _T_speed_ _W_speed_ ___startrek_current_priority_ ___startrek_job_count_Controller_ ___startrek_job_count_Reader_ ___startrek_job_count_TapeMover_ ___startrek_job_count_Writer_ _i_R_speed_ _i_T_speed_ _i_W_speed_ _i___startrek_current_priority_ _i___startrek_job_count_Controller_ _i___startrek_job_count_Reader_ _i___startrek_job_count_TapeMover_ _i___startrek_job_count_Writer_ _i_threshold_ _threshold_ _R_state_ _T_state_ _W_state_ _i_R_state_ _i_T_state_ _i_W_state_ _i_nxtcolorsensor_data_mode_ _i_nxtcolorsensor_mode_ _nxtcolorsensor_data_mode_ _nxtcolorsensor_mode_ __startrek_end_t0 __startrek_start_t0 __startrek_end_t1 __startrek_end_t2 __startrek_end_t3 __startrek_start_t1 __startrek_start_t2 __startrek_start_t3 __startrek_is_first_cs __startrek_lock __startrek_pi_locks_held __startrek_base_priority_Controller __startrek_base_priority_Reader __startrek_base_priority_TapeMover __startrek_base_priority_Writer __startrek_task_base_priority __startrek_error_round __startrek_hyper_period __startrek_job __startrek_job_end __startrek_round __startrek_task 
+globals_out: _dir_#34676 _i_dir_#34675 _i_input_#34891 _i_need_to_read_#34567 _i_need_to_run_nxtbg_#34459 _i_output_#34783 _input_#34892 _need_to_read_#34568 _need_to_run_nxtbg_#34460 _output_#34784 __startrek_Assert_t0_i0 __startrek_Assert_t1_i0 __startrek_Assert_t2_i0 __startrek_Assert_t3_i0 _R_count_#35756 _T_count_#35324 _W_count_#35540 _i_R_count_#35755 _i_T_count_#35323 _i_W_count_#35539 _R_speed_#35648 _T_speed_#35216 _W_speed_#35432 ___startrek_current_priority_#phi59536 ___startrek_job_count_Controller_#phi39757 ___startrek_job_count_Reader_#phi52943 ___startrek_job_count_TapeMover_#phi46350 ___startrek_job_count_Writer_#phi59536 _i_R_speed_#35647 _i_T_speed_#35215 _i_W_speed_#35431 _i___startrek_current_priority_#35863 _i___startrek_job_count_Controller_#33919 _i___startrek_job_count_Reader_#33703 _i___startrek_job_count_TapeMover_#33811 _i___startrek_job_count_Writer_#33595 _i_threshold_#34351 _threshold_#34352 _R_state_#34244 _T_state_#34028 _W_state_#34136 _i_R_state_#34243 _i_T_state_#34027 _i_W_state_#34135 _i_nxtcolorsensor_data_mode_#35107 _i_nxtcolorsensor_mode_#34999 _nxtcolorsensor_data_mode_#35108 _nxtcolorsensor_mode_#35000 __startrek_end_t0#31866 __startrek_start_t0#31863 __startrek_end_t1#31923 __startrek_end_t2#32140 __startrek_end_t3#32653 __startrek_start_t1#31920 __startrek_start_t2#32137 __startrek_start_t3#32652 __startrek_is_first_cs#phi59536 __startrek_lock#phi59536 __startrek_pi_locks_held#phi59536 __startrek_base_priority_Controller __startrek_base_priority_Reader __startrek_base_priority_TapeMover __startrek_base_priority_Writer __startrek_task_base_priority#phi59536 __startrek_error_round#31841 __startrek_hyper_period __startrek_job#58712 __startrek_job_end#phi59536 __startrek_round#59536 __startrek_task#52943 
+forward precondition: TRUE
+forward transformer: __startrek_pi_locks_held#phi59536 <= 0 && -((signed __CPROVER_bitvector[33])__startrek_pi_locks_held#phi59536) <= 0 && __startrek_base_priority_Controller <= 127 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_Controller) <= 127 && __startrek_base_priority_Reader <= 127 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_Reader) <= 127 && __startrek_base_priority_TapeMover <= 127 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_TapeMover) <= 127 && __startrek_base_priority_Writer <= 127 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_Writer) <= 127 && __startrek_task_base_priority#phi59536 <= 127 && -((signed __CPROVER_bitvector[9])__startrek_task_base_priority#phi59536) <= 127 && __startrek_error_round#31841 <= 28 && -((signed __CPROVER_bitvector[9])__startrek_error_round#31841) <= -28 && __startrek_hyper_period <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hyper_period) <= 0 && __startrek_job#58712 <= 7 && -((signed __CPROVER_bitvector[9])__startrek_job#58712) <= -7 && __startrek_job_end#phi59536 <= 27 && -((signed __CPROVER_bitvector[9])__startrek_job_end#phi59536) <= -7 && __startrek_round#59536 <= 28 && -((signed __CPROVER_bitvector[9])__startrek_round#59536) <= -28 && __startrek_task#52943 <= 3 && -((signed __CPROVER_bitvector[9])__startrek_task#52943) <= -3
+forward invariant: __startrek_base_priority_Controller <= 127 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_Controller) <= 127 && __startrek_base_priority_Reader <= 127 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_Reader) <= 127 && __startrek_base_priority_TapeMover <= 127 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_TapeMover) <= 127 && __startrek_base_priority_Writer <= 127 && -((signed __CPROVER_bitvector[9])__startrek_base_priority_Writer) <= 127 && __startrek_hyper_period <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hyper_period) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Function terminates
+
+Summary for function main
+params: 
+globals_in: _dir_ _input_ _need_to_read_ _need_to_run_nxtbg_ _output_ _R_count_ _T_count_ _W_count_ _R_speed_ _T_speed_ _W_speed_ ___startrek_current_priority_ ___startrek_job_count_Controller_ ___startrek_job_count_Reader_ ___startrek_job_count_TapeMover_ ___startrek_job_count_Writer_ _threshold_ _R_state_ _T_state_ _W_state_ _nxtcolorsensor_data_mode_ _nxtcolorsensor_mode_ __startrek_hidden_dir __startrek_hidden_input __startrek_hidden_need_to_read __startrek_hidden_need_to_run_nxtbg __startrek_hidden_output __startrek_hidden_R_count __startrek_hidden_T_count __startrek_hidden_W_count __startrek_hidden_R_speed __startrek_hidden_T_speed __startrek_hidden_W_speed __startrek_hidden___startrek_current_priority __startrek_hidden___startrek_job_count_Controller __startrek_hidden___startrek_job_count_Reader __startrek_hidden___startrek_job_count_TapeMover __startrek_hidden___startrek_job_count_Writer __startrek_hidden_threshold __startrek_hidden_R_state __startrek_hidden_T_state __startrek_hidden_W_state __startrek_hidden_nxtcolorsensor_data_mode __startrek_hidden_nxtcolorsensor_mode __startrek_hyper_period 
+globals_out: _dir_#16 _input_#18 _need_to_read_#15 _need_to_run_nxtbg_#14 _output_#17 _R_count_#26 _T_count_#22 _W_count_#24 _R_speed_#25 _T_speed_#21 _W_speed_#23 ___startrek_current_priority_#27 ___startrek_job_count_Controller_#9 ___startrek_job_count_Reader_#7 ___startrek_job_count_TapeMover_#8 ___startrek_job_count_Writer_#6 _threshold_#13 _R_state_#12 _T_state_#10 _W_state_#11 _nxtcolorsensor_data_mode_#20 _nxtcolorsensor_mode_#19 __startrek_hidden_dir __startrek_hidden_input __startrek_hidden_need_to_read __startrek_hidden_need_to_run_nxtbg __startrek_hidden_output __startrek_hidden_R_count __startrek_hidden_T_count __startrek_hidden_W_count main#return_value#33 __startrek_hidden_R_speed __startrek_hidden_T_speed __startrek_hidden_W_speed __startrek_hidden___startrek_current_priority __startrek_hidden___startrek_job_count_Controller __startrek_hidden___startrek_job_count_Reader __startrek_hidden___startrek_job_count_TapeMover __startrek_hidden___startrek_job_count_Writer __startrek_hidden_threshold __startrek_hidden_R_state __startrek_hidden_T_state __startrek_hidden_W_state __startrek_hidden_nxtcolorsensor_data_mode __startrek_hidden_nxtcolorsensor_mode __startrek_hyper_period#31 
+forward precondition: TRUE
+forward transformer: __startrek_hidden_R_count <= 2147483647 && -((signed __CPROVER_bitvector[33])__startrek_hidden_R_count) <= 2147483648 && __startrek_hidden_T_count <= 2147483647 && -((signed __CPROVER_bitvector[33])__startrek_hidden_T_count) <= 2147483648 && __startrek_hidden_W_count <= 2147483647 && -((signed __CPROVER_bitvector[33])__startrek_hidden_W_count) <= 2147483648 && main#return_value#33 <= 2147483647 && -((signed __CPROVER_bitvector[33])main#return_value#33) <= 2147483648 && __startrek_hidden_R_speed <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden_R_speed) <= 128 && __startrek_hidden_T_speed <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden_T_speed) <= 128 && __startrek_hidden_W_speed <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden_W_speed) <= 128 && __startrek_hidden___startrek_current_priority <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_current_priority) <= 128 && __startrek_hidden___startrek_job_count_Controller <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_Controller) <= 128 && __startrek_hidden___startrek_job_count_Reader <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_Reader) <= 128 && __startrek_hidden___startrek_job_count_TapeMover <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_TapeMover) <= 128 && __startrek_hidden___startrek_job_count_Writer <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_Writer) <= 128 && __startrek_hidden_threshold <= 65535 && -((signed __CPROVER_bitvector[17])__startrek_hidden_threshold) <= 0 && __startrek_hidden_R_state <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_R_state) <= 0 && __startrek_hidden_T_state <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_T_state) <= 0 && __startrek_hidden_W_state <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_W_state) <= 0 && __startrek_hidden_nxtcolorsensor_data_mode <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_nxtcolorsensor_data_mode) <= 0 && __startrek_hidden_nxtcolorsensor_mode <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_nxtcolorsensor_mode) <= 0 && __startrek_hyper_period#31 <= 0 && -((signed __CPROVER_bitvector[9])__startrek_hyper_period#31) <= 0
+forward invariant: __startrek_hidden_R_count <= 2147483647 && -((signed __CPROVER_bitvector[33])__startrek_hidden_R_count) <= 2147483648 && __startrek_hidden_T_count <= 2147483647 && -((signed __CPROVER_bitvector[33])__startrek_hidden_T_count) <= 2147483648 && __startrek_hidden_W_count <= 2147483647 && -((signed __CPROVER_bitvector[33])__startrek_hidden_W_count) <= 2147483648 && __startrek_hidden_R_speed <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden_R_speed) <= 128 && __startrek_hidden_T_speed <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden_T_speed) <= 128 && __startrek_hidden_W_speed <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden_W_speed) <= 128 && __startrek_hidden___startrek_current_priority <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_current_priority) <= 128 && __startrek_hidden___startrek_job_count_Controller <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_Controller) <= 128 && __startrek_hidden___startrek_job_count_Reader <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_Reader) <= 128 && __startrek_hidden___startrek_job_count_TapeMover <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_TapeMover) <= 128 && __startrek_hidden___startrek_job_count_Writer <= 127 && -((signed __CPROVER_bitvector[9])__startrek_hidden___startrek_job_count_Writer) <= 128 && __startrek_hidden_threshold <= 65535 && -((signed __CPROVER_bitvector[17])__startrek_hidden_threshold) <= 0 && __startrek_hidden_R_state <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_R_state) <= 0 && __startrek_hidden_T_state <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_T_state) <= 0 && __startrek_hidden_W_state <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_W_state) <= 0 && __startrek_hidden_nxtcolorsensor_data_mode <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_nxtcolorsensor_data_mode) <= 0 && __startrek_hidden_nxtcolorsensor_mode <= 255 && -((signed __CPROVER_bitvector[9])__startrek_hidden_nxtcolorsensor_mode) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+Function terminates
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+** statistics: 
+  number of solver instances: 1312770146
+  number of solver calls: 455147378
+  number of summaries used: 91
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[assert]: yes
+[main]: yes
+[__CPROVER_initialize]: yes
+[__startrek_init_shared]: not computed
+[__startrek_assert_i0]: not computed
+[__startrek_cs_t3]: not computed
+[__startrek_cs_t2]: not computed
+[__startrek_cs_t1]: not computed
+[__startrek_cs_t0]: not computed
+[__startrek_read___startrek_current_priority]: not computed
+[__startrek_write___startrek_current_priority]: not computed
+[__startrek_read_R_count]: not computed
+[__startrek_write_R_count]: not computed
+[__startrek_read_R_speed]: not computed
+[__startrek_write_R_speed]: not computed
+[__startrek_read_W_count]: not computed
+[__startrek_write_W_count]: not computed
+[__startrek_read_W_speed]: not computed
+[__startrek_write_W_speed]: not computed
+[__startrek_read_T_count]: not computed
+[__startrek_write_T_count]: not computed
+[__startrek_read_T_speed]: not computed
+[__startrek_write_T_speed]: not computed
+[calibrate]: yes
+[__startrek_read_nxtcolorsensor_data_mode]: not computed
+[__startrek_write_nxtcolorsensor_data_mode]: not computed
+[__startrek_read_nxtcolorsensor_mode]: not computed
+[__startrek_write_nxtcolorsensor_mode]: not computed
+[ecrobot_set_nxtcolorsensor]: yes
+[ecrobot_get_nxtcolorsensor_mode]: yes
+[bg_nxtcolorsensor]: yes
+[ecrobot_is_ENTER_button_pressed]: yes
+[nxt_motor_set_speed]: yes
+[nxt_motor_get_count]: yes
+[nxt_motor_set_count]: yes
+[ecrobot_get_nxtcolorsensor_light]: yes
+[TerminateTask]: yes
+[__startrek_read_input]: not computed
+[__startrek_write_input]: not computed
+[__startrek_read_output]: not computed
+[__startrek_write_output]: not computed
+[__startrek_read_dir]: not computed
+[__startrek_write_dir]: not computed
+[__startrek_read_need_to_read]: not computed
+[__startrek_write_need_to_read]: not computed
+[__startrek_read_need_to_run_nxtbg]: not computed
+[__startrek_write_need_to_run_nxtbg]: not computed
+[__startrek_read_threshold]: not computed
+[__startrek_write_threshold]: not computed
+[__startrek_read_R_state]: not computed
+[__startrek_write_R_state]: not computed
+[__startrek_read_W_state]: not computed
+[__startrek_write_W_state]: not computed
+[__startrek_read_T_state]: not computed
+[__startrek_write_T_state]: not computed
+[transition]: yes
+[init]: yes
+[move_motor]: yes
+[Controller]: yes
+[Reader]: yes
+[Writer]: yes
+[TapeMover]: yes
+[__startrek_read___startrek_job_count_Controller]: not computed
+[__startrek_write___startrek_job_count_Controller]: not computed
+[__startrek_entry_pt_Controller]: not computed
+[cil_keeperController]: not computed
+[__startrek_read___startrek_job_count_TapeMover]: not computed
+[__startrek_write___startrek_job_count_TapeMover]: not computed
+[__startrek_entry_pt_TapeMover]: not computed
+[cil_keeperTapeMover]: not computed
+[__startrek_read___startrek_job_count_Reader]: not computed
+[__startrek_write___startrek_job_count_Reader]: not computed
+[__startrek_entry_pt_Reader]: not computed
+[cil_keeperReader]: not computed
+[__startrek_read___startrek_job_count_Writer]: not computed
+[__startrek_write___startrek_job_count_Writer]: not computed
+[__startrek_entry_pt_Writer]: not computed
+[cil_keeperWriter]: not computed
+[__startrek_schedule_jobs]: not computed
+[__startrek_init_globals]: not computed
+[__startrek_check_assumptions]: not computed
+[__startrek_user_init]: not computed
+[__startrek_user_final]: not computed
+[__startrek_check_assertions]: not computed
+[__main]: yes
+[__CPROVER__start]: yes
+VERIFICATION SUCCESSFUL
+Runtime: 111851 milliseconds

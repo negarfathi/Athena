@@ -1,0 +1,210 @@
+line 8672:5 extraneous input 'metadata' expecting EXCLAMATION
+line 8672:25 no viable alternative at input '!'
+Instruction count:4887
+deleted entry node of node1
+deleted entry node of node2
+deleted entry node of node3
+deleted entry node of node4
+deleted entry node of node5
+deleted entry node of check
+deleted entry node of assert
+deleted entry node of node1
+deleted entry node of node2
+deleted entry node of node3
+deleted entry node of node4
+deleted entry node of node5
+deleted entry node of check
+deleted entry node of assert
+deleted entry node of node1
+deleted entry node of node2
+deleted entry node of node3
+deleted entry node of node4
+deleted entry node of node5
+deleted entry node of check
+deleted entry node of assert
+deleted entry node of node1
+deleted entry node of node2
+deleted entry node of node3
+deleted entry node of node4
+deleted entry node of node5
+deleted entry node of check
+deleted entry node of assert
+deleted entry node of node1
+deleted entry node of node2
+deleted entry node of node3
+deleted entry node of node4
+deleted entry node of node5
+deleted entry node of check
+deleted entry node of assert
+deleted entry node of node1
+deleted entry node of node2
+deleted entry node of node3
+deleted entry node of node4
+deleted entry node of node5
+deleted entry node of check
+deleted entry node of assert
+deleted entry node of assert
+deleted entry node of assert
+Graph finished, checking  consistency
+Graph finished, checked consistency, took 0.065s
+Aborted 1755959315Exec. 11, LLVMSCCToIntTRS with some error. Reason: java.lang.UnsupportedOperationException: There are no viable cases left. Case optype: XOR.
+Aborted 1755959315Exec. 12, LLVMSCCToIntTRS with some error. Reason: java.lang.UnsupportedOperationException: There are no viable cases left. Case optype: XOR.
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.LLVMOperation.toTerm(LLVMOperation.java:254)
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMRelation.toTerm(LLVMRelation.java:258)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:37)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:32)
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.LLVMOperation.toTerm(LLVMOperation.java:254)
+            aprove.Framework.Utility.GenericStructures.ObjectUtils.binaryFold(ObjectUtils.java:25)
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMRelation.toTerm(LLVMRelation.java:258)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:37)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:32)
+            aprove.Framework.Utility.GenericStructures.ObjectUtils.binaryFold(ObjectUtils.java:25)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils.toTerm(LLVMRelationUtils.java:28)
+            aprove.InputModules.Programs.llvm.segraph.edges.LLVMEdgeInformation.toTerm(LLVMEdgeInformation.java:90)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils.toTerm(LLVMRelationUtils.java:28)
+            aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$3.getCondition(LLVMInvariants.java:76)
+            aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$5.getCondition(LLVMInvariants.java:109)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.inferRuleFromEdge(LLVMGraphProcessor.java:95)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.translateGraphToRuleSet(LLVMGraphProcessor.java:252)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:148)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+            aprove.InputModules.Programs.llvm.processors.LLVMSCCToIntTRSProcessor.process(LLVMSCCToIntTRSProcessor.java:51)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.InputModules.Programs.llvm.segraph.edges.LLVMEdgeInformation.toTerm(LLVMEdgeInformation.java:90)
+            aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$3.getCondition(LLVMInvariants.java:76)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$5.getCondition(LLVMInvariants.java:109)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.inferRuleFromEdge(LLVMGraphProcessor.java:95)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.translateGraphToRuleSet(LLVMGraphProcessor.java:252)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:148)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+            aprove.InputModules.Programs.llvm.processors.LLVMSCCToIntTRSProcessor.process(LLVMSCCToIntTRSProcessor.java:51)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            java.base/java.lang.Thread.run(Thread.java:840)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            java.base/java.lang.Thread.run(Thread.java:840)
+java.lang.UnsupportedOperationException: There are no viable cases left. Case optype: XOR
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.LLVMOperation.toTerm(LLVMOperation.java:254)
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMRelation.toTerm(LLVMRelation.java:258)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:37)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:32)
+	at aprove.Framework.Utility.GenericStructures.ObjectUtils.binaryFold(ObjectUtils.java:25)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils.toTerm(LLVMRelationUtils.java:28)
+	at aprove.InputModules.Programs.llvm.segraph.edges.LLVMEdgeInformation.toTerm(LLVMEdgeInformation.java:90)
+	at aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$3.getCondition(LLVMInvariants.java:76)
+	at aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$5.getCondition(LLVMInvariants.java:109)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.inferRuleFromEdge(LLVMGraphProcessor.java:95)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.translateGraphToRuleSet(LLVMGraphProcessor.java:252)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:148)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+	at aprove.InputModules.Programs.llvm.processors.LLVMSCCToIntTRSProcessor.process(LLVMSCCToIntTRSProcessor.java:51)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+java.lang.UnsupportedOperationException: There are no viable cases left. Case optype: XOR
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.LLVMOperation.toTerm(LLVMOperation.java:254)
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMRelation.toTerm(LLVMRelation.java:258)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:37)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:32)
+	at aprove.Framework.Utility.GenericStructures.ObjectUtils.binaryFold(ObjectUtils.java:25)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils.toTerm(LLVMRelationUtils.java:28)
+	at aprove.InputModules.Programs.llvm.segraph.edges.LLVMEdgeInformation.toTerm(LLVMEdgeInformation.java:90)
+	at aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$3.getCondition(LLVMInvariants.java:76)
+	at aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$5.getCondition(LLVMInvariants.java:109)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.inferRuleFromEdge(LLVMGraphProcessor.java:95)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.translateGraphToRuleSet(LLVMGraphProcessor.java:252)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:148)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+	at aprove.InputModules.Programs.llvm.processors.LLVMSCCToIntTRSProcessor.process(LLVMSCCToIntTRSProcessor.java:51)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Aborted 1755959316Exec. 13, LLVMSCCToIntTRS with some error. Reason: java.lang.UnsupportedOperationException: There are no viable cases left. Case optype: XOR.
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.LLVMOperation.toTerm(LLVMOperation.java:254)
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMRelation.toTerm(LLVMRelation.java:258)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:37)
+Aborted 1755959316Exec. 14, LLVMSCCToIntTRS with some error. Reason: java.lang.UnsupportedOperationException: There are no viable cases left. Case optype: XOR.
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:32)
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.LLVMOperation.toTerm(LLVMOperation.java:254)
+            aprove.Framework.Utility.GenericStructures.ObjectUtils.binaryFold(ObjectUtils.java:25)
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMRelation.toTerm(LLVMRelation.java:258)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:37)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:32)
+            aprove.Framework.Utility.GenericStructures.ObjectUtils.binaryFold(ObjectUtils.java:25)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils.toTerm(LLVMRelationUtils.java:28)
+            aprove.InputModules.Programs.llvm.segraph.edges.LLVMEdgeInformation.toTerm(LLVMEdgeInformation.java:90)
+            aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$3.getCondition(LLVMInvariants.java:76)
+            aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$4.getCondition(LLVMInvariants.java:93)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.inferRuleFromEdge(LLVMGraphProcessor.java:95)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.translateGraphToRuleSet(LLVMGraphProcessor.java:252)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:148)
+            aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils.toTerm(LLVMRelationUtils.java:28)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+            aprove.InputModules.Programs.llvm.segraph.edges.LLVMEdgeInformation.toTerm(LLVMEdgeInformation.java:90)
+            aprove.InputModules.Programs.llvm.processors.LLVMSCCToIntTRSProcessor.process(LLVMSCCToIntTRSProcessor.java:51)
+            aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$3.getCondition(LLVMInvariants.java:76)
+            aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$4.getCondition(LLVMInvariants.java:93)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.inferRuleFromEdge(LLVMGraphProcessor.java:95)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.translateGraphToRuleSet(LLVMGraphProcessor.java:252)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:148)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.InputModules.Programs.llvm.processors.LLVMSCCToIntTRSProcessor.process(LLVMSCCToIntTRSProcessor.java:51)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            java.base/java.lang.Thread.run(Thread.java:840)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            java.base/java.lang.Thread.run(Thread.java:840)
+java.lang.UnsupportedOperationException: There are no viable cases left. Case optype: XOR
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.LLVMOperation.toTerm(LLVMOperation.java:254)
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMRelation.toTerm(LLVMRelation.java:258)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:37)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:32)
+	at aprove.Framework.Utility.GenericStructures.ObjectUtils.binaryFold(ObjectUtils.java:25)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils.toTerm(LLVMRelationUtils.java:28)
+	at aprove.InputModules.Programs.llvm.segraph.edges.LLVMEdgeInformation.toTerm(LLVMEdgeInformation.java:90)
+	at aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$3.getCondition(LLVMInvariants.java:76)
+	at aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$4.getCondition(LLVMInvariants.java:93)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.inferRuleFromEdge(LLVMGraphProcessor.java:95)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.translateGraphToRuleSet(LLVMGraphProcessor.java:252)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:148)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+	at aprove.InputModules.Programs.llvm.processors.LLVMSCCToIntTRSProcessor.process(LLVMSCCToIntTRSProcessor.java:51)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+java.lang.UnsupportedOperationException: There are no viable cases left. Case optype: XOR
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.LLVMOperation.toTerm(LLVMOperation.java:254)
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMRelation.toTerm(LLVMRelation.java:258)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:37)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils$1.combine(LLVMRelationUtils.java:32)
+	at aprove.Framework.Utility.GenericStructures.ObjectUtils.binaryFold(ObjectUtils.java:25)
+	at aprove.InputModules.Programs.llvm.utils.LLVMRelationUtils.toTerm(LLVMRelationUtils.java:28)
+	at aprove.InputModules.Programs.llvm.segraph.edges.LLVMEdgeInformation.toTerm(LLVMEdgeInformation.java:90)
+	at aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$3.getCondition(LLVMInvariants.java:76)
+	at aprove.InputModules.Programs.llvm.internalStructures.LLVMInvariants$4.getCondition(LLVMInvariants.java:93)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.inferRuleFromEdge(LLVMGraphProcessor.java:95)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphProcessor.translateGraphToRuleSet(LLVMGraphProcessor.java:252)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.transformGraphToIRS(LLVMGraphToIntTRSProcessor.java:148)
+	at aprove.InputModules.Programs.llvm.processors.LLVMGraphToIntTRSProcessor.process(LLVMGraphToIntTRSProcessor.java:105)
+	at aprove.InputModules.Programs.llvm.processors.LLVMSCCToIntTRSProcessor.process(LLVMSCCToIntTRSProcessor.java:51)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Runtime: 636345 milliseconds

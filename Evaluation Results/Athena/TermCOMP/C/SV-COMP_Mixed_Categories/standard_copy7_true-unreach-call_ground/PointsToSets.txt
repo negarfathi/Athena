@@ -1,0 +1,267 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %a1 = alloca [100000 x i32], align 16 [size: 400000, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a1 = alloca [100000 x i32], align 16 + 0
+NODE   4:   %a2 = alloca [100000 x i32], align 16 [size: 400000, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a2 = alloca [100000 x i32], align 16 + 0
+NODE   5:   %a3 = alloca [100000 x i32], align 16 [size: 400000, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a3 = alloca [100000 x i32], align 16 + 0
+NODE   6:   %a4 = alloca [100000 x i32], align 16 [size: 400000, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a4 = alloca [100000 x i32], align 16 + 0
+NODE   7:   %a5 = alloca [100000 x i32], align 16 [size: 400000, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a5 = alloca [100000 x i32], align 16 + 0
+NODE   8:   %a6 = alloca [100000 x i32], align 16 [size: 400000, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a6 = alloca [100000 x i32], align 16 + 0
+NODE   9:   %a7 = alloca [100000 x i32], align 16 [size: 400000, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a7 = alloca [100000 x i32], align 16 + 0
+NODE  10:   %a8 = alloca [100000 x i32], align 16 [size: 400000, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a8 = alloca [100000 x i32], align 16 + 0
+NODE  11:   %i = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %i = alloca i32, align 4 + 0
+NODE  12:   %x = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %x = alloca i32, align 4 + 0
+NODE  13:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  14:   store i32 0, i32* %i, align 4 (points-to size: 0)
+NODE  15:   %0 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  16:   %1 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  17:   %idxprom = sext i32 %1 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  18:   %arrayidx = getelementptr inbounds [100000 x i32], [100000 x i32]* % ... (points-to size: 1)
+    ->   %a1 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  19:   %2 = load i32, i32* %arrayidx, align 4 (points-to size: 0)
+NODE  20:   %3 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  21:   %idxprom1 = sext i32 %3 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  22:   %arrayidx2 = getelementptr inbounds [100000 x i32], [100000 x i32]*  ... (points-to size: 1)
+    ->   %a2 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  23:   store i32 %2, i32* %arrayidx2, align 4 (points-to size: 0)
+NODE  24:   store i32 0, i32* %i, align 4 (points-to size: 0)
+NODE  25:   %4 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  26:   %inc = add nsw i32 %4, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  27:   store i32 %inc, i32* %i, align 4 (points-to size: 0)
+NODE  28:   %5 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  29:   %6 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  30:   %idxprom6 = sext i32 %6 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  31:   %arrayidx7 = getelementptr inbounds [100000 x i32], [100000 x i32]*  ... (points-to size: 1)
+    ->   %a2 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  32:   %7 = load i32, i32* %arrayidx7, align 4 (points-to size: 0)
+NODE  33:   %8 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  34:   %idxprom8 = sext i32 %8 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  35:   %arrayidx9 = getelementptr inbounds [100000 x i32], [100000 x i32]*  ... (points-to size: 1)
+    ->   %a3 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  36:   store i32 %7, i32* %arrayidx9, align 4 (points-to size: 0)
+NODE  37:   store i32 0, i32* %i, align 4 (points-to size: 0)
+NODE  38:   %9 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  39:   %inc11 = add nsw i32 %9, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  40:   store i32 %inc11, i32* %i, align 4 (points-to size: 0)
+NODE  41:   %10 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  42:   %11 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  43:   %idxprom16 = sext i32 %11 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  44:   %arrayidx17 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a3 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  45:   %12 = load i32, i32* %arrayidx17, align 4 (points-to size: 0)
+NODE  46:   %13 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  47:   %idxprom18 = sext i32 %13 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  48:   %arrayidx19 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a4 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  49:   store i32 %12, i32* %arrayidx19, align 4 (points-to size: 0)
+NODE  50:   store i32 0, i32* %i, align 4 (points-to size: 0)
+NODE  51:   %14 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  52:   %inc21 = add nsw i32 %14, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  53:   store i32 %inc21, i32* %i, align 4 (points-to size: 0)
+NODE  54:   %15 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  55:   %16 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  56:   %idxprom26 = sext i32 %16 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  57:   %arrayidx27 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a4 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  58:   %17 = load i32, i32* %arrayidx27, align 4 (points-to size: 0)
+NODE  59:   %18 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  60:   %idxprom28 = sext i32 %18 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  61:   %arrayidx29 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a5 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  62:   store i32 %17, i32* %arrayidx29, align 4 (points-to size: 0)
+NODE  63:   store i32 0, i32* %i, align 4 (points-to size: 0)
+NODE  64:   %19 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  65:   %inc31 = add nsw i32 %19, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  66:   store i32 %inc31, i32* %i, align 4 (points-to size: 0)
+NODE  67:   %20 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  68:   %21 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  69:   %idxprom36 = sext i32 %21 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  70:   %arrayidx37 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a5 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  71:   %22 = load i32, i32* %arrayidx37, align 4 (points-to size: 0)
+NODE  72:   %23 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  73:   %idxprom38 = sext i32 %23 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  74:   %arrayidx39 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a6 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  75:   store i32 %22, i32* %arrayidx39, align 4 (points-to size: 0)
+NODE  76:   store i32 0, i32* %i, align 4 (points-to size: 0)
+NODE  77:   %24 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  78:   %inc41 = add nsw i32 %24, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  79:   store i32 %inc41, i32* %i, align 4 (points-to size: 0)
+NODE  80:   %25 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  81:   %26 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  82:   %idxprom46 = sext i32 %26 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  83:   %arrayidx47 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a6 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  84:   %27 = load i32, i32* %arrayidx47, align 4 (points-to size: 0)
+NODE  85:   %28 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  86:   %idxprom48 = sext i32 %28 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  87:   %arrayidx49 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a7 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  88:   store i32 %27, i32* %arrayidx49, align 4 (points-to size: 0)
+NODE  89:   store i32 0, i32* %i, align 4 (points-to size: 0)
+NODE  90:   %29 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  91:   %inc51 = add nsw i32 %29, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  92:   store i32 %inc51, i32* %i, align 4 (points-to size: 0)
+NODE  93:   %30 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  94:   %31 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  95:   %idxprom56 = sext i32 %31 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  96:   %arrayidx57 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a7 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE  97:   %32 = load i32, i32* %arrayidx57, align 4 (points-to size: 0)
+NODE  98:   %33 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  99:   %idxprom58 = sext i32 %33 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 100:   %arrayidx59 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a8 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE 101:   store i32 %32, i32* %arrayidx59, align 4 (points-to size: 0)
+NODE 102:   store i32 0, i32* %x, align 4 (points-to size: 0)
+NODE 103:   %34 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 104:   %inc61 = add nsw i32 %34, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 105:   store i32 %inc61, i32* %i, align 4 (points-to size: 0)
+NODE 106:   %35 = load i32, i32* %x, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 107:   %36 = load i32, i32* %x, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 108:   %idxprom66 = sext i32 %36 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 109:   %arrayidx67 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a1 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE 110:   %37 = load i32, i32* %arrayidx67, align 4 (points-to size: 0)
+NODE 111:   %38 = load i32, i32* %x, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 112:   %idxprom68 = sext i32 %38 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 113:   %arrayidx69 = getelementptr inbounds [100000 x i32], [100000 x i32]* ... (points-to size: 1)
+    ->   %a8 = alloca [100000 x i32], align 16 + Offset::UNKNOWN
+NODE 114:   %39 = load i32, i32* %arrayidx69, align 4 (points-to size: 0)
+NODE 115:   %conv = zext i1 %cmp70 to i32 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 116: <116> PSNodeType::CALL (points-to size: 0)
+NODE 117: <117> PSNodeType::ENTRY (points-to size: 0)
+NODE 118: i32 %cond (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 119:   %cond.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %cond.addr = alloca i32, align 4 + 0
+NODE 120:   store i32 %cond, i32* %cond.addr, align 4 (points-to size: 0)
+NODE 121:   %0 = load i32, i32* %cond.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 122:   ret void (points-to size: 0)
+NODE 123: __VERIFIER_assert (points-to size: 1)
+    -> __VERIFIER_assert + 0
+NODE 124: main (points-to size: 1)
+    -> main + 0
+NODE 125:   call void @__VERIFIER_assert(i32 %conv) (points-to size: 0)
+NODE 126:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE 127:   %40 = load i32, i32* %x, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE 128:   %inc72 = add nsw i32 %40, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE 129:   store i32 %inc72, i32* %x, align 4 (points-to size: 0)

@@ -1,0 +1,69 @@
+///*** 1_main ***///
+START: main_bb7;
+
+FROM: main_bb7;
+v11 := nondet();
+TO: main_bb7_v.;
+FROM: main_bb7_v.;
+assume(v11 < 1);
+v. := 1;
+TO: main_bb7_sv.;
+
+FROM: main_bb7_v.;
+assume(v11 >= 1);
+v. := v11;
+TO: main_bb7_sv.;
+
+FROM: main_bb7_sv.;
+v14 := v13 * 4;
+var__temp_vres.0.i := 0;
+var__temp_vi.0.i := 0;
+TO: main_bb8;
+
+FROM: main_bb8;
+vres.0.i := var__temp_vres.0.i;
+vi.0.i := var__temp_vi.0.i;
+TO: main_bb8_end;
+
+FROM: main_bb8_end;
+assume(vi.0.i < v.);
+TO: main_bb9;
+
+FROM: main_bb8_end;
+assume(vi.0.i >= v.);
+TO: main_test_fun.exit;
+
+FROM: main_bb9;
+var__temp_vres.1.i := vres.0.i;
+TO: main_bb10;
+
+FROM: main_bb10;
+vres.1.i := var__temp_vres.1.i;
+v22 := nondef.1;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(v22 > 0);
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(v22 <= 0);
+TO: main_bb12;
+
+FROM: main_bb11;
+v24 := nondef.2;
+v25 := v24 + -1;
+v21 := v25;
+v26 := vres.1.i + 1;
+var__temp_vres.1.i := v26;
+TO: main_bb10;
+
+FROM: main_bb12;
+v27 := vi.0.i + 1;
+var__temp_vres.0.i := vres.1.i;
+var__temp_vi.0.i := v27;
+TO: main_bb8;
+
+FROM: main_test_fun.exit;
+TO: main_test_fun.exit_ret;
+

@@ -1,0 +1,110 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.81rUCX
+
+Input File is : ChawdharyCookGulwaniSagivYang-ESOP2008-random1d_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program used in the experimental evaluation of the following paper.
+ * 2008ESOP - Chawdhary,Cook,Gulwani,Sagiv,Yang - Ranking Abstractions
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int a = __VERIFIER_nondet_int();
+	int x = __VERIFIER_nondet_int();
+	int max = __VERIFIER_nondet_int();
+	{if (max > 0) {
+		a = 0;
+		x = 1;
+		while (x <= max) {
+			{if (__VERIFIER_nondet_int())
+				{a = a + 1;}
+			else
+				{a = a - 1;}}
+			x = x + 1;
+		}
+	}}
+	return 0;
+}
+End Main   
+
+Input File is : ChawdharyCookGulwaniSagivYang-ESOP2008-random1d_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program used in the experimental evaluation of the following paper.
+ * 2008ESOP - Chawdhary,Cook,Gulwani,Sagiv,Yang - Ranking Abstractions
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int a = __VERIFIER_nondet_int();
+	int x = __VERIFIER_nondet_int();
+	int max = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(15, __func__);
+if (max > 0) { __VERIFIER_control_true(15, __func__);
+
+		a = 0;
+		x = 1;
+	myBool pStored0 = myFalse; __VERIFIER_reached_control(18, __func__);
+	while (x <= max) { __VERIFIER_loop_head(18, __func__);
+printf("CBMC Instrumentation @ line18");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int omax;static int ox;if(pStored0){__CPROVER_assert(!(oa==a && omax==max && ox==x),"recurrent state found");} if(flag){oa=a;omax=max;ox=x;pStored0=myTrue;} 
+			{ __VERIFIER_reached_control(19, __func__);
+if (__VERIFIER_nondet_int())
+				{ __VERIFIER_control_true(20, __func__);
+a = a + 1;}
+			else
+				{ __VERIFIER_control_false(22, __func__);
+a = a - 1;}}
+			x = x + 1;
+		}
+	}}
+	return 0;
+}
+End Main 
+ ChawdharyCookGulwaniSagivYang-ESOP2008-random1d_true-termination_braced_instrumented.c
+NTFILE is ChawdharyCookGulwaniSagivYang-ESOP2008-random1d_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for ChawdharyCookGulwaniSagivYang-ESOP2008-random1d_true-termination.c
+FILE=ChawdharyCookGulwaniSagivYang-ESOP2008-random1d_true-termination_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 65308 milliseconds

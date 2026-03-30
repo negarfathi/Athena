@@ -1,0 +1,121 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.jd1D53
+
+Input File is : Incorrect_Update_for_Loop_Iterator_3_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 92eb7a2f28d551acedeb5752263267a64b1f5ddf
+URL: https://github.com/cleaton/android_kernel_samsung_smdk4210/commit/92eb7a2f28d551acedeb5752263267a64b1f5ddf
+Project Name: android_kernel_samsung_smdk4210
+License: GPL2
+termination: FALSE
+*/
+
+
+
+int main()
+{
+    int nfds = __VERIFIER_nondet_int();
+    int nr = __VERIFIER_nondet_int();
+    int NR_OPEN = __VERIFIER_nondet_int();
+    while( nfds <= nr )
+    {
+        nfds = nfds * 2;
+        {if( nfds > NR_OPEN )
+            {nfds = NR_OPEN;}}
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Incorrect_Update_for_Loop_Iterator_3_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 92eb7a2f28d551acedeb5752263267a64b1f5ddf
+URL: https://github.com/cleaton/android_kernel_samsung_smdk4210/commit/92eb7a2f28d551acedeb5752263267a64b1f5ddf
+Project Name: android_kernel_samsung_smdk4210
+License: GPL2
+termination: FALSE
+*/
+
+
+
+int main()
+{
+    int nfds = __VERIFIER_nondet_int();
+    int nr = __VERIFIER_nondet_int();
+    int NR_OPEN = __VERIFIER_nondet_int();
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(18, __func__);
+ while( nfds <= nr )
+    { __VERIFIER_loop_head(18, __func__);
+printf("CBMC Instrumentation @ line18");myBool flag=__VERIFIER_nondet_myBool();static int oNR_OPEN;static int onfds;static int onr;if(pStored0){__CPROVER_assert(!(oNR_OPEN==NR_OPEN && onfds==nfds && onr==nr),"recurrent state found");} if(flag){oNR_OPEN=NR_OPEN;onfds=nfds;onr=nr;pStored0=myTrue;} 
+        nfds = nfds * 2;
+        { __VERIFIER_reached_control(20, __func__);
+if( nfds > NR_OPEN )
+            { __VERIFIER_control_true(21, __func__);
+nfds = NR_OPEN;}}
+    }
+    return 0;
+}
+
+End Main 
+ Incorrect_Update_for_Loop_Iterator_3_NT_braced_instrumented.c
+NTFILE is Incorrect_Update_for_Loop_Iterator_3_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Incorrect_Update_for_Loop_Iterator_3_NT.c
+b'a5c4dae99dff55c9690117d8dd6e297b8470e410fbebee84d3f299154a944408  Incorrect_Update_for_Loop_Iterator_3_NT.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Incorrect_Update_for_Loop_Iterator_3_NT/Incorrect_Update_for_Loop_Iterator_3_NT.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+main 18 reachedControl
+main 18 loopHead
+main 20 reachedControl
+main 21 trueBranch
+main 18 loopHead
+Trace file line inside enterred lasso check : main 18 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Incorrect_Update_for_Loop_Iterator_3_NT/Incorrect_Update_for_Loop_Iterator_3_NT.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Incorrect_Update_for_Loop_Iterator_3_NT.c
+FILE=Incorrect_Update_for_Loop_Iterator_3_NT_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2056 milliseconds

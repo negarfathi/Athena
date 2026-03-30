@@ -1,0 +1,143 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.hIFQQE
+
+Input File is : svcomp_a.09_assume-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int test_fun(int x, int y, int z)
+{
+    int* x_ref = alloca(sizeof(int));
+    int* y_ref = alloca(sizeof(int));
+    int* z_ref = alloca(sizeof(int));
+    *x_ref = x;
+    *y_ref = y;
+    *z_ref = z;
+    {if(*y_ref <= 0) {
+        // replace assume
+        return *z_ref;
+    }}
+    while (*x_ref >= *z_ref) {
+        {if(*y_ref <= 0) {
+            // replace assume
+            return *z_ref;
+        }}
+        *z_ref = *z_ref + *y_ref;
+    }
+    return *z_ref;
+}
+
+int main() {
+  return test_fun(__VERIFIER_nondet_int(),__VERIFIER_nondet_int(),__VERIFIER_nondet_int());
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_a.09_assume-alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int test_fun(int x, int y, int z)
+{
+    int* x_ref = alloca(sizeof(int));
+    int* y_ref = alloca(sizeof(int));
+    int* z_ref = alloca(sizeof(int));
+    *x_ref = x;
+    *y_ref = y;
+    *z_ref = z;
+    { __VERIFIER_reached_control(13, __func__);
+if(*y_ref <= 0) { __VERIFIER_control_true(13, __func__);
+
+        // replace assume
+        return *z_ref;
+    }}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(17, __func__);
+ while (*x_ref >= *z_ref) { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int ox;static int * ox_ref;static int ox_ref_val;static int oy;static int * oy_ref;static int oy_ref_val;static int oz;static int * oz_ref;static int oz_ref_val;if(pStored0){__CPROVER_assert(!(ox==x && ox_ref==x_ref && *ox_ref==*x_ref && ox_ref_val==*x_ref && oy==y && oy_ref==y_ref && *oy_ref==*y_ref && oy_ref_val==*y_ref && oz==z && oz_ref==z_ref && *oz_ref==*z_ref && oz_ref_val==*z_ref),"recurrent state found");} if(flag){ox=x;ox_ref=x_ref;*ox_ref=*x_ref;ox_ref_val=*x_ref;oy=y;oy_ref=y_ref;*oy_ref=*y_ref;oy_ref_val=*y_ref;oz=z;oz_ref=z_ref;*oz_ref=*z_ref;oz_ref_val=*z_ref;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(18, __func__);
+if(*y_ref <= 0) { __VERIFIER_control_true(18, __func__);
+
+            // replace assume
+            return *z_ref;
+        }}
+        *z_ref = *z_ref + *y_ref;
+    }
+    return *z_ref;
+}
+
+int main() {
+  return test_fun(__VERIFIER_nondet_int(),__VERIFIER_nondet_int(),__VERIFIER_nondet_int());
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_a.09_assume-alloca_braced_instrumented.c
+NTFILE is svcomp_a.09_assume-alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = svcomp_a.09_assume-alloca.c
+b'baa11ba6bc876aa7393f368fe6c3aa8125a29060224e835d0dd87eed5ab40807  svcomp_a.09_assume-alloca.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/AProVE_memory_alloca/svcomp_a.09_assume-alloca/svcomp_a.09_assume-alloca.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+test_fun 13 reachedControl
+test_fun 17 reachedControl
+test_fun 17 loopHead
+test_fun 18 reachedControl
+test_fun 17 loopHead
+test_fun 18 reachedControl
+test_fun 17 loopHead
+test_fun 18 reachedControl
+test_fun 17 loopHead
+test_fun 18 reachedControl
+test_fun 17 loopHead
+test_fun 18 reachedControl
+test_fun 17 loopHead
+test_fun 18 reachedControl
+test_fun 17 loopHead
+enteringLasso
+test_fun 18 reachedControl
+test_fun 17 loopHead
+Trace file line inside enterred lasso check : test_fun 18 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/AProVE_memory_alloca/svcomp_a.09_assume-alloca/svcomp_a.09_assume-alloca.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for svcomp_a.09_assume-alloca.c
+FILE=svcomp_a.09_assume-alloca_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 4657 milliseconds

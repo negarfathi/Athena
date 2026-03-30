@@ -1,0 +1,134 @@
+NODE   3: <3> PSNodeType::ENTRY (points-to size: 0)
+NODE   4:   %ldv_s_misc_fops_file_operations = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ldv_s_misc_fops_file_operations = alloca i32, align 4 + 0
+NODE   5:   store i32 0, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 0)
+NODE   6: <6> PSNodeType::CALL (points-to size: 0)
+NODE   7: <7> PSNodeType::ENTRY (points-to size: 0)
+NODE   8:   store i32 0, i32* @open_called, align 4 (points-to size: 0)
+NODE   9:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE  10: my_init (points-to size: 1)
+    -> my_init + 0
+NODE  11: main (points-to size: 1)
+    -> main + 0
+NODE  12:   %call = call i32 @my_init() (points-to size: 1)
+    -> null + 0
+NODE  13:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  14:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  15: <15> PSNodeType::CALL (points-to size: 0)
+NODE  16: <16> PSNodeType::ENTRY (points-to size: 0)
+NODE  17:   %0 = load i32, i32* @ldv_mutex, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  18:   ret void (points-to size: 0)
+NODE  19: <19> PSNodeType::CALL (points-to size: 0)
+NODE  20: <20> PSNodeType::ENTRY (points-to size: 0)
+NODE  21: __blast_assert (points-to size: 1)
+    -> __blast_assert + 0
+NODE  22: check_final_state (points-to size: 1)
+    -> check_final_state + 0
+NODE  23:   call void @__blast_assert() (points-to size: 0)
+NODE  24:   call void @check_final_state() (points-to size: 0)
+NODE  25:   ret void (points-to size: 0)
+NODE  26:   %0 = load i32, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  27:   %2 = load i32, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  28:   %4 = load i32, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  29:   %6 = load i32, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  30: <30> PSNodeType::CALL (points-to size: 0)
+NODE  31: <31> PSNodeType::ENTRY (points-to size: 0)
+NODE  32:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE  33:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  34:   store i32 1, i32* %retval, align 4 (points-to size: 0)
+NODE  35:   %0 = load i32, i32* %retval, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  36:   ret i32 %0 (points-to size: 0)
+NODE  37:   store i32 1, i32* @open_called, align 4 (points-to size: 0)
+NODE  38:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  39: misc_open (points-to size: 1)
+    -> misc_open + 0
+NODE  40:   %call3 = call i32 @misc_open() (points-to size: 0)
+NODE  41:   %1 = load i32, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  42:   %inc = add nsw i32 %1, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  43:   store i32 %inc, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 0)
+NODE  44: <44> PSNodeType::CALL (points-to size: 0)
+NODE  45: <45> PSNodeType::ENTRY (points-to size: 0)
+NODE  46:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE  47: misc_read (points-to size: 1)
+    -> misc_read + 0
+NODE  48:   %call7 = call i32 @misc_read() (points-to size: 1)
+    -> null + 0
+NODE  49:   %3 = load i32, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  50:   %inc8 = add nsw i32 %3, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  51:   store i32 %inc8, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 0)
+NODE  52: <52> PSNodeType::CALL (points-to size: 0)
+NODE  53: <53> PSNodeType::ENTRY (points-to size: 0)
+NODE  54:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE  55: misc_llseek (points-to size: 1)
+    -> misc_llseek + 0
+NODE  56:   %call13 = call i32 @misc_llseek() (points-to size: 1)
+    -> null + 0
+NODE  57:   %5 = load i32, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  58:   %inc14 = add nsw i32 %5, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  59:   store i32 %inc14, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 0)
+NODE  60: <60> PSNodeType::CALL (points-to size: 0)
+NODE  61: <61> PSNodeType::ENTRY (points-to size: 0)
+NODE  62:   %0 = load i32, i32* @open_called, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  63: <63> PSNodeType::CALL (points-to size: 0)
+NODE  64: <64> PSNodeType::ENTRY (points-to size: 0)
+NODE  65:   %0 = load i32, i32* @ldv_mutex, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  66:   store i32 2, i32* @ldv_mutex, align 4 (points-to size: 0)
+NODE  67:   ret void (points-to size: 0)
+NODE  68: <68> PSNodeType::CALL (points-to size: 0)
+NODE  69: mutex_lock (points-to size: 1)
+    -> mutex_lock + 0
+NODE  70:   call void @__blast_assert() (points-to size: 0)
+NODE  71: misc_release (points-to size: 1)
+    -> misc_release + 0
+NODE  72:   call void @mutex_lock() (points-to size: 0)
+NODE  73: <73> PSNodeType::CALL (points-to size: 0)
+NODE  74: <74> PSNodeType::ENTRY (points-to size: 0)
+NODE  75:   %0 = load i32, i32* @ldv_mutex, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  76:   store i32 1, i32* @ldv_mutex, align 4 (points-to size: 0)
+NODE  77:   ret void (points-to size: 0)
+NODE  78: <78> PSNodeType::CALL (points-to size: 0)
+NODE  79: mutex_unlock (points-to size: 1)
+    -> mutex_unlock + 0
+NODE  80:   call void @__blast_assert() (points-to size: 0)
+NODE  81:   call void @mutex_unlock() (points-to size: 0)
+NODE  82:   store i32 0, i32* @open_called, align 4 (points-to size: 0)
+NODE  83:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE  84: <84> PSNodeType::CALL (points-to size: 0)
+NODE  85:   call void @mutex_lock() (points-to size: 0)
+NODE  86: <86> PSNodeType::CALL (points-to size: 0)
+NODE  87:   call void @mutex_lock() (points-to size: 0)
+NODE  88:   %call19 = call i32 @misc_release() (points-to size: 1)
+    -> null + 0
+NODE  89:   store i32 0, i32* %ldv_s_misc_fops_file_operations, align 4 (points-to size: 0)

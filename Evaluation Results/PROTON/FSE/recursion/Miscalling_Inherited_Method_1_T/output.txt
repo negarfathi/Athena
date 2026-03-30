@@ -1,0 +1,77 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.CGQHj0
+
+Input File is : Miscalling_Inherited_Method_1_T.cpp
+
+ CBMC instrumentation
+
+Rewriter Init
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Miscalling_Inherited_Method_1_T.cpp
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+Commit Number: 4bfeeb3fa185dfb445a0475c13fc690f6b90b821
+URL: https://github.com/htcondor/htcondor/commit/4bfeeb3fa185dfb445a0475c13fc690f6b90b821
+Project Name: htcondor
+License: Apache-2.0
+termination: TRUE
+*/
+class ClassAdLog{
+	public:
+	int LookupInTransaction();
+};
+int ClassAdLog::LookupInTransaction()
+{
+	return 0;
+}
+
+class ClassAdCollection : private ClassAdLog {
+	public:
+	int LookupInTransaction()
+	{
+		return ClassAdLog::LookupInTransaction();
+	}
+
+};
+
+int main()
+{
+	ClassAdCollection A;
+	int c = A.LookupInTransaction();
+	return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in $FILE_NAME -c
+Miscalling_Inherited_Method_1_T_instrumented.c
+NTFILE is Miscalling_Inherited_Method_1_T_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Miscalling_Inherited_Method_1_T.cpp
+FILE=Miscalling_Inherited_Method_1_T_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 1584 milliseconds

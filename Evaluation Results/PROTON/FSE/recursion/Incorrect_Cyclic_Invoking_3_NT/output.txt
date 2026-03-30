@@ -1,0 +1,94 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.OlYfH7
+
+Input File is : Incorrect_Cyclic_Invoking_3_NT.cpp
+
+ CBMC instrumentation
+
+Rewriter Init
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Incorrect_Cyclic_Invoking_3_NT.cpp
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+Commit Number: bcdd0fdf80f57545452eb43fee33903fd3849e53
+URL: https://github.com/KDE/akonadi/commit/bcdd0fdf80f57545452eb43fee33903fd3849e53
+Project Name: akonadi
+License: GPL-3.0
+termination: FALSE
+*/
+class QModelIndex{
+    bool vd;
+    int clm;
+public:
+    QModelIndex(bool vld, int clmn):vd(vld), clm(clmn){}
+    bool isValid(){
+        return vd;
+    }
+    int column(){
+        return clm;
+    }
+};
+
+class EntityTreeModel{
+public:
+    int getColumnCount();
+    int columnCount();
+    QModelIndex parent;
+    EntityTreeModel(QModelIndex QL): parent(QL){}
+};
+
+
+int EntityTreeModel::getColumnCount(){
+    return columnCount();
+}
+
+int EntityTreeModel::columnCount(){
+    if (parent.isValid() && parent.column() != 0 )
+        return 0;
+    return getColumnCount();
+}
+int main(){
+    QModelIndex QL(true,  0);
+    EntityTreeModel E1(QL);
+    E1.getColumnCount();
+    return 0;
+
+}
+./proton: line 26:   103 Aborted                 instrumenter -in $FILE_NAME -c
+Incorrect_Cyclic_Invoking_3_NT_instrumented.c
+NTFILE is Incorrect_Cyclic_Invoking_3_NT_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for Incorrect_Cyclic_Invoking_3_NT.cpp
+FILE=Incorrect_Cyclic_Invoking_3_NT_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 2043 milliseconds

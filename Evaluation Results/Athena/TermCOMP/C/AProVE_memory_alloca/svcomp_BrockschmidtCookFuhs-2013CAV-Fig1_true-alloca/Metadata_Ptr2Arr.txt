@@ -1,0 +1,19 @@
+
+Macro, MEMORY0_SIZE
+GlobalVariable, memory0_freeIndex
+Function, allocate_memory0
+FunctionParameter, allocate_memory0, size
+LocalVariable, allocate_memory0, allocatedIndex
+Macro, MEMORY1_SIZE
+GlobalVariable, memory1_freeIndex
+Function, allocate_memory1
+FunctionParameter, allocate_memory1, size
+LocalVariable, allocate_memory1, allocatedIndex
+Macro, MEMORY2_SIZE
+GlobalVariable, memory2_freeIndex
+Function, allocate_memory2
+FunctionParameter, allocate_memory2, size
+LocalVariable, allocate_memory2, allocatedIndex
+LocalVariable, main, i
+LocalVariable, main, j
+LocalVariable, main, n

@@ -1,0 +1,152 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/AProVE_numeric/Binomial_true/Binomial_true.c
+Converting
+Type-checking Binomial_true
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of fact
+Simplifying
+Computing SSA of binomialCoefficient
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#61 __CPROVER_thread_key_dtors#59 __CPROVER_thread_keys#60 __CPROVER_malloc_is_new_array#51 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#48 __CPROVER_dead_object#49 __CPROVER_deallocated#50 __CPROVER_new_object#53 __CPROVER_rounding_mode#57 __CPROVER_pipe_count#56 __CPROVER_max_malloc_size#52 __CPROVER_next_thread_id#54 __CPROVER_next_thread_key#55 __CPROVER_thread_id#58 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#57 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#57) <= 0 && __CPROVER_pipe_count#56 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#56) <= 0 && __CPROVER_max_malloc_size#52 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#52) <= -36028797018963968 && __CPROVER_next_thread_id#54 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#54) <= 0 && __CPROVER_next_thread_key#55 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#55) <= 0 && __CPROVER_thread_id#58 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#58) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of binomialCoefficient
+Function binomialCoefficient not analyzed yet
+Recursively summarizing function binomialCoefficient
+Checking precondition of fact
+Function fact not analyzed yet
+Recursively summarizing function fact
+Checking precondition of fact
+Havoc recursive function call to fact
+Analyzing function fact
+Computing summary
+Computing termination argument for fact
+Function terminates
+
+Summary for function fact
+params: n 
+globals_in: 
+globals_out: fact#return_value#phi76 
+forward precondition: TRUE
+forward transformer: fact#return_value#phi76 <= 2147483647 && -((signed __CPROVER_bitvector[33])fact#return_value#phi76) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of fact
+Precondition trivially holds, replacing by summary.
+Checking precondition of fact
+Precondition trivially holds, replacing by summary.
+Analyzing function binomialCoefficient
+Computing summary
+Computing termination argument for binomialCoefficient
+Function terminates
+
+Summary for function binomialCoefficient
+params: n k 
+globals_in: 
+globals_out: binomialCoefficient#return_value#89 
+forward precondition: TRUE
+forward transformer: binomialCoefficient#return_value#89 <= 2147483647 && -((signed __CPROVER_bitvector[33])binomialCoefficient#return_value#89) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of binomialCoefficient
+Precondition trivially holds, replacing by summary.
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Synthesizing ranking function to prove termination
+
+Summary for function main
+params: 
+globals_in: 
+globals_out: main#return_value#phi47 
+forward precondition: TRUE
+forward transformer: main#return_value#phi47 <= 2147483647 && -((signed __CPROVER_bitvector[33])main#return_value#phi47) <= 2147483648
+forward invariant: ($guard#29 && $guard#ls35 ==> k#lb35 <= 2147483647) && ($guard#29 && $guard#ls35 ==> -((signed __CPROVER_bitvector[33])k#lb35) <= 2147483648) && ($guard#26 && $guard#ls38 ==> n#lb38 <= 2147483647) && ($guard#26 && $guard#ls38 ==> -((signed __CPROVER_bitvector[33])n#lb38) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#29 && $guard#34 && $cond#35 ==> TRUE) && ($guard#26 && $guard#36 && $cond#38 ==> (signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])n#phi26 - (signed __CPROVER_bitvector[33])n#37) > 0)
+
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 287846593
+  number of solver calls: 284287
+  number of summaries used: 7
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_initialize]: yes
+[fact]: yes
+[binomialCoefficient]: yes
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 557 milliseconds

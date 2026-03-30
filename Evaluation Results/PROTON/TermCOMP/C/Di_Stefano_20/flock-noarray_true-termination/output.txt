@@ -1,0 +1,1620 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.dhlw6s
+
+Input File is : flock-noarray_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+/*
+ * Program used in the experimental evaluation of the following paper:
+ * De Nicola, Di Stefano, Inverso. Multi-Agent Systems With Virtual Stigmergies. Sci.Comp. Progr. 187, 2020
+ *
+ * Date: 2020
+ * Authors: Luca Di Stefano, Omar Inverso
+ * Contact: luca <dot> distefano <at> gssi <dot> it
+ */
+extern int __VERIFIER_nondet_int(void);
+typedef char TYPEOFVALUES;
+typedef unsigned char TYPEOFPC;
+typedef unsigned char TYPEOFTIME;
+typedef unsigned char TYPEOFAGENTID;
+typedef unsigned char TYPEOFKEYIID;
+typedef unsigned char TYPEOFKEYLID;
+
+TYPEOFVALUES mod(TYPEOFVALUES n, TYPEOFVALUES m)
+{
+  return (n >= 0) ? (n % m) : (m + (n % m));
+}
+
+TYPEOFVALUES I_0_0;
+TYPEOFVALUES I_0_1;
+TYPEOFVALUES I_1_0;
+TYPEOFVALUES I_1_1;
+TYPEOFVALUES I_2_0;
+TYPEOFVALUES I_2_1;
+TYPEOFVALUES getI(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return (j == 0) ? (I_0_0) : (I_0_1);
+
+    case 1:
+      return (j == 0) ? (I_1_0) : (I_1_1);
+
+    case 2:
+      return (j == 0) ? (I_2_0) : (I_2_1);
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+TYPEOFTIME __LABS_time;
+unsigned char pc_0_0;
+unsigned char pc_1_0;
+unsigned char pc_2_0;
+TYPEOFVALUES getpc(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return pc_0_0;
+
+    case 1:
+      return pc_1_0;
+
+    case 2:
+      return pc_2_0;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setpc(int i, int j, unsigned char value)
+{
+  switch (i)
+  {
+    case 0:
+      pc_0_0 = value;
+      break;
+
+    case 1:
+      pc_1_0 = value;
+      break;
+
+    case 2:
+      pc_2_0 = value;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+_Bool Hin_0_0;
+_Bool Hin_1_0;
+_Bool Hin_2_0;
+TYPEOFVALUES getHin(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return Hin_0_0;
+
+    case 1:
+      return Hin_1_0;
+
+    case 2:
+      return Hin_2_0;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+_Bool Hout_0_0;
+_Bool Hout_1_0;
+_Bool Hout_2_0;
+TYPEOFVALUES getHout(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return Hout_0_0;
+
+    case 1:
+      return Hout_1_0;
+
+    case 2:
+      return Hout_2_0;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+unsigned char HinCnt_0;
+unsigned char HinCnt_1;
+unsigned char HinCnt_2;
+TYPEOFVALUES getHinCnt(int i)
+{
+  switch (i)
+  {
+    case 0:
+      return HinCnt_0;
+
+    case 1:
+      return HinCnt_1;
+
+    case 2:
+      return HinCnt_2;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setHinCnt(int i, unsigned char value)
+{
+  switch (i)
+  {
+    case 0:
+      HinCnt_0 = value;
+      break;
+
+    case 1:
+      HinCnt_1 = value;
+      break;
+
+    case 2:
+      HinCnt_2 = value;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+unsigned char HoutCnt_0;
+unsigned char HoutCnt_1;
+unsigned char HoutCnt_2;
+unsigned char getHoutCnt(int i)
+{
+  switch (i)
+  {
+    case 0:
+      return HoutCnt_0;
+
+    case 1:
+      return HoutCnt_1;
+
+    case 2:
+      return HoutCnt_2;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setHoutCnt(int i, unsigned char value)
+{
+  switch (i)
+  {
+    case 0:
+      HoutCnt_0 = value;
+      break;
+
+    case 1:
+      HoutCnt_1 = value;
+      break;
+
+    case 2:
+      HoutCnt_2 = value;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+TYPEOFTIME now(void)
+{
+  return ++__LABS_time;
+}
+
+TYPEOFVALUES Lvalue_0_0;
+TYPEOFVALUES Lvalue_0_1;
+TYPEOFVALUES Lvalue_1_0;
+TYPEOFVALUES Lvalue_1_1;
+TYPEOFVALUES Lvalue_2_0;
+TYPEOFVALUES Lvalue_2_1;
+TYPEOFVALUES Ltstamp_0_0;
+TYPEOFVALUES Ltstamp_1_0;
+TYPEOFVALUES Ltstamp_2_0;
+const TYPEOFKEYLID tupleStart = 0;
+const TYPEOFKEYLID tupleEnd = 1;
+_Bool link(TYPEOFAGENTID __LABS_link1, TYPEOFAGENTID __LABS_link2, TYPEOFKEYLID key)
+{
+  //_Bool __LABS_link = 0;
+  {if ((key >= 0) && (key <= 1))
+  {
+    {if ((((getI(__LABS_link1, 0) - getI(__LABS_link2, 0)) * (getI(__LABS_link1, 0) - getI(__LABS_link2, 0))) + ((getI(__LABS_link1, 1) - getI(__LABS_link2, 1)) * (getI(__LABS_link1, 1) - getI(__LABS_link2, 1)))) <= (5 * 5)) {return 1;}}
+  }}
+
+  return 0;
+}
+
+TYPEOFVALUES getLvalue(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return (j == 0) ? (Lvalue_0_0) : (Lvalue_0_1);
+
+    case 1:
+      return (j == 0) ? (Lvalue_1_0) : (Lvalue_1_1);
+
+    case 2:
+      return (j == 0) ? (Lvalue_2_0) : (Lvalue_2_1);
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setLvalue(TYPEOFAGENTID id, TYPEOFKEYLID key, TYPEOFVALUES value)
+{
+  switch (id)
+  {
+    case 0:
+      {if (key == 0)
+    {
+      Lvalue_0_0 = value;
+    }
+    else
+    {
+      Lvalue_0_1 = value;
+    }}
+
+      break;
+
+    case 1:
+      {if (key == 0)
+    {
+      Lvalue_1_0 = value;
+    }
+    else
+    {
+      Lvalue_1_1 = value;
+    }}
+
+      break;
+
+    case 2:
+      {if (key == 0)
+    {
+      Lvalue_2_0 = value;
+    }
+    else
+    {
+      Lvalue_2_1 = value;
+    }}
+
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+TYPEOFTIME getLtstamp(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return Ltstamp_0_0;
+
+    case 1:
+      return Ltstamp_1_0;
+
+    case 2:
+      return Ltstamp_2_0;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setLtstamp(TYPEOFAGENTID id, TYPEOFKEYLID key, TYPEOFVALUES value)
+{
+  switch (id)
+  {
+    case 0:
+      Ltstamp_0_0 = value;
+      break;
+
+    case 1:
+      Ltstamp_1_0 = value;
+      break;
+
+    case 2:
+      Ltstamp_2_0 = value;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+TYPEOFTIME timeof(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  return getLtstamp(id, tupleStart);
+}
+
+void setHin(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  setHinCnt(id, getHinCnt(id) + (!getHin(id, tupleStart)));
+  switch (id)
+  {
+    case 0:
+      Hin_0_0 = 1;
+      break;
+
+    case 1:
+      Hin_1_0 = 1;
+      break;
+
+    case 2:
+      Hin_2_0 = 1;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void clearHin(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  setHinCnt(id, getHinCnt(id) - getHin(id, tupleStart));
+  switch (id)
+  {
+    case 0:
+      Hin_0_0 = 0;
+      break;
+
+    case 1:
+      Hin_1_0 = 0;
+      break;
+
+    case 2:
+      Hin_2_0 = 0;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setHout(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  setHoutCnt(id, getHoutCnt(id) + (!getHout(id, tupleStart)));
+  switch (id)
+  {
+    case 0:
+      Hout_0_0 = 1;
+      break;
+
+    case 1:
+      Hout_1_0 = 1;
+      break;
+
+    case 2:
+      Hout_2_0 = 1;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void clearHout(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  setHoutCnt(id, getHoutCnt(id) - getHout(id, tupleStart));
+  switch (id)
+  {
+    case 0:
+      Hout_0_0 = 0;
+      break;
+
+    case 1:
+      Hout_1_0 = 0;
+      break;
+
+    case 2:
+      Hout_2_0 = 0;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void attr(TYPEOFAGENTID id, TYPEOFKEYIID key, TYPEOFVALUES value, _Bool check)
+{
+  __VERIFIER_assume((!check) || (getHoutCnt(id) == 0));
+  __VERIFIER_assume((!check) || (getHinCnt(id) == 0));
+  switch (id)
+  {
+    case 0:
+      {if (key == 0)
+    {
+      I_0_0 = value;
+    }
+    else
+    {
+      I_0_1 = value;
+    }}
+
+      break;
+
+    case 1:
+      {if (key == 0)
+    {
+      I_1_0 = value;
+    }
+    else
+    {
+      I_1_1 = value;
+    }}
+
+      break;
+
+    case 2:
+      {if (key == 0)
+    {
+      I_2_0 = value;
+    }
+    else
+    {
+      I_2_1 = value;
+    }}
+
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+  now();
+}
+
+void lstig(TYPEOFAGENTID id, TYPEOFKEYLID key, TYPEOFVALUES value, _Bool check)
+{
+  __VERIFIER_assume((!check) || (getHoutCnt(id) == 0));
+  __VERIFIER_assume((!check) || (getHinCnt(id) == 0));
+  setLvalue(id, key, value);
+  setHout(id, key);
+}
+
+void confirm(void)
+{
+  TYPEOFAGENTID guessedcomp = __VERIFIER_nondet_int();
+  TYPEOFKEYLID guessedkey = __VERIFIER_nondet_int();
+  TYPEOFAGENTID i = __VERIFIER_nondet_int();
+  TYPEOFKEYLID k = __VERIFIER_nondet_int();
+  TYPEOFKEYLID next = __VERIFIER_nondet_int();
+  TYPEOFTIME t = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedcomp < 3);
+  __VERIFIER_assume(getHinCnt(guessedcomp) > 0);
+  __VERIFIER_assume(guessedkey < 2);
+  __VERIFIER_assume(getHin(guessedcomp, guessedkey) == 1);
+  t = timeof(guessedcomp, guessedkey);
+  for (i = 0; i < 3; i++)
+  {
+    {if (((guessedcomp != i) && (timeof(i, guessedkey) != t)) && link(guessedcomp, i, guessedkey))
+    {
+      setHout(i, guessedkey);
+      {if (timeof(i, guessedkey) < t)
+      {
+        clearHin(i, guessedkey);
+        for (k = 0; k < 2; k++)
+        {
+          next = guessedkey + k;
+          {if (next <= tupleEnd)
+            {setLvalue(i, next, getLval
+Rewrite Buffer is not NULL
+
+Finished Rewriting  ue(guessedcomp, next));}}
+
+        }
+
+        setLtstamp(i, guessedkey, t);
+      }}
+
+    }}
+
+  }
+
+  clearHin(guessedcomp, guessedkey);
+}
+
+void propagate(void)
+{
+  TYPEOFAGENTID guessedcomp = __VERIFIER_nondet_int();
+  TYPEOFKEYLID guessedkey = __VERIFIER_nondet_int();
+  TYPEOFAGENTID i = __VERIFIER_nondet_int();
+  TYPEOFKEYLID k = __VERIFIER_nondet_int();
+  TYPEOFKEYLID next = __VERIFIER_nondet_int();
+  TYPEOFTIME t = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedcomp < 3);
+  __VERIFIER_assume(getHoutCnt(guessedcomp) > 0);
+  __VERIFIER_assume(guessedkey < 2);
+  __VERIFIER_assume(getHout(guessedcomp, guessedkey) == 1);
+  t = timeof(guessedcomp, guessedkey);
+  for (i = 0; i < 3; i++)
+  {
+    {if (((guessedcomp != i) && (timeof(i, guessedkey) < t)) && link(guessedcomp, i, guessedkey))
+    {
+      setHout(i, guessedkey);
+      clearHin(i, guessedkey);
+      for (k = 0; k < 2; k++)
+      {
+        next = guessedkey + k;
+        {if (next <= tupleEnd)
+          {setLvalue(i, next, getLvalue(guessedcomp, next));}}
+
+      }
+
+      setLtstamp(i, guessedkey, t);
+    }}
+
+  }
+
+  clearHout(guessedcomp, guessedkey);
+}
+
+void init()
+{
+  Ltstamp_0_0 = 0;
+  Ltstamp_1_0 = 0;
+  Ltstamp_2_0 = 0;
+  Hin_0_0 = 0;
+  Hin_1_0 = 0;
+  Hin_2_0 = 0;
+  Hout_0_0 = 0;
+  Hout_1_0 = 0;
+  Hout_2_0 = 0;
+  HinCnt_0 = 0;
+  HinCnt_1 = 0;
+  HinCnt_2 = 0;
+  HoutCnt_0 = 0;
+  HoutCnt_1 = 0;
+  HoutCnt_2 = 0;
+  pc_0_0 = 2;
+  pc_1_0 = 2;
+  pc_2_0 = 2;
+  I_0_0 = __VERIFIER_nondet_int();
+  I_0_1 = __VERIFIER_nondet_int();
+  I_1_0 = __VERIFIER_nondet_int();
+  I_1_1 = __VERIFIER_nondet_int();
+  I_2_0 = __VERIFIER_nondet_int();
+  I_2_1 = __VERIFIER_nondet_int();
+  Lvalue_0_0 = __VERIFIER_nondet_int();
+  Lvalue_0_1 = __VERIFIER_nondet_int();
+  Lvalue_1_0 = __VERIFIER_nondet_int();
+  Lvalue_1_1 = __VERIFIER_nondet_int();
+  Lvalue_2_0 = __VERIFIER_nondet_int();
+  Lvalue_2_1 = __VERIFIER_nondet_int();
+  __VERIFIER_assume((Lvalue_0_0 == (-1)) || (Lvalue_0_0 == 1));
+  __VERIFIER_assume((Lvalue_1_0 == (-1)) || (Lvalue_1_0 == 1));
+  __VERIFIER_assume((Lvalue_2_0 == (-1)) || (Lvalue_2_0 == 1));
+  __VERIFIER_assume((Lvalue_0_1 == (-1)) || (Lvalue_0_1 == 1));
+  __VERIFIER_assume((Lvalue_1_1 == (-1)) || (Lvalue_1_1 == 1));
+  __VERIFIER_assume((Lvalue_2_1 == (-1)) || (Lvalue_2_1 == 1));
+  __VERIFIER_assume((I_0_0 >= 0) && (I_0_0 < (5 - 0)));
+  __VERIFIER_assume((I_1_0 >= 0) && (I_1_0 < (5 - 0)));
+  __VERIFIER_assume((I_2_0 >= 0) && (I_2_0 < (5 - 0)));
+  __VERIFIER_assume((I_0_1 >= 0) && (I_0_1 < (5 - 0)));
+  __VERIFIER_assume((I_1_1 >= 0) && (I_1_1 < (5 - 0)));
+  __VERIFIER_assume((I_2_1 >= 0) && (I_2_1 < (5 - 0)));
+  Ltstamp_0_0 = now();
+  Ltstamp_1_0 = now();
+  Ltstamp_2_0 = now();
+  now();
+}
+
+void _0_2(int tid)
+{
+  TYPEOFVALUES val0 = mod(getI(tid, 0) + getLvalue(tid, 0), 5);
+  TYPEOFVALUES val1 = mod(getI(tid, 1) + getLvalue(tid, 1), 5);
+  attr(tid, 0, val0, 1);
+  attr(tid, 1, val1, 0);
+  setHin(tid, 0);
+  setHin(tid, 1);
+  setpc(tid, 0, 2);
+}
+
+int main(void)
+{
+  TYPEOFAGENTID firstAgent = 0;
+  init();
+  while (1)
+  {
+    {if ((_Bool) __VERIFIER_nondet_int())
+    {
+      switch (getpc(firstAgent, 0))
+      {
+        case 2:
+          _0_2(firstAgent);
+          break;
+
+        default:
+        {
+        }
+
+      }
+
+      {if (firstAgent == (3 - 1))
+      {
+        firstAgent = 0;
+      }
+      else
+      {
+        firstAgent++;
+      }}
+
+    }
+    else
+    {
+      _Bool propagate_or_confirm = __VERIFIER_nondet_int();
+      {if (propagate_or_confirm)
+        {propagate();}
+      else
+        {confirm();}}
+
+    }}
+
+    {if ((((((((((((Lvalue_0_0 == Lvalue_0_0) && (Lvalue_0_1 == Lvalue_0_1)) && (Lvalue_0_0 == Lvalue_1_0)) && (Lvalue_0_1 == Lvalue_1_1)) && (Lvalue_0_0 == Lvalue_2_0)) && (Lvalue_0_1 == Lvalue_2_1)) && (Lvalue_1_0 == Lvalue_1_0)) && (Lvalue_1_1 == Lvalue_1_1)) && (Lvalue_1_0 == Lvalue_2_0)) && (Lvalue_1_1 == Lvalue_2_1)) && (Lvalue_2_0 == Lvalue_2_0)) && (Lvalue_2_1 == Lvalue_2_1))
+    {
+      return 0;
+    }}
+
+  }
+
+}
+
+
+./proton: line 26:    92 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : flock-noarray_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program used in the experimental evaluation of the following paper:
+ * De Nicola, Di Stefano, Inverso. Multi-Agent Systems With Virtual Stigmergies. Sci.Comp. Progr. 187, 2020
+ *
+ * Date: 2020
+ * Authors: Luca Di Stefano, Omar Inverso
+ * Contact: luca <dot> distefano <at> gssi <dot> it
+ */
+extern int __VERIFIER_nondet_int(void);
+typedef char TYPEOFVALUES;
+typedef unsigned char TYPEOFPC;
+typedef unsigned char TYPEOFTIME;
+typedef unsigned char TYPEOFAGENTID;
+typedef unsigned char TYPEOFKEYIID;
+typedef unsigned char TYPEOFKEYLID;
+
+TYPEOFVALUES mod(TYPEOFVALUES n, TYPEOFVALUES m)
+{
+  return (n >= 0) ? (n % m) : (m + (n % m));
+}
+
+TYPEOFVALUES I_0_0;
+TYPEOFVALUES I_0_1;
+TYPEOFVALUES I_1_0;
+TYPEOFVALUES I_1_1;
+TYPEOFVALUES I_2_0;
+TYPEOFVALUES I_2_1;
+TYPEOFVALUES getI(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return (j == 0) ? (I_0_0) : (I_0_1);
+
+    case 1:
+      return (j == 0) ? (I_1_0) : (I_1_1);
+
+    case 2:
+      return (j == 0) ? (I_2_0) : (I_2_1);
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+TYPEOFTIME __LABS_time;
+unsigned char pc_0_0;
+unsigned char pc_1_0;
+unsigned char pc_2_0;
+TYPEOFVALUES getpc(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return pc_0_0;
+
+    case 1:
+      return pc_1_0;
+
+    case 2:
+      return pc_2_0;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setpc(int i, int j, unsigned char value)
+{
+  switch (i)
+  {
+    case 0:
+      pc_0_0 = value;
+      break;
+
+    case 1:
+      pc_1_0 = value;
+      break;
+
+    case 2:
+      pc_2_0 = value;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+_Bool Hin_0_0;
+_Bool Hin_1_0;
+_Bool Hin_2_0;
+TYPEOFVALUES getHin(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return Hin_0_0;
+
+    case 1:
+      return Hin_1_0;
+
+    case 2:
+      return Hin_2_0;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+_Bool Hout_0_0;
+_Bool Hout_1_0;
+_Bool Hout_2_0;
+TYPEOFVALUES getHout(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return Hout_0_0;
+
+    case 1:
+      return Hout_1_0;
+
+    case 2:
+      return Hout_2_0;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+unsigned char HinCnt_0;
+unsigned char HinCnt_1;
+unsigned char HinCnt_2;
+TYPEOFVALUES getHinCnt(int i)
+{
+  switch (i)
+  {
+    case 0:
+      return HinCnt_0;
+
+    case 1:
+      return HinCnt_1;
+
+    case 2:
+      return HinCnt_2;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setHinCnt(int i, unsigned char value)
+{
+  switch (i)
+  {
+    case 0:
+      HinCnt_0 = value;
+      break;
+
+    case 1:
+      HinCnt_1 = value;
+      break;
+
+    case 2:
+      HinCnt_2 = value;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+unsigned char HoutCnt_0;
+unsigned char HoutCnt_1;
+unsigned char HoutCnt_2;
+unsigned char getHoutCnt(int i)
+{
+  switch (i)
+  {
+    case 0:
+      return HoutCnt_0;
+
+    case 1:
+      return HoutCnt_1;
+
+    case 2:
+      return HoutCnt_2;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setHoutCnt(int i, unsigned char value)
+{
+  switch (i)
+  {
+    case 0:
+      HoutCnt_0 = value;
+      break;
+
+    case 1:
+      HoutCnt_1 = value;
+      break;
+
+    case 2:
+      HoutCnt_2 = value;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+TYPEOFTIME now(void)
+{
+  return ++__LABS_time;
+}
+
+TYPEOFVALUES Lvalue_0_0;
+TYPEOFVALUES Lvalue_0_1;
+TYPEOFVALUES Lvalue_1_0;
+TYPEOFVALUES Lvalue_1_1;
+TYPEOFVALUES Lvalue_2_0;
+TYPEOFVALUES Lvalue_2_1;
+TYPEOFVALUES Ltstamp_0_0;
+TYPEOFVALUES Ltstamp_1_0;
+TYPEOFVALUES Ltstamp_2_0;
+const TYPEOFKEYLID tupleStart = 0;
+const TYPEOFKEYLID tupleEnd = 1;
+_Bool link(TYPEOFAGENTID __LABS_link1, TYPEOFAGENTID __LABS_link2, TYPEOFKEYLID key)
+{
+  //_Bool __LABS_link = 0;
+  { __VERIFIER_reached_control(261, __func__);
+if ((key >= 0) && (key <= 1))
+  { __VERIFIER_control_true(262, __func__);
+
+    { __VERIFIER_reached_control(263, __func__);
+if ((((getI(__LABS_link1, 0) - getI(__LABS_link2, 0)) * (getI(__LABS_link1, 0) - getI(__LABS_link2, 0))) + ((getI(__LABS_link1, 1) - getI(__LABS_link2, 1)) * (getI(__LABS_link1, 1) - getI(__LABS_link2, 1)))) <= (5 * 5)) { __VERIFIER_control_true(263, __func__);
+return 1;}}
+  }}
+
+  return 0;
+}
+
+TYPEOFVALUES getLvalue(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return (j == 0) ? (Lvalue_0_0) : (Lvalue_0_1);
+
+    case 1:
+      return (j == 0) ? (Lvalue_1_0) : (Lvalue_1_1);
+
+    case 2:
+      return (j == 0) ? (Lvalue_2_0) : (Lvalue_2_1);
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setLvalue(TYPEOFAGENTID id, TYPEOFKEYLID key, TYPEOFVALUES value)
+{
+  switch (id)
+  {
+    case 0:
+      { __VERIFIER_reached_control(295, __func__);
+if (key == 0)
+    { __VERIFIER_control_true(296, __func__);
+
+      Lvalue_0_0 = value;
+    }
+    else
+    { __VERIFIER_control_false(300, __func__);
+
+      Lvalue_0_1 = value;
+    }}
+
+      break;
+
+    case 1:
+      { __VERIFIER_reached_control(307, __func__);
+if (key == 0)
+    { __VERIFIER_control_true(308, __func__);
+
+      Lvalue_1_0 = value;
+    }
+    else
+    { __VERIFIER_control_false(312, __func__);
+
+      Lvalue_1_1 = value;
+    }}
+
+      break;
+
+    case 2:
+      { __VERIFIER_reached_control(319, __func__);
+if (key == 0)
+    { __VERIFIER_control_true(320, __func__);
+
+      Lvalue_2_0 = value;
+    }
+    else
+    { __VERIFIER_control_false(324, __func__);
+
+      Lvalue_2_1 = value;
+    }}
+
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+TYPEOFTIME getLtstamp(int i, int j)
+{
+  switch (i)
+  {
+    case 0:
+      return Ltstamp_0_0;
+
+    case 1:
+      return Ltstamp_1_0;
+
+    case 2:
+      return Ltstamp_2_0;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setLtstamp(TYPEOFAGENTID id, TYPEOFKEYLID key, TYPEOFVALUES value)
+{
+  switch (id)
+  {
+    case 0:
+      Ltstamp_0_0 = value;
+      break;
+
+    case 1:
+      Ltstamp_1_0 = value;
+      break;
+
+    case 2:
+      Ltstamp_2_0 = value;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+TYPEOFTIME timeof(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  return getLtstamp(id, tupleStart);
+}
+
+void setHin(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  setHinCnt(id, getHinCnt(id) + (!getHin(id, tupleStart)));
+  switch (id)
+  {
+    case 0:
+      Hin_0_0 = 1;
+      break;
+
+    case 1:
+      Hin_1_0 = 1;
+      break;
+
+    case 2:
+      Hin_2_0 = 1;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void clearHin(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  setHinCnt(id, getHinCnt(id) - getHin(id, tupleStart));
+  switch (id)
+  {
+    case 0:
+      Hin_0_0 = 0;
+      break;
+
+    case 1:
+      Hin_1_0 = 0;
+      break;
+
+    case 2:
+      Hin_2_0 = 0;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void setHout(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  setHoutCnt(id, getHoutCnt(id) + (!getHout(id, tupleStart)));
+  switch (id)
+  {
+    case 0:
+      Hout_0_0 = 1;
+      break;
+
+    case 1:
+      Hout_1_0 = 1;
+      break;
+
+    case 2:
+      Hout_2_0 = 1;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void clearHout(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  setHoutCnt(id, getHoutCnt(id) - getHout(id, tupleStart));
+  switch (id)
+  {
+    case 0:
+      Hout_0_0 = 0;
+      break;
+
+    case 1:
+      Hout_1_0 = 0;
+      break;
+
+    case 2:
+      Hout_2_0 = 0;
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+}
+
+void attr(TYPEOFAGENTID id, TYPEOFKEYIID key, TYPEOFVALUES value, _Bool check)
+{
+  __VERIFIER_assume((!check) || (getHoutCnt(id) == 0));
+  __VERIFIER_assume((!check) || (getHinCnt(id) == 0));
+  switch (id)
+  {
+    case 0:
+      { __VERIFIER_reached_control(495, __func__);
+if (key == 0)
+    { __VERIFIER_control_true(496, __func__);
+
+      I_0_0 = value;
+    }
+    else
+    { __VERIFIER_control_false(500, __func__);
+
+      I_0_1 = value;
+    }}
+
+      break;
+
+    case 1:
+      { __VERIFIER_reached_control(507, __func__);
+if (key == 0)
+    { __VERIFIER_control_true(508, __func__);
+
+      I_1_0 = value;
+    }
+    else
+    { __VERIFIER_control_false(512, __func__);
+
+      I_1_1 = value;
+    }}
+
+      break;
+
+    case 2:
+      { __VERIFIER_reached_control(519, __func__);
+if (key == 0)
+    { __VERIFIER_control_true(520, __func__);
+
+      I_2_0 = value;
+    }
+    else
+    { __VERIFIER_control_false(524, __func__);
+
+      I_2_1 = value;
+    }}
+
+      break;
+
+    default:
+    {
+    }
+
+  }
+
+  now();
+}
+
+void lstig(TYPEOFAGENTID id, TYPEOFKEYLID key, TYPEOFVALUES value, _Bool check)
+{
+  __VERIFIER_assume((!check) || (getHoutCnt(id) == 0));
+  __VERIFIER_assume((!check) || (getHinCnt(id) == 0));
+  setLvalue(id, key, value);
+  setHout(id, key);
+}
+
+void confirm(void)
+{
+  TYPEOFAGENTID guessedcomp = __VERIFIER_nondet_int();
+  TYPEOFKEYLID guessedkey = __VERIFIER_nondet_int();
+  TYPEOFAGENTID i = __VERIFIER_nondet_int();
+  TYPEOFKEYLID k = __VERIFIER_nondet_int();
+  TYPEOFKEYLID next = __VERIFIER_nondet_int();
+  TYPEOFTIME t = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedcomp < 3);
+  __VERIFIER_assume(getHinCnt(guessedcomp) > 0);
+  __VERIFIER_assume(guessedkey < 2);
+  __VERIFIER_assume(getHin(guessedcomp, guessedkey) == 1);
+  t = timeof(guessedcomp, guessedkey);
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(561, __func__);
+ for (i = 0; i < 3; i++)
+  { __VERIFIER_loop_head(561, __func__);
+printf("CBMC Instrumentation @ line561");myBool flag=__VERIFIER_nondet_myBool();static unsigned char oHinCnt_0;static unsigned char oHinCnt_1;static unsigned char oHinCnt_2;static _Bool oHin_0_0;static _Bool oHin_1_0;static _Bool oHin_2_0;static unsigned char oHoutCnt_0;static unsigned char oHoutCnt_1;static unsigned char oHoutCnt_2;static _Bool oHout_0_0;static _Bool oHout_1_0;static _Bool oHout_2_0;static int oi;static unsigned char opc_0_0;static unsigned char opc_1_0;static unsigned char opc_2_0;if(pStored0){__CPROVER_assert(!(oHinCnt_0==HinCnt_0 && oHinCnt_1==HinCnt_1 && oHinCnt_2==HinCnt_2 && oHin_0_0==Hin_0_0 && oHin_1_0==Hin_1_0 && oHin_2_0==Hin_2_0 && oHoutCnt_0==HoutCnt_0 && oHoutCnt_1==HoutCnt_1 && oHoutCnt_2==HoutCnt_2 && oHout_0_0==Hout_0_0 && oHout_1_0==Hout_1_0 && oHout_2_0==Hout_2_0 && oi==i && opc_0_0==pc_0_0 && opc_1_0==pc_1_0 && opc_2_0==pc_2_0),"recurrent state found");} if(flag){oHinCnt_0=HinCnt_0;oHinCnt_1=HinCnt_1;oHinCnt_2=HinCnt_2;oHin_0_0=Hin_0_0;oHin_1_0=Hin_1_0;oHin_2_0=Hin_2_0;oHoutCnt_0=HoutCnt_0;oHoutCnt_1=HoutCnt_1;oHoutCnt_2=HoutCnt_2;oHout_0_0=Hout_0_0;oHout_1_0=Hout_1_0;oHout_2_0=Hout_2_0;oi=i;opc_0_0=pc_0_0;opc_1_0=pc_1_0;opc_2_0=pc_2_0;pStored0=myTrue;} 
+    { __VERIFIER_reached_control(562, __func__);
+if (((guessedcomp != i) && (timeof(i, guessedkey) != t)) && link(guessedcomp, i, guessedkey))
+    { __VERIFIER_control_true(563, __func__);
+
+      setHout(i, guessedkey);
+      { __VERIFIER_reached_control(565, __func__);
+if (timeof(i, guessedkey) < t)
+      { __VERIFIER_control_true(566, __func__);
+
+        clearHin(i, guessedkey);
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(569, __func__);
+ for (k = 0; k < 2; k++)
+        { __VERIFIER_loop_head(569, __func__);
+printf("CBMC Instrumentation @ line569");myBool flag=__VERIFIER_nondet_myBool();static unsigned char oHinCnt_0;static unsigned char oHinCnt_1;static unsigned char oHinCnt_2;static _Bool oHin_0_0;static _Bool oHin_1_0;static _Bool oHin_2_0;static unsigned char oHoutCnt_0;static unsigned char oHoutCnt_1;static unsigned char oHoutCnt_2;static _Bool oHout_0_0;static _Bool oHout_1_0;static _Bool oHout_2_0;static int oi;static unsigned char opc_0_0;static unsigned char opc_1_0;static unsigned char opc_2_0;if(pStored1){__CPROVER_assert(!(oHinCnt_0==HinCnt_0 && oHinCnt_1==HinCnt_1 && oHinCnt_2==HinCnt_2 && oHin_0_0==Hin_0_0 && oHin_1_0==Hin_1_0 && oHin_2_0==Hin_2_0 && oHoutCnt_0==HoutCnt_0 && oHoutCnt_1==HoutCnt_1 && oHoutCnt_2==HoutCnt_2 && oHout_0_0==Hout_0_0 && oHout_1_0==Hout_1_0 && oHout_2_0==Hout_2_0 && oi==i && opc_0_0==pc_0_0 && opc_1_0==pc_1_0 && opc_2_0==pc_2_0),"recurrent state found");} if(flag){oHinCnt_0=HinCnt_0;oHinCnt_1=HinCnt_1;oHinCnt_2=HinCnt_2;oHin_0_0=Hin_0_0;oHin_1_0=Hin_1_0;oHin_2_0=Hin_2_0;oHoutCnt_0=HoutCnt_0;oHoutCnt_1=HoutCnt_1;oHoutCnt_2=HoutCnt_2;oHout_0_0=Hout_0_0;oHout_1_0=Hout_1_0;oHout_2_0=Hout_2_0;oi=i;opc_0_0=pc_0_0;opc_1_0=pc_1_0;opc_2_0=pc_2_0;pStored1=myTrue;} 
+          next = guessedkey + k;
+          { __VERIFIER_reached_control(571, __func__);
+if (next <= tupleEnd)
+            { __VERIFIER_control_true(572, __func__);
+setLvalue(i, next, getLvalue(guessedcomp, next));}}
+
+        }
+
+        setLtstamp(i, guessedkey, t);
+      }}
+
+    }}
+
+  }
+
+  clearHin(guessedcomp, guessedkey);
+}
+
+void propagate(void)
+{
+  TYPEOFAGENTID guessedcomp = __VERIFIER_nondet_int();
+  TYPEOFKEYLID guessedkey = __VERIFIER_nondet_int();
+  TYPEOFAGENTID i = __VERIFIER_nondet_int();
+  TYPEOFKEYLID k = __VERIFIER_nondet_int();
+  TYPEOFKEYLID next = __VERIFIER_nondet_int();
+  TYPEOFTIME t = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedcomp < 3);
+  __VERIFIER_assume(getHoutCnt(guessedcomp) > 0);
+  __VERIFIER_assume(guessedkey < 2);
+  __VERIFIER_assume(getHout(guessedcomp, guessedkey) == 1);
+  t = timeof(guessedcomp, guessedkey);
+ myBool pStored2 = myFalse; __VERIFIER_reached_control(600, __func__);
+ for (i = 0; i < 3; i++)
+  { __VERIFIER_loop_head(600, __func__);
+printf("CBMC Instrumentation @ line600");myBool flag=__VERIFIER_nondet_myBool();static unsigned char oHinCnt_0;static unsigned char oHinCnt_1;static unsigned char oHinCnt_2;static _Bool oHin_0_0;static _Bool oHin_1_0;static _Bool oHin_2_0;static unsigned char oHoutCnt_0;static unsigned char oHoutCnt_1;static unsigned char oHoutCnt_2;static _Bool oHout_0_0;static _Bool oHout_1_0;static _Bool oHout_2_0;static int oi;static unsigned char opc_0_0;static unsigned char opc_1_0;static unsigned char opc_2_0;if(pStored2){__CPROVER_assert(!(oHinCnt_0==HinCnt_0 && oHinCnt_1==HinCnt_1 && oHinCnt_2==HinCnt_2 && oHin_0_0==Hin_0_0 && oHin_1_0==Hin_1_0 && oHin_2_0==Hin_2_0 && oHoutCnt_0==HoutCnt_0 && oHoutCnt_1==HoutCnt_1 && oHoutCnt_2==HoutCnt_2 && oHout_0_0==Hout_0_0 && oHout_1_0==Hout_1_0 && oHout_2_0==Hout_2_0 && oi==i && opc_0_0==pc_0_0 && opc_1_0==pc_1_0 && opc_2_0==pc_2_0),"recurrent state found");} if(flag){oHinCnt_0=HinCnt_0;oHinCnt_1=HinCnt_1;oHinCnt_2=HinCnt_2;oHin_0_0=Hin_0_0;oHin_1_0=Hin_1_0;oHin_2_0=Hin_2_0;oHoutCnt_0=HoutCnt_0;oHoutCnt_1=HoutCnt_1;oHoutCnt_2=HoutCnt_2;oHout_0_0=Hout_0_0;oHout_1_0=Hout_1_0;oHout_2_0=Hout_2_0;oi=i;opc_0_0=pc_0_0;opc_1_0=pc_1_0;opc_2_0=pc_2_0;pStored2=myTrue;} 
+    { __VERIFIER_reached_control(601, __func__);
+if (((guessedcomp != i) && (timeof(i, guessedkey) < t)) && link(guessedcomp, i, guessedkey))
+    { __VERIFIER_control_true(602, __func__);
+
+      setHout(i, guessedkey);
+      clearHin(i, guessedkey);
+     myBool pStored3 = myFalse; __VERIFIER_reached_control(606, __func__);
+ for (k = 0; k < 2; k++)
+      { __VERIFIER_loop_head(606, __func__);
+printf("CBMC Instrumentation @ line606");myBool flag=__VERIFIER_nondet_myBool();static unsigned char oHinCnt_0;static unsigned char oHinCnt_1;static unsigned char oHinCnt_2;static _Bool oHin_0_0;static _Bool oHin_1_0;static _Bool oHin_2_0;static unsigned char oHoutCnt_0;static unsigned char oHoutCnt_1;static unsigned char oHoutCnt_2;static _Bool oHout_0_0;static _Bool oHout_1_0;static _Bool oHout_2_0;static int oi;static unsigned char opc_0_0;static unsigned char opc_1_0;static unsigned char opc_2_0;if(pStored3){__CPROVER_assert(!(oHinCnt_0==HinCnt_0 && oHinCnt_1==HinCnt_1 && oHinCnt_2==HinCnt_2 && oHin_0_0==Hin_0_0 && oHin_1_0==Hin_1_0 && oHin_2_0==Hin_2_0 && oHoutCnt_0==HoutCnt_0 && oHoutCnt_1==HoutCnt_1 && oHoutCnt_2==HoutCnt_2 && oHout_0_0==Hout_0_0 && oHout_1_0==Hout_1_0 && oHout_2_0==Hout_2_0 && oi==i && opc_0_0==pc_0_0 && opc_1_0==pc_1_0 && opc_2_0==pc_2_0),"recurrent state found");} if(flag){oHinCnt_0=HinCnt_0;oHinCnt_1=HinCnt_1;oHinCnt_2=HinCnt_2;oHin_0_0=Hin_0_0;oHin_1_0=Hin_1_0;oHin_2_0=Hin_2_0;oHoutCnt_0=HoutCnt_0;oHoutCnt_1=HoutCnt_1;oHoutCnt_2=HoutCnt_2;oHout_0_0=Hout_0_0;oHout_1_0=Hout_1_0;oHout_2_0=Hout_2_0;oi=i;opc_0_0=pc_0_0;opc_1_0=pc_1_0;opc_2_0=pc_2_0;pStored3=myTrue;} 
+        next = guessedkey + k;
+        { __VERIFIER_reached_control(608, __func__);
+if (next <= tupleEnd)
+          { __VERIFIER_control_true(609, __func__);
+setLvalue(i, next, getLvalue(guessedcomp, next));}}
+
+      }
+
+      setLtstamp(i, guessedkey, t);
+    }}
+
+  }
+
+  clearHout(guessedcomp, guessedkey);
+}
+
+void init()
+{
+  Ltstamp_0_0 = 0;
+  Ltstamp_1_0 = 0;
+  Ltstamp_2_0 = 0;
+  Hin_0_0 = 0;
+  Hin_1_0 = 0;
+  Hin_2_0 = 0;
+  Hout_0_0 = 0;
+  Hout_1_0 = 0;
+  Hout_2_0 = 0;
+  HinCnt_0 = 0;
+  HinCnt_1 = 0;
+  HinCnt_2 = 0;
+  HoutCnt_0 = 0;
+  HoutCnt_1 = 0;
+  HoutCnt_2 = 0;
+  pc_0_0 = 2;
+  pc_1_0 = 2;
+  pc_2_0 = 2;
+  I_0_0 = __VERIFIER_nondet_int();
+  I_0_1 = __VERIFIER_nondet_int();
+  I_1_0 = __VERIFIER_nondet_int();
+  I_1_1 = __VERIFIER_nondet_int();
+  I_2_0 = __VERIFIER_nondet_int();
+  I_2_1 = __VERIFIER_nondet_int();
+  Lvalue_0_0 = __VERIFIER_nondet_int();
+  Lvalue_0_1 = __VERIFIER_nondet_int();
+  Lvalue_1_0 = __VERIFIER_nondet_int();
+  Lvalue_1_1 = __VERIFIER_nondet_int();
+  Lvalue_2_0 = __VERIFIER_nondet_int();
+  Lvalue_2_1 = __VERIFIER_nondet_int();
+  __VERIFIER_assume((Lvalue_0_0 == (-1)) || (Lvalue_0_0 == 1));
+  __VERIFIER_assume((Lvalue_1_0 == (-1)) || (Lvalue_1_0 == 1));
+  __VERIFIER_assume((Lvalue_2_0 == (-1)) || (Lvalue_2_0 == 1));
+  __VERIFIER_assume((Lvalue_0_1 == (-1)) || (Lvalue_0_1 == 1));
+  __VERIFIER_assume((Lvalue_1_1 == (-1)) || (Lvalue_1_1 == 1));
+  __VERIFIER_assume((Lvalue_2_1 == (-1)) || (Lvalue_2_1 == 1));
+  __VERIFIER_assume((I_0_0 >= 0) && (I_0_0 < (5 - 0)));
+  __VERIFIER_assume((I_1_0 >= 0) && (I_1_0 < (5 - 0)));
+  __VERIFIER_assume((I_2_0 >= 0) && (I_2_0 < (5 - 0)));
+  __VERIFIER_assume((I_0_1 >= 0) && (I_0_1 < (5 - 0)));
+  __VERIFIER_assume((I_1_1 >= 0) && (I_1_1 < (5 - 0)));
+  __VERIFIER_assume((I_2_1 >= 0) && (I_2_1 < (5 - 0)));
+  Ltstamp_0_0 = now();
+  Ltstamp_1_0 = now();
+  Ltstamp_2_0 = now();
+  now();
+}
+
+void _0_2(int tid)
+{
+  TYPEOFVALUES val0 = mod(getI(tid, 0) + getLvalue(tid, 0), 5);
+  TYPEOFVALUES val1 = mod(getI(tid, 1) + getLvalue(tid, 1), 5);
+  attr(tid, 0, val0, 1);
+  attr(tid, 1, val1, 0);
+  setHin(tid, 0);
+  setHin(tid, 1);
+  setpc(tid, 0, 2);
+}
+
+int main(void)
+{
+  TYPEOFAGENTID firstAgent = 0;
+  init();
+ myBool pStored4 = myFalse; __VERIFIER_reached_control(687, __func__);
+ while (1)
+  { __VERIFIER_loop_head(687, __func__);
+printf("CBMC Instrumentation @ line687");myBool flag=__VERIFIER_nondet_myBool();static unsigned char oHinCnt_0;static unsigned char oHinCnt_1;static unsigned char oHinCnt_2;static _Bool oHin_0_0;static _Bool oHin_1_0;static _Bool oHin_2_0;static unsigned char oHoutCnt_0;static unsigned char oHoutCnt_1;static unsigned char oHoutCnt_2;static _Bool oHout_0_0;static _Bool oHout_1_0;static _Bool oHout_2_0;static unsigned char opc_0_0;static unsigned char opc_1_0;static unsigned char opc_2_0;if(pStored4){__CPROVER_assert(!(oHinCnt_0==HinCnt_0 && oHinCnt_1==HinCnt_1 && oHinCnt_2==HinCnt_2 && oHin_0_0==Hin_0_0 && oHin_1_0==Hin_1_0 && oHin_2_0==Hin_2_0 && oHoutCnt_0==HoutCnt_0 && oHoutCnt_1==HoutCnt_1 && oHoutCnt_2==HoutCnt_2 && oHout_0_0==Hout_0_0 && oHout_1_0==Hout_1_0 && oHout_2_0==Hout_2_0 && opc_0_0==pc_0_0 && opc_1_0==pc_1_0 && opc_2_0==pc_2_0),"recurrent state found");} if(flag){oHinCnt_0=HinCnt_0;oHinCnt_1=HinCnt_1;oHinCnt_2=HinCnt_2;oHin_0_0=Hin_0_0;oHin_1_0=Hin_1_0;oHin_2_0=Hin_2_0;oHoutCnt_0=HoutCnt_0;oHoutCnt_1=HoutCnt_1;oHoutCnt_2=HoutCnt_2;oHout_0_0=Hout_0_0;oHout_1_0=Hout_1_0;oHout_2_0=Hout_2_0;opc_0_0=pc_0_0;opc_1_0=pc_1_0;opc_2_0=pc_2_0;pStored4=myTrue;} 
+    { __VERIFIER_reached_control(688, __func__);
+if ((_Bool) __VERIFIER_nondet_int())
+    { __VERIFIER_control_true(689, __func__);
+
+      switch (getpc(firstAgent, 0))
+      {
+        case 2:
+          _0_2(firstAgent);
+          break;
+
+        default:
+        {
+        }
+
+      }
+
+      { __VERIFIER_reached_control(702, __func__);
+if (firstAgent == (3 - 1))
+      { __VERIFIER_control_true(703, __func__);
+
+        firstAgent = 0;
+      }
+      else
+      { __VERIFIER_control_false(707, __func__);
+
+        firstAgent++;
+      }}
+
+    }
+    else
+    { __VERIFIER_control_false(713, __func__);
+
+      _Bool propagate_or_confirm = __VERIFIER_nondet_int();
+      { __VERIFIER_reached_control(715, __func__);
+if (propagate_or_confirm)
+        { __VERIFIER_control_true(716, __func__);
+propagate();}
+      else
+        { __VERIFIER_control_false(718, __func__);
+confirm();}}
+
+    }}
+
+    { __VERIFIER_reached_control(722, __func__);
+if ((((((((((((Lvalue_0_0 == Lvalue_0_0) && (Lvalue_0_1 == Lvalue_0_1)) && (Lvalue_0_0 == Lvalue_1_0)) && (Lvalue_0_1
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+ == Lvalue_1_1)) && (Lvalue_0_0 == Lvalue_2_0)) && (Lvalue_0_1 == Lvalue_2_1)) && (Lvalue_1_0 == Lvalue_1_0)) && (Lvalue_1_1 == Lvalue_1_1)) && (Lvalue_1_0 == Lvalue_2_0)) && (Lvalue_1_1 == Lvalue_2_1)) && (Lvalue_2_0 == Lvalue_2_0)) && (Lvalue_2_1 == Lvalue_2_1))
+    { __VERIFIER_control_true(723, __func__);
+
+      return 0;
+    }}
+
+  }
+
+}
+
+
+./proton: line 26:   104 Aborted                 instrumenter -in *braced.c -c
+flock-noarray_true-termination_braced_instrumented.c
+NTFILE is flock-noarray_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = flock-noarray_true-termination.c
+b'dbb56f438daa087172939d4068d95e9eb260768f68d63093a8866b0256e03513  flock-noarray_true-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/flock-noarray_true-termination/flock-noarray_true-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 687 reachedControl
+main 687 loopHead
+main 688 reachedControl
+main 689 trueBranch
+attr 495 reachedControl
+attr 496 trueBranch
+attr 495 reachedControl
+attr 500 falseBranch
+main 702 reachedControl
+main 707 falseBranch
+main 722 reachedControl
+main 687 loopHead
+main 688 reachedControl
+main 689 trueBranch
+attr 507 reachedControl
+attr 508 trueBranch
+attr 507 reachedControl
+attr 512 falseBranch
+main 702 reachedControl
+main 707 falseBranch
+main 722 reachedControl
+main 687 loopHead
+main 688 reachedControl
+main 713 falseBranch
+main 715 reachedControl
+main 718 falseBranch
+confirm 561 reachedControl
+confirm 561 loopHead
+confirm 562 reachedControl
+link 261 reachedControl
+link 262 trueBranch
+link 263 reachedControl
+link 263 trueBranch
+confirm 563 trueBranch
+confirm 565 reachedControl
+confirm 566 trueBranch
+enteringLasso
+confirm 569 reachedControl
+confirm 569 loopHead
+confirm 571 reachedControl
+confirm 572 trueBranch
+setLvalue 295 reachedControl
+setLvalue 296 trueBranch
+confirm 569 loopHead
+Trace file line inside enterred lasso check : confirm 569 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/flock-noarray_true-termination/flock-noarray_true-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for flock-noarray_true-termination.c
+FILE=flock-noarray_true-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 7703 milliseconds

@@ -1,0 +1,86 @@
+///*** 1_main ***///
+START: main_bb0;
+
+FROM: main_bb0;
+v0 := nondet();
+TO: main_bb0_end;
+
+FROM: main_bb0_end;
+assume((v0 <= 0) || (v0 > 1000));
+TO: main_bb7;
+
+FROM: main_bb0_end;
+assume((v0 > 0) && (v0 <= 1000));
+TO: main_bb1;
+
+FROM: main_bb1;
+var__temp_vi.0 := 0;
+TO: main_bb2;
+
+FROM: main_bb2;
+vi.0 := var__temp_vi.0;
+v7 := nondet();
+TO: main_bb2_end;
+
+FROM: main_bb2_end;
+assume(vi.0 < v0);
+TO: main_bb3;
+
+FROM: main_bb2_end;
+assume(vi.0 >= v0);
+TO: main_bb4;
+
+FROM: main_bb3;
+v9 := v7;
+v10 := vi.0 + 1;
+var__temp_vi.0 := v10;
+TO: main_bb2;
+
+FROM: main_bb4;
+var__temp_ventry.0 := v7;
+TO: main_bb4_end;
+
+FROM: main_bb4_end;
+assume(v7 < 0);
+TO: main_bb6;
+
+FROM: main_bb4_end;
+assume(v7 >= 0);
+TO: main_bb5;
+
+FROM: main_bb5;
+ventry.0 := var__temp_ventry.0;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(ventry.0 >= v0);
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(ventry.0 < v0);
+TO: main_bb8;
+
+FROM: main_bb6;
+TO: main_bb7;
+
+FROM: main_bb7;
+TO: main_bb7_ret;
+
+FROM: main_bb8;
+v15 := nondef.2;
+v17 := ventry.0 + 1;
+TO: main_bb8_v.entry.0;
+FROM: main_bb8_v.entry.0;
+assume(v15 != 0);
+v.entry.0 := v17;
+TO: main_bb8_sv.entry.0;
+
+FROM: main_bb8_v.entry.0;
+assume(v15 == 0);
+v.entry.0 := ventry.0;
+TO: main_bb8_sv.entry.0;
+
+FROM: main_bb8_sv.entry.0;
+var__temp_ventry.0 := v.entry.0;
+TO: main_bb5;
+

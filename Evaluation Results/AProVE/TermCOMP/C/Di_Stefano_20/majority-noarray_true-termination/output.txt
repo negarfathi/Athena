@@ -1,0 +1,166 @@
+/liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/majority-noarray_true-termination/majority-noarray_true-termination.c:73:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+/liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/majority-noarray_true-termination/majority-noarray_true-termination.c:90:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+/liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/majority-noarray_true-termination/majority-noarray_true-termination.c:107:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+/liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/majority-noarray_true-termination/majority-noarray_true-termination.c:124:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+/liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/majority-noarray_true-termination/majority-noarray_true-termination.c:144:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+/liven
+ess_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/majority-noarray_true-termination/majority-noarray_true-termination.c:161:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+/liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/majority-noarray_true-termination/majority-noarray_true-termination.c:190:3: warning: implicit declaration of function '__VERIFIER_assume' is invalid in C99 [-Wimplicit-function-declaration]
+  __VERIFIER_assume(getE(0) != tid);
+  ^
+7 warnings generated.
+
+line 1511:5 extraneous input 'metadata' expecting EXCLAMATION
+line 1511:25 no viable alternative at input '!'
+Instruction count:1038
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of setE
+deleted entry node of get_E_21_1
+deleted entry node of setE
+deleted entry node of get_pc_21_1
+deleted entry node of setpc
+deleted entry node of get_I_21_1
+deleted entry node of setI
+deleted entry node of get_pc_21_1
+deleted entry node of setpc
+deleted entry node of get_I_21_1
+deleted entry node of get_I_21_1
+deleted entry node of setI
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_pc_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_E_21_1
+deleted entry node of get_I_21_1
+deleted entry node of get_I_21_1
+deleted entry node of get_E_21_1
+deleted entry node of setE
+Aborted 1755925367Exec. 4, LLVMToSEGraph with some error. Reason: InconsistentStateException [integerState=vals:
+{v1=[1,+inf), v2=[1,+inf), v3=#, v5=[1,+inf), v6=[1,+inf), v7=#, v9=[1,+inf), v10=[1,+inf), v11=#, v10936=#, v10973=[1,+inf){-inf,+inf}, v10974=[1,+inf){-inf,+inf}, v10975=[4,+inf){0,+inf}, v10976=[1,+inf){-inf,+inf}, v10977=[4,+inf){0,+inf}}
+associations:
+{v1=0, v2=0, v5=1, v6=1, v9=2, v10=2, v10973=3, v10974=4, v10975=4, v10976=5, v10977=5}
+association offsets:
+{v1=0, v2=0, v5=0, v6=0, v9=0, v10=0, v10973=0, v10974=3, v10975=0, v10976=3, v10977=0}
+rels:
+undirected inequalities:
+[]
+equations:
+[(1 = (3 * v10936))]
+weak directed inequalities:
+[]
+strict directed inequalities:
+[], newRelation=(1 = 0)].
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.replaceReferences(LLVMHeuristicState.java:6327)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.unifySymbolicVariables(LLVMHeuristicState.java:3067)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:3794)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:508)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcess(LLVMHeuristicState.java:3220)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcessAfterRefinement(LLVMHeuristicState.java:2662)
+            aprove.InputModules.Programs.llvm.states.LLVMAbstractState.evaluate(LLVMAbstractState.java:542)
+            aprove.InputModules.Programs.llvm.segraph.graphConstructionSteps.LLVMStandardStep.perform(LLVMStandardStep.java:98)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.executeStepAndPutSucessorStepsInQueue(LLVMSEGraph.java:1087)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:243)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:216)
+            aprove.InputModules.Programs.llvm.segraph.LLVMGraphBuilder.buildGraph(LLVMGraphBuilder.java:84)
+            aprove.InputModules.Programs.llvm.processors.LLVMToSEGraphProcessor.process(LLVMToSEGraphProcessor.java:110)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            java.base/java.lang.Thread.run(Thread.java:840)
+InconsistentStateException [integerState=vals:
+{v1=[1,+inf), v2=[1,+inf), v3=#, v5=[1,+inf), v6=[1,+inf), v7=#, v9=[1,+inf), v10=[1,+inf), v11=#, v10936=#, v10973=[1,+inf){-inf,+inf}, v10974=[1,+inf){-inf,+inf}, v10975=[4,+inf){0,+inf}, v10976=[1,+inf){-inf,+inf}, v10977=[4,+inf){0,+inf}}
+associations:
+{v1=0, v2=0, v5=1, v6=1, v9=2, v10=2, v10973=3, v10974=4, v10975=4, v10976=5, v10977=5}
+association offsets:
+{v1=0, v2=0, v5=0, v6=0, v9=0, v10=0, v10973=0, v10974=3, v10975=0, v10976=3, v10977=0}
+rels:
+undirected inequalities:
+[]
+equations:
+[(1 = (3 * v10936))]
+weak directed inequalities:
+[]
+strict directed inequalities:
+[], newRelation=(1 = 0)]
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.replaceReferences(LLVMHeuristicState.java:6327)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.unifySymbolicVariables(LLVMHeuristicState.java:3067)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:3794)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:508)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcess(LLVMHeuristicState.java:3220)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcessAfterRefinement(LLVMHeuristicState.java:2662)
+	at aprove.InputModules.Programs.llvm.states.LLVMAbstractState.evaluate(LLVMAbstractState.java:542)
+	at aprove.InputModules.Programs.llvm.segraph.graphConstructionSteps.LLVMStandardStep.perform(LLVMStandardStep.java:98)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.executeStepAndPutSucessorStepsInQueue(LLVMSEGraph.java:1087)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:243)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:216)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMGraphBuilder.buildGraph(LLVMGraphBuilder.java:84)
+	at aprove.InputModules.Programs.llvm.processors.LLVMToSEGraphProcessor.process(LLVMToSEGraphProcessor.java:110)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+MAYBE
+Runtime: 12335 milliseconds

@@ -1,0 +1,96 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.zkiIw6
+
+Input File is : Using_Erroneous_Condition_2_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+
+Commit Number: 8455d26243aef72f7b827ec0d8367b6b7816de07
+URL: https://github.com/bminor/binutils-gdb/commit/8455d26243aef72f7b827ec0d8367b6b7816de07
+Project Name: binutils-gdb
+License: GPL2
+termination: FALSE
+*/
+int main()
+{
+    int reg_count = __VERIFIER_nondet_int();
+    {if( reg_count > 65534)
+        {return 0;}}
+    for( int i = 0 ; reg_count ; i++ )
+    {
+        //loop
+    }
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Using_Erroneous_Condition_2_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+
+Commit Number: 8455d26243aef72f7b827ec0d8367b6b7816de07
+URL: https://github.com/bminor/binutils-gdb/commit/8455d26243aef72f7b827ec0d8367b6b7816de07
+Project Name: binutils-gdb
+License: GPL2
+termination: FALSE
+*/
+int main()
+{
+    int reg_count = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(13, __func__);
+if( reg_count > 65534)
+        { __VERIFIER_control_true(14, __func__);
+return 0;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(16, __func__);
+ for( int i = 0 ; reg_count ; i++ )
+    { __VERIFIER_loop_head(16, __func__);
+printf("CBMC Instrumentation @ line16");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int oreg_count;if(pStored0){__CPROVER_assert(!(oi==i && oreg_count==reg_count),"recurrent state found");} if(flag){oi=i;oreg_count=reg_count;pStored0=myTrue;} 
+        //loop
+    }
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Using_Erroneous_Condition_2_NT_braced_instrumented.c
+NTFILE is Using_Erroneous_Condition_2_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for Using_Erroneous_Condition_2_NT.c
+FILE=Using_Erroneous_Condition_2_NT_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 156380 milliseconds

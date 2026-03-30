@@ -1,0 +1,52 @@
+///*** 1_main ***///
+START: main_bb4;
+
+FROM: main_bb4;
+v5 := nondet();
+v6 := nondet();
+v7 := nondet();
+TO: main_bb4_vn.0;
+FROM: main_bb4_vn.0;
+assume(v6 < 1);
+vn.0 := 1;
+TO: main_bb4_svn.0;
+
+FROM: main_bb4_vn.0;
+assume(v6 >= 1);
+vn.0 := v6;
+TO: main_bb4_svn.0;
+
+FROM: main_bb4_svn.0;
+v10 := v9 * 1;
+TO: main_bb4_end;
+
+FROM: main_bb4_end;
+assume(v12 != 0);
+TO: main_bb5;
+
+FROM: main_bb4_end;
+assume(v12 == 0);
+TO: main_cmemset.exit;
+
+FROM: main_bb5;
+var__temp_v.0.i := v12;
+TO: main_bb6;
+
+FROM: main_bb6;
+v.0.i := var__temp_v.0.i;
+vd.0.i := v14;
+v16 := v.0.i + -1;
+var__temp_v.0.i := v16;
+TO: main_bb6_end;
+
+FROM: main_bb6_end;
+assume(v16 != 0);
+TO: main_bb6;
+
+FROM: main_bb6_end;
+assume(v16 == 0);
+TO: main_cmemset.exit;
+
+FROM: main_cmemset.exit;
+TO: main_cmemset.exit_ret;
+

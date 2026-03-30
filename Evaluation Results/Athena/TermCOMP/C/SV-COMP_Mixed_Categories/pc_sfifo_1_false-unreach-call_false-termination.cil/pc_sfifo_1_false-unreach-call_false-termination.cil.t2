@@ -1,0 +1,346 @@
+///*** 1_main ***///
+START: main_bb82;
+
+
+
+FROM: main_bb82;
+p_dw_pc := 0;
+q_read_ev := 0;
+c_dr_pc := 0;
+q_write_ev := 0;
+p_dw_st := 0;
+c_dr_st := 0;
+q_free := 0;
+q_buf_0 := 0;
+p_last_write := 0;
+p_num_write := 0;
+a_t := 0;
+c_last_read := 0;
+c_num_read := 0;
+p_dw_i := 0;
+c_dr_i := 0;
+q_free := 1;
+q_write_ev := 2;
+v190 := q_write_ev;
+q_read_ev := v190;
+p_num_write := 0;
+p_dw_pc := 0;
+p_dw_i := 1;
+c_num_read := 0;
+c_dr_pc := 0;
+c_dr_i := 1;
+v191 := p_dw_i;
+TO: main_bb82_end;
+
+FROM: main_bb82_end;
+assume(v191 == 1);
+TO: main_bb83;
+
+FROM: main_bb82_end;
+assume(v191 != 1);
+TO: main_bb84;
+
+FROM: main_bb83;
+p_dw_st := 0;
+TO: main_bb85;
+
+FROM: main_bb84;
+p_dw_st := 2;
+TO: main_bb85;
+
+FROM: main_bb85;
+v193 := c_dr_i;
+TO: main_bb85_end;
+
+FROM: main_bb85_end;
+assume(v193 == 1);
+TO: main_bb86;
+
+FROM: main_bb85_end;
+assume(v193 != 1);
+TO: main_bb87;
+
+FROM: main_bb86;
+c_dr_st := 0;
+TO: main_init_threads.exit.i;
+
+FROM: main_bb87;
+c_dr_st := 2;
+TO: main_init_threads.exit.i;
+
+FROM: main_init_threads.exit.i;
+v195 := p_dw_st;
+v197 := c_dr_st;
+v199 := p_dw_st;
+TO: main_init_threads.exit.i_end;
+
+FROM: main_init_threads.exit.i_end;
+assume((v195 == 0) || (v197 == 0));
+TO: main_bb88;
+
+FROM: main_init_threads.exit.i_end;
+assume((v195 != 0) && (v197 != 0));
+TO: main_eval.exit.i;
+
+FROM: main_bb88;
+TO: main_bb88_end;
+
+FROM: main_bb88_end;
+assume(v199 == 0);
+TO: main_bb89;
+
+FROM: main_bb88_end;
+assume(v199 != 0);
+TO: main_bb96;
+
+FROM: main_bb89;
+v201 := nondet();
+TO: main_bb89_end;
+
+FROM: main_bb89_end;
+assume(v201 != 0);
+TO: main_bb90;
+
+FROM: main_bb89_end;
+assume(v201 == 0);
+TO: main_bb95;
+
+FROM: main_bb90;
+p_dw_st := 1;
+v203 := p_dw_pc;
+v205 := p_dw_pc;
+v207 := q_free;
+TO: main_bb90_end;
+
+FROM: main_bb90_end;
+assume((!((v203 != 0) && (v205 == 1))) && (v207 == 0));
+TO: main_do_write_p.exit.i.i;
+
+FROM: main_bb90_end;
+assume(((v203 != 0) && (v205 == 1)) || (v207 != 0));
+TO: main_bb91;
+
+FROM: main_bb91;
+v209 := nondet();
+q_buf_0 := v209;
+v210 := q_buf_0;
+p_last_write := v210;
+v211 := p_num_write;
+v212 := v211 + 1;
+p_num_write := v212;
+q_free := 0;
+q_write_ev := 1;
+v213 := p_dw_pc;
+v215 := q_read_ev;
+TO: main_bb91_end;
+
+FROM: main_bb91_end;
+assume((v213 == 1) && (v215 == 1));
+TO: main_bb92;
+
+FROM: main_bb91_end;
+assume((v213 != 1) || (v215 != 1));
+TO: main_bb93;
+
+FROM: main_bb92;
+p_dw_st := 0;
+TO: main_bb93;
+
+FROM: main_bb93;
+v217 := c_dr_pc;
+v219 := q_write_ev;
+TO: main_bb93_end;
+
+FROM: main_bb93_end;
+assume((v217 == 1) && (v219 == 1));
+TO: main_bb94;
+
+FROM: main_bb93_end;
+assume((v217 != 1) || (v219 != 1));
+TO: main_immediate_notify_threads.exit.i5.i.i;
+
+FROM: main_bb94;
+c_dr_st := 0;
+TO: main_immediate_notify_threads.exit.i5.i.i;
+
+FROM: main_immediate_notify_threads.exit.i5.i.i;
+q_write_ev := 2;
+v.old.i.i.i := q_free;
+TO: main_immediate_notify_threads.exit.i5.i.i_end;
+
+FROM: main_immediate_notify_threads.exit.i5.i.i_end;
+assume(v.old.i.i.i == 0);
+TO: main_do_write_p.exit.i.i;
+
+FROM: main_immediate_notify_threads.exit.i5.i.i_end;
+assume(v.old.i.i.i != 0);
+TO: main_bb91;
+
+FROM: main_do_write_p.exit.i.i;
+p_dw_st := 2;
+p_dw_pc := 1;
+TO: main_bb96;
+
+FROM: main_bb95;
+TO: main_start_simulation.exit_ret;
+
+FROM: main_bb96;
+v221 := c_dr_st;
+TO: main_bb96_end;
+
+FROM: main_bb96_end;
+assume(v221 == 0);
+TO: main_bb97;
+
+FROM: main_bb96_end;
+assume(v221 != 0);
+TO: main_init_threads.exit.i;
+
+FROM: main_bb97;
+v223 := nondet();
+TO: main_bb97_end;
+
+FROM: main_bb97_end;
+assume(v223 != 0);
+TO: main_bb98;
+
+FROM: main_bb97_end;
+assume(v223 == 0);
+TO: main_init_threads.exit.i;
+
+FROM: main_bb98;
+c_dr_st := 1;
+v226 := c_dr_pc;
+v228 := c_dr_pc;
+var__temp_va.0.i.i.i := v225;
+TO: main_bb98_end;
+
+FROM: main_bb98_end;
+assume((v226 != 0) && (v228 == 1));
+TO: main_bb100;
+
+FROM: main_bb98_end;
+assume((v226 == 0) || (v228 != 1));
+TO: main_bb99;
+
+FROM: main_bb99;
+va.0.i.i.i := var__temp_va.0.i.i.i;
+v230 := q_free;
+TO: main_bb99_end;
+
+FROM: main_bb99_end;
+assume(v230 == 1);
+TO: main_do_read_c.exit.i.i;
+
+FROM: main_bb99_end;
+assume(v230 != 1);
+TO: main_bb100;
+
+FROM: main_do_read_c.exit.i.i;
+c_dr_st := 2;
+c_dr_pc := 1;
+a_t := va.0.i.i.i;
+TO: main_init_threads.exit.i;
+
+FROM: main_bb100;
+v232 := q_buf_0;
+c_last_read := v232;
+v233 := c_num_read;
+v234 := v233 + 1;
+c_num_read := v234;
+q_free := 1;
+q_read_ev := 1;
+v235 := p_dw_pc;
+v237 := q_read_ev;
+TO: main_bb100_end;
+
+FROM: main_bb100_end;
+assume((v235 == 1) && (v237 == 1));
+TO: main_bb101;
+
+FROM: main_bb100_end;
+assume((v235 != 1) || (v237 != 1));
+TO: main_bb102;
+
+FROM: main_bb101;
+p_dw_st := 0;
+TO: main_bb102;
+
+FROM: main_bb102;
+v239 := c_dr_pc;
+v241 := q_write_ev;
+TO: main_bb102_end;
+
+FROM: main_bb102_end;
+assume((v239 == 1) && (v241 == 1));
+TO: main_bb103;
+
+FROM: main_bb102_end;
+assume((v239 != 1) || (v241 != 1));
+TO: main_immediate_notify_threads.exit.i.i.i;
+
+FROM: main_bb103;
+c_dr_st := 0;
+TO: main_immediate_notify_threads.exit.i.i.i;
+
+FROM: main_immediate_notify_threads.exit.i.i.i;
+q_read_ev := 2;
+v243 := p_last_write;
+v244 := c_last_read;
+TO: main_immediate_notify_threads.exit.i.i.i_end;
+
+FROM: main_immediate_notify_threads.exit.i.i.i_end;
+assume(v243 == v244);
+TO: main_bb104;
+
+FROM: main_immediate_notify_threads.exit.i.i.i_end;
+assume(v243 != v244);
+TO: main_bb106;
+
+FROM: main_bb104;
+v246 := p_num_write;
+v247 := c_num_read;
+var__temp_va.0.i.i.i := v232;
+TO: main_bb104_end;
+
+FROM: main_bb104_end;
+assume(v246 == v247);
+TO: main_bb99;
+
+FROM: main_bb104_end;
+assume(v246 != v247);
+TO: main_bb105;
+
+FROM: main_bb105;
+TO: main_start_simulation.exit_ret;
+
+FROM: main_bb106;
+TO: main_start_simulation.exit_ret;
+
+FROM: main_eval.exit.i;
+v249 := c_dr_st;
+TO: main_eval.exit.i_v__retres2.0.i.i;
+FROM: main_eval.exit.i_v__retres2.0.i.i;
+assume((v199 == 0) || (v249 == 0));
+v__retres2.0.i.i := 0;
+TO: main_eval.exit.i_sv__retres2.0.i.i;
+
+FROM: main_eval.exit.i_v__retres2.0.i.i;
+assume((v199 != 0) && (v249 != 0));
+v__retres2.0.i.i := 1;
+TO: main_eval.exit.i_sv__retres2.0.i.i;
+
+FROM: main_eval.exit.i_sv__retres2.0.i.i;
+TO: main_eval.exit.i_end;
+
+FROM: main_eval.exit.i_end;
+assume(v__retres2.0.i.i != 0);
+TO: main_start_simulation.exit;
+
+FROM: main_eval.exit.i_end;
+assume(v__retres2.0.i.i == 0);
+TO: main_init_threads.exit.i;
+
+FROM: main_start_simulation.exit;
+TO: main_start_simulation.exit_ret;
+

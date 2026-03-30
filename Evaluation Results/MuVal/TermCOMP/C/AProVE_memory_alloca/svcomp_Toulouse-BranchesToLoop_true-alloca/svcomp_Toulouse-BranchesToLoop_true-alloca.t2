@@ -1,0 +1,64 @@
+///*** 1_main ***///
+START: main_bb0;
+
+FROM: main_bb0;
+v6 := nondet();
+TO: main_bb0_end;
+
+FROM: main_bb0_end;
+assume(v6 != 0);
+TO: main_bb1;
+
+FROM: main_bb0_end;
+assume(v6 == 0);
+TO: main_bb2;
+
+FROM: main_bb1;
+v1 := 1;
+TO: main_bb3;
+
+FROM: main_bb2;
+v1 := -1;
+TO: main_bb3;
+
+FROM: main_bb3;
+v8 := nondef.1;
+v9 := nondef.2;
+TO: main_bb4;
+
+FROM: main_bb4;
+v10 := nondef.3;
+TO: main_bb4_end;
+
+FROM: main_bb4_end;
+assume(v10 < 100);
+TO: main_bb5;
+
+FROM: main_bb4_end;
+assume(v10 >= 100);
+TO: main_.critedge;
+
+FROM: main_bb5;
+v12 := nondef.4;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(v12 < 100);
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(v12 >= 100);
+TO: main_.critedge;
+
+FROM: main_bb6;
+v14 := nondef.5;
+v15 := v14 + v8;
+v3 := v15;
+v16 := nondef.6;
+v17 := v16 - v9;
+v5 := v17;
+TO: main_bb4;
+
+FROM: main_.critedge;
+TO: main_.critedge_ret;
+

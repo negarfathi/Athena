@@ -1,0 +1,144 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.VRrxFV
+
+Input File is : Addition01_true-unreach-call_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+/*
+ * Recursive implementation integer addition.
+ * 
+ * Author: Matthias Heizmann
+ * Date: 2013-07-13
+ * 
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int addition(int m, int n) {
+    {if (n == 0) {
+        return m;
+    }}
+    {if (n > 0) {
+        return addition(m+1, n-1);
+    }}
+    {if (n < 0) {
+        return addition(m-1, n+1);
+    }}
+}
+
+
+int main() {
+    int m = __VERIFIER_nondet_int();
+    {if (m < 0 || m > 2147483647) {
+        return 0;
+    }}
+    int n = __VERIFIER_nondet_int();
+    {if (n < 0 || n > 2147483647) {
+        return 0;
+    }}
+    int result = addition(m,n);
+    {if (result == m + n) {
+        return 0;
+    } else {
+        ERROR: __VERIFIER_error();
+    }}
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Addition01_true-unreach-call_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+/*
+ * Recursive implementation integer addition.
+ * 
+ * Author: Matthias Heizmann
+ * Date: 2013-07-13
+ * 
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int addition(int m, int n) {
+    { __VERIFIER_reached_control(14, __func__);
+if (n == 0) { __VERIFIER_control_true(14, __func__);
+
+        return m;
+    }}
+    { __VERIFIER_reached_control(17, __func__);
+if (n > 0) { __VERIFIER_control_true(17, __func__);
+
+        return addition(m+1, n-1);
+    }}
+    { __VERIFIER_reached_control(20, __func__);
+if (n < 0) { __VERIFIER_control_true(20, __func__);
+
+        return addition(m-1, n+1);
+    }}
+}
+
+
+int main() {
+    int m = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(28, __func__);
+if (m < 0 || m > 2147483647) { __VERIFIER_control_true(28, __func__);
+
+        return 0;
+    }}
+    int n = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(32, __func__);
+if (n < 0 || n > 2147483647) { __VERIFIER_control_true(32, __func__);
+
+        return 0;
+    }}
+    int result = addition(m,n);
+    { __VERIFIER_reached_control(36, __func__);
+if (result == m + n) { __VERIFIER_control_true(36, __func__);
+
+        return 0;
+    } else { __VERIFIER_control_false(38, __func__);
+
+        ERROR: __VERIFIER_error();
+    }}
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Addition01_true-unreach-call_true-termination_braced_instrumented.c
+NTFILE is Addition01_true-unreach-call_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Addition01_true-unreach-call_true-termination.c
+FILE=Addition01_true-unreach-call_true-termination_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 4985 milliseconds

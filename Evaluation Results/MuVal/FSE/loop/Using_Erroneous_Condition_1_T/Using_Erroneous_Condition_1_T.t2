@@ -1,0 +1,114 @@
+///*** 1_main ***///
+START: main_bb0;
+
+FROM: main_bb0;
+v2 := nondet();
+v3 := v2;
+v4 := nondet();
+v5 := v4;
+v7 := nondef.2;
+TO: main_bb0_end;
+
+FROM: main_bb0_end;
+assume(v7 <= -2);
+TO: main_bb6;
+
+FROM: main_bb0_end;
+assume(v7 > -2);
+TO: main_bb1;
+
+FROM: main_bb1;
+v10 := nondef.3;
+TO: main_bb1_end;
+
+FROM: main_bb1_end;
+assume(v10 < 1);
+TO: main_bb6;
+
+FROM: main_bb1_end;
+assume(v10 >= 1);
+TO: main_bb2;
+
+FROM: main_bb2;
+v13 := nondef.4;
+v14 := nondet();
+v17 := v13 + -1;
+v18 := v13 + 1;
+TO: main_bb2_vdirection.0;
+FROM: main_bb2_vdirection.0;
+assume((v14 > 0) && (v13 >= 1));
+vdirection.0 := -1;
+TO: main_bb2_svdirection.0;
+
+FROM: main_bb2_vdirection.0;
+assume((v14 <= 0) || (v13 < 1));
+vdirection.0 := 1;
+TO: main_bb2_svdirection.0;
+
+FROM: main_bb2_svdirection.0;
+TO: main_bb2_vpos.0;
+FROM: main_bb2_vpos.0;
+assume((v14 > 0) && (v13 >= 1));
+vpos.0 := v17;
+TO: main_bb2_svpos.0;
+
+FROM: main_bb2_vpos.0;
+assume((v14 <= 0) || (v13 < 1));
+vpos.0 := v18;
+TO: main_bb2_svpos.0;
+
+FROM: main_bb2_svpos.0;
+v20 := nondef.6;
+v21 := vpos.0 % v20;
+v23 := nondef.8;
+v25 := nondef.9;
+var__temp_vpos.1 := v21;
+TO: main_bb3;
+
+FROM: main_bb3;
+vpos.1 := var__temp_vpos.1;
+v26 := vpos.1 + vdirection.0;
+var__temp_vpos.3 := 0;
+TO: main_bb3_end;
+
+FROM: main_bb3_end;
+assume(v26 == v23);
+TO: main_bb5;
+
+FROM: main_bb3_end;
+assume(v26 != v23);
+TO: main_bb4;
+
+FROM: main_bb4;
+v29 := v25 - 1;
+TO: main_bb4_v.;
+FROM: main_bb4_v.;
+assume(v26 < 0);
+v. := v29;
+TO: main_bb4_sv.;
+
+FROM: main_bb4_v.;
+assume(v26 >= 0);
+v. := v26;
+TO: main_bb4_sv.;
+
+FROM: main_bb4_sv.;
+var__temp_vpos.3 := v.;
+TO: main_bb5;
+
+FROM: main_bb5;
+vpos.3 := var__temp_vpos.3;
+var__temp_vpos.1 := vpos.3;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(vpos.3 != v21);
+TO: main_bb3;
+
+FROM: main_bb5_end;
+assume(vpos.3 == v21);
+TO: main_bb6;
+
+FROM: main_bb6;
+TO: main_bb6_ret;
+

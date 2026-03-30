@@ -1,0 +1,68 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.lNXMXj
+
+Input File is : Incorrect_Bit_Calculation_3_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : Incorrect_Bit_Calculation_3_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 5bec3fff0bac50f4b4d4d3b02e70161a2bf38d0f
+URL: https://github.com/brltty/brltty/commit/5bec3fff0bac50f4b4d4d3b02e70161a2bf38d0f
+Project Name: brltty
+License: LGPL-2.1
+termination: TRUE
+
+*/
+int main()
+{
+    int wc = __VERIFIER_nondet_int();
+    int mask = ( 1 << 26 ) - 1;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+ do{ __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int omask;static int owc;if(pStored0){__CPROVER_assert(!(omask==mask && owc==wc),"recurrent state found");} if(flag){omask=mask;owc=wc;pStored0=myTrue;} 
+        //loop;
+    }while( (wc = ( wc >> 6 ) & mask) );
+    return 0;
+}
+
+End Main 
+ Incorrect_Bit_Calculation_3_T_instrumented.c
+NTFILE is Incorrect_Bit_Calculation_3_T_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Incorrect_Bit_Calculation_3_T.c
+FILE=Incorrect_Bit_Calculation_3_T_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 59675 milliseconds

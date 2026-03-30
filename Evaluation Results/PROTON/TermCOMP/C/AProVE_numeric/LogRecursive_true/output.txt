@@ -1,0 +1,148 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.bIp4Dp
+
+Input File is : LogRecursive_true.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  // public class LogRecursive {
+  // public static void main(String[] args) {
+    // Random.args = args;
+    // log(Random.random(), Random.random());
+  // }
+
+  // public static int log(int x, int y) {
+    // if (x >= y && y > 1) {
+      // return 1 + log(x/y, y);
+    // }
+    // return 0;
+  // }
+// }
+
+extern int __VERIFIER_nondet_int(void);
+int log(int x, int y);
+int random(void);
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	{if(x < 0)
+		{return 0;}}
+	int y = __VERIFIER_nondet_int();
+	{if(y < 0) 
+		{return 0;}}
+	int z = __VERIFIER_nondet_int();
+	log(x,y);
+
+}
+
+int random() {
+	int x = __VERIFIER_nondet_int();
+	{if (x < 0)
+		{return -x;}
+	else
+		{return x;}}
+}
+
+int log(int x, int y) {
+    {if (x >= y && y > 1) {
+      return 1 + log(x/y, y);
+    }}
+    return 0;
+  }
+
+End Main   
+
+Input File is : LogRecursive_true_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+// public class LogRecursive {
+  // public static void main(String[] args) {
+    // Random.args = args;
+    // log(Random.random(), Random.random());
+  // }
+
+  // public static int log(int x, int y) {
+    // if (x >= y && y > 1) {
+      // return 1 + log(x/y, y);
+    // }
+    // return 0;
+  // }
+// }
+
+extern int __VERIFIER_nondet_int(void);
+int log(int x, int y);
+int random(void);
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(21, __func__);
+if(x < 0)
+		{ __VERIFIER_control_true(22, __func__);
+return 0;}}
+	int y = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(24, __func__);
+if(y < 0) 
+		{ __VERIFIER_control_true(25, __func__);
+return 0;}}
+	int z = __VERIFIER_nondet_int();
+	log(x,y);
+
+}
+
+int random() {
+	int x = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(33, __func__);
+if (x < 0)
+		{ __VERIFIER_control_true(34, __func__);
+return -x;}
+	else
+		{ __VERIFIER_control_false(36, __func__);
+return x;}}
+}
+
+int log(int x, int y) {
+    { __VERIFIER_reached_control(40, __func__);
+if (x >= y && y > 1) { __VERIFIER_control_true(40, __func__);
+
+      return 1 + log(x/y, y);
+    }}
+    return 0;
+  }
+
+End Main 
+ LogRecursive_true_braced_instrumented.c
+NTFILE is LogRecursive_true_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for LogRecursive_true.c
+FILE=LogRecursive_true_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 2450 milliseconds

@@ -1,0 +1,217 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.N7o9nT
+
+Input File is : svcomp_openbsd_cstrstr_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int
+cstrlen(const char *str)
+{
+	const char *s;
+
+	for (s = str; *s; ++s)
+		{;}
+	return (s - str);
+}
+
+int
+cstrncmp(const char *s1, const char *s2, int n)
+{
+
+	{if (n == 0)
+		{return (0);}}
+	do {
+		{if (*s1 != *s2++)
+			{return (*(unsigned char *)s1 - *(unsigned char *)--s2);}}
+		{if (*s1++ == 0)
+			{break;}}
+	} while (--n != 0);
+	return (0);
+}
+
+/*
+ * Find the first occurrence of find in s.
+ */
+char *
+cstrstr(const char *s, const char *find)
+{
+	char c, sc;
+	int len;
+
+	{if ((c = *find++) != 0) {
+		len = cstrlen(find);
+		do {
+			do {
+				{if ((sc = *s++) == 0) {
+					return (NULL);
+				}}
+			} while (sc != c);
+		} while (cstrncmp(s, find, len) != 0);
+		s--;
+	}}
+	return ((char *)s);
+}
+
+int main() {
+    int length1 = __VERIFIER_nondet_int();
+    int length2 = __VERIFIER_nondet_int();
+    {if (length1 < 1) {
+        length1 = 1;
+    }}
+    {if (length2 < 1) {
+        length2 = 1;
+    }}
+    char* nondetString1 = (char*) alloca(length1 * sizeof(char));
+    char* nondetString2 = (char*) alloca(length2 * sizeof(char));
+    nondetString1[length1-1] = '\0';
+    nondetString2[length2-1] = '\0';
+    return cstrstr(nondetString1,nondetString2);
+}
+
+
+./proton: line 26:    90 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_openbsd_cstrstr_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int
+cstrlen(const char *str)
+{
+	const char *s;
+
+myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+	for (s = str; *s; ++s)
+		{ __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static const char * os;static const char * ostr;if(pStored0){__CPROVER_assert(!(os==s && ostr==str),"recurrent state found");} if(flag){os=s;ostr=str;pStored0=myTrue;} ;}
+	return (s - str);
+}
+
+int
+cstrncmp(const char *s1, const char *s2, int n)
+{
+
+	{ __VERIFIER_reached_control(23, __func__);
+if (n == 0)
+		{ __VERIFIER_control_true(24, __func__);
+return (0);}}
+myBool pStored1 = myFalse; __VERIFIER_reached_control(25, __func__);
+	do { __VERIFIER_loop_head(25, __func__);
+printf("CBMC Instrumentation @ line25");myBool flag=__VERIFIER_nondet_myBool();static int on;static const char * os1;static const char * os2;if(pStored1){__CPROVER_assert(!(on==n && os1==s1 && os2==s2),"recurrent state found");} if(flag){on=n;os1=s1;os2=s2;pStored1=myTrue;} 
+		{ __VERIFIER_reached_control(26, __func__);
+if (*s1 != *s2++)
+			{ __VERIFIER_control_true(27, __func__);
+return (*(unsigned char *)s1 - *(unsigned char *)--s2);}}
+		{ __VERIFIER_reached_control(28, __func__);
+if (*s1++ == 0)
+			{ __VERIFIER_control_true(29, __func__);
+break;}}
+	} while (--n != 0);
+	return (0);
+}
+
+/*
+ * Find the first occurrence of find in s.
+ */
+char *
+cstrstr(const char *s, const char *find)
+{
+	char c, sc;
+	int len;
+
+	{ __VERIFIER_reached_control(43, __func__);
+if ((c = *find++) != 0) { __VERIFIER_control_true(43, __func__);
+
+		len = cstrlen(find);
+	myBool pStored2 = myFalse; __VERIFIER_reached_control(45, __func__);
+	do { __VERIFIER_loop_head(45, __func__);
+printf("CBMC Instrumentation @ line45");myBool flag=__VERIFIER_nondet_myBool();static char oc;static const char * ofind;static int olen;static const char * os;static char osc;if(pStored2){__CPROVER_assert(!(oc==c && ofind==find && olen==len && os==s && osc==sc),"recurrent state found");} if(flag){oc=c;ofind=find;olen=len;os=s;osc=sc;pStored2=myTrue;} 
+		myBool pStored3 = myFalse; __VERIFIER_reached_control(46, __func__);
+	do { __VERIFIER_loop_head(46, __func__);
+printf("CBMC Instrumentation @ line46");myBool flag=__VERIFIER_nondet_myBool();static char oc;static const char * ofind;static int olen;static const char * os;static char osc;if(pStored3){__CPROVER_assert(!(oc==c && ofind==find && olen==len && os==s && osc==sc),"recurrent state found");} if(flag){oc=c;ofind=find;olen=len;os=s;osc=sc;pStored3=myTrue;} 
+				{ __VERIFIER_reached_control(47, __func__);
+if ((sc = *s++) == 0) { __VERIFIER_control_true(47, __func__);
+
+					return (NULL);
+				}}
+			} while (sc != c);
+		} while (cstrncmp(s, find, len) != 0);
+		s--;
+	}}
+	return ((char *)s);
+}
+
+int main() {
+    int length1 = __VERIFIER_nondet_int();
+    int length2 = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(60, __func__);
+if (length1 < 1) { __VERIFIER_control_true(60, __func__);
+
+        length1 = 1;
+    }}
+    { __VERIFIER_reached_control(63, __func__);
+if (length2 < 1) { __VERIFIER_control_true(63, __func__);
+
+        length2 = 1;
+    }}
+    char* nondetString1 = (char*) alloca(length1 * sizeof(char));
+    char* nondetString2 = (char*) alloca(length2 * sizeof(char));
+    nondetString1[length1-1] = '\0';
+    nondetString2[length2-1] = '\0';
+    return cstrstr(nondetString1,nondetString2);
+}
+
+
+./proton: line 26:   102 Aborted                 instrumenter -in *braced.c -c
+svcomp_openbsd_cstrstr_alloca_braced_instrumented.c
+NTFILE is svcomp_openbsd_cstrstr_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_openbsd_cstrstr_alloca.c
+FILE=svcomp_openbsd_cstrstr_alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183798 milliseconds

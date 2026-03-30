@@ -1,0 +1,81 @@
+///*** 1_main ***///
+START: main_bb8;
+
+FROM: main_bb8;
+v24 := nondet();
+v25 := nondet();
+v26 := v24;
+v27 := v25;
+v28 := 0;
+TO: main_bb9;
+
+FROM: main_bb9;
+v29 := nondef.2;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(v29 > 0);
+TO: main_.critedge.i;
+
+FROM: main_bb9_end;
+assume(v29 <= 0);
+TO: main_bb10;
+
+FROM: main_bb10;
+v31 := nondef.3;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(v31 > 0);
+TO: main_.critedge.i;
+
+FROM: main_bb10_end;
+assume(v31 <= 0);
+TO: main_test_fun.exit;
+
+FROM: main_.critedge.i;
+v33 := nondef.4;
+TO: main_.critedge.i_end;
+
+FROM: main_.critedge.i_end;
+assume(v33 > 0);
+TO: main_bb11;
+
+FROM: main_.critedge.i_end;
+assume(v33 <= 0);
+TO: main_bb12;
+
+FROM: main_bb11;
+v35 := nondef.5;
+v36 := v35 - 1;
+v26 := v36;
+TO: main_bb14;
+
+FROM: main_bb12;
+v37 := nondef.6;
+TO: main_bb12_end;
+
+FROM: main_bb12_end;
+assume(v37 > 0);
+TO: main_bb13;
+
+FROM: main_bb12_end;
+assume(v37 <= 0);
+TO: main_bb14;
+
+FROM: main_bb13;
+v39 := nondef.7;
+v40 := v39 - 1;
+v27 := v40;
+TO: main_bb14;
+
+FROM: main_bb14;
+v41 := nondef.8;
+v42 := v41 + 1;
+v28 := v42;
+TO: main_bb9;
+
+FROM: main_test_fun.exit;
+v43 := nondef.9;
+TO: main_test_fun.exit_ret;
+

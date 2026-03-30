@@ -1,0 +1,101 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.1gdYXj
+
+Input File is : svcomp_bubble_sort_unsafe.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+
+void bubble(int a[], int N)
+{
+    int i, j, t;
+    for (i = N; i >= 1; i--) {
+        for (j = 2; j <= i; j++) {
+            {if (a[j-1] > a[j]) {
+                t = a[j-1];
+                a[j-1] = a[j];
+                a[j] = t;
+            }}
+        }
+    }
+}
+
+int main() {
+  int* a;
+  int n = __VERIFIER_nondet_int();
+  bubble(a, n);
+  return 0;
+}
+
+End Main   
+
+Input File is : svcomp_bubble_sort_unsafe_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+
+void bubble(int a[], int N)
+{
+    int i, j, t;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(6, __func__);
+ for (i = N; i >= 1; i--) { __VERIFIER_loop_head(6, __func__);
+printf("CBMC Instrumentation @ line6");myBool flag=__VERIFIER_nondet_myBool();static int oN;static int oi;static int oj;static int ot;if(pStored0){__CPROVER_assert(!(oN==N && oi==i && oj==j && ot==t),"recurrent state found");} if(flag){oN=N;oi=i;oj=j;ot=t;pStored0=myTrue;} 
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(7, __func__);
+ for (j = 2; j <= i; j++) { __VERIFIER_loop_head(7, __func__);
+printf("CBMC Instrumentation @ line7");myBool flag=__VERIFIER_nondet_myBool();static int oN;static int oi;static int oj;static int ot;if(pStored1){__CPROVER_assert(!(oN==N && oi==i && oj==j && ot==t),"recurrent state found");} if(flag){oN=N;oi=i;oj=j;ot=t;pStored1=myTrue;} 
+            { __VERIFIER_reached_control(8, __func__);
+if (a[j-1] > a[j]) { __VERIFIER_control_true(8, __func__);
+
+                t = a[j-1];
+                a[j-1] = a[j];
+                a[j] = t;
+            }}
+        }
+    }
+}
+
+int main() {
+  int* a;
+  int n = __VERIFIER_nondet_int();
+  bubble(a, n);
+  return 0;
+}
+
+End Main 
+ svcomp_bubble_sort_unsafe_braced_instrumented.c
+NTFILE is svcomp_bubble_sort_unsafe_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_bubble_sort_unsafe.c
+FILE=svcomp_bubble_sort_unsafe_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182087 milliseconds

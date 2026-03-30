@@ -1,0 +1,43 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %i = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %i = alloca i32, align 4 + 0
+NODE   4:   %j = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %j = alloca i32, align 4 + 0
+NODE   5:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   6:   store i32 100, i32* %j, align 4 (points-to size: 0)
+NODE   7:   store i32 0, i32* %i, align 4 (points-to size: 0)
+NODE   8:   %0 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE   9:   %1 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  10:   %2 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  11:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE  12:   %3 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  13:   %add = add nsw i32 %3, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  14:   store i32 %add, i32* %i, align 4 (points-to size: 0)
+NODE  15:   %4 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  16:   %sub = sub nsw i32 %4, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  17:   store i32 %sub, i32* %j, align 4 (points-to size: 0)
+NODE  18:   %5 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  19:   %sub2 = sub nsw i32 %5, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  20:   store i32 %sub2, i32* %i, align 4 (points-to size: 0)
+NODE  21:   %6 = load i32, i32* %j, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  22:   %add3 = add nsw i32 %6, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  23:   store i32 %add3, i32* %j, align 4 (points-to size: 0)
+NODE  24: main (points-to size: 1)
+    -> main + 0

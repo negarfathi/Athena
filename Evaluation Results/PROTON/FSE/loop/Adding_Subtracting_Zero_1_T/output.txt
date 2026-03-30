@@ -1,0 +1,105 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.C5hHaT
+
+Input File is : Adding_Subtracting_Zero_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: c3115350eb8bb635d0fdb4dbbb0d0541f38ed19c
+URL: https://github.com/Sugon-Beijing/libvncserver/commit/c3115350eb8bb635d0fdb4dbbb0d0541f38ed19c
+Project Name: libvncserver
+License: GPL-2.0
+termination: TRUE
+*/
+int main()
+{
+
+    int linesToRead = __VERIFIER_nondet_int();
+    {if( linesToRead < 0 )
+        {return 0;}}
+    int h = __VERIFIER_nondet_int();
+    while( linesToRead && h > 0 )
+    {
+        {if( linesToRead > h )
+            {linesToRead = h;}}
+        h -= linesToRead;
+    }
+    return 0;
+
+}
+
+End Main   
+
+Input File is : Adding_Subtracting_Zero_1_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: c3115350eb8bb635d0fdb4dbbb0d0541f38ed19c
+URL: https://github.com/Sugon-Beijing/libvncserver/commit/c3115350eb8bb635d0fdb4dbbb0d0541f38ed19c
+Project Name: libvncserver
+License: GPL-2.0
+termination: TRUE
+*/
+int main()
+{
+
+    int linesToRead = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(13, __func__);
+if( linesToRead < 0 )
+        { __VERIFIER_control_true(14, __func__);
+return 0;}}
+    int h = __VERIFIER_nondet_int();
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(17, __func__);
+ while( linesToRead && h > 0 )
+    { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int oh;static int olinesToRead;if(pStored0){__CPROVER_assert(!(oh==h && olinesToRead==linesToRead),"recurrent state found");} if(flag){oh=h;olinesToRead=linesToRead;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(18, __func__);
+if( linesToRead > h )
+            { __VERIFIER_control_true(19, __func__);
+linesToRead = h;}}
+        h -= linesToRead;
+    }
+    return 0;
+
+}
+
+End Main 
+ Adding_Subtracting_Zero_1_T_braced_instrumented.c
+NTFILE is Adding_Subtracting_Zero_1_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Adding_Subtracting_Zero_1_T.c
+FILE=Adding_Subtracting_Zero_1_T_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182292 milliseconds

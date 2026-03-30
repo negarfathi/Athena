@@ -1,0 +1,275 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/merge_sort_true-unreach-call/merge_sort_true-unreach-call.c
+Converting
+Type-checking merge_sort_true-unreach-call
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_deallocate
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of abort
+Simplifying
+Computing SSA of fail
+Simplifying
+Computing SSA of merge_single_node
+Simplifying
+Computing SSA of merge_pair
+Simplifying
+Computing SSA of seq_sort_core
+Simplifying
+Computing SSA of inspect_before
+Simplifying
+Computing SSA of inspect_after
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#231 __CPROVER_thread_key_dtors#229 __CPROVER_thread_keys#230 __CPROVER_malloc_is_new_array#221 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#218 __CPROVER_dead_object#219 __CPROVER_deallocated#220 __CPROVER_new_object#223 __CPROVER_rounding_mode#227 __CPROVER_pipe_count#226 __CPROVER_max_malloc_size#222 __CPROVER_next_thread_id#224 __CPROVER_next_thread_key#225 __CPROVER_thread_id#228 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#227 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#227) <= 0 && __CPROVER_pipe_count#226 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#226) <= 0 && __CPROVER_max_malloc_size#222 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#222) <= -36028797018963968 && __CPROVER_next_thread_id#224 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#224) <= 0 && __CPROVER_next_thread_key#225 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#225) <= 0 && __CPROVER_thread_id#228 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#228) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of inspect_before
+Function inspect_before not analyzed yet
+Recursively summarizing function inspect_before
+Checking precondition of fail
+Function fail not analyzed yet
+Recursively summarizing function fail
+Analyzing function fail
+Computing summary
+Computing termination argument for fail
+Function never terminates normally
+
+Summary for function fail
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function inspect_before
+Computing summary
+Computing termination argument for inspect_before
+
+Summary for function inspect_before
+params: shape 
+globals_in: shape'obj.next $deref0'obj.next $deref1'obj.next shape'obj.slist $deref0'obj.value $deref1'obj.value shape'obj $deref0'obj $deref1'obj $deref0'obj.$pad2 $deref1'obj.$pad2 
+globals_out: shape'obj.next#phi310 $deref0'obj.next $deref1'obj.next shape'obj.slist#351 $deref0'obj.value $deref1'obj.value shape'obj $deref0'obj $deref1'obj $deref0'obj.$pad2 $deref1'obj.$pad2 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of seq_sort_core
+Function seq_sort_core not analyzed yet
+Recursively summarizing function seq_sort_core
+Checking precondition of merge_pair
+Function merge_pair not analyzed yet
+Recursively summarizing function merge_pair
+Checking precondition of merge_single_node
+Function merge_single_node not analyzed yet
+Recursively summarizing function merge_single_node
+Analyzing function merge_single_node
+Computing summary
+Computing termination argument for merge_single_node
+Function trivially terminates
+
+Summary for function merge_single_node
+params: dst data 
+globals_in: dst'obj node'obj.next data'obj data'obj'obj.next dst'obj'obj dst'obj'obj'obj.next node'obj.value data'obj'obj.value dst'obj'obj'obj.value node'obj data'obj'obj dst'obj'obj'obj node'obj.$pad2 data'obj'obj.$pad2 dst'obj'obj'obj.$pad2 
+globals_out: dst'obj#244 node'obj.next#242 data'obj#241 data'obj'obj.next dst'obj'obj#243 dst'obj'obj'obj.next node'obj.value data'obj'obj.value dst'obj'obj'obj.value node'obj data'obj'obj dst'obj'obj'obj node'obj.$pad2 data'obj'obj.$pad2 dst'obj'obj'obj.$pad2 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of merge_single_node
+Precondition trivially holds, replacing by summary.
+Analyzing function merge_pair
+Computing summary
+Computing termination argument for merge_pair
+Synthesizing ranking function to prove termination
+
+Summary for function merge_pair
+params: dst sub1 sub2 
+globals_in: dst'obj dst'obj'obj.next sub1'obj.next sub2'obj.next dst'obj'obj.value sub1'obj.value sub2'obj.value dst'obj'obj sub1'obj sub2'obj dst'obj'obj.$pad2 sub1'obj.$pad2 sub2'obj.$pad2 
+globals_out: dst'obj dst'obj'obj.next sub1'obj.next sub2'obj.next dst'obj'obj.value sub1'obj.value#phi248 sub2'obj.value#phi248 dst'obj'obj sub1'obj sub2'obj dst'obj'obj.$pad2 sub1'obj.$pad2 sub2'obj.$pad2 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#248 && $guard#248 && $guard#263 && $cond#265 && $guard#263 && $cond#265 ==> TRUE
+
+terminates: unknown
+
+Checking precondition of __CPROVER_deallocate
+Function __CPROVER_deallocate not analyzed yet
+Recursively summarizing function __CPROVER_deallocate
+Analyzing function __CPROVER_deallocate
+Computing summary
+Computing termination argument for __CPROVER_deallocate
+Function trivially terminates
+
+Summary for function __CPROVER_deallocate
+params: ptr 
+globals_in: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated 
+globals_out: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated#phi215 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function seq_sort_core
+Computing summary
+Computing termination argument for seq_sort_core
+
+Summary for function seq_sort_core
+params: data 
+globals_in: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated seq_sort_core#return_value'obj.next next'obj.next dst'obj.next data'obj.next seq_sort_core#return_value'obj.slist next'obj.slist dst'obj.slist data'obj.slist seq_sort_core#return_value'obj next'obj dst'obj data'obj 
+globals_out: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated seq_sort_core#return_value#301 seq_sort_core#return_value'obj.next next'obj.next#phi269 dst'obj.next data'obj.next#phi301 seq_sort_core#return_value'obj.slist next'obj.slist dst'obj.slist data'obj.slist seq_sort_core#return_value'obj next'obj dst'obj data'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of inspect_after
+Function inspect_after not analyzed yet
+Recursively summarizing function inspect_after
+Analyzing function inspect_after
+Computing summary
+Computing termination argument for inspect_after
+Synthesizing ranking function to prove termination
+
+Summary for function inspect_after
+params: shape 
+globals_in: shape'obj.next pos'obj.next shape'obj.slist pos'obj.value shape'obj pos'obj pos'obj.$pad2 
+globals_out: shape'obj.next pos'obj.next#phi374 shape'obj.slist#373 pos'obj.value shape'obj pos'obj pos'obj.$pad2 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Analyzing function main
+Computing summary
+Computing termination argument for main
+
+Summary for function main
+params: 
+globals_in: __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_memory_leak$110'obj __CPROVER_memory_leak$48'obj ptr'obj return_value_malloc$0'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_memory_leak$110 __CPROVER_memory_leak$48 item'obj.next data'obj.next seq_sort_core#return_value'obj.next dynamic_object$98.next item'obj.slist node'obj.next snext'obj.next data'obj.slist node'obj.next seq_sort_core#return_value'obj.slist dynamic_object$36$0.next dynamic_object$36$1.next dynamic_object$98.slist node'obj.value snext'obj.value node'obj.value dynamic_object$36$0.value dynamic_object$36$1.value item'obj data'obj seq_sort_core#return_value'obj node'obj snext'obj node'obj dynamic_object$98 dynamic_object$36$0 dynamic_object$36$1 node'obj.$pad2 snext'obj.$pad2 node'obj.$pad2 dynamic_object$36$0.$pad2 dynamic_object$36$1.$pad2 __CPROVER_max_malloc_size 
+globals_out: __CPROVER_malloc_is_new_array#phi4 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_memory_leak$110'obj __CPROVER_memory_leak$48'obj ptr'obj return_value_malloc$0'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated#phi4 __CPROVER_memory_leak$110#phi208 __CPROVER_memory_leak$48#phi208 item'obj.next#phi4 data'obj.next seq_sort_core#return_value'obj.next dynamic_object$98.next#phi4 item'obj.slist#phi4 node'obj.next#phi4 snext'obj.next data'obj.slist#phi208 node'obj.next#phi208 seq_sort_core#return_value'obj.slist dynamic_object$36$0.next#phi4 dynamic_object$36$1.next#phi4 dynamic_object$98.slist#phi4 main#return_value#phi208 node'obj.value#phi4 snext'obj.value node'obj.value dynamic_object$36$0.value#phi4 dynamic_object$36$1.value#phi4 item'obj data'obj seq_sort_core#return_value'obj node'obj snext'obj node'obj dynamic_object$98 dynamic_object$36$0 dynamic_object$36$1 node'obj.$pad2 snext'obj.$pad2 node'obj.$pad2 dynamic_object$36$0.$pad2#phi4 dynamic_object$36$1.$pad2#phi4 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: main#return_value#phi208 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#phi208) <= 0 && dynamic_object$36$0.value#phi4 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$36$0.value#phi4) <= 2147483648 && dynamic_object$36$1.value#phi4 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$36$1.value#phi4) <= 2147483648 && dynamic_object$36$0.$pad2#phi4 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$36$0.$pad2#phi4) <= 0 && dynamic_object$36$1.$pad2#phi4 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$36$1.$pad2#phi4) <= 0 && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: ($guard#4 && $guard#ls139 ==> return_value___VERIFIER_nondet_int#lb139 <= 2147483647) && ($guard#4 && $guard#ls139 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb139) <= 2147483648) && ($guard#4 && $guard#ls139 ==> dynamic_object$36$0.value#lb139 <= 2147483647) && ($guard#4 && $guard#ls139 ==> -((signed __CPROVER_bitvector[33])dynamic_object$36$0.value#lb139) <= 2147483648) && ($guard#4 && $guard#ls139 ==> dynamic_object$36$0.$pad2#lb139 <= 4294967295) && ($guard#4 && $guard#ls139 ==> -((signed __CPROVER_bitvector[33])dynamic_object$36$0.$pad2#lb139) <= 0) && ($guard#4 && $guard#ls139 ==> dynamic_object$36$1.value#lb139 <= 2147483647) && ($guard#4 && $guard#ls139 ==> -((signed __CPROVER_bitvector[33])dynamic_object$36$1.value#lb139) <= 2147483648) && ($guard#4 && $guard#ls139 ==> dynamic_object$36$1.$pad2#lb139 <= 4294967295) && ($guard#4 && $guard#ls139 ==> -((signed __CPROVER_bitvector[33])dynamic_object$36$1.$pad2#lb139) <= 0) && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 3404473338
+  number of solver calls: 3606217602
+  number of summaries used: 12
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_deallocate]: yes
+[__CPROVER_initialize]: yes
+[abort]: not computed
+[fail]: no
+[merge_single_node]: yes
+[merge_pair]: unknown
+[seq_sort_core]: unknown
+[inspect_before]: unknown
+[inspect_after]: unknown
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 906 milliseconds

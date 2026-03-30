@@ -1,0 +1,674 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %s = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s = alloca i32, align 4 + 0
+NODE   4:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   5:   store i32 12292, i32* %s, align 4 (points-to size: 0)
+NODE   6: <6> PSNodeType::CALL (points-to size: 0)
+NODE   7: <7> PSNodeType::ENTRY (points-to size: 0)
+NODE   8: i32 %initial_state (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   9:   %initial_state.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %initial_state.addr = alloca i32, align 4 + 0
+NODE  10:   %s__info_callback = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__info_callback = alloca i32, align 4 + 0
+NODE  11:   %s__in_handshake = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__in_handshake = alloca i32, align 4 + 0
+NODE  12:   %s__state = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__state = alloca i32, align 4 + 0
+NODE  13:   %s__new_session = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__new_session = alloca i32, align 4 + 0
+NODE  14:   %s__server = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__server = alloca i32, align 4 + 0
+NODE  15:   %s__version = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__version = alloca i32, align 4 + 0
+NODE  16:   %s__type = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__type = alloca i32, align 4 + 0
+NODE  17:   %s__init_num = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__init_num = alloca i32, align 4 + 0
+NODE  18:   %s__bbio = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__bbio = alloca i32, align 4 + 0
+NODE  19:   %s__wbio = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__wbio = alloca i32, align 4 + 0
+NODE  20:   %s__hit = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__hit = alloca i32, align 4 + 0
+NODE  21:   %s__rwstate = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__rwstate = alloca i32, align 4 + 0
+NODE  22:   %s__init_buf___0 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__init_buf___0 = alloca i32, align 4 + 0
+NODE  23:   %s__debug = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__debug = alloca i32, align 4 + 0
+NODE  24:   %s__shutdown = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__shutdown = alloca i32, align 4 + 0
+NODE  25:   %s__ctx__info_callback = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__ctx__info_callback = alloca i32, align 4 + 0
+NODE  26:   %s__ctx__stats__sess_connect_renegotiate = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__ctx__stats__sess_connect_renegotiate = alloca i32, align 4 + 0
+NODE  27:   %s__ctx__stats__sess_connect = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__ctx__stats__sess_connect = alloca i32, align 4 + 0
+NODE  28:   %s__ctx__stats__sess_hit = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__ctx__stats__sess_hit = alloca i32, align 4 + 0
+NODE  29:   %s__ctx__stats__sess_connect_good = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__ctx__stats__sess_connect_good = alloca i32, align 4 + 0
+NODE  30:   %s__s3__change_cipher_spec = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__s3__change_cipher_spec = alloca i32, align 4 + 0
+NODE  31:   %s__s3__flags = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__s3__flags = alloca i32, align 4 + 0
+NODE  32:   %s__s3__delay_buf_pop_ret = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__s3__delay_buf_pop_ret = alloca i32, align 4 + 0
+NODE  33:   %s__s3__tmp__cert_req = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__s3__tmp__cert_req = alloca i32, align 4 + 0
+NODE  34:   %s__s3__tmp__new_compression = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__s3__tmp__new_compression = alloca i32, align 4 + 0
+NODE  35:   %s__s3__tmp__reuse_message = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__s3__tmp__reuse_message = alloca i32, align 4 + 0
+NODE  36:   %s__s3__tmp__new_cipher = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__s3__tmp__new_cipher = alloca i32, align 4 + 0
+NODE  37:   %s__s3__tmp__new_cipher__algorithms = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__s3__tmp__new_cipher__algorithms = alloca i32, align 4 + 0
+NODE  38:   %s__s3__tmp__next_state___0 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__s3__tmp__next_state___0 = alloca i32, align 4 + 0
+NODE  39:   %s__s3__tmp__new_compression__id = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__s3__tmp__new_compression__id = alloca i32, align 4 + 0
+NODE  40:   %s__session__cipher = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__session__cipher = alloca i32, align 4 + 0
+NODE  41:   %s__session__compress_meth = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %s__session__compress_meth = alloca i32, align 4 + 0
+NODE  42:   %buf = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %buf = alloca i32, align 4 + 0
+NODE  43:   %tmp = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp = alloca i64, align 8 + 0
+NODE  44:   %l = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %l = alloca i64, align 8 + 0
+NODE  45:   %num1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %num1 = alloca i32, align 4 + 0
+NODE  46:   %cb = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %cb = alloca i32, align 4 + 0
+NODE  47:   %ret = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %ret = alloca i32, align 4 + 0
+NODE  48:   %new_state = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %new_state = alloca i32, align 4 + 0
+NODE  49:   %state = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %state = alloca i32, align 4 + 0
+NODE  50:   %skip = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %skip = alloca i32, align 4 + 0
+NODE  51:   %tmp___0 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___0 = alloca i32, align 4 + 0
+NODE  52:   %tmp___1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___1 = alloca i32, align 4 + 0
+NODE  53:   %tmp___2 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___2 = alloca i32, align 4 + 0
+NODE  54:   %tmp___3 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___3 = alloca i32, align 4 + 0
+NODE  55:   %tmp___4 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___4 = alloca i32, align 4 + 0
+NODE  56:   %tmp___5 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___5 = alloca i32, align 4 + 0
+NODE  57:   %tmp___6 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___6 = alloca i32, align 4 + 0
+NODE  58:   %tmp___7 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___7 = alloca i32, align 4 + 0
+NODE  59:   %tmp___8 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___8 = alloca i32, align 4 + 0
+NODE  60:   %tmp___9 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___9 = alloca i32, align 4 + 0
+NODE  61:   %blastFlag = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %blastFlag = alloca i32, align 4 + 0
+NODE  62:   %__cil_tmp55 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp55 = alloca i32, align 4 + 0
+NODE  63:   %__cil_tmp56 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp56 = alloca i64, align 8 + 0
+NODE  64:   %__cil_tmp57 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp57 = alloca i64, align 8 + 0
+NODE  65:   %__cil_tmp58 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp58 = alloca i64, align 8 + 0
+NODE  66:   %__cil_tmp59 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp59 = alloca i64, align 8 + 0
+NODE  67:   %__cil_tmp60 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp60 = alloca i64, align 8 + 0
+NODE  68:   %__cil_tmp61 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp61 = alloca i64, align 8 + 0
+NODE  69:   %__cil_tmp62 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp62 = alloca i64, align 8 + 0
+NODE  70:   %__cil_tmp63 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp63 = alloca i64, align 8 + 0
+NODE  71:   %__cil_tmp64 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__cil_tmp64 = alloca i64, align 8 + 0
+NODE  72:   store i32 %initial_state, i32* %initial_state.addr, align 4 (points-to size: 0)
+NODE  73:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  74:   store i32 %call, i32* %s__info_callback, align 4 (points-to size: 0)
+NODE  75:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  76:   store i32 %call1, i32* %s__in_handshake, align 4 (points-to size: 0)
+NODE  77:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  78:   store i32 %call2, i32* %s__version, align 4 (points-to size: 0)
+NODE  79:   %call3 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  80:   store i32 %call3, i32* %s__bbio, align 4 (points-to size: 0)
+NODE  81:   %call4 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  82:   store i32 %call4, i32* %s__wbio, align 4 (points-to size: 0)
+NODE  83:   %call5 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  84:   store i32 %call5, i32* %s__hit, align 4 (points-to size: 0)
+NODE  85:   %call6 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  86:   store i32 %call6, i32* %s__debug, align 4 (points-to size: 0)
+NODE  87:   %call7 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  88:   store i32 %call7, i32* %s__ctx__info_callback, align 4 (points-to size: 0)
+NODE  89:   %call8 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  90:   store i32 %call8, i32* %s__ctx__stats__sess_connect_renegotiate, ali ... (points-to size: 0)
+NODE  91:   %call9 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  92:   store i32 %call9, i32* %s__ctx__stats__sess_connect, align 4 (points-to size: 0)
+NODE  93:   %call10 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  94:   store i32 %call10, i32* %s__ctx__stats__sess_hit, align 4 (points-to size: 0)
+NODE  95:   %call11 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  96:   store i32 %call11, i32* %s__ctx__stats__sess_connect_good, align 4 (points-to size: 0)
+NODE  97:   %call12 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  98:   store i32 %call12, i32* %s__s3__tmp__cert_req, align 4 (points-to size: 0)
+NODE  99:   %call13 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 100:   store i32 %call13, i32* %s__s3__tmp__new_compression, align 4 (points-to size: 0)
+NODE 101:   %call14 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 102:   store i32 %call14, i32* %s__s3__tmp__reuse_message, align 4 (points-to size: 0)
+NODE 103:   %call15 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 104:   store i32 %call15, i32* %s__s3__tmp__new_cipher, align 4 (points-to size: 0)
+NODE 105:   %call16 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 106:   store i32 %call16, i32* %s__s3__tmp__new_cipher__algorithms, align 4 (points-to size: 0)
+NODE 107:   %call17 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 108:   store i32 %call17, i32* %s__s3__tmp__new_compression__id, align 4 (points-to size: 0)
+NODE 109:   %call18 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 110:   store i32 %call18, i32* %tmp___1, align 4 (points-to size: 0)
+NODE 111:   %call19 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 112:   store i32 %call19, i32* %tmp___2, align 4 (points-to size: 0)
+NODE 113:   %call20 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 114:   store i32 %call20, i32* %tmp___3, align 4 (points-to size: 0)
+NODE 115:   %call21 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 116:   store i32 %call21, i32* %tmp___4, align 4 (points-to size: 0)
+NODE 117:   %call22 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 118:   store i32 %call22, i32* %tmp___5, align 4 (points-to size: 0)
+NODE 119:   %call23 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 120:   store i32 %call23, i32* %tmp___6, align 4 (points-to size: 0)
+NODE 121:   %call24 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 122:   store i32 %call24, i32* %tmp___7, align 4 (points-to size: 0)
+NODE 123:   %call25 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 124:   store i32 %call25, i32* %tmp___8, align 4 (points-to size: 0)
+NODE 125:   %call26 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 126:   store i32 %call26, i32* %tmp___9, align 4 (points-to size: 0)
+NODE 127:   %0 = load i32, i32* %initial_state.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 128:   store i32 %0, i32* %s__state, align 4 (points-to size: 0)
+NODE 129:   store i32 0, i32* %blastFlag, align 4 (points-to size: 0)
+NODE 130:   %call27 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 131:   %conv = sext i32 %call27 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 132:   store i64 %conv, i64* %tmp, align 8 (points-to size: 0)
+NODE 133:   store i32 0, i32* %cb, align 4 (points-to size: 0)
+NODE 134:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 135:   store i32 0, i32* %skip, align 4 (points-to size: 0)
+NODE 136:   store i32 0, i32* %tmp___0, align 4 (points-to size: 0)
+NODE 137:   %1 = load i32, i32* %s__info_callback, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 138:   %2 = load i32, i32* %s__info_callback, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 139:   store i32 %2, i32* %cb, align 4 (points-to size: 0)
+NODE 140:   %5 = load i32, i32* %s__in_handshake, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 141:   %inc = add nsw i32 %5, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 142:   store i32 %inc, i32* %s__in_handshake, align 4 (points-to size: 0)
+NODE 143:   %6 = load i32, i32* %tmp___1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 144:   %sub = sub nsw i32 %6, 12288 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 145:   %3 = load i32, i32* %s__ctx__info_callback, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 146:   %7 = load i32, i32* %tmp___2, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 147:   %sub34 = sub nsw i32 %7, 16384 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 148:   %4 = load i32, i32* %s__ctx__info_callback, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 149:   store i32 %4, i32* %cb, align 4 (points-to size: 0)
+NODE 150:   %8 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 151:   store i32 %8, i32* %state, align 4 (points-to size: 0)
+NODE 152:   %9 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 153:   store i32 0, i32* %s__server, align 4 (points-to size: 0)
+NODE 154:   %44 = load i32, i32* %cb, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 155:   %119 = load i32, i32* %s__in_handshake, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 156:   %dec = add nsw i32 %119, -1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 157:   store i32 %dec, i32* %s__in_handshake, align 4 (points-to size: 0)
+NODE 158:   %120 = load i32, i32* %cb, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 159:   %10 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 160:   store i32 1, i32* %s__new_session, align 4 (points-to size: 0)
+NODE 161:   store i32 4096, i32* %s__state, align 4 (points-to size: 0)
+NODE 162:   %43 = load i32, i32* %s__ctx__stats__sess_connect_renegotiate, align ... (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 163:   %inc172 = add nsw i32 %43, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 164:   store i32 %inc172, i32* %s__ctx__stats__sess_connect_renegotiate, al ... (points-to size: 0)
+NODE 165:   %45 = load i32, i32* %s__version, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 166:   %sub177 = sub nsw i32 %45, 65280 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 167:   store i32 %sub177, i32* %__cil_tmp55, align 4 (points-to size: 0)
+NODE 168:   %46 = load i32, i32* %__cil_tmp55, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 169:   %121 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 170:   ret i32 %121 (points-to size: 0)
+NODE 171:   %11 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 172:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 173:   store i32 4096, i32* %s__type, align 4 (points-to size: 0)
+NODE 174:   %47 = load i32, i32* %s__init_buf___0, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 175:   %12 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 176:   %call185 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 177:   store i32 %call185, i32* %buf, align 4 (points-to size: 0)
+NODE 178:   %48 = load i32, i32* %buf, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 179:   %51 = load i32, i32* %tmp___4, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 180:   %13 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 181:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 182:   %49 = load i32, i32* %tmp___3, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 183:   %52 = load i32, i32* %tmp___5, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 184:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 185:   %14 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 186:   %50 = load i32, i32* %buf, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 187:   store i32 %50, i32* %s__init_buf___0, align 4 (points-to size: 0)
+NODE 188:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 189:   store i32 4368, i32* %s__state, align 4 (points-to size: 0)
+NODE 190:   %53 = load i32, i32* %s__ctx__stats__sess_connect, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 191:   %inc200 = add nsw i32 %53, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 192:   store i32 %inc200, i32* %s__ctx__stats__sess_connect, align 4 (points-to size: 0)
+NODE 193:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 194:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 195:   store i32 0, i32* %s__shutdown, align 4 (points-to size: 0)
+NODE 196:   %call201 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 197:   store i32 %call201, i32* %ret, align 4 (points-to size: 0)
+NODE 198:   %54 = load i32, i32* %blastFlag, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 199:   %15 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 200:   store i32 1, i32* %blastFlag, align 4 (points-to size: 0)
+NODE 201:   %55 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 202:   %16 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 203:   store i32 4384, i32* %s__state, align 4 (points-to size: 0)
+NODE 204:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 205:   %56 = load i32, i32* %s__bbio, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 206:   %57 = load i32, i32* %s__wbio, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 207:   %call214 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 208:   store i32 %call214, i32* %ret, align 4 (points-to size: 0)
+NODE 209:   %58 = load i32, i32* %blastFlag, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 210:   %17 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 211:   store i32 2, i32* %blastFlag, align 4 (points-to size: 0)
+NODE 212:   %59 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 213:   %18 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 214:   %60 = load i32, i32* %s__hit, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 215:   %61 = load i32, i32* %s__s3__tmp__new_cipher__algorithms, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 216:   %sub227 = sub nsw i32 %61, 256 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 217:   %19 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 218:   store i32 4560, i32* %s__state, align 4 (points-to size: 0)
+NODE 219:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 220:   store i32 4400, i32* %s__state, align 4 (points-to size: 0)
+NODE 221:   store i32 1, i32* %skip, align 4 (points-to size: 0)
+NODE 222:   store i32 4416, i32* %s__state, align 4 (points-to size: 0)
+NODE 223:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 224:   %call231 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 225:   store i32 %call231, i32* %ret, align 4 (points-to size: 0)
+NODE 226:   %62 = load i32, i32* %blastFlag, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 227:   %20 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 228:   store i32 3, i32* %blastFlag, align 4 (points-to size: 0)
+NODE 229:   %63 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 230:   %call241 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 231:   store i32 %call241, i32* %ret, align 4 (points-to size: 0)
+NODE 232:   %64 = load i32, i32* %blastFlag, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 233:   %21 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 234:   store i32 4, i32* %blastFlag, align 4 (points-to size: 0)
+NODE 235:   %65 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 236:   %22 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 237:   store i32 4432, i32* %s__state, align 4 (points-to size: 0)
+NODE 238:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 239:   %66 = load i32, i32* %tmp___6, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 240:   %call253 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 241:   store i32 %call253, i32* %ret, align 4 (points-to size: 0)
+NODE 242:   %67 = load i32, i32* %blastFlag, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 243:   %23 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 244:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 245:   %68 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 246:   %24 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 247:   store i32 4448, i32* %s__state, align 4 (points-to size: 0)
+NODE 248:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 249:   %call262 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 250:   store i32 %call262, i32* %ret, align 4 (points-to size: 0)
+NODE 251:   %69 = load i32, i32* %blastFlag, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 252:   %25 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 253:   store i32 5, i32* %blastFlag, align 4 (points-to size: 0)
+NODE 254:   %70 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 255:   %26 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 256:   %71 = load i32, i32* %s__s3__tmp__cert_req, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 257:   %call275 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 258:   store i32 %call275, i32* %ret, align 4 (points-to size: 0)
+NODE 259:   %72 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 260:   %27 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 261:   store i32 4464, i32* %s__state, align 4 (points-to size: 0)
+NODE 262:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 263:   store i32 4480, i32* %s__state, align 4 (points-to size: 0)
+NODE 264:   store i32 4480, i32* %s__state, align 4 (points-to size: 0)
+NODE 265:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 266:   %28 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 267:   %29 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 268:   %30 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 269:   %call280 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 270:   store i32 %call280, i32* %ret, align 4 (points-to size: 0)
+NODE 271:   %73 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 272:   %31 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 273:   %74 = load i32, i32* %s__s3__tmp__new_cipher__algorithms, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 274:   %conv285 = sext i32 %74 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 275:   store i64 %conv285, i64* %l, align 8 (points-to size: 0)
+NODE 276:   %75 = load i32, i32* %s__s3__tmp__cert_req, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 277:   %32 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 278:   store i32 4496, i32* %s__state, align 4 (points-to size: 0)
+NODE 279:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 280:   store i32 4512, i32* %s__state, align 4 (points-to size: 0)
+NODE 281:   store i32 0, i32* %s__s3__change_cipher_spec, align 4 (points-to size: 0)
+NODE 282:   %call291 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 283:   store i32 %call291, i32* %ret, align 4 (points-to size: 0)
+NODE 284:   %76 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 285:   %33 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 286:   store i32 4512, i32* %s__state, align 4 (points-to size: 0)
+NODE 287:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 288:   store i32 0, i32* %s__s3__change_cipher_spec, align 4 (points-to size: 0)
+NODE 289:   %34 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 290:   %call296 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 291:   store i32 %call296, i32* %ret, align 4 (points-to size: 0)
+NODE 292:   %77 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 293:   %35 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 294:   store i32 4528, i32* %s__state, align 4 (points-to size: 0)
+NODE 295:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 296:   %78 = load i32, i32* %s__s3__tmp__new_cipher, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 297:   store i32 %78, i32* %s__session__cipher, align 4 (points-to size: 0)
+NODE 298:   %79 = load i32, i32* %s__s3__tmp__new_compression, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 299:   %36 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 300:   store i32 0, i32* %s__session__compress_meth, align 4 (points-to size: 0)
+NODE 301:   %81 = load i32, i32* %tmp___7, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 302:   %80 = load i32, i32* %s__s3__tmp__new_compression__id, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 303:   store i32 %80, i32* %s__session__compress_meth, align 4 (points-to size: 0)
+NODE 304:   %call312 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 305:   store i32 %call312, i32* %ret, align 4 (points-to size: 0)
+NODE 306:   %83 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 307:   %37 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 308:   %82 = load i32, i32* %tmp___8, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 309:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 310:   store i32 4352, i32* %s__state, align 4 (points-to size: 0)
+NODE 311:   %84 = load i32, i32* %s__s3__flags, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 312:   %conv317 = sext i32 %84 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 313:   store i64 %conv317, i64* %__cil_tmp56, align 8 (points-to size: 0)
+NODE 314:   %85 = load i64, i64* %__cil_tmp56, align 8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 315:   %add = add nsw i64 %85, 5 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 316:   store i64 %add, i64* %__cil_tmp57, align 8 (points-to size: 0)
+NODE 317:   %86 = load i64, i64* %__cil_tmp57, align 8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 318:   %conv318 = trunc i64 %86 to i32 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 319:   store i32 %conv318, i32* %s__s3__flags, align 4 (points-to size: 0)
+NODE 320:   %87 = load i32, i32* %s__hit, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 321:   %38 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 322:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 323:   store i32 3, i32* %s__s3__tmp__next_state___0, align 4 (points-to size: 0)
+NODE 324:   %88 = load i32, i32* %s__s3__flags, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 325:   %conv321 = sext i32 %88 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 326:   store i64 %conv321, i64* %__cil_tmp58, align 8 (points-to size: 0)
+NODE 327:   %89 = load i64, i64* %__cil_tmp58, align 8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 328:   %sub322 = sub nsw i64 %89, 2 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 329:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 330:   store i32 4560, i32* %s__s3__tmp__next_state___0, align 4 (points-to size: 0)
+NODE 331:   %call331 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 332:   store i32 %call331, i32* %ret, align 4 (points-to size: 0)
+NODE 333:   %93 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 334:   %39 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 335:   store i32 3, i32* %s__state, align 4 (points-to size: 0)
+NODE 336:   %90 = load i32, i32* %s__s3__flags, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 337:   %conv325 = sext i32 %90 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 338:   store i64 %conv325, i64* %__cil_tmp59, align 8 (points-to size: 0)
+NODE 339:   %91 = load i64, i64* %__cil_tmp59, align 8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 340:   %add326 = add nsw i64 %91, 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 341:   store i64 %add326, i64* %__cil_tmp60, align 8 (points-to size: 0)
+NODE 342:   %92 = load i64, i64* %__cil_tmp60, align 8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 343:   %conv327 = trunc i64 %92 to i32 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 344:   store i32 %conv327, i32* %s__s3__flags, align 4 (points-to size: 0)
+NODE 345:   store i32 0, i32* %s__s3__delay_buf_pop_ret, align 4 (points-to size: 0)
+NODE 346:   %94 = load i32, i32* %s__hit, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 347:   %40 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 348:   store i32 4512, i32* %s__state, align 4 (points-to size: 0)
+NODE 349:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 350:   store i32 3, i32* %s__state, align 4 (points-to size: 0)
+NODE 351:   %41 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 352:   %95 = load i32, i32* %num1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 353:   %conv340 = sext i32 %95 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 354:   store i64 %conv340, i64* %__cil_tmp61, align 8 (points-to size: 0)
+NODE 355:   %96 = load i64, i64* %__cil_tmp61, align 8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 356:   store i32 2, i32* %s__rwstate, align 4 (points-to size: 0)
+NODE 357:   %97 = load i32, i32* %tmp___9, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 358:   store i32 %97, i32* %num1, align 4 (points-to size: 0)
+NODE 359:   %98 = load i32, i32* %num1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 360:   %conv344 = sext i32 %98 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 361:   store i64 %conv344, i64* %__cil_tmp62, align 8 (points-to size: 0)
+NODE 362:   %99 = load i64, i64* %__cil_tmp62, align 8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 363:   %100 = load i32, i32* %s__s3__tmp__next_state___0, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 364:   store i32 %100, i32* %s__state, align 4 (points-to size: 0)
+NODE 365:   %101 = load i32, i32* %s__init_buf___0, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 366:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 367:   %109 = load i32, i32* %s__s3__tmp__reuse_message, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 368:   store i32 -1, i32* %ret, align 4 (points-to size: 0)
+NODE 369:   store i32 1, i32* %s__rwstate, align 4 (points-to size: 0)
+NODE 370:   store i32 0, i32* %s__init_buf___0, align 4 (points-to size: 0)
+NODE 371:   %102 = load i32, i32* %s__s3__flags, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 372:   %conv354 = sext i32 %102 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 373:   store i64 %conv354, i64* %__cil_tmp63, align 8 (points-to size: 0)
+NODE 374:   %103 = load i64, i64* %__cil_tmp63, align 8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 375:   %sub355 = sub nsw i64 %103, 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 376:   store i64 %sub355, i64* %__cil_tmp64, align 8 (points-to size: 0)
+NODE 377:   %104 = load i64, i64* %__cil_tmp64, align 8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 378:   store i32 0, i32* %skip, align 4 (points-to size: 0)
+NODE 379:   %110 = load i32, i32* %skip, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 380:   store i32 0, i32* %s__init_num, align 4 (points-to size: 0)
+NODE 381:   store i32 0, i32* %s__new_session, align 4 (points-to size: 0)
+NODE 382:   %105 = load i32, i32* %s__hit, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 383:   %111 = load i32, i32* %s__debug, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 384:   %106 = load i32, i32* %s__ctx__stats__sess_hit, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 385:   %inc361 = add nsw i32 %106, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 386:   store i32 %inc361, i32* %s__ctx__stats__sess_hit, align 4 (points-to size: 0)
+NODE 387:   store i32 1, i32* %ret, align 4 (points-to size: 0)
+NODE 388:   %107 = load i32, i32* %s__ctx__stats__sess_connect_good, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 389:   %inc363 = add nsw i32 %107, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 390:   store i32 %inc363, i32* %s__ctx__stats__sess_connect_good, align 4 (points-to size: 0)
+NODE 391:   %108 = load i32, i32* %cb, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 392:   %call409 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 393:   store i32 %call409, i32* %ret, align 4 (points-to size: 0)
+NODE 394:   %112 = load i32, i32* %ret, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 395:   %113 = load i32, i32* %cb, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 396:   %114 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 397:   %115 = load i32, i32* %state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 398:   %116 = load i32, i32* %s__state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 399:   store i32 %116, i32* %new_state, align 4 (points-to size: 0)
+NODE 400:   %117 = load i32, i32* %state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 401:   store i32 %117, i32* %s__state, align 4 (points-to size: 0)
+NODE 402:   %118 = load i32, i32* %new_state, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 403:   store i32 %118, i32* %s__state, align 4 (points-to size: 0)
+NODE 404: ssl3_connect (points-to size: 1)
+    -> ssl3_connect + 0
+NODE 405: main (points-to size: 1)
+    -> main + 0
+NODE 406:   %call = call i32 @ssl3_connect(i32 12292) (points-to size: 0)
+NODE 407:   ret i32 0 (points-to size: 1)
+    -> null + 0

@@ -1,0 +1,113 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.gcDeVa
+
+Input File is : svcomp_bubblesort_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+void bubbleSort(int numbers[], int array_size)
+{
+    int i, j, temp;
+     
+    for (i = (array_size - 1); i >= 0; i--) {
+        for (j = 1; j <= i; j++) {
+            {if (numbers[j-1] > numbers[j]) {
+                temp = numbers[j-1];
+                numbers[j-1] = numbers[j];
+                numbers[j] = temp;
+            }}
+        }
+    }
+}
+
+int main() {
+  int array_size = __VERIFIER_nondet_int();
+  {if (array_size < 1) {
+     array_size = 1;
+  }}
+  int* numbers = (int*) alloca(array_size * sizeof(int));
+  bubbleSort(numbers, array_size);
+  return 0;
+}
+./proton: line 26:    92 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_bubblesort_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+void bubbleSort(int numbers[], int array_size)
+{
+    int i, j, temp;
+     
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(9, __func__);
+ for (i = (array_size - 1); i >= 0; i--) { __VERIFIER_loop_head(9, __func__);
+printf("CBMC Instrumentation @ line9");myBool flag=__VERIFIER_nondet_myBool();static int oarray_size;static int oi;static int oj;static int otemp;if(pStored0){__CPROVER_assert(!(oarray_size==array_size && oi==i && oj==j && otemp==temp),"recurrent state found");} if(flag){oarray_size=array_size;oi=i;oj=j;otemp=temp;pStored0=myTrue;} 
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(10, __func__);
+ for (j = 1; j <= i; j++) { __VERIFIER_loop_head(10, __func__);
+printf("CBMC Instrumentation @ line10");myBool flag=__VERIFIER_nondet_myBool();static int oarray_size;static int oi;static int oj;static int otemp;if(pStored1){__CPROVER_assert(!(oarray_size==array_size && oi==i && oj==j && otemp==temp),"recurrent state found");} if(flag){oarray_size=array_size;oi=i;oj=j;otemp=temp;pStored1=myTrue;} 
+            { __VERIFIER_reached_control(11, __func__);
+if (numbers[j-1] > numbers[j]) { __VERIFIER_control_true(11, __func__);
+
+                temp = numbers[j-1];
+                numbers[j-1] = numbers[j];
+                numbers[j] = temp;
+            }}
+        }
+    }
+}
+
+int main() {
+  int array_size = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(22, __func__);
+if (array_size < 1) { __VERIFIER_control_true(22, __func__);
+
+     array_size = 1;
+  }}
+  int* numbers = (int*) alloca(array_size * sizeof(int));
+  bubbleSort(numbers, array_size);
+  return 0;
+}
+./proton: line 26:   104 Aborted                 instrumenter -in *braced.c -c
+svcomp_bubblesort_alloca_braced_instrumented.c
+NTFILE is svcomp_bubblesort_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_bubblesort_alloca.c
+FILE=svcomp_bubblesort_alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 181790 milliseconds

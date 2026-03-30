@@ -1,0 +1,64 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.4A2lb8
+
+Input File is : svcomp_b.05.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : svcomp_b.05.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x, tmp;
+    x = __VERIFIER_nondet_int();
+    tmp = __VERIFIER_nondet_int();
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(9, __func__);
+ while ((x > 0) && (x == 2*tmp)) { __VERIFIER_loop_head(9, __func__);
+printf("CBMC Instrumentation @ line9");myBool flag=__VERIFIER_nondet_myBool();static int otmp;static int ox;if(pStored0){__CPROVER_assert(!(otmp==tmp && ox==x),"recurrent state found");} if(flag){otmp=tmp;ox=x;pStored0=myTrue;} 
+        x = x - 1;
+        tmp = __VERIFIER_nondet_int();
+    }
+    return 0;
+}
+
+End Main 
+ svcomp_b.05_instrumented.c
+NTFILE is svcomp_b.05_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_b.05.c
+FILE=svcomp_b.05_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 34098 milliseconds

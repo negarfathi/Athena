@@ -1,0 +1,129 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.QHxBWd
+
+Input File is : Reusing_Same_Loop_Iterator_1_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 78574a66b5b286e26839877640592980de089d64
+URL: https://github.com/XQuartz/xorg-server/commit/78574a66b5b286e26839877640592980de089d64
+Project Name: xorg-server
+License: MIT
+termination: FALSE
+*/
+int main()
+{
+    int i,j;
+    int num_crtc = __VERIFIER_nondet_int();
+    int num_output = __VERIFIER_nondet_int();
+    {if( num_crtc > 65534 || num_output > 65534 )
+        {return 0;}}
+    for( i = 0 ; i < num_crtc ; i++ )
+    {
+        for( i = 0 ; i < num_output ; i++ )
+        {
+            //do other
+        }
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Reusing_Same_Loop_Iterator_1_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 78574a66b5b286e26839877640592980de089d64
+URL: https://github.com/XQuartz/xorg-server/commit/78574a66b5b286e26839877640592980de089d64
+Project Name: xorg-server
+License: MIT
+termination: FALSE
+*/
+int main()
+{
+    int i,j;
+    int num_crtc = __VERIFIER_nondet_int();
+    int num_output = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(14, __func__);
+if( num_crtc > 65534 || num_output > 65534 )
+        { __VERIFIER_control_true(15, __func__);
+return 0;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(17, __func__);
+ for( i = 0 ; i < num_crtc ; i++ )
+    { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int oj;static int onum_crtc;static int onum_output;if(pStored0){__CPROVER_assert(!(oi==i && oj==j && onum_crtc==num_crtc && onum_output==num_output),"recurrent state found");} if(flag){oi=i;oj=j;onum_crtc=num_crtc;onum_output=num_output;pStored0=myTrue;} 
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(19, __func__);
+ for( i = 0 ; i < num_output ; i++ )
+        { __VERIFIER_loop_head(19, __func__);
+printf("CBMC Instrumentation @ line19");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int oj;static int onum_crtc;static int onum_output;if(pStored1){__CPROVER_assert(!(oi==i && oj==j && onum_crtc==num_crtc && onum_output==num_output),"recurrent state found");} if(flag){oi=i;oj=j;onum_crtc=num_crtc;onum_output=num_output;pStored1=myTrue;} 
+            //do other
+        }
+    }
+    return 0;
+}
+
+End Main 
+ Reusing_Same_Loop_Iterator_1_NT_braced_instrumented.c
+NTFILE is Reusing_Same_Loop_Iterator_1_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Reusing_Same_Loop_Iterator_1_NT.c
+b'1cc22851e3e67da5a9c38cf19078cf4f2b2d18cc96dd6469ca95fcffc43673bc  Reusing_Same_Loop_Iterator_1_NT.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Reusing_Same_Loop_Iterator_1_NT/Reusing_Same_Loop_Iterator_1_NT.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 14 reachedControl
+main 17 reachedControl
+main 17 loopHead
+main 19 reachedControl
+main 19 loopHead
+main 19 reachedControl
+main 17 loopHead
+enteringLasso
+main 19 reachedControl
+main 19 loopHead
+main 19 reachedControl
+main 17 loopHead
+Trace file line inside enterred lasso check : main 19 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Reusing_Same_Loop_Iterator_1_NT/Reusing_Same_Loop_Iterator_1_NT.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Reusing_Same_Loop_Iterator_1_NT.c
+FILE=Reusing_Same_Loop_Iterator_1_NT_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2683 milliseconds

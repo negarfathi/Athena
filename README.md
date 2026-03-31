@@ -135,8 +135,8 @@ For the benchmark suite of Shi et al., Athena supports two bounded-semantics con
 
 
 
-## Publication
+## Papers
 
-This project is related to the following publication:
+This repository is based on the following work:
 
-N. Fathi, H. Unno, T. Terauchi, and R. Purandare, “Sound Termination and Non-Termination Analysis of C Programs with Bit-Precise Bounded Semantics and Advanced Constructs,” accepted at the *ACM International Conference on the Foundations of Software Engineering (FSE)*, 2026.
+N. Fathi, H. Unno, T. Terauchi, and R. Purandare, “Sound Termination and Non-Termination Analysis of C Programs with Bit-Precise Bounded Semantics and Advanced Constructs,” to appear in *Proceedings of the ACM International Conference on the Foundations of Software Engineering (FSE)*, 2026.

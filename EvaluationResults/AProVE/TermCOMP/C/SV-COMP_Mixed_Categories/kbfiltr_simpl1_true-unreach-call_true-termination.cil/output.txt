@@ -1,0 +1,15 @@
+kbfiltr_simpl1.cil.c:192:56: warning: implicit declaration of function 'IofCallDriver' is invalid in C99 [-Wimplicit-function-declaration]
+                                              status = IofCallDriver(devExt__TopOfStack,
+                                                       ^
+kbfiltr_simpl1.cil.c:199:49: warning: implicit declaration of function 'KeWaitForSingleObject' is invalid in C99 [-Wimplicit-function-declaration]
+                                                KeWaitForSingleObject(event, Executive,
+                                                ^
+kbfiltr_simpl1.cil.c:463:21: warning: implicit declaration of function 'KbFilter_Complete' is invalid in C99 [-Wimplicit-function-declaration]
+    compRetStatus = KbFilter_Complete(DeviceObject, Irp, lcontext);
+                    ^
+3 warnings generated.
+
+line 1170:5 extraneous input 'metadata' expecting EXCLAMATION
+line 1170:25 no viable alternative at input '!'
+Instruction count:677
+Runtime: 900155 milliseconds

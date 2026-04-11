@@ -1,0 +1,53 @@
+2025-08-29 02:53:11:410	INFO	CPAMain.detectFrontendLanguageIfNecessary	Language C detected and set for analysis
+
+2025-08-29 02:53:11:492	INFO	CPAchecker.run	CPAchecker 4.0 / terminationAnalysis (OpenJDK 64-Bit Server VM 17.0.15) started
+
+2025-08-29 02:53:11:511	INFO	CPAchecker.parse	Parsing CFA from file(s) "Benchmarks/TermCOMP/C/Ultimate/WhileTrue_false-termination/WhileTrue_false-termination.c"
+
+2025-08-29 02:53:12:195	INFO	CFACreationUtils.addEdgeToCFA	line 13: Dead code detected: return 0;
+
+2025-08-29 02:53:12:287	INFO	CoreComponentsFactory.createAlgorithm	Using Restarting Algorithm
+
+2025-08-29 02:53:12:307	WARNING	CPAchecker.printConfigurationWarnings	The following configuration options were specified but are not used:
+ cpa.arg.lateMerge
+ counterexample.export.exportWitness 
+
+
+2025-08-29 02:53:12:308	INFO	CPAchecker.runAlgorithm	Starting analysis ...
+
+2025-08-29 02:53:12:313	INFO	RestartAlgorithm.run	Loading analysis 1 from file /cpachecker/config/components/combinations-parallel-termination.properties ...
+
+2025-08-29 02:53:12:353	INFO	Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:ResourceLimitChecker.fromConfiguration	Using the following resource limits: Thread CPU-time limit of 300s
+
+2025-08-29 02:53:12:613	INFO	Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:PredicateCPA:PredicateCPA.<init>	Using predicate analysis with MathSAT5 version 5.6.10 (9293adc746be) (May 31 2023 12:38:06, gmp 6.2.0, gcc 7.5.0, 64-bit, reentrant) and JFactory 1.21.
+
+2025-08-29 02:53:13:008	INFO	Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:PredicateCPA:PredicateCPARefiner.<init>	Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy.
+
+2025-08-29 02:53:13:019	WARNING	CPAs.retrieveCPAOrFail	Warning: Skipping one analysis because the configuration file /cpachecker/config/components/combinations-parallel-termination.properties is invalid (TerminationAlgorithm needs a TerminationCPA)
+
+2025-08-29 02:53:13:021	INFO	RestartAlgorithm.run	Loading analysis 1 from file /cpachecker/config/components/termination-recursion.properties ...
+
+2025-08-29 02:53:13:028	INFO	NestingAlgorithm.checkConfigs	Mismatch of configuration options when loading from '/cpachecker/config/components/termination-recursion.properties': 'termination.config' has two values 'terminationAnalysis.properties' and 'termination-recursion.properties'. Using 'termination-recursion.properties'.
+
+2025-08-29 02:53:13:057	WARNING	Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:FormulaManagerView.<init>	Using unsound approximation of ints with unbounded integers and floats with rationals for encoding program semantics.
+
+2025-08-29 02:53:13:061	INFO	Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:PredicateCPA.<init>	Using predicate analysis with MathSAT5 version 5.6.10 (9293adc746be) (May 31 2023 12:38:06, gmp 6.2.0, gcc 7.5.0, 64-bit, reentrant) and JFactory 1.21.
+
+2025-08-29 02:53:13:174	INFO	Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:PredicateCPARefiner.<init>	Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy.
+
+2025-08-29 02:53:13:240	WARNING	Analysis /cpachecker/config/components/termination-recursion.properties:FormulaManagerView.<init>	Using unsound approximation of ints with unbounded integers and floats with rationals for encoding program semantics.
+
+2025-08-29 02:53:13:274	INFO	RestartAlgorithm.run	Starting analysis 1 ...
+
+2025-08-29 02:53:13:274	INFO	Analysis /cpachecker/config/components/termination-recursion.properties:TerminationAlgorithm.run0	Starting termination algorithm.
+
+2025-08-29 02:53:13:614	INFO	Analysis /cpachecker/config/components/termination-recursion.properties:CounterexampleCheckAlgorithm.checkCounterexample	Error path found, starting counterexample check with CPACHECKER.
+
+2025-08-29 02:53:13:758	WARNING	Analysis /cpachecker/config/components/termination-recursion.properties:CounterexampleCheck:AutomatonGraphmlParser.getSpecAsProperties	Cannot map specification TRUE to property type. Will ignore it (would only be problematic if this were the termination property).
+
+2025-08-29 02:53:13:782	INFO	Analysis /cpachecker/config/components/termination-recursion.properties:CounterexampleCheck:PredicateCPA:PredicateCPA.<init>	Using predicate analysis with MathSAT5 version 5.6.10 (9293adc746be) (May 31 2023 12:38:06, gmp 6.2.0, gcc 7.5.0, 64-bit, reentrant).
+
+2025-08-29 02:53:13:801	INFO	Analysis /cpachecker/config/components/termination-recursion.properties:CounterexampleCheckAlgorithm.checkCounterexample	Error path found but identified as infeasible.
+
+2025-08-29 02:53:13:803	SEVERE	CounterexampleCheckAlgorithm.run	Error: Error path found, but identified as infeasible by counterexample check with CPACHECKER.
+

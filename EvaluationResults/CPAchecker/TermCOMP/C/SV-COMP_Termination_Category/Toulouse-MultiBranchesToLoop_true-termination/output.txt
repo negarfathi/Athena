@@ -1,0 +1,77 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+Running CPAchecker with Java heap of size 10000M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with --stack if needed.
+Language C detected and set for analysis (CPAMain.detectFrontendLanguageIfNecessary, INFO)
+
+CPAchecker 4.0 / terminationAnalysis (OpenJDK 64-Bit Server VM 17.0.15) started (CPAchecker.run, INFO)
+
+Parsing CFA from file(s) "Benchmarks/TermCOMP/C/SV-COMP_Termination_Category/Toulouse-MultiBranchesToLoop_true-termination/Toulouse-MultiBranchesToLoop_true-termination.c" (CPAchecker.parse, INFO)
+
+Using Restarting Algorithm (CoreComponentsFactory.createAlgorithm, INFO)
+
+The following configuration options were specified but are not used:
+ cpa.arg.lateMerge
+ counterexample.export.exportWitness 
+ (CPAchecker.printConfigurationWarnings, WARNING)
+
+Starting analysis ... (CPAchecker.runAlgorithm, INFO)
+
+Loading analysis 1 from file /cpachecker/config/components/combinations-parallel-termination.properties ... (RestartAlgorithm.run, INFO)
+
+Using the following resource limits: Thread CPU-time limit of 300s (Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:ResourceLimitChecker.fromConfiguration, INFO)
+
+Using predicate analysis with MathSAT5 version 5.6.10 (9293adc746be) (May 31 2023 12:38:06, gmp 6.2.0, gcc 7.5.0, 64-bit, reentrant) and JFactory 1.21. (Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:PredicateCPA:PredicateCPA.<init>, INFO)
+
+Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy. (Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:PredicateCPA:PredicateCPARefiner.<init>, INFO)
+
+Warning: Skipping one analysis because the configuration file /cpachecker/config/components/combinations-parallel-termination.properties is invalid (TerminationAlgorithm needs a TerminationCPA) (CPAs.retrieveCPAOrFail, WARNING)
+
+Loading analysis 1 from file /cpachecker/config/components/termination-recursion.properties ... (RestartAlgorithm.run, INFO)
+
+Mismatch of configuration options when loading from '/cpachecker/config/components/termination-recursion.properties': 'termination.config' has two values 'terminationAnalysis.properties' and 'termination-recursion.properties'. Using 'termination-recursion.properties'. (NestingAlgorithm.checkConfigs, INFO)
+
+Using unsound approximation of ints with unbounded integers and floats with rationals for encoding program semantics. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:FormulaManagerView.<init>, WARNING)
+
+Using predicate analysis with MathSAT5 version 5.6.10 (9293adc746be) (May 31 2023 12:38:06, gmp 6.2.0, gcc 7.5.0, 64-bit, reentrant) and JFactory 1.21. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:PredicateCPA.<init>, INFO)
+
+Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:PredicateCPARefiner.<init>, INFO)
+
+Using unsound approximation of ints with unbounded integers and floats with rationals for encoding program semantics. (Analysis /cpachecker/config/components/termination-recursion.properties:FormulaManagerView.<init>, WARNING)
+
+Starting analysis 1 ... (RestartAlgorithm.run, INFO)
+
+Starting termination algorithm. (Analysis /cpachecker/config/components/termination-recursion.properties:TerminationAlgorithm.run0, INFO)
+
+Shutdown requested (The JVM is shutting down, probably because Ctrl+C was pressed.), waiting for termination. (ForceTerminationOnShutdown$1.shutdownRequested, WARNING)
+
+Shutdown was requested but CPAchecker is still running after 10s, forcing immediate termination now. (ForceTerminationOnShutdown.run, WARNING)
+
+For your information: CPAchecker is currently hanging at
+ app//org.sosy_lab.java_smt.solvers.mathsat5.Mathsat5NativeApi.msat_all_sat(Native Method)
+app//org.sosy_lab.java_smt.solvers.mathsat5.Mathsat5NativeApi.msat_all_sat(Mathsat5NativeApi.java:145)
+app//org.sosy_lab.java_smt.solvers.mathsat5.Mathsat5AbstractProver.allSat(Mathsat5AbstractProver.java:251)
+app//org.sosy_lab.cpachecker.util.predicates.smt.BasicProverEnvironmentView.allSat(BasicProverEnvironmentView.java:110)
+app//org.sosy_lab.cpachecker.cpa.predicate.PredicateAbstractionManager.computeBooleanAbstraction(PredicateAbstractionManager.java:1012)
+app//org.sosy_lab.cpachecker.cpa.predicate.PredicateAbstractionManager.computeAbstraction(PredicateAbstractionManager.java:788)
+app//org.sosy_lab.cpachecker.cpa.predicate.PredicateAbstractionManager.buildAbstraction(PredicateAbstractionManager.java:405)
+app//org.sosy_lab.cpachecker.cpa.predicate.PredicatePrecisionAdjustment.computeAbstraction(PredicatePrecisionAdjustment.java:185)
+app//org.sosy_lab.cpachecker.cpa.predicate.PredicatePrecisionAdjustment.prec(PredicatePrecisionAdjustment.java:96)
+app//org.sosy_lab.cpachecker.cpa.composite.CompositePrecisionAdjustment.prec(CompositePrecisionAdjustment.java:68)
+app//org.sosy_lab.cpachecker.cpa.termination.TerminationPrecisionAdjustment.prec(TerminationPrecisionAdjustment.java:40)
+app//org.sosy_lab.cpachecker.cpa.arg.ARGPrecisionAdjustment.prec(ARGPrecisionAdjustment.java:88)
+app//org.sosy_lab.cpachecker.cpa.arg.ARGPrecisionAdjustment.prec(ARGPrecisionAdjustment.java:58)
+app//org.sosy_lab.cpachecker.core.algorithm.CPAAlgorithm.handleState(CPAAlgorithm.java:356)
+app//org.sosy_lab.cpachecker.core.algorithm.CPAAlgorithm.run0(CPAAlgorithm.java:289)
+app//org.sosy_lab.cpachecker.core.algorithm.CPAAlgorithm.run(CPAAlgorithm.java:260)
+app//org.sosy_lab.cpachecker.core.algorithm.CEGARAlgorithm.run(CEGARAlgorithm.java:241)
+app//org.sosy_lab.cpachecker.core.algorithm.termination.TerminationAlgorithm.proveLoopTermination(TerminationAlgorithm.java:306)
+app//org.sosy_lab.cpachecker.core.algorithm.termination.TerminationAlgorithm.run0(TerminationAlgorithm.java:259)
+app//org.sosy_lab.cpachecker.core.algorithm.termination.TerminationAlgorithm.run(TerminationAlgorithm.java:223)
+app//org.sosy_lab.cpachecker.core.algorithm.counterexamplecheck.CounterexampleCheckAlgorithm.run(CounterexampleCheckAlgorithm.java:142)
+app//org.sosy_lab.cpachecker.core.algorithm.RestartAlgorithm.run(RestartAlgorithm.java:327)
+app//org.sosy_lab.cpachecker.core.CPAchecker.runAlgorithm(CPAchecker.java:489)
+app//org.sosy_lab.cpachecker.core.CPAchecker.run(CPAchecker.java:357)
+app//org.sosy_lab.cpachecker.cmdline.CPAMain.main(CPAMain.java:171) 
+ (ForceTerminationOnShutdown.run, INFO)
+
+Runtime: 911846 milliseconds

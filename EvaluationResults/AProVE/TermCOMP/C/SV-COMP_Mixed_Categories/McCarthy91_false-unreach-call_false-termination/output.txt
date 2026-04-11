@@ -1,0 +1,23 @@
+/liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/McCarthy91_false-unreach-call_false-termination/McCarthy91_false-unreach-call_false-termination.c:27:33: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (result == 91 || x > 102 && result == x - 10) {
+                     ~~ ~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/McCarthy91_false-unreach-call_false-termination/McCarthy91_false-unreach-call_false-termination.c:27:33: note: place parentheses around the '&&' expression to silence this warning
+    if (result == 91 || x > 102 && result == x - 10) {
+                                ^
+                        (                          )
+1 warning generated.
+
+line 83:5 extraneous input 'metadata' expecting EXCLAMATION
+line 83:25 no viable alternative at input '!'
+Graph finished, checking  consistency
+Graph finished, checked consistency, took 0.01s
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+MAYBE
+Runtime: 8845 milliseconds

@@ -1,0 +1,46 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.OwDVMe
+
+Input File is : Missing_Iterator_Update_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+fatal error: error opening file '<invalid loc>': 
+
+Input File is : *braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+
+
+
+<<<<<INVALID SOURCE LOCATION>>>>>
+End Main 
+ *braced_instrumented.c
+NTFILE is *braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Missing_Iterator_Update_1_T.c
+FILE=*braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 178265 milliseconds

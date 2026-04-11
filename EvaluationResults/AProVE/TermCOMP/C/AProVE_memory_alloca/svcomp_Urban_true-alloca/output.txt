@@ -1,0 +1,6 @@
+line 110:5 extraneous input 'metadata' expecting EXCLAMATION
+line 110:25 no viable alternative at input '!'
+Graph finished, checking  consistency
+Graph finished, checked consistency, took 0.005s
+/Users/nfathi2/Desktop/run_AProVE.sh: line 39: 76819 Killed: 9               timeout --kill-after=10 "$timeout" docker run --rm --platform linux/amd64 -v "$root_directory":/liveness_analysis --entrypoint java aprove -ea -jar /opt/aprove/aprove.jar -m wst --bit-width 64 "/liveness_analysis/Benchmarks/$path_postfix"
+Runtime: 910047 milliseconds

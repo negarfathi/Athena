@@ -1,0 +1,50 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   4:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   5:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   6: <6> PSNodeType::CALL (points-to size: 0)
+NODE   7: <7> PSNodeType::ENTRY (points-to size: 0)
+NODE   8: i32 %x (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   9: i32 %tmp (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  10:   %x.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %x.addr = alloca i32, align 4 + 0
+NODE  11:   %tmp.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp.addr = alloca i32, align 4 + 0
+NODE  12:   store i32 %x, i32* %x.addr, align 4 (points-to size: 0)
+NODE  13:   store i32 %tmp, i32* %tmp.addr, align 4 (points-to size: 0)
+NODE  14:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  15:   store i32 %call, i32* %tmp.addr, align 4 (points-to size: 0)
+NODE  16:   %0 = load i32, i32* %x.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  17:   %1 = load i32, i32* %x.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  18:   %2 = load i32, i32* %tmp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  19:   %mul = mul nsw i32 2, %2 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  20:   %3 = phi i1 [ false, %while.cond ], [ %cmp1, %land.rhs ] (points-to size: 1)
+    -> null + 0
+NODE  21:   %4 = load i32, i32* %x.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  22:   %sub = sub nsw i32 %4, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  23:   store i32 %sub, i32* %x.addr, align 4 (points-to size: 0)
+NODE  24:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  25:   store i32 %call2, i32* %tmp.addr, align 4 (points-to size: 0)
+NODE  26:   %5 = load i32, i32* %x.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  27:   ret i32 %5 (points-to size: 0)
+NODE  28: test_fun (points-to size: 1)
+    -> test_fun + 0
+NODE  29: main (points-to size: 1)
+    -> main + 0
+NODE  30:   %call2 = call i32 @test_fun(i32 %call, i32 %call1) (points-to size: 0)
+NODE  31:   ret i32 %call2 (points-to size: 0)

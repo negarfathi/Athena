@@ -1,0 +1,78 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.LaWLJx
+
+Input File is : Misusing_Method_Overloading_2_T.cpp
+
+ CBMC instrumentation
+
+Rewriter Init
+./proton: line 26:    90 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Misusing_Method_Overloading_2_T.cpp
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+
+class resolver_query_base {
+    enum flags
+    {
+        canonical_name = 1,
+        passive = 2,
+        numeric_host = 3,
+        numeric_service = 4,
+        v4_mapped = 5,
+        all_matching = 6,
+        address_configured = 7
+    };
+    friend flags operator ~(flags x){
+        return static_cast<flags>(~static_cast<unsigned int>(x));
+    }
+
+public:
+    void induce(){
+        flags a;
+        a = canonical_name;
+        ~a;
+        return;
+    }
+
+};
+
+
+int main(){
+    resolver_query_base a;
+    a.induce();
+    return 0;
+}
+./proton: line 26:   102 Aborted                 instrumenter -in $FILE_NAME -c
+Misusing_Method_Overloading_2_T_instrumented.c
+NTFILE is Misusing_Method_Overloading_2_T_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Misusing_Method_Overloading_2_T.cpp
+FILE=Misusing_Method_Overloading_2_T_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 1502 milliseconds

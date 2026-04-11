@@ -1,0 +1,157 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.fgFIlA
+
+Input File is : Missing_Iterator_Update_2_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 8a7acbf81de51ff991bf8211eff248b46c2b5421
+URL: https://github.com/ximion/appstream/commit/8a7acbf81de51ff991bf8211eff248b46c2b5421
+Project Name: appstream
+License: LGPL-2.1
+termination: TRUE
+*/
+int flag = 0;
+int mdb_cursor_get()
+{
+    int i =  __VERIFIER_nondet_int();;
+    flag++;
+    {if( flag > 1000 )// avoid almost-sure
+        {return 1;}}
+    {if( i >= 0 )
+        {return 0;}
+    else
+        {return 1;}}
+}
+
+int main()
+{
+    int rc;
+    rc = mdb_cursor_get();
+    int dval_mv_size = __VERIFIER_nondet_int();
+    while( rc == 0 )
+    {
+        {if( dval_mv_size <= 0 )
+        {
+            rc = mdb_cursor_get();
+            continue;
+        }}
+        rc = mdb_cursor_get();
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Missing_Iterator_Update_2_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 8a7acbf81de51ff991bf8211eff248b46c2b5421
+URL: https://github.com/ximion/appstream/commit/8a7acbf81de51ff991bf8211eff248b46c2b5421
+Project Name: appstream
+License: LGPL-2.1
+termination: TRUE
+*/
+int flag = 0;
+int mdb_cursor_get()
+{
+    int i =  __VERIFIER_nondet_int();;
+    flag++;
+    { __VERIFIER_reached_control(14, __func__);
+if( flag > 1000 )// avoid almost-sure
+        { __VERIFIER_control_true(15, __func__);
+return 1;}}
+    { __VERIFIER_reached_control(16, __func__);
+if( i >= 0 )
+        { __VERIFIER_control_true(17, __func__);
+return 0;}
+    else
+        { __VERIFIER_control_false(19, __func__);
+return 1;}}
+}
+
+int main()
+{
+    int rc;
+    rc = mdb_cursor_get();
+    int dval_mv_size = __VERIFIER_nondet_int();
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(28, __func__);
+ while( rc == 0 )
+    { __VERIFIER_loop_head(28, __func__);
+printf("CBMC Instrumentation @ line28");myBool flag=__VERIFIER_nondet_myBool();static int odval_mv_size;static int oflag;static int orc;if(pStored0){__CPROVER_assert(!(odval_mv_size==dval_mv_size && oflag==flag && orc==rc),"recurrent state found");} if(flag){odval_mv_size=dval_mv_size;oflag=flag;orc=rc;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(29, __func__);
+if( dval_mv_size <= 0 )
+        { __VERIFIER_control_true(30, __func__);
+
+            rc = mdb_cursor_get();
+            continue;
+        }}
+        rc = mdb_cursor_get();
+    }
+    return 0;
+}
+
+End Main 
+ Missing_Iterator_Update_2_T_braced_instrumented.c
+NTFILE is Missing_Iterator_Update_2_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Missing_Iterator_Update_2_T.c
+b'03624f1f2c0079608b2e905f2b58eda015ec98df8d44071a90675f9e4f62e7d1  Missing_Iterator_Update_2_T.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Missing_Iterator_Update_2_T/Missing_Iterator_Update_2_T.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+mdb_cursor_get 14 reachedControl
+mdb_cursor_get 16 reachedControl
+mdb_cursor_get 17 trueBranch
+enteringLasso
+main 28 reachedControl
+main 28 loopHead
+main 29 reachedControl
+mdb_cursor_get 14 reachedControl
+mdb_cursor_get 16 reachedControl
+mdb_cursor_get 17 trueBranch
+main 28 loopHead
+Trace file line inside enterred lasso check : main 28 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Missing_Iterator_Update_2_T/Missing_Iterator_Update_2_T.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Missing_Iterator_Update_2_T.c
+FILE=Missing_Iterator_Update_2_T_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2014 milliseconds

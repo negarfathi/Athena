@@ -1,0 +1,130 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.NUKCgT
+
+Input File is : svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int gcd(int y1, int y2) {
+    int* y1_ref = alloca(sizeof(int));
+    int* y2_ref = alloca(sizeof(int));
+    *y1_ref = y1;
+    *y2_ref = y2;
+    
+    while (*y1_ref != *y2_ref) {
+        {if (*y1_ref > *y2_ref) {
+            *y1_ref = *y1_ref - *y2_ref;
+        } else {
+            *y2_ref = *y2_ref - *y1_ref;
+        }}
+    }
+    return *y1_ref;
+}
+
+int main() {
+    int y1 = __VERIFIER_nondet_int();
+    int y2 = __VERIFIER_nondet_int();
+    {if (y1 >= 0 && y2 >= 0) {
+        gcd(y1, y2);
+    }}
+    return 0;
+}./proton: line 26:    90 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int gcd(int y1, int y2) {
+    int* y1_ref = alloca(sizeof(int));
+    int* y2_ref = alloca(sizeof(int));
+    *y1_ref = y1;
+    *y2_ref = y2;
+    
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(11, __func__);
+ while (*y1_ref != *y2_ref) { __VERIFIER_loop_head(11, __func__);
+printf("CBMC Instrumentation @ line11");myBool flag=__VERIFIER_nondet_myBool();static int oy1;static int * oy1_ref;static int oy1_ref_val;static int oy2;static int * oy2_ref;static int oy2_ref_val;if(pStored0){__CPROVER_assert(!(oy1==y1 && oy1_ref==y1_ref && *oy1_ref==*y1_ref && oy1_ref_val==*y1_ref && oy2==y2 && oy2_ref==y2_ref && *oy2_ref==*y2_ref && oy2_ref_val==*y2_ref),"recurrent state found");} if(flag){oy1=y1;oy1_ref=y1_ref;*oy1_ref=*y1_ref;oy1_ref_val=*y1_ref;oy2=y2;oy2_ref=y2_ref;*oy2_ref=*y2_ref;oy2_ref_val=*y2_ref;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(12, __func__);
+if (*y1_ref > *y2_ref) { __VERIFIER_control_true(12, __func__);
+
+            *y1_ref = *y1_ref - *y2_ref;
+        } else { __VERIFIER_control_false(14, __func__);
+
+            *y2_ref = *y2_ref - *y1_ref;
+        }}
+    }
+    return *y1_ref;
+}
+
+int main() {
+    int y1 = __VERIFIER_nondet_int();
+    int y2 = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(24, __func__);
+if (y1 >= 0 && y2 >= 0) { __VERIFIER_control_true(24, __func__);
+
+        gcd(y1, y2);
+    }}
+    return 0;
+}./proton: line 26:   102 Aborted                 instrumenter -in *braced.c -c
+svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca_braced_instrumented.c
+NTFILE is svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca.c
+b'fccb31ffd5688c763aa7777ee20a64b67b1d07aeaab7670ccd97527f6eb9282d  svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/AProVE_memory_alloca/svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca/svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 24 reachedControl
+main 24 trueBranch
+enteringLasso
+gcd 11 reachedControl
+gcd 11 loopHead
+gcd 12 reachedControl
+gcd 12 trueBranch
+gcd 11 loopHead
+Trace file line inside enterred lasso check : gcd 11 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/AProVE_memory_alloca/svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca/svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca.c
+FILE=svcomp_BradleyMannaSipma-2005ICALP-Fig1_true-alloca_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2233 milliseconds

@@ -1,0 +1,118 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.9PSdZb
+
+Input File is : Urban-WST2013-Fig1_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program from Fig.2 of
+ * 2013WST - Urban - Piecewise-Defined Ranking Functions
+ *
+ * Date: 12.12.2012
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int x;
+    x = __VERIFIER_nondet_int();
+    while (x <= 10) {
+        {if (x > 6) {
+            x = x + 2;
+        }}
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Urban-WST2013-Fig1_false-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Fig.2 of
+ * 2013WST - Urban - Piecewise-Defined Ranking Functions
+ *
+ * Date: 12.12.2012
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int x;
+    x = __VERIFIER_nondet_int();
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(17, __func__);
+ while (x <= 10) { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int ox;if(pStored0){__CPROVER_assert(!(ox==x),"recurrent state found");} if(flag){ox=x;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(18, __func__);
+if (x > 6) { __VERIFIER_control_true(18, __func__);
+
+            x = x + 2;
+        }}
+    }
+    return 0;
+}
+
+End Main 
+ Urban-WST2013-Fig1_false-termination_braced_instrumented.c
+NTFILE is Urban-WST2013-Fig1_false-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Urban-WST2013-Fig1_false-termination.c
+b'7ec1d1d4856d24b14cb09101172e0975902985e260ca74737e781ce301d37cbb  Urban-WST2013-Fig1_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Urban-WST2013-Fig1_false-termination/Urban-WST2013-Fig1_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 17 reachedControl
+main 17 loopHead
+enteringLasso
+main 18 reachedControl
+main 17 loopHead
+Trace file line inside enterred lasso check : main 18 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Urban-WST2013-Fig1_false-termination/Urban-WST2013-Fig1_false-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Urban-WST2013-Fig1_false-termination.c
+FILE=Urban-WST2013-Fig1_false-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2024 milliseconds

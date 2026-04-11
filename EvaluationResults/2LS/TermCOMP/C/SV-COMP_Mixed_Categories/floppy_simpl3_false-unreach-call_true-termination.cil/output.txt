@@ -1,0 +1,198 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/floppy_simpl3_false-unreach-call_true-termination.cil/floppy_simpl3_false-unreach-call_true-termination.cil.c
+Converting
+Type-checking floppy_simpl3_false-unreach-call_true-termination.cil
+file floppy_simpl3.cil.c line 129 function FlQueueIrpToThread: function 'PsCreateSystemThread' is not declared
+file floppy_simpl3.cil.c line 145 function FlQueueIrpToThread: function 'ObReferenceObjectByHandle' is not declared
+file floppy_simpl3.cil.c line 147 function FlQueueIrpToThread: function 'ZwClose' is not declared
+file floppy_simpl3.cil.c line 243 function FloppyPnp: function 'FloppyStartDevice' is not declared
+file floppy_simpl3.cil.c line 264 function FloppyPnp: function 'IofCallDriver' is not declared
+file floppy_simpl3.cil.c line 276 function FloppyPnp: function 'KeWaitForSingleObject' is not declared
+file floppy_simpl3.cil.c line 413 function FloppyPnp: function 'IoSetDeviceInterfaceState' is not declared
+file floppy_simpl3.cil.c line 421 function FloppyPnp: function 'IoDeleteSymbolicLink' is not declared
+file floppy_simpl3.cil.c line 543 function FloppyStartDevice: function 'FlFdcDeviceIo' is not declared
+file floppy_simpl3.cil.c line 579 function FloppyStartDevice: function 'IoQueryDeviceDescription' is not declared
+file floppy_simpl3.cil.c line 602 function FloppyStartDevice: function 'IoRegisterDeviceInterface' is not declared
+file floppy_simpl3.cil.c line 634 function FloppyPnpComplete: function 'KeSetEvent' is not declared
+file floppy_simpl3.cil.c line 650 function FlFdcDeviceIo: function 'IoBuildDeviceIoControlRequest' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of IofCompleteRequest
+Simplifying
+Computing SSA of errorFn
+Simplifying
+Computing SSA of _BLAST_init
+Simplifying
+Computing SSA of FlAcpiConfigureFloppy
+Simplifying
+Computing SSA of FlQueueIrpToThread
+Simplifying
+Computing SSA of PsCreateSystemThread
+Simplifying
+Computing SSA of ObReferenceObjectByHandle
+Simplifying
+Computing SSA of ZwClose
+Simplifying
+Computing SSA of FloppyPnp
+Simplifying
+Computing SSA of FloppyStartDevice
+Simplifying
+Computing SSA of IofCallDriver
+Simplifying
+Computing SSA of KeWaitForSingleObject
+Simplifying
+Computing SSA of IoSetDeviceInterfaceState
+Simplifying
+Computing SSA of IoDeleteSymbolicLink
+Simplifying
+Computing SSA of FlFdcDeviceIo
+Simplifying
+Computing SSA of IoQueryDeviceDescription
+Simplifying
+Computing SSA of IoRegisterDeviceInterface
+Simplifying
+Computing SSA of FloppyPnpComplete
+Simplifying
+Computing SSA of KeSetEvent
+Simplifying
+Computing SSA of IoBuildDeviceIoControlRequest
+Simplifying
+Computing SSA of FloppyProcessQueuedRequests
+Simplifying
+Computing SSA of stub_driver_init
+Simplifying
+Computing SSA of stubMoreProcessingRequired
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object DC DiskController Executive FlConfigCallBack FloppyDiskPeripheral FloppyThread IPC KernelMode MOUNTDEV_MOUNTED_DEVICE_GUID MPR1 MPR3 MaximumInterfaceType NP PagingMutex PagingReferenceCount SKIP1 SKIP2 Suspended UNLOADED __CPROVER_rounding_mode compRegistered customIrp lowerDriverReturn myStatus pended s setEventCalled __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#153 __CPROVER_thread_key_dtors#151 __CPROVER_thread_keys#152 __CPROVER_malloc_is_new_array#143 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#140 __CPROVER_dead_object#141 __CPROVER_deallocated#142 __CPROVER_new_object#145 DC#154 DiskController#155 Executive#156 FlConfigCallBack#157 FloppyDiskPeripheral#158 IPC#160 KernelMode#161 MOUNTDEV_MOUNTED_DEVICE_GUID#162 MPR1#163 MPR3#164 MaximumInterfaceType#165 NP#166 PagingMutex#167 PagingReferenceCount#168 SKIP1#169 SKIP2#170 Suspended#171 UNLOADED#172 __CPROVER_rounding_mode#149 compRegistered#173 customIrp#174 lowerDriverReturn#175 myStatus#176 pended#177 s#178 setEventCalled#179 __CPROVER_pipe_count#148 __CPROVER_max_malloc_size#144 __CPROVER_next_thread_id#146 __CPROVER_next_thread_key#147 __CPROVER_thread_id#150 
+forward precondition: TRUE
+forward transformer: DC#154 <= 0 && -((signed __CPROVER_bitvector[33])DC#154) <= 0 && DiskController#155 <= 0 && -((signed __CPROVER_bitvector[33])DiskController#155) <= 0 && Executive#156 <= 0 && -((signed __CPROVER_bitvector[33])Executive#156) <= 0 && FlConfigCallBack#157 <= 0 && -((signed __CPROVER_bitvector[33])FlConfigCallBack#157) <= 0 && FloppyDiskPeripheral#158 <= 0 && -((signed __CPROVER_bitvector[33])FloppyDiskPeripheral#158) <= 0 && IPC#160 <= 0 && -((signed __CPROVER_bitvector[33])IPC#160) <= 0 && KernelMode#161 <= 0 && -((signed __CPROVER_bitvector[33])KernelMode#161) <= 0 && MOUNTDEV_MOUNTED_DEVICE_GUID#162 <= 0 && -((signed __CPROVER_bitvector[33])MOUNTDEV_MOUNTED_DEVICE_GUID#162) <= 0 && MPR1#163 <= 0 && -((signed __CPROVER_bitvector[33])MPR1#163) <= 0 && MPR3#164 <= 0 && -((signed __CPROVER_bitvector[33])MPR3#164) <= 0 && MaximumInterfaceType#165 <= 0 && -((signed __CPROVER_bitvector[33])MaximumInterfaceType#165) <= 0 && NP#166 <= 0 && -((signed __CPROVER_bitvector[33])NP#166) <= 0 && PagingMutex#167 <= 0 && -((signed __CPROVER_bitvector[33])PagingMutex#167) <= 0 && PagingReferenceCount#168 <= 0 && -((signed __CPROVER_bitvector[33])PagingReferenceCount#168) <= 0 && SKIP1#169 <= 0 && -((signed __CPROVER_bitvector[33])SKIP1#169) <= 0 && SKIP2#170 <= 0 && -((signed __CPROVER_bitvector[33])SKIP2#170) <= 0 && Suspended#171 <= 0 && -((signed __CPROVER_bitvector[33])Suspended#171) <= 0 && UNLOADED#172 <= 0 && -((signed __CPROVER_bitvector[33])UNLOADED#172) <= 0 && __CPROVER_rounding_mode#149 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#149) <= 0 && compRegistered#173 <= 0 && -((signed __CPROVER_bitvector[33])compRegistered#173) <= 0 && customIrp#174 <= 0 && -((signed __CPROVER_bitvector[33])customIrp#174) <= 0 && lowerDriverReturn#175 <= 0 && -((signed __CPROVER_bitvector[33])lowerDriverReturn#175) <= 0 && myStatus#176 <= 0 && -((signed __CPROVER_bitvector[33])myStatus#176) <= 0 && pended#177 <= 0 && -((signed __CPROVER_bitvector[33])pended#177) <= 0 && s#178 <= 0 && -((signed __CPROVER_bitvector[33])s#178) <= 0 && setEventCalled#179 <= 0 && -((signed __CPROVER_bitvector[33])setEventCalled#179) <= 0 && __CPROVER_pipe_count#148 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#148) <= 0 && __CPROVER_max_malloc_size#144 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#144) <= -36028797018963968 && __CPROVER_next_thread_id#146 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#146) <= 0 && __CPROVER_next_thread_key#147 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#147) <= 0 && __CPROVER_thread_id#150 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#150) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of _BLAST_init
+Function _BLAST_init not analyzed yet
+Recursively summarizing function _BLAST_init
+Analyzing function _BLAST_init
+Computing summary
+Computing termination argument for _BLAST_init
+Function trivially terminates
+
+Summary for function _BLAST_init
+params: 
+globals_in: DC IPC MPR1 MPR3 NP SKIP1 SKIP2 UNLOADED compRegistered customIrp lowerDriverReturn pended s setEventCalled 
+globals_out: DC#192 IPC#197 MPR1#195 MPR3#196 NP#191 SKIP1#193 SKIP2#194 UNLOADED#190 compRegistered#200 customIrp#203 lowerDriverReturn#201 pended#199 s#198 setEventCalled#202 
+forward precondition: TRUE
+forward transformer: DC#192 <= 2 && -((signed __CPROVER_bitvector[33])DC#192) <= -2 && IPC#197 <= 7 && -((signed __CPROVER_bitvector[33])IPC#197) <= -7 && MPR1#195 <= 5 && -((signed __CPROVER_bitvector[33])MPR1#195) <= -5 && MPR3#196 <= 6 && -((signed __CPROVER_bitvector[33])MPR3#196) <= -6 && NP#191 <= 1 && -((signed __CPROVER_bitvector[33])NP#191) <= -1 && SKIP1#193 <= 3 && -((signed __CPROVER_bitvector[33])SKIP1#193) <= -3 && SKIP2#194 <= 4 && -((signed __CPROVER_bitvector[33])SKIP2#194) <= -4 && UNLOADED#190 <= 0 && -((signed __CPROVER_bitvector[33])UNLOADED#190) <= 0 && compRegistered#200 <= 0 && -((signed __CPROVER_bitvector[33])compRegistered#200) <= 0 && customIrp#203 <= 0 && -((signed __CPROVER_bitvector[33])customIrp#203) <= 0 && lowerDriverReturn#201 <= 0 && -((signed __CPROVER_bitvector[33])lowerDriverReturn#201) <= 0 && pended#199 <= 0 && -((signed __CPROVER_bitvector[33])pended#199) <= 0 && s#198 <= 0 && -((signed __CPROVER_bitvector[33])s#198) <= 0 && setEventCalled#202 <= 0 && -((signed __CPROVER_bitvector[33])setEventCalled#202) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Function never terminates normally
+
+Summary for function main
+params: 
+globals_in: DC DiskController Executive FlConfigCallBack FloppyDiskPeripheral FloppyThread IPC KernelMode MOUNTDEV_MOUNTED_DEVICE_GUID MPR1 MPR3 MaximumInterfaceType NP SKIP1 SKIP2 Suspended UNLOADED compRegistered customIrp lowerDriverReturn myStatus pended s setEventCalled 
+globals_out: DC#29 DiskController#20 Executive#19 FlConfigCallBack#22 FloppyDiskPeripheral#21 IPC#34 KernelMode#17 MOUNTDEV_MOUNTED_DEVICE_GUID#24 MPR1#32 MPR3#33 MaximumInterfaceType#23 NP#28 SKIP1#30 SKIP2#31 Suspended#18 UNLOADED#27 compRegistered#phi139 customIrp#phi139 lowerDriverReturn#phi139 main#return_value#phi139 myStatus#phi139 pended#phi139 s#phi139 setEventCalled#phi139 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+Function never terminates normally
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+** statistics: 
+  number of solver instances: 2344929864
+  number of solver calls: 240871
+  number of summaries used: 3
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[main]: no
+[__CPROVER_initialize]: yes
+[IofCompleteRequest]: not computed
+[errorFn]: not computed
+[_BLAST_init]: yes
+[FlAcpiConfigureFloppy]: not computed
+[FlQueueIrpToThread]: not computed
+[PsCreateSystemThread]: not computed
+[ObReferenceObjectByHandle]: not computed
+[ZwClose]: not computed
+[FloppyPnp]: not computed
+[FloppyStartDevice]: not computed
+[IofCallDriver]: not computed
+[KeWaitForSingleObject]: not computed
+[IoSetDeviceInterfaceState]: not computed
+[IoDeleteSymbolicLink]: not computed
+[FlFdcDeviceIo]: not computed
+[IoQueryDeviceDescription]: not computed
+[IoRegisterDeviceInterface]: not computed
+[FloppyPnpComplete]: not computed
+[KeSetEvent]: not computed
+[IoBuildDeviceIoControlRequest]: not computed
+[FloppyProcessQueuedRequests]: not computed
+[stub_driver_init]: not computed
+[stubMoreProcessingRequired]: not computed
+[__CPROVER__start]: no
+VERIFICATION INCONCLUSIVE
+Runtime: 529 milliseconds

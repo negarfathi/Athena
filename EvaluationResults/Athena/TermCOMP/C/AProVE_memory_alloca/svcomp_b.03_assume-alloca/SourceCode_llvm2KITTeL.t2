@@ -1,0 +1,109 @@
+///*** 1_main ***///
+START: main_bb11;
+
+FROM: main_bb11;
+memory0_freeIndex := 1;
+memory1_freeIndex := 1;
+vmemory1 := nondet();
+vmemory0 := nondet();
+v49 := nondet();
+v50 := nondet();
+v51 := memory1_freeIndex;
+v52 := memory1_freeIndex;
+v53 := v52 + 1;
+memory1_freeIndex := v53;
+v54 := memory0_freeIndex;
+v55 := memory0_freeIndex;
+v56 := v55 + 1;
+memory0_freeIndex := v56;
+v57 := v51;
+v58 := v57;
+vmemory1 := store_array(vmemory1, v58, v49);
+v59 := v54;
+v60 := v59;
+vmemory0 := store_array(vmemory0, v60, v50);
+v61 := v51;
+v62 := v61;
+v63 := select_array(vmemory1, v62);
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(v63 <= 0);
+TO: main_bb12;
+
+FROM: main_bb11_end;
+assume(v63 > 0);
+TO: main_bb13;
+
+FROM: main_bb12;
+v65 := v54;
+v66 := v65;
+v67 := select_array(vmemory0, v66);
+var__temp_v.0.i := v67;
+TO: main_test_fun.exit;
+
+FROM: main_bb13;
+v68 := v51;
+v69 := v68;
+v70 := select_array(vmemory1, v69);
+v71 := v54;
+v72 := v71;
+v73 := v51;
+v74 := v73;
+v75 := select_array(vmemory1, v74);
+v76 := v54;
+v77 := v76;
+v78 := v51;
+v79 := v78;
+v80 := select_array(vmemory1, v79);
+v81 := v54;
+v82 := v81;
+TO: main_bb14;
+
+FROM: main_bb14;
+v83 := select_array(vmemory0, v72);
+TO: main_bb14_end;
+
+FROM: main_bb14_end;
+assume(v70 > v83);
+TO: main_bb15;
+
+FROM: main_bb14_end;
+assume(v70 <= v83);
+TO: main_bb18;
+
+FROM: main_bb15;
+TO: main_bb15_end;
+
+FROM: main_bb15_end;
+assume(v75 <= 0);
+TO: main_bb16;
+
+FROM: main_bb15_end;
+assume(v75 > 0);
+TO: main_bb17;
+
+FROM: main_bb16;
+v86 := v54;
+v87 := v86;
+v88 := select_array(vmemory0, v87);
+var__temp_v.0.i := v88;
+TO: main_test_fun.exit;
+
+FROM: main_bb17;
+v89 := select_array(vmemory0, v77);
+v90 := v89 + v80;
+vmemory0 := store_array(vmemory0, v82, v90);
+TO: main_bb14;
+
+FROM: main_bb18;
+v91 := v54;
+v92 := v91;
+v93 := select_array(vmemory0, v92);
+var__temp_v.0.i := v93;
+TO: main_test_fun.exit;
+
+FROM: main_test_fun.exit;
+v.0.i := var__temp_v.0.i;
+TO: main_test_fun.exit_ret;
+

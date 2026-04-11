@@ -1,0 +1,109 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.zBfo2X
+
+Input File is : svcomp_twisted.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+
+int f(int k, int l)
+{
+    int i = 0, j = 0;
+L1: while (i < k) {
+        i++;
+        {if (i % 2) {
+            continue;
+        }}
+        goto L2;
+    }
+L2: while (j < l) {
+        j++;
+        {if (i % 2) {
+            continue;
+        }}
+        goto L1;
+    }
+    return i + j;
+}
+
+int main() {
+    return f(__VERIFIER_nondet_int(), __VERIFIER_nondet_int());
+}
+
+End Main   
+
+Input File is : svcomp_twisted_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+
+int f(int k, int l)
+{
+    int i = 0, j = 0;
+L1:myBool pStored0 = myFalse; __VERIFIER_reached_control(6, __func__);
+ while (i < k) { __VERIFIER_loop_head(6, __func__);
+printf("CBMC Instrumentation @ line6");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int oj;static int ok;static int ol;if(pStored0){__CPROVER_assert(!(oi==i && oj==j && ok==k && ol==l),"recurrent state found");} if(flag){oi=i;oj=j;ok=k;ol=l;pStored0=myTrue;} 
+        i++;
+        { __VERIFIER_reached_control(8, __func__);
+if (i % 2) { __VERIFIER_control_true(8, __func__);
+
+            continue;
+        }}
+        goto L2;
+    }
+L2:myBool pStored1 = myFalse; __VERIFIER_reached_control(13, __func__);
+ while (j < l) { __VERIFIER_loop_head(13, __func__);
+printf("CBMC Instrumentation @ line13");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int oj;static int ok;static int ol;if(pStored1){__CPROVER_assert(!(oi==i && oj==j && ok==k && ol==l),"recurrent state found");} if(flag){oi=i;oj=j;ok=k;ol=l;pStored1=myTrue;} 
+        j++;
+        { __VERIFIER_reached_control(15, __func__);
+if (i % 2) { __VERIFIER_control_true(15, __func__);
+
+            continue;
+        }}
+        goto L1;
+    }
+    return i + j;
+}
+
+int main() {
+    return f(__VERIFIER_nondet_int(), __VERIFIER_nondet_int());
+}
+
+End Main 
+ svcomp_twisted_braced_instrumented.c
+NTFILE is svcomp_twisted_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=6. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_twisted.c
+FILE=svcomp_twisted_braced_instrumented.c GLRES=0 Z3RES=6 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 2764 milliseconds

@@ -1,0 +1,55 @@
+cdaudio_simpl1.cil.c:106:5: warning: implicit declaration of function 'KeWaitForSingleObject' is invalid in C99 [-Wimplicit-function-declaration]
+    KeWaitForSingleObject(event, Executive, KernelMode, 0, 0);
+    ^
+cdaudio_simpl1.cil.c:120:3: warning: implicit declaration of function 'KeSetEvent' is invalid in C99 [-Wimplicit-function-declaration]
+  KeSetEvent(Event, 0, 0);
+  ^
+cdaudio_simpl1.cil.c:140:12: warning: implicit declaration of function 'CdAudioForwardIrpSynchronous' is invalid in C99 [-Wimplicit-function-declaration]
+  status = CdAudioForwardIrpSynchronous(DeviceObject, Irp);
+           ^
+cdaudio_simpl1.cil.c:200:3: warning: implicit declaration of function 'ZwClose' is invalid in C99 [-Wimplicit-function-declaration]
+  ZwClose(deviceParameterHandle);
+  ^
+cdaudio_simpl1.cil.c:243:17: warning: implicit declaration of function 'CdAudioSendToNextDriver' is invalid in C99 [-Wimplicit-function-declaration]
+          tmp = CdAudioSendToNextDriver(DeviceObject, Irp);
+                ^
+cdaudio_simpl1.cil.
+c:262:22: warning: self-comparison always evaluates to true [-Wtautological-compare]
+          if (status == status) {
+                     ^
+cdaudio_simpl1.cil.c:337:22: warning: implicit declaration of function 'CdAudio535DeviceControl' is invalid in C99 [-Wimplicit-function-declaration]
+            status = CdAudio535DeviceControl(DeviceObject, Irp);
+                     ^
+cdaudio_simpl1.cil.c:342:22: warning: implicit declaration of function 'CdAudio435DeviceControl' is invalid in C99 [-Wimplicit-function-declaration]
+            status = CdAudio435DeviceControl(DeviceObject, Irp);
+                     ^
+cdaudio_simpl1.cil.c:347:22: warning: implicit declaration of function 'CdAudioAtapiDeviceControl' is invalid in C99 [-Wimplicit-function-declaration]
+            status = CdAudioAtapiDeviceControl(DeviceObject, Irp);
+                     ^
+cdaudio_simpl1.cil.c:352:22: warning: implicit declaration of function 'CdAudioHPCdrDeviceControl' is invalid in C99 [-Wimplicit-function-declaration]
+            stat
+us = CdAudioHPCdrDeviceControl(DeviceObject, Irp);
+                     ^
+cdaudio_simpl1.cil.c:388:9: warning: implicit declaration of function 'IofCallDriver' is invalid in C99 [-Wimplicit-function-declaration]
+  tmp = IofCallDriver(deviceExtension__TargetDeviceObject, Irp);
+        ^
+cdaudio_simpl1.cil.c:558:37: warning: implicit declaration of function 'AG_SetStatusAndReturn' is invalid in C99 [-Wimplicit-function-declaration]
+                          tmp___0 = AG_SetStatusAndReturn(status, Irp, deviceExtension__TargetDeviceObject);
+                                    ^
+cdaudio_simpl1.cil.c:1451:9: warning: implicit declaration of function 'PoCallDriver' is invalid in C99 [-Wimplicit-function-declaration]
+  tmp = PoCallDriver(deviceExtension__TargetDeviceObject, Irp);
+        ^
+13 warnings generated.
+
+line 3980:5 extraneous input 'metadata' expecting EXCLAMATION
+line 3980:25 no viable alternative at input '!'
+Instruction count:2711
+deleted entry node of CdAudioForwardIrpSynchronous
+deleted entry node of errorFn
+deleted entry node of SendSrbSynchronous
+deleted entry node of IofCompleteRequest
+deleted entry node of SendSrbSynchronous
+deleted entry node of CdAudioSendToNextDriver
+deleted entry node of CdAudioForwardIrpSynchronous
+deleted entry node of CdAudioSendToNextDriver
+Runtime: 900172 milliseconds

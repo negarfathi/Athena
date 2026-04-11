@@ -1,0 +1,77 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   4:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   5:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   6:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   7:   %call3 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   8: <8> PSNodeType::CALL (points-to size: 0)
+NODE   9: <9> PSNodeType::ENTRY (points-to size: 0)
+NODE  10: i32 %i (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  11: i32 %j (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  12: i32 %k (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  13: i32 %tmp (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  14:   %i.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %i.addr = alloca i32, align 4 + 0
+NODE  15:   %j.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %j.addr = alloca i32, align 4 + 0
+NODE  16:   %k.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %k.addr = alloca i32, align 4 + 0
+NODE  17:   %tmp.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp.addr = alloca i32, align 4 + 0
+NODE  18:   %c = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %c = alloca i32, align 4 + 0
+NODE  19:   store i32 %i, i32* %i.addr, align 4 (points-to size: 0)
+NODE  20:   store i32 %j, i32* %j.addr, align 4 (points-to size: 0)
+NODE  21:   store i32 %k, i32* %k.addr, align 4 (points-to size: 0)
+NODE  22:   store i32 %tmp, i32* %tmp.addr, align 4 (points-to size: 0)
+NODE  23:   store i32 0, i32* %c, align 4 (points-to size: 0)
+NODE  24:   %0 = load i32, i32* %i.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  25:   %1 = load i32, i32* %j.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  26:   %2 = load i32, i32* %k.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  27:   %3 = phi i1 [ false, %while.cond ], [ %cmp1, %land.rhs ] (points-to size: 1)
+    -> null + 0
+NODE  28:   %4 = load i32, i32* %i.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  29:   store i32 %4, i32* %tmp.addr, align 4 (points-to size: 0)
+NODE  30:   %5 = load i32, i32* %j.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  31:   store i32 %5, i32* %i.addr, align 4 (points-to size: 0)
+NODE  32:   %6 = load i32, i32* %tmp.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  33:   %add = add nsw i32 %6, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  34:   store i32 %add, i32* %j.addr, align 4 (points-to size: 0)
+NODE  35:   %7 = load i32, i32* %k.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  36:   %sub = sub nsw i32 %7, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  37:   store i32 %sub, i32* %k.addr, align 4 (points-to size: 0)
+NODE  38:   %8 = load i32, i32* %c, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  39:   %add2 = add nsw i32 %8, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  40:   store i32 %add2, i32* %c, align 4 (points-to size: 0)
+NODE  41:   %9 = load i32, i32* %c, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  42:   ret i32 %9 (points-to size: 0)
+NODE  43: test_fun (points-to size: 1)
+    -> test_fun + 0
+NODE  44: main (points-to size: 1)
+    -> main + 0
+NODE  45:   %call4 = call i32 @test_fun(i32 %call, i32 %call1, i32 %call2, i32 % ... (points-to size: 0)
+NODE  46:   ret i32 %call4 (points-to size: 0)

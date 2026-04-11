@@ -1,0 +1,99 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.Mh8o7U
+
+Input File is : ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2014-06-08
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ *
+ * This is Example 2.12 from the test suit used in
+ *
+ * Termination Proofs for Linear Simple Loops.
+ * Hong Yi Chen, Shaked Flur, and Supratik Mukhopadhyay.
+ * SAS 2012.
+ *
+ * The test suite is available at the following URL.
+ * https://tigerbytes2.lsu.edu/users/hchen11/lsl/LSL_benchmark.txt
+ *
+ * Comment: non-terminating (for x=0,y=0)
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x, y, oldx;
+    x = __VERIFIER_nondet_int();
+    y = __VERIFIER_nondet_int();
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(26, __func__);
+ while (x < 5) { __VERIFIER_loop_head(26, __func__);
+printf("CBMC Instrumentation @ line26");myBool flag=__VERIFIER_nondet_myBool();static int ooldx;static int ox;static int oy;if(pStored0){__CPROVER_assert(!(ooldx==oldx && ox==x && oy==y),"recurrent state found");} if(flag){ooldx=oldx;ox=x;oy=y;pStored0=myTrue;} 
+        oldx = x;
+        x = oldx - y;
+        y = oldx + y;
+    }
+    return 0;
+}
+
+End Main 
+ ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination_instrumented.c
+NTFILE is ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination.c
+b'a6e3a784a750bf7b16fa903053e15129f66e8882f86a4384a56334995c21abd1  ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination/ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+main 26 reachedControl
+main 26 loopHead
+main 26 reachedControl
+main 26 loopHead
+Trace file line inside enterred lasso check : main 26 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination/ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination.c
+FILE=ChenFlurMukhopadhyay-SAS2012-Ex2.12_false-termination_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 1983 milliseconds

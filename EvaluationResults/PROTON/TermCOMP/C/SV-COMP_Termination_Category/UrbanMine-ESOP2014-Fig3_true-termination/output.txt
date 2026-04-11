@@ -1,0 +1,122 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.5m75n3
+
+Input File is : UrbanMine-ESOP2014-Fig3_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program from Fig.3 of
+ * 2014ESOP - Urban,Miné - An Abstract Domain to Infer Ordinal-Valued Ranking Functions
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	int y = __VERIFIER_nondet_int();
+	while (x != 0 && y > 0) {
+	    {if (x > 0) {
+		    {if (__VERIFIER_nondet_int()) {
+			    x = x - 1;
+				y = __VERIFIER_nondet_int();
+			} else {
+			    y = y - 1;
+			}}
+		} else {
+		    {if (__VERIFIER_nondet_int()) {
+			    x = x + 1;
+			} else {
+			    y = y - 1;
+				x = __VERIFIER_nondet_int();
+			}}		
+		}}
+	}
+}
+End Main   
+
+Input File is : UrbanMine-ESOP2014-Fig3_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Fig.3 of
+ * 2014ESOP - Urban,Miné - An Abstract Domain to Infer Ordinal-Valued Ranking Functions
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	int y = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+	while (x != 0 && y > 0) { __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int ox;static int oy;if(pStored0){__CPROVER_assert(!(ox==x && oy==y),"recurrent state found");} if(flag){ox=x;oy=y;pStored0=myTrue;} 
+	    { __VERIFIER_reached_control(15, __func__);
+if (x > 0) { __VERIFIER_control_true(15, __func__);
+
+		    { __VERIFIER_reached_control(16, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(16, __func__);
+
+			    x = x - 1;
+				y = __VERIFIER_nondet_int();
+			} else { __VERIFIER_control_false(19, __func__);
+
+			    y = y - 1;
+			}}
+		} else { __VERIFIER_control_false(22, __func__);
+
+		    { __VERIFIER_reached_control(23, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(23, __func__);
+
+			    x = x + 1;
+			} else { __VERIFIER_control_false(25, __func__);
+
+			    y = y - 1;
+				x = __VERIFIER_nondet_int();
+			}}		
+		}}
+	}
+}
+End Main 
+ UrbanMine-ESOP2014-Fig3_true-termination_braced_instrumented.c
+NTFILE is UrbanMine-ESOP2014-Fig3_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for UrbanMine-ESOP2014-Fig3_true-termination.c
+FILE=UrbanMine-ESOP2014-Fig3_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 205925 milliseconds

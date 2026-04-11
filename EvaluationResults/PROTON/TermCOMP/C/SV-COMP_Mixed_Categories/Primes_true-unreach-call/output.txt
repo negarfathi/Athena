@@ -1,0 +1,274 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.LyH3di
+
+Input File is : Primes_true-unreach-call.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+/*
+ * Recursive implementation of prime number test
+ * (Sieve of Eratosthenes)
+ * 
+ * Author: Jan Leike
+ * Date: 2013-07-17
+ * 
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+// Multiplies two integers n and m
+int mult(int n, int m) {
+    {if (m < 0) {
+        return mult(n, -m);
+    }}
+    {if (m == 0) {
+        return 0;
+    }}
+    {if (m == 1) {
+        return 1;
+    }}
+    return n + mult(n, m - 1);
+}
+
+// Is n a multiple of m?
+int multiple_of(int n, int m) {
+    {if (m < 0) {
+        return multiple_of(n, -m);
+    }}
+    {if (n < 0) {
+        return multiple_of(-n, m); // false
+    }}
+    {if (m == 0) {
+        return 0; // false
+    }}
+    {if (n == 0) {
+        return 1; // true
+    }}
+    return multiple_of(n - m, m);
+}
+
+
+int is_prime_(int n, int m);
+int is_prime(int n);
+
+// Is n prime?
+int is_prime(int n) {
+    return is_prime_(n, n - 1);
+}
+
+
+int is_prime_(int n, int m) {
+    {if (n <= 1) {
+        return 0; // false
+    }}
+    {if (n == 2) {
+        return 1; // true
+    }}
+    {if (n > 2) {
+        {if (m <= 1) {
+            return 1; // true
+        } else {
+            {if (multiple_of(n, m) == 0) {
+                return 0; // false
+            }}
+            return is_prime_(n, m - 1);
+        }}
+    }}
+}
+
+int main() {
+    int n = __VERIFIER_nondet_int();
+    {if (n < 1 || n > 46340) {
+        return 0;
+    }}
+    int result = is_prime(n);
+    int f1 = __VERIFIER_nondet_int();
+    {if (f1 < 1 || f1 > 46340) {
+        return 0;
+    }}
+    int f2 = __VERIFIER_nondet_int();
+    {if (f1 < 1 || f1 > 46340) {
+        return 0;
+    }}
+
+    {if (result == 1 && mult(f1, f2) == n && f1 > 1 && f2 > 1) {
+        ERROR: __VERIFIER_error();
+    } else {
+        return 0;
+    }}
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Primes_true-unreach-call_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+/*
+ * Recursive implementation of prime number test
+ * (Sieve of Eratosthenes)
+ * 
+ * Author: Jan Leike
+ * Date: 2013-07-17
+ * 
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+// Multiplies two integers n and m
+int mult(int n, int m) {
+    { __VERIFIER_reached_control(16, __func__);
+if (m < 0) { __VERIFIER_control_true(16, __func__);
+
+        return mult(n, -m);
+    }}
+    { __VERIFIER_reached_control(19, __func__);
+if (m == 0) { __VERIFIER_control_true(19, __func__);
+
+        return 0;
+    }}
+    { __VERIFIER_reached_control(22, __func__);
+if (m == 1) { __VERIFIER_control_true(22, __func__);
+
+        return 1;
+    }}
+    return n + mult(n, m - 1);
+}
+
+// Is n a multiple of m?
+int multiple_of(int n, int m) {
+    { __VERIFIER_reached_control(30, __func__);
+if (m < 0) { __VERIFIER_control_true(30, __func__);
+
+        return multiple_of(n, -m);
+    }}
+    { __VERIFIER_reached_control(33, __func__);
+if (n < 0) { __VERIFIER_control_true(33, __func__);
+
+        return multiple_of(-n, m); // false
+    }}
+    { __VERIFIER_reached_control(36, __func__);
+if (m == 0) { __VERIFIER_control_true(36, __func__);
+
+        return 0; // false
+    }}
+    { __VERIFIER_reached_control(39, __func__);
+if (n == 0) { __VERIFIER_control_true(39, __func__);
+
+        return 1; // true
+    }}
+    return multiple_of(n - m, m);
+}
+
+
+int is_prime_(int n, int m);
+int is_prime(int n);
+
+// Is n prime?
+int is_prime(int n) {
+    return is_prime_(n, n - 1);
+}
+
+
+int is_prime_(int n, int m) {
+    { __VERIFIER_reached_control(56, __func__);
+if (n <= 1) { __VERIFIER_control_true(56, __func__);
+
+        return 0; // false
+    }}
+    { __VERIFIER_reached_control(59, __func__);
+if (n == 2) { __VERIFIER_control_true(59, __func__);
+
+        return 1; // true
+    }}
+    { __VERIFIER_reached_control(62, __func__);
+if (n > 2) { __VERIFIER_control_true(62, __func__);
+
+        { __VERIFIER_reached_control(63, __func__);
+if (m <= 1) { __VERIFIER_control_true(63, __func__);
+
+            return 1; // true
+        } else { __VERIFIER_control_false(65, __func__);
+
+            { __VERIFIER_reached_control(66, __func__);
+if (multiple_of(n, m) == 0) { __VERIFIER_control_true(66, __func__);
+
+                return 0; // false
+            }}
+            return is_prime_(n, m - 1);
+        }}
+    }}
+}
+
+int main() {
+    int n = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(76, __func__);
+if (n < 1 || n > 46340) { __VERIFIER_control_true(76, __func__);
+
+        return 0;
+    }}
+    int result = is_prime(n);
+    int f1 = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(81, __func__);
+if (f1 < 1 || f1 > 46340) { __VERIFIER_control_true(81, __func__);
+
+        return 0;
+    }}
+    int f2 = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(85, __func__);
+if (f1 < 1 || f1 > 46340) { __VERIFIER_control_true(85, __func__);
+
+        return 0;
+    }}
+
+    { __VERIFIER_reached_control(89, __func__);
+if (result == 1 && mult(f1, f2) == n && f1 > 1 && f2 > 1) { __VERIFIER_control_true(89, __func__);
+
+        ERROR: __VERIFIER_error();
+    } else { __VERIFIER_control_false(91, __func__);
+
+        return 0;
+    }}
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Primes_true-unreach-call_braced_instrumented.c
+NTFILE is Primes_true-unreach-call_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for Primes_true-unreach-call.c
+FILE=Primes_true-unreach-call_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 122329 milliseconds

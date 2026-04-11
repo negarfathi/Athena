@@ -1,0 +1,135 @@
+///*** 1_main ***///
+START: main_bb3;
+
+FROM: main_bb3;
+v6 := nondet();
+TO: main_bb3_end;
+
+FROM: main_bb3_end;
+assume(v6 <= 0);
+TO: main_bb15;
+
+FROM: main_bb3_end;
+assume(v6 > 0);
+TO: main_bb4;
+
+FROM: main_bb4;
+var__temp_vi.0 := 0;
+TO: main_bb5;
+
+FROM: main_bb5;
+vi.0 := var__temp_vi.0;
+v11 := v6 - 1;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(vi.0 < v11);
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(vi.0 >= v11);
+TO: main_bb7;
+
+FROM: main_bb6;
+v13 := nondet();
+v15 := v13;
+v16 := vi.0 + 1;
+var__temp_vi.0 := v16;
+TO: main_bb5;
+
+FROM: main_bb7;
+v17 := v6 - 1;
+v19 := 0;
+var__temp_vfp.1 := 0;
+TO: main_bb8;
+
+FROM: main_bb8;
+vfp.1 := var__temp_vfp.1;
+v20 := vfp.1 + 1;
+var__temp_vfp.2 := v20;
+TO: main_bb9;
+
+FROM: main_bb9;
+vfp.2 := var__temp_vfp.2;
+v21 := nondef.2;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(v21 != 0);
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(v21 == 0);
+TO: main_bb14;
+
+FROM: main_bb10;
+v23 := nondef.3;
+var__temp_vfp.0 := vfp.2;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(v23 > 0);
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(v23 <= 0);
+TO: main_bb13;
+
+FROM: main_bb11;
+v25 := flag;
+v26 := v25 + 1;
+flag := v26;
+v27 := flag;
+var__temp_v.0.i := 0;
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(v27 > 10);
+TO: main_fopen_or_warn.exit;
+
+FROM: main_bb11_end;
+assume(v27 <= 10);
+TO: main_bb12;
+
+FROM: main_bb12;
+v29 := nondet();
+TO: main_bb12_v..i;
+FROM: main_bb12_v..i;
+assume(v29 >= 0);
+v..i := 0;
+TO: main_bb12_sv..i;
+
+FROM: main_bb12_v..i;
+assume(v29 < 0);
+v..i := v29;
+TO: main_bb12_sv..i;
+
+FROM: main_bb12_sv..i;
+var__temp_v.0.i := v..i;
+TO: main_fopen_or_warn.exit;
+
+FROM: main_fopen_or_warn.exit;
+v.0.i := var__temp_v.0.i;
+var__temp_vfp.2 := v.0.i;
+var__temp_vfp.0 := v.0.i;
+TO: main_fopen_or_warn.exit_end;
+
+FROM: main_fopen_or_warn.exit_end;
+assume(v.0.i == 0);
+TO: main_bb9;
+
+FROM: main_fopen_or_warn.exit_end;
+assume(v.0.i != 0);
+TO: main_bb13;
+
+FROM: main_bb13;
+vfp.0 := var__temp_vfp.0;
+var__temp_vfp.1 := vfp.0;
+TO: main_bb8;
+
+FROM: main_bb14;
+TO: main_bb15;
+
+FROM: main_bb15;
+TO: main_bb15_ret;
+

@@ -1,0 +1,213 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/Problem04_label00_true-unreach-call/Problem04_label00_true-unreach-call.c
+Converting
+Type-checking Problem04_label00_true-unreach-call
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of exit
+Simplifying
+Computing SSA of calculate_output2
+Simplifying
+Computing SSA of calculate_output3
+Simplifying
+Computing SSA of calculate_output4
+Simplifying
+Computing SSA of calculate_output
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode a a1 a14 a25 a26 a28 a3 a4 a7 b c d e f u v w x y z __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#31 __CPROVER_thread_key_dtors#29 __CPROVER_thread_keys#30 __CPROVER_malloc_is_new_array#21 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#18 __CPROVER_dead_object#19 __CPROVER_deallocated#20 __CPROVER_new_object#23 __CPROVER_rounding_mode#27 a#32 a1#33 a14#34 a25#35 a26#36 a28#37 a3#38 a4#39 a7#40 b#41 c#42 d#43 e#44 f#45 u#46 v#47 w#48 x#49 y#50 z#51 __CPROVER_pipe_count#26 __CPROVER_max_malloc_size#22 __CPROVER_next_thread_id#24 __CPROVER_next_thread_key#25 __CPROVER_thread_id#28 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#27 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#27) <= 0 && a#32 <= 1 && -((signed __CPROVER_bitvector[33])a#32) <= -1 && a1#33 <= 1 && -((signed __CPROVER_bitvector[33])a1#33) <= -1 && a14#34 <= 19 && -((signed __CPROVER_bitvector[33])a14#34) <= -19 && a25#35 <= 1 && -((signed __CPROVER_bitvector[33])a25#35) <= -1 && a26#36 <= 18 && -((signed __CPROVER_bitvector[33])a26#36) <= -18 && a28#37 <= 15 && -((signed __CPROVER_bitvector[33])a28#37) <= -15 && a3#38 <= 1 && -((signed __CPROVER_bitvector[33])a3#38) <= -1 && a4#39 <= 17 && -((signed __CPROVER_bitvector[33])a4#39) <= -17 && a7#40 <= 1 && -((signed __CPROVER_bitvector[33])a7#40) <= -1 && b#41 <= 2 && -((signed __CPROVER_bitvector[33])b#41) <= -2 && c#42 <= 3 && -((signed __CPROVER_bitvector[33])c#42) <= -3 && d#43 <= 4 && -((signed __CPROVER_bitvector[33])d#43) <= -4 && e#44 <= 5 && -((signed __CPROVER_bitvector[33])e#44) <= -5 && f#45 <= 6 && -((signed __CPROVER_bitvector[33])f#45) <= -6 && u#46 <= 21 && -((signed __CPROVER_bitvector[33])u#46) <= -21 && v#47 <= 22 && -((signed __CPROVER_bitvector[33])v#47) <= -22 && w#48 <= 23 && -((signed __CPROVER_bitvector[33])w#48) <= -23 && x#49 <= 24 && -((signed __CPROVER_bitvector[33])x#49) <= -24 && y#50 <= 25 && -((signed __CPROVER_bitvector[33])y#50) <= -25 && z#51 <= 26 && -((signed __CPROVER_bitvector[33])z#51) <= -26 && __CPROVER_pipe_count#26 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#26) <= 0 && __CPROVER_max_malloc_size#22 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#22) <= -36028797018963968 && __CPROVER_next_thread_id#24 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#24) <= 0 && __CPROVER_next_thread_key#25 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#25) <= 0 && __CPROVER_thread_id#28 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#28) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of calculate_output
+Function calculate_output not analyzed yet
+Recursively summarizing function calculate_output
+Checking precondition of calculate_output2
+Function calculate_output2 not analyzed yet
+Recursively summarizing function calculate_output2
+Checking precondition of calculate_output3
+Function calculate_output3 not analyzed yet
+Recursively summarizing function calculate_output3
+Checking precondition of calculate_output4
+Function calculate_output4 not analyzed yet
+Recursively summarizing function calculate_output4
+Checking precondition of exit
+Function exit not analyzed yet
+Recursively summarizing function exit
+Analyzing function exit
+Computing summary
+Computing termination argument for exit
+Function never terminates normally
+
+Summary for function exit
+params: status 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function calculate_output4
+Computing summary
+Computing termination argument for calculate_output4
+
+Summary for function calculate_output4
+params: input 
+globals_in: a1 a14 a25 a26 a28 a3 a4 a7 
+globals_out: a1 a14#phi4491 a25 a26#phi4491 a28#phi4491 a3#phi4491 a4#phi4491 a7#phi4491 calculate_output4#return_value#phi4491 
+forward precondition: TRUE
+forward transformer: a1 <= 2147483647 && -((signed __CPROVER_bitvector[33])a1) <= 2147483648 && a14#phi4491 <= 2147483647 && -((signed __CPROVER_bitvector[33])a14#phi4491) <= 2147483648 && a25 <= 2147483647 && -((signed __CPROVER_bitvector[33])a25) <= 2147483648 && a26#phi4491 <= 2147483647 && -((signed __CPROVER_bitvector[33])a26#phi4491) <= 2147483648 && a28#phi4491 <= 2147483647 && -((signed __CPROVER_bitvector[33])a28#phi4491) <= 2147483648 && a3#phi4491 <= 2147483647 && -((signed __CPROVER_bitvector[33])a3#phi4491) <= 2147483648 && a4#phi4491 <= 2147483647 && -((signed __CPROVER_bitvector[33])a4#phi4491) <= 2147483648 && a7#phi4491 <= 2147483647 && -((signed __CPROVER_bitvector[33])a7#phi4491) <= 2147483648 && calculate_output4#return_value#phi4491 <= 26 && -((signed __CPROVER_bitvector[33])calculate_output4#return_value#phi4491) <= 2
+forward invariant: a1 <= 2147483647 && -((signed __CPROVER_bitvector[33])a1) <= 2147483648 && a25 <= 2147483647 && -((signed __CPROVER_bitvector[33])a25) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function calculate_output3
+Computing summary
+Computing termination argument for calculate_output3
+
+Summary for function calculate_output3
+params: input 
+globals_in: a1 a14 a25 a26 a28 a3 a4 a7 
+globals_out: a1 a14#phi3638 a25 a26#phi3638 a28#phi3638 a3#phi3638 a4#phi3638 a7#phi3638 calculate_output3#return_value#phi3638 
+forward precondition: TRUE
+forward transformer: a1 <= 2147483647 && -((signed __CPROVER_bitvector[33])a1) <= 2147483648 && a14#phi3638 <= 2147483647 && -((signed __CPROVER_bitvector[33])a14#phi3638) <= 2147483648 && a25 <= 2147483647 && -((signed __CPROVER_bitvector[33])a25) <= 2147483648 && a26#phi3638 <= 2147483647 && -((signed __CPROVER_bitvector[33])a26#phi3638) <= 2147483648 && a28#phi3638 <= 2147483647 && -((signed __CPROVER_bitvector[33])a28#phi3638) <= 2147483648 && a3#phi3638 <= 2147483647 && -((signed __CPROVER_bitvector[33])a3#phi3638) <= 2147483648 && a4#phi3638 <= 2147483647 && -((signed __CPROVER_bitvector[33])a4#phi3638) <= 2147483648 && a7#phi3638 <= 2147483647 && -((signed __CPROVER_bitvector[33])a7#phi3638) <= 2147483648 && calculate_output3#return_value#phi3638 <= 26 && -((signed __CPROVER_bitvector[33])calculate_output3#return_value#phi3638) <= 2
+forward invariant: a1 <= 2147483647 && -((signed __CPROVER_bitvector[33])a1) <= 2147483648 && a25 <= 2147483647 && -((signed __CPROVER_bitvector[33])a25) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function calculate_output2
+Computing summary
+Computing termination argument for calculate_output2
+
+Summary for function calculate_output2
+params: input 
+globals_in: a1 a14 a25 a26 a28 a3 a4 a7 
+globals_out: a1 a14#phi1834 a25 a26#phi1834 a28#phi1834 a3#phi1834 a4#phi1834 a7#phi1834 calculate_output2#return_value#phi1834 
+forward precondition: TRUE
+forward transformer: a1 <= 2147483647 && -((signed __CPROVER_bitvector[33])a1) <= 2147483648 && a14#phi1834 <= 2147483647 && -((signed __CPROVER_bitvector[33])a14#phi1834) <= 2147483648 && a25 <= 2147483647 && -((signed __CPROVER_bitvector[33])a25) <= 2147483648 && a26#phi1834 <= 2147483647 && -((signed __CPROVER_bitvector[33])a26#phi1834) <= 2147483648 && a28#phi1834 <= 2147483647 && -((signed __CPROVER_bitvector[33])a28#phi1834) <= 2147483648 && a3#phi1834 <= 2147483647 && -((signed __CPROVER_bitvector[33])a3#phi1834) <= 2147483648 && a4#phi1834 <= 2147483647 && -((signed __CPROVER_bitvector[33])a4#phi1834) <= 2147483648 && a7#phi1834 <= 2147483647 && -((signed __CPROVER_bitvector[33])a7#phi1834) <= 2147483648 && calculate_output2#return_value#phi1834 <= 26 && -((signed __CPROVER_bitvector[33])calculate_output2#return_value#phi1834) <= 2
+forward invariant: a1 <= 2147483647 && -((signed __CPROVER_bitvector[33])a1) <= 2147483648 && a25 <= 2147483647 && -((signed __CPROVER_bitvector[33])a25) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function calculate_output
+Computing summary
+Computing termination argument for calculate_output
+
+Summary for function calculate_output
+params: input 
+globals_in: a1 a14 a25 a26 a28 a3 a4 a7 
+globals_out: a1 a14#phi6269 a25 a26#phi6269 a28#phi6269 a3#phi6269 a4#phi6269 a7#phi6269 calculate_output#return_value#phi6269 
+forward precondition: TRUE
+forward transformer: a1 <= 2147483647 && -((signed __CPROVER_bitvector[33])a1) <= 2147483648 && a14#phi6269 <= 2147483647 && -((signed __CPROVER_bitvector[33])a14#phi6269) <= 2147483648 && a25 <= 2147483647 && -((signed __CPROVER_bitvector[33])a25) <= 2147483648 && a26#phi6269 <= 2147483647 && -((signed __CPROVER_bitvector[33])a26#phi6269) <= 2147483648 && a28#phi6269 <= 2147483647 && -((signed __CPROVER_bitvector[33])a28#phi6269) <= 2147483648 && a3#phi6269 <= 2147483647 && -((signed __CPROVER_bitvector[33])a3#phi6269) <= 2147483648 && a4#phi6269 <= 2147483647 && -((signed __CPROVER_bitvector[33])a4#phi6269) <= 2147483648 && a7#phi6269 <= 2147483647 && -((signed __CPROVER_bitvector[33])a7#phi6269) <= 2147483648 && calculate_output#return_value#phi6269 <= 26 && -((signed __CPROVER_bitvector[33])calculate_output#return_value#phi6269) <= 2
+forward invariant: a1 <= 2147483647 && -((signed __CPROVER_bitvector[33])a1) <= 2147483648 && a25 <= 2147483647 && -((signed __CPROVER_bitvector[33])a25) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+
+Summary for function main
+params: 
+globals_in: 
+globals_out: main#return_value#phi17 
+forward precondition: TRUE
+forward transformer: main#return_value#phi17 <= -2 && -((signed __CPROVER_bitvector[33])main#return_value#phi17) <= 2
+forward invariant: ($guard#2 && $guard#ls14 ==> output#lb14 <= 26) && ($guard#2 && $guard#ls14 ==> -((signed __CPROVER_bitvector[33])output#lb14) <= 2)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 2769090968
+  number of solver calls: 1309820872
+  number of summaries used: 7
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_initialize]: yes
+[exit]: no
+[calculate_output2]: unknown
+[calculate_output3]: unknown
+[calculate_output4]: unknown
+[calculate_output]: unknown
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 7484 milliseconds

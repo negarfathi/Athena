@@ -1,0 +1,59 @@
+///*** 1_main ***///
+START: main_bb3;
+
+FROM: main_bb3;
+TO: main_bb4;
+
+FROM: main_bb4;
+v8 := flag;
+var__temp_v.0.i := -1;
+TO: main_bb4_end;
+
+FROM: main_bb4_end;
+assume(v8 > 1000);
+TO: main_fgetc.exit;
+
+FROM: main_bb4_end;
+assume(v8 <= 1000);
+TO: main_bb5;
+
+FROM: main_bb5;
+v10 := flag;
+v11 := v10 + 1;
+flag := v11;
+v12 := nondet();
+v14 := 0 - v12;
+TO: main_bb5_v..i;
+FROM: main_bb5_v..i;
+assume(v12 < 0);
+v..i := v14;
+TO: main_bb5_sv..i;
+
+FROM: main_bb5_v..i;
+assume(v12 >= 0);
+v..i := v12;
+TO: main_bb5_sv..i;
+
+FROM: main_bb5_sv..i;
+v15 := v..i % 256;
+var__temp_v.0.i := v15;
+TO: main_fgetc.exit;
+
+FROM: main_fgetc.exit;
+v.0.i := var__temp_v.0.i;
+TO: main_fgetc.exit_end;
+
+FROM: main_fgetc.exit_end;
+assume((v17 == 0) || (v19 == -1));
+TO: main_bb6;
+
+FROM: main_fgetc.exit_end;
+assume((v17 != 0) && (v19 != -1));
+TO: main_bb7;
+
+FROM: main_bb6;
+TO: main_bb6_ret;
+
+FROM: main_bb7;
+TO: main_bb4;
+

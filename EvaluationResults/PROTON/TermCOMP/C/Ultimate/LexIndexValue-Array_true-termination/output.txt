@@ -1,0 +1,118 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.oDUW8k
+
+Input File is : LexIndexValue-Array_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 2012-06-03
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ * 2-lex ranking function: f(k, a[k], a[0], a[1048]) = (k, a[k])
+ *
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int a[1048];
+	int k = 0;
+	while (a[k] >= 0 && k < 1048) {
+		{if (__VERIFIER_nondet_int()) {
+			k++;
+		} else {
+			a[k]--;
+		}}
+	}
+	return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : LexIndexValue-Array_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2012-06-03
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ * 2-lex ranking function: f(k, a[k], a[0], a[1048]) = (k, a[k])
+ *
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int a[1048];
+	int k = 0;
+myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+	while (a[k] >= 0 && k < 1048) { __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static int ok;if(pStored0){__CPROVER_assert(!(ok==k),"recurrent state found");} if(flag){ok=k;pStored0=myTrue;} 
+		{ __VERIFIER_reached_control(16, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(16, __func__);
+
+			k++;
+		} else { __VERIFIER_control_false(18, __func__);
+
+			a[k]--;
+		}}
+	}
+	return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+LexIndexValue-Array_true-termination_braced_instrumented.c
+NTFILE is LexIndexValue-Array_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = LexIndexValue-Array_true-termination.c
+b'26aaa892eba6c0d1cf40b7db0a8c29e404cfaf4208124f976ba71f190ed07b3d  LexIndexValue-Array_true-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Ultimate/LexIndexValue-Array_true-termination/LexIndexValue-Array_true-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+main 15 reachedControl
+main 15 loopHead
+main 16 reachedControl
+main 18 falseBranch
+main 15 loopHead
+Trace file line inside enterred lasso check : main 15 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Ultimate/LexIndexValue-Array_true-termination/LexIndexValue-Array_true-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for LexIndexValue-Array_true-termination.c
+FILE=LexIndexValue-Array_true-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2057 milliseconds

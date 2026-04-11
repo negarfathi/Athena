@@ -1,0 +1,49 @@
+///*** 1_main ***///
+START: main_bb2;
+
+
+
+FROM: main_bb2;
+memory0_freeIndex := 1;
+x := 0;
+vmemory0 := nondet();
+v9 := memory0_freeIndex;
+v10 := memory0_freeIndex;
+v11 := v10 + 1;
+memory0_freeIndex := v11;
+x := v9;
+v12 := nondet();
+v13 := x;
+v14 := v13;
+v15 := v14;
+vmemory0 := store_array(vmemory0, v15, v12);
+TO: main_bb3;
+
+FROM: main_bb3;
+v16 := x;
+v17 := v16;
+v18 := v17;
+v19 := select_array(vmemory0, v18);
+TO: main_bb3_end;
+
+FROM: main_bb3_end;
+assume(v19 > 0);
+TO: main_bb4;
+
+FROM: main_bb3_end;
+assume(v19 <= 0);
+TO: main_bb5;
+
+FROM: main_bb4;
+v21 := nondet();
+v23 := x;
+v24 := v23;
+v25 := v24;
+v26 := select_array(vmemory0, v25);
+v27 := v26 + -1;
+vmemory0 := store_array(vmemory0, v25, v27);
+TO: main_bb3;
+
+FROM: main_bb5;
+TO: main_bb5_ret;
+

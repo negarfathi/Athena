@@ -1,0 +1,118 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.YYAV10
+
+Input File is : aaron3_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program used in the experimental evaluation of the following papers.
+ * 2008ESOP - Chawdhary,Cook,Gulwani,Sagiv,Yang - Ranking Abstractions
+ * 2010SAS - Alias,Darte,Feautrier,Gonnord, Multi-dimensional Rankings, Program 
+ *           Termination, and Complexity Bounds of Flowchart Programs
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x, y, z, tx;
+	x = __VERIFIER_nondet_int();
+	y = __VERIFIER_nondet_int();
+	z = __VERIFIER_nondet_int();
+	tx = __VERIFIER_nondet_int();
+	while (x >= y && x <= tx + z) {
+		{if (__VERIFIER_nondet_int() != 0) {
+			z = z - 1;
+			tx = x;
+			x = __VERIFIER_nondet_int();
+		} else {
+			y = y + 1;
+		}}
+	}
+	return 0;
+}
+
+End Main   
+
+Input File is : aaron3_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program used in the experimental evaluation of the following papers.
+ * 2008ESOP - Chawdhary,Cook,Gulwani,Sagiv,Yang - Ranking Abstractions
+ * 2010SAS - Alias,Darte,Feautrier,Gonnord, Multi-dimensional Rankings, Program 
+ *           Termination, and Complexity Bounds of Flowchart Programs
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x, y, z, tx;
+	x = __VERIFIER_nondet_int();
+	y = __VERIFIER_nondet_int();
+	z = __VERIFIER_nondet_int();
+	tx = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(21, __func__);
+	while (x >= y && x <= tx + z) { __VERIFIER_loop_head(21, __func__);
+printf("CBMC Instrumentation @ line21");myBool flag=__VERIFIER_nondet_myBool();static int otx;static int ox;static int oy;static int oz;if(pStored0){__CPROVER_assert(!(otx==tx && ox==x && oy==y && oz==z),"recurrent state found");} if(flag){otx=tx;ox=x;oy=y;oz=z;pStored0=myTrue;} 
+		{ __VERIFIER_reached_control(22, __func__);
+if (__VERIFIER_nondet_int() != 0) { __VERIFIER_control_true(22, __func__);
+
+			z = z - 1;
+			tx = x;
+			x = __VERIFIER_nondet_int();
+		} else { __VERIFIER_control_false(26, __func__);
+
+			y = y + 1;
+		}}
+	}
+	return 0;
+}
+
+End Main 
+ aaron3_true-termination_braced_instrumented.c
+NTFILE is aaron3_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for aaron3_true-termination.c
+FILE=aaron3_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 186705 milliseconds

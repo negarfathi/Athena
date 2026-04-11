@@ -1,0 +1,116 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.CRc83H
+
+Input File is : Pure3Phase_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 2014-06-29
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ * This program has the following 3-phase ranking function:
+ * f_0(x, y, z) = z
+ * f_1(x, y, z) = y
+ * f_2(x, y, z) = x
+ *
+ * The program does not have a nested ranking function.
+ */
+
+extern int __VERIFIER_nondet_int();
+
+int main()
+{
+	int x = __VERIFIER_nondet_int();
+	int y = __VERIFIER_nondet_int();
+	int z = __VERIFIER_nondet_int();
+	while (x >= 0) {
+		{if (__VERIFIER_nondet_int()) {
+			x = x + y;
+		} else {
+			x = x + z;
+		}}
+		y = y + z;
+		z = z - 1;
+	}
+	return 0;
+}
+
+End Main   
+
+Input File is : Pure3Phase_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2014-06-29
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ * This program has the following 3-phase ranking function:
+ * f_0(x, y, z) = z
+ * f_1(x, y, z) = y
+ * f_2(x, y, z) = x
+ *
+ * The program does not have a nested ranking function.
+ */
+
+extern int __VERIFIER_nondet_int();
+
+int main()
+{
+	int x = __VERIFIER_nondet_int();
+	int y = __VERIFIER_nondet_int();
+	int z = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(20, __func__);
+	while (x >= 0) { __VERIFIER_loop_head(20, __func__);
+printf("CBMC Instrumentation @ line20");myBool flag=__VERIFIER_nondet_myBool();static int ox;static int oy;static int oz;if(pStored0){__CPROVER_assert(!(ox==x && oy==y && oz==z),"recurrent state found");} if(flag){ox=x;oy=y;oz=z;pStored0=myTrue;} 
+		{ __VERIFIER_reached_control(21, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(21, __func__);
+
+			x = x + y;
+		} else { __VERIFIER_control_false(23, __func__);
+
+			x = x + z;
+		}}
+		y = y + z;
+		z = z - 1;
+	}
+	return 0;
+}
+
+End Main 
+ Pure3Phase_true-termination_braced_instrumented.c
+NTFILE is Pure3Phase_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Pure3Phase_true-termination.c
+FILE=Pure3Phase_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 273341 milliseconds

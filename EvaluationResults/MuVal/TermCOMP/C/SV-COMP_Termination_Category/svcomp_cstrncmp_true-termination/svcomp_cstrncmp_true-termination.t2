@@ -1,0 +1,124 @@
+///*** 1_main ***///
+START: main_bb9;
+
+FROM: main_bb9;
+v31 := nondet();
+TO: main_bb9_v..i;
+FROM: main_bb9_v..i;
+assume(v31 < 1);
+v..i := 1;
+TO: main_bb9_sv..i;
+
+FROM: main_bb9_v..i;
+assume(v31 >= 1);
+v..i := v31;
+TO: main_bb9_sv..i;
+
+FROM: main_bb9_sv..i;
+v35 := v..i - 1;
+v37 := 0;
+v38 := nondet();
+TO: main_bb9_v..i1;
+FROM: main_bb9_v..i1;
+assume(v38 < 1);
+v..i1 := 1;
+TO: main_bb9_sv..i1;
+
+FROM: main_bb9_v..i1;
+assume(v38 >= 1);
+v..i1 := v38;
+TO: main_bb9_sv..i1;
+
+FROM: main_bb9_sv..i1;
+v42 := v..i1 - 1;
+v44 := 0;
+v45 := nondet();
+var__temp_v.03.i := v45;
+var__temp_v.0.i := 0;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(v45 == 0);
+TO: main_cstrncmp.exit;
+
+FROM: main_bb9_end;
+assume(v45 != 0);
+TO: main_bb10;
+
+FROM: main_bb10;
+v.03.i := var__temp_v.03.i;
+v47 := v.03.i + -1;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(v.03.i > 0);
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(v.03.i <= 0);
+TO: main_.critedge.i;
+
+FROM: main_bb11;
+v49 := nondef.3;
+v51 := nondef.4;
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(v50 == v52);
+TO: main_bb12;
+
+FROM: main_bb11_end;
+assume(v50 != v52);
+TO: main_.critedge.i;
+
+FROM: main_bb12;
+var__temp_v.0.i := 0;
+TO: main_bb12_end;
+
+FROM: main_bb12_end;
+assume(v47 == 0);
+TO: main_cstrncmp.exit;
+
+FROM: main_bb12_end;
+assume(v47 != 0);
+TO: main_bb13;
+
+FROM: main_bb13;
+v55 := nondef.5;
+var__temp_v.0.i := 0;
+TO: main_bb13_end;
+
+FROM: main_bb13_end;
+assume(v56 == 0);
+TO: main_cstrncmp.exit;
+
+FROM: main_bb13_end;
+assume(v56 != 0);
+TO: main_bb14;
+
+FROM: main_bb14;
+var__temp_v.03.i := v47;
+TO: main_bb10;
+
+FROM: main_.critedge.i;
+v60 := nondef.6;
+v61 := nondef.7;
+var__temp_v.0.i := -1;
+TO: main_.critedge.i_end;
+
+FROM: main_.critedge.i_end;
+assume(v62 < v63);
+TO: main_cstrncmp.exit;
+
+FROM: main_.critedge.i_end;
+assume(v62 >= v63);
+TO: main_bb15;
+
+FROM: main_bb15;
+var__temp_v.0.i := v68;
+TO: main_cstrncmp.exit;
+
+FROM: main_cstrncmp.exit;
+v.0.i := var__temp_v.0.i;
+TO: main_cstrncmp.exit_ret;
+

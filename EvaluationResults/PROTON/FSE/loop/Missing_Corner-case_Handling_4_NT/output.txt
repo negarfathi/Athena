@@ -1,0 +1,196 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.zvslYT
+
+Input File is : Missing_Corner-case_Handling_4_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+
+Commit Number: 6a603b5b55262c443bf780f3c112a586cb3d9901
+URL: https://github.com/ArtifexSoftware/mupdf/commit/6a603b5b55262c443bf780f3c112a586cb3d9901
+Project Name: mupdf
+License: agpl-3.0
+termination: FALSE
+*/
+typedef struct NNode{
+    int h;
+    struct NNode * next;
+}Node;
+
+
+Node * initLink(int n){
+    Node* head=(Node*)malloc(sizeof(Node));
+    head->h=1;
+    head->next=0;
+    Node* cyclic=head;
+
+    int i;
+    for (i=2; i<=n; i++) {
+        Node * body=(Node*)malloc(sizeof(Node));
+        body->h=i;
+        body->next=0;
+        cyclic->next=body;
+        cyclic=cyclic->next;
+    }
+    cyclic->next=head;
+    return head;
+}
+Node* findEnd( Node* list )
+{
+    Node* begin = list;
+    while( begin->next != list )
+        {begin = begin->next;}
+    return begin;
+}
+
+int main()
+{
+    int num = __VERIFIER_nondet_int();
+    {if( num <= 0 || num > 65534 )
+        {return 0;}}
+    Node* list = initLink( num );
+    Node* node = list;
+    Node* end = findEnd( list );
+    float h = 0;
+    while( node )
+    {
+        {if( node-> h > h )
+            {h = node -> h;}}
+        node = node->next;
+    }
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Missing_Corner-case_Handling_4_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+
+Commit Number: 6a603b5b55262c443bf780f3c112a586cb3d9901
+URL: https://github.com/ArtifexSoftware/mupdf/commit/6a603b5b55262c443bf780f3c112a586cb3d9901
+Project Name: mupdf
+License: agpl-3.0
+termination: FALSE
+*/
+typedef struct NNode{
+    int h;
+    struct NNode * next;
+}Node;
+
+
+Node * initLink(int n){
+    Node* head=(Node*)malloc(sizeof(Node));
+    head->h=1;
+    head->next=0;
+    Node* cyclic=head;
+
+    int i;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(23, __func__);
+ for (i=2; i<=n; i++) { __VERIFIER_loop_head(23, __func__);
+printf("CBMC Instrumentation @ line23");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int on;if(pStored0){__CPROVER_assert(!(oi==i && on==n),"recurrent state found");} if(flag){oi=i;on=n;pStored0=myTrue;} 
+        Node * body=(Node*)malloc(sizeof(Node));
+        body->h=i;
+        body->next=0;
+        cyclic->next=body;
+        cyclic=cyclic->next;
+    }
+    cyclic->next=head;
+    return head;
+}
+Node* findEnd( Node* list )
+{
+    Node* begin = list;
+   myBool pStored1 = myFalse; __VERIFIER_reached_control(37, __func__);
+ while( begin->next != list )
+        { __VERIFIER_loop_head(37, __func__);
+begin = begin->next;}
+    return begin;
+}
+
+int main()
+{
+    int num = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(44, __func__);
+if( num <= 0 || num > 65534 )
+        { __VERIFIER_control_true(45, __func__);
+return 0;}}
+    Node* list = initLink( num );
+    Node* node = list;
+    Node* end = findEnd( list );
+    float h = 0;
+   myBool pStored2 = myFalse; __VERIFIER_reached_control(51, __func__);
+ while( node )
+    { __VERIFIER_loop_head(51, __func__);
+printf("CBMC Instrumentation @ line51");myBool flag=__VERIFIER_nondet_myBool();static float oh;static int onum;if(pStored2){__CPROVER_assert(!(oh==h && onum==num),"recurrent state found");} if(flag){oh=h;onum=num;pStored2=myTrue;} 
+        { __VERIFIER_reached_control(52, __func__);
+if( node-> h > h )
+            { __VERIFIER_control_true(53, __func__);
+h = node -> h;}}
+        node = node->next;
+    }
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Missing_Corner-case_Handling_4_NT_braced_instrumented.c
+NTFILE is Missing_Corner-case_Handling_4_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Missing_Corner-case_Handling_4_NT.c
+b'7db7d5f01164fbe8b5c90e1183544a66e879af252ae08a05d763b1e7e0f654f3  Missing_Corner-case_Handling_4_NT.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Missing_Corner-case_Handling_4_NT/Missing_Corner-case_Handling_4_NT.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 44 reachedControl
+initLink 23 reachedControl
+findEnd 37 reachedControl
+main 51 reachedControl
+main 51 loopHead
+main 52 reachedControl
+main 53 trueBranch
+main 51 loopHead
+enteringLasso
+main 52 reachedControl
+main 51 loopHead
+Trace file line inside enterred lasso check : main 52 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Missing_Corner-case_Handling_4_NT/Missing_Corner-case_Handling_4_NT.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Missing_Corner-case_Handling_4_NT.c
+FILE=Missing_Corner-case_Handling_4_NT_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 3081 milliseconds

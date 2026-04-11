@@ -1,0 +1,116 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.geA53c
+
+Input File is : svcomp_fermat.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  int fermat (void) {
+    const int MAX = 1000;
+    int a = 1, b = 1, c = 1;
+    while (1) {
+        {if (((a*a*a) == ((b*b*b)+(c*c*c)))) {
+            return 1;
+        }}
+        a++;
+        {if (a>MAX) {
+            a = 1;
+            b++;
+        }}
+        {if (b>MAX) {
+            b = 1;
+            c++;
+        }}
+        {if (c>MAX) {
+            break;
+        }}
+    }
+    return 0;
+}
+
+int main() {
+    return fermat();
+}
+
+End Main   
+
+Input File is : svcomp_fermat_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+int fermat (void) {
+    const int MAX = 1000;
+    int a = 1, b = 1, c = 1;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(4, __func__);
+ while (1) { __VERIFIER_loop_head(4, __func__);
+printf("CBMC Instrumentation @ line4");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;static int oc;if(pStored0){__CPROVER_assert(!(oa==a && ob==b && oc==c),"recurrent state found");} if(flag){oa=a;ob=b;oc=c;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(5, __func__);
+if (((a*a*a) == ((b*b*b)+(c*c*c)))) { __VERIFIER_control_true(5, __func__);
+
+            return 1;
+        }}
+        a++;
+        { __VERIFIER_reached_control(9, __func__);
+if (a>MAX) { __VERIFIER_control_true(9, __func__);
+
+            a = 1;
+            b++;
+        }}
+        { __VERIFIER_reached_control(13, __func__);
+if (b>MAX) { __VERIFIER_control_true(13, __func__);
+
+            b = 1;
+            c++;
+        }}
+        { __VERIFIER_reached_control(17, __func__);
+if (c>MAX) { __VERIFIER_control_true(17, __func__);
+
+            break;
+        }}
+    }
+    return 0;
+}
+
+int main() {
+    return fermat();
+}
+
+End Main 
+ svcomp_fermat_braced_instrumented.c
+NTFILE is svcomp_fermat_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for svcomp_fermat.c
+FILE=svcomp_fermat_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 130756 milliseconds

@@ -1,0 +1,79 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.PvZUeK
+
+Input File is : LeikeHeizmann-TACAS2014-Ex7_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : LeikeHeizmann-TACAS2014-Ex7_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Example 7 of
+ * 2014TACAS - Leike, Heizmann - Ranking Templates for Linear Loops
+ * 
+ * In the conference version of this paper, the authors claimed that this
+ * lasso program does not have a multiphase ranking function. However, this
+ * lasso program has the following 2-phase ranking function.
+ *     f_0(x, y) = 2q + z
+ *     f_1(x, y) = q
+ * The authors thank Samir Genaim for pointing out this error in their paper.
+ *
+ * Date: 2014-06-29
+ * Author: Jan Leike
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int q, z;
+	q = __VERIFIER_nondet_int();
+	z = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(24, __func__);
+	while (q > 0) { __VERIFIER_loop_head(24, __func__);
+printf("CBMC Instrumentation @ line24");myBool flag=__VERIFIER_nondet_myBool();static int oq;static int oz;if(pStored0){__CPROVER_assert(!(oq==q && oz==z),"recurrent state found");} if(flag){oq=q;oz=z;pStored0=myTrue;} 
+		q = q + z - 1;
+		z = -z;
+	}
+	return 0;
+}
+
+End Main 
+ LeikeHeizmann-TACAS2014-Ex7_true-termination_instrumented.c
+NTFILE is LeikeHeizmann-TACAS2014-Ex7_true-termination_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for LeikeHeizmann-TACAS2014-Ex7_true-termination.c
+FILE=LeikeHeizmann-TACAS2014-Ex7_true-termination_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182304 milliseconds

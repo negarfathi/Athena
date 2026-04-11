@@ -1,0 +1,95 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.YM1TK0
+
+Input File is : svcomp_mult_array_unsafe.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+  int i, j;
+  int length = __VERIFIER_nondet_int();
+  {if (length < 1) {length = 1;}}
+  int fac = __VERIFIER_nondet_int();
+  {if (fac < 1) {fac = 1;}}
+  int *arr = alloca(length);
+  int *arr2 = alloca(fac*length);
+  {if (!arr || !arr2) {return 0;}}
+  for (i=0; i<length; i++) {
+    arr[i] = __VERIFIER_nondet_int();
+  }
+  for (j=0; j<length*fac; j++) {
+    arr2[j] = arr[i % length];
+  }
+  return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_mult_array_unsafe_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+  int i, j;
+  int length = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(7, __func__);
+if (length < 1) { __VERIFIER_control_true(7, __func__);
+length = 1;}}
+  int fac = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(9, __func__);
+if (fac < 1) { __VERIFIER_control_true(9, __func__);
+fac = 1;}}
+  int *arr = alloca(length);
+  int *arr2 = alloca(fac*length);
+  { __VERIFIER_reached_control(12, __func__);
+if (!arr || !arr2) { __VERIFIER_control_true(12, __func__);
+return 0;}}
+  for (i=0; i<length; i++) {printf("ArrayNT State @ line13: Array Found\n");
+    arr[i] = __VERIFIER_nondet_int();
+  }
+  for (j=0; j<length*fac; j++) {printf("ArrayNT State @ line16: Array Found\n");
+    arr2[j] = arr[i % length];
+  }
+  return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_mult_array_unsafe_braced_instrumented.c
+NTFILE is svcomp_mult_array_unsafe_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_mult_array_unsafe.c
+FILE=svcomp_mult_array_unsafe_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 5967 milliseconds

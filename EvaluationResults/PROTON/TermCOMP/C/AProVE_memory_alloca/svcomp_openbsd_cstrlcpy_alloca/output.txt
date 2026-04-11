@@ -1,0 +1,167 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.G6G4Fx
+
+Input File is : svcomp_openbsd_cstrlcpy_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/*
+ * Copy src to string dst of size siz.  At most siz-1 characters
+ * will be copied.  Always NUL terminates (unless siz == 0).
+ * Returns strlen(src); if retval >= siz, truncation occurred.
+ */
+size_t
+cstrlcpy(char *dst, const char *src, size_t siz)
+{
+	char *d = dst;
+	const char *s = src;
+	size_t n = siz;
+
+	/* Copy as many bytes as will fit */
+	{if (n != 0) {
+		while (--n != 0) {
+			{if ((*d++ = *s++) == '\0')
+				{break;}}
+		}
+	}}
+
+	/* Not enough room in dst, add NUL and traverse rest of src */
+	{if (n == 0) {
+		{if (siz != 0)
+			{*d = '\0';}}		/* NUL-terminate dst */
+		while (*s++)
+			{;}
+	}}
+
+	return(s - src - 1);	/* count does not include NUL */
+}
+
+int main() {
+  int length = __VERIFIER_nondet_int();
+  int n = __VERIFIER_nondet_int();
+  {if (length < 1) {
+      length = 1;
+  }}
+  {if (n < 1) {
+      n = 1;
+  }}
+  char* nondetString1 = (char*) alloca(n * sizeof(char));
+  char* nondetString2 = (char*) alloca(length * sizeof(char));
+  nondetString1[n-1] = '\0';
+  nondetString2[length-1] = '\0';
+  cstrlcpy(nondetString1, nondetString2, n);
+  return 0;
+}
+./proton: line 26:    90 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_openbsd_cstrlcpy_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/*
+ * Copy src to string dst of size siz.  At most siz-1 characters
+ * will be copied.  Always NUL terminates (unless siz == 0).
+ * Returns strlen(src); if retval >= siz, truncation occurred.
+ */
+size_t
+cstrlcpy(char *dst, const char *src, size_t siz)
+{
+	char *d = dst;
+	const char *s = src;
+	size_t n = siz;
+
+	/* Copy as many bytes as will fit */
+	{ __VERIFIER_reached_control(18, __func__);
+if (n != 0) { __VERIFIER_control_true(18, __func__);
+
+	myBool pStored0 = myFalse; __VERIFIER_reached_control(19, __func__);
+	while (--n != 0) { __VERIFIER_loop_head(19, __func__);
+printf("CBMC Instrumentation @ line19");myBool flag=__VERIFIER_nondet_myBool();static char * od;static char * odst;static const char * os;static int osiz;static const char * osrc;if(pStored0){__CPROVER_assert(!(od==d && odst==dst && os==s && osiz==siz && osrc==src),"recurrent state found");} if(flag){od=d;odst=dst;os=s;osiz=siz;osrc=src;pStored0=myTrue;} 
+			{ __VERIFIER_reached_control(20, __func__);
+if ((*d++ = *s++) == '\0')
+				{ __VERIFIER_control_true(21, __func__);
+break;}}
+		}
+	}}
+
+	/* Not enough room in dst, add NUL and traverse rest of src */
+	{ __VERIFIER_reached_control(26, __func__);
+if (n == 0) { __VERIFIER_control_true(26, __func__);
+
+		{ __VERIFIER_reached_control(27, __func__);
+if (siz != 0)
+			{ __VERIFIER_control_true(28, __func__);
+*d = '\0';}}		/* NUL-terminate dst */
+	myBool pStored1 = myFalse; __VERIFIER_reached_control(30, __func__);
+	while (*s++)
+			{ __VERIFIER_loop_head(30, __func__);
+printf("CBMC Instrumentation @ line30");myBool flag=__VERIFIER_nondet_myBool();static char * od;static char * odst;static const char * os;static int osiz;static const char * osrc;if(pStored1){__CPROVER_assert(!(od==d && odst==dst && os==s && osiz==siz && osrc==src),"recurrent state found");} if(flag){od=d;odst=dst;os=s;osiz=siz;osrc=src;pStored1=myTrue;} ;}
+	}}
+
+	return(s - src - 1);	/* count does not include NUL */
+}
+
+int main() {
+  int length = __VERIFIER_nondet_int();
+  int n = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(39, __func__);
+if (length < 1) { __VERIFIER_control_true(39, __func__);
+
+      length = 1;
+  }}
+  { __VERIFIER_reached_control(42, __func__);
+if (n < 1) { __VERIFIER_control_true(42, __func__);
+
+      n = 1;
+  }}
+  char* nondetString1 = (char*) alloca(n * sizeof(char));
+  char* nondetString2 = (char*) alloca(length * sizeof(char));
+  nondetString1[n-1] = '\0';
+  nondetString2[length-1] = '\0';
+  cstrlcpy(nondetString1, nondetString2, n);
+  return 0;
+}
+./proton: line 26:   102 Aborted                 instrumenter -in *braced.c -c
+svcomp_openbsd_cstrlcpy_alloca_braced_instrumented.c
+NTFILE is svcomp_openbsd_cstrlcpy_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_openbsd_cstrlcpy_alloca.c
+FILE=svcomp_openbsd_cstrlcpy_alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183295 milliseconds

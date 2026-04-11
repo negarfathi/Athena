@@ -1,0 +1,122 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/tree_stack_true-valid-memsafety/tree_stack_true-valid-memsafety.c
+Converting
+Type-checking tree_stack_true-valid-memsafety
+file Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/tree_stack_true-valid-memsafety/tree_stack_true-valid-memsafety.c line 631 function main: function '__VERIFIER_nondet_int' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_deallocate
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#494 __CPROVER_thread_key_dtors#492 __CPROVER_thread_keys#493 __CPROVER_malloc_is_new_array#484 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#481 __CPROVER_dead_object#482 __CPROVER_deallocated#483 __CPROVER_new_object#486 __CPROVER_rounding_mode#490 __CPROVER_pipe_count#489 __CPROVER_max_malloc_size#485 __CPROVER_next_thread_id#487 __CPROVER_next_thread_key#488 __CPROVER_thread_id#491 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#490 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#490) <= 0 && __CPROVER_pipe_count#489 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#489) <= 0 && __CPROVER_max_malloc_size#485 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#485) <= -36028797018963968 && __CPROVER_next_thread_id#487 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#487) <= 0 && __CPROVER_next_thread_key#488 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#488) <= 0 && __CPROVER_thread_id#491 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#491) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of __CPROVER_deallocate
+Function __CPROVER_deallocate not analyzed yet
+Recursively summarizing function __CPROVER_deallocate
+Analyzing function __CPROVER_deallocate
+Computing summary
+Computing termination argument for __CPROVER_deallocate
+Function trivially terminates
+
+Summary for function __CPROVER_deallocate
+params: ptr 
+globals_in: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated 
+globals_out: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated#phi478 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Synthesizing ranking function to prove termination
+
+Summary for function main
+params: 
+globals_in: __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_memory_leak$119'obj __CPROVER_memory_leak$183'obj __CPROVER_memory_leak$248'obj __CPROVER_memory_leak$326'obj __CPROVER_memory_leak$386'obj __CPROVER_memory_leak$43'obj ptr'obj return_value_malloc$0'obj return_value_malloc$1'obj return_value_malloc$2'obj return_value_malloc$3'obj return_value_malloc$4'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_memory_leak$119 __CPROVER_memory_leak$183 __CPROVER_memory_leak$248 __CPROVER_memory_leak$326 __CPROVER_memory_leak$386 __CPROVER_memory_leak$43 s'obj.next st'obj.next dynamic_object$236.next dynamic_object$313$0.next dynamic_object$313$1.next dynamic_object$313$2.next dynamic_object$373$0.next dynamic_object$373$1.next $deref0'obj.left $deref0'obj.right $deref1'obj.left $deref1'obj.right $deref2'obj.left $deref2'obj.right $deref3'obj.left $deref3'obj.right n'obj.left n'obj.right root'obj.left root'obj.right s'obj.node st'obj.node dynamic_object$107$0.left dynamic_object$107$0.right dynamic_object$107$1.left dynamic_object$107$1.right dynamic_object$107$2.left dynamic_object$107$2.right dynamic_object$171$0.left dynamic_object$171$0.right dynamic_object$171$1.left dynamic_object$171$1.right dynamic_object$171$2.left dynamic_object$171$2.right dynamic_object$236.node dynamic_object$31.left dynamic_object$31.right dynamic_object$313$0.node dynamic_object$313$1.node dynamic_object$313$2.node dynamic_object$373$0.node dynamic_object$373$1.node s'obj st'obj $deref0'obj $deref1'obj $deref2'obj $deref3'obj n'obj root'obj dynamic_object$236 dynamic_object$313$0 dynamic_object$313$1 dynamic_object$313$2 dynamic_object$373$0 dynamic_object$373$1 dynamic_object$107$0 dynamic_object$107$1 dynamic_object$107$2 dynamic_object$171$0 dynamic_object$171$1 dynamic_object$171$2 dynamic_object$31 __CPROVER_max_malloc_size 
+globals_out: __CPROVER_malloc_is_new_array#phi278 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_memory_leak$119'obj __CPROVER_memory_leak$183'obj __CPROVER_memory_leak$248'obj __CPROVER_memory_leak$326'obj __CPROVER_memory_leak$386'obj __CPROVER_memory_leak$43'obj ptr'obj return_value_malloc$0'obj return_value_malloc$1'obj return_value_malloc$2'obj return_value_malloc$3'obj return_value_malloc$4'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated#phi278 __CPROVER_memory_leak$119#phi278 __CPROVER_memory_leak$183#phi278 __CPROVER_memory_leak$248#phi278 __CPROVER_memory_leak$326#phi278 __CPROVER_memory_leak$386#phi278 __CPROVER_memory_leak$43#phi278 s'obj.next#276 st'obj.next#phi278 dynamic_object$236.next#276 dynamic_object$313$0.next#phi278 dynamic_object$313$1.next#phi278 dynamic_object$313$2.next#phi278 dynamic_object$373$0.next#phi278 dynamic_object$373$1.next#phi278 $deref0'obj.left#phi67 $deref0'obj.right $deref1'obj.left $deref1'obj.right#phi67 $deref2'obj.left#phi67 $deref2'obj.right $deref3'obj.left $deref3'obj.right#phi67 n'obj.left#phi278 n'obj.right#phi278 root'obj.left#65 root'obj.right#66 s'obj.node#277 st'obj.node#phi278 dynamic_object$107$0.left#phi67 dynamic_object$107$0.right#phi67 dynamic_object$107$1.left#phi67 dynamic_object$107$1.right#phi67 dynamic_object$107$2.left#phi67 dynamic_object$107$2.right#phi67 dynamic_object$171$0.left#phi67 dynamic_object$171$0.right#phi67 dynamic_object$171$1.left#phi67 dynamic_object$171$1.right#phi67 dynamic_object$171$2.left#phi67 dynamic_object$171$2.right#phi67 dynamic_object$236.node#277 dynamic_object$31.left#phi67 dynamic_object$31.right#phi67 dynamic_object$313$0.node#phi278 dynamic_object$313$1.node#phi278 dynamic_object$313$2.node#phi278 dynamic_object$373$0.node#phi278 dynamic_object$373$1.node#phi278 main#return_value#463 s'obj st'obj $deref0'obj $deref1'obj $deref2'obj $deref3'obj n'obj root'obj dynamic_object$236 dynamic_object$313$0 dynamic_object$313$1 dynamic_object$313$2 dynamic_object$373$0 dynamic_object$373$1 dynamic_object$107$0 dynamic_object$107$1 dynamic_object$107$2 dynamic_object$171$0 dynamic_object$171$1 dynamic_object$171$2 dynamic_object$31 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: main#return_value#463 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#463) <= 0 && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: ($guard#67 && $guard#ls215 ==> return_value___VERIFIER_nondet_int#lb215 <= 2147483647) && ($guard#67 && $guard#ls215 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb215) <= 2147483648) && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#67 && $guard#213 && $cond#215 ==> TRUE
+
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 2810101168
+  number of solver calls: 743447971
+  number of summaries used: 4
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_deallocate]: yes
+[__CPROVER_initialize]: yes
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 663 milliseconds

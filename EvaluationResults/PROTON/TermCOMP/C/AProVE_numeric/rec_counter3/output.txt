@@ -1,0 +1,108 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.xjVTJU
+
+Input File is : rec_counter3.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int();
+
+
+int rec(int a) {
+	{if(a == 0)
+		{return 0;}
+	else {
+		int res = rec(a-1);
+		int rescopy = res;
+		while(rescopy > 0)
+			{rescopy--;}
+		return 1 + res;
+	}}
+}
+
+int main() {
+	int i = __VERIFIER_nondet_int();
+	{if(i <= 0)
+		{return 0;}}
+	int res = rec(i);
+	while(res < 1)
+		{;}
+	
+}
+
+End Main   
+
+Input File is : rec_counter3_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int();
+
+
+int rec(int a) {
+	{ __VERIFIER_reached_control(5, __func__);
+if(a == 0)
+		{ __VERIFIER_control_true(6, __func__);
+return 0;}
+	else { __VERIFIER_control_false(7, __func__);
+
+		int res = rec(a-1);
+		int rescopy = res;
+	myBool pStored0 = myFalse; __VERIFIER_reached_control(11, __func__);
+	while(rescopy > 0)
+			{ __VERIFIER_loop_head(11, __func__);
+printf("CBMC Instrumentation @ line11");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ores;static int orescopy;if(pStored0){__CPROVER_assert(!(oa==a && ores==res && orescopy==rescopy),"recurrent state found");} if(flag){oa=a;ores=res;orescopy=rescopy;pStored0=myTrue;} rescopy--;}
+		return 1 + res;
+	}}
+}
+
+int main() {
+	int i = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(18, __func__);
+if(i <= 0)
+		{ __VERIFIER_control_true(19, __func__);
+return 0;}}
+	int res = rec(i);
+myBool pStored1 = myFalse; __VERIFIER_reached_control(22, __func__);
+	while(res < 1)
+		{ __VERIFIER_loop_head(22, __func__);
+printf("CBMC Instrumentation @ line22");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int ores;if(pStored1){__CPROVER_assert(!(oi==i && ores==res),"recurrent state found");} if(flag){oi=i;ores=res;pStored1=myTrue;} ;}
+	
+}
+
+End Main 
+ rec_counter3_braced_instrumented.c
+NTFILE is rec_counter3_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for rec_counter3.c
+FILE=rec_counter3_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182984 milliseconds

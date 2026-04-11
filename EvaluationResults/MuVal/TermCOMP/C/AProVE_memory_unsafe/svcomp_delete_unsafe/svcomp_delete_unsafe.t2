@@ -1,0 +1,34 @@
+///*** 1_main ***///
+START: main_bb4;
+
+FROM: main_bb4;
+v7 := 0;
+TO: main_bb4_end;
+
+FROM: main_bb4_end;
+assume((nondet()) && (nondet()));
+TO: main_bb5;
+
+FROM: main_bb4_end;
+assume((nondet()) || (nondet()));
+TO: main__delete.exit;
+
+FROM: main_bb5;
+v10 := nondef.2;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(v11 != 0);
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(v11 == 0);
+TO: main__delete.exit;
+
+FROM: main_bb6;
+v.0.i := 0;
+TO: main_bb5;
+
+FROM: main__delete.exit;
+TO: main__delete.exit_ret;
+

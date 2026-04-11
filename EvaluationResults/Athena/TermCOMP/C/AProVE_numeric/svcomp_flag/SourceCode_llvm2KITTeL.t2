@@ -1,0 +1,50 @@
+///*** 1_main ***///
+START: main_bb4;
+
+FROM: main_bb4;
+v5 := nondet();
+v6 := nondet();
+var__temp_vc.0.i := 0;
+var__temp_vflag.0.i := 1;
+var__temp_v.0.i := v5;
+TO: main_bb5;
+
+FROM: main_bb5;
+vc.0.i := var__temp_vc.0.i;
+vflag.0.i := var__temp_vflag.0.i;
+v.0.i := var__temp_v.0.i;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(vflag.0.i != 0);
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(vflag.0.i == 0);
+TO: main_f.exit;
+
+FROM: main_bb6;
+v8 := v.0.i + 1;
+TO: main_bb6_v9;
+
+FROM: main_bb6_v9;
+assume(v.0.i < v6);
+v9 := 1;
+TO: main_bb6_sv9;
+
+FROM: main_bb6_v9;
+assume(v.0.i >= v6);
+v9 := 0;
+TO: main_bb6_sv9;
+
+FROM: main_bb6_sv9;
+v10 := v9;
+v11 := vc.0.i + 1;
+var__temp_vc.0.i := v11;
+var__temp_vflag.0.i := v10;
+var__temp_v.0.i := v8;
+TO: main_bb5;
+
+FROM: main_f.exit;
+TO: main_f.exit_ret;
+

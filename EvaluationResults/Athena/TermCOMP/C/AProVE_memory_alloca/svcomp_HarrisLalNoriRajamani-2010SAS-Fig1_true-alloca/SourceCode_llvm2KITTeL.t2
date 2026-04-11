@@ -1,0 +1,324 @@
+///*** 1_main ***///
+START: main_bb15;
+
+FROM: main_bb15;
+memory0_freeIndex := 1;
+memory1_freeIndex := 1;
+memory2_freeIndex := 1;
+memory3_freeIndex := 1;
+memory4_freeIndex := 1;
+vmemory4 := nondet();
+vmemory3 := nondet();
+vmemory2 := nondet();
+vmemory1 := nondet();
+vmemory0 := nondet();
+v94 := nondet();
+v96 := memory4_freeIndex;
+v97 := memory4_freeIndex;
+v98 := v97 + 1;
+memory4_freeIndex := v98;
+v99 := memory3_freeIndex;
+v100 := memory3_freeIndex;
+v101 := v100 + 1;
+memory3_freeIndex := v101;
+v102 := memory2_freeIndex;
+v103 := memory2_freeIndex;
+v104 := v103 + 1;
+memory2_freeIndex := v104;
+v105 := memory1_freeIndex;
+v106 := memory1_freeIndex;
+v107 := v106 + 1;
+memory1_freeIndex := v107;
+v108 := memory0_freeIndex;
+v109 := memory0_freeIndex;
+v110 := v109 + 1;
+memory0_freeIndex := v110;
+v111 := v96;
+v112 := v111;
+TO: main_bb15_end;
+
+FROM: main_bb15_end;
+assume(v94 != 0);
+TO: main_bb16;
+
+FROM: main_bb15_end;
+assume(v94 == 0);
+TO: main_bb26;
+
+FROM: main_bb16;
+vmemory4 := store_array(vmemory4, v112, 1);
+v113 := v99;
+v114 := v113;
+vmemory3 := store_array(vmemory3, v114, 1);
+v115 := v102;
+v116 := v115;
+vmemory2 := store_array(vmemory2, v116, 1);
+v117 := v105;
+v118 := v117;
+vmemory1 := store_array(vmemory1, v118, 1);
+v119 := v108;
+v120 := v119;
+vmemory0 := store_array(vmemory0, v120, 1);
+v121 := v105;
+v122 := v121;
+v123 := select_array(vmemory1, v122);
+TO: main_bb16_end;
+
+FROM: main_bb16_end;
+assume(v123 > 1073741823);
+TO: main_f.exit;
+
+FROM: main_bb16_end;
+assume(v123 <= 1073741823);
+TO: main_bb17;
+
+FROM: main_bb17;
+v125 := v108;
+v126 := v125;
+v127 := v105;
+v128 := v127;
+v129 := select_array(vmemory1, v128);
+v130 := v108;
+v131 := v130;
+v132 := v108;
+v133 := v132;
+TO: main_bb18;
+
+FROM: main_bb18;
+v134 := select_array(vmemory0, v126);
+TO: main_bb18_end;
+
+FROM: main_bb18_end;
+assume(v134 < v129);
+TO: main_bb19;
+
+FROM: main_bb18_end;
+assume(v134 >= v129);
+TO: main_bb20;
+
+FROM: main_bb19;
+v136 := select_array(vmemory0, v131);
+v137 := 2 * v136;
+vmemory0 := store_array(vmemory0, v133, v137);
+TO: main_bb18;
+
+FROM: main_bb20;
+v138 := v99;
+v139 := v138;
+v140 := v102;
+v141 := v140;
+v142 := v99;
+v143 := v142;
+v144 := v96;
+v145 := v144;
+v146 := v99;
+v147 := v146;
+v148 := v102;
+v149 := v148;
+v150 := v108;
+v151 := v150;
+v152 := v108;
+v153 := v152;
+v154 := v102;
+v155 := v154;
+v156 := v96;
+v157 := v156;
+v158 := v102;
+v159 := v158;
+TO: main_bb21;
+
+FROM: main_bb21;
+v160 := select_array(vmemory3, v139);
+TO: main_bb21_end;
+
+FROM: main_bb21_end;
+assume(v160 > 0);
+TO: main_bb22;
+
+FROM: main_bb21_end;
+assume(v160 <= 0);
+TO: main_f.exit;
+
+FROM: main_bb22;
+v162 := select_array(vmemory2, v141);
+TO: main_bb22_end;
+
+FROM: main_bb22_end;
+assume(v162 > 0);
+TO: main_bb23;
+
+FROM: main_bb22_end;
+assume(v162 <= 0);
+TO: main_f.exit;
+
+FROM: main_bb23;
+v164 := nondet();
+TO: main_bb23_end;
+
+FROM: main_bb23_end;
+assume(v164 != 0);
+TO: main_bb24;
+
+FROM: main_bb23_end;
+assume(v164 == 0);
+TO: main_bb25;
+
+FROM: main_bb24;
+v166 := select_array(vmemory3, v143);
+v167 := select_array(vmemory4, v145);
+v168 := v166 - v167;
+vmemory3 := store_array(vmemory3, v147, v168);
+v169 := nondet();
+vmemory2 := store_array(vmemory2, v149, v169);
+v170 := select_array(vmemory0, v151);
+v171 := v170 - 1;
+vmemory0 := store_array(vmemory0, v153, v171);
+TO: main_bb21;
+
+FROM: main_bb25;
+v172 := select_array(vmemory2, v155);
+v173 := select_array(vmemory4, v157);
+v174 := v172 - v173;
+vmemory2 := store_array(vmemory2, v159, v174);
+TO: main_bb21;
+
+FROM: main_bb26;
+vmemory4 := store_array(vmemory4, v112, 2);
+v175 := v99;
+v176 := v175;
+vmemory3 := store_array(vmemory3, v176, 1);
+v177 := v102;
+v178 := v177;
+vmemory2 := store_array(vmemory2, v178, 1);
+v179 := v105;
+v180 := v179;
+vmemory1 := store_array(vmemory1, v180, 1);
+v181 := v108;
+v182 := v181;
+vmemory0 := store_array(vmemory0, v182, 1);
+v183 := v105;
+v184 := v183;
+v185 := select_array(vmemory1, v184);
+TO: main_bb26_end;
+
+FROM: main_bb26_end;
+assume(v185 > 1073741823);
+TO: main_f.exit;
+
+FROM: main_bb26_end;
+assume(v185 <= 1073741823);
+TO: main_bb27;
+
+FROM: main_bb27;
+v187 := v108;
+v188 := v187;
+v189 := v105;
+v190 := v189;
+v191 := select_array(vmemory1, v190);
+v192 := v108;
+v193 := v192;
+v194 := v108;
+v195 := v194;
+TO: main_bb28;
+
+FROM: main_bb28;
+v196 := select_array(vmemory0, v188);
+TO: main_bb28_end;
+
+FROM: main_bb28_end;
+assume(v196 < v191);
+TO: main_bb29;
+
+FROM: main_bb28_end;
+assume(v196 >= v191);
+TO: main_bb30;
+
+FROM: main_bb29;
+v198 := select_array(vmemory0, v193);
+v199 := 2 * v198;
+vmemory0 := store_array(vmemory0, v195, v199);
+TO: main_bb28;
+
+FROM: main_bb30;
+v200 := v99;
+v201 := v200;
+v202 := v102;
+v203 := v202;
+v204 := v99;
+v205 := v204;
+v206 := v96;
+v207 := v206;
+v208 := v99;
+v209 := v208;
+v210 := v102;
+v211 := v210;
+v212 := v108;
+v213 := v212;
+v214 := v108;
+v215 := v214;
+v216 := v102;
+v217 := v216;
+v218 := v96;
+v219 := v218;
+v220 := v102;
+v221 := v220;
+TO: main_bb31;
+
+FROM: main_bb31;
+v222 := select_array(vmemory3, v201);
+TO: main_bb31_end;
+
+FROM: main_bb31_end;
+assume(v222 > 0);
+TO: main_bb32;
+
+FROM: main_bb31_end;
+assume(v222 <= 0);
+TO: main_f.exit;
+
+FROM: main_bb32;
+v224 := select_array(vmemory2, v203);
+TO: main_bb32_end;
+
+FROM: main_bb32_end;
+assume(v224 > 0);
+TO: main_bb33;
+
+FROM: main_bb32_end;
+assume(v224 <= 0);
+TO: main_f.exit;
+
+FROM: main_bb33;
+v226 := nondet();
+TO: main_bb33_end;
+
+FROM: main_bb33_end;
+assume(v226 != 0);
+TO: main_bb34;
+
+FROM: main_bb33_end;
+assume(v226 == 0);
+TO: main_bb35;
+
+FROM: main_bb34;
+v228 := select_array(vmemory3, v205);
+v229 := select_array(vmemory4, v207);
+v230 := v228 - v229;
+vmemory3 := store_array(vmemory3, v209, v230);
+v231 := nondet();
+vmemory2 := store_array(vmemory2, v211, v231);
+v232 := select_array(vmemory0, v213);
+v233 := v232 - 1;
+vmemory0 := store_array(vmemory0, v215, v233);
+TO: main_bb31;
+
+FROM: main_bb35;
+v234 := select_array(vmemory2, v217);
+v235 := select_array(vmemory4, v219);
+v236 := v234 - v235;
+vmemory2 := store_array(vmemory2, v221, v236);
+TO: main_bb31;
+
+FROM: main_f.exit;
+TO: main_f.exit_ret;
+

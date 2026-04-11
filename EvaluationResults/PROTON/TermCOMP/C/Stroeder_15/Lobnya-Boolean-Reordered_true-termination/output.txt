@@ -1,0 +1,112 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.Co5TRN
+
+Input File is : Lobnya-Boolean-Reordered_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 2013-07-10
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ * Ranking function: f(x) = x
+ *
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main ()
+{
+    int x, b;
+	x = __VERIFIER_nondet_int();
+	b = __VERIFIER_nondet_int();
+	while (b != 0) {
+		b = __VERIFIER_nondet_int();
+		x = x - 1;
+        {if (x >= 0) {
+            b = 1;
+        } else {
+            b = 0;
+        }}
+	}
+	return 0;
+}
+
+End Main   
+
+Input File is : Lobnya-Boolean-Reordered_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2013-07-10
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ * Ranking function: f(x) = x
+ *
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main ()
+{
+    int x, b;
+	x = __VERIFIER_nondet_int();
+	b = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(18, __func__);
+	while (b != 0) { __VERIFIER_loop_head(18, __func__);
+printf("CBMC Instrumentation @ line18");myBool flag=__VERIFIER_nondet_myBool();static int ob;static int ox;if(pStored0){__CPROVER_assert(!(ob==b && ox==x),"recurrent state found");} if(flag){ob=b;ox=x;pStored0=myTrue;} 
+		b = __VERIFIER_nondet_int();
+		x = x - 1;
+        { __VERIFIER_reached_control(21, __func__);
+if (x >= 0) { __VERIFIER_control_true(21, __func__);
+
+            b = 1;
+        } else { __VERIFIER_control_false(23, __func__);
+
+            b = 0;
+        }}
+	}
+	return 0;
+}
+
+End Main 
+ Lobnya-Boolean-Reordered_true-termination_braced_instrumented.c
+NTFILE is Lobnya-Boolean-Reordered_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Lobnya-Boolean-Reordered_true-termination.c
+FILE=Lobnya-Boolean-Reordered_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182308 milliseconds

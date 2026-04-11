@@ -1,0 +1,126 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.plbLCs
+
+Input File is : LeeJonesBen-Amram-POPL2001-Ex4_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program from Ex.4 of
+ * 2001POPL - Lee,Jones,Ben-Amram - The size-change principle for program termination
+ *
+ * Date: 12.12.2013
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int p(int m, int n, int r) {
+	{if (r > 0) {
+		return p(m, r-1, n);
+	} else {
+		{if (n > 0) {
+			return p(r, n-1, m);
+		} else {
+			return m;
+		}}
+	}}
+}
+
+int main() {
+	int m = __VERIFIER_nondet_int();
+	int n = __VERIFIER_nondet_int();
+	int r = __VERIFIER_nondet_int();
+	{if ( m >= 0 && n >= 0 && r >= 0) {
+		p(m,n,r);
+	}}
+	return 0;
+}
+
+End Main   
+
+Input File is : LeeJonesBen-Amram-POPL2001-Ex4_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Ex.4 of
+ * 2001POPL - Lee,Jones,Ben-Amram - The size-change principle for program termination
+ *
+ * Date: 12.12.2013
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int p(int m, int n, int r) {
+	{ __VERIFIER_reached_control(13, __func__);
+if (r > 0) { __VERIFIER_control_true(13, __func__);
+
+		return p(m, r-1, n);
+	} else { __VERIFIER_control_false(15, __func__);
+
+		{ __VERIFIER_reached_control(16, __func__);
+if (n > 0) { __VERIFIER_control_true(16, __func__);
+
+			return p(r, n-1, m);
+		} else { __VERIFIER_control_false(18, __func__);
+
+			return m;
+		}}
+	}}
+}
+
+int main() {
+	int m = __VERIFIER_nondet_int();
+	int n = __VERIFIER_nondet_int();
+	int r = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(28, __func__);
+if ( m >= 0 && n >= 0 && r >= 0) { __VERIFIER_control_true(28, __func__);
+
+		p(m,n,r);
+	}}
+	return 0;
+}
+
+End Main 
+ LeeJonesBen-Amram-POPL2001-Ex4_true-termination_braced_instrumented.c
+NTFILE is LeeJonesBen-Amram-POPL2001-Ex4_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for LeeJonesBen-Amram-POPL2001-Ex4_true-termination.c
+FILE=LeeJonesBen-Amram-POPL2001-Ex4_true-termination_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 122099 milliseconds

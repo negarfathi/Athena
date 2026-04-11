@@ -1,0 +1,141 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.2PyUcK
+
+Input File is : Unsigned_Wraparound_Error_1_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+
+Commit Number: 5ff623fc990210e4bb5dc04447f9e95ad83e5195
+URL: https://github.com/alsa-project/alsa-lib/commit/5ff623fc990210e4bb5dc04447f9e95ad83e5195
+Project Name: alsa-lib
+License: LGPL-2.1
+termination: FALSE
+*/
+int main()
+{
+    unsigned int best = __VERIFIER_nondet_uint();
+    unsigned int pre;
+    unsigned int cur;
+    unsigned int st_max = __VERIFIER_nondet_uint();
+    unsigned int it_min = __VERIFIER_nondet_uint();
+    {if( st_max <= it_min )
+        {return 0;}}
+    {if( best == 0 )
+        {return 0;}}
+    for( cur = best ;  ; cur += best )
+    {
+        {if( st_max < cur )
+        {break;}}
+        {if( it_min > cur  )
+        {continue;}}
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Unsigned_Wraparound_Error_1_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+
+Commit Number: 5ff623fc990210e4bb5dc04447f9e95ad83e5195
+URL: https://github.com/alsa-project/alsa-lib/commit/5ff623fc990210e4bb5dc04447f9e95ad83e5195
+Project Name: alsa-lib
+License: LGPL-2.1
+termination: FALSE
+*/
+int main()
+{
+    unsigned int best = __VERIFIER_nondet_uint();
+    unsigned int pre;
+    unsigned int cur;
+    unsigned int st_max = __VERIFIER_nondet_uint();
+    unsigned int it_min = __VERIFIER_nondet_uint();
+    { __VERIFIER_reached_control(17, __func__);
+if( st_max <= it_min )
+        { __VERIFIER_control_true(18, __func__);
+return 0;}}
+    { __VERIFIER_reached_control(19, __func__);
+if( best == 0 )
+        { __VERIFIER_control_true(20, __func__);
+return 0;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(22, __func__);
+ for( cur = best ;  ; cur += best )
+    { __VERIFIER_loop_head(22, __func__);
+printf("CBMC Instrumentation @ line22");myBool flag=__VERIFIER_nondet_myBool();static unsigned int obest;static unsigned int ocur;static unsigned int oit_min;static unsigned int opre;static unsigned int ost_max;if(pStored0){__CPROVER_assert(!(obest==best && ocur==cur && oit_min==it_min && opre==pre && ost_max==st_max),"recurrent state found");} if(flag){obest=best;ocur=cur;oit_min=it_min;opre=pre;ost_max=st_max;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(23, __func__);
+if( st_max < cur )
+        { __VERIFIER_control_true(24, __func__);
+break;}}
+        { __VERIFIER_reached_control(25, __func__);
+if( it_min > cur  )
+        { __VERIFIER_control_true(26, __func__);
+continue;}}
+    }
+    return 0;
+}
+
+End Main 
+ Unsigned_Wraparound_Error_1_NT_braced_instrumented.c
+NTFILE is Unsigned_Wraparound_Error_1_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Unsigned_Wraparound_Error_1_NT.c
+b'eb37489ddb2338e8a8b10c682094a3701f7ab710199848368d68d59d255cd283  Unsigned_Wraparound_Error_1_NT.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Unsigned_Wraparound_Error_1_NT/Unsigned_Wraparound_Error_1_NT.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 17 reachedControl
+main 19 reachedControl
+main 22 reachedControl
+main 22 loopHead
+main 23 reachedControl
+main 25 reachedControl
+main 22 loopHead
+main 23 reachedControl
+enteringLasso
+main 25 reachedControl
+main 22 loopHead
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 163, in generateViolationWitness
+    nextLineNo = nextLineWords[-2]
+IndexError: list index out of range
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Unsigned_Wraparound_Error_1_NT.c
+FILE=Unsigned_Wraparound_Error_1_NT_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2765 milliseconds

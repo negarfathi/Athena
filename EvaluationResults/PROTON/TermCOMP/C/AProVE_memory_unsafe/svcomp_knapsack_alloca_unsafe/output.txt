@@ -1,0 +1,131 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.R1k5PT
+
+Input File is : svcomp_knapsack_alloca_unsafe.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+void knapsack(int size[], int val[], int N, int cost[], int best[], int M)
+{
+    int i, j;
+    for (j = 1; j <= N; j++) {
+        for (i = 1; i <= M; i++) {
+            {if (i >= size[j]) {
+                {if (cost[i] < cost[i - size[j]] + val[j]) {
+                    cost[i] = cost[i - size[j]] + val[j];
+                    best[i] = j;
+                }}
+            }}
+        }
+    }
+}
+
+int main() {
+  int N = __VERIFIER_nondet_int();
+  int M = __VERIFIER_nondet_int();
+  {if (N < 1) {
+     N = 1;
+  }}
+  {if (M < 1) {
+     M = 1;
+  }}
+  int *size = (int*) alloca(N * sizeof(int));
+  int *val = (int*) alloca(N * sizeof(int));
+  int *cost = (int*) alloca(M * sizeof(int));
+  int *best = (int*) alloca(M * sizeof(int));
+  knapsack(size, val, N, cost, best, M);
+  return 0;
+}
+./proton: line 26:    90 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_knapsack_alloca_unsafe_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+void knapsack(int size[], int val[], int N, int cost[], int best[], int M)
+{
+    int i, j;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(8, __func__);
+ for (j = 1; j <= N; j++) { __VERIFIER_loop_head(8, __func__);
+printf("CBMC Instrumentation @ line8");myBool flag=__VERIFIER_nondet_myBool();static int oM;static int oN;static int oi;static int oj;if(pStored0){__CPROVER_assert(!(oM==M && oN==N && oi==i && oj==j),"recurrent state found");} if(flag){oM=M;oN=N;oi=i;oj=j;pStored0=myTrue;} 
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(9, __func__);
+ for (i = 1; i <= M; i++) { __VERIFIER_loop_head(9, __func__);
+printf("CBMC Instrumentation @ line9");myBool flag=__VERIFIER_nondet_myBool();static int oM;static int oN;static int oi;static int oj;if(pStored1){__CPROVER_assert(!(oM==M && oN==N && oi==i && oj==j),"recurrent state found");} if(flag){oM=M;oN=N;oi=i;oj=j;pStored1=myTrue;} 
+            { __VERIFIER_reached_control(10, __func__);
+if (i >= size[j]) { __VERIFIER_control_true(10, __func__);
+
+                { __VERIFIER_reached_control(11, __func__);
+if (cost[i] < cost[i - size[j]] + val[j]) { __VERIFIER_control_true(11, __func__);
+
+                    cost[i] = cost[i - size[j]] + val[j];
+                    best[i] = j;
+                }}
+            }}
+        }
+    }
+}
+
+int main() {
+  int N = __VERIFIER_nondet_int();
+  int M = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(23, __func__);
+if (N < 1) { __VERIFIER_control_true(23, __func__);
+
+     N = 1;
+  }}
+  { __VERIFIER_reached_control(26, __func__);
+if (M < 1) { __VERIFIER_control_true(26, __func__);
+
+     M = 1;
+  }}
+  int *size = (int*) alloca(N * sizeof(int));
+  int *val = (int*) alloca(N * sizeof(int));
+  int *cost = (int*) alloca(M * sizeof(int));
+  int *best = (int*) alloca(M * sizeof(int));
+  knapsack(size, val, N, cost, best, M);
+  return 0;
+}
+./proton: line 26:   102 Aborted                 instrumenter -in *braced.c -c
+svcomp_knapsack_alloca_unsafe_braced_instrumented.c
+NTFILE is svcomp_knapsack_alloca_unsafe_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_knapsack_alloca_unsafe.c
+FILE=svcomp_knapsack_alloca_unsafe_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183164 milliseconds

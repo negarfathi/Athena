@@ -1,0 +1,78 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/test-0521_true-valid-memsafety/test-0521_true-valid-memsafety.c
+Converting
+Type-checking test-0521_true-valid-memsafety
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_deallocate
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of abort
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#393 __CPROVER_thread_key_dtors#391 __CPROVER_thread_keys#392 __CPROVER_malloc_is_new_array#383 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#380 __CPROVER_dead_object#381 __CPROVER_deallocated#382 __CPROVER_new_object#385 __CPROVER_rounding_mode#389 __CPROVER_pipe_count#388 __CPROVER_max_malloc_size#384 __CPROVER_next_thread_id#386 __CPROVER_next_thread_key#387 __CPROVER_thread_id#390 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#389 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#389) <= 0 && __CPROVER_pipe_count#388 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#388) <= 0 && __CPROVER_max_malloc_size#384 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#384) <= -36028797018963968 && __CPROVER_next_thread_id#386 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#386) <= 0 && __CPROVER_next_thread_key#387 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#387) <= 0 && __CPROVER_thread_id#390 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#390) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of __CPROVER_deallocate
+Function __CPROVER_deallocate not analyzed yet
+Recursively summarizing function __CPROVER_deallocate
+Analyzing function __CPROVER_deallocate
+Computing summary
+Computing termination argument for __CPROVER_deallocate
+Function trivially terminates
+
+Summary for function __CPROVER_deallocate
+params: ptr 
+globals_in: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated 
+globals_out: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated#phi377 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Synthesizing ranking function to prove termination
+Runtime: 900245 milliseconds

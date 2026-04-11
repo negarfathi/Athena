@@ -1,0 +1,51 @@
+///*** 1_main ***///
+START: main_bb4;
+
+FROM: main_bb4;
+v20 := nondet();
+v21 := nondet();
+v22 := v20;
+v23 := v21;
+v24 := 0;
+TO: main_bb5;
+
+FROM: main_bb5;
+v25 := nondef.2;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(v25 > 0);
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(v25 <= 0);
+TO: main_test_fun.exit;
+
+FROM: main_bb6;
+v27 := nondef.3;
+TO: main_bb6_end;
+
+FROM: main_bb6_end;
+assume(v27 > 0);
+TO: main_bb7;
+
+FROM: main_bb6_end;
+assume(v27 <= 0);
+TO: main_test_fun.exit;
+
+FROM: main_bb7;
+v29 := nondef.4;
+v30 := v29 - 1;
+v22 := v30;
+v31 := nondef.5;
+v32 := v31 - 1;
+v23 := v32;
+v33 := nondef.6;
+v34 := v33 + 1;
+v24 := v34;
+TO: main_bb5;
+
+FROM: main_test_fun.exit;
+v35 := nondef.7;
+TO: main_test_fun.exit_ret;
+

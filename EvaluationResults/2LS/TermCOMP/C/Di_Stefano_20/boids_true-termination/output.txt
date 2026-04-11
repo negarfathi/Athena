@@ -1,0 +1,718 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/Di_Stefano_20/boids_true-termination/boids_true-termination.c
+Converting
+Type-checking boids_true-termination
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of mod
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __abs
+Simplifying
+Computing SSA of now
+Simplifying
+Computing SSA of link
+Simplifying
+Computing SSA of timeof
+Simplifying
+Computing SSA of setHin
+Simplifying
+Computing SSA of clearHin
+Simplifying
+Computing SSA of setHout
+Simplifying
+Computing SSA of clearHout
+Simplifying
+Computing SSA of attr
+Simplifying
+Computing SSA of lstig
+Simplifying
+Computing SSA of confirm
+Simplifying
+Computing SSA of propagate
+Simplifying
+Computing SSA of init
+Simplifying
+Computing SSA of _0_2
+Simplifying
+Computing SSA of _0_3
+Simplifying
+Computing SSA of _0_4
+Simplifying
+Computing SSA of _0_5
+Simplifying
+Computing SSA of _0_6
+Simplifying
+Computing SSA of _0_7
+Simplifying
+Computing SSA of _0_8
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: Hin Hout I Lvalue pc Ltstamp __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys HinCnt HoutCnt tupleEnd tupleStart __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id __LABS_time 
+globals_out: Hin#78 Hout#80 I#82 Lvalue#84 pc#86 Ltstamp#83 __CPROVER_threads_exited#77 __CPROVER_thread_key_dtors#75 __CPROVER_thread_keys#76 HinCnt#79 HoutCnt#81 tupleEnd#87 tupleStart#88 __CPROVER_malloc_is_new_array#67 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#64 __CPROVER_dead_object#65 __CPROVER_deallocated#66 __CPROVER_new_object#69 __CPROVER_rounding_mode#73 __CPROVER_pipe_count#72 __CPROVER_max_malloc_size#68 __CPROVER_next_thread_id#70 __CPROVER_next_thread_key#71 __CPROVER_thread_id#74 __LABS_time#85 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#73 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#73) <= 0 && __CPROVER_pipe_count#72 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#72) <= 0 && __CPROVER_max_malloc_size#68 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#68) <= -36028797018963968 && __CPROVER_next_thread_id#70 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#70) <= 0 && __CPROVER_next_thread_key#71 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#71) <= 0 && __CPROVER_thread_id#74 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#74) <= 0 && __LABS_time#85 <= 0 && -((signed __CPROVER_bitvector[9])__LABS_time#85) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of init
+Function init not analyzed yet
+Recursively summarizing function init
+Checking precondition of now
+Function now not analyzed yet
+Recursively summarizing function now
+Analyzing function now
+Computing summary
+Computing termination argument for now
+Function trivially terminates
+
+Summary for function now
+params: 
+globals_in: __LABS_time 
+globals_out: __LABS_time#92 now#return_value#93 
+forward precondition: TRUE
+forward transformer: __LABS_time#92 <= 255 && -((signed __CPROVER_bitvector[9])__LABS_time#92) <= 0 && now#return_value#93 <= 255 && -((signed __CPROVER_bitvector[9])now#return_value#93) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Analyzing function init
+Computing summary
+Computing termination argument for init
+Synthesizing ranking function to prove termination
+
+Summary for function init
+params: 
+globals_in: Hin Hout I Lvalue pc Ltstamp tupleStart HinCnt HoutCnt 
+globals_out: Hin#phi321 Hout#phi321 I#phi524 Lvalue#phi524 pc#phi524 Ltstamp#521 tupleStart HinCnt#phi321 HoutCnt#phi321 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: ($guard#323 && $guard#ls329 ==> j#lb329 <= 2) && ($guard#323 && $guard#ls329 ==> -((signed __CPROVER_bitvector[9])j#lb329) <= 0) && ($guard#331 && $guard#ls340 ==> j#lb340 <= 6) && ($guard#331 && $guard#ls340 ==> -((signed __CPROVER_bitvector[9])j#lb340) <= 0) && ($guard#321 && $guard#ls344 ==> i#lb344 <= 3) && ($guard#321 && $guard#ls344 ==> -((signed __CPROVER_bitvector[9])i#lb344) <= 0) && ($guard#321 && $guard#ls344 ==> j#lb344 <= 255) && ($guard#321 && $guard#ls344 ==> -((signed __CPROVER_bitvector[9])j#lb344) <= 0) && ($guard#526 && $guard#ls529 ==> j#lb529 <= 1) && ($guard#526 && $guard#ls529 ==> -((signed __CPROVER_bitvector[9])j#lb529) <= 0) && ($guard#531 && $guard#ls534 ==> j#lb534 <= 2) && ($guard#531 && $guard#ls534 ==> -((signed __CPROVER_bitvector[9])j#lb534) <= 0) && ($guard#536 && $guard#ls539 ==> j#lb539 <= 6) && ($guard#536 && $guard#ls539 ==> -((signed __CPROVER_bitvector[9])j#lb539) <= 0) && ($guard#524 && $guard#ls541 ==> i#lb541 <= 3) && ($guard#524 && $guard#ls541 ==> -((signed __CPROVER_bitvector[9])i#lb541) <= 0) && ($guard#524 && $guard#ls541 ==> j#lb541 <= 255) && ($guard#524 && $guard#ls541 ==> -((signed __CPROVER_bitvector[9])j#lb541) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#323 && $guard#324 && $cond#329 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi323 - (signed __CPROVER_bitvector[9])j#328) > 0) && ($guard#331 && $guard#332 && $cond#340 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi331 - (signed __CPROVER_bitvector[9])j#339) > 0) && ($guard#321 && $guard#321 && $guard#341 && $cond#344 && $guard#341 && $cond#344 ==> (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])i#phi321 - (signed __CPROVER_bitvector[9])i#343)) + (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi321 - (signed __CPROVER_bitvector[9])j#phi331)) > 0) && ($guard#526 && $guard#527 && $cond#529 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi526 - (signed __CPROVER_bitvector[9])j#528) > 0) && ($guard#531 && $guard#532 && $cond#534 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi531 - (signed __CPROVER_bitvector[9])j#533) > 0) && ($guard#536 && $guard#537 && $cond#539 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi536 - (signed __CPROVER_bitvector[9])j#538) > 0) && ($guard#524 && $guard#524 && $guard#540 && $cond#541 && $guard#540 && $cond#541 ==> (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])i#phi524 - (signed __CPROVER_bitvector[9])i#540)) + (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi524 - (signed __CPROVER_bitvector[9])j#phi536)) > 0)
+
+terminates: yes
+
+Checking precondition of _0_2
+Function _0_2 not analyzed yet
+Recursively summarizing function _0_2
+Checking precondition of lstig
+Function lstig not analyzed yet
+Recursively summarizing function lstig
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHout
+Function setHout not analyzed yet
+Recursively summarizing function setHout
+Analyzing function setHout
+Computing summary
+Computing termination argument for setHout
+Function trivially terminates
+
+Summary for function setHout
+params: id key 
+globals_in: Hout HoutCnt tupleStart 
+globals_out: Hout#114 HoutCnt#113 tupleStart 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function lstig
+Computing summary
+Computing termination argument for lstig
+Function terminates
+
+Summary for function lstig
+params: id key value check 
+globals_in: Lvalue Ltstamp HinCnt HoutCnt tupleStart 
+globals_out: Lvalue#148 Ltstamp#153 HinCnt HoutCnt tupleStart 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of lstig
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHin
+Function setHin not analyzed yet
+Recursively summarizing function setHin
+Analyzing function setHin
+Computing summary
+Computing termination argument for setHin
+Function trivially terminates
+
+Summary for function setHin
+params: id key 
+globals_in: Hin HinCnt tupleStart 
+globals_out: Hin#108 HinCnt#107 tupleStart 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function _0_2
+Computing summary
+Computing termination argument for _0_2
+Function terminates
+
+Summary for function _0_2
+params: tid 
+globals_in: I Lvalue pc 
+globals_out: I Lvalue pc#588 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_3
+Function _0_3 not analyzed yet
+Recursively summarizing function _0_3
+Checking precondition of __abs
+Function __abs not analyzed yet
+Recursively summarizing function __abs
+Analyzing function __abs
+Computing summary
+Computing termination argument for __abs
+Function trivially terminates
+
+Summary for function __abs
+params: x 
+globals_in: 
+globals_out: __abs#return_value#90 
+forward precondition: TRUE
+forward transformer: __abs#return_value#90 <= 127 && -((signed __CPROVER_bitvector[9])__abs#return_value#90) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __abs
+Precondition trivially holds, replacing by summary.
+Checking precondition of lstig
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHin
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_3
+Computing summary
+Computing termination argument for _0_3
+Function terminates
+
+Summary for function _0_3
+params: tid 
+globals_in: I Lvalue pc 
+globals_out: I Lvalue pc#605 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_4
+Function _0_4 not analyzed yet
+Recursively summarizing function _0_4
+Checking precondition of __abs
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHin
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_4
+Computing summary
+Computing termination argument for _0_4
+Function terminates
+
+Summary for function _0_4
+params: tid 
+globals_in: I Lvalue pc HinCnt HoutCnt 
+globals_out: I Lvalue pc#622 HinCnt HoutCnt 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_5
+Function _0_5 not analyzed yet
+Recursively summarizing function _0_5
+Checking precondition of __abs
+Precondition trivially holds, replacing by summary.
+Checking precondition of __abs
+Precondition trivially holds, replacing by summary.
+Checking precondition of lstig
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHin
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_5
+Computing summary
+Computing termination argument for _0_5
+Function terminates
+
+Summary for function _0_5
+params: tid 
+globals_in: I Lvalue pc 
+globals_out: I Lvalue pc#644 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_6
+Function _0_6 not analyzed yet
+Recursively summarizing function _0_6
+Checking precondition of __abs
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHin
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_6
+Computing summary
+Computing termination argument for _0_6
+Function terminates
+
+Summary for function _0_6
+params: tid 
+globals_in: I Lvalue pc HinCnt HoutCnt 
+globals_out: I Lvalue pc#668 HinCnt HoutCnt 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_7
+Function _0_7 not analyzed yet
+Recursively summarizing function _0_7
+Checking precondition of lstig
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHin
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHin
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_7
+Computing summary
+Computing termination argument for _0_7
+Function terminates
+
+Summary for function _0_7
+params: tid 
+globals_in: Lvalue pc 
+globals_out: Lvalue pc#685 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_8
+Function _0_8 not analyzed yet
+Recursively summarizing function _0_8
+Checking precondition of mod
+Function mod not analyzed yet
+Recursively summarizing function mod
+Analyzing function mod
+Computing summary
+Computing termination argument for mod
+Function trivially terminates
+
+Summary for function mod
+params: n m 
+globals_in: 
+globals_out: mod#return_value#62 
+forward precondition: TRUE
+forward transformer: mod#return_value#62 <= 127 && -((signed __CPROVER_bitvector[9])mod#return_value#62) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of mod
+Precondition trivially holds, replacing by summary.
+Checking precondition of attr
+Function attr not analyzed yet
+Recursively summarizing function attr
+Checking precondition of now
+Precondition trivially holds, replacing by summary.
+Analyzing function attr
+Computing summary
+Computing termination argument for attr
+Function terminates
+
+Summary for function attr
+params: id key value check 
+globals_in: I HinCnt HoutCnt 
+globals_out: I#131 HinCnt HoutCnt 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of attr
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHin
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHin
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_8
+Computing summary
+Computing termination argument for _0_8
+Function terminates
+
+Summary for function _0_8
+params: tid 
+globals_in: I Lvalue pc 
+globals_out: I Lvalue pc#711 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of propagate
+Function propagate not analyzed yet
+Recursively summarizing function propagate
+Checking precondition of timeof
+Function timeof not analyzed yet
+Recursively summarizing function timeof
+Analyzing function timeof
+Computing summary
+Computing termination argument for timeof
+Function trivially terminates
+
+Summary for function timeof
+params: id key 
+globals_in: Ltstamp tupleStart 
+globals_out: Ltstamp tupleStart timeof#return_value#105 
+forward precondition: TRUE
+forward transformer: timeof#return_value#105 <= 255 && -((signed __CPROVER_bitvector[9])timeof#return_value#105) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of timeof
+Precondition trivially holds, replacing by summary.
+Checking precondition of link
+Function link not analyzed yet
+Recursively summarizing function link
+Analyzing function link
+Computing summary
+Computing termination argument for link
+Function trivially terminates
+
+Summary for function link
+params: __LABS_link1 __LABS_link2 key 
+globals_in: I Lvalue 
+globals_out: I Lvalue link#return_value#102 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setHout
+Precondition trivially holds, replacing by summary.
+Checking precondition of clearHin
+Function clearHin not analyzed yet
+Recursively summarizing function clearHin
+Analyzing function clearHin
+Computing summary
+Computing termination argument for clearHin
+Function trivially terminates
+
+Summary for function clearHin
+params: id key 
+globals_in: Hin HinCnt tupleStart 
+globals_out: Hin#111 HinCnt#110 tupleStart 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of clearHout
+Function clearHout not analyzed yet
+Recursively summarizing function clearHout
+Analyzing function clearHout
+Computing summary
+Computing termination argument for clearHout
+Function trivially terminates
+
+Summary for function clearHout
+params: id key 
+globals_in: Hout HoutCnt tupleStart 
+globals_out: Hout#117 HoutCnt#116 tupleStart 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function propagate
+Computing summary
+Computing termination argument for propagate
+Synthesizing ranking function to prove termination
+
+Summary for function propagate
+params: 
+globals_in: Hout Lvalue Ltstamp HoutCnt tupleEnd 
+globals_out: Hout Lvalue#phi259 Ltstamp#phi259 HoutCnt tupleEnd 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: ($guard#282 && $guard#ls287 ==> k#lb287 <= 4) && ($guard#282 && $guard#ls287 ==> -((signed __CPROVER_bitvector[9])k#lb287) <= 0) && ($guard#282 && $guard#ls287 ==> next#lb287 <= 255) && ($guard#282 && $guard#ls287 ==> -((signed __CPROVER_bitvector[9])next#lb287) <= 0) && ($guard#259 && $guard#ls296 ==> i#lb296 <= 3) && ($guard#259 && $guard#ls296 ==> -((signed __CPROVER_bitvector[9])i#lb296) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#282 && $guard#282 && $guard#286 && $cond#287 && $guard#286 && $cond#287 ==> (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])k#phi282 - (signed __CPROVER_bitvector[9])k#286)) + (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])next#phi282 - (signed __CPROVER_bitvector[9])next#283)) > 0) && ($guard#259 && $guard#293 && $cond#296 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])i#phi259 - (signed __CPROVER_bitvector[9])i#295) > 0)
+
+terminates: yes
+
+Checking precondition of confirm
+Function confirm not analyzed yet
+Recursively summarizing function confirm
+Checking precondition of timeof
+Precondition trivially holds, replacing by summary.
+Checking precondition of timeof
+Precondition trivially holds, replacing by summary.
+Checking precondition of link
+Precondition trivially holds, replacing by summary.
+Checking precondition of setHout
+Precondition trivially holds, replacing by summary.
+Checking precondition of timeof
+Precondition trivially holds, replacing by summary.
+Checking precondition of clearHin
+Precondition trivially holds, replacing by summary.
+Checking precondition of clearHin
+Precondition trivially holds, replacing by summary.
+Analyzing function confirm
+Computing summary
+Computing termination argument for confirm
+Synthesizing ranking function to prove termination
+
+Summary for function confirm
+params: 
+globals_in: Hin Lvalue Ltstamp HinCnt tupleEnd 
+globals_out: Hin Lvalue#phi182 Ltstamp#phi182 HinCnt tupleEnd 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: ($guard#210 && $guard#ls215 ==> k#lb215 <= 4) && ($guard#210 && $guard#ls215 ==> -((signed __CPROVER_bitvector[9])k#lb215) <= 0) && ($guard#210 && $guard#ls215 ==> next#lb215 <= 255) && ($guard#210 && $guard#ls215 ==> -((signed __CPROVER_bitvector[9])next#lb215) <= 0) && ($guard#182 && $guard#ls225 ==> i#lb225 <= 3) && ($guard#182 && $guard#ls225 ==> -((signed __CPROVER_bitvector[9])i#lb225) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#210 && $guard#210 && $guard#214 && $cond#215 && $guard#214 && $cond#215 ==> (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])k#phi210 - (signed __CPROVER_bitvector[9])k#214)) + (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])next#phi210 - (signed __CPROVER_bitvector[9])next#211)) > 0) && ($guard#182 && $guard#222 && $cond#225 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])i#phi182 - (signed __CPROVER_bitvector[9])i#224) > 0)
+
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Synthesizing ranking function to prove termination
+
+Summary for function main
+params: 
+globals_in: Lvalue pc 
+globals_out: Lvalue pc main#return_value#phi61 
+forward precondition: TRUE
+forward transformer: main#return_value#phi61 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#phi61) <= 0
+forward invariant: ($guard#3 && $guard#ls58 ==> firstAgent#lb58 <= 255) && ($guard#3 && $guard#ls58 ==> -((signed __CPROVER_bitvector[9])firstAgent#lb58) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#3 && $guard#57 && $cond#58 ==> TRUE
+
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 3224482260
+  number of solver calls: 1245650
+  number of summaries used: 71
+  number of termination arguments computed: 4
+
+
+** Termination: 
+[main]: unknown
+[mod]: yes
+[__CPROVER_initialize]: yes
+[__abs]: yes
+[now]: yes
+[link]: yes
+[timeof]: yes
+[setHin]: yes
+[clearHin]: yes
+[setHout]: yes
+[clearHout]: yes
+[attr]: yes
+[lstig]: yes
+[confirm]: yes
+[propagate]: yes
+[init]: yes
+[_0_2]: yes
+[_0_3]: yes
+[_0_4]: yes
+[_0_5]: yes
+[_0_6]: yes
+[_0_7]: yes
+[_0_8]: yes
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 881 milliseconds

@@ -1,0 +1,63 @@
+///*** 1_main ***///
+START: main_bb5;
+
+FROM: main_bb5;
+v11 := nondet();
+v12 := nondet();
+v13 := nondet();
+TO: main_bb5_vn.0;
+FROM: main_bb5_vn.0;
+assume(v12 < 1);
+vn.0 := 1;
+TO: main_bb5_svn.0;
+
+FROM: main_bb5_vn.0;
+assume(v12 >= 1);
+vn.0 := v12;
+TO: main_bb5_svn.0;
+
+FROM: main_bb5_svn.0;
+v16 := v15 * 1;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(vn.0 != 0);
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(vn.0 == 0);
+TO: main_cmemrchr.exit;
+
+FROM: main_bb6;
+var__temp_v.01.i := vn.0;
+TO: main_bb7;
+
+FROM: main_bb7;
+v.01.i := var__temp_v.01.i;
+v24 := nondef.3;
+TO: main_bb7_end;
+
+FROM: main_bb7_end;
+assume(v25 == v22);
+TO: main_cmemrchr.exit;
+
+FROM: main_bb7_end;
+assume(v25 != v22);
+TO: main_bb8;
+
+FROM: main_bb8;
+v27 := v.01.i + -1;
+var__temp_v.01.i := v27;
+TO: main_bb8_end;
+
+FROM: main_bb8_end;
+assume(v27 != 0);
+TO: main_bb7;
+
+FROM: main_bb8_end;
+assume(v27 == 0);
+TO: main_cmemrchr.exit;
+
+FROM: main_cmemrchr.exit;
+TO: main_cmemrchr.exit_ret;
+

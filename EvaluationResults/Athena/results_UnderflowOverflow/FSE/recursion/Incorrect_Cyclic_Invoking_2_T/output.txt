@@ -1,0 +1,51 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+Running CPAchecker with Java heap of size 10000M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with --stack if needed.
+Language C detected and set for analysis (CPAMain.detectFrontendLanguageIfNecessary, INFO)
+
+CPAchecker 4.0 (OpenJDK 64-Bit Server VM 17.0.15) started (CPAchecker.run, INFO)
+
+Parsing CFA from file(s) "Benchmarks/FSE/recursion/Incorrect_Cyclic_Invoking_2_T/Incorrect_Cyclic_Invoking_2_T.c" (CPAchecker.parse, INFO)
+
+Undefined identifier ompa2 found, first referenced in line 106 (CheckBindingVisitor.visit, WARNING)
+
+Error: Parsing failed (Invalid C code because of undefined identifiers mentioned above.) (CFABuilder.createCFA, SEVERE)
+
+Please make sure that the code can be compiled by a compiler.
+If the code was not preprocessed, please use a C preprocessor
+or specify the --preprocess command-line argument.
+If the error still occurs, please send this error message
+together with the input file to cpachecker-users@googlegroups.com.
+ (CPAchecker.run, INFO)
+
+
+CPAchecker general statistics
+-----------------------------
+
+Time for analysis setup:          0.812s
+  Time for loading CPAs:          0.000s
+  Time for loading parser:        0.205s
+  Time for CFA construction:      0.586s
+    Time for parsing file(s):     0.257s
+    Time for AST to CFA:          0.207s
+    Time for CFA sanity check:    0.000s
+    Time for post-processing:     0.000s
+    Time for loop structure:      0.000s
+    Time for AST structure:       0.000s
+Time for Analysis:                0.000s
+CPU time for analysis:            0.000s
+Total time for CPAchecker:        0.813s
+Total CPU time for CPAchecker:    1.590s
+Time for statistics:              0.009s
+
+Time for Garbage Collector:       0.020s (in 1 runs)
+Garbage Collector(s) used:    PS MarkSweep, PS Scavenge
+Used heap memory:                 61MB (    58 MiB) max;     34MB (    32 MiB) avg;     77MB (    73 MiB) peak
+Used non-heap memory:             21MB (    20 MiB) max;     15MB (    15 MiB) avg;     22MB (    21 MiB) peak
+Used in PS Old Gen pool:           0MB (     0 MiB) max;      0MB (     0 MiB) avg;      0MB (     0 MiB) peak
+Allocated heap memory:           251MB (   240 MiB) max;    251MB (   240 MiB) avg
+Allocated non-heap memory:        24MB (    23 MiB) max;     19MB (    18 MiB) avg
+Total process virtual memory:  14736MB ( 14053 MiB) max;  14377MB ( 13711 MiB) avg
+
+More details about the verification run can be found in the directory "./output".
+Runtime: 2608 milliseconds

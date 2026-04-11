@@ -1,0 +1,81 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.pZYefE
+
+Input File is : Undefined_Behavior_2.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : Undefined_Behavior_2.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+Commit Number: b00a4fa78779ff0f304fa6cb34d49622679c86d4
+URL: https://github.com/anlaneg/elfutils/commit/b00a4fa78779ff0f304fa6cb34d49622679c86d4
+Project Name: elfutils
+License: GPL3
+termination: POTENTIAL FALSE
+*/
+int ffs( unsigned int w )
+{
+    int i = 1;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(13, __func__);
+ while( w % 2 == 0 )
+    { __VERIFIER_loop_head(13, __func__);
+printf("CBMC Instrumentation @ line13");myBool flag=__VERIFIER_nondet_myBool();static int oi;static unsigned int ow;if(pStored0){__CPROVER_assert(!(oi==i && ow==w),"recurrent state found");} if(flag){oi=i;ow=w;pStored0=myTrue;} 
+        i++;
+        w = w / 2;
+    }
+    return i;
+}
+int main()
+{
+    unsigned int w = __VERIFIER_nondet_uint();
+
+   myBool pStored1 = myFalse; __VERIFIER_reached_control(24, __func__);
+ while( w != 0 )
+    { __VERIFIER_loop_head(24, __func__);
+printf("CBMC Instrumentation @ line24");myBool flag=__VERIFIER_nondet_myBool();static unsigned int ow;if(pStored1){__CPROVER_assert(!(ow==w),"recurrent state found");} if(flag){ow=w;pStored1=myTrue;} 
+        int n = ffs(w);
+        w >>= n;
+    }
+    return 0;
+}
+
+End Main 
+ Undefined_Behavior_2_instrumented.c
+NTFILE is Undefined_Behavior_2_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Undefined_Behavior_2.c
+FILE=Undefined_Behavior_2_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182404 milliseconds

@@ -1,0 +1,124 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.zg5ttC
+
+Input File is : svcomp_fermat-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+int main()
+{
+    int* MAX = alloca(sizeof(int));
+    int* a = alloca(sizeof(int));
+    int* b = alloca(sizeof(int));
+    int* c = alloca(sizeof(int));
+    *MAX = 1000;
+    *a = 1;
+    *b = 1;
+    *c = 1;
+    while (1) {
+        {if ((((*a)*(*a)*(*a)) == (((*b)*(*b)*(*b)) + ((*c)*(*c)*(*c))))) {
+            return 1;
+        }}
+        (*a)++;
+        {if (*a > *MAX) {
+            *a = 1;
+            (*b)++;
+        }}
+        {if (*b > *MAX) {
+            *b = 1;
+            (*c)++;
+        }}
+        {if (*c > *MAX) {
+            break;
+        }}
+    }
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_fermat-alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+int main()
+{
+    int* MAX = alloca(sizeof(int));
+    int* a = alloca(sizeof(int));
+    int* b = alloca(sizeof(int));
+    int* c = alloca(sizeof(int));
+    *MAX = 1000;
+    *a = 1;
+    *b = 1;
+    *c = 1;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(13, __func__);
+ while (1) { __VERIFIER_loop_head(13, __func__);
+printf("CBMC Instrumentation @ line13");myBool flag=__VERIFIER_nondet_myBool();static int * oMAX;static int oMAX_val;static int * oa;static int oa_val;static int * ob;static int ob_val;static int * oc;static int oc_val;if(pStored0){__CPROVER_assert(!(oMAX==MAX && *oMAX==*MAX && oMAX_val==*MAX && oa==a && *oa==*a && oa_val==*a && ob==b && *ob==*b && ob_val==*b && oc==c && *oc==*c && oc_val==*c),"recurrent state found");} if(flag){oMAX=MAX;*oMAX=*MAX;oMAX_val=*MAX;oa=a;*oa=*a;oa_val=*a;ob=b;*ob=*b;ob_val=*b;oc=c;*oc=*c;oc_val=*c;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(14, __func__);
+if ((((*a)*(*a)*(*a)) == (((*b)*(*b)*(*b)) + ((*c)*(*c)*(*c))))) { __VERIFIER_control_true(14, __func__);
+
+            return 1;
+        }}
+        (*a)++;
+        { __VERIFIER_reached_control(18, __func__);
+if (*a > *MAX) { __VERIFIER_control_true(18, __func__);
+
+            *a = 1;
+            (*b)++;
+        }}
+        { __VERIFIER_reached_control(22, __func__);
+if (*b > *MAX) { __VERIFIER_control_true(22, __func__);
+
+            *b = 1;
+            (*c)++;
+        }}
+        { __VERIFIER_reached_control(26, __func__);
+if (*c > *MAX) { __VERIFIER_control_true(26, __func__);
+
+            break;
+        }}
+    }
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_fermat-alloca_braced_instrumented.c
+NTFILE is svcomp_fermat-alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for svcomp_fermat-alloca.c
+FILE=svcomp_fermat-alloca_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 133110 milliseconds

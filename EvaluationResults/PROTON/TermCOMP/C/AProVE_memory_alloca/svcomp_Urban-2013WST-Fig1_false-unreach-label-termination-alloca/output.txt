@@ -1,0 +1,88 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.Gr2DAz
+
+Input File is : svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+int main() {
+    int* x = alloca(sizeof(int));
+    while (*x <= 10) {
+        {if (*x > 6) {
+            *x = *x + 2;
+        }}
+    }
+}./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+int main() {
+    int* x = alloca(sizeof(int));
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(5, __func__);
+ while (*x <= 10) { __VERIFIER_loop_head(5, __func__);
+printf("CBMC Instrumentation @ line5");myBool flag=__VERIFIER_nondet_myBool();static int * ox;static int ox_val;if(pStored0){__CPROVER_assert(!(ox==x && *ox==*x && ox_val==*x),"recurrent state found");} if(flag){ox=x;*ox=*x;ox_val=*x;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(6, __func__);
+if (*x > 6) { __VERIFIER_control_true(6, __func__);
+
+            *x = *x + 2;
+        }}
+    }
+}./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca_braced_instrumented.c
+NTFILE is svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca.c
+b'a62f641dfbd1df1be8798256d4e08552d27ad32cbdeb2a66a5fc580d93645578  svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/AProVE_memory_alloca/svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca/svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 5 reachedControl
+main 5 loopHead
+enteringLasso
+main 6 reachedControl
+main 5 loopHead
+Trace file line inside enterred lasso check : main 6 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/AProVE_memory_alloca/svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca/svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca.c
+FILE=svcomp_Urban-2013WST-Fig1_false-unreach-label-termination-alloca_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2116 milliseconds

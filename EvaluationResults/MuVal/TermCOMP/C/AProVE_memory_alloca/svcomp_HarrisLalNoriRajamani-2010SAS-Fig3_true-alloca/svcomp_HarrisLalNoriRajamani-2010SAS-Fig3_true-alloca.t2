@@ -1,0 +1,31 @@
+///*** 1_main ***///
+START: main_bb1;
+
+FROM: main_bb1;
+vx := v5;
+v6 := nondet();
+v7 := v6;
+TO: main_bb2;
+
+FROM: main_bb2;
+v9 := nondef.1;
+TO: main_bb2_end;
+
+FROM: main_bb2_end;
+assume(v9 > 0);
+TO: main_bb3;
+
+FROM: main_bb2_end;
+assume(v9 <= 0);
+TO: main_bb4;
+
+FROM: main_bb3;
+v11 := nondet();
+v14 := nondef.4;
+v15 := v14 + -1;
+v13 := v15;
+TO: main_bb2;
+
+FROM: main_bb4;
+TO: main_bb4_ret;
+

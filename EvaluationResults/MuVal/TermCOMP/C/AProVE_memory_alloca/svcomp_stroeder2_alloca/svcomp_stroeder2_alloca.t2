@@ -1,0 +1,69 @@
+///*** 1_main ***///
+START: main_bb7;
+
+FROM: main_bb7;
+v12 := nondet();
+TO: main_bb7_v.;
+FROM: main_bb7_v.;
+assume(v12 < 1);
+v. := 1;
+TO: main_bb7_sv.;
+
+FROM: main_bb7_v.;
+assume(v12 >= 1);
+v. := v12;
+TO: main_bb7_sv.;
+
+FROM: main_bb7_sv.;
+v15 := v14 * 4;
+var__temp_vsum.0.i := 0;
+var__temp_vi.0.i := 0;
+TO: main_bb8;
+
+FROM: main_bb8;
+vsum.0.i := var__temp_vsum.0.i;
+vi.0.i := var__temp_vi.0.i;
+TO: main_bb8_end;
+
+FROM: main_bb8_end;
+assume(vi.0.i < v.);
+TO: main_bb9;
+
+FROM: main_bb8_end;
+assume(vi.0.i >= v.);
+TO: main_sumOfThirdBytes.exit;
+
+FROM: main_bb9;
+var__temp_vsum.1.i := vsum.0.i;
+TO: main_bb10;
+
+FROM: main_bb10;
+vsum.1.i := var__temp_vsum.1.i;
+v23 := nondef.1;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(v24 > 0);
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(v24 <= 0);
+TO: main_bb12;
+
+FROM: main_bb11;
+v26 := vsum.1.i + 1;
+v27 := nondef.2;
+v28 := v27 + -1;
+v22 := v28;
+var__temp_vsum.1.i := v26;
+TO: main_bb10;
+
+FROM: main_bb12;
+v29 := vi.0.i + 1;
+var__temp_vsum.0.i := vsum.1.i;
+var__temp_vi.0.i := v29;
+TO: main_bb8;
+
+FROM: main_sumOfThirdBytes.exit;
+TO: main_sumOfThirdBytes.exit_ret;
+

@@ -1,0 +1,44 @@
+///*** 1_main ***///
+START: main_bb0;
+
+
+
+FROM: main_bb0;
+var__temp_vdeath.0 := 17;
+var__temp_vlife.0 := 13;
+TO: main_bb1;
+
+FROM: main_bb1;
+vdeath.0 := var__temp_vdeath.0;
+vlife.0 := var__temp_vlife.0;
+TO: main_bb1_end;
+
+FROM: main_bb1_end;
+assume(vlife.0 < vdeath.0);
+TO: main_bb2;
+
+FROM: main_bb1_end;
+assume(vlife.0 >= vdeath.0);
+TO: main_bb3;
+
+FROM: main_bb2;
+v1 := vlife.0 + 1;
+TO: main_bb2_vlife.1;
+FROM: main_bb2_vlife.1;
+assume((2 < vdeath.0) || (2 < v1));
+vlife.1 := 2;
+TO: main_bb2_svlife.1;
+
+FROM: main_bb2_vlife.1;
+assume((2 >= vdeath.0) && (2 >= v1));
+vlife.1 := vdeath.0;
+TO: main_bb2_svlife.1;
+
+FROM: main_bb2_svlife.1;
+var__temp_vdeath.0 := v1;
+var__temp_vlife.0 := vlife.1;
+TO: main_bb1;
+
+FROM: main_bb3;
+TO: main_bb3_ret;
+

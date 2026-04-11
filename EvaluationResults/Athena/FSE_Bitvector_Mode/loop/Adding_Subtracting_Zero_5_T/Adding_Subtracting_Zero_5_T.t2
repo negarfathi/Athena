@@ -1,0 +1,104 @@
+///*** 1_main ***///
+START: main_bb5;
+
+TYPE v27: bv(32);
+
+FROM: main_bb5;
+memory0_freeIndex := 1;
+vmemory0 := nondet();
+v27 := nondet();
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume((v27 sle 0) || (v27 sgt 65534));
+TO: main_bb11;
+
+FROM: main_bb5_end;
+assume((v27 sgt 0) && (v27 sle 65534));
+TO: main_bb6;
+
+FROM: main_bb6;
+v30 := memory0_freeIndex;
+v31 := memory0_freeIndex;
+v32 := v31 + 4;
+memory0_freeIndex := v32;
+v33 := sign_extend(32, 64, v30);
+v34 := select_array(vmemory0, v33);
+v35v1 := constr_tuple(v30);
+vmemory0 := store_array(vmemory0, v33, v35v1);
+var__temp_vi.0.i := 2;
+var__temp_vcyclic.0.i := v30;
+TO: main_bb7;
+
+FROM: main_bb7;
+vi.0.i := var__temp_vi.0.i;
+vcyclic.0.i := var__temp_vcyclic.0.i;
+TO: main_bb7_end;
+
+FROM: main_bb7_end;
+assume(vi.0.i sle v27);
+TO: main_bb8;
+
+FROM: main_bb7_end;
+assume(vi.0.i sgt v27);
+TO: main_initLink.exit;
+
+FROM: main_bb8;
+v37 := memory0_freeIndex;
+v38 := memory0_freeIndex;
+v39 := v38 + 4;
+memory0_freeIndex := v39;
+v40 := sign_extend(32, 64, v37);
+v41 := select_array(vmemory0, v40);
+v42v1 := constr_tuple(v37);
+vmemory0 := store_array(vmemory0, v40, v42v1);
+v43 := sign_extend(32, 64, vcyclic.0.i);
+v44 := select_array(vmemory0, v43);
+v45v1 := constr_tuple(v37);
+vmemory0 := store_array(vmemory0, v43, v45v1);
+v46 := sign_extend(32, 64, vcyclic.0.i);
+v47 := select_array(vmemory0, v46);
+v49 := select_tuple(v47, 0, 1);
+v50 := vi.0.i + 1;
+var__temp_vi.0.i := v50;
+var__temp_vcyclic.0.i := v49;
+TO: main_bb7;
+
+FROM: main_initLink.exit;
+v51 := sign_extend(32, 64, vcyclic.0.i);
+v52 := select_array(vmemory0, v51);
+v53v1 := constr_tuple(vcyclic.0.i);
+vmemory0 := store_array(vmemory0, v51, v53v1);
+var__temp_vip.0 := v30;
+TO: main_bb9;
+
+FROM: main_bb9;
+vip.0 := var__temp_vip.0;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(vip.0 != 0);
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(vip.0 == 0);
+TO: main_bb11;
+
+FROM: main_bb10;
+v55 := sign_extend(32, 64, vip.0);
+v56 := select_array(vmemory0, v55);
+v58 := select_tuple(v56, 0, 1);
+var__temp_vip.0 := v58;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(vip.0 == v58);
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(vip.0 != v58);
+TO: main_bb9;
+
+FROM: main_bb11;
+TO: main_bb11_ret;
+

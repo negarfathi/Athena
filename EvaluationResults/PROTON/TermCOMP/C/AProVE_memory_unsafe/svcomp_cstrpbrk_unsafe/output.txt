@@ -1,0 +1,147 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.ErbETG
+
+Input File is : svcomp_cstrpbrk_unsafe.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ * not memory safe
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/* Returns some null-terminated string. */
+char* __VERIFIER_nondet_String(void) {
+    int length = __VERIFIER_nondet_int();
+    {if (length < 1) {
+        length = 1;
+    }}
+    char* nondetString = (char*) malloc(length * sizeof(char));
+    nondetString[length-1] = '\0';
+    return nondetString;
+}
+
+
+
+
+
+char *(cstrpbrk)(const char *s1, const char *s2)
+ {
+     const char *sc1;
+     const char *s;
+     int c;
+     for (sc1 = s1; *sc1 != '\0'; sc1++) {
+         s = s2;
+         c = *sc1;
+         while (*s != '\0' && *s != (char)c)
+             {s++;}
+         {if (*s != c)
+             {return (char *)sc1;}}
+     }
+     return 0;                /* terminating nulls match */
+ }
+
+int main() {
+    return *cstrpbrk(__VERIFIER_nondet_String(),__VERIFIER_nondet_String());
+}
+
+
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_cstrpbrk_unsafe_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ * not memory safe
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/* Returns some null-terminated string. */
+char* __VERIFIER_nondet_String(void) {
+    int length = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(13, __func__);
+if (length < 1) { __VERIFIER_control_true(13, __func__);
+
+        length = 1;
+    }}
+    char* nondetString = (char*) malloc(length * sizeof(char));
+    nondetString[length-1] = '\0';
+    return nondetString;
+}
+
+
+
+
+
+char *(cstrpbrk)(const char *s1, const char *s2)
+ {
+     const char *sc1;
+     const char *s;
+     int c;
+    myBool pStored0 = myFalse; __VERIFIER_reached_control(30, __func__);
+ for (sc1 = s1; *sc1 != '\0'; sc1++) { __VERIFIER_loop_head(30, __func__);
+printf("CBMC Instrumentation @ line30");myBool flag=__VERIFIER_nondet_myBool();static int oc;static const char * os;static const char * os1;static const char * os2;static const char * osc1;if(pStored0){__CPROVER_assert(!(oc==c && os==s && os1==s1 && os2==s2 && osc1==sc1),"recurrent state found");} if(flag){oc=c;os=s;os1=s1;os2=s2;osc1=sc1;pStored0=myTrue;} 
+         s = s2;
+         c = *sc1;
+        myBool pStored1 = myFalse; __VERIFIER_reached_control(34, __func__);
+ while (*s != '\0' && *s != (char)c)
+             { __VERIFIER_loop_head(34, __func__);
+printf("CBMC Instrumentation @ line34");myBool flag=__VERIFIER_nondet_myBool();static int oc;static const char * os;static const char * os1;static const char * os2;static const char * osc1;if(pStored1){__CPROVER_assert(!(oc==c && os==s && os1==s1 && os2==s2 && osc1==sc1),"recurrent state found");} if(flag){oc=c;os=s;os1=s1;os2=s2;osc1=sc1;pStored1=myTrue;} s++;}
+         { __VERIFIER_reached_control(35, __func__);
+if (*s != c)
+             { __VERIFIER_control_true(36, __func__);
+return (char *)sc1;}}
+     }
+     return 0;                /* terminating nulls match */
+ }
+
+int main() {
+    return *cstrpbrk(__VERIFIER_nondet_String(),__VERIFIER_nondet_String());
+}
+
+
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_cstrpbrk_unsafe_braced_instrumented.c
+NTFILE is svcomp_cstrpbrk_unsafe_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_cstrpbrk_unsafe.c
+FILE=svcomp_cstrpbrk_unsafe_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183328 milliseconds

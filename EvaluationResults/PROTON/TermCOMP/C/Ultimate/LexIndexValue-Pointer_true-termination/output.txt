@@ -1,0 +1,103 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.htqs97
+
+Input File is : LexIndexValue-Pointer_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 2012-06-03
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ * 2-lex ranking function: f(p, q, *q) = (q, *q)
+ *
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int *p = malloc(1048 * sizeof(int));
+	int *q = p;
+	while (*q >= 0 && q < p + 1048) {
+		{if (__VERIFIER_nondet_int()) {
+			q++;
+		} else {
+			(*q)--;
+		}}
+	}
+	return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : LexIndexValue-Pointer_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2012-06-03
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ * 2-lex ranking function: f(p, q, *q) = (q, *q)
+ *
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int *p = malloc(1048 * sizeof(int));
+	int *q = p;
+myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+	while (*q >= 0 && q < p + 1048) { __VERIFIER_loop_head(15, __func__);
+
+		{ __VERIFIER_reached_control(16, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(16, __func__);
+
+			q++;
+		} else { __VERIFIER_control_false(18, __func__);
+
+			(*q)--;
+		}}
+	}
+	return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+LexIndexValue-Pointer_true-termination_braced_instrumented.c
+NTFILE is LexIndexValue-Pointer_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for LexIndexValue-Pointer_true-termination.c
+FILE=LexIndexValue-Pointer_true-termination_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 121745 milliseconds

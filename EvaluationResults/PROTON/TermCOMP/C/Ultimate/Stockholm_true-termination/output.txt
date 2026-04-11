@@ -1,0 +1,101 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.KyE5A8
+
+Input File is : Stockholm_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 2012-02-12
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ * Ranking function: f(x, a, b) = x;
+ * needs the loop invariant b >= a.
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+	int x = __VERIFIER_nondet_int();
+	int a = __VERIFIER_nondet_int();
+	int b = __VERIFIER_nondet_int();
+	{if (a != b) {
+		return 0;
+	}}
+	while (x >= 0) {
+		x = x + a - b - 1;
+	}
+	return 0;
+}
+
+End Main   
+
+Input File is : Stockholm_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2012-02-12
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ * Ranking function: f(x, a, b) = x;
+ * needs the loop invariant b >= a.
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+	int x = __VERIFIER_nondet_int();
+	int a = __VERIFIER_nondet_int();
+	int b = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(16, __func__);
+if (a != b) { __VERIFIER_control_true(16, __func__);
+
+		return 0;
+	}}
+myBool pStored0 = myFalse; __VERIFIER_reached_control(19, __func__);
+	while (x >= 0) { __VERIFIER_loop_head(19, __func__);
+printf("CBMC Instrumentation @ line19");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;static int ox;if(pStored0){__CPROVER_assert(!(oa==a && ob==b && ox==x),"recurrent state found");} if(flag){oa=a;ob=b;ox=x;pStored0=myTrue;} 
+		x = x + a - b - 1;
+	}
+	return 0;
+}
+
+End Main 
+ Stockholm_true-termination_braced_instrumented.c
+NTFILE is Stockholm_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Stockholm_true-termination.c
+FILE=Stockholm_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182294 milliseconds

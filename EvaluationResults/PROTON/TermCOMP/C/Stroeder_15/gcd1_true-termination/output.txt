@@ -1,0 +1,125 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.WAbbrY
+
+Input File is : gcd1_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * gcd program (terminating) based on 
+ * (Dershowitz, Lindenstrauss, Sagiv and Serebrenik, 2001)
+ *
+ * Date: 15.12.2013
+ * Author: Amir Ben-Amram, amirben@cs.mta.ac.il
+ *
+ */
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+	int r, x, y;
+
+	x = __VERIFIER_nondet_int();
+	y = __VERIFIER_nondet_int();
+
+	{if (x<0) {x = -x;}}
+	{if (y<0) {y = -y;}}
+	while (y>0) {
+		/*  the next statements compute  r = mod(x,y)   */
+		r = x;
+		while (r>=y) {
+			r = r-y;
+        }
+		/* end of inlined mod */
+		x = y;
+		y = r;
+	}
+    return 0;
+}
+
+End Main   
+
+Input File is : gcd1_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * gcd program (terminating) based on 
+ * (Dershowitz, Lindenstrauss, Sagiv and Serebrenik, 2001)
+ *
+ * Date: 15.12.2013
+ * Author: Amir Ben-Amram, amirben@cs.mta.ac.il
+ *
+ */
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+	int r, x, y;
+
+	x = __VERIFIER_nondet_int();
+	y = __VERIFIER_nondet_int();
+
+	{ __VERIFIER_reached_control(20, __func__);
+if (x<0) { __VERIFIER_control_true(20, __func__);
+x = -x;}}
+	{ __VERIFIER_reached_control(21, __func__);
+if (y<0) { __VERIFIER_control_true(21, __func__);
+y = -y;}}
+myBool pStored0 = myFalse; __VERIFIER_reached_control(22, __func__);
+	while (y>0) { __VERIFIER_loop_head(22, __func__);
+printf("CBMC Instrumentation @ line22");myBool flag=__VERIFIER_nondet_myBool();static int or;static int ox;static int oy;if(pStored0){__CPROVER_assert(!(or==r && ox==x && oy==y),"recurrent state found");} if(flag){or=r;ox=x;oy=y;pStored0=myTrue;} 
+		/*  the next statements compute  r = mod(x,y)   */
+		r = x;
+	myBool pStored1 = myFalse; __VERIFIER_reached_control(25, __func__);
+	while (r>=y) { __VERIFIER_loop_head(25, __func__);
+printf("CBMC Instrumentation @ line25");myBool flag=__VERIFIER_nondet_myBool();static int or;static int ox;static int oy;if(pStored1){__CPROVER_assert(!(or==r && ox==x && oy==y),"recurrent state found");} if(flag){or=r;ox=x;oy=y;pStored1=myTrue;} 
+			r = r-y;
+        }
+		/* end of inlined mod */
+		x = y;
+		y = r;
+	}
+    return 0;
+}
+
+End Main 
+ gcd1_true-termination_braced_instrumented.c
+NTFILE is gcd1_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for gcd1_true-termination.c
+FILE=gcd1_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182688 milliseconds

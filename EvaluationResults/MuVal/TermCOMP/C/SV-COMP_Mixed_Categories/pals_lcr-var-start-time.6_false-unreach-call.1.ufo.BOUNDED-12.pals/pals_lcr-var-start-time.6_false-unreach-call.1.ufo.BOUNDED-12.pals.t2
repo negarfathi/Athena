@@ -1,0 +1,1926 @@
+///*** 1_main ***///
+START: main_bb185;
+
+FROM: main_bb185;
+v541 := nondet();
+r1 := v541;
+v542 := nondet();
+id1 := v542;
+v543 := nondet();
+st1 := v543;
+v544 := nondet();
+send1 := v544;
+mode1 := v546;
+alive1 := v548;
+v549 := nondet();
+id2 := v549;
+v550 := nondet();
+st2 := v550;
+v551 := nondet();
+send2 := v551;
+mode2 := v553;
+alive2 := v555;
+v556 := nondet();
+id3 := v556;
+v557 := nondet();
+st3 := v557;
+v558 := nondet();
+send3 := v558;
+mode3 := v560;
+alive3 := v562;
+v563 := nondet();
+id4 := v563;
+v564 := nondet();
+st4 := v564;
+v565 := nondet();
+send4 := v565;
+mode4 := v567;
+alive4 := v569;
+v570 := nondet();
+id5 := v570;
+v571 := nondet();
+st5 := v571;
+v572 := nondet();
+send5 := v572;
+mode5 := v574;
+alive5 := v576;
+v577 := nondet();
+id6 := v577;
+v578 := nondet();
+st6 := v578;
+v579 := nondet();
+send6 := v579;
+mode6 := v581;
+alive6 := v583;
+v584 := r1;
+var__temp_vtmp.40.i := 0;
+TO: main_bb185_end;
+
+FROM: main_bb185_end;
+assume(v585 == 0);
+TO: main_bb186;
+
+FROM: main_bb185_end;
+assume(v585 != 0);
+TO: main_init.exit;
+
+FROM: main_bb186;
+v587 := alive1;
+v590 := alive2;
+v593 := v589 + v592;
+v594 := alive3;
+v597 := v593 + v596;
+v598 := alive4;
+v601 := v597 + v600;
+v602 := alive5;
+v605 := v601 + v604;
+v606 := alive6;
+v609 := v605 + v608;
+var__temp_vtmp.40.i := 0;
+TO: main_bb186_end;
+
+FROM: main_bb186_end;
+assume(v609 >= 1);
+TO: main_bb187;
+
+FROM: main_bb186_end;
+assume(v609 < 1);
+TO: main_init.exit;
+
+FROM: main_bb187;
+v611 := id1;
+var__temp_vtmp.40.i := 0;
+TO: main_bb187_end;
+
+FROM: main_bb187_end;
+assume(v612 >= 0);
+TO: main_bb188;
+
+FROM: main_bb187_end;
+assume(v612 < 0);
+TO: main_init.exit;
+
+FROM: main_bb188;
+v614 := st1;
+var__temp_vtmp.40.i := 0;
+TO: main_bb188_end;
+
+FROM: main_bb188_end;
+assume(v615 == 0);
+TO: main_bb189;
+
+FROM: main_bb188_end;
+assume(v615 != 0);
+TO: main_init.exit;
+
+FROM: main_bb189;
+v617 := send1;
+v619 := id1;
+var__temp_vtmp.40.i := 0;
+TO: main_bb189_end;
+
+FROM: main_bb189_end;
+assume(v618 == v620);
+TO: main_bb190;
+
+FROM: main_bb189_end;
+assume(v618 != v620);
+TO: main_init.exit;
+
+FROM: main_bb190;
+v622 := mode1;
+var__temp_vtmp.40.i := 0;
+TO: main_bb190_end;
+
+FROM: main_bb190_end;
+assume(v624 == 0);
+TO: main_bb191;
+
+FROM: main_bb190_end;
+assume(v624 != 0);
+TO: main_init.exit;
+
+FROM: main_bb191;
+v626 := id2;
+var__temp_vtmp.40.i := 0;
+TO: main_bb191_end;
+
+FROM: main_bb191_end;
+assume(v627 >= 0);
+TO: main_bb192;
+
+FROM: main_bb191_end;
+assume(v627 < 0);
+TO: main_init.exit;
+
+FROM: main_bb192;
+v629 := st2;
+var__temp_vtmp.40.i := 0;
+TO: main_bb192_end;
+
+FROM: main_bb192_end;
+assume(v630 == 0);
+TO: main_bb193;
+
+FROM: main_bb192_end;
+assume(v630 != 0);
+TO: main_init.exit;
+
+FROM: main_bb193;
+v632 := send2;
+v634 := id2;
+var__temp_vtmp.40.i := 0;
+TO: main_bb193_end;
+
+FROM: main_bb193_end;
+assume(v633 == v635);
+TO: main_bb194;
+
+FROM: main_bb193_end;
+assume(v633 != v635);
+TO: main_init.exit;
+
+FROM: main_bb194;
+v637 := mode2;
+var__temp_vtmp.40.i := 0;
+TO: main_bb194_end;
+
+FROM: main_bb194_end;
+assume(v639 == 0);
+TO: main_bb195;
+
+FROM: main_bb194_end;
+assume(v639 != 0);
+TO: main_init.exit;
+
+FROM: main_bb195;
+v641 := id3;
+var__temp_vtmp.40.i := 0;
+TO: main_bb195_end;
+
+FROM: main_bb195_end;
+assume(v642 >= 0);
+TO: main_bb196;
+
+FROM: main_bb195_end;
+assume(v642 < 0);
+TO: main_init.exit;
+
+FROM: main_bb196;
+v644 := st3;
+var__temp_vtmp.40.i := 0;
+TO: main_bb196_end;
+
+FROM: main_bb196_end;
+assume(v645 == 0);
+TO: main_bb197;
+
+FROM: main_bb196_end;
+assume(v645 != 0);
+TO: main_init.exit;
+
+FROM: main_bb197;
+v647 := send3;
+v649 := id3;
+var__temp_vtmp.40.i := 0;
+TO: main_bb197_end;
+
+FROM: main_bb197_end;
+assume(v648 == v650);
+TO: main_bb198;
+
+FROM: main_bb197_end;
+assume(v648 != v650);
+TO: main_init.exit;
+
+FROM: main_bb198;
+v652 := mode3;
+var__temp_vtmp.40.i := 0;
+TO: main_bb198_end;
+
+FROM: main_bb198_end;
+assume(v654 == 0);
+TO: main_bb199;
+
+FROM: main_bb198_end;
+assume(v654 != 0);
+TO: main_init.exit;
+
+FROM: main_bb199;
+v656 := id4;
+var__temp_vtmp.40.i := 0;
+TO: main_bb199_end;
+
+FROM: main_bb199_end;
+assume(v657 >= 0);
+TO: main_bb200;
+
+FROM: main_bb199_end;
+assume(v657 < 0);
+TO: main_init.exit;
+
+FROM: main_bb200;
+v659 := st4;
+var__temp_vtmp.40.i := 0;
+TO: main_bb200_end;
+
+FROM: main_bb200_end;
+assume(v660 == 0);
+TO: main_bb201;
+
+FROM: main_bb200_end;
+assume(v660 != 0);
+TO: main_init.exit;
+
+FROM: main_bb201;
+v662 := send4;
+v664 := id4;
+var__temp_vtmp.40.i := 0;
+TO: main_bb201_end;
+
+FROM: main_bb201_end;
+assume(v663 == v665);
+TO: main_bb202;
+
+FROM: main_bb201_end;
+assume(v663 != v665);
+TO: main_init.exit;
+
+FROM: main_bb202;
+v667 := mode4;
+var__temp_vtmp.40.i := 0;
+TO: main_bb202_end;
+
+FROM: main_bb202_end;
+assume(v669 == 0);
+TO: main_bb203;
+
+FROM: main_bb202_end;
+assume(v669 != 0);
+TO: main_init.exit;
+
+FROM: main_bb203;
+v671 := id5;
+var__temp_vtmp.40.i := 0;
+TO: main_bb203_end;
+
+FROM: main_bb203_end;
+assume(v672 >= 0);
+TO: main_bb204;
+
+FROM: main_bb203_end;
+assume(v672 < 0);
+TO: main_init.exit;
+
+FROM: main_bb204;
+v674 := st5;
+var__temp_vtmp.40.i := 0;
+TO: main_bb204_end;
+
+FROM: main_bb204_end;
+assume(v675 == 0);
+TO: main_bb205;
+
+FROM: main_bb204_end;
+assume(v675 != 0);
+TO: main_init.exit;
+
+FROM: main_bb205;
+v677 := send5;
+v679 := id5;
+var__temp_vtmp.40.i := 0;
+TO: main_bb205_end;
+
+FROM: main_bb205_end;
+assume(v678 == v680);
+TO: main_bb206;
+
+FROM: main_bb205_end;
+assume(v678 != v680);
+TO: main_init.exit;
+
+FROM: main_bb206;
+v682 := mode5;
+var__temp_vtmp.40.i := 0;
+TO: main_bb206_end;
+
+FROM: main_bb206_end;
+assume(v684 == 0);
+TO: main_bb207;
+
+FROM: main_bb206_end;
+assume(v684 != 0);
+TO: main_init.exit;
+
+FROM: main_bb207;
+v686 := id6;
+var__temp_vtmp.40.i := 0;
+TO: main_bb207_end;
+
+FROM: main_bb207_end;
+assume(v687 >= 0);
+TO: main_bb208;
+
+FROM: main_bb207_end;
+assume(v687 < 0);
+TO: main_init.exit;
+
+FROM: main_bb208;
+v689 := st6;
+var__temp_vtmp.40.i := 0;
+TO: main_bb208_end;
+
+FROM: main_bb208_end;
+assume(v690 == 0);
+TO: main_bb209;
+
+FROM: main_bb208_end;
+assume(v690 != 0);
+TO: main_init.exit;
+
+FROM: main_bb209;
+v692 := send6;
+v694 := id6;
+var__temp_vtmp.40.i := 0;
+TO: main_bb209_end;
+
+FROM: main_bb209_end;
+assume(v693 == v695);
+TO: main_bb210;
+
+FROM: main_bb209_end;
+assume(v693 != v695);
+TO: main_init.exit;
+
+FROM: main_bb210;
+v697 := mode6;
+var__temp_vtmp.40.i := 0;
+TO: main_bb210_end;
+
+FROM: main_bb210_end;
+assume(v699 == 0);
+TO: main_bb211;
+
+FROM: main_bb210_end;
+assume(v699 != 0);
+TO: main_init.exit;
+
+FROM: main_bb211;
+v701 := id1;
+v703 := id2;
+var__temp_vtmp.40.i := 0;
+TO: main_bb211_end;
+
+FROM: main_bb211_end;
+assume(v702 != v704);
+TO: main_bb212;
+
+FROM: main_bb211_end;
+assume(v702 == v704);
+TO: main_init.exit;
+
+FROM: main_bb212;
+v706 := id1;
+v708 := id3;
+var__temp_vtmp.40.i := 0;
+TO: main_bb212_end;
+
+FROM: main_bb212_end;
+assume(v707 != v709);
+TO: main_bb213;
+
+FROM: main_bb212_end;
+assume(v707 == v709);
+TO: main_init.exit;
+
+FROM: main_bb213;
+v711 := id1;
+v713 := id4;
+var__temp_vtmp.40.i := 0;
+TO: main_bb213_end;
+
+FROM: main_bb213_end;
+assume(v712 != v714);
+TO: main_bb214;
+
+FROM: main_bb213_end;
+assume(v712 == v714);
+TO: main_init.exit;
+
+FROM: main_bb214;
+v716 := id1;
+v718 := id5;
+var__temp_vtmp.40.i := 0;
+TO: main_bb214_end;
+
+FROM: main_bb214_end;
+assume(v717 != v719);
+TO: main_bb215;
+
+FROM: main_bb214_end;
+assume(v717 == v719);
+TO: main_init.exit;
+
+FROM: main_bb215;
+v721 := id1;
+v723 := id6;
+var__temp_vtmp.40.i := 0;
+TO: main_bb215_end;
+
+FROM: main_bb215_end;
+assume(v722 != v724);
+TO: main_bb216;
+
+FROM: main_bb215_end;
+assume(v722 == v724);
+TO: main_init.exit;
+
+FROM: main_bb216;
+v726 := id2;
+v728 := id3;
+var__temp_vtmp.40.i := 0;
+TO: main_bb216_end;
+
+FROM: main_bb216_end;
+assume(v727 != v729);
+TO: main_bb217;
+
+FROM: main_bb216_end;
+assume(v727 == v729);
+TO: main_init.exit;
+
+FROM: main_bb217;
+v731 := id2;
+v733 := id4;
+var__temp_vtmp.40.i := 0;
+TO: main_bb217_end;
+
+FROM: main_bb217_end;
+assume(v732 != v734);
+TO: main_bb218;
+
+FROM: main_bb217_end;
+assume(v732 == v734);
+TO: main_init.exit;
+
+FROM: main_bb218;
+v736 := id2;
+v738 := id5;
+var__temp_vtmp.40.i := 0;
+TO: main_bb218_end;
+
+FROM: main_bb218_end;
+assume(v737 != v739);
+TO: main_bb219;
+
+FROM: main_bb218_end;
+assume(v737 == v739);
+TO: main_init.exit;
+
+FROM: main_bb219;
+v741 := id2;
+v743 := id6;
+var__temp_vtmp.40.i := 0;
+TO: main_bb219_end;
+
+FROM: main_bb219_end;
+assume(v742 != v744);
+TO: main_bb220;
+
+FROM: main_bb219_end;
+assume(v742 == v744);
+TO: main_init.exit;
+
+FROM: main_bb220;
+v746 := id3;
+v748 := id4;
+var__temp_vtmp.40.i := 0;
+TO: main_bb220_end;
+
+FROM: main_bb220_end;
+assume(v747 != v749);
+TO: main_bb221;
+
+FROM: main_bb220_end;
+assume(v747 == v749);
+TO: main_init.exit;
+
+FROM: main_bb221;
+v751 := id3;
+v753 := id5;
+var__temp_vtmp.40.i := 0;
+TO: main_bb221_end;
+
+FROM: main_bb221_end;
+assume(v752 != v754);
+TO: main_bb222;
+
+FROM: main_bb221_end;
+assume(v752 == v754);
+TO: main_init.exit;
+
+FROM: main_bb222;
+v756 := id3;
+v758 := id6;
+var__temp_vtmp.40.i := 0;
+TO: main_bb222_end;
+
+FROM: main_bb222_end;
+assume(v757 != v759);
+TO: main_bb223;
+
+FROM: main_bb222_end;
+assume(v757 == v759);
+TO: main_init.exit;
+
+FROM: main_bb223;
+v761 := id4;
+v763 := id5;
+var__temp_vtmp.40.i := 0;
+TO: main_bb223_end;
+
+FROM: main_bb223_end;
+assume(v762 != v764);
+TO: main_bb224;
+
+FROM: main_bb223_end;
+assume(v762 == v764);
+TO: main_init.exit;
+
+FROM: main_bb224;
+v766 := id4;
+v768 := id6;
+var__temp_vtmp.40.i := 0;
+TO: main_bb224_end;
+
+FROM: main_bb224_end;
+assume(v767 != v769);
+TO: main_bb225;
+
+FROM: main_bb224_end;
+assume(v767 == v769);
+TO: main_init.exit;
+
+FROM: main_bb225;
+v771 := id5;
+v773 := id6;
+TO: main_bb225_v..i;
+FROM: main_bb225_v..i;
+assume(v772 != v774);
+v..i := 1;
+TO: main_bb225_sv..i;
+
+FROM: main_bb225_v..i;
+assume(v772 == v774);
+v..i := 0;
+TO: main_bb225_sv..i;
+
+FROM: main_bb225_sv..i;
+var__temp_vtmp.40.i := v..i;
+TO: main_init.exit;
+
+FROM: main_init.exit;
+vtmp.40.i := var__temp_vtmp.40.i;
+TO: main_bb226;
+
+FROM: main_bb226;
+TO: main_bb226_end;
+
+FROM: main_bb226_end;
+assume(nondet());
+TO: main_bb226;
+
+FROM: main_bb226_end;
+assume(nondet());
+TO: main___VERIFIER_assume.exit;
+
+FROM: main___VERIFIER_assume.exit;
+v780 := nomsg;
+p1_old := v780;
+v781 := nomsg;
+p1_new := v781;
+v782 := nomsg;
+p2_old := v782;
+v783 := nomsg;
+p2_new := v783;
+v784 := nomsg;
+p3_old := v784;
+v785 := nomsg;
+p3_new := v785;
+v786 := nomsg;
+p4_old := v786;
+v787 := nomsg;
+p4_new := v787;
+v788 := nomsg;
+p5_old := v788;
+v789 := nomsg;
+p5_new := v789;
+v790 := nomsg;
+p6_old := v790;
+v791 := nomsg;
+p6_new := v791;
+v792 := nomsg;
+v793 := nomsg;
+v795 := alive1;
+v797 := id1;
+v799 := id1;
+v801 := nomsg;
+v802 := nomsg;
+v804 := alive2;
+v806 := id2;
+v808 := id2;
+v810 := nomsg;
+v811 := nomsg;
+v813 := alive3;
+v815 := id3;
+v817 := id3;
+v819 := nomsg;
+v820 := nomsg;
+v822 := alive4;
+v824 := id4;
+v826 := id4;
+v828 := nomsg;
+v829 := nomsg;
+v831 := alive5;
+v833 := id5;
+v835 := id5;
+v837 := nomsg;
+v838 := nomsg;
+v840 := alive6;
+v842 := id6;
+v844 := id6;
+v846 := nomsg;
+v847 := nomsg;
+v848 := nomsg;
+v849 := nomsg;
+v850 := nomsg;
+v851 := nomsg;
+v852 := alive6;
+v854 := nomsg;
+v856 := nomsg;
+v858 := id6;
+v860 := nomsg;
+v862 := nomsg;
+v864 := alive5;
+v866 := nomsg;
+v868 := nomsg;
+v870 := id5;
+v872 := nomsg;
+v874 := nomsg;
+v876 := alive4;
+v878 := nomsg;
+v880 := nomsg;
+v882 := id4;
+v884 := nomsg;
+v886 := nomsg;
+v888 := alive3;
+v890 := nomsg;
+v892 := nomsg;
+v894 := id3;
+v896 := nomsg;
+v898 := nomsg;
+v900 := alive2;
+v902 := nomsg;
+v904 := nomsg;
+v906 := id2;
+v908 := nomsg;
+v910 := nomsg;
+v912 := alive1;
+v914 := nomsg;
+v916 := nomsg;
+v918 := id1;
+v920 := nomsg;
+v922 := nomsg;
+var__temp_vi2.0 := 0;
+TO: main_bb227;
+
+FROM: main_bb227;
+vi2.0 := var__temp_vi2.0;
+TO: main_bb227_end;
+
+FROM: main_bb227_end;
+assume(vi2.0 < 12);
+TO: main_bb228;
+
+FROM: main_bb227_end;
+assume(vi2.0 >= 12);
+TO: main_bb359;
+
+FROM: main_bb228;
+v925 := mode1;
+TO: main_bb228_end;
+
+FROM: main_bb228_end;
+assume(nondet());
+TO: main_bb229;
+
+FROM: main_bb228_end;
+assume(nondet());
+TO: main_bb238;
+
+FROM: main_bb229;
+v927 := r1;
+v929 := v928 + 1;
+r1 := v930;
+v931 := p6_old;
+p6_old := v792;
+TO: main_bb229_end;
+
+FROM: main_bb229_end;
+assume(v932 != v794);
+TO: main_bb230;
+
+FROM: main_bb229_end;
+assume(v932 == v794);
+TO: main_bb237;
+
+FROM: main_bb230;
+TO: main_bb230_end;
+
+FROM: main_bb230_end;
+assume(nondet());
+TO: main_bb231;
+
+FROM: main_bb230_end;
+assume(nondet());
+TO: main_bb236;
+
+FROM: main_bb231;
+TO: main_bb231_end;
+
+FROM: main_bb231_end;
+assume(v934 > v798);
+TO: main_bb232;
+
+FROM: main_bb231_end;
+assume(v934 <= v798);
+TO: main_bb233;
+
+FROM: main_bb232;
+send1 := v931;
+TO: main_bb237;
+
+FROM: main_bb233;
+TO: main_bb233_end;
+
+FROM: main_bb233_end;
+assume(v936 == v800);
+TO: main_bb234;
+
+FROM: main_bb233_end;
+assume(v936 != v800);
+TO: main_bb235;
+
+FROM: main_bb234;
+st1 := 1;
+TO: main_bb237;
+
+FROM: main_bb235;
+send1 := v931;
+TO: main_bb237;
+
+FROM: main_bb236;
+send1 := v931;
+TO: main_bb237;
+
+FROM: main_bb237;
+mode1 := 0;
+TO: main_node1.exit;
+
+FROM: main_bb238;
+v938 := send1;
+TO: main_bb238_end;
+
+FROM: main_bb238_end;
+assume(nondet());
+TO: main_bb239;
+
+FROM: main_bb238_end;
+assume(nondet());
+TO: main_bb244;
+
+FROM: main_bb239;
+TO: main_bb239_end;
+
+FROM: main_bb239_end;
+assume(v939 != v915);
+TO: main_bb240;
+
+FROM: main_bb239_end;
+assume(v939 == v915);
+TO: main_bb242;
+
+FROM: main_bb240;
+v941 := p1_new;
+TO: main_bb240_end;
+
+FROM: main_bb240_end;
+assume(v942 == v917);
+TO: main_bb241;
+
+FROM: main_bb240_end;
+assume(v942 != v917);
+TO: main_bb242;
+
+FROM: main_bb241;
+v944 := send1;
+var__temp_v.sink.i10 := v944;
+TO: main_bb243;
+
+FROM: main_bb242;
+v945 := p1_new;
+var__temp_v.sink.i10 := v945;
+TO: main_bb243;
+
+FROM: main_bb243;
+v.sink.i10 := var__temp_v.sink.i10;
+p1_new := v947;
+TO: main_bb250;
+
+FROM: main_bb244;
+TO: main_bb244_end;
+
+FROM: main_bb244_end;
+assume(v939 != v919);
+TO: main_bb245;
+
+FROM: main_bb244_end;
+assume(v939 == v919);
+TO: main_bb250;
+
+FROM: main_bb245;
+v949 := send1;
+TO: main_bb245_end;
+
+FROM: main_bb245_end;
+assume(v950 != v921);
+TO: main_bb246;
+
+FROM: main_bb245_end;
+assume(v950 == v921);
+TO: main_bb248;
+
+FROM: main_bb246;
+v952 := p1_new;
+TO: main_bb246_end;
+
+FROM: main_bb246_end;
+assume(v953 == v923);
+TO: main_bb247;
+
+FROM: main_bb246_end;
+assume(v953 != v923);
+TO: main_bb248;
+
+FROM: main_bb247;
+v955 := send1;
+var__temp_v.sink1.i11 := v955;
+TO: main_bb249;
+
+FROM: main_bb248;
+v956 := p1_new;
+var__temp_v.sink1.i11 := v956;
+TO: main_bb249;
+
+FROM: main_bb249;
+v.sink1.i11 := var__temp_v.sink1.i11;
+p1_new := v958;
+TO: main_bb250;
+
+FROM: main_bb250;
+mode1 := 1;
+TO: main_node1.exit;
+
+FROM: main_node1.exit;
+v959 := mode2;
+TO: main_node1.exit_end;
+
+FROM: main_node1.exit_end;
+assume(nondet());
+TO: main_bb251;
+
+FROM: main_node1.exit_end;
+assume(nondet());
+TO: main_bb259;
+
+FROM: main_bb251;
+v961 := p1_old;
+p1_old := v801;
+TO: main_bb251_end;
+
+FROM: main_bb251_end;
+assume(v962 != v803);
+TO: main_bb252;
+
+FROM: main_bb251_end;
+assume(v962 == v803);
+TO: main_bb258;
+
+FROM: main_bb252;
+TO: main_bb252_end;
+
+FROM: main_bb252_end;
+assume(nondet());
+TO: main_bb253;
+
+FROM: main_bb252_end;
+assume(nondet());
+TO: main_bb257;
+
+FROM: main_bb253;
+TO: main_bb253_end;
+
+FROM: main_bb253_end;
+assume(v964 > v807);
+TO: main_bb254;
+
+FROM: main_bb253_end;
+assume(v964 <= v807);
+TO: main_bb255;
+
+FROM: main_bb254;
+send2 := v961;
+TO: main_bb258;
+
+FROM: main_bb255;
+TO: main_bb255_end;
+
+FROM: main_bb255_end;
+assume(v966 == v809);
+TO: main_bb256;
+
+FROM: main_bb255_end;
+assume(v966 != v809);
+TO: main_bb258;
+
+FROM: main_bb256;
+st2 := 1;
+TO: main_bb258;
+
+FROM: main_bb257;
+send2 := v961;
+TO: main_bb258;
+
+FROM: main_bb258;
+mode2 := 0;
+TO: main_node2.exit;
+
+FROM: main_bb259;
+v968 := send2;
+TO: main_bb259_end;
+
+FROM: main_bb259_end;
+assume(nondet());
+TO: main_bb260;
+
+FROM: main_bb259_end;
+assume(nondet());
+TO: main_bb265;
+
+FROM: main_bb260;
+TO: main_bb260_end;
+
+FROM: main_bb260_end;
+assume(v969 != v903);
+TO: main_bb261;
+
+FROM: main_bb260_end;
+assume(v969 == v903);
+TO: main_bb263;
+
+FROM: main_bb261;
+v971 := p2_new;
+TO: main_bb261_end;
+
+FROM: main_bb261_end;
+assume(v972 == v905);
+TO: main_bb262;
+
+FROM: main_bb261_end;
+assume(v972 != v905);
+TO: main_bb263;
+
+FROM: main_bb262;
+v974 := send2;
+var__temp_v.sink.i8 := v974;
+TO: main_bb264;
+
+FROM: main_bb263;
+v975 := p2_new;
+var__temp_v.sink.i8 := v975;
+TO: main_bb264;
+
+FROM: main_bb264;
+v.sink.i8 := var__temp_v.sink.i8;
+p2_new := v977;
+TO: main_bb271;
+
+FROM: main_bb265;
+TO: main_bb265_end;
+
+FROM: main_bb265_end;
+assume(v969 != v907);
+TO: main_bb266;
+
+FROM: main_bb265_end;
+assume(v969 == v907);
+TO: main_bb271;
+
+FROM: main_bb266;
+v979 := send2;
+TO: main_bb266_end;
+
+FROM: main_bb266_end;
+assume(v980 != v909);
+TO: main_bb267;
+
+FROM: main_bb266_end;
+assume(v980 == v909);
+TO: main_bb269;
+
+FROM: main_bb267;
+v982 := p2_new;
+TO: main_bb267_end;
+
+FROM: main_bb267_end;
+assume(v983 == v911);
+TO: main_bb268;
+
+FROM: main_bb267_end;
+assume(v983 != v911);
+TO: main_bb269;
+
+FROM: main_bb268;
+v985 := send2;
+var__temp_v.sink1.i9 := v985;
+TO: main_bb270;
+
+FROM: main_bb269;
+v986 := p2_new;
+var__temp_v.sink1.i9 := v986;
+TO: main_bb270;
+
+FROM: main_bb270;
+v.sink1.i9 := var__temp_v.sink1.i9;
+p2_new := v988;
+TO: main_bb271;
+
+FROM: main_bb271;
+mode2 := 1;
+TO: main_node2.exit;
+
+FROM: main_node2.exit;
+v989 := mode3;
+TO: main_node2.exit_end;
+
+FROM: main_node2.exit_end;
+assume(nondet());
+TO: main_bb272;
+
+FROM: main_node2.exit_end;
+assume(nondet());
+TO: main_bb280;
+
+FROM: main_bb272;
+v991 := p2_old;
+p2_old := v810;
+TO: main_bb272_end;
+
+FROM: main_bb272_end;
+assume(v992 != v812);
+TO: main_bb273;
+
+FROM: main_bb272_end;
+assume(v992 == v812);
+TO: main_bb279;
+
+FROM: main_bb273;
+TO: main_bb273_end;
+
+FROM: main_bb273_end;
+assume(nondet());
+TO: main_bb274;
+
+FROM: main_bb273_end;
+assume(nondet());
+TO: main_bb278;
+
+FROM: main_bb274;
+TO: main_bb274_end;
+
+FROM: main_bb274_end;
+assume(v994 > v816);
+TO: main_bb275;
+
+FROM: main_bb274_end;
+assume(v994 <= v816);
+TO: main_bb276;
+
+FROM: main_bb275;
+send3 := v991;
+TO: main_bb279;
+
+FROM: main_bb276;
+TO: main_bb276_end;
+
+FROM: main_bb276_end;
+assume(v996 == v818);
+TO: main_bb277;
+
+FROM: main_bb276_end;
+assume(v996 != v818);
+TO: main_bb279;
+
+FROM: main_bb277;
+st3 := 1;
+TO: main_bb279;
+
+FROM: main_bb278;
+send3 := v991;
+TO: main_bb279;
+
+FROM: main_bb279;
+mode3 := 0;
+TO: main_node3.exit;
+
+FROM: main_bb280;
+v998 := send3;
+TO: main_bb280_end;
+
+FROM: main_bb280_end;
+assume(nondet());
+TO: main_bb281;
+
+FROM: main_bb280_end;
+assume(nondet());
+TO: main_bb286;
+
+FROM: main_bb281;
+TO: main_bb281_end;
+
+FROM: main_bb281_end;
+assume(v999 != v891);
+TO: main_bb282;
+
+FROM: main_bb281_end;
+assume(v999 == v891);
+TO: main_bb284;
+
+FROM: main_bb282;
+v1001 := p3_new;
+TO: main_bb282_end;
+
+FROM: main_bb282_end;
+assume(v1002 == v893);
+TO: main_bb283;
+
+FROM: main_bb282_end;
+assume(v1002 != v893);
+TO: main_bb284;
+
+FROM: main_bb283;
+v1004 := send3;
+var__temp_v.sink.i6 := v1004;
+TO: main_bb285;
+
+FROM: main_bb284;
+v1005 := p3_new;
+var__temp_v.sink.i6 := v1005;
+TO: main_bb285;
+
+FROM: main_bb285;
+v.sink.i6 := var__temp_v.sink.i6;
+p3_new := v1007;
+TO: main_bb292;
+
+FROM: main_bb286;
+TO: main_bb286_end;
+
+FROM: main_bb286_end;
+assume(v999 != v895);
+TO: main_bb287;
+
+FROM: main_bb286_end;
+assume(v999 == v895);
+TO: main_bb292;
+
+FROM: main_bb287;
+v1009 := send3;
+TO: main_bb287_end;
+
+FROM: main_bb287_end;
+assume(v1010 != v897);
+TO: main_bb288;
+
+FROM: main_bb287_end;
+assume(v1010 == v897);
+TO: main_bb290;
+
+FROM: main_bb288;
+v1012 := p3_new;
+TO: main_bb288_end;
+
+FROM: main_bb288_end;
+assume(v1013 == v899);
+TO: main_bb289;
+
+FROM: main_bb288_end;
+assume(v1013 != v899);
+TO: main_bb290;
+
+FROM: main_bb289;
+v1015 := send3;
+var__temp_v.sink1.i7 := v1015;
+TO: main_bb291;
+
+FROM: main_bb290;
+v1016 := p3_new;
+var__temp_v.sink1.i7 := v1016;
+TO: main_bb291;
+
+FROM: main_bb291;
+v.sink1.i7 := var__temp_v.sink1.i7;
+p3_new := v1018;
+TO: main_bb292;
+
+FROM: main_bb292;
+mode3 := 1;
+TO: main_node3.exit;
+
+FROM: main_node3.exit;
+v1019 := mode4;
+TO: main_node3.exit_end;
+
+FROM: main_node3.exit_end;
+assume(nondet());
+TO: main_bb293;
+
+FROM: main_node3.exit_end;
+assume(nondet());
+TO: main_bb301;
+
+FROM: main_bb293;
+v1021 := p3_old;
+p3_old := v819;
+TO: main_bb293_end;
+
+FROM: main_bb293_end;
+assume(v1022 != v821);
+TO: main_bb294;
+
+FROM: main_bb293_end;
+assume(v1022 == v821);
+TO: main_bb300;
+
+FROM: main_bb294;
+TO: main_bb294_end;
+
+FROM: main_bb294_end;
+assume(nondet());
+TO: main_bb295;
+
+FROM: main_bb294_end;
+assume(nondet());
+TO: main_bb299;
+
+FROM: main_bb295;
+TO: main_bb295_end;
+
+FROM: main_bb295_end;
+assume(v1024 > v825);
+TO: main_bb296;
+
+FROM: main_bb295_end;
+assume(v1024 <= v825);
+TO: main_bb297;
+
+FROM: main_bb296;
+send4 := v1021;
+TO: main_bb300;
+
+FROM: main_bb297;
+TO: main_bb297_end;
+
+FROM: main_bb297_end;
+assume(v1026 == v827);
+TO: main_bb298;
+
+FROM: main_bb297_end;
+assume(v1026 != v827);
+TO: main_bb300;
+
+FROM: main_bb298;
+st4 := 1;
+TO: main_bb300;
+
+FROM: main_bb299;
+send4 := v1021;
+TO: main_bb300;
+
+FROM: main_bb300;
+mode4 := 0;
+TO: main_node4.exit;
+
+FROM: main_bb301;
+v1028 := send4;
+TO: main_bb301_end;
+
+FROM: main_bb301_end;
+assume(nondet());
+TO: main_bb302;
+
+FROM: main_bb301_end;
+assume(nondet());
+TO: main_bb307;
+
+FROM: main_bb302;
+TO: main_bb302_end;
+
+FROM: main_bb302_end;
+assume(v1029 != v879);
+TO: main_bb303;
+
+FROM: main_bb302_end;
+assume(v1029 == v879);
+TO: main_bb305;
+
+FROM: main_bb303;
+v1031 := p4_new;
+TO: main_bb303_end;
+
+FROM: main_bb303_end;
+assume(v1032 == v881);
+TO: main_bb304;
+
+FROM: main_bb303_end;
+assume(v1032 != v881);
+TO: main_bb305;
+
+FROM: main_bb304;
+v1034 := send4;
+var__temp_v.sink.i4 := v1034;
+TO: main_bb306;
+
+FROM: main_bb305;
+v1035 := p4_new;
+var__temp_v.sink.i4 := v1035;
+TO: main_bb306;
+
+FROM: main_bb306;
+v.sink.i4 := var__temp_v.sink.i4;
+p4_new := v1037;
+TO: main_bb313;
+
+FROM: main_bb307;
+TO: main_bb307_end;
+
+FROM: main_bb307_end;
+assume(v1029 != v883);
+TO: main_bb308;
+
+FROM: main_bb307_end;
+assume(v1029 == v883);
+TO: main_bb313;
+
+FROM: main_bb308;
+v1039 := send4;
+TO: main_bb308_end;
+
+FROM: main_bb308_end;
+assume(v1040 != v885);
+TO: main_bb309;
+
+FROM: main_bb308_end;
+assume(v1040 == v885);
+TO: main_bb311;
+
+FROM: main_bb309;
+v1042 := p4_new;
+TO: main_bb309_end;
+
+FROM: main_bb309_end;
+assume(v1043 == v887);
+TO: main_bb310;
+
+FROM: main_bb309_end;
+assume(v1043 != v887);
+TO: main_bb311;
+
+FROM: main_bb310;
+v1045 := send4;
+var__temp_v.sink1.i5 := v1045;
+TO: main_bb312;
+
+FROM: main_bb311;
+v1046 := p4_new;
+var__temp_v.sink1.i5 := v1046;
+TO: main_bb312;
+
+FROM: main_bb312;
+v.sink1.i5 := var__temp_v.sink1.i5;
+p4_new := v1048;
+TO: main_bb313;
+
+FROM: main_bb313;
+mode4 := 1;
+TO: main_node4.exit;
+
+FROM: main_node4.exit;
+v1049 := mode5;
+TO: main_node4.exit_end;
+
+FROM: main_node4.exit_end;
+assume(nondet());
+TO: main_bb314;
+
+FROM: main_node4.exit_end;
+assume(nondet());
+TO: main_bb322;
+
+FROM: main_bb314;
+v1051 := p4_old;
+p4_old := v828;
+TO: main_bb314_end;
+
+FROM: main_bb314_end;
+assume(v1052 != v830);
+TO: main_bb315;
+
+FROM: main_bb314_end;
+assume(v1052 == v830);
+TO: main_bb321;
+
+FROM: main_bb315;
+TO: main_bb315_end;
+
+FROM: main_bb315_end;
+assume(nondet());
+TO: main_bb316;
+
+FROM: main_bb315_end;
+assume(nondet());
+TO: main_bb320;
+
+FROM: main_bb316;
+TO: main_bb316_end;
+
+FROM: main_bb316_end;
+assume(v1054 > v834);
+TO: main_bb317;
+
+FROM: main_bb316_end;
+assume(v1054 <= v834);
+TO: main_bb318;
+
+FROM: main_bb317;
+send5 := v1051;
+TO: main_bb321;
+
+FROM: main_bb318;
+TO: main_bb318_end;
+
+FROM: main_bb318_end;
+assume(v1056 == v836);
+TO: main_bb319;
+
+FROM: main_bb318_end;
+assume(v1056 != v836);
+TO: main_bb321;
+
+FROM: main_bb319;
+st5 := 1;
+TO: main_bb321;
+
+FROM: main_bb320;
+send5 := v1051;
+TO: main_bb321;
+
+FROM: main_bb321;
+mode5 := 0;
+TO: main_node5.exit;
+
+FROM: main_bb322;
+v1058 := send5;
+TO: main_bb322_end;
+
+FROM: main_bb322_end;
+assume(nondet());
+TO: main_bb323;
+
+FROM: main_bb322_end;
+assume(nondet());
+TO: main_bb328;
+
+FROM: main_bb323;
+TO: main_bb323_end;
+
+FROM: main_bb323_end;
+assume(v1059 != v867);
+TO: main_bb324;
+
+FROM: main_bb323_end;
+assume(v1059 == v867);
+TO: main_bb326;
+
+FROM: main_bb324;
+v1061 := p5_new;
+TO: main_bb324_end;
+
+FROM: main_bb324_end;
+assume(v1062 == v869);
+TO: main_bb325;
+
+FROM: main_bb324_end;
+assume(v1062 != v869);
+TO: main_bb326;
+
+FROM: main_bb325;
+v1064 := send5;
+var__temp_v.sink.i2 := v1064;
+TO: main_bb327;
+
+FROM: main_bb326;
+v1065 := p5_new;
+var__temp_v.sink.i2 := v1065;
+TO: main_bb327;
+
+FROM: main_bb327;
+v.sink.i2 := var__temp_v.sink.i2;
+p5_new := v1067;
+TO: main_bb334;
+
+FROM: main_bb328;
+TO: main_bb328_end;
+
+FROM: main_bb328_end;
+assume(v1059 != v871);
+TO: main_bb329;
+
+FROM: main_bb328_end;
+assume(v1059 == v871);
+TO: main_bb334;
+
+FROM: main_bb329;
+v1069 := send5;
+TO: main_bb329_end;
+
+FROM: main_bb329_end;
+assume(v1070 != v873);
+TO: main_bb330;
+
+FROM: main_bb329_end;
+assume(v1070 == v873);
+TO: main_bb332;
+
+FROM: main_bb330;
+v1072 := p5_new;
+TO: main_bb330_end;
+
+FROM: main_bb330_end;
+assume(v1073 == v875);
+TO: main_bb331;
+
+FROM: main_bb330_end;
+assume(v1073 != v875);
+TO: main_bb332;
+
+FROM: main_bb331;
+v1075 := send5;
+var__temp_v.sink1.i3 := v1075;
+TO: main_bb333;
+
+FROM: main_bb332;
+v1076 := p5_new;
+var__temp_v.sink1.i3 := v1076;
+TO: main_bb333;
+
+FROM: main_bb333;
+v.sink1.i3 := var__temp_v.sink1.i3;
+p5_new := v1078;
+TO: main_bb334;
+
+FROM: main_bb334;
+mode5 := 1;
+TO: main_node5.exit;
+
+FROM: main_node5.exit;
+v1079 := mode6;
+TO: main_node5.exit_end;
+
+FROM: main_node5.exit_end;
+assume(nondet());
+TO: main_bb335;
+
+FROM: main_node5.exit_end;
+assume(nondet());
+TO: main_bb343;
+
+FROM: main_bb335;
+v1081 := p5_old;
+p5_old := v837;
+TO: main_bb335_end;
+
+FROM: main_bb335_end;
+assume(v1082 != v839);
+TO: main_bb336;
+
+FROM: main_bb335_end;
+assume(v1082 == v839);
+TO: main_bb342;
+
+FROM: main_bb336;
+TO: main_bb336_end;
+
+FROM: main_bb336_end;
+assume(nondet());
+TO: main_bb337;
+
+FROM: main_bb336_end;
+assume(nondet());
+TO: main_bb341;
+
+FROM: main_bb337;
+TO: main_bb337_end;
+
+FROM: main_bb337_end;
+assume(v1084 > v843);
+TO: main_bb338;
+
+FROM: main_bb337_end;
+assume(v1084 <= v843);
+TO: main_bb339;
+
+FROM: main_bb338;
+send6 := v1081;
+TO: main_bb342;
+
+FROM: main_bb339;
+TO: main_bb339_end;
+
+FROM: main_bb339_end;
+assume(v1086 == v845);
+TO: main_bb340;
+
+FROM: main_bb339_end;
+assume(v1086 != v845);
+TO: main_bb342;
+
+FROM: main_bb340;
+st6 := 1;
+TO: main_bb342;
+
+FROM: main_bb341;
+send6 := v1081;
+TO: main_bb342;
+
+FROM: main_bb342;
+mode6 := 0;
+TO: main_node6.exit;
+
+FROM: main_bb343;
+v1088 := send6;
+TO: main_bb343_end;
+
+FROM: main_bb343_end;
+assume(nondet());
+TO: main_bb344;
+
+FROM: main_bb343_end;
+assume(nondet());
+TO: main_bb349;
+
+FROM: main_bb344;
+TO: main_bb344_end;
+
+FROM: main_bb344_end;
+assume(v1089 != v855);
+TO: main_bb345;
+
+FROM: main_bb344_end;
+assume(v1089 == v855);
+TO: main_bb347;
+
+FROM: main_bb345;
+v1091 := p6_new;
+TO: main_bb345_end;
+
+FROM: main_bb345_end;
+assume(v1092 == v857);
+TO: main_bb346;
+
+FROM: main_bb345_end;
+assume(v1092 != v857);
+TO: main_bb347;
+
+FROM: main_bb346;
+v1094 := send6;
+var__temp_v.sink.i := v1094;
+TO: main_bb348;
+
+FROM: main_bb347;
+v1095 := p6_new;
+var__temp_v.sink.i := v1095;
+TO: main_bb348;
+
+FROM: main_bb348;
+v.sink.i := var__temp_v.sink.i;
+p6_new := v1097;
+TO: main_bb355;
+
+FROM: main_bb349;
+TO: main_bb349_end;
+
+FROM: main_bb349_end;
+assume(v1089 != v859);
+TO: main_bb350;
+
+FROM: main_bb349_end;
+assume(v1089 == v859);
+TO: main_bb355;
+
+FROM: main_bb350;
+v1099 := send6;
+TO: main_bb350_end;
+
+FROM: main_bb350_end;
+assume(v1100 != v861);
+TO: main_bb351;
+
+FROM: main_bb350_end;
+assume(v1100 == v861);
+TO: main_bb353;
+
+FROM: main_bb351;
+v1102 := p6_new;
+TO: main_bb351_end;
+
+FROM: main_bb351_end;
+assume(v1103 == v863);
+TO: main_bb352;
+
+FROM: main_bb351_end;
+assume(v1103 != v863);
+TO: main_bb353;
+
+FROM: main_bb352;
+v1105 := send6;
+var__temp_v.sink1.i := v1105;
+TO: main_bb354;
+
+FROM: main_bb353;
+v1106 := p6_new;
+var__temp_v.sink1.i := v1106;
+TO: main_bb354;
+
+FROM: main_bb354;
+v.sink1.i := var__temp_v.sink1.i;
+p6_new := v1108;
+TO: main_bb355;
+
+FROM: main_bb355;
+mode6 := 1;
+TO: main_node6.exit;
+
+FROM: main_node6.exit;
+v1109 := p1_new;
+p1_old := v1109;
+p1_new := v846;
+v1110 := p2_new;
+p2_old := v1110;
+p2_new := v847;
+v1111 := p3_new;
+p3_old := v1111;
+p3_new := v848;
+v1112 := p4_new;
+p4_old := v1112;
+p4_new := v849;
+v1113 := p5_new;
+p5_old := v1113;
+p5_new := v850;
+v1114 := p6_new;
+p6_old := v1114;
+p6_new := v851;
+v1115 := st1;
+v1117 := st2;
+v1119 := v1116 + v1118;
+v1120 := st3;
+v1122 := v1119 + v1121;
+v1123 := st4;
+v1125 := v1122 + v1124;
+v1126 := st5;
+v1128 := v1125 + v1127;
+v1129 := st6;
+v1131 := v1128 + v1130;
+var__temp_vtmp.2.i := 0;
+TO: main_node6.exit_end;
+
+FROM: main_node6.exit_end;
+assume(v1131 <= 1);
+TO: main_bb356;
+
+FROM: main_node6.exit_end;
+assume(v1131 > 1);
+TO: main_check.exit;
+
+FROM: main_bb356;
+v1133 := r1;
+var__temp_vtmp.2.i := 1;
+TO: main_bb356_end;
+
+FROM: main_bb356_end;
+assume(v1134 < 6);
+TO: main_check.exit;
+
+FROM: main_bb356_end;
+assume(v1134 >= 6);
+TO: main_bb357;
+
+FROM: main_bb357;
+v1136 := st1;
+v1138 := st2;
+v1140 := v1137 + v1139;
+v1141 := st3;
+v1143 := v1140 + v1142;
+v1144 := st4;
+v1146 := v1143 + v1145;
+v1147 := st5;
+v1149 := v1146 + v1148;
+v1150 := st6;
+v1152 := v1149 + v1151;
+TO: main_bb357_v..i1;
+FROM: main_bb357_v..i1;
+assume(v1152 == 1);
+v..i1 := 1;
+TO: main_bb357_sv..i1;
+
+FROM: main_bb357_v..i1;
+assume(v1152 != 1);
+v..i1 := 0;
+TO: main_bb357_sv..i1;
+
+FROM: main_bb357_sv..i1;
+var__temp_vtmp.2.i := v..i1;
+TO: main_check.exit;
+
+FROM: main_check.exit;
+vtmp.2.i := var__temp_vtmp.2.i;
+TO: main_check.exit_end;
+
+FROM: main_check.exit_end;
+assume(nondet());
+TO: main_assert.exit;
+
+FROM: main_check.exit_end;
+assume(nondet());
+TO: main_bb358;
+
+FROM: main_assert.exit;
+v1157 := vi2.0 + 1;
+var__temp_vi2.0 := v1157;
+TO: main_bb227;
+
+FROM: main_bb358;
+
+FROM: main_bb359;
+TO: main_bb359_ret;
+

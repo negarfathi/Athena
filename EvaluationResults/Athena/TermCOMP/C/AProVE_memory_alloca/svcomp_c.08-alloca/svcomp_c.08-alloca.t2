@@ -1,0 +1,108 @@
+///*** 1_main ***///
+START: main_bb10;
+
+
+
+FROM: main_bb10;
+memory0_freeIndex := 1;
+memory1_freeIndex := 1;
+memory2_freeIndex := 1;
+vmemory2 := nondet();
+vmemory1 := nondet();
+vmemory0 := nondet();
+v59 := nondet();
+v60 := nondet();
+v61 := memory2_freeIndex;
+v62 := memory2_freeIndex;
+v63 := v62 + 1;
+memory2_freeIndex := v63;
+v64 := memory1_freeIndex;
+v65 := memory1_freeIndex;
+v66 := v65 + 1;
+memory1_freeIndex := v66;
+v67 := memory0_freeIndex;
+v68 := memory0_freeIndex;
+v69 := v68 + 1;
+memory0_freeIndex := v69;
+v70 := v61;
+v71 := v70;
+vmemory2 := store_array(vmemory2, v71, v59);
+v72 := v64;
+v73 := v72;
+vmemory1 := store_array(vmemory1, v73, v60);
+v74 := v67;
+v75 := v74;
+vmemory0 := store_array(vmemory0, v75, 0);
+v76 := v61;
+v77 := v76;
+v78 := v64;
+v79 := v78;
+v80 := v64;
+v81 := v80;
+v82 := v61;
+v83 := v82;
+v84 := v64;
+v85 := v84;
+v86 := v64;
+v87 := v86;
+v88 := v67;
+v89 := v88;
+v90 := v67;
+v91 := v90;
+TO: main_bb11;
+
+FROM: main_bb11;
+v92 := select_array(vmemory2, v77);
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(v92 >= 0);
+TO: main_bb12;
+
+FROM: main_bb11_end;
+assume(v92 < 0);
+TO: main_test_fun.exit;
+
+FROM: main_bb12;
+vmemory1 := store_array(vmemory1, v79, 0);
+v94 := select_array(vmemory2, v83);
+TO: main_bb13;
+
+FROM: main_bb13;
+v95 := select_array(vmemory1, v81);
+v96 := v94 - 1;
+TO: main_bb13_end;
+
+FROM: main_bb13_end;
+assume(v95 <= v96);
+TO: main_bb14;
+
+FROM: main_bb13_end;
+assume(v95 > v96);
+TO: main_bb15;
+
+FROM: main_bb14;
+v98 := select_array(vmemory1, v85);
+v99 := v98 + 1;
+vmemory1 := store_array(vmemory1, v87, v99);
+v100 := select_array(vmemory0, v89);
+v101 := v100 + 1;
+vmemory0 := store_array(vmemory0, v91, v101);
+TO: main_bb13;
+
+FROM: main_bb15;
+v102 := v61;
+v103 := v102;
+v104 := select_array(vmemory2, v103);
+v105 := v104 - 1;
+v106 := v61;
+v107 := v106;
+vmemory2 := store_array(vmemory2, v107, v105);
+TO: main_bb11;
+
+FROM: main_test_fun.exit;
+v108 := v67;
+v109 := v108;
+v110 := select_array(vmemory0, v109);
+TO: main_test_fun.exit_ret;
+

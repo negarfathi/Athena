@@ -1,0 +1,57 @@
+NODE   2: <2> PSNodeType::ENTRY (points-to size: 0)
+NODE   3:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   4:   %temp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %temp = alloca i32, align 4 + 0
+NODE   5:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   6: <6> PSNodeType::CALL (points-to size: 0)
+NODE   7: <7> PSNodeType::ENTRY (points-to size: 0)
+NODE   8:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   9:   %c = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %c = alloca i32, align 4 + 0
+NODE  10:   %0 = load i32, i32* @flag, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  11:   store i32 -1, i32* %retval, align 4 (points-to size: 0)
+NODE  12:   %6 = load i32, i32* %retval, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  13:   ret i32 %6 (points-to size: 0)
+NODE  14:   %1 = load i32, i32* @flag, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  15:   %inc = add nsw i32 %1, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  16:   store i32 %inc, i32* @flag, align 4 (points-to size: 0)
+NODE  17:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  18:   store i32 %call, i32* %c, align 4 (points-to size: 0)
+NODE  19:   %2 = load i32, i32* %c, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  20:   %3 = load i32, i32* %c, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  21:   %sub = sub nsw i32 0, %3 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  22:   store i32 %sub, i32* %c, align 4 (points-to size: 0)
+NODE  23:   %4 = load i32, i32* %c, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  24:   %rem = srem i32 %4, 256 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  25:   store i32 %rem, i32* %c, align 4 (points-to size: 0)
+NODE  26:   %5 = load i32, i32* %c, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  27:   store i32 %5, i32* %retval, align 4 (points-to size: 0)
+NODE  28: fgetc (points-to size: 1)
+    -> fgetc + 0
+NODE  29: main (points-to size: 1)
+    -> main + 0
+NODE  30:   %call = call i32 @fgetc() (points-to size: 0)
+NODE  31:   store i32 %call, i32* %temp, align 4 (points-to size: 0)
+NODE  32:   %0 = load i32, i32* %temp, align 4 (points-to size: 0)
+NODE  33:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  34:   %3 = load i32, i32* %retval, align 4 (points-to size: 1)
+    -> null + 0
+NODE  35:   ret i32 %3 (points-to size: 0)
+NODE  36:   %1 = load i32, i32* %temp, align 4 (points-to size: 0)
+NODE  37:   %2 = load i32, i32* %temp, align 4 (points-to size: 0)
+NODE  38:   store i32 0, i32* %retval, align 4 (points-to size: 0)

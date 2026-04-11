@@ -1,0 +1,129 @@
+///*** 1_main ***///
+START: main_bb8;
+
+FROM: main_bb8;
+v20 := nondet();
+v21 := nondet();
+TO: main_bb8_v.;
+FROM: main_bb8_v.;
+assume(v20 < 1);
+v. := 1;
+TO: main_bb8_sv.;
+
+FROM: main_bb8_v.;
+assume(v20 >= 1);
+v. := v20;
+TO: main_bb8_sv.;
+
+FROM: main_bb8_sv.;
+TO: main_bb8_vBlen.0;
+FROM: main_bb8_vBlen.0;
+assume(v21 < 1);
+vBlen.0 := 1;
+TO: main_bb8_svBlen.0;
+
+FROM: main_bb8_vBlen.0;
+assume(v21 >= 1);
+vBlen.0 := v21;
+TO: main_bb8_svBlen.0;
+
+FROM: main_bb8_svBlen.0;
+v25 := v24 * 4;
+v29 := v28 * 4;
+v33 := v32 * 4;
+var__temp_vi.0.i := 0;
+var__temp_vk.0.i := 0;
+TO: main_bb9;
+
+FROM: main_bb9;
+vi.0.i := var__temp_vi.0.i;
+vk.0.i := var__temp_vk.0.i;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(vi.0.i < v.);
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(vi.0.i >= v.);
+TO: main_diff.exit;
+
+FROM: main_bb10;
+v39 := nondef.2;
+var__temp_vfound.0.i := 0;
+var__temp_vj.0.i := 0;
+TO: main_bb11;
+
+FROM: main_bb11;
+vfound.0.i := var__temp_vfound.0.i;
+vj.0.i := var__temp_vj.0.i;
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume((vj.0.i < vBlen.0) && (!(vfound.0.i != 0)));
+TO: main_bb12;
+
+FROM: main_bb11_end;
+assume((vj.0.i >= vBlen.0) || (vfound.0.i != 0));
+TO: main_.critedge.i;
+
+FROM: main_bb12;
+v45 := nondef.3;
+v47 := vj.0.i + 1;
+TO: main_bb12_vfound.1.i;
+FROM: main_bb12_vfound.1.i;
+assume(v39 == v45);
+vfound.1.i := 1;
+TO: main_bb12_svfound.1.i;
+
+FROM: main_bb12_vfound.1.i;
+assume(v39 != v45);
+vfound.1.i := vfound.0.i;
+TO: main_bb12_svfound.1.i;
+
+FROM: main_bb12_svfound.1.i;
+TO: main_bb12_vj.1.i;
+FROM: main_bb12_vj.1.i;
+assume(v39 == v45);
+vj.1.i := vj.0.i;
+TO: main_bb12_svj.1.i;
+
+FROM: main_bb12_vj.1.i;
+assume(v39 != v45);
+vj.1.i := v47;
+TO: main_bb12_svj.1.i;
+
+FROM: main_bb12_svj.1.i;
+var__temp_vfound.0.i := vfound.1.i;
+var__temp_vj.0.i := vj.1.i;
+TO: main_bb11;
+
+FROM: main_.critedge.i;
+var__temp_vk.1.i := vk.0.i;
+TO: main_.critedge.i_end;
+
+FROM: main_.critedge.i_end;
+assume(vfound.0.i != 0);
+TO: main_bb14;
+
+FROM: main_.critedge.i_end;
+assume(vfound.0.i == 0);
+TO: main_bb13;
+
+FROM: main_bb13;
+v51 := nondef.4;
+v53 := v51;
+v54 := vk.0.i + 1;
+var__temp_vk.1.i := v54;
+TO: main_bb14;
+
+FROM: main_bb14;
+vk.1.i := var__temp_vk.1.i;
+v55 := vi.0.i + 1;
+var__temp_vi.0.i := v55;
+var__temp_vk.0.i := vk.1.i;
+TO: main_bb9;
+
+FROM: main_diff.exit;
+TO: main_diff.exit_ret;
+

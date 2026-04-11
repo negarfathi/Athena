@@ -1,0 +1,111 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.KOqpyS
+
+Input File is : LeikeHeizmann-TACAS2014-Ex9_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program from Example 9 of
+ * 2014TACAS - Leike, Heizmann - Ranking Templates for Linear Loops
+ *
+ * Date: 2014-06-29
+ * Author: Jan Leike
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int q = __VERIFIER_nondet_int();
+	int p = __VERIFIER_nondet_int();
+	while (q > 0 && p > 0) {
+		{if (q < p) {
+			q = q - 1;
+		} else {
+			{if (p < q) {
+				p = p - 1;
+			} else {
+				break;
+			}}
+		}}
+	}
+	return 0;
+}
+
+End Main   
+
+Input File is : LeikeHeizmann-TACAS2014-Ex9_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Example 9 of
+ * 2014TACAS - Leike, Heizmann - Ranking Templates for Linear Loops
+ *
+ * Date: 2014-06-29
+ * Author: Jan Leike
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int q = __VERIFIER_nondet_int();
+	int p = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+	while (q > 0 && p > 0) { __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int op;static int oq;if(pStored0){__CPROVER_assert(!(op==p && oq==q),"recurrent state found");} if(flag){op=p;oq=q;pStored0=myTrue;} 
+		{ __VERIFIER_reached_control(15, __func__);
+if (q < p) { __VERIFIER_control_true(15, __func__);
+
+			q = q - 1;
+		} else { __VERIFIER_control_false(17, __func__);
+
+			{ __VERIFIER_reached_control(18, __func__);
+if (p < q) { __VERIFIER_control_true(18, __func__);
+
+				p = p - 1;
+			} else { __VERIFIER_control_false(20, __func__);
+
+				break;
+			}}
+		}}
+	}
+	return 0;
+}
+
+End Main 
+ LeikeHeizmann-TACAS2014-Ex9_true-termination_braced_instrumented.c
+NTFILE is LeikeHeizmann-TACAS2014-Ex9_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for LeikeHeizmann-TACAS2014-Ex9_true-termination.c
+FILE=LeikeHeizmann-TACAS2014-Ex9_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182344 milliseconds

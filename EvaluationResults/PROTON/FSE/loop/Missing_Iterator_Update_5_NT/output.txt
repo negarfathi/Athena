@@ -1,0 +1,144 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.RHVHfM
+
+Input File is : Missing_Iterator_Update_5_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+
+Commit Number: 7644143cd6f7e029f3a8ea64f5fb0ab33ec39f72
+URL: https://github.com/aeroevan/android_kernel_asus_grouper/commit/7644143cd6f7e029f3a8ea64f5fb0ab33ec39f72
+Project Name: android_kernel_asus_grouper
+License: GPL2
+termination: FALSE
+
+*/
+int main()
+{
+    int MCE_LOG_LEN = __VERIFIER_nondet_int();
+    {if( MCE_LOG_LEN <= 0 || MCE_LOG_LEN > 1000)
+        {return 0;}}
+    int mcelog_entry[MCE_LOG_LEN];
+    for( int i = 0; i < MCE_LOG_LEN; i++ )
+        {mcelog_entry[i] = __VERIFIER_nondet_int();}
+    int entry = __VERIFIER_nondet_int();
+    {if( entry < 0 )
+        {return 0;}}
+    for( ; ; )
+    {
+        {if( entry >= MCE_LOG_LEN )
+            {return 0;}}
+        {if( mcelog_entry[entry] )
+        {
+            entry++;
+            continue;
+        }}
+    }
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Missing_Iterator_Update_5_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+
+Commit Number: 7644143cd6f7e029f3a8ea64f5fb0ab33ec39f72
+URL: https://github.com/aeroevan/android_kernel_asus_grouper/commit/7644143cd6f7e029f3a8ea64f5fb0ab33ec39f72
+Project Name: android_kernel_asus_grouper
+License: GPL2
+termination: FALSE
+
+*/
+int main()
+{
+    int MCE_LOG_LEN = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(14, __func__);
+if( MCE_LOG_LEN <= 0 || MCE_LOG_LEN > 1000)
+        { __VERIFIER_control_true(15, __func__);
+return 0;}}
+    int mcelog_entry[MCE_LOG_LEN];
+    for( int i = 0; i < MCE_LOG_LEN; i++ )
+        {printf("ArrayNT State @ line18: Array Found\n");mcelog_entry[i] = __VERIFIER_nondet_int();}
+    int entry = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(20, __func__);
+if( entry < 0 )
+        { __VERIFIER_control_true(21, __func__);
+return 0;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(23, __func__);
+ for( ; ; )
+    { __VERIFIER_loop_head(23, __func__);
+printf("CBMC Instrumentation @ line23");myBool flag=__VERIFIER_nondet_myBool();static int oMCE_LOG_LEN;static int oentry;if(pStored0){__CPROVER_assert(!(oMCE_LOG_LEN==MCE_LOG_LEN && oentry==entry),"recurrent state found");} if(flag){oMCE_LOG_LEN=MCE_LOG_LEN;oentry=entry;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(24, __func__);
+if( entry >= MCE_LOG_LEN )
+            { __VERIFIER_control_true(25, __func__);
+return 0;}}
+        { __VERIFIER_reached_control(26, __func__);
+if( mcelog_entry[entry] )
+        { __VERIFIER_control_true(27, __func__);
+
+            entry++;
+            continue;
+        }}
+    }
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Missing_Iterator_Update_5_NT_braced_instrumented.c
+NTFILE is Missing_Iterator_Update_5_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Missing_Iterator_Update_5_NT.c
+b'112434bb240b26c4638d6cd0154d1539660c2433f81c794924c4580649ad7039  Missing_Iterator_Update_5_NT.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Missing_Iterator_Update_5_NT/Missing_Iterator_Update_5_NT.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 14 reachedControl
+main 20 reachedControl
+main 23 reachedControl
+main 23 loopHead
+main 24 reachedControl
+enteringLasso
+main 26 reachedControl
+main 23 loopHead
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 163, in generateViolationWitness
+    nextLineNo = nextLineWords[-2]
+IndexError: list index out of range
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Missing_Iterator_Update_5_NT.c
+FILE=Missing_Iterator_Update_5_NT_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2284 milliseconds

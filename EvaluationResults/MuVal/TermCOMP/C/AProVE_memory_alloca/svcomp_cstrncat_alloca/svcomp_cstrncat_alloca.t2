@@ -1,0 +1,132 @@
+///*** 1_main ***///
+START: main_bb10;
+
+FROM: main_bb10;
+v15 := nondet();
+v16 := nondet();
+v17 := nondet();
+TO: main_bb10_v.;
+FROM: main_bb10_v.;
+assume(v15 < 1);
+v. := 1;
+TO: main_bb10_sv.;
+
+FROM: main_bb10_v.;
+assume(v15 >= 1);
+v. := v15;
+TO: main_bb10_sv.;
+
+FROM: main_bb10_sv.;
+TO: main_bb10_vlength2.0;
+FROM: main_bb10_vlength2.0;
+assume(v16 < 1);
+vlength2.0 := 1;
+TO: main_bb10_svlength2.0;
+
+FROM: main_bb10_vlength2.0;
+assume(v16 >= 1);
+vlength2.0 := v16;
+TO: main_bb10_svlength2.0;
+
+FROM: main_bb10_svlength2.0;
+TO: main_bb10_v.1;
+FROM: main_bb10_v.1;
+assume(v17 < 1);
+v.1 := 1;
+TO: main_bb10_sv.1;
+
+FROM: main_bb10_v.1;
+assume(v17 >= 1);
+v.1 := v17;
+TO: main_bb10_sv.1;
+
+FROM: main_bb10_sv.1;
+v22 := v. - v.1;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume((v. < v.1) || (v22 < vlength2.0));
+TO: main_cstrncat.exit;
+
+FROM: main_bb10_end;
+assume((v. >= v.1) && (v22 >= vlength2.0));
+TO: main_bb11;
+
+FROM: main_bb11;
+v25 := v24 * 1;
+v28 := v27 * 1;
+v30 := v. - v.1;
+v31 := v30 - 1;
+v33 := 0;
+v34 := vlength2.0 - 1;
+v36 := 0;
+TO: main_bb12;
+
+FROM: main_bb12;
+v37 := nondef.3;
+var__temp_v.01.i := v.1;
+TO: main_bb12_end;
+
+FROM: main_bb12_end;
+assume(v38 != 0);
+TO: main_bb13;
+
+FROM: main_bb12_end;
+assume(v38 == 0);
+TO: main_bb14;
+
+FROM: main_bb13;
+TO: main_bb12;
+
+FROM: main_bb14;
+v.01.i := var__temp_v.01.i;
+TO: main_bb14_end;
+
+FROM: main_bb14_end;
+assume(v.01.i != 0);
+TO: main_bb15;
+
+FROM: main_bb14_end;
+assume(v.01.i == 0);
+TO: main_bb16;
+
+FROM: main_bb15;
+v43 := nondef.4;
+vs.1.i := v43;
+TO: main_bb16;
+
+FROM: main_bb16;
+TO: main_bb16_end;
+
+FROM: main_bb16_end;
+assume(nondet());
+TO: main_bb17;
+
+FROM: main_bb16_end;
+assume(nondet());
+TO: main_bb18;
+
+FROM: main_bb17;
+v47 := v.01.i + -1;
+var__temp_v.01.i := v47;
+TO: main_bb14;
+
+FROM: main_bb18;
+v49 := nondef.5;
+TO: main_bb18_end;
+
+FROM: main_bb18_end;
+assume(v50 != 0);
+TO: main_bb19;
+
+FROM: main_bb18_end;
+assume(v50 == 0);
+TO: main_cstrncat.exit;
+
+FROM: main_bb19;
+vs.1.i := 0;
+TO: main_cstrncat.exit;
+
+FROM: main_cstrncat.exit;
+TO: main_cstrncat.exit_ret;
+

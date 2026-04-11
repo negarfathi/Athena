@@ -1,0 +1,159 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.F5hwXa
+
+Input File is : svcomp_openbsd_cstrcspn_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/*
+ * Span the complement of string s2.
+ */
+int
+cstrcspn(const char *s1, const char *s2)
+{
+	const char *p;
+	const char *spanp;
+	char c, sc;
+
+	/*
+	 * Stop as soon as we find any character from s2.  Note that there
+	 * must be a NUL in s2; it suffices to stop when we find that, too.
+	 */
+	for (p = s1;;) {
+		c = *p++;
+		spanp = s2;
+		do {
+			{if ((sc = *spanp++) == c)
+				{return (p - 1 - s1);}}
+		} while (sc != 0);
+	}
+	/* NOTREACHED */
+}
+
+int main() {
+    int length1 = __VERIFIER_nondet_int();
+    int length2 = __VERIFIER_nondet_int();
+    {if (length1 < 1) {
+        length1 = 1;
+    }}
+    {if (length2 < 1) {
+        length2 = 1;
+    }}
+    char* nondetString1 = (char*) alloca(length1 * sizeof(char));
+    char* nondetString2 = (char*) alloca(length2 * sizeof(char));
+    nondetString1[length1-1] = '\0';
+    nondetString2[length2-1] = '\0';
+    return cstrcspn(nondetString1,nondetString2);
+}
+
+
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_openbsd_cstrcspn_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 17.12.2013
+ * Author: Thomas Ströder
+ */
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+/*
+ * Span the complement of string s2.
+ */
+int
+cstrcspn(const char *s1, const char *s2)
+{
+	const char *p;
+	const char *spanp;
+	char c, sc;
+
+	/*
+	 * Stop as soon as we find any character from s2.  Note that there
+	 * must be a NUL in s2; it suffices to stop when we find that, too.
+	 */
+myBool pStored0 = myFalse; __VERIFIER_reached_control(23, __func__);
+	for (p = s1;;) { __VERIFIER_loop_head(23, __func__);
+printf("CBMC Instrumentation @ line23");myBool flag=__VERIFIER_nondet_myBool();static char oc;static const char * op;static const char * os1;static const char * os2;static char osc;static const char * ospanp;if(pStored0){__CPROVER_assert(!(oc==c && op==p && os1==s1 && os2==s2 && osc==sc && ospanp==spanp),"recurrent state found");} if(flag){oc=c;op=p;os1=s1;os2=s2;osc=sc;ospanp=spanp;pStored0=myTrue;} 
+		c = *p++;
+		spanp = s2;
+	myBool pStored1 = myFalse; __VERIFIER_reached_control(26, __func__);
+	do { __VERIFIER_loop_head(26, __func__);
+printf("CBMC Instrumentation @ line26");myBool flag=__VERIFIER_nondet_myBool();static char oc;static const char * op;static const char * os1;static const char * os2;static char osc;static const char * ospanp;if(pStored1){__CPROVER_assert(!(oc==c && op==p && os1==s1 && os2==s2 && osc==sc && ospanp==spanp),"recurrent state found");} if(flag){oc=c;op=p;os1=s1;os2=s2;osc=sc;ospanp=spanp;pStored1=myTrue;} 
+			{ __VERIFIER_reached_control(27, __func__);
+if ((sc = *spanp++) == c)
+				{ __VERIFIER_control_true(28, __func__);
+return (p - 1 - s1);}}
+		} while (sc != 0);
+	}
+	/* NOTREACHED */
+}
+
+int main() {
+    int length1 = __VERIFIER_nondet_int();
+    int length2 = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(37, __func__);
+if (length1 < 1) { __VERIFIER_control_true(37, __func__);
+
+        length1 = 1;
+    }}
+    { __VERIFIER_reached_control(40, __func__);
+if (length2 < 1) { __VERIFIER_control_true(40, __func__);
+
+        length2 = 1;
+    }}
+    char* nondetString1 = (char*) alloca(length1 * sizeof(char));
+    char* nondetString2 = (char*) alloca(length2 * sizeof(char));
+    nondetString1[length1-1] = '\0';
+    nondetString2[length2-1] = '\0';
+    return cstrcspn(nondetString1,nondetString2);
+}
+
+
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_openbsd_cstrcspn_alloca_braced_instrumented.c
+NTFILE is svcomp_openbsd_cstrcspn_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_openbsd_cstrcspn_alloca.c
+FILE=svcomp_openbsd_cstrcspn_alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183011 milliseconds

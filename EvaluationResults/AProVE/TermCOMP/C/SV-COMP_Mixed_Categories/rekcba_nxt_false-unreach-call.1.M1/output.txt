@@ -1,0 +1,36 @@
+line 1864:5 extraneous input 'metadata' expecting EXCLAMATION
+line 1864:25 no viable alternative at input '!'
+Aborted 1755967775Exec. 2, CToLLVM with some error. Reason: java.lang.NullPointerException: Cannot invoke "aprove.InputModules.Programs.llvm.internalStructures.literals.LLVMLiteral.getType()" because "val1" is null.
+            aprove.InputModules.Programs.llvm.internalStructures.instructions.LLVMBinaryInstruction.<init>(LLVMBinaryInstruction.java:120)
+            aprove.InputModules.Programs.llvm.parseStructures.LLVMParseInstruction.convertToBinaryInstruction(LLVMParseInstruction.java:118)
+            aprove.InputModules.Programs.llvm.parseStructures.LLVMParseInstruction.convertToBasicInstruction(LLVMParseInstruction.java:1149)
+            aprove.InputModules.Programs.llvm.parseStructures.LLVMParseBlock.convertToBasicBlock(LLVMParseBlock.java:34)
+            aprove.InputModules.Programs.llvm.parseStructures.LLVMParseFunctionDefinition.convertToFnDefinition(LLVMParseFunctionDefinition.java:34)
+            aprove.InputModules.Programs.llvm.parseStructures.LLVMParseModule.createBasicStructure(LLVMParseModule.java:114)
+            aprove.InputModules.Programs.llvm.Translator.translate(Translator.java:136)
+            aprove.InputModules.Programs.llvm.Translator.translate(Translator.java:115)
+            aprove.Framework.Input.Translator$TranslatorSkeleton.translate(Translator.java:91)
+            aprove.InputModules.Programs.c.CToLLVMProcessor.process(CToLLVMProcessor.java:69)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            java.base/java.lang.Thread.run(Thread.java:840)
+java.lang.NullPointerException: Cannot invoke "aprove.InputModules.Programs.llvm.internalStructures.literals.LLVMLiteral.getType()" because "val1" is null
+	at aprove.InputModules.Programs.llvm.internalStructures.instructions.LLVMBinaryInstruction.<init>(LLVMBinaryInstruction.java:120)
+	at aprove.InputModules.Programs.llvm.parseStructures.LLVMParseInstruction.convertToBinaryInstruction(LLVMParseInstruction.java:118)
+	at aprove.InputModules.Programs.llvm.parseStructures.LLVMParseInstruction.convertToBasicInstruction(LLVMParseInstruction.java:1149)
+	at aprove.InputModules.Programs.llvm.parseStructures.LLVMParseBlock.convertToBasicBlock(LLVMParseBlock.java:34)
+	at aprove.InputModules.Programs.llvm.parseStructures.LLVMParseFunctionDefinition.convertToFnDefinition(LLVMParseFunctionDefinition.java:34)
+	at aprove.InputModules.Programs.llvm.parseStructures.LLVMParseModule.createBasicStructure(LLVMParseModule.java:114)
+	at aprove.InputModules.Programs.llvm.Translator.translate(Translator.java:136)
+	at aprove.InputModules.Programs.llvm.Translator.translate(Translator.java:115)
+	at aprove.Framework.Input.Translator$TranslatorSkeleton.translate(Translator.java:91)
+	at aprove.InputModules.Programs.c.CToLLVMProcessor.process(CToLLVMProcessor.java:69)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+MAYBE
+Runtime: 2446 milliseconds

@@ -1,0 +1,128 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.aL0o22
+
+Input File is : 4BitCounterPointer_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 2014-06-22
+ * Author: heizmann@informatik.uni-freiburg.de
+ */
+#include <stdlib.h>
+
+int main() {
+	int* x0 = alloca(sizeof(int));
+	int* x1 = alloca(sizeof(int));
+	int* x2 = alloca(sizeof(int));
+	int* x3 = alloca(sizeof(int));
+	*x0 = 0;
+	*x1 = 0;
+	*x2 = 0;
+	*x3 = 0;
+	while ( *x3 == 0 ) {
+		{if (*x0 == 0) {
+			*x0 = 1;
+		} else {
+			*x0 = 0;
+			{if (*x1 == 0) {
+				*x1 = 1;
+			} else {
+				*x1 = 0;
+				{if (*x2 == 0) {
+					*x2 = 1;
+				} else {
+					*x2 = 0;
+					*x3 = 1;
+				}}
+			}}
+		}}
+	}
+	return 0;
+}./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : 4BitCounterPointer_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2014-06-22
+ * Author: heizmann@informatik.uni-freiburg.de
+ */
+#include <stdlib.h>
+
+int main() {
+	int* x0 = alloca(sizeof(int));
+	int* x1 = alloca(sizeof(int));
+	int* x2 = alloca(sizeof(int));
+	int* x3 = alloca(sizeof(int));
+	*x0 = 0;
+	*x1 = 0;
+	*x2 = 0;
+	*x3 = 0;
+myBool pStored0 = myFalse; __VERIFIER_reached_control(16, __func__);
+	while ( *x3 == 0 ) { __VERIFIER_loop_head(16, __func__);
+printf("CBMC Instrumentation @ line16");myBool flag=__VERIFIER_nondet_myBool();static int * ox0;static int ox0_val;static int * ox1;static int ox1_val;static int * ox2;static int ox2_val;static int * ox3;static int ox3_val;if(pStored0){__CPROVER_assert(!(ox0==x0 && *ox0==*x0 && ox0_val==*x0 && ox1==x1 && *ox1==*x1 && ox1_val==*x1 && ox2==x2 && *ox2==*x2 && ox2_val==*x2 && ox3==x3 && *ox3==*x3 && ox3_val==*x3),"recurrent state found");} if(flag){ox0=x0;*ox0=*x0;ox0_val=*x0;ox1=x1;*ox1=*x1;ox1_val=*x1;ox2=x2;*ox2=*x2;ox2_val=*x2;ox3=x3;*ox3=*x3;ox3_val=*x3;pStored0=myTrue;} 
+		{ __VERIFIER_reached_control(17, __func__);
+if (*x0 == 0) { __VERIFIER_control_true(17, __func__);
+
+			*x0 = 1;
+		} else { __VERIFIER_control_false(19, __func__);
+
+			*x0 = 0;
+			{ __VERIFIER_reached_control(21, __func__);
+if (*x1 == 0) { __VERIFIER_control_true(21, __func__);
+
+				*x1 = 1;
+			} else { __VERIFIER_control_false(23, __func__);
+
+				*x1 = 0;
+				{ __VERIFIER_reached_control(25, __func__);
+if (*x2 == 0) { __VERIFIER_control_true(25, __func__);
+
+					*x2 = 1;
+				} else { __VERIFIER_control_false(27, __func__);
+
+					*x2 = 0;
+					*x3 = 1;
+				}}
+			}}
+		}}
+	}
+	return 0;
+}./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+4BitCounterPointer_true-termination_braced_instrumented.c
+NTFILE is 4BitCounterPointer_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for 4BitCounterPointer_true-termination.c
+FILE=4BitCounterPointer_true-termination_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 9254 milliseconds

@@ -1,0 +1,272 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/test-0219_true-valid-memsafety/test-0219_true-valid-memsafety.c
+Converting
+Type-checking test-0219_true-valid-memsafety
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_deallocate
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of abort
+Simplifying
+Computing SSA of memset
+Simplifying
+Computing SSA of calloc_model
+Simplifying
+Computing SSA of l2_insert
+Simplifying
+Computing SSA of l2_destroy
+Simplifying
+Computing SSA of l1_insert
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object list list'obj.next list'obj.l2 __CPROVER_rounding_mode list'obj __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#58 __CPROVER_thread_key_dtors#56 __CPROVER_thread_keys#57 __CPROVER_malloc_is_new_array#48 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#45 __CPROVER_dead_object#46 __CPROVER_deallocated#47 __CPROVER_new_object#50 list#59 list'obj.next list'obj.l2 __CPROVER_rounding_mode#54 list'obj __CPROVER_pipe_count#53 __CPROVER_max_malloc_size#49 __CPROVER_next_thread_id#51 __CPROVER_next_thread_key#52 __CPROVER_thread_id#55 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#54 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#54) <= 0 && __CPROVER_pipe_count#53 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#53) <= 0 && __CPROVER_max_malloc_size#49 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#49) <= -36028797018963968 && __CPROVER_next_thread_id#51 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#51) <= 0 && __CPROVER_next_thread_key#52 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#52) <= 0 && __CPROVER_thread_id#55 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#55) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of l1_insert
+Function l1_insert not analyzed yet
+Recursively summarizing function l1_insert
+Checking precondition of calloc_model
+Function calloc_model not analyzed yet
+Recursively summarizing function calloc_model
+Checking precondition of memset
+Function memset not analyzed yet
+Recursively summarizing function memset
+Analyzing function memset
+Computing summary
+Computing termination argument for memset
+Function trivially terminates
+
+Summary for function memset
+params: s c n 
+globals_in: __CPROVER_dead_object'obj __CPROVER_deallocated'obj memset#return_value'obj s'obj __CPROVER_dead_object __CPROVER_deallocated 
+globals_out: __CPROVER_dead_object'obj __CPROVER_deallocated'obj memset#return_value'obj s'obj __CPROVER_dead_object __CPROVER_deallocated memset#return_value#73 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function calloc_model
+Computing summary
+Computing termination argument for calloc_model
+Function terminates
+
+Summary for function calloc_model
+params: nmemb size 
+globals_in: dynamic_object$99 __CPROVER_malloc_is_new_array __CPROVER_deallocated'obj __CPROVER_memory_leak$111'obj calloc_model#return_value'obj return_value_malloc'obj return_value_memset'obj ptr'obj malloc#return_value'obj malloc_value'obj malloc_res'obj memset#return_value'obj __CPROVER_deallocated __CPROVER_memory_leak$111 __CPROVER_max_malloc_size 
+globals_out: dynamic_object$99#phi129 __CPROVER_malloc_is_new_array#phi129 __CPROVER_deallocated'obj __CPROVER_memory_leak$111'obj calloc_model#return_value'obj return_value_malloc'obj return_value_memset'obj ptr'obj malloc#return_value'obj malloc_value'obj malloc_res'obj memset#return_value'obj __CPROVER_deallocated#phi129 __CPROVER_memory_leak$111#phi129 calloc_model#return_value#138 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of abort
+Function abort not analyzed yet
+Recursively summarizing function abort
+Analyzing function abort
+Computing summary
+Computing termination argument for abort
+Function never terminates normally
+
+Summary for function abort
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Checking precondition of l2_insert
+Function l2_insert not analyzed yet
+Recursively summarizing function l2_insert
+Checking precondition of calloc_model
+Precondition trivially holds, replacing by summary.
+Analyzing function l2_insert
+Computing summary
+Computing termination argument for l2_insert
+Function terminates
+
+Summary for function l2_insert
+params: list 
+globals_in: dynamic_object$171 __CPROVER_malloc_is_new_array __CPROVER_deallocated'obj __CPROVER_memory_leak$183'obj calloc_model#return_value'obj return_value_calloc_model'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_deallocated __CPROVER_memory_leak$183 item'obj.proto list'obj'obj.proto item'obj.next list'obj list'obj'obj.next item'obj list'obj'obj __CPROVER_max_malloc_size 
+globals_out: dynamic_object$171#phi204 __CPROVER_malloc_is_new_array#phi204 __CPROVER_deallocated'obj __CPROVER_memory_leak$183'obj calloc_model#return_value'obj return_value_calloc_model'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_deallocated#phi204 __CPROVER_memory_leak$183#phi204 item'obj.proto#208 list'obj'obj.proto item'obj.next#211 list'obj#212 list'obj'obj.next item'obj list'obj'obj __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function l1_insert
+Computing summary
+Computing termination argument for l1_insert
+
+Summary for function l1_insert
+params: list 
+globals_in: calloc_model#return_value'obj return_value_calloc_model'obj item'obj.next list'obj list'obj'obj.next item'obj.l2 list'obj'obj.l2 item'obj list'obj'obj 
+globals_out: calloc_model#return_value'obj return_value_calloc_model'obj item'obj.next#276 list'obj#277 list'obj'obj.next item'obj.l2 list'obj'obj.l2 item'obj list'obj'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: ($guard#271 && $guard#ls275 ==> return_value___VERIFIER_nondet_int#lb275 <= 2147483647) && ($guard#271 && $guard#ls275 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb275) <= 2147483648)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of l2_destroy
+Function l2_destroy not analyzed yet
+Recursively summarizing function l2_destroy
+Checking precondition of __CPROVER_deallocate
+Function __CPROVER_deallocate not analyzed yet
+Recursively summarizing function __CPROVER_deallocate
+Analyzing function __CPROVER_deallocate
+Computing summary
+Computing termination argument for __CPROVER_deallocate
+Function trivially terminates
+
+Summary for function __CPROVER_deallocate
+params: ptr 
+globals_in: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated 
+globals_out: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated#phi42 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Analyzing function l2_destroy
+Computing summary
+Computing termination argument for l2_destroy
+Synthesizing ranking function to prove termination
+
+Summary for function l2_destroy
+params: list 
+globals_in: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated next'obj.proto list'obj.proto next'obj.next list'obj.next next'obj list'obj 
+globals_out: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated next'obj.proto list'obj.proto#224 next'obj.next list'obj.next#221 next'obj list'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Analyzing function main
+Computing summary
+Computing termination argument for main
+
+Summary for function main
+params: 
+globals_in: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated next'obj.next list list'obj.next next'obj.l2 list'obj.l2 next'obj list'obj 
+globals_out: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated next'obj.next list#30 list'obj.next#10 next'obj.l2 list'obj.l2 main#return_value#34 next'obj list'obj 
+forward precondition: TRUE
+forward transformer: main#return_value#34 <= 2147483647 && -((signed __CPROVER_bitvector[33])main#return_value#34) <= 2147483648
+forward invariant: ($guard#2 && $guard#ls6 ==> return_value___VERIFIER_nondet_int#lb6 <= 2147483647) && ($guard#2 && $guard#ls6 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb6) <= 2147483648)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 3421039290
+  number of solver calls: 3955703762
+  number of summaries used: 12
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_deallocate]: yes
+[__CPROVER_initialize]: yes
+[abort]: no
+[memset]: yes
+[calloc_model]: yes
+[l2_insert]: yes
+[l2_destroy]: unknown
+[l1_insert]: unknown
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 531 milliseconds

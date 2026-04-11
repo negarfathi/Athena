@@ -1,0 +1,33 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %a = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %a = alloca i32, align 4 + 0
+NODE   4:   %b = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %b = alloca i32, align 4 + 0
+NODE   5:   %olda = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %olda = alloca i32, align 4 + 0
+NODE   6:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   7:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   8:   store i32 %call, i32* %a, align 4 (points-to size: 0)
+NODE   9:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  10:   store i32 %call1, i32* %b, align 4 (points-to size: 0)
+NODE  11:   %0 = load i32, i32* %a, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  12:   %1 = load i32, i32* %a, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  13:   store i32 %1, i32* %olda, align 4 (points-to size: 0)
+NODE  14:   %2 = load i32, i32* %b, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  15:   store i32 %2, i32* %a, align 4 (points-to size: 0)
+NODE  16:   %3 = load i32, i32* %olda, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  17:   %add = add nsw i32 %3, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  18:   store i32 %add, i32* %b, align 4 (points-to size: 0)
+NODE  19:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE  20: main (points-to size: 1)
+    -> main + 0

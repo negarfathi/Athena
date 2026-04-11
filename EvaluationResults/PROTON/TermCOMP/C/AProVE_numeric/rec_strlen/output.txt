@@ -1,0 +1,96 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.alFg1e
+
+Input File is : rec_strlen.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int strlen_rec(const char *p) {
+	{if(*p == '\0')
+		{return 0;}
+	else
+		{return 1 + strlen_rec(p+1);}}
+}
+
+int main() {
+	 int length1 = __VERIFIER_nondet_int();
+     {if (length1 < 1) {
+         length1 = 1;
+     }}
+     char* nondetString1 = (char*) alloca(length1 * sizeof(char));
+     nondetString1[length1-1] = '\0';
+	 strlen_rec(nondetString1);
+}
+
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : rec_strlen_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int strlen_rec(const char *p) {
+	{ __VERIFIER_reached_control(6, __func__);
+if(*p == '\0')
+		{ __VERIFIER_control_true(7, __func__);
+return 0;}
+	else
+		{ __VERIFIER_control_false(9, __func__);
+return 1 + strlen_rec(p+1);}}
+}
+
+int main() {
+	 int length1 = __VERIFIER_nondet_int();
+     { __VERIFIER_reached_control(14, __func__);
+if (length1 < 1) { __VERIFIER_control_true(14, __func__);
+
+         length1 = 1;
+     }}
+     char* nondetString1 = (char*) alloca(length1 * sizeof(char));
+     nondetString1[length1-1] = '\0';
+	 strlen_rec(nondetString1);
+}
+
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+rec_strlen_braced_instrumented.c
+NTFILE is rec_strlen_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for rec_strlen.c
+FILE=rec_strlen_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 2735 milliseconds

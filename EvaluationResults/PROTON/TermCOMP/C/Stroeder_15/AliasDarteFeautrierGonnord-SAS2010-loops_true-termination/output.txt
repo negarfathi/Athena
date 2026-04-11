@@ -1,0 +1,218 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.HxiTQZ
+
+Input File is : AliasDarteFeautrierGonnord-SAS2010-loops_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program used in the experimental evaluation of the following paper.
+ * 2010SAS - Alias,Darte,Feautrier,Gonnord, Multi-dimensional Rankings, Program Termination, and Complexity Bounds of Flowchart Programs
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x, y, n;
+	n = __VERIFIER_nondet_int();
+	y = __VERIFIER_nondet_int();
+	x = n;
+	{if (x >= 0) {
+		while (x >= 0) {
+			y = 1;
+			{if (y < x) {
+				while (y < x) {
+					y = 2*y;
+                }
+			}}
+			x = x - 1;
+		}
+	}}
+	return 0;
+}
+
+End Main   
+
+Input File is : AliasDarteFeautrierGonnord-SAS2010-loops_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program used in the experimental evaluation of the following paper.
+ * 2010SAS - Alias,Darte,Feautrier,Gonnord, Multi-dimensional Rankings, Program Termination, and Complexity Bounds of Flowchart Programs
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x, y, n;
+	n = __VERIFIER_nondet_int();
+	y = __VERIFIER_nondet_int();
+	x = n;
+	{ __VERIFIER_reached_control(18, __func__);
+if (x >= 0) { __VERIFIER_control_true(18, __func__);
+
+	myBool pStored0 = myFalse; __VERIFIER_reached_control(19, __func__);
+	while (x >= 0) { __VERIFIER_loop_head(19, __func__);
+printf("CBMC Instrumentation @ line19");myBool flag=__VERIFIER_nondet_myBool();static int on;static int ox;static int oy;if(pStored0){__CPROVER_assert(!(on==n && ox==x && oy==y),"recurrent state found");} if(flag){on=n;ox=x;oy=y;pStored0=myTrue;} 
+			y = 1;
+			{ __VERIFIER_reached_control(21, __func__);
+if (y < x) { __VERIFIER_control_true(21, __func__);
+
+			myBool pStored1 = myFalse; __VERIFIER_reached_control(22, __func__);
+	while (y < x) { __VERIFIER_loop_head(22, __func__);
+printf("CBMC Instrumentation @ line22");myBool flag=__VERIFIER_nondet_myBool();static int on;static int ox;static int oy;if(pStored1){__CPROVER_assert(!(on==n && ox==x && oy==y),"recurrent state found");} if(flag){on=n;ox=x;oy=y;pStored1=myTrue;} 
+					y = 2*y;
+                }
+			}}
+			x = x - 1;
+		}
+	}}
+	return 0;
+}
+
+End Main 
+ AliasDarteFeautrierGonnord-SAS2010-loops_true-termination_braced_instrumented.c
+NTFILE is AliasDarteFeautrierGonnord-SAS2010-loops_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = AliasDarteFeautrierGonnord-SAS2010-loops_true-termination.c
+b'e31e67055f0393aa95b48821529c692c1a3db6a1028e24b46594a23ac03ce1eb  AliasDarteFeautrierGonnord-SAS2010-loops_true-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/AliasDarteFeautrierGonnord-SAS2010-loops_true-termination/AliasDarteFeautrierGonnord-SAS2010-loops_true-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 18 reachedControl
+main 18 trueBranch
+main 19 reachedControl
+main 19 loopHead
+main 21 reachedControl
+main 21 trueBranch
+enteringLasso
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+main 22 reachedControl
+main 22 loopHead
+Trace file line inside enterred lasso check : main 22 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/AliasDarteFeautrierGonnord-SAS2010-loops_true-termination/AliasDarteFeautrierGonnord-SAS2010-loops_true-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for AliasDarteFeautrierGonnord-SAS2010-loops_true-termination.c
+FILE=AliasDarteFeautrierGonnord-SAS2010-loops_true-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 19022 milliseconds

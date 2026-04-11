@@ -1,0 +1,41 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %x = alloca i8*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %x = alloca i8*, align 8 + 0
+NODE   4:   %y = alloca i8*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %y = alloca i8*, align 8 + 0
+NODE   5:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   6:   %0 = load i8*, i8** %x, align 8 (points-to size: 0)
+NODE   7:   %1 = load i8*, i8** %y, align 8 (points-to size: 0)
+NODE   8: <8> PSNodeType::CALL (points-to size: 0)
+NODE   9: <9> PSNodeType::ENTRY (points-to size: 0)
+NODE  10: i8* %x (points-to size: 0)
+NODE  11: i8* %y (points-to size: 0)
+NODE  12:   %x.addr = alloca i8*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %x.addr = alloca i8*, align 8 + 0
+NODE  13:   %y.addr = alloca i8*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %y.addr = alloca i8*, align 8 + 0
+NODE  14:   store i8* %x, i8** %x.addr, align 8 (points-to size: 0)
+NODE  15:   store i8* %y, i8** %y.addr, align 8 (points-to size: 0)
+NODE  16:   %0 = load i8*, i8** %y.addr, align 8 (points-to size: 0)
+NODE  17:   store i8 0, i8* %0, align 1 (points-to size: 0)
+NODE  18:   %1 = load i8*, i8** %x.addr, align 8 (points-to size: 0)
+NODE  19:   %2 = load i8*, i8** %x.addr, align 8 (points-to size: 0)
+NODE  20:   %3 = load i8*, i8** %y.addr, align 8 (points-to size: 0)
+NODE  21:   ret void (points-to size: 0)
+NODE  22:   %4 = load i8*, i8** %x.addr, align 8 (points-to size: 0)
+NODE  23:   %5 = load i8, i8* %4, align 1 (points-to size: 0)
+NODE  24:   %conv = sext i8 %5 to i32 (points-to size: 0)
+NODE  25:   %6 = load i8*, i8** %x.addr, align 8 (points-to size: 0)
+NODE  26:   store i8 0, i8* %6, align 1 (points-to size: 0)
+NODE  27:   %7 = load i8*, i8** %x.addr, align 8 (points-to size: 0)
+NODE  28:   %incdec.ptr = getelementptr inbounds i8, i8* %7, i32 1 (points-to size: 0)
+NODE  29:   store i8* %incdec.ptr, i8** %x.addr, align 8 (points-to size: 0)
+NODE  30: _delete (points-to size: 1)
+    -> _delete + 0
+NODE  31: main (points-to size: 1)
+    -> main + 0
+NODE  32:   call void @_delete(i8* %0, i8* %1) (points-to size: 0)
+NODE  33:   ret i32 0 (points-to size: 1)
+    -> null + 0

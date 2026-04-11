@@ -1,0 +1,150 @@
+///*** 1_main ***///
+START: main_bb0;
+
+FROM: main_bb0;
+TO: main_bb1;
+
+FROM: main_bb1;
+v0 := nondet();
+TO: main_bb1_end;
+
+FROM: main_bb1_end;
+assume(nondet());
+TO: main_gl_insert.exit.i;
+
+FROM: main_bb1_end;
+assume(nondet());
+TO: main_bb11;
+
+FROM: main_gl_insert.exit.i;
+v4 := v0;
+v8 := v5;
+v9 := v7;
+v10 := vgl_list;
+v11 := v5;
+v12 := nondet();
+TO: main_gl_insert.exit.i_end;
+
+FROM: main_gl_insert.exit.i_end;
+assume(v12 != 0);
+TO: main_bb1;
+
+FROM: main_gl_insert.exit.i_end;
+assume(v12 == 0);
+TO: main_gl_read.exit;
+
+FROM: main_gl_read.exit;
+TO: main_gl_read.exit_end;
+
+FROM: main_gl_read.exit_end;
+assume(nondet());
+TO: main_gl_sort.exit;
+
+FROM: main_gl_read.exit_end;
+assume(nondet());
+TO: main_bb2;
+
+FROM: main_bb2;
+v18 := vdst.i;
+v19 := vdst.i;
+TO: main_bb3;
+
+FROM: main_bb3;
+TO: main_bb3_end;
+
+FROM: main_bb3_end;
+assume(nondet());
+TO: main_gl_seek_max.exit.i;
+
+FROM: main_bb3_end;
+assume(nondet());
+TO: main_bb4;
+
+FROM: main_bb4;
+v31 := nondef.2;
+var__temp_vmax.0.i.i := v31;
+TO: main_bb5;
+
+FROM: main_bb5;
+vmax.0.i.i := var__temp_vmax.0.i.i;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(nondet());
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(nondet());
+TO: main_gl_seek_max.exit.i;
+
+FROM: main_bb6;
+v39 := nondef.3;
+TO: main_bb6_vmax.0..i.i;
+FROM: main_bb6_vmax.0..i.i;
+assume(v39 < vmax.0.i.i);
+vmax.0..i.i := vmax.0.i.i;
+TO: main_bb6_svmax.0..i.i;
+
+FROM: main_bb6_vmax.0..i.i;
+assume(v39 >= vmax.0.i.i);
+vmax.0..i.i := v39;
+TO: main_bb6_svmax.0..i.i;
+
+FROM: main_bb6_svmax.0..i.i;
+var__temp_vmax.0.i.i := vmax.0..i.i;
+TO: main_bb5;
+
+FROM: main_gl_seek_max.exit.i;
+TO: main_gl_seek_max.exit.i_end;
+
+FROM: main_gl_seek_max.exit.i_end;
+assume(nondet());
+TO: main_bb7;
+
+FROM: main_gl_seek_max.exit.i_end;
+assume(nondet());
+TO: main_bb8;
+
+FROM: main_bb7;
+v48 := v45;
+v49 := v47;
+v51 := v.0.i.i;
+v52 := v50;
+v53 := vdst.i;
+v21 := v.0.i.i;
+TO: main_bb3;
+
+FROM: main_bb8;
+v56 := vgl_list;
+v57 := v55;
+v58 := vdst.i;
+v59 := vgl_list;
+v64 := v61;
+v65 := v63;
+v66 := nondef.4;
+v67 := nondef.5;
+TO: main_gl_sort.exit;
+
+FROM: main_gl_sort.exit;
+TO: main_bb9;
+
+FROM: main_bb9;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(nondet());
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(nondet());
+TO: main_gl_destroy.exit;
+
+FROM: main_bb10;
+v74 := v73;
+TO: main_bb9;
+
+FROM: main_gl_destroy.exit;
+TO: main_gl_destroy.exit_ret;
+
+FROM: main_bb11;
+

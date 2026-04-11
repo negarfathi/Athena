@@ -1,0 +1,107 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.2EbEsS
+
+Input File is : Missing_Initialization_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 407a3d94f566a68c7a862fcdac812bf53741af94
+URL: https://github.com/FFmpeg/FFmpeg/commit/407a3d94f566a68c7a862fcdac812bf53741af94
+Project Name: FFmpeg
+License: LGPL-2.1
+termination: TRUE
+*/
+int main()
+{
+    int res;
+    int pkt = __VERIFIER_nondet_int();
+    while( pkt < 10 )
+    {
+        res = 0;
+        while( res == 0 )
+        {
+            res = __VERIFIER_nondet_int();
+            pkt++;
+            {if( res == 0 )
+                {break;}}
+        }
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Missing_Initialization_1_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 407a3d94f566a68c7a862fcdac812bf53741af94
+URL: https://github.com/FFmpeg/FFmpeg/commit/407a3d94f566a68c7a862fcdac812bf53741af94
+Project Name: FFmpeg
+License: LGPL-2.1
+termination: TRUE
+*/
+int main()
+{
+    int res;
+    int pkt = __VERIFIER_nondet_int();
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+ while( pkt < 10 )
+    { __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int opkt;static int ores;if(pStored0){__CPROVER_assert(!(opkt==pkt && ores==res),"recurrent state found");} if(flag){opkt=pkt;ores=res;pStored0=myTrue;} 
+        res = 0;
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(17, __func__);
+ while( res == 0 )
+        { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int opkt;static int ores;if(pStored1){__CPROVER_assert(!(opkt==pkt && ores==res),"recurrent state found");} if(flag){opkt=pkt;ores=res;pStored1=myTrue;} 
+            res = __VERIFIER_nondet_int();
+            pkt++;
+            { __VERIFIER_reached_control(20, __func__);
+if( res == 0 )
+                { __VERIFIER_control_true(21, __func__);
+break;}}
+        }
+    }
+    return 0;
+}
+
+End Main 
+ Missing_Initialization_1_T_braced_instrumented.c
+NTFILE is Missing_Initialization_1_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Missing_Initialization_1_T.c
+FILE=Missing_Initialization_1_T_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 187619 milliseconds

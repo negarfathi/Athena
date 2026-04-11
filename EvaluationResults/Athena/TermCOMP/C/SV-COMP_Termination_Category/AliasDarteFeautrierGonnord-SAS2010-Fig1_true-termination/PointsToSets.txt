@@ -1,0 +1,56 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %y = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %y = alloca i32, align 4 + 0
+NODE   4:   %m = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %m = alloca i32, align 4 + 0
+NODE   5:   %x = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %x = alloca i32, align 4 + 0
+NODE   6:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   7:   store i32 0, i32* %y, align 4 (points-to size: 0)
+NODE   8:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   9:   store i32 %call, i32* %m, align 4 (points-to size: 0)
+NODE  10:   %0 = load i32, i32* %m, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  11:   store i32 %0, i32* %x, align 4 (points-to size: 0)
+NODE  12:   %1 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  13:   %2 = load i32, i32* %y, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  14:   %3 = phi i1 [ false, %while.cond ], [ %cmp1, %land.rhs ] (points-to size: 1)
+    -> null + 0
+NODE  15:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  16:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE  17:   %9 = load i32, i32* %y, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  18:   %dec10 = add nsw i32 %9, -1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  19:   store i32 %dec10, i32* %y, align 4 (points-to size: 0)
+NODE  20:   %4 = load i32, i32* %y, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  21:   %5 = load i32, i32* %m, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  22:   %call6 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  23:   %6 = phi i1 [ false, %while.cond3 ], [ %tobool7, %land.rhs5 ] (points-to size: 1)
+    -> null + 0
+NODE  24:   %7 = load i32, i32* %y, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  25:   %inc = add nsw i32 %7, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  26:   store i32 %inc, i32* %y, align 4 (points-to size: 0)
+NODE  27:   %8 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  28:   %dec = add nsw i32 %8, -1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  29:   store i32 %dec, i32* %x, align 4 (points-to size: 0)
+NODE  30: main (points-to size: 1)
+    -> main + 0

@@ -1,0 +1,48 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %x = alloca i32*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %x = alloca i32*, align 8 + 0
+NODE   4:   %y = alloca i32*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %y = alloca i32*, align 8 + 0
+NODE   5:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   6:   %0 = alloca i8, i64 4, align 16 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %0 = alloca i8, i64 4, align 16 + 0
+NODE   7:   %1 = bitcast i8* %0 to i32* (points-to size: 1)
+    ->   %0 = alloca i8, i64 4, align 16 + 0
+NODE   8:   store i32* %1, i32** %x, align 8 (points-to size: 0)
+NODE   9:   %2 = alloca i8, i64 4, align 16 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %2 = alloca i8, i64 4, align 16 + 0
+NODE  10:   %3 = bitcast i8* %2 to i32* (points-to size: 1)
+    ->   %2 = alloca i8, i64 4, align 16 + 0
+NODE  11:   store i32* %3, i32** %y, align 8 (points-to size: 0)
+NODE  12:   %4 = load i32*, i32** %y, align 8 (points-to size: 1)
+    ->   %2 = alloca i8, i64 4, align 16 + 0
+NODE  13:   store i32 1, i32* %4, align 4 (points-to size: 0)
+NODE  14:   %5 = load i32*, i32** %x, align 8 (points-to size: 1)
+    ->   %0 = alloca i8, i64 4, align 16 + 0
+NODE  15:   %6 = load i32, i32* %5, align 4 (points-to size: 0)
+NODE  16:   %7 = load i32*, i32** %x, align 8 (points-to size: 1)
+    ->   %0 = alloca i8, i64 4, align 16 + 0
+NODE  17:   %8 = load i32, i32* %7, align 4 (points-to size: 0)
+NODE  18:   %9 = load i32*, i32** %y, align 8 (points-to size: 1)
+    ->   %2 = alloca i8, i64 4, align 16 + 0
+NODE  19:   %10 = load i32, i32* %9, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  20:   %sub = sub nsw i32 %8, %10 (points-to size: 0)
+NODE  21:   %11 = load i32*, i32** %x, align 8 (points-to size: 1)
+    ->   %0 = alloca i8, i64 4, align 16 + 0
+NODE  22:   store i32 %sub, i32* %11, align 4 (points-to size: 0)
+NODE  23:   %12 = load i32*, i32** %y, align 8 (points-to size: 1)
+    ->   %2 = alloca i8, i64 4, align 16 + 0
+NODE  24:   %13 = load i32, i32* %12, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  25:   %add = add nsw i32 %13, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  26:   %14 = load i32*, i32** %y, align 8 (points-to size: 1)
+    ->   %2 = alloca i8, i64 4, align 16 + 0
+NODE  27:   store i32 %add, i32* %14, align 4 (points-to size: 0)
+NODE  28:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE  29: main (points-to size: 1)
+    -> main + 0

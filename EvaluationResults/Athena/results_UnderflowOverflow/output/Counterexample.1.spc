@@ -1,0 +1,252 @@
+CONTROL AUTOMATON ErrorPath1
+
+INITIAL STATE ARG0;
+
+STATE USEFIRST ARG0 :
+    MATCH "" -> GOTO ARG28;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG28 :
+    MATCH "extern int __VERIFIER_nondet_int(void);" -> GOTO ARG29_1_1;
+STATE USEFIRST ARG29_0_1 :
+    MATCH "extern int __VERIFIER_nondet_int(void);" -> GOTO ARG29_1_1;
+STATE USEFIRST ARG29_1_1 :
+    MATCH "int main()" -> GOTO ARG29_2_1;
+STATE USEFIRST ARG29_2_1 :
+    MATCH "" -> GOTO ARG29_3_1;
+STATE USEFIRST ARG29_3_1 :
+    MATCH "int i = 0;" -> GOTO ARG29_4_1;
+STATE USEFIRST ARG29_4_1 :
+    MATCH "int base = __VERIFIER_nondet_int();" -> GOTO ARG29_5_1;
+STATE USEFIRST ARG29_5_1 :
+    MATCH "int base = __VERIFIER_nondet_int();" -> GOTO ARG29_6_1;
+STATE USEFIRST ARG29_6_1 :
+    MATCH "int count = __VERIFIER_nondet_int();" -> GOTO ARG29_7_1;
+STATE USEFIRST ARG29_7_1 :
+    MATCH "int count = __VERIFIER_nondet_int();" -> GOTO ARG29_8_1;
+STATE USEFIRST ARG29_8_1 :
+    MATCH "int old_[10], new_[10];" -> GOTO ARG29_9_1;
+STATE USEFIRST ARG29_9_1 :
+    MATCH "int old_[10], new_[10];" -> GOTO ARG29_10_1;
+STATE USEFIRST ARG29_10_1 :
+    MATCH "" -> ASSUME {i == (0);base == (2147483640);count == (2147483641);(&old_) == (4LL);(&new_) == (60LL);} GOTO ARG29;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG29 :
+    MATCH "int j = 0 ;" -> ASSUME {j == (0);} GOTO ARG1093;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1093 :
+    MATCH "[j < 9]" -> ASSUME {j == (0);} GOTO ARG1095;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1095 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1102_1_2;
+STATE USEFIRST ARG1102_0_2 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1102_1_2;
+STATE USEFIRST ARG1102_1_2 :
+    MATCH "new_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1102_2_2;
+STATE USEFIRST ARG1102_2_2 :
+    MATCH "" -> GOTO ARG1102;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1102 :
+    MATCH "j++" -> ASSUME {j == (1);} GOTO ARG1109;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1109 :
+    MATCH "[j < 9]" -> ASSUME {j == (1);} GOTO ARG1111;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1111 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1118_1_3;
+STATE USEFIRST ARG1118_0_3 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1118_1_3;
+STATE USEFIRST ARG1118_1_3 :
+    MATCH "new_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1118_2_3;
+STATE USEFIRST ARG1118_2_3 :
+    MATCH "" -> GOTO ARG1118;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1118 :
+    MATCH "j++" -> ASSUME {j == (2);} GOTO ARG1125;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1125 :
+    MATCH "[j < 9]" -> ASSUME {j == (2);} GOTO ARG1127;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1127 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1134_1_4;
+STATE USEFIRST ARG1134_0_4 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1134_1_4;
+STATE USEFIRST ARG1134_1_4 :
+    MATCH "new_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1134_2_4;
+STATE USEFIRST ARG1134_2_4 :
+    MATCH "" -> GOTO ARG1134;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1134 :
+    MATCH "j++" -> ASSUME {j == (3);} GOTO ARG1141;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1141 :
+    MATCH "[j < 9]" -> ASSUME {j == (3);} GOTO ARG1143;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1143 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1150_1_5;
+STATE USEFIRST ARG1150_0_5 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1150_1_5;
+STATE USEFIRST ARG1150_1_5 :
+    MATCH "new_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1150_2_5;
+STATE USEFIRST ARG1150_2_5 :
+    MATCH "" -> GOTO ARG1150;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1150 :
+    MATCH "j++" -> ASSUME {j == (4);} GOTO ARG1157;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1157 :
+    MATCH "[j < 9]" -> ASSUME {j == (4);} GOTO ARG1159;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1159 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1166_1_6;
+STATE USEFIRST ARG1166_0_6 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1166_1_6;
+STATE USEFIRST ARG1166_1_6 :
+    MATCH "new_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1166_2_6;
+STATE USEFIRST ARG1166_2_6 :
+    MATCH "" -> ASSUME {(old_[j]) == (16777216);(new_[j]) == (0);} GOTO ARG1166;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1166 :
+    MATCH "j++" -> ASSUME {j == (5);} GOTO ARG1173;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1173 :
+    MATCH "[j < 9]" -> ASSUME {j == (5);} GOTO ARG1175;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1175 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1182_1_7;
+STATE USEFIRST ARG1182_0_7 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1182_1_7;
+STATE USEFIRST ARG1182_1_7 :
+    MATCH "new_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1182_2_7;
+STATE USEFIRST ARG1182_2_7 :
+    MATCH "" -> ASSUME {(old_[j]) == (0);(new_[j]) == (0);} GOTO ARG1182;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1182 :
+    MATCH "j++" -> ASSUME {j == (6);} GOTO ARG1189;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1189 :
+    MATCH "[j < 9]" -> ASSUME {j == (6);} GOTO ARG1191;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1191 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1198_1_8;
+STATE USEFIRST ARG1198_0_8 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1198_1_8;
+STATE USEFIRST ARG1198_1_8 :
+    MATCH "new_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1198_2_8;
+STATE USEFIRST ARG1198_2_8 :
+    MATCH "" -> ASSUME {(old_[j]) == (0);(new_[j]) == (0);} GOTO ARG1198;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1198 :
+    MATCH "j++" -> ASSUME {j == (7);} GOTO ARG1205;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1205 :
+    MATCH "[j < 9]" -> ASSUME {j == (7);} GOTO ARG1207;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1207 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1214_1_9;
+STATE USEFIRST ARG1214_0_9 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1214_1_9;
+STATE USEFIRST ARG1214_1_9 :
+    MATCH "new_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1214_2_9;
+STATE USEFIRST ARG1214_2_9 :
+    MATCH "" -> ASSUME {(old_[j]) == (0);(new_[j]) == (0);} GOTO ARG1214;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1214 :
+    MATCH "j++" -> ASSUME {j == (8);} GOTO ARG1221;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1221 :
+    MATCH "[j < 9]" -> ASSUME {j == (8);} GOTO ARG1223;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1223 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1230_1_10;
+STATE USEFIRST ARG1230_0_10 :
+    MATCH "old_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1230_1_10;
+STATE USEFIRST ARG1230_1_10 :
+    MATCH "new_[j] = __VERIFIER_nondet_int();" -> GOTO ARG1230_2_10;
+STATE USEFIRST ARG1230_2_10 :
+    MATCH "" -> ASSUME {(old_[j]) == (0);(new_[j]) == (1073741824);} GOTO ARG1230;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1230 :
+    MATCH "j++" -> ASSUME {j == (9);} GOTO ARG1237;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1237 :
+    MATCH "[!(j < 9)]" -> ASSUME {j == (9);} GOTO ARG1240;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1240 :
+    MATCH "old_[9] = 0;" -> GOTO ARG1241_1_11;
+STATE USEFIRST ARG1241_0_11 :
+    MATCH "old_[9] = 0;" -> GOTO ARG1241_1_11;
+STATE USEFIRST ARG1241_1_11 :
+    MATCH "new_[9] = 0;" -> ASSUME {(old_[9]) == (0);(new_[9]) == (0);} GOTO ARG1241;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1241 :
+    MATCH "" -> GOTO ARG1244;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1244 :
+    MATCH "[base < count]" -> ASSUME {base == (2147483640);count == (2147483641);} GOTO ARG1246;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1246 :
+    MATCH "int number = base;" -> ASSUME {number == (2147483640);} GOTO ARG1248;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1248 :
+    MATCH "" -> GOTO ARG1251;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1251 :
+    MATCH "[!(old_[i] != new_[i])]" -> GOTO ARG1270;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1270 :
+    MATCH "i++;" -> GOTO ARG1273_1_12;
+STATE USEFIRST ARG1273_0_12 :
+    MATCH "i++;" -> GOTO ARG1273_1_12;
+STATE USEFIRST ARG1273_1_12 :
+    MATCH "i++;" -> ASSUME {__CPAchecker_TMP_0 == (0);i == (1);} GOTO ARG1273;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1273 :
+    MATCH "i++;" -> GOTO ARG1277_1_13;
+STATE USEFIRST ARG1277_0_13 :
+    MATCH "i++;" -> GOTO ARG1277_1_13;
+STATE USEFIRST ARG1277_1_13 :
+    MATCH "base += 8;" -> ERROR;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1277 :
+    TRUE -> STOP;
+
+END AUTOMATON

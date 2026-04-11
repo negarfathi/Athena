@@ -1,0 +1,118 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.2HmQaL
+
+Input File is : Bangalore_v2_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 06/07/2015
+ * Created by: Ton Chanh Le (chanhle@comp.nus.edu.sg)
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+    int x;
+    int y;
+    x = __VERIFIER_nondet_int();
+    y = __VERIFIER_nondet_int();
+	{if (y >= 0) {
+	    while (x >= 0) {
+	    	x = x - y;
+    	}
+	}}
+	return 0;
+}
+
+End Main   
+
+Input File is : Bangalore_v2_false-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 06/07/2015
+ * Created by: Ton Chanh Le (chanhle@comp.nus.edu.sg)
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+    int x;
+    int y;
+    x = __VERIFIER_nondet_int();
+    y = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(16, __func__);
+if (y >= 0) { __VERIFIER_control_true(16, __func__);
+
+	   myBool pStored0 = myFalse; __VERIFIER_reached_control(17, __func__);
+ while (x >= 0) { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int ox;static int oy;if(pStored0){__CPROVER_assert(!(ox==x && oy==y),"recurrent state found");} if(flag){ox=x;oy=y;pStored0=myTrue;} 
+	    	x = x - y;
+    	}
+	}}
+	return 0;
+}
+
+End Main 
+ Bangalore_v2_false-termination_braced_instrumented.c
+NTFILE is Bangalore_v2_false-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Bangalore_v2_false-termination.c
+b'c9cb097e23ccd54a8e7772e6d9ace4ffd5e354b373217b79c3d94c5e3d97007e  Bangalore_v2_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Ton_Chanh_15/Bangalore_v2_false-termination/Bangalore_v2_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 16 reachedControl
+main 16 trueBranch
+enteringLasso
+main 17 reachedControl
+main 17 loopHead
+main 17 reachedControl
+main 17 loopHead
+Trace file line inside enterred lasso check : main 17 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Ton_Chanh_15/Bangalore_v2_false-termination/Bangalore_v2_false-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Bangalore_v2_false-termination.c
+FILE=Bangalore_v2_false-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 1997 milliseconds

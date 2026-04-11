@@ -1,0 +1,119 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.4O6xpa
+
+Input File is : BrockschmidtCookFuhs-CAV2013-Fig9a_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program from Fig.9a of a technical report which is based on
+ * 2013CAV - Brockschmidt,Cook,Fuhs - Better termination proving through cooperation
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ *
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int k, i, j, n;
+	k = __VERIFIER_nondet_int();
+    i = __VERIFIER_nondet_int();
+    j = __VERIFIER_nondet_int();
+    n = __VERIFIER_nondet_int();
+	{if (k >= 1) {
+		i = 0;
+		while (i < n) {
+			j = 0;
+			while (j <= i) {
+				j = j + k;
+			}
+			i = i + 1;
+		}
+	}}
+	return 0;
+}
+
+End Main   
+
+Input File is : BrockschmidtCookFuhs-CAV2013-Fig9a_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Fig.9a of a technical report which is based on
+ * 2013CAV - Brockschmidt,Cook,Fuhs - Better termination proving through cooperation
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ *
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int k, i, j, n;
+	k = __VERIFIER_nondet_int();
+    i = __VERIFIER_nondet_int();
+    j = __VERIFIER_nondet_int();
+    n = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(20, __func__);
+if (k >= 1) { __VERIFIER_control_true(20, __func__);
+
+		i = 0;
+	myBool pStored0 = myFalse; __VERIFIER_reached_control(22, __func__);
+	while (i < n) { __VERIFIER_loop_head(22, __func__);
+printf("CBMC Instrumentation @ line22");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int oj;static int ok;static int on;if(pStored0){__CPROVER_assert(!(oi==i && oj==j && ok==k && on==n),"recurrent state found");} if(flag){oi=i;oj=j;ok=k;on=n;pStored0=myTrue;} 
+			j = 0;
+		myBool pStored1 = myFalse; __VERIFIER_reached_control(24, __func__);
+	while (j <= i) { __VERIFIER_loop_head(24, __func__);
+printf("CBMC Instrumentation @ line24");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int oj;static int ok;static int on;if(pStored1){__CPROVER_assert(!(oi==i && oj==j && ok==k && on==n),"recurrent state found");} if(flag){oi=i;oj=j;ok=k;on=n;pStored1=myTrue;} 
+				j = j + k;
+			}
+			i = i + 1;
+		}
+	}}
+	return 0;
+}
+
+End Main 
+ BrockschmidtCookFuhs-CAV2013-Fig9a_true-termination_braced_instrumented.c
+NTFILE is BrockschmidtCookFuhs-CAV2013-Fig9a_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for BrockschmidtCookFuhs-CAV2013-Fig9a_true-termination.c
+FILE=BrockschmidtCookFuhs-CAV2013-Fig9a_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182883 milliseconds

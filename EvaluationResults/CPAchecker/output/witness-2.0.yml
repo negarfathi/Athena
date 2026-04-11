@@ -1,0 +1,27 @@
+- entry_type: "invariant_set"
+  metadata:
+    format_version: "2.0"
+    uuid: "ef3ef7e4-7c08-3efa-b489-bafd1c5743e6"
+    creation_time: "2025-08-29T02:53:13Z"
+    producer:
+      name: "CPAchecker"
+      version: "4.0"
+      configuration: "terminationAnalysis"
+    task:
+      input_files:
+      - "Benchmarks/TermCOMP/C/Ultimate/WhileTrue_false-termination/WhileTrue_false-termination.c"
+      input_file_hashes:
+        Benchmarks/TermCOMP/C/Ultimate/WhileTrue_false-termination/WhileTrue_false-termination.c: "caf460a320ebedc620f8967ba09b2e668c2bca92bf7dab17497ceb591cade917"
+      specification: ""
+      data_model: "LP64"
+      language: "C"
+  content:
+  - invariant:
+      type: "loop_invariant"
+      location:
+        file_name: "Benchmarks/TermCOMP/C/Ultimate/WhileTrue_false-termination/WhileTrue_false-termination.c"
+        line: 10
+        column: 2
+        function: "main"
+      value: "1"
+      format: "c_expression"

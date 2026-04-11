@@ -1,0 +1,142 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.Tm0yth
+
+Input File is : Incorrect_Control_Statement_2_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 8030f9c0f092170ceb50cedf59b9c330022825b7
+URL: https://github.com/aatmdev/glusterfs/commit/8030f9c0f092170ceb50cedf59b9c330022825b7
+Project Name: glusterfs
+License: GPL2
+termination: TRUE
+*/
+#define EVEBT_EPOLL_SLOTS 2
+int main()
+{
+    int EVENT_EPOLL_TABLES = 10;
+    int slots_used[10];
+    int ereg[10];
+    int table;
+    for( int i = 0 ; i < 10 ; i++ )
+    {
+        slots_used[i] = __VERIFIER_nondet_int();
+        ereg[i] = __VERIFIER_nondet_int();
+    }
+    int i = 0;
+    while( i < EVENT_EPOLL_TABLES )
+    {
+        switch( slots_used[i] )
+        {
+            case EVEBT_EPOLL_SLOTS:
+                break;
+            case 0:
+                {if( !ereg[i] )
+                    {return 0;}
+                else
+                    {table = ereg[i];}}
+                break;
+            default:
+                table = ereg[i];
+                break;
+        }
+        {if( table )
+            {break;}}
+        i++;
+    }
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Incorrect_Control_Statement_2_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 8030f9c0f092170ceb50cedf59b9c330022825b7
+URL: https://github.com/aatmdev/glusterfs/commit/8030f9c0f092170ceb50cedf59b9c330022825b7
+Project Name: glusterfs
+License: GPL2
+termination: TRUE
+*/
+#define EVEBT_EPOLL_SLOTS 2
+int main()
+{
+    int EVENT_EPOLL_TABLES = 10;
+    int slots_used[10];
+    int ereg[10];
+    int table;
+    for( int i = 0 ; i < 10 ; i++ )
+    {printf("ArrayNT State @ line17: Array Found\n");
+        slots_used[i] = __VERIFIER_nondet_int();
+        ereg[i] = __VERIFIER_nondet_int();
+    }
+    int i = 0;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(23, __func__);
+ while( i < EVENT_EPOLL_TABLES )
+    { __VERIFIER_loop_head(23, __func__);
+printf("CBMC Instrumentation @ line23");myBool flag=__VERIFIER_nondet_myBool();static int oEVENT_EPOLL_TABLES;static int oi;static int otable;if(pStored0){__CPROVER_assert(!(oEVENT_EPOLL_TABLES==EVENT_EPOLL_TABLES && oi==i && otable==table),"recurrent state found");} if(flag){oEVENT_EPOLL_TABLES=EVENT_EPOLL_TABLES;oi=i;otable=table;pStored0=myTrue;} 
+        switch( slots_used[i] )
+        {
+            case EVEBT_EPOLL_SLOTS:
+                break;
+            case 0:
+                { __VERIFIER_reached_control(29, __func__);
+if( !ereg[i] )
+                    { __VERIFIER_control_true(30, __func__);
+return 0;}
+                else
+                    { __VERIFIER_control_false(32, __func__);
+table = ereg[i];}}
+                break;
+            default:
+                table = ereg[i];
+                break;
+        }
+        { __VERIFIER_reached_control(38, __func__);
+if( table )
+            { __VERIFIER_control_true(39, __func__);
+break;}}
+        i++;
+    }
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Incorrect_Control_Statement_2_T_braced_instrumented.c
+NTFILE is Incorrect_Control_Statement_2_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Incorrect_Control_Statement_2_T.c
+FILE=Incorrect_Control_Statement_2_T_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 8537 milliseconds

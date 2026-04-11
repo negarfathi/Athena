@@ -1,0 +1,79 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.p9gEqn
+
+Input File is : 4NestedWith3Variables_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : 4NestedWith3Variables_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2014-06-08
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ * (a, b) is a vector that is rotated around (0, 0) and scaled by a factor of 5.
+ * I.e., (a, b) is on an outward spiral around (0, 0).
+ *
+ * This program terminates because on average, (a, b) is (0, 0),
+ * hence q decreases by 1 on average.
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+    int a, b, q, olda;
+	q = __VERIFIER_nondet_int();
+	a = __VERIFIER_nondet_int();
+	b = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(22, __func__);
+	while (q > 0) { __VERIFIER_loop_head(22, __func__);
+printf("CBMC Instrumentation @ line22");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;static int oolda;static int oq;if(pStored0){__CPROVER_assert(!(oa==a && ob==b && oolda==olda && oq==q),"recurrent state found");} if(flag){oa=a;ob=b;oolda=olda;oq=q;pStored0=myTrue;} 
+		q = q + a - 1;
+		olda = a;
+		a = 3*olda - 4*b;
+		b = 4*olda + 3*b;
+	}
+	return 0;
+}
+
+End Main 
+ 4NestedWith3Variables_true-termination_instrumented.c
+NTFILE is 4NestedWith3Variables_true-termination_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for 4NestedWith3Variables_true-termination.c
+FILE=4NestedWith3Variables_true-termination_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182293 milliseconds

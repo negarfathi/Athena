@@ -1,0 +1,149 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+Running CPAchecker with Java heap of size 10000M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with --stack if needed.
+Language C detected and set for analysis (CPAMain.detectFrontendLanguageIfNecessary, INFO)
+
+CPAchecker 4.0 / terminationAnalysis (OpenJDK 64-Bit Server VM 17.0.15) started (CPAchecker.run, INFO)
+
+Parsing CFA from file(s) "Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/email_spec0_product05_true-unreach-call.cil/email_spec0_product05_true-unreach-call.cil.c" (CPAchecker.parse, INFO)
+
+EmailLib.c, line 687: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+EmailLib.c, line 742: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+EmailLib.c, line 824: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+EmailLib.c, line 906: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+EmailLib.c, line 988: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+EmailLib.c, line 1070: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+EmailLib.c, line 1152: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+EmailLib.c, line 1234: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+EmailLib.c, line 1316: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+EmailLib.c, line 1398: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+EmailLib.c, line 1480: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+libacc.c, line 879: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+libacc.c, line 912: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 701: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 767: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 866: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 963: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 1040: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 1205: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 1352: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 1581: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 1711: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 1808: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 1905: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 1982: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 2120: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 2310: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 2430: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 2550: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+ClientLib.c, line 2647: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Client.c, line 851: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Client.c, line 930: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Client.c, line 961: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Client.c, line 992: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Util.c, line 527: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Email.c, line 628: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Email.c, line 659: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Email.c, line 698: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+featureselect.c, line 93: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+featureselect.c, line 160: Dead code detected: return (retValue_acc); (CFACreationUtils.addEdgeToCFA, INFO)
+
+libacc.c, line 65: Function pointer *__cil_tmp10 with type int (*)(int, int) is called, but no possible target functions were found. (CFunctionPointerResolver.getTargets, WARNING)
+
+Using Restarting Algorithm (CoreComponentsFactory.createAlgorithm, INFO)
+
+The following configuration options were specified but are not used:
+ cpa.arg.lateMerge
+ counterexample.export.exportWitness 
+ (CPAchecker.printConfigurationWarnings, WARNING)
+
+Starting analysis ... (CPAchecker.runAlgorithm, INFO)
+
+Loading analysis 1 from file /cpachecker/config/components/combinations-parallel-termination.properties ... (RestartAlgorithm.run, INFO)
+
+Using the following resource limits: Thread CPU-time limit of 300s (Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:ResourceLimitChecker.fromConfiguration, INFO)
+
+Using predicate analysis with MathSAT5 version 5.6.10 (9293adc746be) (May 31 2023 12:38:06, gmp 6.2.0, gcc 7.5.0, 64-bit, reentrant) and JFactory 1.21. (Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:PredicateCPA:PredicateCPA.<init>, INFO)
+
+Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy. (Analysis /cpachecker/config/components/combinations-parallel-termination.properties:Parallel analysis 1:PredicateCPA:PredicateCPARefiner.<init>, INFO)
+
+Warning: Skipping one analysis because the configuration file /cpachecker/config/components/combinations-parallel-termination.properties is invalid (TerminationAlgorithm needs a TerminationCPA) (CPAs.retrieveCPAOrFail, WARNING)
+
+Loading analysis 1 from file /cpachecker/config/components/termination-recursion.properties ... (RestartAlgorithm.run, INFO)
+
+Mismatch of configuration options when loading from '/cpachecker/config/components/termination-recursion.properties': 'termination.config' has two values 'terminationAnalysis.properties' and 'termination-recursion.properties'. Using 'termination-recursion.properties'. (NestingAlgorithm.checkConfigs, INFO)
+
+Using unsound approximation of ints with unbounded integers and floats with rationals for encoding program semantics. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:FormulaManagerView.<init>, WARNING)
+
+Using predicate analysis with MathSAT5 version 5.6.10 (9293adc746be) (May 31 2023 12:38:06, gmp 6.2.0, gcc 7.5.0, 64-bit, reentrant) and JFactory 1.21. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:PredicateCPA.<init>, INFO)
+
+Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy. (Analysis /cpachecker/config/components/termination-recursion.properties:PredicateCPA:PredicateCPARefiner.<init>, INFO)
+
+Using unsound approximation of ints with unbounded integers and floats with rationals for encoding program semantics. (Analysis /cpachecker/config/components/termination-recursion.properties:FormulaManagerView.<init>, WARNING)
+
+Starting analysis 1 ... (RestartAlgorithm.run, INFO)
+
+Starting termination algorithm. (Analysis /cpachecker/config/components/termination-recursion.properties:TerminationAlgorithm.run0, INFO)
+
+Exception in thread "main" java.lang.AssertionError
+	at org.sosy_lab.cpachecker.core.algorithm.termination.lasso_analysis.RankingRelationBuilder.getVariable(RankingRelationBuilder.java:375)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.lasso_analysis.RankingRelationBuilder.createRankingRelationComponents(RankingRelationBuilder.java:277)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.lasso_analysis.RankingRelationBuilder.fromAffineFunction(RankingRelationBuilder.java:229)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.lasso_analysis.RankingRelationBuilder.fromRankingFunction(RankingRelationBuilder.java:143)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.lasso_analysis.RankingRelationBuilder.fromTerminationArgument(RankingRelationBuilder.java:102)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.lasso_analysis.LassoAnalysis.synthesizeTerminationArgument(LassoAnalysis.java:515)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.lasso_analysis.LassoAnalysis.checkTermination(LassoAnalysis.java:456)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.lasso_analysis.LassoAnalysis.checkTermination0(LassoAnalysis.java:420)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.lasso_analysis.LassoAnalysis.checkTermination(LassoAnalysis.java:397)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.TerminationAlgorithm.proveLoopTermination(TerminationAlgorithm.java:331)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.TerminationAlgorithm.run0(TerminationAlgorithm.java:259)
+	at org.sosy_lab.cpachecker.core.algorithm.termination.TerminationAlgorithm.run(TerminationAlgorithm.java:223)
+	at org.sosy_lab.cpachecker.core.algorithm.counterexamplecheck.CounterexampleCheckAlgorithm.run(CounterexampleCheckAlgorithm.java:142)
+	at org.sosy_lab.cpachecker.core.algorithm.RestartAlgorithm.run(RestartAlgorithm.java:327)
+	at org.sosy_lab.cpachecker.core.CPAchecker.runAlgorithm(CPAchecker.java:489)
+	at org.sosy_lab.cpachecker.core.CPAchecker.run(CPAchecker.java:357)
+	at org.sosy_lab.cpachecker.cmdline.CPAMain.main(CPAMain.java:171)
+[MP /cpachecker/lib/native/x86_64-linux/z3 -smt2 -in SMTLIB2_COMPLIANT=true (58)] Timeout while monitored process is still running, waiting 1000 ms for graceful end (Analysis /cpachecker/config/components/termination-recursion.properties:MonitoredProcess:LassoRankerLogger.warn, INFO)
+
+[MP /cpachecker/lib/native/x86_64-linux/z3 -smt2 -in SMTLIB2_COMPLIANT=true (58)] The stream was forcibly closed: stdIn (Analysis /cpachecker/config/components/termination-recursion.properties:MonitoredProcess:LassoRankerLogger.warn, INFO)
+
+Runtime: 35186 milliseconds

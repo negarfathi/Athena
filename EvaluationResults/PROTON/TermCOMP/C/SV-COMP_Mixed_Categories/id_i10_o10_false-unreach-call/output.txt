@@ -1,0 +1,85 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.WrC7cK
+
+Input File is : id_i10_o10_false-unreach-call.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int();
+extern void __VERIFIER_error();
+
+int id(int x) {
+  {if (x==0) {return 0;}}
+  return id(x-1) + 1;
+}
+
+int main(void) {
+  int input = 10;
+  int result = id(input);
+  {if (result == 10) {
+    ERROR: __VERIFIER_error();
+  }}
+}
+
+End Main   
+
+Input File is : id_i10_o10_false-unreach-call_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int();
+extern void __VERIFIER_error();
+
+int id(int x) {
+  { __VERIFIER_reached_control(5, __func__);
+if (x==0) { __VERIFIER_control_true(5, __func__);
+return 0;}}
+  return id(x-1) + 1;
+}
+
+int main(void) {
+  int input = 10;
+  int result = id(input);
+  { __VERIFIER_reached_control(12, __func__);
+if (result == 10) { __VERIFIER_control_true(12, __func__);
+
+    ERROR: __VERIFIER_error();
+  }}
+}
+
+End Main 
+ id_i10_o10_false-unreach-call_braced_instrumented.c
+NTFILE is id_i10_o10_false-unreach-call_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for id_i10_o10_false-unreach-call.c
+FILE=id_i10_o10_false-unreach-call_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 2667 milliseconds

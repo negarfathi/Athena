@@ -1,0 +1,93 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.s2gvb8
+
+Input File is : Rotation180_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : Rotation180_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2013-12-16
+ * Author: leike@informatik.uni-freiburg.de
+ *
+ * Rotates x and y by 90 degrees
+ * Does not terminate.
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main ()
+{
+    int oldx;
+	int x;
+	int y;
+	x = __VERIFIER_nondet_int();
+	y = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(20, __func__);
+	while (true) { __VERIFIER_loop_head(20, __func__);
+printf("CBMC Instrumentation @ line20");myBool flag=__VERIFIER_nondet_myBool();static int ooldx;static int ox;static int oy;if(pStored0){__CPROVER_assert(!(ooldx==oldx && ox==x && oy==y),"recurrent state found");} if(flag){ooldx=oldx;ox=x;oy=y;pStored0=myTrue;} 
+        oldx = x;
+		x = -y;
+		y = oldx;
+	}
+	return 0;
+}
+
+End Main 
+ Rotation180_false-termination_instrumented.c
+NTFILE is Rotation180_false-termination_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Rotation180_false-termination.c
+b'1b00609e8a5157a2c2170182728102acfed7f2a6378b93d77117c85e508e2185  Rotation180_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Rotation180_false-termination/Rotation180_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+main 20 reachedControl
+main 20 loopHead
+main 20 reachedControl
+main 20 loopHead
+Trace file line inside enterred lasso check : main 20 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Rotation180_false-termination/Rotation180_false-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Rotation180_false-termination.c
+FILE=Rotation180_false-termination_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 1985 milliseconds

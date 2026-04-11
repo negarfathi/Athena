@@ -1,0 +1,118 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.LFoMSW
+
+Input File is : AliasDarteFeautrierGonnord-SAS2010-speedpldi2_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program used in the experimental evaluation of the following paper.
+ * 2010SAS - Alias,Darte,Feautrier,Gonnord, Multi-dimensional Rankings, Program Termination, and Complexity Bounds of Flowchart Programs
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int m, n, v1, v2;
+	n = __VERIFIER_nondet_int();
+	m = __VERIFIER_nondet_int();
+	{if (n >= 0 && m > 0) {
+		v1 = n;
+		v2 = 0;
+		while (v1 > 0) {
+			{if (v2 < m) {
+				v2 = v2 + 1;
+				v1 = v1 - 1;
+			} else {
+				v2 = 0;
+			}}
+		}
+	}}
+	return 0;
+}
+
+End Main   
+
+Input File is : AliasDarteFeautrierGonnord-SAS2010-speedpldi2_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program used in the experimental evaluation of the following paper.
+ * 2010SAS - Alias,Darte,Feautrier,Gonnord, Multi-dimensional Rankings, Program Termination, and Complexity Bounds of Flowchart Programs
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int m, n, v1, v2;
+	n = __VERIFIER_nondet_int();
+	m = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(17, __func__);
+if (n >= 0 && m > 0) { __VERIFIER_control_true(17, __func__);
+
+		v1 = n;
+		v2 = 0;
+	myBool pStored0 = myFalse; __VERIFIER_reached_control(20, __func__);
+	while (v1 > 0) { __VERIFIER_loop_head(20, __func__);
+printf("CBMC Instrumentation @ line20");myBool flag=__VERIFIER_nondet_myBool();static int om;static int on;static int ov1;static int ov2;if(pStored0){__CPROVER_assert(!(om==m && on==n && ov1==v1 && ov2==v2),"recurrent state found");} if(flag){om=m;on=n;ov1=v1;ov2=v2;pStored0=myTrue;} 
+			{ __VERIFIER_reached_control(21, __func__);
+if (v2 < m) { __VERIFIER_control_true(21, __func__);
+
+				v2 = v2 + 1;
+				v1 = v1 - 1;
+			} else { __VERIFIER_control_false(24, __func__);
+
+				v2 = 0;
+			}}
+		}
+	}}
+	return 0;
+}
+
+End Main 
+ AliasDarteFeautrierGonnord-SAS2010-speedpldi2_true-termination_braced_instrumented.c
+NTFILE is AliasDarteFeautrierGonnord-SAS2010-speedpldi2_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for AliasDarteFeautrierGonnord-SAS2010-speedpldi2_true-termination.c
+FILE=AliasDarteFeautrierGonnord-SAS2010-speedpldi2_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182998 milliseconds

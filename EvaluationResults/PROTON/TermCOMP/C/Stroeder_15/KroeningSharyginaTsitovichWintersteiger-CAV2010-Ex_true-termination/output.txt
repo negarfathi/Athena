@@ -1,0 +1,106 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.nO1Myp
+
+Input File is : KroeningSharyginaTsitovichWintersteiger-CAV2010-Ex_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program from the example (without number) of
+ * 2010CAV - Kroening,Sharygina,Tsitovich,Wintersteiger - Termination Analysis with Compositional Transition Invariants
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ *
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i;
+	i = __VERIFIER_nondet_int();
+	while (i < 255) {
+		{if (__VERIFIER_nondet_int() != 0) {
+			i = i + 1;
+		} else {
+			i = i + 2;
+		}}
+	}
+	return 0;
+}
+
+End Main   
+
+Input File is : KroeningSharyginaTsitovichWintersteiger-CAV2010-Ex_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from the example (without number) of
+ * 2010CAV - Kroening,Sharygina,Tsitovich,Wintersteiger - Termination Analysis with Compositional Transition Invariants
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ *
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i;
+	i = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(17, __func__);
+	while (i < 255) { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int oi;if(pStored0){__CPROVER_assert(!(oi==i),"recurrent state found");} if(flag){oi=i;pStored0=myTrue;} 
+		{ __VERIFIER_reached_control(18, __func__);
+if (__VERIFIER_nondet_int() != 0) { __VERIFIER_control_true(18, __func__);
+
+			i = i + 1;
+		} else { __VERIFIER_control_false(20, __func__);
+
+			i = i + 2;
+		}}
+	}
+	return 0;
+}
+
+End Main 
+ KroeningSharyginaTsitovichWintersteiger-CAV2010-Ex_true-termination_braced_instrumented.c
+NTFILE is KroeningSharyginaTsitovichWintersteiger-CAV2010-Ex_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for KroeningSharyginaTsitovichWintersteiger-CAV2010-Ex_true-termination.c
+FILE=KroeningSharyginaTsitovichWintersteiger-CAV2010-Ex_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 258681 milliseconds

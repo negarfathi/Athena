@@ -1,0 +1,202 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.549zrk
+
+Input File is : HenzingerJhalaMajumdarSutre-POPL2002-LockingExample_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program from Fig.1 of
+ * 2002POPL - Henzinger,Jhala,Majumdar,Sutre - Lazy abstraction
+ * 
+ * Date: 2014-06-28
+ * Author: heizmann@informatik.uni-freiburg.de
+ * 
+ * 
+ *
+ */
+extern int __VERIFIER_nondet_int(void);
+
+int LOCK;
+
+void lock(void) {
+	{if (LOCK == 0) {
+		LOCK = 1;
+	} else {
+		// assert \false;
+	}}
+}
+
+void unlock(void) {
+	{if (LOCK == 1) {
+		LOCK = 0;
+	} else {
+		// assert \false;
+	}}
+}
+
+int main() {
+	int got_lock;
+	int old = 0, new = 0;
+	{if (__VERIFIER_nondet_int()) {
+		do {
+			got_lock = 0;
+			{if (__VERIFIER_nondet_int()) {
+				lock();
+				got_lock++;
+			}}
+			{if (got_lock) {
+				unlock();
+			}}
+		} while (__VERIFIER_nondet_int());
+	}}
+	do {
+		lock();
+		old = new;
+		{if (__VERIFIER_nondet_int()) {
+			unlock();
+			new++;
+		}}
+	} while (new != old);
+	unlock();
+	return 0;
+}
+
+
+End Main   
+
+Input File is : HenzingerJhalaMajumdarSutre-POPL2002-LockingExample_false-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Fig.1 of
+ * 2002POPL - Henzinger,Jhala,Majumdar,Sutre - Lazy abstraction
+ * 
+ * Date: 2014-06-28
+ * Author: heizmann@informatik.uni-freiburg.de
+ * 
+ * 
+ *
+ */
+extern int __VERIFIER_nondet_int(void);
+
+int LOCK;
+
+void lock(void) {
+	{ __VERIFIER_reached_control(16, __func__);
+if (LOCK == 0) { __VERIFIER_control_true(16, __func__);
+
+		LOCK = 1;
+	} else { __VERIFIER_control_false(18, __func__);
+
+		// assert \false;
+	}}
+}
+
+void unlock(void) {
+	{ __VERIFIER_reached_control(24, __func__);
+if (LOCK == 1) { __VERIFIER_control_true(24, __func__);
+
+		LOCK = 0;
+	} else { __VERIFIER_control_false(26, __func__);
+
+		// assert \false;
+	}}
+}
+
+int main() {
+	int got_lock;
+	int old = 0, new = 0;
+	{ __VERIFIER_reached_control(34, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(34, __func__);
+
+	myBool pStored0 = myFalse; __VERIFIER_reached_control(35, __func__);
+	do { __VERIFIER_loop_head(35, __func__);
+printf("CBMC Instrumentation @ line35");myBool flag=__VERIFIER_nondet_myBool();static int oLOCK;static int ogot_lock;static int onew;static int oold;if(pStored0){__CPROVER_assert(!(oLOCK==LOCK && ogot_lock==got_lock && onew==new && oold==old),"recurrent state found");} if(flag){oLOCK=LOCK;ogot_lock=got_lock;onew=new;oold=old;pStored0=myTrue;} 
+			got_lock = 0;
+			{ __VERIFIER_reached_control(37, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(37, __func__);
+
+				lock();
+				got_lock++;
+			}}
+			{ __VERIFIER_reached_control(41, __func__);
+if (got_lock) { __VERIFIER_control_true(41, __func__);
+
+				unlock();
+			}}
+		} while (__VERIFIER_nondet_int());
+	}}
+myBool pStored1 = myFalse; __VERIFIER_reached_control(46, __func__);
+	do { __VERIFIER_loop_head(46, __func__);
+printf("CBMC Instrumentation @ line46");myBool flag=__VERIFIER_nondet_myBool();static int oLOCK;static int ogot_lock;static int onew;static int oold;if(pStored1){__CPROVER_assert(!(oLOCK==LOCK && ogot_lock==got_lock && onew==new && oold==old),"recurrent state found");} if(flag){oLOCK=LOCK;ogot_lock=got_lock;onew=new;oold=old;pStored1=myTrue;} 
+		lock();
+		old = new;
+		{ __VERIFIER_reached_control(49, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(49, __func__);
+
+			unlock();
+			new++;
+		}}
+	} while (new != old);
+	unlock();
+	return 0;
+}
+
+
+End Main 
+ HenzingerJhalaMajumdarSutre-POPL2002-LockingExample_false-termination_braced_instrumented.c
+NTFILE is HenzingerJhalaMajumdarSutre-POPL2002-LockingExample_false-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = HenzingerJhalaMajumdarSutre-POPL2002-LockingExample_false-termination.c
+b'b7e15211580ea4e53f751b22847dfea4720c9dc42574c861d991d991eb47919b  HenzingerJhalaMajumdarSutre-POPL2002-LockingExample_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Termination_Category/HenzingerJhalaMajumdarSutre-POPL2002-LockingExample_false-termination/HenzingerJhalaMajumdarSutre-POPL2002-LockingExample_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 34 reachedControl
+main 34 trueBranch
+main 35 reachedControl
+main 35 loopHead
+main 37 reachedControl
+enteringLasso
+main 41 reachedControl
+main 35 loopHead
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 163, in generateViolationWitness
+    nextLineNo = nextLineWords[-2]
+IndexError: list index out of range
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for HenzingerJhalaMajumdarSutre-POPL2002-LockingExample_false-termination.c
+FILE=HenzingerJhalaMajumdarSutre-POPL2002-LockingExample_false-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2026 milliseconds

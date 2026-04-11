@@ -1,0 +1,110 @@
+///*** 1_main ***///
+START: main_bb5;
+
+FROM: main_bb5;
+memory0_freeIndex := 1;
+memory1_freeIndex := 1;
+memory2_freeIndex := 1;
+memory3_freeIndex := 1;
+memory4_freeIndex := 1;
+vmemory4 := nondet();
+vmemory3 := nondet();
+vmemory2 := nondet();
+vmemory0 := nondet();
+vmemory1 := nondet();
+v15 := memory4_freeIndex;
+v16 := memory4_freeIndex;
+v17 := v16 + 1;
+memory4_freeIndex := v17;
+v18 := memory3_freeIndex;
+v19 := memory3_freeIndex;
+v20 := v19 + 1;
+memory3_freeIndex := v20;
+v21 := memory2_freeIndex;
+v22 := memory2_freeIndex;
+v23 := v22 + 1;
+memory2_freeIndex := v23;
+v24 := memory1_freeIndex;
+v25 := v24 + 1;
+memory1_freeIndex := v25;
+v26 := memory0_freeIndex;
+v27 := v26 + 1;
+memory0_freeIndex := v27;
+v28 := nondet();
+v30 := v15;
+v31 := v30;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(v28 != 0);
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(v28 == 0);
+TO: main_bb7;
+
+FROM: main_bb6;
+vmemory4 := store_array(vmemory4, v31, 1);
+TO: main_bb8;
+
+FROM: main_bb7;
+vmemory4 := store_array(vmemory4, v31, -1);
+TO: main_bb8;
+
+FROM: main_bb8;
+v32 := v18;
+v33 := v32;
+v34 := v21;
+v35 := v34;
+v36 := v18;
+v37 := v36;
+v38 := v15;
+v39 := v38;
+v40 := select_array(vmemory4, v39);
+v41 := v18;
+v42 := v41;
+v43 := v21;
+v44 := v43;
+v45 := v15;
+v46 := v45;
+v47 := select_array(vmemory4, v46);
+v48 := v21;
+v49 := v48;
+TO: main_bb9;
+
+FROM: main_bb9;
+v50 := select_array(vmemory3, v33);
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(v50 < 100);
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(v50 >= 100);
+TO: main_.critedge;
+
+FROM: main_bb10;
+v52 := select_array(vmemory2, v35);
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(v52 < 100);
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(v52 >= 100);
+TO: main_.critedge;
+
+FROM: main_bb11;
+v54 := select_array(vmemory3, v37);
+v55 := v54 + v40;
+vmemory3 := store_array(vmemory3, v42, v55);
+v56 := select_array(vmemory2, v44);
+v57 := v56 - v47;
+vmemory2 := store_array(vmemory2, v49, v57);
+TO: main_bb9;
+
+FROM: main_.critedge;
+TO: main_.critedge_ret;
+

@@ -1,0 +1,154 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.aOtXjM
+
+Input File is : Et4_true.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  // public class Et4 {
+    // public static void main(String[] args) {
+		// Random.args = args;
+	    // int a =  Random.random(); 
+	   	// int b =  Random.random();	
+	    // int c =  Random.random();
+	    // loop(a,b,c);
+	// }
+	// public static void loop(int a, int b, int c) {	
+	   	// if ( (b - c >= 1) && (a == c)) {
+	   		// int r =  Random.random();
+	   		// b = 10;
+	   		// c = c + 1 + r;		
+	   	    // a = c;
+	   	    // loop(a,b,c);
+	   	// }
+    // }
+// }
+
+extern int __VERIFIER_nondet_int(void);
+void loop(int a,int b,int c);
+int random(void);
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	int y = __VERIFIER_nondet_int();
+	int z = __VERIFIER_nondet_int();
+	loop(random(),random(),random());
+
+}
+
+int random() {
+	int x = __VERIFIER_nondet_int();
+	{if (x < 0)
+		{return -x;}
+	else
+		{return x;}}
+}
+
+void loop(int a, int b, int c) {	
+	   	{if ( (b - c >= 1) && (a == c)) {
+	   		int r =  random();
+	   		b = 10;
+	   		c = c + 1 + r;		
+	   	    a = c;
+	   	    loop(a,b,c);
+	   	}}
+    }
+
+
+End Main   
+
+Input File is : Et4_true_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+// public class Et4 {
+    // public static void main(String[] args) {
+		// Random.args = args;
+	    // int a =  Random.random(); 
+	   	// int b =  Random.random();	
+	    // int c =  Random.random();
+	    // loop(a,b,c);
+	// }
+	// public static void loop(int a, int b, int c) {	
+	   	// if ( (b - c >= 1) && (a == c)) {
+	   		// int r =  Random.random();
+	   		// b = 10;
+	   		// c = c + 1 + r;		
+	   	    // a = c;
+	   	    // loop(a,b,c);
+	   	// }
+    // }
+// }
+
+extern int __VERIFIER_nondet_int(void);
+void loop(int a,int b,int c);
+int random(void);
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	int y = __VERIFIER_nondet_int();
+	int z = __VERIFIER_nondet_int();
+	loop(random(),random(),random());
+
+}
+
+int random() {
+	int x = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(34, __func__);
+if (x < 0)
+		{ __VERIFIER_control_true(35, __func__);
+return -x;}
+	else
+		{ __VERIFIER_control_false(37, __func__);
+return x;}}
+}
+
+void loop(int a, int b, int c) {	
+	   	{ __VERIFIER_reached_control(41, __func__);
+if ( (b - c >= 1) && (a == c)) { __VERIFIER_control_true(41, __func__);
+
+	   		int r =  random();
+	   		b = 10;
+	   		c = c + 1 + r;		
+	   	    a = c;
+	   	    loop(a,b,c);
+	   	}}
+    }
+
+
+End Main 
+ Et4_true_braced_instrumented.c
+NTFILE is Et4_true_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Et4_true.c
+FILE=Et4_true_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 4048 milliseconds

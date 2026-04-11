@@ -1,0 +1,74 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.VvhDbd
+
+Input File is : Benghazi_nondet_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : Benghazi_nondet_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 06/07/2015
+ * Created by: Ton Chanh Le (chanhle@comp.nus.edu.sg)
+ * Adapted from Benghazi_true-termination.c
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+    int x, d1, d2, d1old;
+    x = __VERIFIER_nondet_int();
+    d1 = __VERIFIER_nondet_int();
+    d2 = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(17, __func__);
+	while (x >= 0) { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int od1;static int od1old;static int od2;static int ox;if(pStored0){__CPROVER_assert(!(od1==d1 && od1old==d1old && od2==d2 && ox==x),"recurrent state found");} if(flag){od1=d1;od1old=d1old;od2=d2;ox=x;pStored0=myTrue;} 
+		x = x - d1;
+		d1old = d1;
+		d1 = d2 + 1;
+		d2 = d1old + 1;
+	}
+	return 0;
+}
+
+End Main 
+ Benghazi_nondet_true-termination_instrumented.c
+NTFILE is Benghazi_nondet_true-termination_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Benghazi_nondet_true-termination.c
+FILE=Benghazi_nondet_true-termination_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183700 milliseconds

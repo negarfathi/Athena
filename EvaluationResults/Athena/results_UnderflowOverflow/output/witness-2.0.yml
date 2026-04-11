@@ -1,0 +1,17 @@
+- entry_type: "invariant_set"
+  metadata:
+    format_version: "2.0"
+    uuid: "32e59748-81be-3d23-aca2-eb5f40942a1f"
+    creation_time: "2025-09-04T22:25:16Z"
+    producer:
+      name: "CPAchecker"
+      version: "4.0"
+    task:
+      input_files:
+      - "Benchmarks/FSE/recursion/Missing_undef_Instruction_1_T/Missing_undef_Instruction_1_T.c"
+      input_file_hashes:
+        Benchmarks/FSE/recursion/Missing_undef_Instruction_1_T/Missing_undef_Instruction_1_T.c: "80eff8849866cf9fb90c758b20bdde83628eb57afe6fb0bd5387266e23518d06"
+      specification: "CHECK( init(main()), LTL(G ! overflow) )"
+      data_model: "LP64"
+      language: "C"
+  content: []

@@ -1,0 +1,70 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.C9Esfg
+
+Input File is : svcomp_insertion_sort_unsafe.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : svcomp_insertion_sort_unsafe.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+
+void insertion(int a[], int N)
+{
+    int i, j, v;
+    for (i = 2; i <= N; i++) {printf("ArrayNT State @ line6: Array Found\n");
+        v = a[i];
+        j = i;
+        while (j > 0 && ((a[j - 1]) > v)) {printf("ArrayNT State @ line9: Array Found\n");
+            a[j] = a[j-1];
+            j--;
+        }
+        a[j] = v;
+    }
+}
+
+int main() {
+  int *a;
+  int N = __VERIFIER_nondet_int();
+  insertion(a, N);
+  return 0;
+}
+
+End Main 
+ svcomp_insertion_sort_unsafe_instrumented.c
+NTFILE is svcomp_insertion_sort_unsafe_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_insertion_sort_unsafe.c
+FILE=svcomp_insertion_sort_unsafe_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 2673 milliseconds

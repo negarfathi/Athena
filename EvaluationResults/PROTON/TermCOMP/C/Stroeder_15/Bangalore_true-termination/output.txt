@@ -1,0 +1,103 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.5OeAEy
+
+Input File is : Bangalore_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 2011-12-11
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ * Ranking function: f(x, y) = x
+ * provided with the supporting invariant y >= 1.
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+    int x, y;
+	x = __VERIFIER_nondet_int();
+	y = __VERIFIER_nondet_int();
+	{if (y >= 1) {
+    	while (x >= 0) {
+	    	x = x - y;
+	    }
+	}}
+	return 0;
+}
+
+End Main   
+
+Input File is : Bangalore_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2011-12-11
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ * Ranking function: f(x, y) = x
+ * provided with the supporting invariant y >= 1.
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+    int x, y;
+	x = __VERIFIER_nondet_int();
+	y = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(18, __func__);
+if (y >= 1) { __VERIFIER_control_true(18, __func__);
+
+    myBool pStored0 = myFalse; __VERIFIER_reached_control(19, __func__);
+	while (x >= 0) { __VERIFIER_loop_head(19, __func__);
+printf("CBMC Instrumentation @ line19");myBool flag=__VERIFIER_nondet_myBool();static int ox;static int oy;if(pStored0){__CPROVER_assert(!(ox==x && oy==y),"recurrent state found");} if(flag){ox=x;oy=y;pStored0=myTrue;} 
+	    	x = x - y;
+	    }
+	}}
+	return 0;
+}
+
+End Main 
+ Bangalore_true-termination_braced_instrumented.c
+NTFILE is Bangalore_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Bangalore_true-termination.c
+FILE=Bangalore_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182304 milliseconds

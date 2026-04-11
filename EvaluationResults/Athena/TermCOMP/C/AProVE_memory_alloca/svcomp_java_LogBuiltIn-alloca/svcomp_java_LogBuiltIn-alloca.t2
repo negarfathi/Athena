@@ -1,0 +1,62 @@
+///*** 1_main ***///
+START: main_bb6;
+
+
+
+FROM: main_bb6;
+memory0_freeIndex := 1;
+memory1_freeIndex := 1;
+vmemory1 := nondet();
+vmemory0 := nondet();
+v33 := nondet();
+v34 := memory1_freeIndex;
+v35 := memory1_freeIndex;
+v36 := v35 + 1;
+memory1_freeIndex := v36;
+v37 := memory0_freeIndex;
+v38 := memory0_freeIndex;
+v39 := v38 + 1;
+memory0_freeIndex := v39;
+v40 := v34;
+v41 := v40;
+vmemory1 := store_array(vmemory1, v41, v33);
+v42 := v37;
+v43 := v42;
+vmemory0 := store_array(vmemory0, v43, 0);
+v44 := v34;
+v45 := v44;
+v46 := v34;
+v47 := v46;
+v48 := v34;
+v49 := v48;
+v50 := v37;
+v51 := v50;
+TO: main_bb7;
+
+FROM: main_bb7;
+v52 := select_array(vmemory1, v45);
+TO: main_bb7_end;
+
+FROM: main_bb7_end;
+assume(v52 > 1);
+TO: main_bb8;
+
+FROM: main_bb7_end;
+assume(v52 <= 1);
+TO: main_mlog.exit;
+
+FROM: main_bb8;
+v54 := select_array(vmemory1, v47);
+v55 := v54 / 2;
+vmemory1 := store_array(vmemory1, v49, v55);
+v56 := select_array(vmemory0, v51);
+v57 := v56 + 1;
+vmemory0 := store_array(vmemory0, v51, v57);
+TO: main_bb7;
+
+FROM: main_mlog.exit;
+v58 := v37;
+v59 := v58;
+v60 := select_array(vmemory0, v59);
+TO: main_mlog.exit_ret;
+

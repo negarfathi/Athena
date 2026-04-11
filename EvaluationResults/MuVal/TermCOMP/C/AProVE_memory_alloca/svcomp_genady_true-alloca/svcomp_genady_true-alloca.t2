@@ -1,0 +1,34 @@
+///*** 1_main ***///
+START: main_bb0;
+
+FROM: main_bb0;
+v3 := 1;
+v1 := 10000;
+TO: main_bb1;
+
+FROM: main_bb1;
+v4 := nondef.0;
+v5 := nondef.1;
+v6 := v4 - v5;
+TO: main_bb1_end;
+
+FROM: main_bb1_end;
+assume(v6 >= 1);
+TO: main_bb2;
+
+FROM: main_bb1_end;
+assume(v6 < 1);
+TO: main_bb3;
+
+FROM: main_bb2;
+v8 := nondef.2;
+v9 := v8 + 1;
+v3 := v9;
+v10 := nondef.3;
+v11 := v10 + -1;
+v1 := v11;
+TO: main_bb1;
+
+FROM: main_bb3;
+TO: main_bb3_ret;
+

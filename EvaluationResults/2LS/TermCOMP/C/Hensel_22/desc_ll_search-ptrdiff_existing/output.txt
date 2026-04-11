@@ -1,0 +1,114 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/Hensel_22/desc_ll_search-ptrdiff_existing/desc_ll_search-ptrdiff_existing.c
+Converting
+Type-checking desc_ll_search-ptrdiff_existing
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of init_list
+Simplifying
+Computing SSA of search
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#48 __CPROVER_thread_key_dtors#46 __CPROVER_thread_keys#47 __CPROVER_malloc_is_new_array#38 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#35 __CPROVER_dead_object#36 __CPROVER_deallocated#37 __CPROVER_new_object#40 __CPROVER_rounding_mode#44 __CPROVER_pipe_count#43 __CPROVER_max_malloc_size#39 __CPROVER_next_thread_id#41 __CPROVER_next_thread_key#42 __CPROVER_thread_id#45 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#44 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#44) <= 0 && __CPROVER_pipe_count#43 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#43) <= 0 && __CPROVER_max_malloc_size#39 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#39) <= -36028797018963968 && __CPROVER_next_thread_id#41 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#41) <= 0 && __CPROVER_next_thread_key#42 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#42) <= 0 && __CPROVER_thread_id#45 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#45) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of init_list
+Function init_list not analyzed yet
+Recursively summarizing function init_list
+Analyzing function init_list
+Computing summary
+Computing termination argument for init_list
+Synthesizing ranking function to prove termination
+
+Summary for function init_list
+params: n 
+globals_in: __CPROVER_malloc_is_new_array __CPROVER_deallocated'obj __CPROVER_memory_leak$100'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_deallocated __CPROVER_memory_leak$100 init_list#return_value'obj.next curr'obj.next tail'obj.next dynamic_object$88$0.next dynamic_object$88$1.next init_list#return_value'obj.value curr'obj.value tail'obj.value dynamic_object$88$0.value dynamic_object$88$1.value init_list#return_value'obj curr'obj tail'obj dynamic_object$88$0 dynamic_object$88$1 init_list#return_value'obj.$pad1 curr'obj.$pad1 tail'obj.$pad1 dynamic_object$88$0.$pad1 dynamic_object$88$1.$pad1 __CPROVER_max_malloc_size 
+globals_out: __CPROVER_malloc_is_new_array#phi57 __CPROVER_deallocated'obj __CPROVER_memory_leak$100'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_deallocated#phi57 __CPROVER_memory_leak$100#phi57 init_list#return_value#122 init_list#return_value'obj.next curr'obj.next#phi57 tail'obj.next dynamic_object$88$0.next#phi57 dynamic_object$88$1.next#phi57 init_list#return_value'obj.value curr'obj.value#phi57 tail'obj.value dynamic_object$88$0.value#phi57 dynamic_object$88$1.value#phi57 init_list#return_value'obj curr'obj tail'obj dynamic_object$88$0 dynamic_object$88$1 init_list#return_value'obj.$pad1 curr'obj.$pad1 tail'obj.$pad1 dynamic_object$88$0.$pad1#phi57 dynamic_object$88$1.$pad1#phi57 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: dynamic_object$88$0.value#phi57 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$88$0.value#phi57) <= 2147483648 && dynamic_object$88$1.value#phi57 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$88$1.value#phi57) <= 2147483648 && dynamic_object$88$0.$pad1#phi57 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$88$0.$pad1#phi57) <= 0 && dynamic_object$88$1.$pad1#phi57 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$88$1.$pad1#phi57) <= 0 && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: ($guard#57 && $guard#ls120 ==> j#lb120 <= 2147483647) && ($guard#57 && $guard#ls120 ==> -((signed __CPROVER_bitvector[33])j#lb120) <= 0) && ($guard#57 && $guard#ls120 ==> dynamic_object$88$0.value#lb120 <= 2147483647) && ($guard#57 && $guard#ls120 ==> -((signed __CPROVER_bitvector[33])dynamic_object$88$0.value#lb120) <= 2147483648) && ($guard#57 && $guard#ls120 ==> dynamic_object$88$0.$pad1#lb120 <= 4294967295) && ($guard#57 && $guard#ls120 ==> -((signed __CPROVER_bitvector[33])dynamic_object$88$0.$pad1#lb120) <= 0) && ($guard#57 && $guard#ls120 ==> dynamic_object$88$1.value#lb120 <= 2147483647) && ($guard#57 && $guard#ls120 ==> -((signed __CPROVER_bitvector[33])dynamic_object$88$1.value#lb120) <= 2147483648) && ($guard#57 && $guard#ls120 ==> dynamic_object$88$1.$pad1#lb120 <= 4294967295) && ($guard#57 && $guard#ls120 ==> -((signed __CPROVER_bitvector[33])dynamic_object$88$1.$pad1#lb120) <= 0) && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#57 && $guard#57 && $guard#57 && $guard#57 && $guard#57 && $guard#57 && $guard#110 && $cond#120 && $guard#110 && $cond#120 && $guard#110 && $cond#120 && $guard#110 && $cond#120 && $guard#110 && $cond#120 && $guard#110 && $cond#120 ==> (signed __CPROVER_bitvector[49])((signed __CPROVER_bitvector[48])((signed __CPROVER_bitvector[47])((signed __CPROVER_bitvector[46])((signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])j#phi57 - (signed __CPROVER_bitvector[33])j#119)) + (signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])curr'obj.value#phi57 - (signed __CPROVER_bitvector[33])curr'obj.value#115))) + (signed __CPROVER_bitvector[46])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$88$0.value#phi57 - (signed __CPROVER_bitvector[33])dynamic_object$88$0.value#115))) + (signed __CPROVER_bitvector[47])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$88$0.$pad1#phi57 - (signed __CPROVER_bitvector[33])dynamic_object$88$0.$pad1#phi110))) + (signed __CPROVER_bitvector[48])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$88$1.value#phi57 - (signed __CPROVER_bitvector[33])dynamic_object$88$1.value#115))) + (signed __CPROVER_bitvector[49])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$88$1.$pad1#phi57 - (signed __CPROVER_bitvector[33])dynamic_object$88$1.$pad1#phi110)) > 0
+
+terminates: yes
+
+Checking precondition of search
+Function search not analyzed yet
+Recursively summarizing function search
+Analyzing function search
+Computing summary
+--- begin invariant violation report ---
+Invariant check failed
+File: flattening/boolbv_map.cpp:68 function: get_literals
+Condition: map_entry.literal_map.size() == width
+Reason: number of literals in the literal map shall equal the bitvector width
+Backtrace:
+/root/2ls/src/2ls/2ls(+0x3ee1ac) [0xaaaaac58e1ac]
+/root/2ls/src/2ls/2ls(+0x3eedb8) [0xaaaaac58edb8]
+/root/2ls/src/2ls/2ls(+0x3cd6c) [0xaaaaac1dcd6c]
+/root/2ls/src/2ls/2ls(+0x346df8) [0xaaaaac4e6df8]
+/root/2ls/src/2ls/2ls(+0x360654) [0xaaaaac500654]
+/root/2ls/src/2ls/2ls(+0x35d768) [0xaaaaac4fd768]
+/root/2ls/src/2ls/2ls(+0x3213c4) [0xaaaaac4c13c4]
+/root/2ls/src/2ls/2ls(+0x3609a0) [0xaaaaac5009a0]
+/root/2ls/src/2ls/2ls(+0x35d768) [0xaaaaac4fd768]
+/root/2ls/src/2ls/2ls(+0x3213c4) [0xaaaaac4c13c4]
+/root/2ls/src/2ls/2ls(+0x31cfec) [0xaaaaac4bcfec]
+/root/2ls/src/2ls/2ls(+0x31d0f0) [0xaaaaac4bd0f0]
+/root/2ls/src/2ls/2ls(+0x4c204c) [0xaaaaac66204c]
+/root/2ls/src/2ls/2ls(+0x5424bc) [0xaaaaac6e24bc]
+/root/2ls/src/2ls/2ls(+0x531a20) [0xaaaaac6d1a20]
+/root/2ls/src/2ls/2ls(+0x536098) [0xaaaaac6d6098]
+/root/2ls/src/2ls/2ls(+0x533ef0) [0xaaaaac6d3ef0]
+/root/2ls/src/2ls/2ls(+0x535954) [0xaaaaac6d5954]
+/root/2ls/src/2ls/2ls(+0x533ef0) [0xaaaaac6d3ef0]
+/root/2ls/src/2ls/2ls(+0x535954) [0xaaaaac6d5954]
+/root/2ls/src/2ls/2ls(+0x53b618) [0xaaaaac6db618]
+/root/2ls/src/2ls/2ls(+0x5cd8c) [0xaaaaac1fcd8c]
+/root/2ls/src/2ls/2ls(+0x647c4) [0xaaaaac2047c4]
+/root/2ls/src/2ls/2ls(+0x463e4) [0xaaaaac1e63e4]
+/root/2ls/src/2ls/2ls(+0x38d80) [0xaaaaac1d8d80]
+/root/2ls/src/2ls/2ls(+0x32844) [0xaaaaac1d2844]
+/lib/aarch64-linux-gnu/libc.so.6(+0x273fc) [0xffffb03e73fc]
+/lib/aarch64-linux-gnu/libc.so.6(__libc_start_main+0x98) [0xffffb03e74cc]
+/root/2ls/src/2ls/2ls(+0x3c0f0) [0xaaaaac1dc0f0]
+
+
+--- end invariant violation report ---
+Runtime: 707 milliseconds

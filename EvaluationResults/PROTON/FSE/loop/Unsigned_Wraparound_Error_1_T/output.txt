@@ -1,0 +1,123 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.jioTvG
+
+Input File is : Unsigned_Wraparound_Error_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+Commit Number: 5ff623fc990210e4bb5dc04447f9e95ad83e5195
+URL: https://github.com/alsa-project/alsa-lib/commit/5ff623fc990210e4bb5dc04447f9e95ad83e5195
+Project Name: alsa-lib
+License: LGPL-2.1
+termination: TRUE
+
+*/
+int main()
+{
+    unsigned int best = __VERIFIER_nondet_uint();
+    unsigned int cur = best;
+    unsigned int pre;
+    unsigned int st_max = __VERIFIER_nondet_uint();
+    unsigned int it_min = __VERIFIER_nondet_uint();
+    {if( st_max <= it_min )
+        {return 0;}}
+    {if( best == 0 )
+        {return 0;}}
+    for( ;  ; )
+    {
+        {if( st_max < cur )
+        {break;}}
+        pre = cur;
+        cur += best;
+        {if( cur <= pre )
+            {break;}}
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Unsigned_Wraparound_Error_1_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern unsigned int __VERIFIER_nondet_uint(void);
+/*
+Commit Number: 5ff623fc990210e4bb5dc04447f9e95ad83e5195
+URL: https://github.com/alsa-project/alsa-lib/commit/5ff623fc990210e4bb5dc04447f9e95ad83e5195
+Project Name: alsa-lib
+License: LGPL-2.1
+termination: TRUE
+
+*/
+int main()
+{
+    unsigned int best = __VERIFIER_nondet_uint();
+    unsigned int cur = best;
+    unsigned int pre;
+    unsigned int st_max = __VERIFIER_nondet_uint();
+    unsigned int it_min = __VERIFIER_nondet_uint();
+    { __VERIFIER_reached_control(17, __func__);
+if( st_max <= it_min )
+        { __VERIFIER_control_true(18, __func__);
+return 0;}}
+    { __VERIFIER_reached_control(19, __func__);
+if( best == 0 )
+        { __VERIFIER_control_true(20, __func__);
+return 0;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(22, __func__);
+ for( ;  ; )
+    { __VERIFIER_loop_head(22, __func__);
+printf("CBMC Instrumentation @ line22");myBool flag=__VERIFIER_nondet_myBool();static unsigned int obest;static unsigned int ocur;static unsigned int oit_min;static unsigned int opre;static unsigned int ost_max;if(pStored0){__CPROVER_assert(!(obest==best && ocur==cur && oit_min==it_min && opre==pre && ost_max==st_max),"recurrent state found");} if(flag){obest=best;ocur=cur;oit_min=it_min;opre=pre;ost_max=st_max;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(23, __func__);
+if( st_max < cur )
+        { __VERIFIER_control_true(24, __func__);
+break;}}
+        pre = cur;
+        cur += best;
+        { __VERIFIER_reached_control(27, __func__);
+if( cur <= pre )
+            { __VERIFIER_control_true(28, __func__);
+break;}}
+    }
+    return 0;
+}
+
+End Main 
+ Unsigned_Wraparound_Error_1_T_braced_instrumented.c
+NTFILE is Unsigned_Wraparound_Error_1_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Unsigned_Wraparound_Error_1_T.c
+FILE=Unsigned_Wraparound_Error_1_T_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182306 milliseconds

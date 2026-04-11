@@ -1,0 +1,77 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.qYxUO0
+
+Input File is : svcomp_c.07-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_c.07-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int test_fun(int i, int j, int k, int tmp)
+{
+    int* i_ref = alloca(sizeof(int));
+    int* j_ref = alloca(sizeof(int));
+    int* k_ref = alloca(sizeof(int));
+    int* tmp_ref = alloca(sizeof(int));
+    int* c = alloca(sizeof(int));
+    *i_ref = i;
+    *j_ref = j;
+    *k_ref = k;
+    *tmp_ref = tmp;
+    *c = 0;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(17, __func__);
+ while ((*i_ref <= 100) && (*j_ref <= k)) { __VERIFIER_loop_head(17, __func__);
+printf("CBMC Instrumentation @ line17");myBool flag=__VERIFIER_nondet_myBool();static int * oc;static int oc_val;static int oi;static int * oi_ref;static int oi_ref_val;static int oj;static int * oj_ref;static int oj_ref_val;static int ok;static int * ok_ref;static int ok_ref_val;static int otmp;static int * otmp_ref;static int otmp_ref_val;if(pStored0){__CPROVER_assert(!(oc==c && *oc==*c && oc_val==*c && oi==i && oi_ref==i_ref && *oi_ref==*i_ref && oi_ref_val==*i_ref && oj==j && oj_ref==j_ref && *oj_ref==*j_ref && oj_ref_val==*j_ref && ok==k && ok_ref==k_ref && *ok_ref==*k_ref && ok_ref_val==*k_ref && otmp==tmp && otmp_ref==tmp_ref && *otmp_ref==*tmp_ref && otmp_ref_val==*tmp_ref),"recurrent state found");} if(flag){oc=c;*oc=*c;oc_val=*c;oi=i;oi_ref=i_ref;*oi_ref=*i_ref;oi_ref_val=*i_ref;oj=j;oj_ref=j_ref;*oj_ref=*j_ref;oj_ref_val=*j_ref;ok=k;ok_ref=k_ref;*ok_ref=*k_ref;ok_ref_val=*k_ref;otmp=tmp;otmp_ref=tmp_ref;*otmp_ref=*tmp_ref;otmp_ref_val=*tmp_ref;pStored0=myTrue;} 
+        *tmp_ref = *i_ref;
+        *i_ref = *j_ref;
+        *j_ref = *tmp_ref + 1;
+        *k_ref = *k_ref - 1;
+        *c = *c + 1;
+    }
+    return *c;
+}
+
+int main() {
+  return test_fun(__VERIFIER_nondet_int(),__VERIFIER_nondet_int(),__VERIFIER_nondet_int(),__VERIFIER_nondet_int());
+}
+./proton: line 26:   103 Aborted                 instrumenter -in $FILE_NAME -c
+svcomp_c.07-alloca_instrumented.c
+NTFILE is svcomp_c.07-alloca_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_c.07-alloca.c
+FILE=svcomp_c.07-alloca_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 76391 milliseconds

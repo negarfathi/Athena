@@ -1,0 +1,275 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.r3l1e6
+
+Input File is : Adding_Subtracting_Zero_3_NT.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+
+Commit Number: d5396e453ff39428c38a1b5af261e4e89bd90e8f
+URL: https://github.com/cmus/cmus/commit/d5396e453ff39428c38a1b5af261e4e89bd90e8f
+Project Name: cmus
+License: GPL-2.0
+termination: false
+
+
+
+
+
+This case is simplified by this bug from GitHub.
+
+In C:
+ssize_t read  (int fd, void *buf, size_t count);
+Return the number of bytes read successfully, return -1 on error and set errno. If the end of the file has been reached before the read is adjusted, the read returns 0 this time.
+
+This program uses arrays to rewrite read function.
+
+In this program:
+int read ( int loc, int len );
+When EOF, return 0;
+When abnormal, return -1;
+When read, return the number of bytes read successfully.
+
+flag: When the end of the file is reached, flag is 1; otherwise flag is 0.
+
+This program is non-terminating because when the end of the file is reached and flag is 1, read function will always return 0, which is infinite.
+*/
+
+int flag = 0;
+int read( int loc , int len )
+{
+    int count = 0;
+    {if( flag == 1 ) //whether EOF or not
+        {return 0;}}
+    while( loc < len )
+    {
+        int num =  __VERIFIER_nondet_int();
+        {if( num == 0 ) //abnormal
+        {
+            return -1;
+        }
+        else
+        {
+            {if( num < 0 )
+                {num =  -num;}}
+            num = num % 1000;
+            count++;
+            {if( num < 995 ) //read a char
+            {
+                loc++;
+                continue;
+            }
+            else // EOF
+            {
+                flag = 1;
+                return count;
+            }}
+        }}
+    }
+    return count;
+}
+int main()
+{
+    int pos = 0;
+    int size = __VERIFIER_nondet_int();
+    flag = 0;
+    int errno = 0;
+    {if( size <= 0 || size > 65536 )
+        {return 0;}}
+    while( pos < size )
+    {
+        int rc = read( pos, size - pos);
+        {if( rc == -1 )
+        {
+            errno++;// abnormal is OK
+            {if( errno == 5 )
+                {return 0;}}
+            continue;
+        }}
+        pos += rc;
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Adding_Subtracting_Zero_3_NT_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+
+Commit Number: d5396e453ff39428c38a1b5af261e4e89bd90e8f
+URL: https://github.com/cmus/cmus/commit/d5396e453ff39428c38a1b5af261e4e89bd90e8f
+Project Name: cmus
+License: GPL-2.0
+termination: false
+
+
+
+
+
+This case is simplified by this bug from GitHub.
+
+In C:
+ssize_t read  (int fd, void *buf, size_t count);
+Return the number of bytes read successfully, return -1 on error and set errno. If the end of the file has been reached before the read is adjusted, the read returns 0 this time.
+
+This program uses arrays to rewrite read function.
+
+In this program:
+int read ( int loc, int len );
+When EOF, return 0;
+When abnormal, return -1;
+When read, return the number of bytes read successfully.
+
+flag: When the end of the file is reached, flag is 1; otherwise flag is 0.
+
+This program is non-terminating because when the end of the file is reached and flag is 1, read function will always return 0, which is infinite.
+*/
+
+int flag = 0;
+int read( int loc , int len )
+{
+    int count = 0;
+    { __VERIFIER_reached_control(37, __func__);
+if( flag == 1 ) //whether EOF or not
+        { __VERIFIER_control_true(38, __func__);
+return 0;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(40, __func__);
+ while( loc < len )
+    { __VERIFIER_loop_head(40, __func__);
+printf("CBMC Instrumentation @ line40");myBool flag=__VERIFIER_nondet_myBool();static int ocount;static int oflag;static int olen;static int oloc;if(pStored0){__CPROVER_assert(!(ocount==count && oflag==flag && olen==len && oloc==loc),"recurrent state found");} if(flag){ocount=count;oflag=flag;olen=len;oloc=loc;pStored0=myTrue;} 
+        int num =  __VERIFIER_nondet_int();
+        { __VERIFIER_reached_control(42, __func__);
+if( num == 0 ) //abnormal
+        { __VERIFIER_control_true(43, __func__);
+
+            return -1;
+        }
+        else
+        { __VERIFIER_control_false(47, __func__);
+
+            { __VERIFIER_reached_control(48, __func__);
+if( num < 0 )
+                { __VERIFIER_control_true(49, __func__);
+num =  -num;}}
+            num = num % 1000;
+            count++;
+            { __VERIFIER_reached_control(52, __func__);
+if( num < 995 ) //read a char
+            { __VERIFIER_control_true(53, __func__);
+
+                loc++;
+                continue;
+            }
+            else // EOF
+            { __VERIFIER_control_false(58, __func__);
+
+                flag = 1;
+                return count;
+            }}
+        }}
+    }
+    return count;
+}
+int main()
+{
+    int pos = 0;
+    int size = __VERIFIER_nondet_int();
+    flag = 0;
+    int errno = 0;
+    { __VERIFIER_reached_control(72, __func__);
+if( size <= 0 || size > 65536 )
+        { __VERIFIER_control_true(73, __func__);
+return 0;}}
+   myBool pStored1 = myFalse; __VERIFIER_reached_control(75, __func__);
+ while( pos < size )
+    { __VERIFIER_loop_head(75, __func__);
+printf("CBMC Instrumentation @ line75");myBool flag=__VERIFIER_nondet_myBool();static int oerrno;static int oflag;static int opos;static int osize;if(pStored1){__CPROVER_assert(!(oerrno==errno && oflag==flag && opos==pos && osize==size),"recurrent state found");} if(flag){oerrno=errno;oflag=flag;opos=pos;osize=size;pStored1=myTrue;} 
+        int rc = read( pos, size - pos);
+        { __VERIFIER_reached_control(77, __func__);
+if( rc == -1 )
+        { __VERIFIER_control_true(78, __func__);
+
+            errno++;// abnormal is OK
+            { __VERIFIER_reached_control(80, __func__);
+if( errno == 5 )
+                { __VERIFIER_control_true(81, __func__);
+return 0;}}
+            continue;
+        }}
+        pos += rc;
+    }
+    return 0;
+}
+
+End Main 
+ Adding_Subtracting_Zero_3_NT_braced_instrumented.c
+NTFILE is Adding_Subtracting_Zero_3_NT_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Adding_Subtracting_Zero_3_NT.c
+b'b76c26a25dc588ba53e1533686e7b6410e2167a79ccf02eda04eef7a20fd2d95  Adding_Subtracting_Zero_3_NT.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Adding_Subtracting_Zero_3_NT/Adding_Subtracting_Zero_3_NT.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 72 reachedControl
+main 75 reachedControl
+main 75 loopHead
+read 37 reachedControl
+read 40 reachedControl
+read 40 loopHead
+read 42 reachedControl
+read 47 falseBranch
+read 48 reachedControl
+read 52 reachedControl
+read 58 falseBranch
+main 77 reachedControl
+main 75 loopHead
+read 37 reachedControl
+read 40 reachedControl
+enteringLasso
+main 77 reachedControl
+main 75 loopHead
+Trace file line inside enterred lasso check : main 77 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Adding_Subtracting_Zero_3_NT/Adding_Subtracting_Zero_3_NT.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Adding_Subtracting_Zero_3_NT.c
+FILE=Adding_Subtracting_Zero_3_NT_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 3016 milliseconds

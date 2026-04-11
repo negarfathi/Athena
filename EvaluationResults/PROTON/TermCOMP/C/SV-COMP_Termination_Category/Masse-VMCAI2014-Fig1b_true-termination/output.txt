@@ -1,0 +1,96 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.qdEmHB
+
+Input File is : Masse-VMCAI2014-Fig1b_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program from Fig.1b of
+ * 2014VMCAI - Massé - Policy Iteration-Based Conditional Termination and Ranking Functions
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+	while (x <= 100) {
+		{if (__VERIFIER_nondet_int()) {
+			x = -2*x + 2;
+		} else {
+			x = -3*x - 2;
+		}}
+	}
+	return 0;
+}
+End Main   
+
+Input File is : Masse-VMCAI2014-Fig1b_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Fig.1b of
+ * 2014VMCAI - Massé - Policy Iteration-Based Conditional Termination and Ranking Functions
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int x = __VERIFIER_nondet_int();
+myBool pStored0 = myFalse; __VERIFIER_reached_control(13, __func__);
+	while (x <= 100) { __VERIFIER_loop_head(13, __func__);
+printf("CBMC Instrumentation @ line13");myBool flag=__VERIFIER_nondet_myBool();static int ox;if(pStored0){__CPROVER_assert(!(ox==x),"recurrent state found");} if(flag){ox=x;pStored0=myTrue;} 
+		{ __VERIFIER_reached_control(14, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(14, __func__);
+
+			x = -2*x + 2;
+		} else { __VERIFIER_control_false(16, __func__);
+
+			x = -3*x - 2;
+		}}
+	}
+	return 0;
+}
+End Main 
+ Masse-VMCAI2014-Fig1b_true-termination_braced_instrumented.c
+NTFILE is Masse-VMCAI2014-Fig1b_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Masse-VMCAI2014-Fig1b_true-termination.c
+FILE=Masse-VMCAI2014-Fig1b_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183098 milliseconds

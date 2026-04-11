@@ -1,0 +1,240 @@
+///*** 1_main ***///
+START: main_bb0;
+
+FROM: main_bb0;
+TO: main_bb1;
+
+FROM: main_bb1;
+TO: main_bb1_end;
+
+FROM: main_bb1_end;
+assume(nondet());
+TO: main_zalloc_or_die.exit.i;
+
+FROM: main_bb1_end;
+assume(nondet());
+TO: main_bb17;
+
+FROM: main_zalloc_or_die.exit.i;
+TO: main_bb2;
+
+FROM: main_bb2;
+TO: main_bb2_end;
+
+FROM: main_bb2_end;
+assume(nondet());
+TO: main_zalloc_or_die.exit.i.i;
+
+FROM: main_bb2_end;
+assume(nondet());
+TO: main_bb16;
+
+FROM: main_zalloc_or_die.exit.i.i;
+TO: main_bb3;
+
+FROM: main_bb3;
+TO: main_bb3_end;
+
+FROM: main_bb3_end;
+assume(nondet());
+TO: main_zalloc_or_die.exit.i.i.i;
+
+FROM: main_bb3_end;
+assume(nondet());
+TO: main_bb15;
+
+FROM: main_zalloc_or_die.exit.i.i.i;
+TO: main_bb4;
+
+FROM: main_bb4;
+TO: main_bb4_end;
+
+FROM: main_bb4_end;
+assume(nondet());
+TO: main_zalloc_or_die.exit.i.i.i.i;
+
+FROM: main_bb4_end;
+assume(nondet());
+TO: main_bb14;
+
+FROM: main_zalloc_or_die.exit.i.i.i.i;
+TO: main_bb5;
+
+FROM: main_bb5;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(nondet());
+TO: main_zalloc_or_die.exit.i.i.i.i.i;
+
+FROM: main_bb5_end;
+assume(nondet());
+TO: main_bb13;
+
+FROM: main_zalloc_or_die.exit.i.i.i.i.i;
+TO: main_zalloc_or_die.exit.i.i.i.i.i_end;
+
+FROM: main_zalloc_or_die.exit.i.i.i.i.i_end;
+assume(nondet());
+TO: main_l4_insert.exit.i.i.i.i;
+
+FROM: main_zalloc_or_die.exit.i.i.i.i.i_end;
+assume(nondet());
+TO: main_bb12;
+
+FROM: main_l4_insert.exit.i.i.i.i;
+v22 := v21;
+v24 := v23;
+v15 := v18;
+v25 := nondet();
+TO: main_l4_insert.exit.i.i.i.i_end;
+
+FROM: main_l4_insert.exit.i.i.i.i_end;
+assume(v25 != 0);
+TO: main_bb5;
+
+FROM: main_l4_insert.exit.i.i.i.i_end;
+assume(v25 == 0);
+TO: main_l3_insert.exit.i.i.i;
+
+FROM: main_l3_insert.exit.i.i.i;
+v28 := v27;
+v11 := v14;
+v29 := nondet();
+TO: main_l3_insert.exit.i.i.i_end;
+
+FROM: main_l3_insert.exit.i.i.i_end;
+assume(v29 != 0);
+TO: main_bb4;
+
+FROM: main_l3_insert.exit.i.i.i_end;
+assume(v29 == 0);
+TO: main_l2_insert.exit.i.i;
+
+FROM: main_l2_insert.exit.i.i;
+v32 := v31;
+v7 := v10;
+v33 := nondet();
+TO: main_l2_insert.exit.i.i_end;
+
+FROM: main_l2_insert.exit.i.i_end;
+assume(v33 != 0);
+TO: main_bb3;
+
+FROM: main_l2_insert.exit.i.i_end;
+assume(v33 == 0);
+TO: main_l1_insert.exit.i;
+
+FROM: main_l1_insert.exit.i;
+v36 := v35;
+v3 := v6;
+v37 := nondet();
+TO: main_l1_insert.exit.i_end;
+
+FROM: main_l1_insert.exit.i_end;
+assume(v37 != 0);
+TO: main_bb2;
+
+FROM: main_l1_insert.exit.i_end;
+assume(v37 == 0);
+TO: main_l0_insert.exit;
+
+FROM: main_l0_insert.exit;
+v40 := v39;
+vmain.list := v2;
+v41 := nondet();
+TO: main_l0_insert.exit_end;
+
+FROM: main_l0_insert.exit_end;
+assume(v41 != 0);
+TO: main_bb1;
+
+FROM: main_l0_insert.exit_end;
+assume(v41 == 0);
+TO: main_bb6;
+
+FROM: main_bb6;
+TO: main_bb7;
+
+FROM: main_bb7;
+TO: main_bb8;
+
+FROM: main_bb8;
+TO: main_bb9;
+
+FROM: main_bb9;
+TO: main_bb10;
+
+FROM: main_bb10;
+TO: main_bb11;
+
+FROM: main_bb11;
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(nondet());
+TO: main_bb11;
+
+FROM: main_bb11_end;
+assume(nondet());
+TO: main_l4_destroy.exit.i.i.i.i;
+
+FROM: main_l4_destroy.exit.i.i.i.i;
+TO: main_l4_destroy.exit.i.i.i.i_end;
+
+FROM: main_l4_destroy.exit.i.i.i.i_end;
+assume(nondet());
+TO: main_bb10;
+
+FROM: main_l4_destroy.exit.i.i.i.i_end;
+assume(nondet());
+TO: main_l3_destroy.exit.i.i.i;
+
+FROM: main_l3_destroy.exit.i.i.i;
+TO: main_l3_destroy.exit.i.i.i_end;
+
+FROM: main_l3_destroy.exit.i.i.i_end;
+assume(nondet());
+TO: main_bb9;
+
+FROM: main_l3_destroy.exit.i.i.i_end;
+assume(nondet());
+TO: main_l2_destroy.exit.i.i;
+
+FROM: main_l2_destroy.exit.i.i;
+TO: main_l2_destroy.exit.i.i_end;
+
+FROM: main_l2_destroy.exit.i.i_end;
+assume(nondet());
+TO: main_bb8;
+
+FROM: main_l2_destroy.exit.i.i_end;
+assume(nondet());
+TO: main_l1_destroy.exit.i;
+
+FROM: main_l1_destroy.exit.i;
+TO: main_l1_destroy.exit.i_end;
+
+FROM: main_l1_destroy.exit.i_end;
+assume(nondet());
+TO: main_bb7;
+
+FROM: main_l1_destroy.exit.i_end;
+assume(nondet());
+TO: main_l0_destroy.exit;
+
+FROM: main_l0_destroy.exit;
+TO: main_l0_destroy.exit_ret;
+
+FROM: main_bb12;
+
+FROM: main_bb13;
+
+FROM: main_bb14;
+
+FROM: main_bb15;
+
+FROM: main_bb16;
+
+FROM: main_bb17;
+

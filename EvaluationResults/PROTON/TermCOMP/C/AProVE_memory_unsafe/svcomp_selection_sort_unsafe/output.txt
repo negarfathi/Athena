@@ -1,0 +1,103 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.PJjqpG
+
+Input File is : svcomp_selection_sort_unsafe.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+
+void selection(int a[], int N)
+{
+    int i, j, min, t;
+    for (i = 1; i < N; i++) {
+        min = i;
+        for (j = i+1; j <= N; ++j) {
+            {if (a[j] < a[min]) {
+                min = j;
+            }}            
+        }
+        t = a[min];
+        a[min] = a[i];
+        a[i] = t;
+    }
+}
+
+int main() {
+  int *a;
+  int N = __VERIFIER_nondet_int();
+  selection(a, N);
+  return 0;
+}
+
+End Main   
+
+Input File is : svcomp_selection_sort_unsafe_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+
+void selection(int a[], int N)
+{
+    int i, j, min, t;
+    for (i = 1; i < N; i++) {printf("ArrayNT State @ line6: Array Found\n");
+        min = i;
+       myBool pStored0 = myFalse; __VERIFIER_reached_control(8, __func__);
+ for (j = i+1; j <= N; ++j) { __VERIFIER_loop_head(8, __func__);
+printf("CBMC Instrumentation @ line8");myBool flag=__VERIFIER_nondet_myBool();static int oN;static int oi;static int oj;static int omin;static int ot;if(pStored0){__CPROVER_assert(!(oN==N && oi==i && oj==j && omin==min && ot==t),"recurrent state found");} if(flag){oN=N;oi=i;oj=j;omin=min;ot=t;pStored0=myTrue;} 
+            { __VERIFIER_reached_control(9, __func__);
+if (a[j] < a[min]) { __VERIFIER_control_true(9, __func__);
+
+                min = j;
+            }}            
+        }
+        t = a[min];
+        a[min] = a[i];
+        a[i] = t;
+    }
+}
+
+int main() {
+  int *a;
+  int N = __VERIFIER_nondet_int();
+  selection(a, N);
+  return 0;
+}
+
+End Main 
+ svcomp_selection_sort_unsafe_braced_instrumented.c
+NTFILE is svcomp_selection_sort_unsafe_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_selection_sort_unsafe.c
+FILE=svcomp_selection_sort_unsafe_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182993 milliseconds

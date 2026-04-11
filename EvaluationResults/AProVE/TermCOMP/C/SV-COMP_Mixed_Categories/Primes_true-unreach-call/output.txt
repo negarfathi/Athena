@@ -1,0 +1,11 @@
+/liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/Primes_true-unreach-call/Primes_true-unreach-call.c:72:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+
+line 303:5 extraneous input 'metadata' expecting EXCLAMATION
+line 303:25 no viable alternative at input '!'
+Graph finished, checking  consistency
+Graph finished, checked consistency, took 0.019s
+/Users/nfathi2/Desktop/run_AProVE.sh: line 39: 92292 Killed: 9               timeout --kill-after=10 "$timeout" docker run --rm --platform linux/amd64 -v "$root_directory":/liveness_analysis --entrypoint java aprove -ea -jar /opt/aprove/aprove.jar -m wst --bit-width 64 "/liveness_analysis/Benchmarks/$path_postfix"
+Runtime: 910024 milliseconds

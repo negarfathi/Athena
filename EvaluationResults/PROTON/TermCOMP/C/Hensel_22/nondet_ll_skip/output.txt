@@ -1,0 +1,172 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.rESSsS
+
+Input File is : nondet_ll_skip.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int();
+
+struct list {
+  int value;
+  struct list* next;
+};
+
+struct list* init_list(int n) {
+  struct list* curr = NULL;
+  struct list* tail = curr;
+
+  for (int j = 0; j < n; j++) {
+    curr = malloc(sizeof(struct list));
+    curr->value = __VERIFIER_nondet_int();
+    curr->next = tail;
+    tail = curr;
+  }
+
+  return curr;
+}
+
+void skip(struct list** head_ptr, int m) {
+  struct list* head = *head_ptr;
+  {if (head == NULL) {return;}}
+
+  while (head->value == m) {
+    {if (head->next != NULL) {
+      head = head->next;
+    } else {
+      *head_ptr = NULL;
+      return;
+    }}
+  }
+
+  *head_ptr = head;
+}
+
+int main() {
+  int n = __VERIFIER_nondet_int();
+  int m = __VERIFIER_nondet_int();
+  struct list* head = init_list(n);
+  skip(&head,m);
+  return 0;
+}
+./proton: line 26:    90 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : nondet_ll_skip_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int();
+
+struct list {
+  int value;
+  struct list* next;
+};
+
+struct list* init_list(int n) {
+  struct list* curr = NULL;
+  struct list* tail = curr;
+
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+ for (int j = 0; j < n; j++) { __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int oj;static int on;if(pStored0){__CPROVER_assert(!(oj==j && on==n),"recurrent state found");} if(flag){oj=j;on=n;pStored0=myTrue;} 
+    curr = malloc(sizeof(struct list));
+    curr->value = __VERIFIER_nondet_int();
+    curr->next = tail;
+    tail = curr;
+  }
+
+  return curr;
+}
+
+void skip(struct list** head_ptr, int m) {
+  struct list* head = *head_ptr;
+  { __VERIFIER_reached_control(26, __func__);
+if (head == NULL) { __VERIFIER_control_true(26, __func__);
+return;}}
+
+ myBool pStored1 = myFalse; __VERIFIER_reached_control(28, __func__);
+ while (head->value == m) { __VERIFIER_loop_head(28, __func__);
+printf("CBMC Instrumentation @ line28");myBool flag=__VERIFIER_nondet_myBool();static int om;if(pStored1){__CPROVER_assert(!(om==m),"recurrent state found");} if(flag){om=m;pStored1=myTrue;} 
+    { __VERIFIER_reached_control(29, __func__);
+if (head->next != NULL) { __VERIFIER_control_true(29, __func__);
+
+      head = head->next;
+    } else { __VERIFIER_control_false(31, __func__);
+
+      *head_ptr = NULL;
+      return;
+    }}
+  }
+
+  *head_ptr = head;
+}
+
+int main() {
+  int n = __VERIFIER_nondet_int();
+  int m = __VERIFIER_nondet_int();
+  struct list* head = init_list(n);
+  skip(&head,m);
+  return 0;
+}
+./proton: line 26:   102 Aborted                 instrumenter -in *braced.c -c
+nondet_ll_skip_braced_instrumented.c
+NTFILE is nondet_ll_skip_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = nondet_ll_skip.c
+b'7c373abb380a64391e1d37fd0d9099b22792d8d347a5af66bc224df20e626a1a  nondet_ll_skip.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Hensel_22/nondet_ll_skip/nondet_ll_skip.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+init_list 14 reachedControl
+init_list 14 loopHead
+main 14 reachedControl
+init_list 14 loopHead
+skip 26 reachedControl
+enteringLasso
+skip 28 reachedControl
+skip 28 loopHead
+skip 29 reachedControl
+skip 29 trueBranch
+skip 28 loopHead
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 163, in generateViolationWitness
+    nextLineNo = nextLineWords[-2]
+IndexError: list index out of range
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for nondet_ll_skip.c
+FILE=nondet_ll_skip_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2831 milliseconds

@@ -1,0 +1,44 @@
+line 95:5 extraneous input 'metadata' expecting EXCLAMATION
+line 95:25 no viable alternative at input '!'
+Aborted 1755925717Exec. 4, LLVMToSEGraph with some error. Reason: java.lang.IllegalStateException: Adding two weak inequalities would result in an equation - but this should have been detected earlier!.
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMHeuristicRelationSet.addRelation(LLVMHeuristicRelationSet.java:278)
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMHeuristicRelationSet.addRelations(LLVMHeuristicRelationSet.java:318)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.cleanRelations(LLVMHeuristicState.java:800)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:594)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcess(LLVMHeuristicState.java:3220)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcessAfterRefinement(LLVMHeuristicState.java:2662)
+            aprove.InputModules.Programs.llvm.states.LLVMAbstractState.evaluate(LLVMAbstractState.java:542)
+            aprove.InputModules.Programs.llvm.segraph.graphConstructionSteps.LLVMStandardStep.perform(LLVMStandardStep.java:98)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.executeStepAndPutSucessorStepsInQueue(LLVMSEGraph.java:1087)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:243)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:216)
+            aprove.InputModules.Programs.llvm.segraph.LLVMGraphBuilder.buildGraph(LLVMGraphBuilder.java:84)
+            aprove.InputModules.Programs.llvm.processors.LLVMToSEGraphProcessor.process(LLVMToSEGraphProcessor.java:110)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            java.base/java.lang.Thread.run(Thread.java:840)
+java.lang.IllegalStateException: Adding two weak inequalities would result in an equation - but this should have been detected earlier!
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMHeuristicRelationSet.addRelation(LLVMHeuristicRelationSet.java:278)
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMHeuristicRelationSet.addRelations(LLVMHeuristicRelationSet.java:318)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.cleanRelations(LLVMHeuristicState.java:800)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:594)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcess(LLVMHeuristicState.java:3220)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcessAfterRefinement(LLVMHeuristicState.java:2662)
+	at aprove.InputModules.Programs.llvm.states.LLVMAbstractState.evaluate(LLVMAbstractState.java:542)
+	at aprove.InputModules.Programs.llvm.segraph.graphConstructionSteps.LLVMStandardStep.perform(LLVMStandardStep.java:98)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.executeStepAndPutSucessorStepsInQueue(LLVMSEGraph.java:1087)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:243)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:216)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMGraphBuilder.buildGraph(LLVMGraphBuilder.java:84)
+	at aprove.InputModules.Programs.llvm.processors.LLVMToSEGraphProcessor.process(LLVMToSEGraphProcessor.java:110)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+YES
+Runtime: 11428 milliseconds

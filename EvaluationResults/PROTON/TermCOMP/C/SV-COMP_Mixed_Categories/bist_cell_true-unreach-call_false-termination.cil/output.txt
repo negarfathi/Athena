@@ -1,0 +1,1256 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.PLEaNR
+
+Input File is : bist_cell_true-unreach-call_false-termination.cil.c
+
+ CBMC instrumentation
+
+Rewriter Init
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+extern int __VERIFIER_nondet_int();
+
+void error(void) 
+{ 
+
+  {
+  ERROR: __VERIFIER_error();
+  return;
+}
+}
+
+int b0_val  ;
+int b0_val_t  ;
+int b0_ev  ;
+int b0_req_up  ;
+int b1_val  ;
+int b1_val_t  ;
+int b1_ev  ;
+int b1_req_up  ;
+int d0_val  ;
+int d0_val_t  ;
+int d0_ev  ;
+int d0_req_up  ;
+int d1_val  ;
+int d1_val_t  ;
+int d1_ev  ;
+int d1_req_up  ;
+int z_val  ;
+int z_val_t  ;
+int z_ev  ;
+int z_req_up  ;
+int comp_m1_st  ;
+int comp_m1_i  ;
+void method1(void) 
+{ int s1 ;
+  int s2 ;
+  int s3 ;
+
+  {
+  {if (b0_val) {
+    {if (d1_val) {
+      s1 = 0;
+    } else {
+      s1 = 1;
+    }}
+  } else {
+    s1 = 1;
+  }}
+  {if (d0_val) {
+    {if (b1_val) {
+      s2 = 0;
+    } else {
+      s2 = 1;
+    }}
+  } else {
+    s2 = 1;
+  }}
+  {if (s2) {
+    s3 = 0;
+  } else {
+    {if (s1) {
+      s3 = 0;
+    } else {
+      s3 = 1;
+    }}
+  }}
+  {if (s2) {
+    {if (s1) {
+      s2 = 1;
+    } else {
+      s2 = 0;
+    }}
+  } else {
+    s2 = 0;
+  }}
+  {if (s2) {
+    z_val_t = 0;
+  } else {
+    {if (s3) {
+      z_val_t = 0;
+    } else {
+      z_val_t = 1;
+    }}
+  }}
+  z_req_up = 1;
+  comp_m1_st = 2;
+
+  return;
+}
+}
+int is_method1_triggered(void) 
+{ int __retres1 ;
+
+  {
+  {if ((int )b0_ev == 1) {
+    __retres1 = 1;
+    goto return_label;
+  } else {
+    {if ((int )b1_ev == 1) {
+      __retres1 = 1;
+      goto return_label;
+    } else {
+      {if ((int )d0_ev == 1) {
+        __retres1 = 1;
+        goto return_label;
+      } else {
+        {if ((int )d1_ev == 1) {
+          __retres1 = 1;
+          goto return_label;
+        } else {
+
+        }}
+      }}
+    }}
+  }}
+  __retres1 = 0;
+  return_label: /* CIL Label */ 
+  return (__retres1);
+}
+}
+void update_b0(void) 
+{ 
+
+  {
+  {if ((int )b0_val != (int )b0_val_t) {
+    b0_val = b0_val_t;
+    b0_ev = 0;
+  } else {
+
+  }}
+  b0_req_up = 0;
+
+  return;
+}
+}
+void update_b1(void) 
+{ 
+
+  {
+  {if ((int )b1_val != (int )b1_val_t) {
+    b1_val = b1_val_t;
+    b1_ev = 0;
+  } else {
+
+  }}
+  b1_req_up = 0;
+
+  return;
+}
+}
+void update_d0(void) 
+{ 
+
+  {
+  {if ((int )d0_val != (int )d0_val_t) {
+    d0_val = d0_val_t;
+    d0_ev = 0;
+  } else {
+
+  }}
+  d0_req_up = 0;
+
+  return;
+}
+}
+void update_d1(void) 
+{ 
+
+  {
+  {if ((int )d1_val != (int )d1_val_t) {
+    d1_val = d1_val_t;
+    d1_ev = 0;
+  } else {
+
+  }}
+  d1_req_up = 0;
+
+  return;
+}
+}
+void update_z(void) 
+{ 
+
+  {
+  {if ((int )z_val != (int )z_val_t) {
+    z_val = z_val_t;
+    z_ev = 0;
+  } else {
+
+  }}
+  z_req_up = 0;
+
+  return;
+}
+}
+void update_channels(void) 
+{ 
+
+  {
+  {if ((int )b0_req_up == 1) {
+    {
+    update_b0();
+    }
+  } else {
+
+  }}
+  {if ((int )b1_req_up == 1) {
+    {
+    update_b1();
+    }
+  } else {
+
+  }}
+  {if ((int )d0_req_up == 1) {
+    {
+    update_d0();
+    }
+  } else {
+
+  }}
+  {if ((int )d1_req_up == 1) {
+    {
+    update_d1();
+    }
+  } else {
+
+  }}
+  {if ((int )z_req_up == 1) {
+    {
+    update_z();
+    }
+  } else {
+
+  }}
+
+  return;
+}
+}
+void init_threads(void) 
+{ 
+
+  {
+  {if ((int )comp_m1_i == 1) {
+    comp_m1_st = 0;
+  } else {
+    comp_m1_st = 2;
+  }}
+
+  return;
+}
+}
+int exists_runnable_thread(void) 
+{ int __retres1 ;
+
+  {
+  {if ((int )comp_m1_st == 0) {
+    __retres1 = 1;
+    goto return_label;
+  } else {
+
+  }}
+  __retres1 = 0;
+  return_label: /* CIL Label */ 
+  return (__retres1);
+}
+}
+void eval(void) 
+{ int tmp ;
+  int tmp___0 ;
+
+  {
+  {
+  while (1) {
+    while_0_continue: /* CIL Label */ ;
+    {
+    tmp___0 = exists_runnable_thread();
+    }
+    {if (tmp___0) {
+
+    } else {
+      goto while_0_break;
+    }}
+    {if ((int )comp_m1_st == 0) {
+      {
+	tmp = __VERIFIER_nondet_int(); 
+      }
+      {if (tmp) {
+        {
+        comp_m1_st = 1;
+        method1();
+        }
+      } else {
+
+      }}
+    } else {
+
+    }}
+  }
+  while_0_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+void fire_delta_events(void) 
+{ 
+
+  {
+  {if ((int )b0_ev == 0) {
+    b0_ev = 1;
+  } else {
+
+  }}
+  {if ((int )b1_ev == 0) {
+    b1_ev = 1;
+  } else {
+
+  }}
+  {if ((int )d0_ev == 0) {
+    d0_ev = 1;
+  } else {
+
+  }}
+  {if ((int )d1_ev == 0) {
+    d1_ev = 1;
+  } else {
+
+  }}
+  {if ((int )z_ev == 0) {
+    z_ev = 1;
+  } else {
+
+  }}
+
+ 
+Rewrite Buffer is not NULL
+
+Finished Rewriting   return;
+}
+}
+void reset_delta_events(void) 
+{ 
+
+  {
+  {if ((int )b0_ev == 1) {
+    b0_ev = 2;
+  } else {
+
+  }}
+  {if ((int )b1_ev == 1) {
+    b1_ev = 2;
+  } else {
+
+  }}
+  {if ((int )d0_ev == 1) {
+    d0_ev = 2;
+  } else {
+
+  }}
+  {if ((int )d1_ev == 1) {
+    d1_ev = 2;
+  } else {
+
+  }}
+  {if ((int )z_ev == 1) {
+    z_ev = 2;
+  } else {
+
+  }}
+
+  return;
+}
+}
+void activate_threads(void) 
+{ int tmp ;
+
+  {
+  {
+  tmp = is_method1_triggered();
+  }
+  {if (tmp) {
+    comp_m1_st = 0;
+  } else {
+
+  }}
+
+  return;
+}
+}
+int stop_simulation(void) 
+{ int tmp ;
+  int __retres2 ;
+
+  {
+  {
+  tmp = exists_runnable_thread();
+  }
+  {if (tmp) {
+    __retres2 = 0;
+    goto return_label;
+  } else {
+
+  }}
+  __retres2 = 1;
+  return_label: /* CIL Label */ 
+  return (__retres2);
+}
+}
+void start_simulation(void) 
+{ int kernel_st ;
+  int tmp ;
+
+  {
+  {
+  kernel_st = 0;
+  update_channels();
+  init_threads();
+  fire_delta_events();
+  activate_threads();
+  reset_delta_events();
+  }
+  {
+  while (1) {
+    while_1_continue: /* CIL Label */ ;
+    {
+    kernel_st = 1;
+    eval();
+    }
+    {
+    kernel_st = 2;
+    update_channels();
+    }
+    {
+    kernel_st = 3;
+    fire_delta_events();
+    activate_threads();
+    reset_delta_events();
+    tmp = stop_simulation();
+    }
+    {if (tmp) {
+      goto while_1_break;
+    } else {
+
+    }}
+  }
+  while_1_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+void init_model(void) 
+{ 
+
+  {
+  b0_val = 0;
+  b0_ev = 2;
+  b0_req_up = 0;
+  b1_val = 0;
+  b1_ev = 2;
+  b1_req_up = 0;
+  d0_val = 0;
+  d0_ev = 2;
+  d0_req_up = 0;
+  d1_val = 0;
+  d1_ev = 2;
+  d1_req_up = 0;
+  z_val = 0;
+  z_ev = 2;
+  z_req_up = 0;
+  b0_val_t = 1;
+  b0_req_up = 1;
+  b1_val_t = 1;
+  b1_req_up = 1;
+  d0_val_t = 1;
+  d0_req_up = 1;
+  d1_val_t = 1;
+  d1_req_up = 1;
+  comp_m1_i = 0;
+
+  return;
+}
+}
+int main(void) 
+{ int __retres1 ;
+
+  {
+  {
+  init_model();
+  start_simulation();
+  }
+  {if (! ((int )z_val == 0)) {
+    {
+    error();
+    }
+  } else {
+
+  }}
+  __retres1 = 0;
+  return (__retres1);
+}
+}
+
+End Main   
+
+Input File is : bist_cell_true-unreach-call_false-termination.cil_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+extern int __VERIFIER_nondet_int();
+
+void error(void) 
+{ 
+
+  {
+  ERROR: __VERIFIER_error();
+  return;
+}
+}
+
+int b0_val  ;
+int b0_val_t  ;
+int b0_ev  ;
+int b0_req_up  ;
+int b1_val  ;
+int b1_val_t  ;
+int b1_ev  ;
+int b1_req_up  ;
+int d0_val  ;
+int d0_val_t  ;
+int d0_ev  ;
+int d0_req_up  ;
+int d1_val  ;
+int d1_val_t  ;
+int d1_ev  ;
+int d1_req_up  ;
+int z_val  ;
+int z_val_t  ;
+int z_ev  ;
+int z_req_up  ;
+int comp_m1_st  ;
+int comp_m1_i  ;
+void method1(void) 
+{ int s1 ;
+  int s2 ;
+  int s3 ;
+
+  {
+  { __VERIFIER_reached_control(42, __func__);
+if (b0_val) { __VERIFIER_control_true(42, __func__);
+
+    { __VERIFIER_reached_control(43, __func__);
+if (d1_val) { __VERIFIER_control_true(43, __func__);
+
+      s1 = 0;
+    } else { __VERIFIER_control_false(45, __func__);
+
+      s1 = 1;
+    }}
+  } else { __VERIFIER_control_false(48, __func__);
+
+    s1 = 1;
+  }}
+  { __VERIFIER_reached_control(51, __func__);
+if (d0_val) { __VERIFIER_control_true(51, __func__);
+
+    { __VERIFIER_reached_control(52, __func__);
+if (b1_val) { __VERIFIER_control_true(52, __func__);
+
+      s2 = 0;
+    } else { __VERIFIER_control_false(54, __func__);
+
+      s2 = 1;
+    }}
+  } else { __VERIFIER_control_false(57, __func__);
+
+    s2 = 1;
+  }}
+  { __VERIFIER_reached_control(60, __func__);
+if (s2) { __VERIFIER_control_true(60, __func__);
+
+    s3 = 0;
+  } else { __VERIFIER_control_false(62, __func__);
+
+    { __VERIFIER_reached_control(63, __func__);
+if (s1) { __VERIFIER_control_true(63, __func__);
+
+      s3 = 0;
+    } else { __VERIFIER_control_false(65, __func__);
+
+      s3 = 1;
+    }}
+  }}
+  { __VERIFIER_reached_control(69, __func__);
+if (s2) { __VERIFIER_control_true(69, __func__);
+
+    { __VERIFIER_reached_control(70, __func__);
+if (s1) { __VERIFIER_control_true(70, __func__);
+
+      s2 = 1;
+    } else { __VERIFIER_control_false(72, __func__);
+
+      s2 = 0;
+    }}
+  } else { __VERIFIER_control_false(75, __func__);
+
+    s2 = 0;
+  }}
+  { __VERIFIER_reached_control(78, __func__);
+if (s2) { __VERIFIER_control_true(78, __func__);
+
+    z_val_t = 0;
+  } else { __VERIFIER_control_false(80, __func__);
+
+    { __VERIFIER_reached_control(81, __func__);
+if (s3) { __VERIFIER_control_true(81, __func__);
+
+      z_val_t = 0;
+    } else { __VERIFIER_control_false(83, __func__);
+
+      z_val_t = 1;
+    }}
+  }}
+  z_req_up = 1;
+  comp_m1_st = 2;
+
+  return;
+}
+}
+int is_method1_triggered(void) 
+{ int __retres1 ;
+
+  {
+  { __VERIFIER_reached_control(97, __func__);
+if ((int )b0_ev == 1) { __VERIFIER_control_true(97, __func__);
+
+    __retres1 = 1;
+    goto return_label;
+  } else { __VERIFIER_control_false(100, __func__);
+
+    { __VERIFIER_reached_control(101, __func__);
+if ((int )b1_ev == 1) { __VERIFIER_control_true(101, __func__);
+
+      __retres1 = 1;
+      goto return_label;
+    } else { __VERIFIER_control_false(104, __func__);
+
+      { __VERIFIER_reached_control(105, __func__);
+if ((int )d0_ev == 1) { __VERIFIER_control_true(105, __func__);
+
+        __retres1 = 1;
+        goto return_label;
+      } else { __VERIFIER_control_false(108, __func__);
+
+        { __VERIFIER_reached_control(109, __func__);
+if ((int )d1_ev == 1) { __VERIFIER_control_true(109, __func__);
+
+          __retres1 = 1;
+          goto return_label;
+        } else { __VERIFIER_control_false(112, __func__);
+
+
+        }}
+      }}
+    }}
+  }}
+  __retres1 = 0;
+  return_label: /* CIL Label */ 
+  return (__retres1);
+}
+}
+void update_b0(void) 
+{ 
+
+  {
+  { __VERIFIER_reached_control(127, __func__);
+if ((int )b0_val != (int )b0_val_t) { __VERIFIER_control_true(127, __func__);
+
+    b0_val = b0_val_t;
+    b0_ev = 0;
+  } else { __VERIFIER_control_false(130, __func__);
+
+
+  }}
+  b0_req_up = 0;
+
+  return;
+}
+}
+void update_b1(void) 
+{ 
+
+  {
+  { __VERIFIER_reached_control(142, __func__);
+if ((int )b1_val != (int )b1_val_t) { __VERIFIER_control_true(142, __func__);
+
+    b1_val = b1_val_t;
+    b1_ev = 0;
+  } else { __VERIFIER_control_false(145, __func__);
+
+
+  }}
+  b1_req_up = 0;
+
+  return;
+}
+}
+void update_d0(void) 
+{ 
+
+  {
+  { __VERIFIER_reached_control(157, __func__);
+if ((int )d0_val != (int )d0_val_t) { __VERIFIER_control_true(157, __func__);
+
+    d0_val = d0_val_t;
+    d0_ev = 0;
+  } else { __VERIFIER_control_false(160, __func__);
+
+
+  }}
+  d0_req_up = 0;
+
+  return;
+}
+}
+void update_d1(void) 
+{ 
+
+  {
+  { __VERIFIER_reached_control(172, __func__);
+if ((int )d1_val != (int )d1_val_t) { __VERIFIER_control_true(172, __func__);
+
+    d1_val = d1_val_t;
+    d1_ev = 0;
+  } else { __VERIFIER_control_false(175, __func__);
+
+
+  }}
+  d1_req_up = 0;
+
+  return;
+}
+}
+void update_z(void) 
+{ 
+
+  {
+  { __VERIFIER_reached_control(187, __func__);
+if ((int )z_val != (int )z_val_t) { __VERIFIER_control_true(187, __func__);
+
+    z_val = z_val_t;
+    z_ev = 0;
+  } else { __VERIFIER_control_false(190, __func__);
+
+
+  }}
+  z_req_up = 0;
+
+  return;
+}
+}
+void update_channels(void) 
+{ 
+
+  {
+  { __VERIFIER_reached_control(202, __func__);
+if ((int )b0_req_up == 1) { __VERIFIER_control_true(202, __func__);
+
+    {
+    update_b0();
+    }
+  } else { __VERIFIER_control_false(206, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(209, __func__);
+if ((int )b1_req_up == 1) { __VERIFIER_control_true(209, __func__);
+
+    {
+    update_b1();
+    }
+  } else { __VERIFIER_control_false(213, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(216, __func__);
+if ((int )d0_req_up == 1) { __VERIFIER_control_true(216, __func__);
+
+    {
+    update_d0();
+    }
+  } else { __VERIFIER_control_false(220, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(223, __func__);
+if ((int )d1_req_up == 1) { __VERIFIER_control_true(223, __func__);
+
+    {
+    update_d1();
+    }
+  } else { __VERIFIER_control_false(227, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(230, __func__);
+if ((int )z_req_up == 1) { __VERIFIER_control_true(230, __func__);
+
+    {
+    update_z();
+    }
+  } else { __VERIFIER_control_false(234, __func__);
+
+
+  }}
+
+  return;
+}
+}
+void init_threads(void) 
+{ 
+
+  {
+  { __VERIFIER_reached_control(245, __func__);
+if ((int )comp_m1_i == 1) { __VERIFIER_control_true(245, __func__);
+
+    comp_m1_st = 0;
+  } else { __VERIFIER_control_false(247, __func__);
+
+    comp_m1_st = 2;
+  }}
+
+  return;
+}
+}
+int exists_runnable_thread(void) 
+{ int __retres1 ;
+
+  {
+  { __VERIFIER_reached_control(258, __func__);
+if ((int )comp_m1_st == 0) { __VERIFIER_control_true(258, __func__);
+
+    __retres1 = 1;
+    goto return_label;
+  } else { __VERIFIER_control_false(261, __func__);
+
+
+  }}
+  __retres1 = 0;
+  return_label: /* CIL Label */ 
+  return (__retres1);
+}
+}
+void eval(void) 
+{ int tmp ;
+  int tmp___0 ;
+
+  {
+  {
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(275, __func__);
+ while (1) { __VERIFIER_loop_head(275, __func__);
+printf("CBMC Instrumentation @ line275");myBool flag=__VERIFIER_nondet_myBool();static int ob0_ev;static int ob0_req_up;static int ob0_val;static int ob0_val_t;static int ob1_ev;static int ob1_req_up;static int ob1_val;static int ob1_val_t;static int ocomp_m1_i;static int ocomp_m1_st;static int od0_ev;static int od0_req_up;static int od0_val;static int od0_val_t;static int od1_ev;static int od1_req_up;static int od1_val;static int od1_val_t;static int otmp;static int otmp___0;static int oz_ev;static int oz_req_up;static int oz_val;static int oz_val_t;if(pStored0){__CPROVER_assert(!(ob0_ev==b0_ev && ob0_req_up==b0_req_up && ob0_val==b0_val && ob0_val_t==b0_val_t && ob1_ev==b1_ev && ob1_req_up==b1_req_up && ob1_val==b1_val && ob1_val_t==b1_val_t && ocomp_m1_i==comp_m1_i && ocomp_m1_st==comp_m1_st && od0_ev==d0_ev && od0_req_up==d0_req_up && od0_val==d0_val && od0_val_t==d0_val_t && od1_ev==d1_ev && od1_req_up==d1_req_up && od1_val==d1_val && od1_val_t==d1_val_t && otmp==tmp && otmp___0==tmp___0 && oz_ev==z_ev && oz_req_up==z_req_up && oz_val==z_val && oz_val_t==z_val_t),"recurrent state found");} if(flag){ob0_ev=b0_ev;ob0_req_up=b0_req_up;ob0_val=b0_val;ob0_val_t=b0_val_t;ob1_ev=b1_ev;ob1_req_up=b1_req_up;ob1_val=b1_val;ob1_val_t=b1_val_t;ocomp_m1_i=comp_m1_i;ocomp_m1_st=comp_m1_st;od0_ev=d0_ev;od0_req_up=d0_req_up;od0_val=d0_val;od0_val_t=d0_val_t;od1_ev=d1_ev;od1_req_up=d1_req_up;od1_val=d1_val;od1_val_t=d1_val_t;otmp=tmp;otmp___0=tmp___0;oz_ev=z_ev;oz_req_up=z_req_up;oz_val=z_val;oz_val_t=z_val_t;pStored0=myTrue;} 
+    while_0_continue: /* CIL Label */ ;
+    {
+    tmp___0 = exists_runnable_thread();
+    }
+    { __VERIFIER_reached_control(280, __func__);
+if (tmp___0) { __VERIFIER_control_true(280, __func__);
+
+
+    } else { __VERIFIER_control_false(282, __func__);
+
+      goto while_0_break;
+    }}
+    { __VERIFIER_reached_control(285, __func__);
+if ((int )comp_m1_st == 0) { __VERIFIER_control_true(285, __func__);
+
+      {
+	tmp = __VERIFIER_nondet_int(); 
+      }
+      { __VERIFIER_reached_control(289, __func__);
+if (tmp) { __VERIFIER_control_true(289, __func__);
+
+        {
+        comp_m1_st = 1;
+        method1();
+        }
+      } else { __VERIFIER_control_false(294, __func__);
+
+
+      }}
+    } else { __VERIFIER_control_false(297, __func__);
+
+
+    }}
+  }
+  while_0_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+void fire_delta_events(void) 
+{ 
+
+  {
+  { __VERIFIER_reached_control(311, __func__);
+if ((int )b0_ev == 0) { __VERIFIER_control_true(311, __func__);
+
+    b0_ev = 1;
+  } else { __VERIFIER_control_false(313, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(316, __func__);
+if ((int )b1_ev == 0) { __VERIFIER_control_true(316, __func__);
+
+    b1_ev = 1;
+  } else { __VERIFIER_control_false(318, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(321, __func__);
+if ((int )d0_ev == 0) { __VERIFIER_control_true(321, __func__);
+
+    d0_ev = 1;
+  } else { __VERIFIER_control_false(323, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(326, __func__);
+if ((int )d1_ev == 0) { __VERIFIER_control_true(326, __func__);
+
+    d1_ev = 1;
+  } else { __VERIFIER_control_false(328, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(331, __func__);
+if ((int )z_ev == 0) { __VERIFIER_control_true(331, __func__);
+
+    z_ev = 1;
+  } else { __VERIFIER_control_false(333, __func__);
+
+
+  }}
+
+  return;
+}
+}
+void reset_delta_events(void) 
+{ 
+
+  {
+  { __VERIFIER_reached_control(344, __func__);
+if ((int )b0_ev == 1) { __VERIFIER_control_true(344, __func__);
+
+    b0_ev = 2;
+  } else { __VERIFIER_control_false(346, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(349, __func__);
+if ((int )b1_ev == 1) { __VERIFIER_control_true(349, __func__);
+
+    b1_ev = 2;
+  } else { __VERIFIER_control_false(351, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(354, __func__);
+if ((int )d0_ev == 1) { __VERIFIER_control_true(354, __func__);
+
+    d0_ev = 2;
+  } else { __VERIFIER_control_false(356, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(359, __func__);
+if ((int )d1_ev == 1) { __VERIFIER_control_true(359, __func__);
+
+    d1_ev = 2;
+  } else { __VERIFIER_control_false(361, __func__);
+
+
+  }}
+  { __VERIFIER_reached_control(364, __func__);
+if ((int )z_ev == 1) { __VERIFIER_control_true(364, __func__);
+
+    z_ev = 2;
+  } else { __VERIFIER_control_false(366, __func__);
+
+
+  }}
+
+  return;
+}
+}
+void activate_threads(void) 
+{ int tmp ;
+
+  {
+  {
+  tmp = is_method1_triggered();
+  }
+  { __VERIFIER_reached_control(380, __func__);
+if (tmp) { __VERIFIER_control_true(380, __func__);
+
+    comp_m1_st = 0;
+  } else { __VERIFIER_control_false(382, __func__);
+
+
+  }}
+
+  return;
+}
+}
+int stop_simulation(void) 
+{ int tmp ;
+  int __retres2 ;
+
+  {
+  {
+  tmp = exists_runnable_thread();
+  }
+  { __VERIFIER_reached_control(397, __func__);
+if (tmp) { __VERIFIER_control_true(397, __func__);
+
+    __retres2 = 0;
+    goto return_label;
+  } else { __VERIFIER_control_false(400, __func__);
+
+
+  }}
+  __retres2 = 1;
+  return_label: /* CIL Label */ 
+  return (__retres2);
+}
+}
+void start_simulation(void) 
+{ int kernel_st ;
+  int tmp ;
+
+  {
+  {
+  kernel_st = 0;
+  update_channels();
+  init_threads();
+  fire_delta_events();
+  activate_threads();
+  reset_delta_events();
+  }
+  {
+ myBool pStored1 = myFalse; __VERIFIER_reached_control(422, __func__);
+ while (1) { __VERIFIER_loop
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+_head(422, __func__);
+printf("CBMC Instrumentation @ line422");myBool flag=__VERIFIER_nondet_myBool();static int ob0_ev;static int ob0_req_up;static int ob0_val;static int ob0_val_t;static int ob1_ev;static int ob1_req_up;static int ob1_val;static int ob1_val_t;static int ocomp_m1_i;static int ocomp_m1_st;static int od0_ev;static int od0_req_up;static int od0_val;static int od0_val_t;static int od1_ev;static int od1_req_up;static int od1_val;static int od1_val_t;static int okernel_st;static int otmp;static int oz_ev;static int oz_req_up;static int oz_val;static int oz_val_t;if(pStored1){__CPROVER_assert(!(ob0_ev==b0_ev && ob0_req_up==b0_req_up && ob0_val==b0_val && ob0_val_t==b0_val_t && ob1_ev==b1_ev && ob1_req_up==b1_req_up && ob1_val==b1_val && ob1_val_t==b1_val_t && ocomp_m1_i==comp_m1_i && ocomp_m1_st==comp_m1_st && od0_ev==d0_ev && od0_req_up==d0_req_up && od0_val==d0_val && od0_val_t==d0_val_t && od1_ev==d1_ev && od1_req_up==d1_req_up && od1_val==d1_val && od1_val_t==d1_val_t && okernel_st==kernel_st && otmp==tmp && oz_ev==z_ev && oz_req_up==z_req_up && oz_val==z_val && oz_val_t==z_val_t),"recurrent state found");} if(flag){ob0_ev=b0_ev;ob0_req_up=b0_req_up;ob0_val=b0_val;ob0_val_t=b0_val_t;ob1_ev=b1_ev;ob1_req_up=b1_req_up;ob1_val=b1_val;ob1_val_t=b1_val_t;ocomp_m1_i=comp_m1_i;ocomp_m1_st=comp_m1_st;od0_ev=d0_ev;od0_req_up=d0_req_up;od0_val=d0_val;od0_val_t=d0_val_t;od1_ev=d1_ev;od1_req_up=d1_req_up;od1_val=d1_val;od1_val_t=d1_val_t;okernel_st=kernel_st;otmp=tmp;oz_ev=z_ev;oz_req_up=z_req_up;oz_val=z_val;oz_val_t=z_val_t;pStored1=myTrue;} 
+    while_1_continue: /* CIL Label */ ;
+    {
+    kernel_st = 1;
+    eval();
+    }
+    {
+    kernel_st = 2;
+    update_channels();
+    }
+    {
+    kernel_st = 3;
+    fire_delta_events();
+    activate_threads();
+    reset_delta_events();
+    tmp = stop_simulation();
+    }
+    { __VERIFIER_reached_control(439, __func__);
+if (tmp) { __VERIFIER_control_true(439, __func__);
+
+      goto while_1_break;
+    } else { __VERIFIER_control_false(441, __func__);
+
+
+    }}
+  }
+  while_1_break: /* CIL Label */ ;
+  }
+
+  return;
+}
+}
+void init_model(void) 
+{ 
+
+  {
+  b0_val = 0;
+  b0_ev = 2;
+  b0_req_up = 0;
+  b1_val = 0;
+  b1_ev = 2;
+  b1_req_up = 0;
+  d0_val = 0;
+  d0_ev = 2;
+  d0_req_up = 0;
+  d1_val = 0;
+  d1_ev = 2;
+  d1_req_up = 0;
+  z_val = 0;
+  z_ev = 2;
+  z_req_up = 0;
+  b0_val_t = 1;
+  b0_req_up = 1;
+  b1_val_t = 1;
+  b1_req_up = 1;
+  d0_val_t = 1;
+  d0_req_up = 1;
+  d1_val_t = 1;
+  d1_req_up = 1;
+  comp_m1_i = 0;
+
+  return;
+}
+}
+int main(void) 
+{ int __retres1 ;
+
+  {
+  {
+  init_model();
+  start_simulation();
+  }
+  { __VERIFIER_reached_control(491, __func__);
+if (! ((int )z_val == 0)) { __VERIFIER_control_true(491, __func__);
+
+    {
+    error();
+    }
+  } else { __VERIFIER_control_false(495, __func__);
+
+
+  }}
+  __retres1 = 0;
+  return (__retres1);
+}
+}
+
+End Main 
+ bist_cell_true-unreach-call_false-termination.cil_braced_instrumented.c
+NTFILE is bist_cell_true-unreach-call_false-termination.cil_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = bist_cell_true-unreach-call_false-termination.cil.c
+b'ed7cf118393df741439bf83f6a53ce8b2b1ac944b31c04ecea3e98050f258e12  bist_cell_true-unreach-call_false-termination.cil.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/bist_cell_true-unreach-call_false-termination.cil/bist_cell_true-unreach-call_false-termination.cil.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+update_channels 202 reachedControl
+update_channels 202 trueBranch
+update_b0 127 reachedControl
+update_b0 127 trueBranch
+update_channels 209 reachedControl
+update_channels 209 trueBranch
+update_b1 142 reachedControl
+update_b1 142 trueBranch
+update_channels 216 reachedControl
+update_channels 216 trueBranch
+update_d0 157 reachedControl
+update_d0 157 trueBranch
+update_channels 223 reachedControl
+update_channels 223 trueBranch
+update_d1 172 reachedControl
+update_d1 172 trueBranch
+update_channels 230 reachedControl
+update_channels 234 falseBranch
+init_threads 245 reachedControl
+init_threads 247 falseBranch
+fire_delta_events 311 reachedControl
+fire_delta_events 311 trueBranch
+fire_delta_events 316 reachedControl
+fire_delta_events 316 trueBranch
+fire_delta_events 321 reachedControl
+fire_delta_events 321 trueBranch
+fire_delta_events 326 reachedControl
+fire_delta_events 326 trueBranch
+fire_delta_events 331 reachedControl
+fire_delta_events 333 falseBranch
+is_method1_triggered 97 reachedControl
+is_method1_triggered 97 trueBranch
+activate_threads 380 reachedControl
+activate_threads 380 trueBranch
+reset_delta_events 344 reachedControl
+reset_delta_events 344 trueBranch
+reset_delta_events 349 reachedControl
+reset_delta_events 349 trueBranch
+reset_delta_events 354 reachedControl
+reset_delta_events 354 trueBranch
+reset_delta_events 359 reachedControl
+reset_delta_events 359 trueBranch
+reset_delta_events 364 reachedControl
+reset_delta_events 366 falseBranch
+start_simulation 422 reachedControl
+start_simulation 422 loopHead
+enteringLasso
+eval 275 reachedControl
+eval 275 loopHead
+exists_runnable_thread 258 reachedControl
+exists_runnable_thread 258 trueBranch
+eval 280 reachedControl
+eval 280 trueBranch
+eval 285 reachedControl
+eval 285 trueBranch
+eval 289 reachedControl
+eval 294 falseBranch
+eval 275 loopHead
+Trace file line inside enterred lasso check : eval 275 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/bist_cell_true-unreach-call_false-termination.cil/bist_cell_true-unreach-call_false-termination.cil.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for bist_cell_true-unreach-call_false-termination.cil.c
+FILE=bist_cell_true-unreach-call_false-termination.cil_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2190 milliseconds

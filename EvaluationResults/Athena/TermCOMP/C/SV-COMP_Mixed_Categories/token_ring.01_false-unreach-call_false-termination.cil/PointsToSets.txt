@@ -1,0 +1,338 @@
+NODE  13: <13> PSNodeType::ENTRY (points-to size: 0)
+NODE  14:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE  15:   %__retres1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__retres1 = alloca i32, align 4 + 0
+NODE  16:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  17: <17> PSNodeType::CALL (points-to size: 0)
+NODE  18: <18> PSNodeType::ENTRY (points-to size: 0)
+NODE  19:   store i32 1, i32* @m_i, align 4 (points-to size: 0)
+NODE  20:   store i32 1, i32* @t1_i, align 4 (points-to size: 0)
+NODE  21:   ret void (points-to size: 0)
+NODE  22: init_model (points-to size: 1)
+    -> init_model + 0
+NODE  23: main (points-to size: 1)
+    -> main + 0
+NODE  24:   call void @init_model() (points-to size: 0)
+NODE  25: <25> PSNodeType::CALL (points-to size: 0)
+NODE  26: <26> PSNodeType::ENTRY (points-to size: 0)
+NODE  27:   %kernel_st = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %kernel_st = alloca i32, align 4 + 0
+NODE  28:   %tmp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp = alloca i32, align 4 + 0
+NODE  29:   %tmp___0 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___0 = alloca i32, align 4 + 0
+NODE  30:   store i32 0, i32* %kernel_st, align 4 (points-to size: 0)
+NODE  31: <31> PSNodeType::CALL (points-to size: 0)
+NODE  32: <32> PSNodeType::ENTRY (points-to size: 0)
+NODE  33:   ret void (points-to size: 0)
+NODE  34: update_channels (points-to size: 1)
+    -> update_channels + 0
+NODE  35: start_simulation (points-to size: 1)
+    -> start_simulation + 0
+NODE  36:   call void @update_channels() (points-to size: 0)
+NODE  37: <37> PSNodeType::CALL (points-to size: 0)
+NODE  38: <38> PSNodeType::ENTRY (points-to size: 0)
+NODE  39:   %0 = load i32, i32* @m_i, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  40:   store i32 0, i32* @m_st, align 4 (points-to size: 0)
+NODE  41:   %1 = load i32, i32* @t1_i, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  42:   store i32 2, i32* @m_st, align 4 (points-to size: 0)
+NODE  43:   store i32 0, i32* @t1_st, align 4 (points-to size: 0)
+NODE  44:   ret void (points-to size: 0)
+NODE  45:   store i32 2, i32* @t1_st, align 4 (points-to size: 0)
+NODE  46: init_threads (points-to size: 1)
+    -> init_threads + 0
+NODE  47:   call void @init_threads() (points-to size: 0)
+NODE  48: <48> PSNodeType::CALL (points-to size: 0)
+NODE  49: <49> PSNodeType::ENTRY (points-to size: 0)
+NODE  50:   %0 = load i32, i32* @M_E, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  51:   store i32 1, i32* @M_E, align 4 (points-to size: 0)
+NODE  52:   %1 = load i32, i32* @T1_E, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  53:   store i32 1, i32* @T1_E, align 4 (points-to size: 0)
+NODE  54:   %2 = load i32, i32* @E_M, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  55:   store i32 1, i32* @E_M, align 4 (points-to size: 0)
+NODE  56:   %3 = load i32, i32* @E_1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  57:   store i32 1, i32* @E_1, align 4 (points-to size: 0)
+NODE  58:   ret void (points-to size: 0)
+NODE  59: fire_delta_events (points-to size: 1)
+    -> fire_delta_events + 0
+NODE  60:   call void @fire_delta_events() (points-to size: 0)
+NODE  61: <61> PSNodeType::CALL (points-to size: 0)
+NODE  62: <62> PSNodeType::ENTRY (points-to size: 0)
+NODE  63:   %tmp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp = alloca i32, align 4 + 0
+NODE  64:   %tmp___0 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp___0 = alloca i32, align 4 + 0
+NODE  65: <65> PSNodeType::CALL (points-to size: 0)
+NODE  66: <66> PSNodeType::ENTRY (points-to size: 0)
+NODE  67:   %__retres1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__retres1 = alloca i32, align 4 + 0
+NODE  68:   %0 = load i32, i32* @m_pc, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  69:   %1 = load i32, i32* @E_M, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  70:   %2 = load i32, i32* %__retres1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  71:   ret i32 %2 (points-to size: 0)
+NODE  72:   store i32 0, i32* %__retres1, align 4 (points-to size: 0)
+NODE  73:   store i32 1, i32* %__retres1, align 4 (points-to size: 0)
+NODE  74: is_master_triggered (points-to size: 1)
+    -> is_master_triggered + 0
+NODE  75: activate_threads (points-to size: 1)
+    -> activate_threads + 0
+NODE  76:   %call = call i32 @is_master_triggered() (points-to size: 0)
+NODE  77:   store i32 %call, i32* %tmp, align 4 (points-to size: 0)
+NODE  78:   %0 = load i32, i32* %tmp, align 4 (points-to size: 0)
+NODE  79:   store i32 0, i32* @m_st, align 4 (points-to size: 0)
+NODE  80: <80> PSNodeType::CALL (points-to size: 0)
+NODE  81: <81> PSNodeType::ENTRY (points-to size: 0)
+NODE  82:   %__retres1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__retres1 = alloca i32, align 4 + 0
+NODE  83:   %0 = load i32, i32* @t1_pc, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  84:   %1 = load i32, i32* @E_1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  85:   %2 = load i32, i32* %__retres1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  86:   ret i32 %2 (points-to size: 0)
+NODE  87:   store i32 0, i32* %__retres1, align 4 (points-to size: 0)
+NODE  88:   store i32 1, i32* %__retres1, align 4 (points-to size: 0)
+NODE  89: is_transmit1_triggered (points-to size: 1)
+    -> is_transmit1_triggered + 0
+NODE  90:   %call1 = call i32 @is_transmit1_triggered() (points-to size: 0)
+NODE  91:   store i32 %call1, i32* %tmp___0, align 4 (points-to size: 0)
+NODE  92:   %1 = load i32, i32* %tmp___0, align 4 (points-to size: 0)
+NODE  93:   store i32 0, i32* @t1_st, align 4 (points-to size: 0)
+NODE  94:   ret void (points-to size: 0)
+NODE  95:   call void @activate_threads() (points-to size: 0)
+NODE  96: <96> PSNodeType::CALL (points-to size: 0)
+NODE  97: <97> PSNodeType::ENTRY (points-to size: 0)
+NODE  98:   %0 = load i32, i32* @M_E, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  99:   store i32 2, i32* @M_E, align 4 (points-to size: 0)
+NODE 100:   %1 = load i32, i32* @T1_E, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 101:   store i32 2, i32* @T1_E, align 4 (points-to size: 0)
+NODE 102:   %2 = load i32, i32* @E_M, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 103:   store i32 2, i32* @E_M, align 4 (points-to size: 0)
+NODE 104:   %3 = load i32, i32* @E_1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 105:   store i32 2, i32* @E_1, align 4 (points-to size: 0)
+NODE 106:   ret void (points-to size: 0)
+NODE 107: reset_delta_events (points-to size: 1)
+    -> reset_delta_events + 0
+NODE 108:   call void @reset_delta_events() (points-to size: 0)
+NODE 109:   store i32 1, i32* %kernel_st, align 4 (points-to size: 0)
+NODE 110: <110> PSNodeType::CALL (points-to size: 0)
+NODE 111: <111> PSNodeType::ENTRY (points-to size: 0)
+NODE 112:   %tmp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp = alloca i32, align 4 + 0
+NODE 113:   %tmp_ndt_1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_1 = alloca i32, align 4 + 0
+NODE 114:   %tmp_ndt_2 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_ndt_2 = alloca i32, align 4 + 0
+NODE 115: <115> PSNodeType::CALL (points-to size: 0)
+NODE 116: <116> PSNodeType::ENTRY (points-to size: 0)
+NODE 117:   %__retres1 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__retres1 = alloca i32, align 4 + 0
+NODE 118:   %0 = load i32, i32* @m_st, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 119:   store i32 1, i32* %__retres1, align 4 (points-to size: 0)
+NODE 120:   %2 = load i32, i32* %__retres1, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 121:   ret i32 %2 (points-to size: 0)
+NODE 122:   %1 = load i32, i32* @t1_st, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 123:   store i32 1, i32* %__retres1, align 4 (points-to size: 0)
+NODE 124:   store i32 0, i32* %__retres1, align 4 (points-to size: 0)
+NODE 125: exists_runnable_thread (points-to size: 1)
+    -> exists_runnable_thread + 0
+NODE 126: eval (points-to size: 1)
+    -> eval + 0
+NODE 127:   %call = call i32 @exists_runnable_thread() (points-to size: 0)
+NODE 128:   store i32 %call, i32* %tmp, align 4 (points-to size: 0)
+NODE 129:   %0 = load i32, i32* %tmp, align 4 (points-to size: 0)
+NODE 130:   %1 = load i32, i32* @m_st, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 131:   ret void (points-to size: 0)
+NODE 132:   %call2 = call i32 (...) @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 133:   store i32 %call2, i32* %tmp_ndt_1, align 4 (points-to size: 0)
+NODE 134:   %2 = load i32, i32* %tmp_ndt_1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 135:   %3 = load i32, i32* @t1_st, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 136:   store i32 1, i32* @m_st, align 4 (points-to size: 0)
+NODE 137: <137> PSNodeType::CALL (points-to size: 0)
+NODE 138: <138> PSNodeType::ENTRY (points-to size: 0)
+NODE 139:   %tmp_var = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp_var = alloca i32, align 4 + 0
+NODE 140:   %0 = load i32, i32* @m_pc, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 141:   %1 = load i32, i32* @m_pc, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 142:   %call = call i32 (...) @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 143:   store i32 %call, i32* @token, align 4 (points-to size: 0)
+NODE 144:   %2 = load i32, i32* @token, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 145:   store i32 %2, i32* @local, align 4 (points-to size: 0)
+NODE 146:   store i32 1, i32* @E_1, align 4 (points-to size: 0)
+NODE 147: <147> PSNodeType::CALL (points-to size: 0)
+NODE 148: <148> PSNodeType::ENTRY (points-to size: 0)
+NODE 149: <149> PSNodeType::CALL (points-to size: 0)
+NODE 150: immediate_notify (points-to size: 1)
+    -> immediate_notify + 0
+NODE 151:   call void @activate_threads() (points-to size: 0)
+NODE 152:   ret void (points-to size: 0)
+NODE 153: master (points-to size: 1)
+    -> master + 0
+NODE 154:   call void @immediate_notify() (points-to size: 0)
+NODE 155:   store i32 2, i32* @E_1, align 4 (points-to size: 0)
+NODE 156:   store i32 1, i32* @m_pc, align 4 (points-to size: 0)
+NODE 157:   store i32 2, i32* @m_st, align 4 (points-to size: 0)
+NODE 158:   ret void (points-to size: 0)
+NODE 159:   %3 = load i32, i32* @token, align 4 (points-to size: 3)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+    -> unknown + Offset::UNKNOWN
+NODE 160:   %4 = load i32, i32* @local, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 161:   %add = add nsw i32 %4, 1 (points-to size: 2)
+    -> null + Offset::UNKNOWN
+    -> unknown + Offset::UNKNOWN
+NODE 162: <162> PSNodeType::CALL (points-to size: 0)
+NODE 163: <163> PSNodeType::ENTRY (points-to size: 0)
+NODE 164: error (points-to size: 1)
+    -> error + 0
+NODE 165:   call void @error() (points-to size: 0)
+NODE 166:   %5 = load i32, i32* %tmp_var, align 4 (points-to size: 0)
+NODE 167:   %6 = load i32, i32* %tmp_var, align 4 (points-to size: 0)
+NODE 168:   %7 = load i32, i32* %tmp_var, align 4 (points-to size: 0)
+NODE 169:   %8 = load i32, i32* %tmp_var, align 4 (points-to size: 0)
+NODE 170:   %9 = load i32, i32* %tmp_var, align 4 (points-to size: 0)
+NODE 171: <171> PSNodeType::CALL (points-to size: 0)
+NODE 172:   call void @error() (points-to size: 0)
+NODE 173:   call void @master() (points-to size: 0)
+NODE 174:   %call11 = call i32 (...) @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 175:   store i32 %call11, i32* %tmp_ndt_2, align 4 (points-to size: 0)
+NODE 176:   %4 = load i32, i32* %tmp_ndt_2, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 177:   store i32 1, i32* @t1_st, align 4 (points-to size: 0)
+NODE 178: <178> PSNodeType::CALL (points-to size: 0)
+NODE 179: <179> PSNodeType::ENTRY (points-to size: 0)
+NODE 180:   %0 = load i32, i32* @t1_pc, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 181:   %1 = load i32, i32* @t1_pc, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 182:   store i32 1, i32* @t1_pc, align 4 (points-to size: 0)
+NODE 183:   store i32 2, i32* @t1_st, align 4 (points-to size: 0)
+NODE 184:   ret void (points-to size: 0)
+NODE 185:   %2 = load i32, i32* @token, align 4 (points-to size: 3)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+    -> unknown + Offset::UNKNOWN
+NODE 186:   %add = add nsw i32 %2, 1 (points-to size: 2)
+    -> null + Offset::UNKNOWN
+    -> unknown + Offset::UNKNOWN
+NODE 187:   store i32 %add, i32* @token, align 4 (points-to size: 0)
+NODE 188:   store i32 1, i32* @E_M, align 4 (points-to size: 0)
+NODE 189: <189> PSNodeType::CALL (points-to size: 0)
+NODE 190: transmit1 (points-to size: 1)
+    -> transmit1 + 0
+NODE 191:   call void @immediate_notify() (points-to size: 0)
+NODE 192:   store i32 2, i32* @E_M, align 4 (points-to size: 0)
+NODE 193:   call void @transmit1() (points-to size: 0)
+NODE 194:   call void @eval() (points-to size: 0)
+NODE 195:   store i32 2, i32* %kernel_st, align 4 (points-to size: 0)
+NODE 196: <196> PSNodeType::CALL (points-to size: 0)
+NODE 197:   call void @update_channels() (points-to size: 0)
+NODE 198:   store i32 3, i32* %kernel_st, align 4 (points-to size: 0)
+NODE 199: <199> PSNodeType::CALL (points-to size: 0)
+NODE 200:   call void @fire_delta_events() (points-to size: 0)
+NODE 201: <201> PSNodeType::CALL (points-to size: 0)
+NODE 202:   call void @activate_threads() (points-to size: 0)
+NODE 203: <203> PSNodeType::CALL (points-to size: 0)
+NODE 204:   call void @reset_delta_events() (points-to size: 0)
+NODE 205: <205> PSNodeType::CALL (points-to size: 0)
+NODE 206:   %call = call i32 @exists_runnable_thread() (points-to size: 0)
+NODE 207:   store i32 %call, i32* %tmp, align 4 (points-to size: 0)
+NODE 208:   %0 = load i32, i32* %tmp, align 4 (points-to size: 0)
+NODE 209:   store i32 4, i32* %kernel_st, align 4 (points-to size: 0)
+NODE 210: <210> PSNodeType::CALL (points-to size: 0)
+NODE 211: <211> PSNodeType::ENTRY (points-to size: 0)
+NODE 212:   store i32 1, i32* @M_E, align 4 (points-to size: 0)
+NODE 213:   ret void (points-to size: 0)
+NODE 214: fire_time_events (points-to size: 1)
+    -> fire_time_events + 0
+NODE 215:   call void @fire_time_events() (points-to size: 0)
+NODE 216: <216> PSNodeType::CALL (points-to size: 0)
+NODE 217:   call void @activate_threads() (points-to size: 0)
+NODE 218: <218> PSNodeType::CALL (points-to size: 0)
+NODE 219: <219> PSNodeType::ENTRY (points-to size: 0)
+NODE 220:   %0 = load i32, i32* @M_E, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 221:   store i32 2, i32* @M_E, align 4 (points-to size: 0)
+NODE 222:   %1 = load i32, i32* @T1_E, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 223:   store i32 2, i32* @T1_E, align 4 (points-to size: 0)
+NODE 224:   %2 = load i32, i32* @E_M, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 225:   store i32 2, i32* @E_M, align 4 (points-to size: 0)
+NODE 226:   %3 = load i32, i32* @E_1, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE 227:   store i32 2, i32* @E_1, align 4 (points-to size: 0)
+NODE 228:   ret void (points-to size: 0)
+NODE 229: reset_time_events (points-to size: 1)
+    -> reset_time_events + 0
+NODE 230:   call void @reset_time_events() (points-to size: 0)
+NODE 231: <231> PSNodeType::CALL (points-to size: 0)
+NODE 232: <232> PSNodeType::ENTRY (points-to size: 0)
+NODE 233:   %tmp = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tmp = alloca i32, align 4 + 0
+NODE 234:   %__retres2 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__retres2 = alloca i32, align 4 + 0
+NODE 235: <235> PSNodeType::CALL (points-to size: 0)
+NODE 236: stop_simulation (points-to size: 1)
+    -> stop_simulation + 0
+NODE 237:   %call = call i32 @exists_runnable_thread() (points-to size: 0)
+NODE 238:   store i32 %call, i32* %tmp, align 4 (points-to size: 0)
+NODE 239:   %0 = load i32, i32* %tmp, align 4 (points-to size: 0)
+NODE 240:   store i32 0, i32* %__retres2, align 4 (points-to size: 0)
+NODE 241:   %1 = load i32, i32* %__retres2, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE 242:   ret i32 %1 (points-to size: 0)
+NODE 243:   store i32 1, i32* %__retres2, align 4 (points-to size: 0)
+NODE 244:   %call1 = call i32 @stop_simulation() (points-to size: 0)
+NODE 245:   store i32 %call1, i32* %tmp___0, align 4 (points-to size: 0)
+NODE 246:   %1 = load i32, i32* %tmp___0, align 4 (points-to size: 0)
+NODE 247:   ret void (points-to size: 0)
+NODE 248:   call void @start_simulation() (points-to size: 0)
+NODE 249:   store i32 0, i32* %__retres1, align 4 (points-to size: 0)
+NODE 250:   %0 = load i32, i32* %__retres1, align 4 (points-to size: 1)
+    -> null + 0
+NODE 251:   ret i32 %0 (points-to size: 0)

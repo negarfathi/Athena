@@ -1,0 +1,357 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/sll_to_dll_rev_true-unreach-call/sll_to_dll_rev_true-unreach-call.c
+Converting
+Type-checking sll_to_dll_rev_true-unreach-call
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_deallocate
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of abort
+Simplifying
+Computing SSA of fail
+Simplifying
+Computing SSA of alloc_node
+Simplifying
+Computing SSA of chain_node
+Simplifying
+Computing SSA of create_sll
+Simplifying
+Computing SSA of init_back_link
+Simplifying
+Computing SSA of reverse_dll
+Simplifying
+Computing SSA of remove_fw_link
+Simplifying
+Computing SSA of check_seq_next
+Simplifying
+Computing SSA of check_seq_prev
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#91 __CPROVER_thread_key_dtors#89 __CPROVER_thread_keys#90 __CPROVER_malloc_is_new_array#81 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#78 __CPROVER_dead_object#79 __CPROVER_deallocated#80 __CPROVER_new_object#83 __CPROVER_rounding_mode#87 __CPROVER_pipe_count#86 __CPROVER_max_malloc_size#82 __CPROVER_next_thread_id#84 __CPROVER_next_thread_key#85 __CPROVER_thread_id#88 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#87 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#87) <= 0 && __CPROVER_pipe_count#86 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#86) <= 0 && __CPROVER_max_malloc_size#82 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#82) <= -36028797018963968 && __CPROVER_next_thread_id#84 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#84) <= 0 && __CPROVER_next_thread_key#85 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#85) <= 0 && __CPROVER_thread_id#88 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#88) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of create_sll
+Function create_sll not analyzed yet
+Recursively summarizing function create_sll
+Checking precondition of chain_node
+Function chain_node not analyzed yet
+Recursively summarizing function chain_node
+Checking precondition of alloc_node
+Function alloc_node not analyzed yet
+Recursively summarizing function alloc_node
+Analyzing function alloc_node
+Computing summary
+Computing termination argument for alloc_node
+Function trivially terminates
+
+Summary for function alloc_node
+params: 
+globals_in: __CPROVER_malloc_is_new_array __CPROVER_deallocated'obj __CPROVER_memory_leak$132'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_deallocated __CPROVER_memory_leak$132 alloc_node#return_value'obj.next alloc_node#return_value'obj.prev ptr'obj.next ptr'obj.prev dynamic_object$120$0.next dynamic_object$120$0.prev dynamic_object$120$1.next dynamic_object$120$1.prev alloc_node#return_value'obj ptr'obj dynamic_object$120$0 dynamic_object$120$1 __CPROVER_max_malloc_size 
+globals_out: __CPROVER_malloc_is_new_array#phi153 __CPROVER_deallocated'obj __CPROVER_memory_leak$132'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_deallocated#phi153 __CPROVER_memory_leak$132#phi153 alloc_node#return_value#162 alloc_node#return_value'obj.next alloc_node#return_value'obj.prev ptr'obj.next#160 ptr'obj.prev#161 dynamic_object$120$0.next#160 dynamic_object$120$0.prev#161 dynamic_object$120$1.next#160 dynamic_object$120$1.prev#161 alloc_node#return_value'obj ptr'obj dynamic_object$120$0 dynamic_object$120$1 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function chain_node
+Computing summary
+Computing termination argument for chain_node
+Function terminates
+
+Summary for function chain_node
+params: ppnode 
+globals_in: alloc_node#return_value'obj.next alloc_node#return_value'obj.prev return_value_alloc_node'obj.next return_value_alloc_node'obj.prev node'obj.next node'obj.prev ppnode'obj ppnode'obj'obj.next ppnode'obj'obj.prev alloc_node#return_value'obj return_value_alloc_node'obj node'obj ppnode'obj'obj 
+globals_out: alloc_node#return_value'obj.next alloc_node#return_value'obj.prev return_value_alloc_node'obj.next return_value_alloc_node'obj.prev node'obj.next#172 node'obj.prev ppnode'obj#173 ppnode'obj'obj.next ppnode'obj'obj.prev alloc_node#return_value'obj return_value_alloc_node'obj node'obj ppnode'obj'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of chain_node
+Precondition trivially holds, replacing by summary.
+Checking precondition of chain_node
+Precondition trivially holds, replacing by summary.
+Analyzing function create_sll
+Computing summary
+Computing termination argument for create_sll
+Synthesizing ranking function to prove termination
+
+Summary for function create_sll
+params: pp1 pp2 
+globals_in: create_sll#return_value'obj.next create_sll#return_value'obj.prev list'obj.next list'obj.prev pp1'obj pp1'obj'obj.next pp1'obj'obj.prev pp2'obj pp2'obj'obj.next pp2'obj'obj.prev create_sll#return_value'obj list'obj pp1'obj'obj pp2'obj'obj 
+globals_out: create_sll#return_value#199 create_sll#return_value'obj.next create_sll#return_value'obj.prev list'obj.next list'obj.prev pp1'obj#192 pp1'obj'obj.next pp1'obj'obj.prev pp2'obj#185 pp2'obj'obj.next pp2'obj'obj.prev create_sll#return_value'obj list'obj pp1'obj'obj pp2'obj'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: ($guard#180 && $guard#ls184 ==> return_value___VERIFIER_nondet_int#lb184 <= 2147483647) && ($guard#180 && $guard#ls184 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb184) <= 2147483648) && ($guard#187 && $guard#ls191 ==> return_value___VERIFIER_nondet_int$0#lb191 <= 2147483647) && ($guard#187 && $guard#ls191 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int$0#lb191) <= 2147483648) && ($guard#194 && $guard#ls198 ==> return_value___VERIFIER_nondet_int$1#lb198 <= 2147483647) && ($guard#194 && $guard#ls198 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int$1#lb198) <= 2147483648)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#180 && $guard#182 && $cond#184 ==> FALSE) && ($guard#187 && $guard#189 && $cond#191 ==> FALSE) && ($guard#194 && $guard#196 && $cond#198 ==> TRUE)
+
+terminates: unknown
+
+Checking precondition of check_seq_next
+Function check_seq_next not analyzed yet
+Recursively summarizing function check_seq_next
+Checking precondition of fail
+Function fail not analyzed yet
+Recursively summarizing function fail
+Analyzing function fail
+Computing summary
+Computing termination argument for fail
+Function never terminates normally
+
+Summary for function fail
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function check_seq_next
+Computing summary
+Computing termination argument for check_seq_next
+
+Summary for function check_seq_next
+params: beg end 
+globals_in: beg'obj.next beg'obj.prev end'obj.next end'obj.prev beg'obj end'obj 
+globals_out: beg'obj.next#phi248 beg'obj.prev end'obj.next end'obj.prev beg'obj end'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of init_back_link
+Function init_back_link not analyzed yet
+Recursively summarizing function init_back_link
+Analyzing function init_back_link
+Computing summary
+Computing termination argument for init_back_link
+Synthesizing ranking function to prove termination
+
+Summary for function init_back_link
+params: list 
+globals_in: next'obj.next next'obj.prev list'obj.next list'obj.prev next'obj list'obj 
+globals_out: next'obj.next next'obj.prev#phi206 list'obj.next#207 list'obj.prev next'obj list'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of check_seq_next
+Precondition trivially holds, replacing by summary.
+Checking precondition of check_seq_prev
+Function check_seq_prev not analyzed yet
+Recursively summarizing function check_seq_prev
+Analyzing function check_seq_prev
+Computing summary
+Computing termination argument for check_seq_prev
+Synthesizing ranking function to prove termination
+
+Summary for function check_seq_prev
+params: beg end 
+globals_in: beg'obj.next beg'obj.prev end'obj.next end'obj.prev beg'obj end'obj 
+globals_out: beg'obj.next beg'obj.prev#phi269 end'obj.next end'obj.prev beg'obj end'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of reverse_dll
+Function reverse_dll not analyzed yet
+Recursively summarizing function reverse_dll
+Analyzing function reverse_dll
+Computing summary
+Computing termination argument for reverse_dll
+Synthesizing ranking function to prove termination
+
+Summary for function reverse_dll
+params: list 
+globals_in: $symderef_tmp0'obj.next $symderef_tmp0'obj.prev next'obj.next next'obj.prev list'obj.next list'obj.prev $symderef_tmp0'obj next'obj list'obj 
+globals_out: $symderef_tmp0'obj.next $symderef_tmp0'obj.prev next'obj.next next'obj.prev list'obj.next#phi217 list'obj.prev#phi217 $symderef_tmp0'obj next'obj list'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of check_seq_prev
+Precondition trivially holds, replacing by summary.
+Checking precondition of check_seq_next
+Precondition trivially holds, replacing by summary.
+Checking precondition of remove_fw_link
+Function remove_fw_link not analyzed yet
+Recursively summarizing function remove_fw_link
+Analyzing function remove_fw_link
+Computing summary
+Computing termination argument for remove_fw_link
+Synthesizing ranking function to prove termination
+
+Summary for function remove_fw_link
+params: list 
+globals_in: next'obj.next next'obj.prev list'obj.next list'obj.prev next'obj list'obj 
+globals_out: next'obj.next next'obj.prev list'obj.next#phi228 list'obj.prev next'obj list'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of check_seq_prev
+Precondition trivially holds, replacing by summary.
+Checking precondition of __CPROVER_deallocate
+Function __CPROVER_deallocate not analyzed yet
+Recursively summarizing function __CPROVER_deallocate
+Analyzing function __CPROVER_deallocate
+Computing summary
+Computing termination argument for __CPROVER_deallocate
+Function trivially terminates
+
+Summary for function __CPROVER_deallocate
+params: ptr 
+globals_in: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated 
+globals_out: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated#phi75 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+
+Summary for function main
+params: 
+globals_in: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated create_sll#return_value'obj.next create_sll#return_value'obj.prev return_value_create_sll'obj.next return_value_create_sll'obj.prev prev'obj.next prev'obj.prev list'obj.next list'obj.prev p1'obj.next p1'obj.prev p2'obj.next p2'obj.prev create_sll#return_value'obj return_value_create_sll'obj prev'obj list'obj p1'obj p2'obj 
+globals_out: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated create_sll#return_value'obj.next create_sll#return_value'obj.prev return_value_create_sll'obj.next return_value_create_sll'obj.prev prev'obj.next prev'obj.prev list'obj.next list'obj.prev#phi39 p1'obj.next p1'obj.prev p2'obj.next p2'obj.prev main#return_value#63 create_sll#return_value'obj return_value_create_sll'obj prev'obj list'obj p1'obj p2'obj 
+forward precondition: TRUE
+forward transformer: main#return_value#63 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#63) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 4089199801
+  number of solver calls: 721050
+  number of summaries used: 18
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_deallocate]: yes
+[__CPROVER_initialize]: yes
+[abort]: not computed
+[fail]: no
+[alloc_node]: yes
+[chain_node]: yes
+[create_sll]: unknown
+[init_back_link]: unknown
+[reverse_dll]: unknown
+[remove_fw_link]: unknown
+[check_seq_next]: unknown
+[check_seq_prev]: unknown
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 443 milliseconds

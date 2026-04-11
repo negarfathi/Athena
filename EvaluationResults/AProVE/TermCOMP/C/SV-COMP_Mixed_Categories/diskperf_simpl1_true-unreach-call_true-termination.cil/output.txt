@@ -1,0 +1,38 @@
+diskperf_simpl1.cil.c:117:18: warning: implicit declaration of function 'DiskPerfStartDevice' is invalid in C99 [-Wimplicit-function-declaration]
+        status = DiskPerfStartDevice(DeviceObject, Irp);
+                 ^
+diskperf_simpl1.cil.c:122:18: warning: implicit declaration of function 'DiskPerfRemoveDevice' is invalid in C99 [-Wimplicit-function-declaration]
+        status = DiskPerfRemoveDevice(DeviceObject, Irp);
+                 ^
+diskperf_simpl1.cil.c:127:15: warning: implicit declaration of function 'DiskPerfSendToNextDriver' is invalid in C99 [-Wimplicit-function-declaration]
+        tmp = DiskPerfSendToNextDriver(DeviceObject, Irp);
+              ^
+diskperf_simpl1.cil.c:145:3: warning: implicit declaration of function 'KeSetEvent' is invalid in C99 [-Wimplicit-function-declaration]
+  KeSetEvent(Event, 0, 0);
+  ^
+diskperf_simpl1.cil.c:160:12: warning: implicit declaration of function 'DiskPerfForwardIrpSynchronous' is invalid in C99 [-Wimplicit-function-declaration]
+  status = DiskPerfForwardIrp
+Synchronous(DeviceObject, Irp);
+           ^
+diskperf_simpl1.cil.c:162:3: warning: implicit declaration of function 'DiskPerfRegisterDevice' is invalid in C99 [-Wimplicit-function-declaration]
+  DiskPerfRegisterDevice(DeviceObject);
+  ^
+diskperf_simpl1.cil.c:210:9: warning: implicit declaration of function 'IofCallDriver' is invalid in C99 [-Wimplicit-function-declaration]
+  tmp = IofCallDriver(deviceExtension__TargetDeviceObject, Irp);
+        ^
+diskperf_simpl1.cil.c:235:9: warning: implicit declaration of function 'PoCallDriver' is invalid in C99 [-Wimplicit-function-declaration]
+  tmp = PoCallDriver(deviceExtension__TargetDeviceObject, Irp);
+        ^
+diskperf_simpl1.cil.c:284:5: warning: implicit declaration of function 'KeWaitForSingleObject' is invalid in C99 [-Wimplicit-function-declaration]
+    KeWaitForSingleObject(event, Executive, KernelMode, 0, 0);
+    ^
+diskperf_simpl1.cil.c:491:9: warning: implicit declaration of function 'IoBuildDeviceIoControlRequest' is invalid in C99 [-Wimplicit-function-dec
+laration]
+  irp = IoBuildDeviceIoControlRequest(__cil_tmp22, deviceExtension__TargetDeviceObject,
+        ^
+10 warnings generated.
+
+line 2152:5 extraneous input 'metadata' expecting EXCLAMATION
+line 2152:25 no viable alternative at input '!'
+Instruction count:1464
+Runtime: 900151 milliseconds

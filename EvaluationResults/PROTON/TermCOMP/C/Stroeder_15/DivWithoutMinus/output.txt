@@ -1,0 +1,117 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.Use3fM
+
+Input File is : DivWithoutMinus.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  typedef enum {false,true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x;
+    int y;
+    int z;
+    int res;
+    x = __VERIFIER_nondet_int();
+    y = __VERIFIER_nondet_int();
+    z = y;
+    res = 0;
+    
+    while (z > 0 && (y == 0 || y > 0 && x > 0))	{
+        
+        {if (y == 0) {
+            res = res + 1;
+            y = z;
+        }
+        else {
+            x = x + 1;
+            y = y - 1;
+        }}
+    }
+    
+    return 0;
+}
+
+
+End Main   
+
+Input File is : DivWithoutMinus_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+typedef enum {false,true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x;
+    int y;
+    int z;
+    int res;
+    x = __VERIFIER_nondet_int();
+    y = __VERIFIER_nondet_int();
+    z = y;
+    res = 0;
+    
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+ while (z > 0 && (y == 0 || y > 0 && x > 0))	{ __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static int ores;static int ox;static int oy;static int oz;if(pStored0){__CPROVER_assert(!(ores==res && ox==x && oy==y && oz==z),"recurrent state found");} if(flag){ores=res;ox=x;oy=y;oz=z;pStored0=myTrue;} 
+        
+        { __VERIFIER_reached_control(17, __func__);
+if (y == 0) { __VERIFIER_control_true(17, __func__);
+
+            res = res + 1;
+            y = z;
+        }
+        else { __VERIFIER_control_false(21, __func__);
+
+            x = x + 1;
+            y = y - 1;
+        }}
+    }
+    
+    return 0;
+}
+
+
+End Main 
+ DivWithoutMinus_braced_instrumented.c
+NTFILE is DivWithoutMinus_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for DivWithoutMinus.c
+FILE=DivWithoutMinus_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 301848 milliseconds

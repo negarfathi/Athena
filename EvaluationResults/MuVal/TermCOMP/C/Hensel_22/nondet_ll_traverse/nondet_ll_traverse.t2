@@ -1,0 +1,53 @@
+///*** 1_main ***///
+START: main_bb8;
+
+FROM: main_bb8;
+v12 := nondet();
+var__temp_vj.0.i := 0;
+TO: main_bb8_end;
+
+FROM: main_bb8_end;
+assume(v12 < 1);
+TO: main_traverse.exit;
+
+FROM: main_bb8_end;
+assume(v12 >= 1);
+TO: main_bb9;
+
+FROM: main_bb9;
+vj.0.i := var__temp_vj.0.i;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(vj.0.i < v12);
+TO: main_bb10;
+
+FROM: main_bb9_end;
+assume(vj.0.i >= v12);
+TO: main_init_list.exit;
+
+FROM: main_bb10;
+v17 := nondet();
+v18 := v17;
+v19 := vtail.0.i;
+v20 := vj.0.i + 1;
+var__temp_vj.0.i := v20;
+TO: main_bb9;
+
+FROM: main_init_list.exit;
+TO: main_init_list.exit_end;
+
+FROM: main_init_list.exit_end;
+assume(nondet());
+TO: main_bb11;
+
+FROM: main_init_list.exit_end;
+assume(nondet());
+TO: main_traverse.exit;
+
+FROM: main_bb11;
+TO: main_init_list.exit;
+
+FROM: main_traverse.exit;
+TO: main_traverse.exit_ret;
+

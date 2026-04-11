@@ -1,0 +1,70 @@
+line 189:5 extraneous input 'metadata' expecting EXCLAMATION
+line 189:25 no viable alternative at input '!'
+Aborted 1755967815Exec. 4, LLVMToSEGraph with some error. Reason: InconsistentStateException [integerState=vals:
+{v40205=[1,+inf){-inf,+inf}, v40206=[1,+inf){-inf,+inf}, v40207=[1,+inf){-inf,+inf}, v40208=[1,+inf){-inf,+inf}, v40209=[1,+inf){-inf,+inf}, v40210=[1,+inf){-inf,+inf}, v40211=[1,+inf){-inf,+inf}, v40212=#, v40213=[5,+inf){0,+inf}, v40214=#, v40218=[399997,+inf){0,+inf}, v40219=#, v40221=[2,+inf){-inf,+inf}, v40222=#, v40223=[4,+inf){0,+inf}, v40224=[400000,+inf){0,+inf}, v40225=[4,+inf){0,+inf}, v40226=[4,+inf){0,+inf}, v40227=[4,+inf){0,+inf}, v40228=[4,+inf){0,+inf}, v40229=[4,+inf){0,+inf}, v40230=[9,+inf){0,+inf}, v40231=#, v54890=[5,+inf){0,+inf}, v55620=#}
+associations:
+{v40205=0, v40223=0, v40206=1, v40221=1, v40224=1, v40207=2, v40225=2, v40208=3, v40226=3, v40209=4, v40227=4, v40210=5, v40228=5, v40211=6, v40229=6, v40213=1, v40218=1, v40230=1, v54890=1}
+association offsets:
+{v40205=3, v40223=0, v40206=399999, v40221=3, v40224=0, v40207=3, v40225=0, v40208=3, v40226=0, v40209=3, v40227=0, v40210=3, v40228=0, v40211=3, v40229=0, v40213=3, v40218=3, v40230=3, v54890=3}
+rels:
+undirected inequalities:
+[(v40221 != v54890)]
+equations:
+[(v40223 = (3 + v40205)), (v40224 = (399999 + v40206)), (v40225 = (3 + v40207)), (v40226 = (3 + v40208)), (v40227 = (3 + v40209)), (v40228 = (3 + v40210)), (v40229 = (3 + v40211)), (v40213 = (4 + v40206)), (v40230 = (8 + v40206)), (v40218 = (399996 + v40206)), (0 = 0), (v54890 = (8 + v40206))]
+weak directed inequalities:
+[(v40219 <= v40222), (v40231 <= v40222), (v40214 <= v40212), (v40214 <= v40222), (v40219 <= v40214), (v40231 <= v40214), (v40222 <= v40212)]
+strict directed inequalities:
+[(v40221 < v40230), (v40219 < v40212), (v40231 < v40212), (1 < v40221), (v40212 < v55620), (v40213 < v54890), (v54890 < v40230)], newRelation=(0 < 0)].
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.replaceReferences(LLVMHeuristicState.java:6327)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.unifySymbolicVariables(LLVMHeuristicState.java:3067)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:4072)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:508)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcess(LLVMHeuristicState.java:3220)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcessAfterRefinement(LLVMHeuristicState.java:2662)
+            aprove.InputModules.Programs.llvm.states.LLVMAbstractState.evaluate(LLVMAbstractState.java:542)
+            aprove.InputModules.Programs.llvm.segraph.graphConstructionSteps.LLVMStandardStep.perform(LLVMStandardStep.java:98)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.executeStepAndPutSucessorStepsInQueue(LLVMSEGraph.java:1087)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:243)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:216)
+            aprove.InputModules.Programs.llvm.segraph.LLVMGraphBuilder.buildGraph(LLVMGraphBuilder.java:84)
+            aprove.InputModules.Programs.llvm.processors.LLVMToSEGraphProcessor.process(LLVMToSEGraphProcessor.java:110)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            java.base/java.lang.Thread.run(Thread.java:840)
+InconsistentStateException [integerState=vals:
+{v40205=[1,+inf){-inf,+inf}, v40206=[1,+inf){-inf,+inf}, v40207=[1,+inf){-inf,+inf}, v40208=[1,+inf){-inf,+inf}, v40209=[1,+inf){-inf,+inf}, v40210=[1,+inf){-inf,+inf}, v40211=[1,+inf){-inf,+inf}, v40212=#, v40213=[5,+inf){0,+inf}, v40214=#, v40218=[399997,+inf){0,+inf}, v40219=#, v40221=[2,+inf){-inf,+inf}, v40222=#, v40223=[4,+inf){0,+inf}, v40224=[400000,+inf){0,+inf}, v40225=[4,+inf){0,+inf}, v40226=[4,+inf){0,+inf}, v40227=[4,+inf){0,+inf}, v40228=[4,+inf){0,+inf}, v40229=[4,+inf){0,+inf}, v40230=[9,+inf){0,+inf}, v40231=#, v54890=[5,+inf){0,+inf}, v55620=#}
+associations:
+{v40205=0, v40223=0, v40206=1, v40221=1, v40224=1, v40207=2, v40225=2, v40208=3, v40226=3, v40209=4, v40227=4, v40210=5, v40228=5, v40211=6, v40229=6, v40213=1, v40218=1, v40230=1, v54890=1}
+association offsets:
+{v40205=3, v40223=0, v40206=399999, v40221=3, v40224=0, v40207=3, v40225=0, v40208=3, v40226=0, v40209=3, v40227=0, v40210=3, v40228=0, v40211=3, v40229=0, v40213=3, v40218=3, v40230=3, v54890=3}
+rels:
+undirected inequalities:
+[(v40221 != v54890)]
+equations:
+[(v40223 = (3 + v40205)), (v40224 = (399999 + v40206)), (v40225 = (3 + v40207)), (v40226 = (3 + v40208)), (v40227 = (3 + v40209)), (v40228 = (3 + v40210)), (v40229 = (3 + v40211)), (v40213 = (4 + v40206)), (v40230 = (8 + v40206)), (v40218 = (399996 + v40206)), (0 = 0), (v54890 = (8 + v40206))]
+weak directed inequalities:
+[(v40219 <= v40222), (v40231 <= v40222), (v40214 <= v40212), (v40214 <= v40222), (v40219 <= v40214), (v40231 <= v40214), (v40222 <= v40212)]
+strict directed inequalities:
+[(v40221 < v40230), (v40219 < v40212), (v40231 < v40212), (1 < v40221), (v40212 < v55620), (v40213 < v54890), (v54890 < v40230)], newRelation=(0 < 0)]
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.replaceReferences(LLVMHeuristicState.java:6327)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.unifySymbolicVariables(LLVMHeuristicState.java:3067)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:4072)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:508)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcess(LLVMHeuristicState.java:3220)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcessAfterRefinement(LLVMHeuristicState.java:2662)
+	at aprove.InputModules.Programs.llvm.states.LLVMAbstractState.evaluate(LLVMAbstractState.java:542)
+	at aprove.InputModules.Programs.llvm.segraph.graphConstructionSteps.LLVMStandardStep.perform(LLVMStandardStep.java:98)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.executeStepAndPutSucessorStepsInQueue(LLVMSEGraph.java:1087)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:243)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:216)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMGraphBuilder.buildGraph(LLVMGraphBuilder.java:84)
+	at aprove.InputModules.Programs.llvm.processors.LLVMToSEGraphProcessor.process(LLVMToSEGraphProcessor.java:110)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+MAYBE
+Runtime: 22074 milliseconds

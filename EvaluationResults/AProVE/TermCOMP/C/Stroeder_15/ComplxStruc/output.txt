@@ -1,0 +1,72 @@
+line 145:5 extraneous input 'metadata' expecting EXCLAMATION
+line 145:25 no viable alternative at input '!'
+Aborted 1755936794Exec. 4, LLVMToSEGraph with some error. Reason: InconsistentStateException [integerState=vals:
+{v1=[1,+inf){-inf,+inf}, v2=[4,+inf){0,+inf}, v3=[1,+inf){-inf,+inf}, v4=[4,+inf){0,+inf}, v5=[1,+inf){-inf,+inf}, v6=[4,+inf){0,+inf}}
+associations:
+{v1=0, v2=0, v3=1, v4=1, v5=2, v6=2}
+association offsets:
+{v1=3, v2=0, v3=3, v4=0, v5=3, v6=0}
+rels:
+undirected inequalities:
+[]
+equations:
+[(v2 = (3 + v1)), (v4 = (3 + v3)), (v6 = (3 + v5))]
+weak directed inequalities:
+[]
+strict directed inequalities:
+[], newRelation=(0 = 6)].
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMHeuristicRelationSet.addRelation(LLVMHeuristicRelationSet.java:217)
+            aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMHeuristicRelationSet.addRelations(LLVMHeuristicRelationSet.java:318)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.cleanRelations(LLVMHeuristicState.java:800)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:594)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcess(LLVMHeuristicState.java:3220)
+            aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcessAfterRefinement(LLVMHeuristicState.java:2662)
+            aprove.InputModules.Programs.llvm.states.LLVMAbstractState.evaluate(LLVMAbstractState.java:542)
+            aprove.InputModules.Programs.llvm.segraph.graphConstructionSteps.LLVMStandardStep.perform(LLVMStandardStep.java:98)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.executeStepAndPutSucessorStepsInQueue(LLVMSEGraph.java:1087)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:243)
+            aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:216)
+            aprove.InputModules.Programs.llvm.segraph.LLVMGraphBuilder.buildGraph(LLVMGraphBuilder.java:84)
+            aprove.InputModules.Programs.llvm.processors.LLVMToSEGraphProcessor.process(LLVMToSEGraphProcessor.java:110)
+            aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+            aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+            aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+            aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+            java.base/java.lang.Thread.run(Thread.java:840)
+InconsistentStateException [integerState=vals:
+{v1=[1,+inf){-inf,+inf}, v2=[4,+inf){0,+inf}, v3=[1,+inf){-inf,+inf}, v4=[4,+inf){0,+inf}, v5=[1,+inf){-inf,+inf}, v6=[4,+inf){0,+inf}}
+associations:
+{v1=0, v2=0, v3=1, v4=1, v5=2, v6=2}
+association offsets:
+{v1=3, v2=0, v3=3, v4=0, v5=3, v6=0}
+rels:
+undirected inequalities:
+[]
+equations:
+[(v2 = (3 + v1)), (v4 = (3 + v3)), (v6 = (3 + v5))]
+weak directed inequalities:
+[]
+strict directed inequalities:
+[], newRelation=(0 = 6)]
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMHeuristicRelationSet.addRelation(LLVMHeuristicRelationSet.java:217)
+	at aprove.InputModules.Programs.llvm.internalStructures.expressions.relations.LLVMHeuristicRelationSet.addRelations(LLVMHeuristicRelationSet.java:318)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.cleanRelations(LLVMHeuristicState.java:800)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.adjustValues(LLVMHeuristicState.java:594)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcess(LLVMHeuristicState.java:3220)
+	at aprove.InputModules.Programs.llvm.states.LLVMHeuristicState.postProcessAfterRefinement(LLVMHeuristicState.java:2662)
+	at aprove.InputModules.Programs.llvm.states.LLVMAbstractState.evaluate(LLVMAbstractState.java:542)
+	at aprove.InputModules.Programs.llvm.segraph.graphConstructionSteps.LLVMStandardStep.perform(LLVMStandardStep.java:98)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.executeStepAndPutSucessorStepsInQueue(LLVMSEGraph.java:1087)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:243)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMSEGraph.buildFullGraph(LLVMSEGraph.java:216)
+	at aprove.InputModules.Programs.llvm.segraph.LLVMGraphBuilder.buildGraph(LLVMGraphBuilder.java:84)
+	at aprove.InputModules.Programs.llvm.processors.LLVMToSEGraphProcessor.process(LLVMToSEGraphProcessor.java:110)
+	at aprove.Strategies.ExecutableStrategies.Executor.execute(Executor.java:326)
+	at aprove.Strategies.ExecutableStrategies.Executor$Runner.wrappedRun(Executor.java:377)
+	at aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:99)
+	at aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+MAYBE
+Runtime: 9560 milliseconds

@@ -1,0 +1,132 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.mgfXqm
+
+Input File is : AlternDivWide.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  typedef enum {false,true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i;
+    int w;
+    i = __VERIFIER_nondet_int();
+    w = 5;
+    
+    while (i != 0) {
+        {if (i < -w) {
+            i = i-1;
+            i = i*(-1);
+        } else {
+            {if (i > w) {
+                i = i+1;
+                i = i*(-1);
+            } else {
+                i = 0;
+            }}
+        }}
+    }
+    
+    return 0;
+}
+
+End Main   
+
+Input File is : AlternDivWide_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+typedef enum {false,true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i;
+    int w;
+    i = __VERIFIER_nondet_int();
+    w = 5;
+    
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(11, __func__);
+ while (i != 0) { __VERIFIER_loop_head(11, __func__);
+printf("CBMC Instrumentation @ line11");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int ow;if(pStored0){__CPROVER_assert(!(oi==i && ow==w),"recurrent state found");} if(flag){oi=i;ow=w;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(12, __func__);
+if (i < -w) { __VERIFIER_control_true(12, __func__);
+
+            i = i-1;
+            i = i*(-1);
+        } else { __VERIFIER_control_false(15, __func__);
+
+            { __VERIFIER_reached_control(16, __func__);
+if (i > w) { __VERIFIER_control_true(16, __func__);
+
+                i = i+1;
+                i = i*(-1);
+            } else { __VERIFIER_control_false(19, __func__);
+
+                i = 0;
+            }}
+        }}
+    }
+    
+    return 0;
+}
+
+End Main 
+ AlternDivWide_braced_instrumented.c
+NTFILE is AlternDivWide_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = AlternDivWide.c
+b'792b73e8dc7c005241611ea0e53a14097e91fd582c02ef89df1735c72e62f066  AlternDivWide.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/AlternDivWide/AlternDivWide.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+main 11 reachedControl
+main 11 loopHead
+main 12 reachedControl
+main 12 trueBranch
+main 11 loopHead
+main 12 reachedControl
+main 12 trueBranch
+main 11 loopHead
+Trace file line inside enterred lasso check : main 11 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/AlternDivWide/AlternDivWide.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for AlternDivWide.c
+FILE=AlternDivWide_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2740 milliseconds

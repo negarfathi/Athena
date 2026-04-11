@@ -1,0 +1,22 @@
+///*** 1_main ***///
+START: main_bb3;
+
+FROM: main_bb3;
+TO: main_bb4;
+
+FROM: main_bb4;
+v8 := nondef.2;
+vdst.0.i := v8;
+TO: main_bb4_end;
+
+FROM: main_bb4_end;
+assume(v10 != 0);
+TO: main_bb4;
+
+FROM: main_bb4_end;
+assume(v10 == 0);
+TO: main_cstrcpy.exit;
+
+FROM: main_cstrcpy.exit;
+TO: main_cstrcpy.exit_ret;
+

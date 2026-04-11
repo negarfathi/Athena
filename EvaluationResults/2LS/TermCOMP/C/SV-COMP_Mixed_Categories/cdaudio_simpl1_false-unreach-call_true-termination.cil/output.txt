@@ -1,0 +1,209 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/cdaudio_simpl1_false-unreach-call_true-termination.cil/cdaudio_simpl1_false-unreach-call_true-termination.cil.c
+Converting
+Type-checking cdaudio_simpl1_false-unreach-call_true-termination.cil
+file cdaudio_simpl1.cil.c line 106 function SendSrbSynchronous: function 'KeWaitForSingleObject' is not declared
+file cdaudio_simpl1.cil.c line 120 function CdAudioSignalCompletion: function 'KeSetEvent' is not declared
+file cdaudio_simpl1.cil.c line 140 function CdAudioStartDevice: function 'CdAudioForwardIrpSynchronous' is not declared
+file cdaudio_simpl1.cil.c line 200 function CdAudioStartDevice: function 'ZwClose' is not declared
+file cdaudio_simpl1.cil.c line 243 function CdAudioPnp: function 'CdAudioSendToNextDriver' is not declared
+file cdaudio_simpl1.cil.c line 337 function CdAudioDeviceControl: function 'CdAudio535DeviceControl' is not declared
+file cdaudio_simpl1.cil.c line 342 function CdAudioDeviceControl: function 'CdAudio435DeviceControl' is not declared
+file cdaudio_simpl1.cil.c line 347 function CdAudioDeviceControl: function 'CdAudioAtapiDeviceControl' is not declared
+file cdaudio_simpl1.cil.c line 352 function CdAudioDeviceControl: function 'CdAudioHPCdrDeviceControl' is not declared
+file cdaudio_simpl1.cil.c line 388 function CdAudioSendToNextDriver: function 'IofCallDriver' is not declared
+file cdaudio_simpl1.cil.c line 558 function CdAudio535DeviceControl: function 'AG_SetStatusAndReturn' is not declared
+file cdaudio_simpl1.cil.c line 1451 function CdAudioPower: function 'PoCallDriver' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of IofCompleteRequest
+Simplifying
+Computing SSA of errorFn
+Simplifying
+Computing SSA of _BLAST_init
+Simplifying
+Computing SSA of SendSrbSynchronous
+Simplifying
+Computing SSA of KeWaitForSingleObject
+Simplifying
+Computing SSA of CdAudioSignalCompletion
+Simplifying
+Computing SSA of KeSetEvent
+Simplifying
+Computing SSA of CdAudioStartDevice
+Simplifying
+Computing SSA of CdAudioForwardIrpSynchronous
+Simplifying
+Computing SSA of ZwClose
+Simplifying
+Computing SSA of CdAudioPnp
+Simplifying
+Computing SSA of CdAudioSendToNextDriver
+Simplifying
+Computing SSA of CdAudioDeviceControl
+Simplifying
+Computing SSA of CdAudio535DeviceControl
+Simplifying
+Computing SSA of CdAudio435DeviceControl
+Simplifying
+Computing SSA of CdAudioAtapiDeviceControl
+Simplifying
+Computing SSA of CdAudioHPCdrDeviceControl
+Simplifying
+Computing SSA of IofCallDriver
+Simplifying
+Computing SSA of CdAudioIsPlayActive
+Simplifying
+Computing SSA of AG_SetStatusAndReturn
+Simplifying
+Computing SSA of HpCdrProcessLastSession
+Simplifying
+Computing SSA of HPCdrCompletion
+Simplifying
+Computing SSA of CdAudioUnload
+Simplifying
+Computing SSA of CdAudioPower
+Simplifying
+Computing SSA of PoCallDriver
+Simplifying
+Computing SSA of stub_driver_init
+Simplifying
+Computing SSA of stubMoreProcessingRequired
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object DC DeviceUsageTypePaging Executive IPC KernelMode MPR1 MPR3 NP SKIP1 SKIP2 Suspended UNLOADED __CPROVER_rounding_mode compFptr compRegistered customIrp lowerDriverReturn myStatus pended pirp routine s setEventCalled __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#196 __CPROVER_thread_key_dtors#194 __CPROVER_thread_keys#195 __CPROVER_malloc_is_new_array#186 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#183 __CPROVER_dead_object#184 __CPROVER_deallocated#185 __CPROVER_new_object#188 DC#197 DeviceUsageTypePaging#198 Executive#199 IPC#200 KernelMode#201 MPR1#202 MPR3#203 NP#204 SKIP1#205 SKIP2#206 Suspended#207 UNLOADED#208 __CPROVER_rounding_mode#192 compFptr#209 compRegistered#210 customIrp#211 lowerDriverReturn#212 myStatus#213 pended#214 pirp#215 routine#216 s#217 setEventCalled#218 __CPROVER_pipe_count#191 __CPROVER_max_malloc_size#187 __CPROVER_next_thread_id#189 __CPROVER_next_thread_key#190 __CPROVER_thread_id#193 
+forward precondition: TRUE
+forward transformer: DC#197 <= 0 && -((signed __CPROVER_bitvector[33])DC#197) <= 0 && DeviceUsageTypePaging#198 <= 0 && -((signed __CPROVER_bitvector[33])DeviceUsageTypePaging#198) <= 0 && Executive#199 <= 0 && -((signed __CPROVER_bitvector[33])Executive#199) <= 0 && IPC#200 <= 0 && -((signed __CPROVER_bitvector[33])IPC#200) <= 0 && KernelMode#201 <= 0 && -((signed __CPROVER_bitvector[33])KernelMode#201) <= 0 && MPR1#202 <= 0 && -((signed __CPROVER_bitvector[33])MPR1#202) <= 0 && MPR3#203 <= 0 && -((signed __CPROVER_bitvector[33])MPR3#203) <= 0 && NP#204 <= 0 && -((signed __CPROVER_bitvector[33])NP#204) <= 0 && SKIP1#205 <= 0 && -((signed __CPROVER_bitvector[33])SKIP1#205) <= 0 && SKIP2#206 <= 0 && -((signed __CPROVER_bitvector[33])SKIP2#206) <= 0 && Suspended#207 <= 0 && -((signed __CPROVER_bitvector[33])Suspended#207) <= 0 && UNLOADED#208 <= 0 && -((signed __CPROVER_bitvector[33])UNLOADED#208) <= 0 && __CPROVER_rounding_mode#192 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#192) <= 0 && compFptr#209 <= 0 && -((signed __CPROVER_bitvector[33])compFptr#209) <= 0 && compRegistered#210 <= 0 && -((signed __CPROVER_bitvector[33])compRegistered#210) <= 0 && customIrp#211 <= 0 && -((signed __CPROVER_bitvector[33])customIrp#211) <= 0 && lowerDriverReturn#212 <= 0 && -((signed __CPROVER_bitvector[33])lowerDriverReturn#212) <= 0 && myStatus#213 <= 0 && -((signed __CPROVER_bitvector[33])myStatus#213) <= 0 && pended#214 <= 0 && -((signed __CPROVER_bitvector[33])pended#214) <= 0 && pirp#215 <= 0 && -((signed __CPROVER_bitvector[33])pirp#215) <= 0 && routine#216 <= 0 && -((signed __CPROVER_bitvector[33])routine#216) <= 0 && s#217 <= 0 && -((signed __CPROVER_bitvector[33])s#217) <= 0 && setEventCalled#218 <= 0 && -((signed __CPROVER_bitvector[33])setEventCalled#218) <= 0 && __CPROVER_pipe_count#191 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#191) <= 0 && __CPROVER_max_malloc_size#187 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#187) <= -36028797018963968 && __CPROVER_next_thread_id#189 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#189) <= 0 && __CPROVER_next_thread_key#190 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#190) <= 0 && __CPROVER_thread_id#193 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#193) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of _BLAST_init
+Function _BLAST_init not analyzed yet
+Recursively summarizing function _BLAST_init
+Analyzing function _BLAST_init
+Computing summary
+Computing termination argument for _BLAST_init
+Function trivially terminates
+
+Summary for function _BLAST_init
+params: 
+globals_in: DC IPC MPR1 MPR3 NP SKIP1 SKIP2 UNLOADED compFptr compRegistered customIrp lowerDriverReturn pended s setEventCalled 
+globals_out: DC#231 IPC#236 MPR1#234 MPR3#235 NP#230 SKIP1#232 SKIP2#233 UNLOADED#229 compFptr#239 compRegistered#240 customIrp#243 lowerDriverReturn#241 pended#238 s#237 setEventCalled#242 
+forward precondition: TRUE
+forward transformer: DC#231 <= 2 && -((signed __CPROVER_bitvector[33])DC#231) <= -2 && IPC#236 <= 7 && -((signed __CPROVER_bitvector[33])IPC#236) <= -7 && MPR1#234 <= 5 && -((signed __CPROVER_bitvector[33])MPR1#234) <= -5 && MPR3#235 <= 6 && -((signed __CPROVER_bitvector[33])MPR3#235) <= -6 && NP#230 <= 1 && -((signed __CPROVER_bitvector[33])NP#230) <= -1 && SKIP1#232 <= 3 && -((signed __CPROVER_bitvector[33])SKIP1#232) <= -3 && SKIP2#233 <= 4 && -((signed __CPROVER_bitvector[33])SKIP2#233) <= -4 && UNLOADED#229 <= 0 && -((signed __CPROVER_bitvector[33])UNLOADED#229) <= 0 && compFptr#239 <= 0 && -((signed __CPROVER_bitvector[33])compFptr#239) <= 0 && compRegistered#240 <= 0 && -((signed __CPROVER_bitvector[33])compRegistered#240) <= 0 && customIrp#243 <= 0 && -((signed __CPROVER_bitvector[33])customIrp#243) <= 0 && lowerDriverReturn#241 <= 0 && -((signed __CPROVER_bitvector[33])lowerDriverReturn#241) <= 0 && pended#238 <= 0 && -((signed __CPROVER_bitvector[33])pended#238) <= 0 && s#237 <= 0 && -((signed __CPROVER_bitvector[33])s#237) <= 0 && setEventCalled#242 <= 0 && -((signed __CPROVER_bitvector[33])setEventCalled#242) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Function never terminates normally
+
+Summary for function main
+params: 
+globals_in: DC DeviceUsageTypePaging Executive IPC KernelMode MPR1 MPR3 NP SKIP1 SKIP2 Suspended UNLOADED compFptr compRegistered customIrp lowerDriverReturn myStatus pended pirp routine s setEventCalled 
+globals_out: DC#29 DeviceUsageTypePaging#47 Executive#44 IPC#34 KernelMode#46 MPR1#32 MPR3#33 NP#28 SKIP1#30 SKIP2#31 Suspended#45 UNLOADED#27 compFptr#phi182 compRegistered#phi182 customIrp#phi182 lowerDriverReturn#phi182 main#return_value#phi182 myStatus#phi182 pended#phi182 pirp#48 routine#41 s#phi182 setEventCalled#phi182 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+Function never terminates normally
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+** statistics: 
+  number of solver instances: 3835558776
+  number of solver calls: 240911
+  number of summaries used: 3
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[main]: no
+[__CPROVER_initialize]: yes
+[IofCompleteRequest]: not computed
+[errorFn]: not computed
+[_BLAST_init]: yes
+[SendSrbSynchronous]: not computed
+[KeWaitForSingleObject]: not computed
+[CdAudioSignalCompletion]: not computed
+[KeSetEvent]: not computed
+[CdAudioStartDevice]: not computed
+[CdAudioForwardIrpSynchronous]: not computed
+[ZwClose]: not computed
+[CdAudioPnp]: not computed
+[CdAudioSendToNextDriver]: not computed
+[CdAudioDeviceControl]: not computed
+[CdAudio535DeviceControl]: not computed
+[CdAudio435DeviceControl]: not computed
+[CdAudioAtapiDeviceControl]: not computed
+[CdAudioHPCdrDeviceControl]: not computed
+[IofCallDriver]: not computed
+[CdAudioIsPlayActive]: not computed
+[AG_SetStatusAndReturn]: not computed
+[HpCdrProcessLastSession]: not computed
+[HPCdrCompletion]: not computed
+[CdAudioUnload]: not computed
+[CdAudioPower]: not computed
+[PoCallDriver]: not computed
+[stub_driver_init]: not computed
+[stubMoreProcessingRequired]: not computed
+[__CPROVER__start]: no
+VERIFICATION INCONCLUSIVE
+Runtime: 666 milliseconds

@@ -1,0 +1,65 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %x = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %x = alloca i32, align 4 + 0
+NODE   4:   %y = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %y = alloca i32, align 4 + 0
+NODE   5:   %N = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %N = alloca i32, align 4 + 0
+NODE   6:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   7:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   8:   store i32 %call, i32* %x, align 4 (points-to size: 0)
+NODE   9:   %call1 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  10:   store i32 %call1, i32* %y, align 4 (points-to size: 0)
+NODE  11:   %call2 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  12:   store i32 %call2, i32* %N, align 4 (points-to size: 0)
+NODE  13:   %0 = load i32, i32* %N, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  14:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  15:   %12 = load i32, i32* %retval, align 4 (points-to size: 1)
+    -> null + 0
+NODE  16:   ret i32 %12 (points-to size: 0)
+NODE  17:   %1 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  18:   %2 = load i32, i32* %y, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  19:   %3 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  20:   %4 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  21:   %5 = load i32, i32* %y, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  22:   %add = add nsw i32 %4, %5 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  23:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  24:   %6 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  25:   %7 = load i32, i32* %N, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  26:   %call11 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  27:   %8 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  28:   %mul = mul nsw i32 2, %8 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  29:   %9 = load i32, i32* %y, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  30:   %add13 = add nsw i32 %mul, %9 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  31:   store i32 %add13, i32* %x, align 4 (points-to size: 0)
+NODE  32:   %10 = load i32, i32* %y, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  33:   %add14 = add nsw i32 %10, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  34:   store i32 %add14, i32* %y, align 4 (points-to size: 0)
+NODE  35:   %11 = load i32, i32* %x, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  36:   %add15 = add nsw i32 %11, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  37:   store i32 %add15, i32* %x, align 4 (points-to size: 0)
+NODE  38: main (points-to size: 1)
+    -> main + 0

@@ -1,0 +1,289 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.BrODNB
+
+Input File is : Incorrect_Return_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: ec79a06d084e7f7508fcfad583258163d8066e7b
+URL: https://github.com/freeciv/freeciv/commit/ec79a06d084e7f7508fcfad583258163d8066e7b
+Project Name: freeciv
+License: GPL-2.0
+termination: TRUE
+*/
+#define A_NONE 0
+#define NULL 0
+#define A_FIRST 1
+#define MAX_NUM_ADVANCES 10
+#define A_LAST (MAX_NUM_ADVANCES + 1) /* Used in the network protocol. */
+#define A_FUTURE (A_LAST + 1)
+#define A_ARRAY_SIZE (A_FUTURE + 1)
+#define A_UNSET (A_LAST + 2)
+#define A_UNKNOWN (A_LAST + 3)
+
+#define A_NEVER (NULL)
+typedef int Tech_type_id;
+enum tech_req {
+  AR_ONE = 0,
+  AR_TWO = 1,
+  AR_ROOT = 2,
+  AR_SIZE
+};
+struct advance{
+    Tech_type_id item_number;
+    struct advance *require[AR_SIZE];
+};
+struct advance advances[10];
+
+
+//6
+Tech_type_id advance_number(const struct advance *padvance)
+{
+  return padvance->item_number;
+}
+//5 ->6
+Tech_type_id advance_required(const Tech_type_id tech, enum tech_req require)
+{
+
+  {if (A_NEVER == advances[tech].require[require]) {
+    /* out of range */
+    return A_LAST;
+  }}
+  return advance_number(advances[tech].require[require]);
+}
+
+//4
+struct advance *valid_advance(struct advance *padvance)
+{
+  {if (NULL == padvance) {
+    return NULL;
+  }}
+  return padvance;
+}
+
+// 3
+struct advance *advance_by_number(const Tech_type_id atype)
+{
+  {if (atype != A_FUTURE && atype < 0 ) {
+    /* This isn't an error; some callers depend on it. */
+    return NULL;
+  }}
+
+  return &advances[atype];
+}
+// 2->3, 4
+struct advance *valid_advance_by_number(const Tech_type_id id)
+{
+  return valid_advance(advance_by_number(id));
+}
+// 1->2  ->5
+int player_invention_reachable(const Tech_type_id tech, int allow_prereqs)
+{
+    Tech_type_id root;
+    {if (!valid_advance_by_number(tech)) {
+        return 0;
+    }}
+    root = advance_required(tech, AR_ROOT);
+    {if (A_NONE != root) {
+        {if(root == tech)
+            {return 0;}
+        else {if (allow_prereqs) {
+            return player_invention_reachable(root, 1);
+        }}}
+        return 0;
+    }}
+    return 1;
+}
+
+int main()
+{
+    for( int i = 0 ; i <10 ; i++)
+    {
+        advances[i].item_number =  4;
+        for( int j = 0 ; j < 3 ; j++ )
+        {
+            struct advance req;
+            req.item_number =  1;
+            advances[i].require[j] = &req;
+        }
+    }
+    int tech = __VERIFIER_nondet_int();
+    tech = tech % 8;
+    int allow_prereqs = __VERIFIER_nondet_int();
+    int ok = player_invention_reachable(tech,allow_prereqs);
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Incorrect_Return_1_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: ec79a06d084e7f7508fcfad583258163d8066e7b
+URL: https://github.com/freeciv/freeciv/commit/ec79a06d084e7f7508fcfad583258163d8066e7b
+Project Name: freeciv
+License: GPL-2.0
+termination: TRUE
+*/
+#define A_NONE 0
+#define NULL 0
+#define A_FIRST 1
+#define MAX_NUM_ADVANCES 10
+#define A_LAST (MAX_NUM_ADVANCES + 1) /* Used in the network protocol. */
+#define A_FUTURE (A_LAST + 1)
+#define A_ARRAY_SIZE (A_FUTURE + 1)
+#define A_UNSET (A_LAST + 2)
+#define A_UNKNOWN (A_LAST + 3)
+
+#define A_NEVER (NULL)
+typedef int Tech_type_id;
+enum tech_req {
+  AR_ONE = 0,
+  AR_TWO = 1,
+  AR_ROOT = 2,
+  AR_SIZE
+};
+struct advance{
+    Tech_type_id item_number;
+    struct advance *require[AR_SIZE];
+};
+struct advance advances[10];
+
+
+//6
+Tech_type_id advance_number(const struct advance *padvance)
+{
+  return padvance->item_number;
+}
+//5 ->6
+Tech_type_id advance_required(const Tech_type_id tech, enum tech_req require)
+{
+
+  { __VERIFIER_reached_control(43, __func__);
+if (A_NEVER == advances[tech].require[require]) { __VERIFIER_control_true(43, __func__);
+
+    /* out of range */
+    return A_LAST;
+  }}
+  return advance_number(advances[tech].require[require]);
+}
+
+//4
+struct advance *valid_advance(struct advance *padvance)
+{
+  { __VERIFIER_reached_control(53, __func__);
+if (NULL == padvance) { __VERIFIER_control_true(53, __func__);
+
+    return NULL;
+  }}
+  return padvance;
+}
+
+// 3
+struct advance *advance_by_number(const Tech_type_id atype)
+{
+  { __VERIFIER_reached_control(62, __func__);
+if (atype != A_FUTURE && atype < 0 ) { __VERIFIER_control_true(62, __func__);
+
+    /* This isn't an error; some callers depend on it. */
+    return NULL;
+  }}
+
+  return &advances[atype];
+}
+// 2->3, 4
+struct advance *valid_advance_by_number(const Tech_type_id id)
+{
+  return valid_advance(advance_by_number(id));
+}
+// 1->2  ->5
+int player_invention_reachable(const Tech_type_id tech, int allow_prereqs)
+{
+    Tech_type_id root;
+    { __VERIFIER_reached_control(78, __func__);
+if (!valid_advance_by_number(tech)) { __VERIFIER_control_true(78, __func__);
+
+        return 0;
+    }}
+    root = advance_required(tech, AR_ROOT);
+    { __VERIFIER_reached_control(82, __func__);
+if (A_NONE != root) { __VERIFIER_control_true(82, __func__);
+
+        { __VERIFIER_reached_control(83, __func__);
+if(root == tech)
+            { __VERIFIER_control_true(84, __func__);
+return 0;}
+        else { __VERIFIER_control_false(85, __func__);
+ __VERIFIER_reached_control(85, __func__);
+if (allow_prereqs) { __VERIFIER_control_true(85, __func__);
+
+            return player_invention_reachable(root, 1);
+        }}}
+        return 0;
+    }}
+    return 1;
+}
+
+int main()
+{
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(96, __func__);
+ for( int i = 0 ; i <10 ; i++)
+    { __VERIFIER_loop_head(96, __func__);
+printf("CBMC Instrumentation @ line96");myBool flag=__VERIFIER_nondet_myBool();static int oi;if(pStored0){__CPROVER_assert(!(oi==i),"recurrent state found");} if(flag){oi=i;pStored0=myTrue;} 
+        advances[i].item_number =  4;
+        for( int j = 0 ; j < 3 ; j++ )
+        {printf("ArrayNT State @ line99: Array Found\n");
+            struct advance req;
+            req.item_number =  1;
+            advances[i].require[j] = &req;
+        }
+    }
+    int tech = __VERIFIER_nondet_int();
+    tech = tech % 8;
+    int allow_prereqs = __VERIFIER_nondet_int();
+    int ok = player_invention_reachable(tech,allow_prereqs);
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Incorrect_Return_1_T_braced_instrumented.c
+NTFILE is Incorrect_Return_1_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for Incorrect_Return_1_T.c
+FILE=Incorrect_Return_1_T_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 181325 milliseconds

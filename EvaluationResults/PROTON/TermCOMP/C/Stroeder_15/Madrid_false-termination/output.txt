@@ -1,0 +1,87 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.eGZDve
+
+Input File is : Madrid_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : Madrid_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2013-05-02
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main()
+{
+    int x;
+	x = 7;
+myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+	while (true) { __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int ox;if(pStored0){__CPROVER_assert(!(ox==x),"recurrent state found");} if(flag){ox=x;pStored0=myTrue;} 
+		x = 2;
+	}
+	return 0;
+}
+
+End Main 
+ Madrid_false-termination_instrumented.c
+NTFILE is Madrid_false-termination_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Madrid_false-termination.c
+b'a1bd7f3201612d4dbbad9fa4198a254c8b8a340584a64011f322e9281c45b868  Madrid_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Madrid_false-termination/Madrid_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+main 14 reachedControl
+main 14 loopHead
+main 14 reachedControl
+main 14 loopHead
+main 14 reachedControl
+main 14 loopHead
+Trace file line inside enterred lasso check : main 14 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Madrid_false-termination/Madrid_false-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Madrid_false-termination.c
+FILE=Madrid_false-termination_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2620 milliseconds

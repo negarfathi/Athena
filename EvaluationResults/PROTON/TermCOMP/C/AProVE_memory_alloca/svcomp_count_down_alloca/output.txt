@@ -1,0 +1,105 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.KiGeb3
+
+Input File is : svcomp_count_down_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+  int i, j;
+  int val;
+  int length = __VERIFIER_nondet_int();
+  {if (length < 1) {length = 1;}}
+  int *arr = alloca(length*sizeof(int));
+  {if (!arr) {return 0;}}
+  for (i=0; i<length; i++) {
+    val = __VERIFIER_nondet_int();
+    {if (val < 0) {
+      val = 0;
+    }}
+    arr[i] = val;
+  }
+  for (j=0; j<length; j++) {
+    while (arr[j] > 0) {
+      arr[j]--;
+    }
+  }
+  return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_count_down_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+  int i, j;
+  int val;
+  int length = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(8, __func__);
+if (length < 1) { __VERIFIER_control_true(8, __func__);
+length = 1;}}
+  int *arr = alloca(length*sizeof(int));
+  { __VERIFIER_reached_control(10, __func__);
+if (!arr) { __VERIFIER_control_true(10, __func__);
+return 0;}}
+  for (i=0; i<length; i++) {printf("ArrayNT State @ line11: Array Found\n");
+    val = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(13, __func__);
+if (val < 0) { __VERIFIER_control_true(13, __func__);
+
+      val = 0;
+    }}
+    arr[i] = val;
+  }
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(18, __func__);
+ for (j=0; j<length; j++) { __VERIFIER_loop_head(18, __func__);
+printf("CBMC Instrumentation @ line18");myBool flag=__VERIFIER_nondet_myBool();static int * oarr;static int oarr_val;static int oi;static int oj;static int olength;static int oval;if(pStored0){__CPROVER_assert(!(oarr==arr && *oarr==*arr && oarr_val==*arr && oi==i && oj==j && olength==length && oval==val),"recurrent state found");} if(flag){oarr=arr;*oarr=*arr;oarr_val=*arr;oi=i;oj=j;olength=length;oval=val;pStored0=myTrue;} 
+    while (arr[j] > 0) {printf("ArrayNT State @ line19: Array Found\n");
+      arr[j]--;
+    }
+  }
+  return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_count_down_alloca_braced_instrumented.c
+NTFILE is svcomp_count_down_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_count_down_alloca.c
+FILE=svcomp_count_down_alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182785 milliseconds

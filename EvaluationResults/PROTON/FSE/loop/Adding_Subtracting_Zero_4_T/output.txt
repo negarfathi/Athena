@@ -1,0 +1,197 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.IgSfTA
+
+Input File is : Adding_Subtracting_Zero_4_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: caa6003b6419d001593478a46fb4cbf8e502e818
+URL: https://github.com/tytso/e2fsprogs/commit/caa6003b6419d001593478a46fb4cbf8e502e818
+Project Name: e2fsprogs
+License: GPL-2.0
+termination: true
+*/
+int flag = 0;
+int read( int loc , int len )
+{
+    int count = 0;
+    {if( flag == 1 ) //whether EOF or not
+        {return 0;}}
+    while( loc < len )
+    {
+        int num =  __VERIFIER_nondet_int();
+        {if( num == 0 ) //abnormal
+        {
+            return -1;
+        }
+        else
+        {
+            {if( num < 0 )
+                {num =  -num;}}
+            num = num % 1000;
+            count++;
+            {if( num < 995 ) //read a char
+            {
+                loc++;
+                continue;
+            }
+            else // EOF
+            {
+                flag = 1;
+                return count;
+            }}
+        }}
+    }
+    return count;
+}
+int main()
+{
+    int count =__VERIFIER_nondet_int();
+    {if( count <= 0 )
+        {return 0;}}
+    int ret;
+    int buf = 0;
+    int tries = 0;
+    while( count > 0 )
+    {
+        ret = read( buf, count );
+        {if( ret <= 0 )
+        {
+            {if( ( ret == 0 )&& (tries++ < 5 ) )
+                {continue;}}
+            return 0;
+        }}
+        count -= ret;
+        buf += ret;
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Adding_Subtracting_Zero_4_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: caa6003b6419d001593478a46fb4cbf8e502e818
+URL: https://github.com/tytso/e2fsprogs/commit/caa6003b6419d001593478a46fb4cbf8e502e818
+Project Name: e2fsprogs
+License: GPL-2.0
+termination: true
+*/
+int flag = 0;
+int read( int loc , int len )
+{
+    int count = 0;
+    { __VERIFIER_reached_control(13, __func__);
+if( flag == 1 ) //whether EOF or not
+        { __VERIFIER_control_true(14, __func__);
+return 0;}}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(16, __func__);
+ while( loc < len )
+    { __VERIFIER_loop_head(16, __func__);
+printf("CBMC Instrumentation @ line16");myBool flag=__VERIFIER_nondet_myBool();static int ocount;static int oflag;static int olen;static int oloc;if(pStored0){__CPROVER_assert(!(ocount==count && oflag==flag && olen==len && oloc==loc),"recurrent state found");} if(flag){ocount=count;oflag=flag;olen=len;oloc=loc;pStored0=myTrue;} 
+        int num =  __VERIFIER_nondet_int();
+        { __VERIFIER_reached_control(18, __func__);
+if( num == 0 ) //abnormal
+        { __VERIFIER_control_true(19, __func__);
+
+            return -1;
+        }
+        else
+        { __VERIFIER_control_false(23, __func__);
+
+            { __VERIFIER_reached_control(24, __func__);
+if( num < 0 )
+                { __VERIFIER_control_true(25, __func__);
+num =  -num;}}
+            num = num % 1000;
+            count++;
+            { __VERIFIER_reached_control(28, __func__);
+if( num < 995 ) //read a char
+            { __VERIFIER_control_true(29, __func__);
+
+                loc++;
+                continue;
+            }
+            else // EOF
+            { __VERIFIER_control_false(34, __func__);
+
+                flag = 1;
+                return count;
+            }}
+        }}
+    }
+    return count;
+}
+int main()
+{
+    int count =__VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(45, __func__);
+if( count <= 0 )
+        { __VERIFIER_control_true(46, __func__);
+return 0;}}
+    int ret;
+    int buf = 0;
+    int tries = 0;
+   myBool pStored1 = myFalse; __VERIFIER_reached_control(51, __func__);
+ while( count > 0 )
+    { __VERIFIER_loop_head(51, __func__);
+printf("CBMC Instrumentation @ line51");myBool flag=__VERIFIER_nondet_myBool();static int obuf;static int ocount;static int oflag;static int oret;static int otries;if(pStored1){__CPROVER_assert(!(obuf==buf && ocount==count && oflag==flag && oret==ret && otries==tries),"recurrent state found");} if(flag){obuf=buf;ocount=count;oflag=flag;oret=ret;otries=tries;pStored1=myTrue;} 
+        ret = read( buf, count );
+        { __VERIFIER_reached_control(53, __func__);
+if( ret <= 0 )
+        { __VERIFIER_control_true(54, __func__);
+
+            { __VERIFIER_reached_control(55, __func__);
+if( ( ret == 0 )&& (tries++ < 5 ) )
+                { __VERIFIER_control_true(56, __func__);
+continue;}}
+            return 0;
+        }}
+        count -= ret;
+        buf += ret;
+    }
+    return 0;
+}
+
+End Main 
+ Adding_Subtracting_Zero_4_T_braced_instrumented.c
+NTFILE is Adding_Subtracting_Zero_4_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Adding_Subtracting_Zero_4_T.c
+FILE=Adding_Subtracting_Zero_4_T_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 185246 milliseconds

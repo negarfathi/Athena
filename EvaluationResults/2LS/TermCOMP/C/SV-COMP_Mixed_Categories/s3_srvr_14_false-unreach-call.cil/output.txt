@@ -1,0 +1,118 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/s3_srvr_14_false-unreach-call.cil/s3_srvr_14_false-unreach-call.cil.c
+Converting
+Type-checking s3_srvr_14_false-unreach-call.cil
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of ssl3_accept
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#23 __CPROVER_thread_key_dtors#21 __CPROVER_thread_keys#22 __CPROVER_malloc_is_new_array#13 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#10 __CPROVER_dead_object#11 __CPROVER_deallocated#12 __CPROVER_new_object#15 __CPROVER_rounding_mode#19 __CPROVER_pipe_count#18 __CPROVER_max_malloc_size#14 __CPROVER_next_thread_id#16 __CPROVER_next_thread_key#17 __CPROVER_thread_id#20 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#19 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#19) <= 0 && __CPROVER_pipe_count#18 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#18) <= 0 && __CPROVER_max_malloc_size#14 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#14) <= -36028797018963968 && __CPROVER_next_thread_id#16 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#16) <= 0 && __CPROVER_next_thread_key#17 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#17) <= 0 && __CPROVER_thread_id#20 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#20) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of ssl3_accept
+Function ssl3_accept not analyzed yet
+Recursively summarizing function ssl3_accept
+Analyzing function ssl3_accept
+Computing summary
+Computing termination argument for ssl3_accept
+Synthesizing ranking function to prove termination
+
+Summary for function ssl3_accept
+params: initial_state 
+globals_in: 
+globals_out: ssl3_accept#return_value#phi891 
+forward precondition: TRUE
+forward transformer: ssl3_accept#return_value#phi891 <= 1 && -((signed __CPROVER_bitvector[33])ssl3_accept#return_value#phi891) <= 2147483648
+forward invariant: ($guard#270 && $guard#ls710 ==> s__state#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__state#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__new_session#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__new_session#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__server#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__server#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__type#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__type#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__init_num#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__init_num#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__rwstate#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__rwstate#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__init_buf___0#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__init_buf___0#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__shutdown#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__shutdown#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__ctx__stats__sess_accept_renegotiate#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__ctx__stats__sess_accept_renegotiate#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__ctx__stats__sess_accept#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__ctx__stats__sess_accept#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__s3__tmp__cert_request#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__s3__tmp__cert_request#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__s3__tmp__use_rsa_tmp#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__s3__tmp__use_rsa_tmp#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__s3__tmp__next_state___0#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__s3__tmp__next_state___0#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> s__session__cipher#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])s__session__cipher#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> buf#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])buf#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> l#lb710 <= 18446744073709551615ul) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[65])l#lb710) <= 0) && ($guard#270 && $guard#ls710 ==> num1#lb710 <= 9223372036854775807l) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[65])num1#lb710) <= 9223372036854775808) && ($guard#270 && $guard#ls710 ==> ret#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])ret#lb710) <= 1) && ($guard#270 && $guard#ls710 ==> new_state#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])new_state#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> state#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])state#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> skip#lb710 <= 0) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])skip#lb710) <= 0) && ($guard#270 && $guard#ls710 ==> got_new_session#lb710 <= 1) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])got_new_session#lb710) <= 0) && ($guard#270 && $guard#ls710 ==> tmp___7#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])tmp___7#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> blastFlag#lb710 <= 10) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])blastFlag#lb710) <= 0) && ($guard#270 && $guard#ls710 ==> __cil_tmp55#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])__cil_tmp55#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> __cil_tmp56#lb710 <= 18446744073709551615ul) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[65])__cil_tmp56#lb710) <= 0) && ($guard#270 && $guard#ls710 ==> __cil_tmp57#lb710 <= 18446744073709551615ul) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[65])__cil_tmp57#lb710) <= 0) && ($guard#270 && $guard#ls710 ==> __cil_tmp58#lb710 <= 18446744073709551615ul) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[65])__cil_tmp58#lb710) <= 0) && ($guard#270 && $guard#ls710 ==> __cil_tmp59#lb710 <= 18446744073709551615ul) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[65])__cil_tmp59#lb710) <= 0) && ($guard#270 && $guard#ls710 ==> __cil_tmp60#lb710 <= 2147483647) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[33])__cil_tmp60#lb710) <= 2147483648) && ($guard#270 && $guard#ls710 ==> __cil_tmp61#lb710 <= 18446744073709551615ul) && ($guard#270 && $guard#ls710 ==> -((signed __CPROVER_bitvector[65])__cil_tmp61#lb710) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#270 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 && $guard#709 && $cond#710 ==> TRUE
+
+terminates: unknown
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+
+Summary for function main
+params: 
+globals_in: 
+globals_out: main#return_value#6 
+forward precondition: TRUE
+forward transformer: main#return_value#6 <= 1 && -((signed __CPROVER_bitvector[33])main#return_value#6) <= 2147483648
+forward invariant: main#return_value#6 <= 1 && -((signed __CPROVER_bitvector[33])main#return_value#6) <= 2147483648
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 3885158240
+  number of solver calls: 241721
+  number of summaries used: 3
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_initialize]: yes
+[ssl3_accept]: unknown
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 48176 milliseconds

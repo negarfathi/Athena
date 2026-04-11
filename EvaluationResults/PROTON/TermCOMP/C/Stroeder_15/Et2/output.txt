@@ -1,0 +1,85 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.HUA1yQ
+
+Input File is : Et2.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : Et2.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+typedef enum {false,true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int a;
+    int b;
+    int r;
+    a = __VERIFIER_nondet_int();
+    b = __VERIFIER_nondet_int();
+    
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(12, __func__);
+ while (b > 0) { __VERIFIER_loop_head(12, __func__);
+printf("CBMC Instrumentation @ line12");myBool flag=__VERIFIER_nondet_myBool();static int oa;static int ob;static int or;if(pStored0){__CPROVER_assert(!(oa==a && ob==b && or==r),"recurrent state found");} if(flag){oa=a;ob=b;or=r;pStored0=myTrue;} 
+        r =  __VERIFIER_nondet_int();
+        b = a - 1 - r;
+        a = a - 1 - r;
+    }
+    
+    return 0;
+}
+End Main 
+ Et2_instrumented.c
+NTFILE is Et2_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Et2.c
+b'4662c7a9e904e7ccfc1b996f3cd7a777e375f229ef29b03f2e3b96428b0840a2  Et2.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Et2/Et2.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+main 12 reachedControl
+main 12 loopHead
+main 12 reachedControl
+main 12 loopHead
+Trace file line inside enterred lasso check : main 12 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Et2/Et2.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Et2.c
+FILE=Et2_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2019 milliseconds

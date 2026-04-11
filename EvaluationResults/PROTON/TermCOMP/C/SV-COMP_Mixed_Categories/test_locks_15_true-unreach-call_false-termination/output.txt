@@ -1,0 +1,736 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.zZYWHS
+
+Input File is : test_locks_15_true-unreach-call_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+extern int __VERIFIER_nondet_int();
+int main()
+{
+    int p1 = __VERIFIER_nondet_int();  // condition variable
+    int lk1; // lock variable
+
+    int p2 = __VERIFIER_nondet_int();  // condition variable
+    int lk2; // lock variable
+
+    int p3 = __VERIFIER_nondet_int();  // condition variable
+    int lk3; // lock variable
+
+    int p4 = __VERIFIER_nondet_int();  // condition variable
+    int lk4; // lock variable
+
+    int p5 = __VERIFIER_nondet_int();  // condition variable
+    int lk5; // lock variable
+
+    int p6 = __VERIFIER_nondet_int();  // condition variable
+    int lk6; // lock variable
+
+    int p7 = __VERIFIER_nondet_int();  // condition variable
+    int lk7; // lock variable
+
+    int p8 = __VERIFIER_nondet_int();  // condition variable
+    int lk8; // lock variable
+
+    int p9 = __VERIFIER_nondet_int();  // condition variable
+    int lk9; // lock variable
+
+    int p10 = __VERIFIER_nondet_int();  // condition variable
+    int lk10; // lock variable
+
+    int p11 = __VERIFIER_nondet_int();  // condition variable
+    int lk11; // lock variable
+
+    int p12 = __VERIFIER_nondet_int();  // condition variable
+    int lk12; // lock variable
+
+    int p13 = __VERIFIER_nondet_int();  // condition variable
+    int lk13; // lock variable
+
+    int p14 = __VERIFIER_nondet_int();  // condition variable
+    int lk14; // lock variable
+
+    int p15 = __VERIFIER_nondet_int();  // condition variable
+    int lk15; // lock variable
+
+
+    int cond;
+
+    while(1) {
+        cond = __VERIFIER_nondet_int();
+        {if (cond == 0) {
+            goto out;
+        } else {}}
+        lk1 = 0; // initially lock is open
+
+        lk2 = 0; // initially lock is open
+
+        lk3 = 0; // initially lock is open
+
+        lk4 = 0; // initially lock is open
+
+        lk5 = 0; // initially lock is open
+
+        lk6 = 0; // initially lock is open
+
+        lk7 = 0; // initially lock is open
+
+        lk8 = 0; // initially lock is open
+
+        lk9 = 0; // initially lock is open
+
+        lk10 = 0; // initially lock is open
+
+        lk11 = 0; // initially lock is open
+
+        lk12 = 0; // initially lock is open
+
+        lk13 = 0; // initially lock is open
+
+        lk14 = 0; // initially lock is open
+
+        lk15 = 0; // initially lock is open
+
+
+    // lock phase
+        {if (p1 != 0) {
+            lk1 = 1; // acquire lock
+        } else {}}
+
+        {if (p2 != 0) {
+            lk2 = 1; // acquire lock
+        } else {}}
+
+        {if (p3 != 0) {
+            lk3 = 1; // acquire lock
+        } else {}}
+
+        {if (p4 != 0) {
+            lk4 = 1; // acquire lock
+        } else {}}
+
+        {if (p5 != 0) {
+            lk5 = 1; // acquire lock
+        } else {}}
+
+        {if (p6 != 0) {
+            lk6 = 1; // acquire lock
+        } else {}}
+
+        {if (p7 != 0) {
+            lk7 = 1; // acquire lock
+        } else {}}
+
+        {if (p8 != 0) {
+            lk8 = 1; // acquire lock
+        } else {}}
+
+        {if (p9 != 0) {
+            lk9 = 1; // acquire lock
+        } else {}}
+
+        {if (p10 != 0) {
+            lk10 = 1; // acquire lock
+        } else {}}
+
+        {if (p11 != 0) {
+            lk11 = 1; // acquire lock
+        } else {}}
+
+        {if (p12 != 0) {
+            lk12 = 1; // acquire lock
+        } else {}}
+
+        {if (p13 != 0) {
+            lk13 = 1; // acquire lock
+        } else {}}
+
+        {if (p14 != 0) {
+            lk14 = 1; // acquire lock
+        } else {}}
+
+        {if (p15 != 0) {
+            lk15 = 1; // acquire lock
+        } else {}}
+
+
+    // unlock phase
+        {if (p1 != 0) {
+            {if (lk1 != 1) {goto ERROR;}} // assertion failure
+            lk1 = 0;
+        } else {}}
+
+        {if (p2 != 0) {
+            {if (lk2 != 1) {goto ERROR;}} // assertion failure
+            lk2 = 0;
+        } else {}}
+
+        {if (p3 != 0) {
+            {if (lk3 != 1) {goto ERROR;}} // assertion failure
+            lk3 = 0;
+        } else {}}
+
+        {if (p4 != 0) {
+            {if (lk4 != 1) {goto ERROR;}} // assertion failure
+            lk4 = 0;
+        } else {}}
+
+        
+Rewrite Buffer is not NULL
+
+Finished Rewriting  {if (p5 != 0) {
+            {if (lk5 != 1) {goto ERROR;}} // assertion failure
+            lk5 = 0;
+        } else {}}
+
+        {if (p6 != 0) {
+            {if (lk6 != 1) {goto ERROR;}} // assertion failure
+            lk6 = 0;
+        } else {}}
+
+        {if (p7 != 0) {
+            {if (lk7 != 1) {goto ERROR;}} // assertion failure
+            lk7 = 0;
+        } else {}}
+
+        {if (p8 != 0) {
+            {if (lk8 != 1) {goto ERROR;}} // assertion failure
+            lk8 = 0;
+        } else {}}
+
+        {if (p9 != 0) {
+            {if (lk9 != 1) {goto ERROR;}} // assertion failure
+            lk9 = 0;
+        } else {}}
+
+        {if (p10 != 0) {
+            {if (lk10 != 1) {goto ERROR;}} // assertion failure
+            lk10 = 0;
+        } else {}}
+
+        {if (p11 != 0) {
+            {if (lk11 != 1) {goto ERROR;}} // assertion failure
+            lk11 = 0;
+        } else {}}
+
+        {if (p12 != 0) {
+            {if (lk12 != 1) {goto ERROR;}} // assertion failure
+            lk12 = 0;
+        } else {}}
+
+        {if (p13 != 0) {
+            {if (lk13 != 1) {goto ERROR;}} // assertion failure
+            lk13 = 0;
+        } else {}}
+
+        {if (p14 != 0) {
+            {if (lk14 != 1) {goto ERROR;}} // assertion failure
+            lk14 = 0;
+        } else {}}
+
+        {if (p15 != 0) {
+            {if (lk15 != 1) {goto ERROR;}} // assertion failure
+            lk15 = 0;
+        } else {}}
+
+    }
+  out:
+    return 0;
+  ERROR: __VERIFIER_error();
+    return 0;  
+}
+
+
+End Main   
+
+Input File is : test_locks_15_true-unreach-call_false-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+extern int __VERIFIER_nondet_int();
+int main()
+{
+    int p1 = __VERIFIER_nondet_int();  // condition variable
+    int lk1; // lock variable
+
+    int p2 = __VERIFIER_nondet_int();  // condition variable
+    int lk2; // lock variable
+
+    int p3 = __VERIFIER_nondet_int();  // condition variable
+    int lk3; // lock variable
+
+    int p4 = __VERIFIER_nondet_int();  // condition variable
+    int lk4; // lock variable
+
+    int p5 = __VERIFIER_nondet_int();  // condition variable
+    int lk5; // lock variable
+
+    int p6 = __VERIFIER_nondet_int();  // condition variable
+    int lk6; // lock variable
+
+    int p7 = __VERIFIER_nondet_int();  // condition variable
+    int lk7; // lock variable
+
+    int p8 = __VERIFIER_nondet_int();  // condition variable
+    int lk8; // lock variable
+
+    int p9 = __VERIFIER_nondet_int();  // condition variable
+    int lk9; // lock variable
+
+    int p10 = __VERIFIER_nondet_int();  // condition variable
+    int lk10; // lock variable
+
+    int p11 = __VERIFIER_nondet_int();  // condition variable
+    int lk11; // lock variable
+
+    int p12 = __VERIFIER_nondet_int();  // condition variable
+    int lk12; // lock variable
+
+    int p13 = __VERIFIER_nondet_int();  // condition variable
+    int lk13; // lock variable
+
+    int p14 = __VERIFIER_nondet_int();  // condition variable
+    int lk14; // lock variable
+
+    int p15 = __VERIFIER_nondet_int();  // condition variable
+    int lk15; // lock variable
+
+
+    int cond;
+
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(54, __func__);
+ while(1) { __VERIFIER_loop_head(54, __func__);
+printf("CBMC Instrumentation @ line54");myBool flag=__VERIFIER_nondet_myBool();static int ocond;static int olk1;static int olk10;static int olk11;static int olk12;static int olk13;static int olk14;static int olk15;static int olk2;static int olk3;static int olk4;static int olk5;static int olk6;static int olk7;static int olk8;static int olk9;static int op1;static int op10;static int op11;static int op12;static int op13;static int op14;static int op15;static int op2;static int op3;static int op4;static int op5;static int op6;static int op7;static int op8;static int op9;if(pStored0){__CPROVER_assert(!(ocond==cond && olk1==lk1 && olk10==lk10 && olk11==lk11 && olk12==lk12 && olk13==lk13 && olk14==lk14 && olk15==lk15 && olk2==lk2 && olk3==lk3 && olk4==lk4 && olk5==lk5 && olk6==lk6 && olk7==lk7 && olk8==lk8 && olk9==lk9 && op1==p1 && op10==p10 && op11==p11 && op12==p12 && op13==p13 && op14==p14 && op15==p15 && op2==p2 && op3==p3 && op4==p4 && op5==p5 && op6==p6 && op7==p7 && op8==p8 && op9==p9),"recurrent state found");} if(flag){ocond=cond;olk1=lk1;olk10=lk10;olk11=lk11;olk12=lk12;olk13=lk13;olk14=lk14;olk15=lk15;olk2=lk2;olk3=lk3;olk4=lk4;olk5=lk5;olk6=lk6;olk7=lk7;olk8=lk8;olk9=lk9;op1=p1;op10=p10;op11=p11;op12=p12;op13=p13;op14=p14;op15=p15;op2=p2;op3=p3;op4=p4;op5=p5;op6=p6;op7=p7;op8=p8;op9=p9;pStored0=myTrue;} 
+        cond = __VERIFIER_nondet_int();
+        { __VERIFIER_reached_control(56, __func__);
+if (cond == 0) { __VERIFIER_control_true(56, __func__);
+
+            goto out;
+        } else { __VERIFIER_control_false(58, __func__);
+}}
+        lk1 = 0; // initially lock is open
+
+        lk2 = 0; // initially lock is open
+
+        lk3 = 0; // initially lock is open
+
+        lk4 = 0; // initially lock is open
+
+        lk5 = 0; // initially lock is open
+
+        lk6 = 0; // initially lock is open
+
+        lk7 = 0; // initially lock is open
+
+        lk8 = 0; // initially lock is open
+
+        lk9 = 0; // initially lock is open
+
+        lk10 = 0; // initially lock is open
+
+        lk11 = 0; // initially lock is open
+
+        lk12 = 0; // initially lock is open
+
+        lk13 = 0; // initially lock is open
+
+        lk14 = 0; // initially lock is open
+
+        lk15 = 0; // initially lock is open
+
+
+    // lock phase
+        { __VERIFIER_reached_control(91, __func__);
+if (p1 != 0) { __VERIFIER_control_true(91, __func__);
+
+            lk1 = 1; // acquire lock
+        } else { __VERIFIER_control_false(93, __func__);
+}}
+
+        { __VERIFIER_reached_control(95, __func__);
+if (p2 != 0) { __VERIFIER_control_true(95, __func__);
+
+            lk2 = 1; // acquire lock
+        } else { __VERIFIER_control_false(97, __func__);
+}}
+
+        { __VERIFIER_reached_control(99, __func__);
+if (p3 != 0) { __VERIFIER_control_true(99, __func__);
+
+            lk3 = 1; // acquire lock
+        } else { __VERIFIER_control_false(101, __func__);
+}}
+
+        { __VERIFIER_reached_control(103, __func__);
+if (p4 != 0) { __VERIFIER_control_true(103, __func__);
+
+            lk4 = 1; // acquire lock
+        } else { __VERIFIER_control_false(105, __func__);
+}}
+
+        { __VERIFIER_reached_control(107, __func__);
+if (p5 != 0) { __VERIFIER_control_true(107, __func__);
+
+            lk5 = 1; // acquire lock
+        } else { __VERIFIER_control_false(109, __func__);
+}}
+
+        { __VERIFIER_reached_control(111, __func__);
+if (p6 != 0) { __VERIFIER_control_true(111, __func__);
+
+            lk6 = 1; // acquire lock
+        } else { __VERIFIER_control_false(113, __func__);
+}}
+
+        { __VERIFIER_reached_control(115, __func__);
+if (p7 != 0) { __VERIFIER_control_true(115, __func__);
+
+            lk7 = 1; // acquire lock
+        } else { __VERIFIER_control_false(117, __func__);
+}}
+
+        { __VERIFIER_reached_control(119, __func__);
+if (p8 != 0) { __VERIFIER_control_true(119, __func__);
+
+            lk8 = 1; // acquire lock
+        } else { __VERIFIER_control_false(121, __func__);
+}}
+
+        { __VERIFIER_reached_control(123, __func__);
+if (p9 != 0) { __VERIFIER_control_true(123, __func__);
+
+            lk9 = 1; // acquire lock
+        } else { __VERIFIER_control_false(125, __func__);
+}}
+
+        { __VERIFIER_reached_control(127, __func__);
+if (p10 != 0) { __VERIFIER_control_true(127, __func__);
+
+            lk10 = 1; // acquire lock
+        } else { __VERIFIER_control_false(129, __func__);
+}}
+
+        { __VERIFIER_reached_control(131, __func__);
+if (p11 != 0) { __VERIFIER_control_true(131, __func__);
+
+            lk11 = 1; // acquire lock
+        } else { __VERIFIER_control_false(133, __func__);
+}}
+
+        { __VERIFIER_reached_control(135, __func__);
+if (p12 != 0) { __VERIFIER_control_true(135, __func__);
+
+            lk12 = 1; // acquire lock
+        } else { __VERIFIER_control_false(137, __func__);
+}}
+
+        { __VERIFIER_reached_control(139, __func__);
+if (p13 != 0) { __VERIFIER_control_true(139, __func__);
+
+            lk13 = 1; // acquire lock
+        } else { __VERIFIER_control_false(141, __func__);
+}}
+
+        { __VERIFIER_reached_control(143, __func__);
+if (p14 != 0) { __VERIFIER_control_true(143, __func__);
+
+            lk14 = 1; // acquire lock
+        } else { __VERIFIER_control_false(145, __func__);
+}}
+
+        { __VERIFIER_reached_control(147, __func__);
+if (p15 != 0) { __VERIFIER_control_true(147, __func__);
+
+            lk15 = 1; // acquire lock
+        } else { __VERIFIER_control_false(149, __func__);
+}}
+
+
+    // unlock phase
+        { __VERIFIER_reached_control(153, __func__);
+if (p1 != 0) { __VERIFIER_control_true(153, __func__);
+
+            { __VERIFIER_reached_control(154, __func__);
+if (lk1 != 1) { __VERIFIER_control_true(154, __func__);
+goto ERROR;}} // assertion failure
+            lk1 = 0;
+        } else { __VERIFIER_control_false(156, __func__);
+}}
+
+        { __VERIFIER_reached_control(158, __func__);
+if (p2 != 0) { __VERIFIER_control_true(158, __func__);
+
+            { __VERIFIER_reached_control(159, __func__);
+if (lk2 != 1) { __VERIFIER_control_true(159, __func__);
+goto ERROR;}} // assertion failure
+            lk2 = 0;
+        } else { __VERIFIER_control_false(161, __func__);
+}}
+
+        { __VERIFIER_reached_control(163, __func__);
+if (p3 != 0) { __VERIFIER_control_true(163, __func__);
+
+            { __VERIFIER_reached_control(164, __func__);
+if (lk3 != 1) { __VERIFIER_control_true(164, __func__);
+goto ERROR;}} // assertion failure
+            lk3 = 0;
+        } else { __VERIFIER_control_false(166, __func__);
+}}
+
+        { __VERIFIER_reached_control(168, __func__);
+if (p4 != 0) { __VERIFIER_control_true(168, __func__);
+
+            { __VERIFIER_reached_control(169, __func__);
+if (lk4 != 1) { __VERIFIER_control_true(169, __func__);
+goto ERROR;}} // assertion failure
+            lk4 = 0;
+        } else { __VERIFIER_control_false(171, __func__);
+}}
+
+        { __VERIFIER_reached_control(173, __func__);
+if (p5 != 0) { __VERIFIER_control_true(173, __func__);
+
+            { __VERIFIER_reached_control(174, __func__);
+if (lk5 != 1) { __VERIFIER_control_true(174, __func__);
+goto ERROR;}} // assertion failure
+            lk5 = 0;
+        } else { __VERIFIER_control_false(176, __func__);
+}}
+
+        { __VERIFIER_reached_control(178, __func__);
+if (p6 != 0) { __VERIFIER_control_true(178, __func__);
+
+            { __VERIFIER_reached_control(179, __func__);
+if (lk6 != 1) { __VERIFIER_control_true(179, __func__);
+goto ERROR;}} // assertion failure
+            lk6 = 0;
+        } else { __VERIFIER_control_false(181, __func__);
+}}
+
+        { __VERIFIER_reached_control(183, __func__);
+if (p7 != 0) { __VERIFIER_control_true(183, __func__);
+
+            { __VERIFIER_reached_control(184, __func__);
+if (lk7 != 1) { __VERIFIER_control_true(184, __func__);
+goto ERROR;}} // assertion failure
+            lk7 = 0;
+        } else { __VERIFIER_control_false(186, __func__);
+}}
+
+        { __VERIFIER_reached_control(188, __func__);
+if (p8 != 0) { __VERIFIER_control_true(188, __func__);
+
+            { __VERIFIER_reached_control(189, __func__);
+if (lk8 != 1) { __VERIFIER_control_true(189, __func__);
+goto ERROR;}} // assertion failure
+            lk8 = 0;
+        } else { __VERIFIER_control_false(191, __func__);
+}}
+
+        { __VERIFIER_reached_control(193, __func__);
+if (p9 != 0) { __VERIFIER_control_true(193, __func__);
+
+            { __VERIFIER_reached_control(194, __func__);
+if (lk9 != 1) { __VERIFIER_control_true(194, __func__);
+goto ERROR;}} // assertion failure
+            lk9 = 0;
+        } else { __VERIFIER_control_false(196, __func__);
+}}
+
+        { __VERIFIER_reached_control(198, __func__);
+if (p10 != 0) { __VERIFIER_control_true(198, __func__);
+
+            { __VERIFIER_reached_control(199, __func__);
+if (lk10 != 1) { __VERIFIER_control_true(199, __func__);
+goto ERROR;}} // assertion failure
+            lk10 = 0;
+        } else { __VERIFIER_control_false(201, __func__);
+}}
+
+        { __VERIFIER_reached_control(203, __func__);
+if (p11 != 0) { __VERIFIER_control_true(203, __func__);
+
+            { __VERIFIER_reached_control(204, __func__);
+if (lk11 != 1) { __VERIFIER_control_true(204, __func__);
+goto ERROR;}} // assertion failure
+            lk11 = 0;
+        } else { __VERIFIER_control_false(206, __func__);
+}}
+
+        { __VERIFIER_reached_control(208, __func__);
+if (p12 != 0) { __VERIFIER_control_true(208, __func__);
+
+            { __VERIFIER_reached_control(209, __func__);
+if (lk12 != 1) { __VERIFIER_control_true(209, __func__);
+goto ERROR;}} // assertion failure
+            lk12 = 0;
+        } else { __VERIFIER_control_false(211, __func__);
+}}
+
+        { __VERIFIER_reached_control(213, __func__);
+if (p13 != 0) { __VERIFIER_control_true(213, __func__);
+
+            { __VERIFIER_reached_control(214, __func__);
+if (lk13 != 1) { __VERIFIER_control_true(214, __func__);
+goto ERROR;}} // assertion failure
+            lk13 = 0;
+        } else { __VERIFIER_control_false(216, __func__);
+}}
+
+        { __VERIFIER_reached_control(218, __func__);
+if (p14 != 0) { __VERIFIER_control_true(218, __func__);
+
+            { __VERIFIER_reached_control(219, __func__);
+if (lk14 != 1) { __VERIFIER_control_true(219, __func__);
+goto ERROR;}} // assertion failure
+            lk14 = 0;
+        } else { __VERIFIER_control_false(221, __func__);
+}}
+
+        { __VERIFIER_reached_control(223, __func__);
+if (p15 != 0) { __VERIFIER_control_true(223, __func__);
+
+            { __VERIFIER_reached_control(224, __func__);
+if (lk15 
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+!= 1) { __VERIFIER_control_true(224, __func__);
+goto ERROR;}} // assertion failure
+            lk15 = 0;
+        } else { __VERIFIER_control_false(226, __func__);
+}}
+
+    }
+  out:
+    return 0;
+  ERROR: __VERIFIER_error();
+    return 0;  
+}
+
+
+End Main 
+ test_locks_15_true-unreach-call_false-termination_braced_instrumented.c
+NTFILE is test_locks_15_true-unreach-call_false-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = test_locks_15_true-unreach-call_false-termination.c
+b'38012c6fd9010b95cb453d061d6d78724cf269ace5309358f8dab44ee4ab3afe  test_locks_15_true-unreach-call_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/test_locks_15_true-unreach-call_false-termination/test_locks_15_true-unreach-call_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 54 reachedControl
+main 54 loopHead
+main 56 reachedControl
+main 58 falseBranch
+main 91 reachedControl
+main 91 trueBranch
+main 95 reachedControl
+main 95 trueBranch
+main 99 reachedControl
+main 99 trueBranch
+main 103 reachedControl
+main 103 trueBranch
+main 107 reachedControl
+main 107 trueBranch
+main 111 reachedControl
+main 113 falseBranch
+main 115 reachedControl
+main 115 trueBranch
+main 119 reachedControl
+main 119 trueBranch
+main 123 reachedControl
+main 123 trueBranch
+main 127 reachedControl
+main 127 trueBranch
+main 131 reachedControl
+main 131 trueBranch
+main 135 reachedControl
+main 135 trueBranch
+main 139 reachedControl
+main 139 trueBranch
+main 143 reachedControl
+main 143 trueBranch
+main 147 reachedControl
+main 147 trueBranch
+main 153 reachedControl
+main 153 trueBranch
+main 154 reachedControl
+main 158 reachedControl
+main 158 trueBranch
+main 159 reachedControl
+main 163 reachedControl
+main 163 trueBranch
+main 164 reachedControl
+main 168 reachedControl
+main 168 trueBranch
+main 169 reachedControl
+main 173 reachedControl
+main 173 trueBranch
+main 174 reachedControl
+main 178 reachedControl
+main 181 falseBranch
+main 183 reachedControl
+main 183 trueBranch
+main 184 reachedControl
+main 188 reachedControl
+main 188 trueBranch
+main 189 reachedControl
+main 193 reachedControl
+main 193 trueBranch
+main 194 reachedControl
+main 198 reachedControl
+main 198 trueBranch
+main 199 reachedControl
+main 203 reachedControl
+main 203 trueBranch
+main 204 reachedControl
+main 208 reachedControl
+main 208 trueBranch
+main 209 reachedControl
+main 213 reachedControl
+main 213 trueBranch
+main 214 reachedControl
+main 218 reachedControl
+main 218 trueBranch
+main 219 reachedControl
+main 223 reachedControl
+main 223 trueBranch
+enteringLasso
+main 224 reachedControl
+main 54 loopHead
+Trace file line inside enterred lasso check : main 224 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/test_locks_15_true-unreach-call_false-termination/test_locks_15_true-unreach-call_false-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for test_locks_15_true-unreach-call_false-termination.c
+FILE=test_locks_15_true-unreach-call_false-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2275 milliseconds

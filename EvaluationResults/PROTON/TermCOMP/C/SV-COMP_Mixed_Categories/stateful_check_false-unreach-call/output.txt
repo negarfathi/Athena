@@ -1,0 +1,316 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.0mPkos
+
+Input File is : stateful_check_false-unreach-call.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+void __blast_assert(void) {
+ERROR: __VERIFIER_error();
+}
+
+
+
+int ldv_mutex = 1;
+
+int open_called = 0;
+extern int __VERIFIER_nondet_int(void);
+
+void mutex_lock(void)
+{
+  ((ldv_mutex == 1) ? 0 : __blast_assert());
+  ldv_mutex = 2;
+}
+
+void mutex_unlock(void)
+{
+ ((ldv_mutex == 2) ? 0 : __blast_assert());
+ ldv_mutex = 1;
+}
+
+void check_final_state(void)
+{
+ ((ldv_mutex == 1) ? 0 : __blast_assert());
+}
+
+static int misc_release() {
+
+
+        {if(open_called) {
+
+                mutex_lock();
+                mutex_unlock();
+                open_called = 0;
+        } else {
+
+                mutex_lock();
+                mutex_lock();
+        }}
+        return 0;
+}
+
+static int misc_llseek() {
+        return 0;
+}
+
+static int misc_read() {
+        return 0;
+}
+
+static int misc_open()
+{
+        {if(__VERIFIER_nondet_int()) {
+
+                return 1;
+        } else {
+                open_called = 1;
+                return 0;
+        }}
+}
+
+static int my_init(void)
+{
+
+        open_called = 0;
+        return 0;
+}
+
+void main(void) {
+        int ldv_s_misc_fops_file_operations = 0;
+ my_init();
+        while(__VERIFIER_nondet_int()) {
+
+                switch(__VERIFIER_nondet_int()) {
+
+                        case 0: {
+                                {if(ldv_s_misc_fops_file_operations==0) {
+                                misc_open();
+                                ldv_s_misc_fops_file_operations++;
+                                }}
+                        }
+   break;
+
+                        case 1: {
+                                {if(ldv_s_misc_fops_file_operations==1) {
+                                misc_read();
+                                ldv_s_misc_fops_file_operations++;
+                                }}
+                        }
+                        break;
+
+                        case 2: {
+                                {if(ldv_s_misc_fops_file_operations==2) {
+                                misc_llseek();
+                                ldv_s_misc_fops_file_operations++;
+                                }}
+                        }
+                        break;
+
+                        case 3: {
+                                {if(ldv_s_misc_fops_file_operations==3) {
+                                misc_release();
+                                ldv_s_misc_fops_file_operations=0;
+                                }}
+                        }
+                        break;
+
+                        default: break;
+                }
+        }
+        check_final_state();
+ return;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : stateful_check_false-unreach-call_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+void __blast_assert(void) {
+ERROR: __VERIFIER_error();
+}
+
+
+
+int ldv_mutex = 1;
+
+int open_called = 0;
+extern int __VERIFIER_nondet_int(void);
+
+void mutex_lock(void)
+{
+  ((ldv_mutex == 1) ? 0 : __blast_assert());
+  ldv_mutex = 2;
+}
+
+void mutex_unlock(void)
+{
+ ((ldv_mutex == 2) ? 0 : __blast_assert());
+ ldv_mutex = 1;
+}
+
+void check_final_state(void)
+{
+ ((ldv_mutex == 1) ? 0 : __blast_assert());
+}
+
+static int misc_release() {
+
+
+        { __VERIFIER_reached_control(34, __func__);
+if(open_called) { __VERIFIER_control_true(34, __func__);
+
+
+                mutex_lock();
+                mutex_unlock();
+                open_called = 0;
+        } else { __VERIFIER_control_false(39, __func__);
+
+
+                mutex_lock();
+                mutex_lock();
+        }}
+        return 0;
+}
+
+static int misc_llseek() {
+        return 0;
+}
+
+static int misc_read() {
+        return 0;
+}
+
+static int misc_open()
+{
+        { __VERIFIER_reached_control(57, __func__);
+if(__VERIFIER_nondet_int()) { __VERIFIER_control_true(57, __func__);
+
+
+                return 1;
+        } else { __VERIFIER_control_false(60, __func__);
+
+                open_called = 1;
+                return 0;
+        }}
+}
+
+static int my_init(void)
+{
+
+        open_called = 0;
+        return 0;
+}
+
+void main(void) {
+        int ldv_s_misc_fops_file_operations = 0;
+ my_init();
+       myBool pStored0 = myFalse; __VERIFIER_reached_control(76, __func__);
+ while(__VERIFIER_nondet_int()) { __VERIFIER_loop_head(76, __func__);
+printf("CBMC Instrumentation @ line76");myBool flag=__VERIFIER_nondet_myBool();static int oldv_mutex;static int oldv_s_misc_fops_file_operations;static int oopen_called;if(pStored0){__CPROVER_assert(!(oldv_mutex==ldv_mutex && oldv_s_misc_fops_file_operations==ldv_s_misc_fops_file_operations && oopen_called==open_called),"recurrent state found");} if(flag){oldv_mutex=ldv_mutex;oldv_s_misc_fops_file_operations=ldv_s_misc_fops_file_operations;oopen_called=open_called;pStored0=myTrue;} 
+
+                switch(__VERIFIER_nondet_int()) {
+
+                        case 0: {
+                                { __VERIFIER_reached_control(81, __func__);
+if(ldv_s_misc_fops_file_operations==0) { __VERIFIER_control_true(81, __func__);
+
+                                misc_open();
+                                ldv_s_misc_fops_file_operations++;
+                                }}
+                        }
+   break;
+
+                        case 1: {
+                                { __VERIFIER_reached_control(89, __func__);
+if(ldv_s_misc_fops_file_operations==1) { __VERIFIER_control_true(89, __func__);
+
+                                misc_read();
+                                ldv_s_misc_fops_file_operations++;
+                                }}
+                        }
+                        break;
+
+                        case 2: {
+                                { __VERIFIER_reached_control(97, __func__);
+if(ldv_s_misc_fops_file_operations==2) { __VERIFIER_control_true(97, __func__);
+
+                                misc_llseek();
+                                ldv_s_misc_fops_file_operations++;
+                                }}
+                        }
+                        break;
+
+                        case 3: {
+                                { __VERIFIER_reached_control(105, __func__);
+if(ldv_s_misc_fops_file_operations==3) { __VERIFIER_control_true(105, __func__);
+
+                                misc_release();
+                                ldv_s_misc_fops_file_operations=0;
+                                }}
+                        }
+                        break;
+
+                        default: break;
+                }
+        }
+        check_final_state();
+ return;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+stateful_check_false-unreach-call_braced_instrumented.c
+NTFILE is stateful_check_false-unreach-call_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = stateful_check_false-unreach-call.c
+b'e3a2f1201c3c86f7d6813de95a720782360e7d07562fccc22e348939a76473cd  stateful_check_false-unreach-call.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/stateful_check_false-unreach-call/stateful_check_false-unreach-call.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+main 76 reachedControl
+main 76 loopHead
+main 76 reachedControl
+main 76 loopHead
+Trace file line inside enterred lasso check : main 76 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/stateful_check_false-unreach-call/stateful_check_false-unreach-call.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for stateful_check_false-unreach-call.c
+FILE=stateful_check_false-unreach-call_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2186 milliseconds

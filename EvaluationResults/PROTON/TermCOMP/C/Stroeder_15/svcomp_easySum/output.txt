@@ -1,0 +1,65 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.bP2zd7
+
+Input File is : svcomp_easySum.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : svcomp_easySum.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+  int i, sum, bound;
+  bound = __VERIFIER_nondet_int();
+  i = 0;
+  sum = 0;
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(10, __func__);
+ while (i<bound) { __VERIFIER_loop_head(10, __func__);
+printf("CBMC Instrumentation @ line10");myBool flag=__VERIFIER_nondet_myBool();static int obound;static int oi;static int osum;if(pStored0){__CPROVER_assert(!(obound==bound && oi==i && osum==sum),"recurrent state found");} if(flag){obound=bound;oi=i;osum=sum;pStored0=myTrue;} 
+    sum = sum + i;
+    i = i + 1;
+  }
+  return 0;
+}
+
+End Main 
+ svcomp_easySum_instrumented.c
+NTFILE is svcomp_easySum_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_easySum.c
+FILE=svcomp_easySum_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 46348 milliseconds

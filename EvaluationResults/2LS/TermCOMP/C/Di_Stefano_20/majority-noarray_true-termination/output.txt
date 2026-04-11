@@ -1,0 +1,869 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/Di_Stefano_20/majority-noarray_true-termination/majority-noarray_true-termination.c
+Converting
+Type-checking majority-noarray_true-termination
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of setpc
+Simplifying
+Computing SSA of getE
+Simplifying
+Computing SSA of get_I_21_1
+Simplifying
+Computing SSA of get_pc_21_1
+Simplifying
+Computing SSA of getpc
+Simplifying
+Computing SSA of get_E_21_1
+Simplifying
+Computing SSA of getI
+Simplifying
+Computing SSA of setI
+Simplifying
+Computing SSA of attr
+Simplifying
+Computing SSA of _0_13
+Simplifying
+Computing SSA of _0_6
+Simplifying
+Computing SSA of _0_3
+Simplifying
+Computing SSA of _0_11
+Simplifying
+Computing SSA of _0_9
+Simplifying
+Computing SSA of setE
+Simplifying
+Computing SSA of init
+Simplifying
+Computing SSA of env
+Simplifying
+Computing SSA of _0_7
+Simplifying
+Computing SSA of _0_8
+Simplifying
+Computing SSA of _0_2
+Simplifying
+Computing SSA of _0_12
+Simplifying
+Computing SSA of _0_5
+Simplifying
+Computing SSA of _0_4
+Simplifying
+Computing SSA of _0_10
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode E_0 E_1 E_2 E_3 I_0 I_1 I_2 _E_21_1_0 _E_21_1_1 _E_21_1_2 _E_21_1_3 _I_21_1_0 _I_21_1_1 _I_21_1_2 __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id _pc_21_1_0 _pc_21_1_1 _pc_21_1_2 pc_0 pc_1 pc_2 
+globals_out: __CPROVER_threads_exited#133 __CPROVER_thread_key_dtors#131 __CPROVER_thread_keys#132 __CPROVER_malloc_is_new_array#123 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#120 __CPROVER_dead_object#121 __CPROVER_deallocated#122 __CPROVER_new_object#125 __CPROVER_rounding_mode#129 E_0#134 E_1#135 E_2#136 E_3#137 I_0#138 I_1#139 I_2#140 _E_21_1_0#141 _E_21_1_1#142 _E_21_1_2#143 _E_21_1_3#144 _I_21_1_0#145 _I_21_1_1#146 _I_21_1_2#147 __CPROVER_pipe_count#128 __CPROVER_max_malloc_size#124 __CPROVER_next_thread_id#126 __CPROVER_next_thread_key#127 __CPROVER_thread_id#130 _pc_21_1_0#148 _pc_21_1_1#149 _pc_21_1_2#150 pc_0#151 pc_1#152 pc_2#153 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#129 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#129) <= 0 && E_0#134 <= 0 && -((signed __CPROVER_bitvector[9])E_0#134) <= 0 && E_1#135 <= 0 && -((signed __CPROVER_bitvector[9])E_1#135) <= 0 && E_2#136 <= 0 && -((signed __CPROVER_bitvector[9])E_2#136) <= 0 && E_3#137 <= 0 && -((signed __CPROVER_bitvector[9])E_3#137) <= 0 && I_0#138 <= 0 && -((signed __CPROVER_bitvector[9])I_0#138) <= 0 && I_1#139 <= 0 && -((signed __CPROVER_bitvector[9])I_1#139) <= 0 && I_2#140 <= 0 && -((signed __CPROVER_bitvector[9])I_2#140) <= 0 && _E_21_1_0#141 <= 0 && -((signed __CPROVER_bitvector[9])_E_21_1_0#141) <= 0 && _E_21_1_1#142 <= 0 && -((signed __CPROVER_bitvector[9])_E_21_1_1#142) <= 0 && _E_21_1_2#143 <= 0 && -((signed __CPROVER_bitvector[9])_E_21_1_2#143) <= 0 && _E_21_1_3#144 <= 0 && -((signed __CPROVER_bitvector[9])_E_21_1_3#144) <= 0 && _I_21_1_0#145 <= 0 && -((signed __CPROVER_bitvector[9])_I_21_1_0#145) <= 0 && _I_21_1_1#146 <= 0 && -((signed __CPROVER_bitvector[9])_I_21_1_1#146) <= 0 && _I_21_1_2#147 <= 0 && -((signed __CPROVER_bitvector[9])_I_21_1_2#147) <= 0 && __CPROVER_pipe_count#128 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#128) <= 0 && __CPROVER_max_malloc_size#124 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#124) <= -36028797018963968 && __CPROVER_next_thread_id#126 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#126) <= 0 && __CPROVER_next_thread_key#127 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#127) <= 0 && __CPROVER_thread_id#130 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#130) <= 0 && _pc_21_1_0#148 <= 0 && -((signed __CPROVER_bitvector[9])_pc_21_1_0#148) <= 0 && _pc_21_1_1#149 <= 0 && -((signed __CPROVER_bitvector[9])_pc_21_1_1#149) <= 0 && _pc_21_1_2#150 <= 0 && -((signed __CPROVER_bitvector[9])_pc_21_1_2#150) <= 0 && pc_0#151 <= 0 && -((signed __CPROVER_bitvector[9])pc_0#151) <= 0 && pc_1#152 <= 0 && -((signed __CPROVER_bitvector[9])pc_1#152) <= 0 && pc_2#153 <= 0 && -((signed __CPROVER_bitvector[9])pc_2#153) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of init
+Function init not analyzed yet
+Recursively summarizing function init
+Checking precondition of get_pc_21_1
+Function get_pc_21_1 not analyzed yet
+Recursively summarizing function get_pc_21_1
+Analyzing function get_pc_21_1
+Computing summary
+Computing termination argument for get_pc_21_1
+Function trivially terminates
+
+Summary for function get_pc_21_1
+params: x0 x1 
+globals_in: _pc_21_1_0 _pc_21_1_1 _pc_21_1_2 
+globals_out: _pc_21_1_0 _pc_21_1_1 _pc_21_1_2 get_pc_21_1#return_value#phi207 
+forward precondition: TRUE
+forward transformer: _pc_21_1_0 <= 255 && -((signed __CPROVER_bitvector[9])_pc_21_1_0) <= 0 && _pc_21_1_1 <= 255 && -((signed __CPROVER_bitvector[9])_pc_21_1_1) <= 0 && _pc_21_1_2 <= 255 && -((signed __CPROVER_bitvector[9])_pc_21_1_2) <= 0 && get_pc_21_1#return_value#phi207 <= 255 && -((signed __CPROVER_bitvector[9])get_pc_21_1#return_value#phi207) <= 0
+forward invariant: _pc_21_1_0 <= 255 && -((signed __CPROVER_bitvector[9])_pc_21_1_0) <= 0 && _pc_21_1_1 <= 255 && -((signed __CPROVER_bitvector[9])_pc_21_1_1) <= 0 && _pc_21_1_2 <= 255 && -((signed __CPROVER_bitvector[9])_pc_21_1_2) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_E_21_1
+Function get_E_21_1 not analyzed yet
+Recursively summarizing function get_E_21_1
+Analyzing function get_E_21_1
+Computing summary
+Computing termination argument for get_E_21_1
+Function trivially terminates
+
+Summary for function get_E_21_1
+params: x0 
+globals_in: _E_21_1_0 _E_21_1_1 _E_21_1_2 _E_21_1_3 
+globals_out: _E_21_1_0 _E_21_1_1 _E_21_1_2 _E_21_1_3 get_E_21_1#return_value#phi236 
+forward precondition: TRUE
+forward transformer: _E_21_1_0 <= 127 && -((signed __CPROVER_bitvector[9])_E_21_1_0) <= 128 && _E_21_1_1 <= 127 && -((signed __CPROVER_bitvector[9])_E_21_1_1) <= 128 && _E_21_1_2 <= 127 && -((signed __CPROVER_bitvector[9])_E_21_1_2) <= 128 && _E_21_1_3 <= 127 && -((signed __CPROVER_bitvector[9])_E_21_1_3) <= 128 && get_E_21_1#return_value#phi236 <= 127 && -((signed __CPROVER_bitvector[9])get_E_21_1#return_value#phi236) <= 128
+forward invariant: _E_21_1_0 <= 127 && -((signed __CPROVER_bitvector[9])_E_21_1_0) <= 128 && _E_21_1_1 <= 127 && -((signed __CPROVER_bitvector[9])_E_21_1_1) <= 128 && _E_21_1_2 <= 127 && -((signed __CPROVER_bitvector[9])_E_21_1_2) <= 128 && _E_21_1_3 <= 127 && -((signed __CPROVER_bitvector[9])_E_21_1_3) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of get_E_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_E_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_E_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_I_21_1
+Function get_I_21_1 not analyzed yet
+Recursively summarizing function get_I_21_1
+Analyzing function get_I_21_1
+Computing summary
+Computing termination argument for get_I_21_1
+Function trivially terminates
+
+Summary for function get_I_21_1
+params: x0 x1 
+globals_in: _I_21_1_0 _I_21_1_1 _I_21_1_2 
+globals_out: _I_21_1_0 _I_21_1_1 _I_21_1_2 get_I_21_1#return_value#phi194 
+forward precondition: TRUE
+forward transformer: _I_21_1_0 <= 127 && -((signed __CPROVER_bitvector[9])_I_21_1_0) <= 128 && _I_21_1_1 <= 127 && -((signed __CPROVER_bitvector[9])_I_21_1_1) <= 128 && _I_21_1_2 <= 127 && -((signed __CPROVER_bitvector[9])_I_21_1_2) <= 128 && get_I_21_1#return_value#phi194 <= 127 && -((signed __CPROVER_bitvector[9])get_I_21_1#return_value#phi194) <= 128
+forward invariant: _I_21_1_0 <= 127 && -((signed __CPROVER_bitvector[9])_I_21_1_0) <= 128 && _I_21_1_1 <= 127 && -((signed __CPROVER_bitvector[9])_I_21_1_1) <= 128 && _I_21_1_2 <= 127 && -((signed __CPROVER_bitvector[9])_I_21_1_2) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of get_I_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_I_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of get_E_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of setE
+Function setE not analyzed yet
+Recursively summarizing function setE
+Analyzing function setE
+Computing summary
+Computing termination argument for setE
+Function trivially terminates
+
+Summary for function setE
+params: x0 value 
+globals_in: E_0 E_1 E_2 E_3 
+globals_out: E_0#phi427 E_1#phi427 E_2#phi427 E_3#phi427 
+forward precondition: TRUE
+forward transformer: E_0#phi427 <= 127 && -((signed __CPROVER_bitvector[9])E_0#phi427) <= 128 && E_1#phi427 <= 127 && -((signed __CPROVER_bitvector[9])E_1#phi427) <= 128 && E_2#phi427 <= 127 && -((signed __CPROVER_bitvector[9])E_2#phi427) <= 128 && E_3#phi427 <= 127 && -((signed __CPROVER_bitvector[9])E_3#phi427) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of get_pc_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Function setpc not analyzed yet
+Recursively summarizing function setpc
+Analyzing function setpc
+Computing summary
+Computing termination argument for setpc
+Function trivially terminates
+
+Summary for function setpc
+params: x0 x1 value 
+globals_in: pc_0 pc_1 pc_2 
+globals_out: pc_0#phi165 pc_1#phi165 pc_2#phi165 
+forward precondition: TRUE
+forward transformer: pc_0#phi165 <= 255 && -((signed __CPROVER_bitvector[9])pc_0#phi165) <= 0 && pc_1#phi165 <= 255 && -((signed __CPROVER_bitvector[9])pc_1#phi165) <= 0 && pc_2#phi165 <= 255 && -((signed __CPROVER_bitvector[9])pc_2#phi165) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of get_I_21_1
+Precondition trivially holds, replacing by summary.
+Checking precondition of setI
+Function setI not analyzed yet
+Recursively summarizing function setI
+Analyzing function setI
+Computing summary
+Computing termination argument for setI
+Function trivially terminates
+
+Summary for function setI
+params: x0 x1 value 
+globals_in: I_0 I_1 I_2 
+globals_out: I_0#phi260 I_1#phi260 I_2#phi260 
+forward precondition: TRUE
+forward transformer: I_0#phi260 <= 127 && -((signed __CPROVER_bitvector[9])I_0#phi260) <= 128 && I_1#phi260 <= 127 && -((signed __CPROVER_bitvector[9])I_1#phi260) <= 128 && I_2#phi260 <= 127 && -((signed __CPROVER_bitvector[9])I_2#phi260) <= 128
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function init
+Computing summary
+Computing termination argument for init
+Synthesizing ranking function to prove termination
+
+Summary for function init
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: ($guard#622 && $guard#ls630 ==> i#lb630 <= 4) && ($guard#622 && $guard#ls630 ==> -((signed __CPROVER_bitvector[9])i#lb630) <= 0) && ($guard#634 && $guard#ls642 ==> j#lb642 <= 1) && ($guard#634 && $guard#ls642 ==> -((signed __CPROVER_bitvector[9])j#lb642) <= 0) && ($guard#644 && $guard#ls652 ==> j#lb652 <= 1) && ($guard#644 && $guard#ls652 ==> -((signed __CPROVER_bitvector[9])j#lb652) <= 0) && ($guard#632 && $guard#ls654 ==> i#lb654 <= 3) && ($guard#632 && $guard#ls654 ==> -((signed __CPROVER_bitvector[9])i#lb654) <= 0) && ($guard#632 && $guard#ls654 ==> j#lb654 <= 255) && ($guard#632 && $guard#ls654 ==> -((signed __CPROVER_bitvector[9])j#lb654) <= 0)
+forward invariant: ($guard#622 && $guard#ls630 ==> i#lb630 <= 4) && ($guard#622 && $guard#ls630 ==> -((signed __CPROVER_bitvector[9])i#lb630) <= 0) && ($guard#634 && $guard#ls642 ==> j#lb642 <= 1) && ($guard#634 && $guard#ls642 ==> -((signed __CPROVER_bitvector[9])j#lb642) <= 0) && ($guard#644 && $guard#ls652 ==> j#lb652 <= 1) && ($guard#644 && $guard#ls652 ==> -((signed __CPROVER_bitvector[9])j#lb652) <= 0) && ($guard#632 && $guard#ls654 ==> i#lb654 <= 3) && ($guard#632 && $guard#ls654 ==> -((signed __CPROVER_bitvector[9])i#lb654) <= 0) && ($guard#632 && $guard#ls654 ==> j#lb654 <= 255) && ($guard#632 && $guard#ls654 ==> -((signed __CPROVER_bitvector[9])j#lb654) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#622 && $guard#628 && $cond#630 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])i#phi622 - (signed __CPROVER_bitvector[9])i#629) > 0) && ($guard#634 && $guard#640 && $cond#642 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi634 - (signed __CPROVER_bitvector[9])j#641) > 0) && ($guard#644 && $guard#650 && $cond#652 ==> (signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi644 - (signed __CPROVER_bitvector[9])j#651) > 0) && ($guard#632 && $guard#632 && $guard#653 && $cond#654 && $guard#653 && $cond#654 ==> (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])-1 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])i#phi632 - (signed __CPROVER_bitvector[9])i#653)) + (signed __CPROVER_bitvector[21])((signed __CPROVER_bitvector[20])0 * (signed __CPROVER_bitvector[20])((signed __CPROVER_bitvector[9])j#phi632 - (signed __CPROVER_bitvector[9])j#phi644)) > 0)
+
+terminates: yes
+
+Checking precondition of getpc
+Function getpc not analyzed yet
+Recursively summarizing function getpc
+Analyzing function getpc
+Computing summary
+Computing termination argument for getpc
+Function trivially terminates
+
+Summary for function getpc
+params: x0 x1 
+globals_in: pc_0 pc_1 pc_2 
+globals_out: getpc#return_value#phi220 pc_0 pc_1 pc_2 
+forward precondition: TRUE
+forward transformer: getpc#return_value#phi220 <= 255 && -((signed __CPROVER_bitvector[9])getpc#return_value#phi220) <= 0 && pc_0 <= 255 && -((signed __CPROVER_bitvector[9])pc_0) <= 0 && pc_1 <= 255 && -((signed __CPROVER_bitvector[9])pc_1) <= 0 && pc_2 <= 255 && -((signed __CPROVER_bitvector[9])pc_2) <= 0
+forward invariant: pc_0 <= 255 && -((signed __CPROVER_bitvector[9])pc_0) <= 0 && pc_1 <= 255 && -((signed __CPROVER_bitvector[9])pc_1) <= 0 && pc_2 <= 255 && -((signed __CPROVER_bitvector[9])pc_2) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_2
+Function _0_2 not analyzed yet
+Recursively summarizing function _0_2
+Checking precondition of env
+Function env not analyzed yet
+Recursively summarizing function env
+Checking precondition of setE
+Precondition trivially holds, replacing by summary.
+Analyzing function env
+Computing summary
+Computing termination argument for env
+Function terminates
+
+Summary for function env
+params: id key value check 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_2
+Computing summary
+Computing termination argument for _0_2
+Function terminates
+
+Summary for function _0_2
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_3
+Function _0_3 not analyzed yet
+Recursively summarizing function _0_3
+Checking precondition of getE
+Function getE not analyzed yet
+Recursively summarizing function getE
+Analyzing function getE
+Computing summary
+Computing termination argument for getE
+Function trivially terminates
+
+Summary for function getE
+params: x0 
+globals_in: E_0 E_1 E_2 E_3 
+globals_out: E_0 E_1 E_2 E_3 getE#return_value#phi181 
+forward precondition: TRUE
+forward transformer: E_0 <= 127 && -((signed __CPROVER_bitvector[9])E_0) <= 128 && E_1 <= 127 && -((signed __CPROVER_bitvector[9])E_1) <= 128 && E_2 <= 127 && -((signed __CPROVER_bitvector[9])E_2) <= 128 && E_3 <= 127 && -((signed __CPROVER_bitvector[9])E_3) <= 128 && getE#return_value#phi181 <= 127 && -((signed __CPROVER_bitvector[9])getE#return_value#phi181) <= 128
+forward invariant: E_0 <= 127 && -((signed __CPROVER_bitvector[9])E_0) <= 128 && E_1 <= 127 && -((signed __CPROVER_bitvector[9])E_1) <= 128 && E_2 <= 127 && -((signed __CPROVER_bitvector[9])E_2) <= 128 && E_3 <= 127 && -((signed __CPROVER_bitvector[9])E_3) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Function getI not analyzed yet
+Recursively summarizing function getI
+Analyzing function getI
+Computing summary
+Computing termination argument for getI
+Function trivially terminates
+
+Summary for function getI
+params: x0 x1 
+globals_in: I_0 I_1 I_2 
+globals_out: I_0 I_1 I_2 getI#return_value#phi249 
+forward precondition: TRUE
+forward transformer: I_0 <= 127 && -((signed __CPROVER_bitvector[9])I_0) <= 128 && I_1 <= 127 && -((signed __CPROVER_bitvector[9])I_1) <= 128 && I_2 <= 127 && -((signed __CPROVER_bitvector[9])I_2) <= 128 && getI#return_value#phi249 <= 127 && -((signed __CPROVER_bitvector[9])getI#return_value#phi249) <= 128
+forward invariant: I_0 <= 127 && -((signed __CPROVER_bitvector[9])I_0) <= 128 && I_1 <= 127 && -((signed __CPROVER_bitvector[9])I_1) <= 128 && I_2 <= 127 && -((signed __CPROVER_bitvector[9])I_2) <= 128
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of attr
+Function attr not analyzed yet
+Recursively summarizing function attr
+Checking precondition of setI
+Precondition trivially holds, replacing by summary.
+Analyzing function attr
+Computing summary
+Computing termination argument for attr
+Function terminates
+
+Summary for function attr
+params: id key value check 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_3
+Computing summary
+Computing termination argument for _0_3
+Function terminates
+
+Summary for function _0_3
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_4
+Function _0_4 not analyzed yet
+Recursively summarizing function _0_4
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_4
+Computing summary
+Computing termination argument for _0_4
+Function terminates
+
+Summary for function _0_4
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_5
+Function _0_5 not analyzed yet
+Recursively summarizing function _0_5
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_5
+Computing summary
+Computing termination argument for _0_5
+Function terminates
+
+Summary for function _0_5
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_6
+Function _0_6 not analyzed yet
+Recursively summarizing function _0_6
+Checking precondition of attr
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_6
+Computing summary
+Computing termination argument for _0_6
+Function terminates
+
+Summary for function _0_6
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_7
+Function _0_7 not analyzed yet
+Recursively summarizing function _0_7
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_7
+Computing summary
+Computing termination argument for _0_7
+Function terminates
+
+Summary for function _0_7
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_8
+Function _0_8 not analyzed yet
+Recursively summarizing function _0_8
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_8
+Computing summary
+Computing termination argument for _0_8
+Function terminates
+
+Summary for function _0_8
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_9
+Function _0_9 not analyzed yet
+Recursively summarizing function _0_9
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of attr
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_9
+Computing summary
+Computing termination argument for _0_9
+Function terminates
+
+Summary for function _0_9
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_10
+Function _0_10 not analyzed yet
+Recursively summarizing function _0_10
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_10
+Computing summary
+Computing termination argument for _0_10
+Function terminates
+
+Summary for function _0_10
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_11
+Function _0_11 not analyzed yet
+Recursively summarizing function _0_11
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of attr
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_11
+Computing summary
+Computing termination argument for _0_11
+Function terminates
+
+Summary for function _0_11
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_12
+Function _0_12 not analyzed yet
+Recursively summarizing function _0_12
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of env
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_12
+Computing summary
+Computing termination argument for _0_12
+Function terminates
+
+Summary for function _0_12
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of _0_13
+Function _0_13 not analyzed yet
+Recursively summarizing function _0_13
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getE
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of attr
+Precondition trivially holds, replacing by summary.
+Checking precondition of setpc
+Precondition trivially holds, replacing by summary.
+Analyzing function _0_13
+Computing summary
+Computing termination argument for _0_13
+Function terminates
+
+Summary for function _0_13
+params: tid 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Checking precondition of getI
+Precondition trivially holds, replacing by summary.
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Synthesizing ranking function to prove termination
+
+Summary for function main
+params: 
+globals_in: 
+globals_out: main#return_value#phi119 
+forward precondition: TRUE
+forward transformer: main#return_value#phi119 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#phi119) <= 0
+forward invariant: ($guard#5 && $guard#ls115 ==> firstAgent#lb115 <= 255) && ($guard#5 && $guard#ls115 ==> -((signed __CPROVER_bitvector[9])firstAgent#lb115) <= 0)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: $guard#5 && $guard#103 && $cond#115 ==> TRUE
+
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 1193957751
+  number of solver calls: 1289758
+  number of summaries used: 113
+  number of termination arguments computed: 2
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_initialize]: yes
+[setpc]: yes
+[getE]: yes
+[get_I_21_1]: yes
+[get_pc_21_1]: yes
+[getpc]: yes
+[get_E_21_1]: yes
+[getI]: yes
+[setI]: yes
+[attr]: yes
+[_0_13]: yes
+[_0_6]: yes
+[_0_3]: yes
+[_0_11]: yes
+[_0_9]: yes
+[setE]: yes
+[init]: yes
+[env]: yes
+[_0_7]: yes
+[_0_8]: yes
+[_0_2]: yes
+[_0_12]: yes
+[_0_5]: yes
+[_0_4]: yes
+[_0_10]: yes
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 1965 milliseconds

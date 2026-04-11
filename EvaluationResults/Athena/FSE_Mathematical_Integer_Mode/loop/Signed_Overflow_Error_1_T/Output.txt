@@ -1,0 +1,19 @@
+Uncaught exception:
+  
+  (Failure "bitwise operations are not supported in non-BV mode")
+
+Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
+Called from LTS__T2Parser._menhir_action_18.(fun) in file "lib/LTS/T2Parser.mly", line 85, characters 12-19
+Called from Base__List.map in file "src/list.ml", line 433, characters 15-18
+Called from LTS__T2Parser._menhir_action_84.(fun) in file "lib/LTS/T2Parser.mly", line 64, characters 26-60
+Called from Base__List.filter_map in file "src/list.ml", line 1133, characters 11-15
+Called from Base__List.filter_map in file "src/list.ml", line 1135, characters 22-38
+Called from LTS__T2Parser._menhir_action_78 in file "lib/LTS/T2Parser.mly", line 42, characters 23-84
+Called from LTS__Parser.parse_from_lexbuf in file "lib/LTS/parser.ml", line 7, characters 38-72
+Called from Dune__exe__Main.main.(fun) in file "main.ml", line 286, characters 10-36
+Called from Base__Monad.Make2_local.Monad_infix.(>>=) in file "src/monad.ml" (inlined), line 113, characters 22-31
+Called from Dune__exe__Main.main in file "main.ml", lines 247-306, characters 4-44
+Called from Command.For_unix.run.(fun) in file "command/src/command.ml", lines 3388-3399, characters 8-31
+Called from Base__Exn.handle_uncaught_aux in file "src/exn.ml", line 126, characters 6-10
+ERROR
+Runtime: 261 milliseconds

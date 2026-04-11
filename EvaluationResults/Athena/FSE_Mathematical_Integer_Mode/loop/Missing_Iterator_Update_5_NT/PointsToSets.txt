@@ -1,0 +1,91 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %MCE_LOG_LEN = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %MCE_LOG_LEN = alloca i32, align 4 + 0
+NODE   4:   %saved_stack = alloca i8*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %saved_stack = alloca i8*, align 8 + 0
+NODE   5:   %__vla_expr0 = alloca i64, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %__vla_expr0 = alloca i64, align 8 + 0
+NODE   6:   %i = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %i = alloca i32, align 4 + 0
+NODE   7:   %entry4 = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %entry4 = alloca i32, align 4 + 0
+NODE   8:   %cleanup.dest.slot = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %cleanup.dest.slot = alloca i32, align 4 + 0
+NODE   9:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  10:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  11:   store i32 %call, i32* %MCE_LOG_LEN, align 4 (points-to size: 0)
+NODE  12:   %0 = load i32, i32* %MCE_LOG_LEN, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  13:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  14:   %16 = load i32, i32* %retval, align 4 (points-to size: 1)
+    -> null + 0
+NODE  15:   ret i32 %16 (points-to size: 0)
+NODE  16:   %1 = load i32, i32* %MCE_LOG_LEN, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  17:   %2 = load i32, i32* %MCE_LOG_LEN, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  18:   %3 = zext i32 %2 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  19:   %4 = call i8* @llvm.stacksave() (points-to size: 1)
+    ->   %4 = call i8* @llvm.stacksave() + 0
+NODE  20:   store i8* %4, i8** %saved_stack, align 8 (points-to size: 0)
+NODE  21:   %vla = alloca i32, i64 %3, align 16 (points-to size: 1)
+    ->   %vla = alloca i32, i64 %3, align 16 + 0
+NODE  22:   store i64 %3, i64* %__vla_expr0, align 8 (points-to size: 0)
+NODE  23:   store i32 0, i32* %i, align 4 (points-to size: 0)
+NODE  24:   %5 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  25:   %6 = load i32, i32* %MCE_LOG_LEN, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  26:   %call3 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  27:   %7 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  28:   %idxprom = sext i32 %7 to i64 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  29:   %arrayidx = getelementptr inbounds i32, i32* %vla, i64 %idxprom (points-to size: 1)
+    ->   %vla = alloca i32, i64 %3, align 16 + Offset::UNKNOWN
+NODE  30:   store i32 %call3, i32* %arrayidx, align 4 (points-to size: 0)
+NODE  31:   %call5 = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  32:   store i32 %call5, i32* %entry4, align 4 (points-to size: 0)
+NODE  33:   %9 = load i32, i32* %entry4, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  34:   %8 = load i32, i32* %i, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  35:   %inc = add nsw i32 %8, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  36:   store i32 %inc, i32* %i, align 4 (points-to size: 0)
+NODE  37:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  38:   store i32 1, i32* %cleanup.dest.slot, align 4 (points-to size: 0)
+NODE  39:   %15 = load i8*, i8** %saved_stack, align 8 (points-to size: 1)
+    ->   %4 = call i8* @llvm.stacksave() + 0
+NODE  40:   call void @llvm.stackrestore(i8* %15) (points-to size: 0)
+NODE  41:   %10 = load i32, i32* %entry4, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  42:   %11 = load i32, i32* %MCE_LOG_LEN, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  43:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE  44:   store i32 1, i32* %cleanup.dest.slot, align 4 (points-to size: 0)
+NODE  45:   %12 = load i32, i32* %entry4, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  46:   %idxprom13 = sext i32 %12 to i64 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  47:   %arrayidx14 = getelementptr inbounds i32, i32* %vla, i64 %idxprom13 (points-to size: 1)
+    ->   %vla = alloca i32, i64 %3, align 16 + Offset::UNKNOWN
+NODE  48:   %13 = load i32, i32* %arrayidx14, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  49:   %14 = load i32, i32* %entry4, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  50:   %inc16 = add nsw i32 %14, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  51:   store i32 %inc16, i32* %entry4, align 4 (points-to size: 0)
+NODE  52: main (points-to size: 1)
+    -> main + 0

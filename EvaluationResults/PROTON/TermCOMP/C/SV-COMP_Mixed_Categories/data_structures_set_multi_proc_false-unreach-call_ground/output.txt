@@ -1,0 +1,146 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.6ZU7yC
+
+Input File is : data_structures_set_multi_proc_false-unreach-call_ground.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+void __VERIFIER_assert(int cond) { {if(!(cond)) { ERROR: __VERIFIER_error(); }} }
+int insert( int set [] , int size , int value ) {
+  set[ size ] = value;
+  return size + 1;
+}
+int elem_exists( int set [ ] , int size , int value ) {
+  int i;
+  for ( i = 0 ; i < size ; i++ ) {
+    {if ( set[ i ] == value ) {return 0;}}
+  }
+  return 0;
+}
+int main( ) {
+  int n = 0;
+  int set[ 100000 ];
+  int x;
+  int y;
+  for ( x = 0 ; x < n ; x++ ) {
+    for ( y = x + 1 ; y < n ; y++ ) {
+      __VERIFIER_assert( set[ x ] != set[ y ] );
+    }
+  }
+  int values[ 100000 ];
+  int v;
+  for ( v = 0 ; v < 100000 ; v++ ) {
+    {if ( !elem_exists( set , n , values[ v ] ) ) {
+      n = insert( set , n , values[ v ] );
+    }}
+  }
+  for ( x = 0 ; x < n ; x++ ) {
+    for ( y = x + 1 ; y < n ; y++ ) {
+      __VERIFIER_assert( set[ x ] != set[ y ] );
+    }
+  }
+  return 0;
+}
+
+End Main   
+
+Input File is : data_structures_set_multi_proc_false-unreach-call_ground_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+void __VERIFIER_assert(int cond) { { __VERIFIER_reached_control(2, __func__);
+if(!(cond)) { __VERIFIER_control_true(2, __func__);
+ ERROR: __VERIFIER_error(); }} }
+int insert( int set [] , int size , int value ) {
+  set[ size ] = value;
+  return size + 1;
+}
+int elem_exists( int set [ ] , int size , int value ) {
+  int i;
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(9, __func__);
+ for ( i = 0 ; i < size ; i++ ) { __VERIFIER_loop_head(9, __func__);
+printf("CBMC Instrumentation @ line9");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int osize;static int ovalue;if(pStored0){__CPROVER_assert(!(oi==i && osize==size && ovalue==value),"recurrent state found");} if(flag){oi=i;osize=size;ovalue=value;pStored0=myTrue;} 
+    { __VERIFIER_reached_control(10, __func__);
+if ( set[ i ] == value ) { __VERIFIER_control_true(10, __func__);
+return 0;}}
+  }
+  return 0;
+}
+int main( ) {
+  int n = 0;
+  int set[ 100000 ];
+  int x;
+  int y;
+ myBool pStored1 = myFalse; __VERIFIER_reached_control(19, __func__);
+ for ( x = 0 ; x < n ; x++ ) { __VERIFIER_loop_head(19, __func__);
+printf("CBMC Instrumentation @ line19");myBool flag=__VERIFIER_nondet_myBool();static int on;static int ox;static int oy;if(pStored1){__CPROVER_assert(!(on==n && ox==x && oy==y),"recurrent state found");} if(flag){on=n;ox=x;oy=y;pStored1=myTrue;} 
+   myBool pStored2 = myFalse; __VERIFIER_reached_control(20, __func__);
+ for ( y = x + 1 ; y < n ; y++ ) { __VERIFIER_loop_head(20, __func__);
+printf("CBMC Instrumentation @ line20");myBool flag=__VERIFIER_nondet_myBool();static int on;static int ox;static int oy;if(pStored2){__CPROVER_assert(!(on==n && ox==x && oy==y),"recurrent state found");} if(flag){on=n;ox=x;oy=y;pStored2=myTrue;} 
+      __VERIFIER_assert( set[ x ] != set[ y ] );
+    }
+  }
+  int values[ 100000 ];
+  int v;
+ myBool pStored3 = myFalse; __VERIFIER_reached_control(26, __func__);
+ for ( v = 0 ; v < 100000 ; v++ ) { __VERIFIER_loop_head(26, __func__);
+printf("CBMC Instrumentation @ line26");myBool flag=__VERIFIER_nondet_myBool();static int on;static int ov;static int ox;static int oy;if(pStored3){__CPROVER_assert(!(on==n && ov==v && ox==x && oy==y),"recurrent state found");} if(flag){on=n;ov=v;ox=x;oy=y;pStored3=myTrue;} 
+    { __VERIFIER_reached_control(27, __func__);
+if ( !elem_exists( set , n , values[ v ] ) ) { __VERIFIER_control_true(27, __func__);
+
+      n = insert( set , n , values[ v ] );
+    }}
+  }
+ myBool pStored4 = myFalse; __VERIFIER_reached_control(31, __func__);
+ for ( x = 0 ; x < n ; x++ ) { __VERIFIER_loop_head(31, __func__);
+printf("CBMC Instrumentation @ line31");myBool flag=__VERIFIER_nondet_myBool();static int on;static int ov;static int ox;static int oy;if(pStored4){__CPROVER_assert(!(on==n && ov==v && ox==x && oy==y),"recurrent state found");} if(flag){on=n;ov=v;ox=x;oy=y;pStored4=myTrue;} 
+   myBool pStored5 = myFalse; __VERIFIER_reached_control(32, __func__);
+ for ( y = x + 1 ; y < n ; y++ ) { __VERIFIER_loop_head(32, __func__);
+printf("CBMC Instrumentation @ line32");myBool flag=__VERIFIER_nondet_myBool();static int on;static int ov;static int ox;static int oy;if(pStored5){__CPROVER_assert(!(on==n && ov==v && ox==x && oy==y),"recurrent state found");} if(flag){on=n;ov=v;ox=x;oy=y;pStored5=myTrue;} 
+      __VERIFIER_assert( set[ x ] != set[ y ] );
+    }
+  }
+  return 0;
+}
+
+End Main 
+ data_structures_set_multi_proc_false-unreach-call_ground_braced_instrumented.c
+NTFILE is data_structures_set_multi_proc_false-unreach-call_ground_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for data_structures_set_multi_proc_false-unreach-call_ground.c
+FILE=data_structures_set_multi_proc_false-unreach-call_ground_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 301931 milliseconds

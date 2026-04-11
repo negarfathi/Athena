@@ -1,0 +1,104 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.MpuUVX
+
+Input File is : Ex03.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  typedef enum {false,true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i;
+    i = __VERIFIER_nondet_int();
+    
+    while (i < 0) {
+        {if (i != -5) {
+            i = i+1;
+        }}
+    }
+    
+    return 0;
+}
+
+End Main   
+
+Input File is : Ex03_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+typedef enum {false,true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int i;
+    i = __VERIFIER_nondet_int();
+    
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(9, __func__);
+ while (i < 0) { __VERIFIER_loop_head(9, __func__);
+printf("CBMC Instrumentation @ line9");myBool flag=__VERIFIER_nondet_myBool();static int oi;if(pStored0){__CPROVER_assert(!(oi==i),"recurrent state found");} if(flag){oi=i;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(10, __func__);
+if (i != -5) { __VERIFIER_control_true(10, __func__);
+
+            i = i+1;
+        }}
+    }
+    
+    return 0;
+}
+
+End Main 
+ Ex03_braced_instrumented.c
+NTFILE is Ex03_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Ex03.c
+b'b31ed4b72f45e3756b3103e506bd8e9f5ed0e7b74e7d7650bd4662c6650f610a  Ex03.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Ex03/Ex03.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 9 reachedControl
+main 9 loopHead
+enteringLasso
+main 10 reachedControl
+main 9 loopHead
+Trace file line inside enterred lasso check : main 10 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Stroeder_15/Ex03/Ex03.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Ex03.c
+FILE=Ex03_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2027 milliseconds

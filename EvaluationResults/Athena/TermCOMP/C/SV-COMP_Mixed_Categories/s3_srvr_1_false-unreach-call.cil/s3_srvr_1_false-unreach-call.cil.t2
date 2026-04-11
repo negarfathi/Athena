@@ -1,0 +1,1090 @@
+///*** 1_main ***///
+START: main_bb57;
+
+
+
+FROM: main_bb57;
+v127 := nondet();
+v128 := nondet();
+v129 := nondet();
+v130 := nondet();
+v131 := nondet();
+v132 := nondet();
+v133 := nondet();
+v134 := nondet();
+v135 := nondet();
+v136 := nondet();
+v137 := nondet();
+v138 := nondet();
+v139 := nondet();
+v140 := nondet();
+v141 := nondet();
+v142 := nondet();
+v143 := nondet();
+v144 := nondet();
+v145 := nondet();
+v146 := nondet();
+v147 := nondet();
+v148 := nondet();
+v149 := nondet();
+var__temp_v.0.i := -1;
+TO: main_bb57_end;
+
+FROM: main_bb57_end;
+assume(v132 == 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb57_end;
+assume(v132 != 0);
+TO: main_bb58;
+
+FROM: main_bb58;
+v151 := v143;
+v152 := v143;
+v153 := v133;
+v154 := v144;
+v155 := v144;
+v156 := v143;
+var__temp_vblastFlag.0.i := 0;
+var__temp_vgot_new_session.0.i := 0;
+var__temp_vs__s3__tmp__next_state___0.0.i := v126;
+var__temp_vs__state.0.i := 8464;
+TO: main_bb59;
+
+FROM: main_bb59;
+vblastFlag.0.i := var__temp_vblastFlag.0.i;
+vgot_new_session.0.i := var__temp_vgot_new_session.0.i;
+vs__s3__tmp__next_state___0.0.i := var__temp_vs__s3__tmp__next_state___0.0.i;
+vs__state.0.i := var__temp_vs__state.0.i;
+TO: main_bb59_end;
+
+FROM: main_bb59_end;
+assume(vs__state.0.i < 8544);
+TO: main_NodeBlock49.i;
+
+FROM: main_bb59_end;
+assume(vs__state.0.i >= 8544);
+TO: main_NodeBlock99.i;
+
+FROM: main_NodeBlock49.i;
+TO: main_NodeBlock49.i_end;
+
+FROM: main_NodeBlock49.i_end;
+assume(vs__state.0.i < 8480);
+TO: main_NodeBlock28.i;
+
+FROM: main_NodeBlock49.i_end;
+assume(vs__state.0.i >= 8480);
+TO: main_NodeBlock47.i;
+
+FROM: main_NodeBlock28.i;
+TO: main_NodeBlock28.i_end;
+
+FROM: main_NodeBlock28.i_end;
+assume(vs__state.0.i < 8195);
+TO: main_NodeBlock.i;
+
+FROM: main_NodeBlock28.i_end;
+assume(vs__state.0.i >= 8195);
+TO: main_NodeBlock26.i;
+
+FROM: main_NodeBlock.i;
+TO: main_NodeBlock.i_v.;
+FROM: main_NodeBlock.i_v.;
+assume((vs__state.0.i < 8192) && (vs__state.0.i == 3));
+v. := 1;
+TO: main_NodeBlock.i_sv.;
+
+FROM: main_NodeBlock.i_v.;
+assume((vs__state.0.i >= 8192) || (vs__state.0.i != 3));
+v. := -1;
+TO: main_NodeBlock.i_sv.;
+
+FROM: main_NodeBlock.i_sv.;
+TO: main_NodeBlock.i_ret;
+
+FROM: main_NodeBlock26.i;
+var__temp_v.0.i := -1;
+TO: main_NodeBlock26.i_end;
+
+FROM: main_NodeBlock26.i_end;
+assume(vs__state.0.i < 8448);
+TO: main_ssl3_accept.exit;
+
+FROM: main_NodeBlock26.i_end;
+assume(vs__state.0.i >= 8448);
+TO: main_NodeBlock24.i;
+
+FROM: main_NodeBlock24.i;
+TO: main_NodeBlock24.i_end;
+
+FROM: main_NodeBlock24.i_end;
+assume(vs__state.0.i < 8464);
+TO: main_LeafBlock20.i;
+
+FROM: main_NodeBlock24.i_end;
+assume(vs__state.0.i >= 8464);
+TO: main_LeafBlock22.i;
+
+FROM: main_LeafBlock20.i;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock20.i_end;
+
+FROM: main_LeafBlock20.i_end;
+assume(vs__state.0.i == 8448);
+TO: main_bb60;
+
+FROM: main_LeafBlock20.i_end;
+assume(vs__state.0.i != 8448);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb60;
+v157 := nondet();
+v158 := v157;
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_v.0.i := -1;
+TO: main_bb60_end;
+
+FROM: main_bb60_end;
+assume((v158 > 0) && (v149 <= 0));
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb60_end;
+assume((v158 <= 0) || (v149 > 0));
+TO: main_bb92;
+
+FROM: main_LeafBlock22.i;
+vs__state.0.off.i := vs__state.0.i + -8464;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock22.i_end;
+
+FROM: main_LeafBlock22.i_end;
+assume(vs__state.0.off.i <= 2);
+TO: main_bb61;
+
+FROM: main_LeafBlock22.i_end;
+assume(vs__state.0.off.i > 2);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb61;
+v161 := nondet();
+TO: main_bb61_v.blastFlag.0.i;
+FROM: main_bb61_v.blastFlag.0.i;
+assume(vblastFlag.0.i == 0);
+v.blastFlag.0.i := 1;
+TO: main_bb61_sv.blastFlag.0.i;
+
+FROM: main_bb61_v.blastFlag.0.i;
+assume(vblastFlag.0.i != 0);
+v.blastFlag.0.i := vblastFlag.0.i;
+TO: main_bb61_sv.blastFlag.0.i;
+
+FROM: main_bb61_sv.blastFlag.0.i;
+var__temp_vblastFlag.6.i := v.blastFlag.0.i;
+var__temp_vgot_new_session.1.i := 1;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8496;
+var__temp_v.0.i := v161;
+TO: main_bb61_end;
+
+FROM: main_bb61_end;
+assume(v161 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb61_end;
+assume(v161 > 0);
+TO: main_bb92;
+
+FROM: main_NodeBlock47.i;
+TO: main_NodeBlock47.i_end;
+
+FROM: main_NodeBlock47.i_end;
+assume(vs__state.0.i < 8496);
+TO: main_NodeBlock32.i;
+
+FROM: main_NodeBlock47.i_end;
+assume(vs__state.0.i >= 8496);
+TO: main_NodeBlock45.i;
+
+FROM: main_NodeBlock32.i;
+TO: main_NodeBlock32.i_end;
+
+FROM: main_NodeBlock32.i_end;
+assume(vs__state.0.i < 8482);
+TO: main_bb62;
+
+FROM: main_NodeBlock32.i_end;
+assume(vs__state.0.i >= 8482);
+TO: main_LeafBlock30.i;
+
+FROM: main_bb62;
+v164 := nondet();
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := 8482;
+var__temp_vs__state.8.i := 8448;
+var__temp_v.0.i := v164;
+TO: main_bb62_end;
+
+FROM: main_bb62_end;
+assume(v164 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb62_end;
+assume(v164 > 0);
+TO: main_bb92;
+
+FROM: main_LeafBlock30.i;
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 3;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock30.i_end;
+
+FROM: main_LeafBlock30.i_end;
+assume(vs__state.0.i == 8482);
+TO: main_bb92;
+
+FROM: main_LeafBlock30.i_end;
+assume(vs__state.0.i != 8482);
+TO: main_ssl3_accept.exit;
+
+FROM: main_NodeBlock45.i;
+TO: main_NodeBlock45.i_end;
+
+FROM: main_NodeBlock45.i_end;
+assume(vs__state.0.i < 8512);
+TO: main_LeafBlock34.i;
+
+FROM: main_NodeBlock45.i_end;
+assume(vs__state.0.i >= 8512);
+TO: main_NodeBlock43.i;
+
+FROM: main_LeafBlock34.i;
+vs__state.0.off35.i := vs__state.0.i + -8496;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock34.i_end;
+
+FROM: main_LeafBlock34.i_end;
+assume(vs__state.0.off35.i <= 1);
+TO: main_bb63;
+
+FROM: main_LeafBlock34.i_end;
+assume(vs__state.0.off35.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb63;
+v166 := nondet();
+TO: main_bb63_v.blastFlag.01.i;
+FROM: main_bb63_v.blastFlag.01.i;
+assume(vblastFlag.0.i == 1);
+v.blastFlag.01.i := 2;
+TO: main_bb63_sv.blastFlag.01.i;
+
+FROM: main_bb63_v.blastFlag.01.i;
+assume(vblastFlag.0.i != 1);
+v.blastFlag.01.i := vblastFlag.0.i;
+TO: main_bb63_sv.blastFlag.01.i;
+
+FROM: main_bb63_sv.blastFlag.01.i;
+var__temp_v.0.i := v166;
+TO: main_bb63_end;
+
+FROM: main_bb63_end;
+assume(v166 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb63_end;
+assume(v166 > 0);
+TO: main_bb64;
+
+FROM: main_bb64;
+TO: main_bb64_v.2.i;
+FROM: main_bb64_v.2.i;
+assume(v130 != 0);
+v.2.i := 8656;
+TO: main_bb64_sv.2.i;
+
+FROM: main_bb64_v.2.i;
+assume(v130 == 0);
+v.2.i := 8512;
+TO: main_bb64_sv.2.i;
+
+FROM: main_bb64_sv.2.i;
+var__temp_vblastFlag.6.i := v.blastFlag.01.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := v.2.i;
+TO: main_bb92;
+
+FROM: main_NodeBlock43.i;
+TO: main_NodeBlock43.i_end;
+
+FROM: main_NodeBlock43.i_end;
+assume(vs__state.0.i < 8528);
+TO: main_LeafBlock37.i;
+
+FROM: main_NodeBlock43.i_end;
+assume(vs__state.0.i >= 8528);
+TO: main_LeafBlock40.i;
+
+FROM: main_LeafBlock37.i;
+vs__state.0.off38.i := vs__state.0.i + -8512;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock37.i_end;
+
+FROM: main_LeafBlock37.i_end;
+assume(vs__state.0.off38.i <= 1);
+TO: main_bb65;
+
+FROM: main_LeafBlock37.i_end;
+assume(vs__state.0.off38.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb65;
+v170 := v151 + 256;
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 1;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8528;
+TO: main_bb65_end;
+
+FROM: main_bb65_end;
+assume(v170 != 0);
+TO: main_bb92;
+
+FROM: main_bb65_end;
+assume(v170 == 0);
+TO: main_bb66;
+
+FROM: main_bb66;
+v172 := nondet();
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8528;
+var__temp_v.0.i := v172;
+TO: main_bb66_end;
+
+FROM: main_bb66_end;
+assume(v172 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb66_end;
+assume(v172 > 0);
+TO: main_bb92;
+
+FROM: main_LeafBlock40.i;
+vs__state.0.off41.i := vs__state.0.i + -8528;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock40.i_end;
+
+FROM: main_LeafBlock40.i_end;
+assume(vs__state.0.off41.i <= 1);
+TO: main_bb67;
+
+FROM: main_LeafBlock40.i_end;
+assume(vs__state.0.off41.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb67;
+v174 := v153 + 2097152;
+v176 := v152 + 30;
+TO: main_bb67_end;
+
+FROM: main_bb67_end;
+assume((v174 != 0) || (v176 != 0));
+TO: main_bb72;
+
+FROM: main_bb67_end;
+assume((v174 == 0) && (v176 == 0));
+TO: main_bb68;
+
+FROM: main_bb68;
+v178 := v152 + 1;
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 1;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8544;
+TO: main_bb68_end;
+
+FROM: main_bb68_end;
+assume(v178 != 0);
+TO: main_bb69;
+
+FROM: main_bb68_end;
+assume(v178 == 0);
+TO: main_bb92;
+
+FROM: main_bb69;
+TO: main_bb69_end;
+
+FROM: main_bb69_end;
+assume(v136 == 0);
+TO: main_bb72;
+
+FROM: main_bb69_end;
+assume(v136 != 0);
+TO: main_bb70;
+
+FROM: main_bb70;
+v181 := v154 + 2;
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 1;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8544;
+TO: main_bb70_end;
+
+FROM: main_bb70_end;
+assume(v181 != 0);
+TO: main_bb71;
+
+FROM: main_bb70_end;
+assume(v181 == 0);
+TO: main_bb92;
+
+FROM: main_bb71;
+v183 := nondet();
+v184 := v155 + 4;
+TO: main_bb71_v.4.i;
+FROM: main_bb71_v.4.i;
+assume(v184 != 0);
+v.4.i := 512;
+TO: main_bb71_sv.4.i;
+
+FROM: main_bb71_v.4.i;
+assume(v184 == 0);
+v.4.i := 1024;
+TO: main_bb71_sv.4.i;
+
+FROM: main_bb71_sv.4.i;
+v186 := v183 * 8;
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 1;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8544;
+TO: main_bb71_end;
+
+FROM: main_bb71_end;
+assume(v186 > v.4.i);
+TO: main_bb72;
+
+FROM: main_bb71_end;
+assume(v186 <= v.4.i);
+TO: main_bb92;
+
+FROM: main_bb72;
+v188 := nondet();
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8544;
+var__temp_v.0.i := v188;
+TO: main_bb72_end;
+
+FROM: main_bb72_end;
+assume(v188 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb72_end;
+assume(v188 > 0);
+TO: main_bb92;
+
+FROM: main_NodeBlock99.i;
+TO: main_NodeBlock99.i_end;
+
+FROM: main_NodeBlock99.i_end;
+assume(vs__state.0.i < 8640);
+TO: main_NodeBlock72.i;
+
+FROM: main_NodeBlock99.i_end;
+assume(vs__state.0.i >= 8640);
+TO: main_NodeBlock97.i;
+
+FROM: main_NodeBlock72.i;
+TO: main_NodeBlock72.i_end;
+
+FROM: main_NodeBlock72.i_end;
+assume(vs__state.0.i < 8576);
+TO: main_NodeBlock57.i;
+
+FROM: main_NodeBlock72.i_end;
+assume(vs__state.0.i >= 8576);
+TO: main_NodeBlock70.i;
+
+FROM: main_NodeBlock57.i;
+TO: main_NodeBlock57.i_end;
+
+FROM: main_NodeBlock57.i_end;
+assume(vs__state.0.i < 8560);
+TO: main_LeafBlock51.i;
+
+FROM: main_NodeBlock57.i_end;
+assume(vs__state.0.i >= 8560);
+TO: main_LeafBlock54.i;
+
+FROM: main_LeafBlock51.i;
+vs__state.0.off52.i := vs__state.0.i + -8544;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock51.i_end;
+
+FROM: main_LeafBlock51.i_end;
+assume(vs__state.0.off52.i <= 1);
+TO: main_bb73;
+
+FROM: main_LeafBlock51.i_end;
+assume(vs__state.0.off52.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb73;
+v190 := v134 + 1;
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 1;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8560;
+TO: main_bb73_end;
+
+FROM: main_bb73_end;
+assume(v190 != 0);
+TO: main_bb74;
+
+FROM: main_bb73_end;
+assume(v190 == 0);
+TO: main_bb92;
+
+FROM: main_bb74;
+v193 := v134 + 4;
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 1;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8560;
+TO: main_bb74_end;
+
+FROM: main_bb74_end;
+assume((v135 != 0) && (v193 != 0));
+TO: main_bb92;
+
+FROM: main_bb74_end;
+assume((v135 == 0) || (v193 == 0));
+TO: main_bb75;
+
+FROM: main_bb75;
+v195 := v156 + 256;
+v197 := v134 + 2;
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 1;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8560;
+TO: main_bb75_end;
+
+FROM: main_bb75_end;
+assume((v195 == 0) || (v197 != 0));
+TO: main_bb76;
+
+FROM: main_bb75_end;
+assume((v195 != 0) && (v197 == 0));
+TO: main_bb92;
+
+FROM: main_bb76;
+v199 := nondet();
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := 8576;
+var__temp_vs__state.8.i := 8448;
+var__temp_v.0.i := v199;
+TO: main_bb76_end;
+
+FROM: main_bb76_end;
+assume(v199 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb76_end;
+assume(v199 > 0);
+TO: main_bb92;
+
+FROM: main_LeafBlock54.i;
+vs__state.0.off55.i := vs__state.0.i + -8560;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock54.i_end;
+
+FROM: main_LeafBlock54.i_end;
+assume(vs__state.0.off55.i <= 1);
+TO: main_bb77;
+
+FROM: main_LeafBlock54.i_end;
+assume(vs__state.0.off55.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb77;
+v201 := nondet();
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := 8576;
+var__temp_vs__state.8.i := 8448;
+var__temp_v.0.i := v201;
+TO: main_bb77_end;
+
+FROM: main_bb77_end;
+assume(v201 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb77_end;
+assume(v201 > 0);
+TO: main_bb92;
+
+FROM: main_NodeBlock70.i;
+TO: main_NodeBlock70.i_end;
+
+FROM: main_NodeBlock70.i_end;
+assume(vs__state.0.i < 8592);
+TO: main_LeafBlock59.i;
+
+FROM: main_NodeBlock70.i_end;
+assume(vs__state.0.i >= 8592);
+TO: main_NodeBlock68.i;
+
+FROM: main_LeafBlock59.i;
+vs__state.0.off60.i := vs__state.0.i + -8576;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock59.i_end;
+
+FROM: main_LeafBlock59.i_end;
+assume(vs__state.0.off60.i <= 1);
+TO: main_bb78;
+
+FROM: main_LeafBlock59.i_end;
+assume(vs__state.0.off60.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb78;
+v203 := nondet();
+var__temp_v.0.i := v203;
+TO: main_bb78_end;
+
+FROM: main_bb78_end;
+assume(v203 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb78_end;
+assume(v203 > 0);
+TO: main_bb79;
+
+FROM: main_bb79;
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8466;
+TO: main_bb79_end;
+
+FROM: main_bb79_end;
+assume(v203 == 2);
+TO: main_bb92;
+
+FROM: main_bb79_end;
+assume(v203 != 2);
+TO: main_bb80;
+
+FROM: main_bb80;
+v206 := nondet();
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8592;
+var__temp_v.0.i := v206;
+TO: main_bb80_end;
+
+FROM: main_bb80_end;
+assume(v206 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb80_end;
+assume(v206 > 0);
+TO: main_bb92;
+
+FROM: main_NodeBlock68.i;
+TO: main_NodeBlock68.i_end;
+
+FROM: main_NodeBlock68.i_end;
+assume(vs__state.0.i < 8608);
+TO: main_LeafBlock62.i;
+
+FROM: main_NodeBlock68.i_end;
+assume(vs__state.0.i >= 8608);
+TO: main_LeafBlock65.i;
+
+FROM: main_LeafBlock62.i;
+vs__state.0.off63.i := vs__state.0.i + -8592;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock62.i_end;
+
+FROM: main_LeafBlock62.i_end;
+assume(vs__state.0.off63.i <= 1);
+TO: main_bb81;
+
+FROM: main_LeafBlock62.i_end;
+assume(vs__state.0.off63.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb81;
+v208 := nondet();
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8608;
+var__temp_v.0.i := v208;
+TO: main_bb81_end;
+
+FROM: main_bb81_end;
+assume(v208 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb81_end;
+assume(v208 > 0);
+TO: main_bb92;
+
+FROM: main_LeafBlock65.i;
+vs__state.0.off66.i := vs__state.0.i + -8608;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock65.i_end;
+
+FROM: main_LeafBlock65.i_end;
+assume(vs__state.0.off66.i <= 1);
+TO: main_bb82;
+
+FROM: main_LeafBlock65.i_end;
+assume(vs__state.0.off66.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb82;
+v210 := nondet();
+var__temp_vblastFlag.6.i := vblastFlag.0.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8640;
+var__temp_v.0.i := v210;
+TO: main_bb82_end;
+
+FROM: main_bb82_end;
+assume(v210 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb82_end;
+assume(v210 > 0);
+TO: main_bb92;
+
+FROM: main_NodeBlock97.i;
+TO: main_NodeBlock97.i_end;
+
+FROM: main_NodeBlock97.i_end;
+assume(vs__state.0.i < 12292);
+TO: main_NodeBlock85.i;
+
+FROM: main_NodeBlock97.i_end;
+assume(vs__state.0.i >= 12292);
+TO: main_NodeBlock95.i;
+
+FROM: main_NodeBlock85.i;
+TO: main_NodeBlock85.i_end;
+
+FROM: main_NodeBlock85.i_end;
+assume(vs__state.0.i < 8656);
+TO: main_LeafBlock74.i;
+
+FROM: main_NodeBlock85.i_end;
+assume(vs__state.0.i >= 8656);
+TO: main_NodeBlock83.i;
+
+FROM: main_LeafBlock74.i;
+vs__state.0.off75.i := vs__state.0.i + -8640;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock74.i_end;
+
+FROM: main_LeafBlock74.i_end;
+assume(vs__state.0.off75.i <= 1);
+TO: main_bb83;
+
+FROM: main_LeafBlock74.i_end;
+assume(vs__state.0.off75.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb83;
+v212 := nondet();
+TO: main_bb83_v.blastFlag.05.i;
+FROM: main_bb83_v.blastFlag.05.i;
+assume(vblastFlag.0.i == 3);
+v.blastFlag.05.i := 4;
+TO: main_bb83_sv.blastFlag.05.i;
+
+FROM: main_bb83_v.blastFlag.05.i;
+assume(vblastFlag.0.i != 3);
+v.blastFlag.05.i := vblastFlag.0.i;
+TO: main_bb83_sv.blastFlag.05.i;
+
+FROM: main_bb83_sv.blastFlag.05.i;
+var__temp_v.0.i := v212;
+TO: main_bb83_end;
+
+FROM: main_bb83_end;
+assume(v212 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb83_end;
+assume(v212 > 0);
+TO: main_bb84;
+
+FROM: main_bb84;
+TO: main_bb84_v.6.i;
+FROM: main_bb84_v.6.i;
+assume(v130 != 0);
+v.6.i := 3;
+TO: main_bb84_sv.6.i;
+
+FROM: main_bb84_v.6.i;
+assume(v130 == 0);
+v.6.i := 8656;
+TO: main_bb84_sv.6.i;
+
+FROM: main_bb84_sv.6.i;
+var__temp_vblastFlag.6.i := v.blastFlag.05.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := v.6.i;
+TO: main_bb92;
+
+FROM: main_NodeBlock83.i;
+TO: main_NodeBlock83.i_end;
+
+FROM: main_NodeBlock83.i_end;
+assume(vs__state.0.i < 8672);
+TO: main_LeafBlock77.i;
+
+FROM: main_NodeBlock83.i_end;
+assume(vs__state.0.i >= 8672);
+TO: main_LeafBlock80.i;
+
+FROM: main_LeafBlock77.i;
+vs__state.0.off78.i := vs__state.0.i + -8656;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock77.i_end;
+
+FROM: main_LeafBlock77.i_end;
+assume(vs__state.0.off78.i <= 1);
+TO: main_bb85;
+
+FROM: main_LeafBlock77.i_end;
+assume(vs__state.0.off78.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb85;
+v216 := nondet();
+var__temp_v.0.i := -1;
+TO: main_bb85_end;
+
+FROM: main_bb85_end;
+assume(v216 != 0);
+TO: main_bb86;
+
+FROM: main_bb85_end;
+assume(v216 == 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb86;
+v218 := nondet();
+TO: main_bb86_v.blastFlag.07.i;
+FROM: main_bb86_v.blastFlag.07.i;
+assume(vblastFlag.0.i == 2);
+v.blastFlag.07.i := 3;
+TO: main_bb86_sv.blastFlag.07.i;
+
+FROM: main_bb86_v.blastFlag.07.i;
+assume(vblastFlag.0.i != 2);
+v.blastFlag.07.i := vblastFlag.0.i;
+TO: main_bb86_sv.blastFlag.07.i;
+
+FROM: main_bb86_sv.blastFlag.07.i;
+var__temp_v.0.i := v218;
+TO: main_bb86_end;
+
+FROM: main_bb86_end;
+assume(v218 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb86_end;
+assume(v218 > 0);
+TO: main_bb87;
+
+FROM: main_bb87;
+v221 := nondet();
+var__temp_vblastFlag.6.i := v.blastFlag.07.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := vs__s3__tmp__next_state___0.0.i;
+var__temp_vs__state.8.i := 8672;
+var__temp_v.0.i := -1;
+TO: main_bb87_end;
+
+FROM: main_bb87_end;
+assume(v221 != 0);
+TO: main_bb92;
+
+FROM: main_bb87_end;
+assume(v221 == 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_LeafBlock80.i;
+vs__state.0.off81.i := vs__state.0.i + -8672;
+var__temp_v.0.i := -1;
+TO: main_LeafBlock80.i_end;
+
+FROM: main_LeafBlock80.i_end;
+assume(vs__state.0.off81.i <= 1);
+TO: main_bb88;
+
+FROM: main_LeafBlock80.i_end;
+assume(vs__state.0.off81.i > 1);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb88;
+v223 := nondet();
+TO: main_bb88_end;
+
+FROM: main_bb88_end;
+assume(vblastFlag.0.i < 4);
+TO: main_LeafBlock104.i;
+
+FROM: main_bb88_end;
+assume(vblastFlag.0.i >= 4);
+TO: main_LeafBlock106.i;
+
+FROM: main_LeafBlock104.i;
+TO: main_LeafBlock104.i_end;
+
+FROM: main_LeafBlock104.i_end;
+assume(vblastFlag.0.i == 3);
+TO: main_bb89;
+
+FROM: main_LeafBlock104.i_end;
+assume(vblastFlag.0.i != 3);
+TO: main_NewDefault103.i;
+
+FROM: main_bb89;
+TO: main_NodeBlock95.i_ret;
+
+FROM: main_LeafBlock106.i;
+var__temp_vblastFlag.5.i := 5;
+TO: main_LeafBlock106.i_end;
+
+FROM: main_LeafBlock106.i_end;
+assume(vblastFlag.0.i == 4);
+TO: main_bb90;
+
+FROM: main_LeafBlock106.i_end;
+assume(vblastFlag.0.i != 4);
+TO: main_NewDefault103.i;
+
+FROM: main_NewDefault103.i;
+var__temp_vblastFlag.5.i := vblastFlag.0.i;
+TO: main_bb90;
+
+FROM: main_bb90;
+vblastFlag.5.i := var__temp_vblastFlag.5.i;
+var__temp_v.0.i := v223;
+TO: main_bb90_end;
+
+FROM: main_bb90_end;
+assume(v223 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb90_end;
+assume(v223 > 0);
+TO: main_bb91;
+
+FROM: main_bb91;
+TO: main_bb91_v.8.i;
+FROM: main_bb91_v.8.i;
+assume(v130 != 0);
+v.8.i := 8640;
+TO: main_bb91_sv.8.i;
+
+FROM: main_bb91_v.8.i;
+assume(v130 == 0);
+v.8.i := 3;
+TO: main_bb91_sv.8.i;
+
+FROM: main_bb91_sv.8.i;
+var__temp_vblastFlag.6.i := vblastFlag.5.i;
+var__temp_vgot_new_session.1.i := vgot_new_session.0.i;
+var__temp_vskip.8.i := 0;
+var__temp_vs__s3__tmp__next_state___0.5.i := v.8.i;
+var__temp_vs__state.8.i := 8448;
+TO: main_bb92;
+
+FROM: main_bb92;
+vblastFlag.6.i := var__temp_vblastFlag.6.i;
+vgot_new_session.1.i := var__temp_vgot_new_session.1.i;
+vskip.8.i := var__temp_vskip.8.i;
+vs__s3__tmp__next_state___0.5.i := var__temp_vs__s3__tmp__next_state___0.5.i;
+vs__state.8.i := var__temp_vs__state.8.i;
+var__temp_vblastFlag.0.i := vblastFlag.6.i;
+var__temp_vgot_new_session.0.i := vgot_new_session.1.i;
+var__temp_vs__s3__tmp__next_state___0.0.i := vs__s3__tmp__next_state___0.5.i;
+var__temp_vs__state.0.i := vs__state.8.i;
+TO: main_bb92_end;
+
+FROM: main_bb92_end;
+assume((!((v141 != 0) || (vskip.8.i != 0))) && (v131 != 0));
+TO: main_bb93;
+
+FROM: main_bb92_end;
+assume(((v141 != 0) || (vskip.8.i != 0)) || (v131 == 0));
+TO: main_bb59;
+
+FROM: main_bb93;
+v229 := nondet();
+var__temp_vblastFlag.0.i := vblastFlag.6.i;
+var__temp_vgot_new_session.0.i := vgot_new_session.1.i;
+var__temp_vs__s3__tmp__next_state___0.0.i := vs__s3__tmp__next_state___0.5.i;
+var__temp_vs__state.0.i := vs__state.8.i;
+var__temp_v.0.i := v229;
+TO: main_bb93_end;
+
+FROM: main_bb93_end;
+assume(v229 <= 0);
+TO: main_ssl3_accept.exit;
+
+FROM: main_bb93_end;
+assume(v229 > 0);
+TO: main_bb59;
+
+FROM: main_ssl3_accept.exit;
+v.0.i := var__temp_v.0.i;
+TO: main_ssl3_accept.exit_ret;
+
+FROM: main_NodeBlock95.i;
+TO: main_NodeBlock95.i_ret;
+

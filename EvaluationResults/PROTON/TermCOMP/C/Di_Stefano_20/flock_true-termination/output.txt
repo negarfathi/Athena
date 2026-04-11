@@ -1,0 +1,708 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.9rBQ1u
+
+Input File is : flock_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+/*
+ * Program used in the experimental evaluation of the following paper:
+ * De Nicola, Di Stefano, Inverso. Multi-Agent Systems With Virtual Stigmergies. Sci.Comp. Progr. 187, 2020
+ *
+ * Date: 2020
+ * Authors: Luca Di Stefano, Omar Inverso
+ * Contact: luca <dot> distefano <at> gssi <dot> it
+ */
+extern int __VERIFIER_nondet_int(void);
+typedef char TYPEOFVALUES;
+typedef unsigned char TYPEOFPC;
+typedef unsigned char TYPEOFTIME;
+typedef unsigned char TYPEOFAGENTID;
+typedef unsigned char TYPEOFKEYIID;
+typedef unsigned char TYPEOFKEYLID;
+
+TYPEOFVALUES mod(TYPEOFVALUES n, TYPEOFVALUES m)
+{
+  //return (n >= 0) ? (n % m) : (m + (n % m));
+  {if (n >= 0) {
+    return n - (n/m*m);
+  }
+  else {
+    return m + (n-(n/m*m));
+  }}
+}
+
+TYPEOFVALUES I[3][2];
+unsigned char pc[3][1];
+TYPEOFTIME __LABS_time;
+_Bool Hin[3][2];
+_Bool Hout[3][2];
+unsigned char HinCnt[3];
+unsigned char HoutCnt[3];
+TYPEOFTIME now(void)
+{
+  return ++__LABS_time;
+}
+
+TYPEOFVALUES Lvalue[3][2];
+TYPEOFTIME Ltstamp[3][2];
+const TYPEOFKEYLID tupleStart[2] = {0, 0};
+const TYPEOFKEYLID tupleEnd[2] = {1, 1};
+_Bool link(TYPEOFAGENTID __LABS_link1, TYPEOFAGENTID __LABS_link2, TYPEOFKEYLID key)
+{
+  _Bool __LABS_link = 0;
+  {if ((key >= 0) && (key <= 1))
+  {
+    __LABS_link = (((I[__LABS_link1][0] - I[__LABS_link2][0]) * (I[__LABS_link1][0] - I[__LABS_link2][0])) + ((I[__LABS_link1][1] - I[__LABS_link2][1]) * (I[__LABS_link1][1] - I[__LABS_link2][1]))) <= (5 * 5);
+  }}
+
+  return __LABS_link;
+}
+
+TYPEOFTIME timeof(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  return Ltstamp[id][tupleStart[key]];
+}
+
+void setHin(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  HinCnt[id] = HinCnt[id] + (!Hin[id][tupleStart[key]]);
+  Hin[id][tupleStart[key]] = 1;
+}
+
+void clearHin(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  HinCnt[id] = HinCnt[id] - Hin[id][tupleStart[key]];
+  Hin[id][tupleStart[key]] = 0;
+}
+
+void setHout(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  HoutCnt[id] = HoutCnt[id] + (!Hout[id][tupleStart[key]]);
+  Hout[id][tupleStart[key]] = 1;
+}
+
+void clearHout(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  HoutCnt[id] = HoutCnt[id] - Hout[id][tupleStart[key]];
+  Hout[id][tupleStart[key]] = 0;
+}
+
+void attr(TYPEOFAGENTID id, TYPEOFKEYIID key, TYPEOFVALUES value, _Bool check)
+{
+  __VERIFIER_assume((!check) || (HoutCnt[id] == 0));
+  __VERIFIER_assume((!check) || (HinCnt[id] == 0));
+  I[id][key] = value;
+  now();
+}
+
+void lstig(TYPEOFAGENTID id, TYPEOFKEYLID key, TYPEOFVALUES value, _Bool check)
+{
+  __VERIFIER_assume((!check) || (HoutCnt[id] == 0));
+  __VERIFIER_assume((!check) || (HinCnt[id] == 0));
+  Lvalue[id][key] = value;
+  Ltstamp[id][tupleStart[key]] = now();
+  setHout(id, key);
+}
+
+void confirm(void)
+{
+  TYPEOFAGENTID guessedcomp = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedcomp < 3);
+  __VERIFIER_assume(HinCnt[guessedcomp] > 0);
+  TYPEOFKEYLID guessedkey = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedkey < 2);
+  __VERIFIER_assume(Hin[guessedcomp][guessedkey] == 1);
+  TYPEOFAGENTID i = __VERIFIER_nondet_int();
+  TYPEOFTIME t = timeof(guessedcomp, guessedkey);
+  for (i = 0; i < 3; i++)
+  {
+    {if (((guessedcomp != i) && (timeof(i, guessedkey) != t)) && link(guessedcomp, i, guessedkey))
+    {
+      setHout(i, guessedkey);
+      {if (timeof(i, guessedkey) < t)
+      {
+        TYPEOFKEYLID k = __VERIFIER_nondet_int();
+        TYPEOFKEYLID next = __VERIFIER_nondet_int();
+        clearHin(i, guessedkey);
+        for (k = 0; k < 2; k++)
+        {
+          next = guessedkey + k;
+          {if (next <= tupleEnd[guessedkey])
+            {Lvalue[i][next] = Lvalue[guessedcomp][next];}}
+
+        }
+
+        Ltstamp[i][guessedkey] = t;
+      }}
+
+    }}
+
+  }
+
+  clearHin(guessedcomp, guessedkey);
+}
+
+void propagate(void)
+{
+  TYPEOFAGENTID guessedcomp = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedcomp < 3);
+  __VERIFIER_assume(HoutCnt[guessedcomp] > 0);
+  TYPEOFKEYLID guessedkey = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedkey < 2);
+  __VERIFIER_assume(Hout[guessedcomp][guessedkey] == 1);
+  TYPEOFAGENTID i = __VERIFIER_nondet_int();
+  TYPEOFTIME t = timeof(guessedcomp, guessedkey);
+  for (i = 0; i < 3;
+Rewrite Buffer is not NULL
+
+Finished Rewriting   i++)
+  {
+    {if (((guessedcomp != i) && (timeof(i, guessedkey) < t)) && link(guessedcomp, i, guessedkey))
+    {
+      setHout(i, guessedkey);
+      clearHin(i, guessedkey);
+      TYPEOFKEYLID k = __VERIFIER_nondet_int();
+      TYPEOFKEYLID next = __VERIFIER_nondet_int();
+      for (k = 0; k < 2; k++)
+      {
+        next = guessedkey + k;
+        {if (next <= tupleEnd[guessedkey])
+          {Lvalue[i][next] = Lvalue[guessedcomp][next];}}
+
+      }
+
+      Ltstamp[i][guessedkey] = t;
+    }}
+
+  }
+
+  clearHout(guessedcomp, guessedkey);
+}
+
+void init()
+{
+  TYPEOFVALUES _I[3][2];
+  TYPEOFPC _pc[3][1];
+  TYPEOFVALUES _Lvalue[3][2];
+  unsigned char i = __VERIFIER_nondet_int();
+  unsigned char j = __VERIFIER_nondet_int();
+  for (i = 0; i < 3; i++)
+  {
+    for (j = 0; j < 2; j++)
+    {
+      _I[i][j] = __VERIFIER_nondet_int();
+    }
+
+    for (j = 0; j < 2; j++)
+    {
+      _Lvalue[i][j] = __VERIFIER_nondet_int();
+      Ltstamp[i][j] = 0;
+      Hin[i][j] = 0;
+      Hout[i][j] = 0;
+    }
+
+    HinCnt[i] = 0;
+    HoutCnt[i] = 0;
+  }
+
+  _pc[0][0] = 2;
+  _pc[1][0] = 2;
+  _pc[2][0] = 2;
+  __VERIFIER_assume((_Lvalue[0][0] == (-1)) || (_Lvalue[0][0] == 1));
+  __VERIFIER_assume((_Lvalue[1][0] == (-1)) || (_Lvalue[1][0] == 1));
+  __VERIFIER_assume((_Lvalue[2][0] == (-1)) || (_Lvalue[2][0] == 1));
+  __VERIFIER_assume((_Lvalue[0][1] == (-1)) || (_Lvalue[0][1] == 1));
+  __VERIFIER_assume((_Lvalue[1][1] == (-1)) || (_Lvalue[1][1] == 1));
+  __VERIFIER_assume((_Lvalue[2][1] == (-1)) || (_Lvalue[2][1] == 1));
+  __VERIFIER_assume((_I[0][0] >= 0) && (_I[0][0] < (5 - 0)));
+  __VERIFIER_assume((_I[1][0] >= 0) && (_I[1][0] < (5 - 0)));
+  __VERIFIER_assume((_I[2][0] >= 0) && (_I[2][0] < (5 - 0)));
+  __VERIFIER_assume((_I[0][1] >= 0) && (_I[0][1] < (5 - 0)));
+  __VERIFIER_assume((_I[1][1] >= 0) && (_I[1][1] < (5 - 0)));
+  __VERIFIER_assume((_I[2][1] >= 0) && (_I[2][1] < (5 - 0)));
+  Ltstamp[0][tupleStart[0]] = now();
+  Ltstamp[1][tupleStart[0]] = now();
+  Ltstamp[2][tupleStart[0]] = now();
+  Ltstamp[0][tupleStart[1]] = now();
+  Ltstamp[1][tupleStart[1]] = now();
+  Ltstamp[2][tupleStart[1]] = now();
+  now();
+
+  for (i = 0; i < 3; i++)
+  {
+    for (j = 0; j < 1; j++)
+    {
+      pc[i][j] = _pc[i][j];
+    }
+
+    for (j = 0; j < 2; j++)
+    {
+      I[i][j] = _I[i][j];
+    }
+
+    for (j = 0; j < 2; j++)
+    {
+      Lvalue[i][j] = _Lvalue[i][j];
+    }
+
+  }
+
+}
+
+void _0_2(int tid)
+{
+  TYPEOFVALUES val0 = mod(I[tid][0] + Lvalue[tid][0], 5);
+  TYPEOFVALUES val1 = mod(I[tid][1] + Lvalue[tid][1], 5);
+  attr(tid, 0, val0, 1);
+  attr(tid, 1, val1, 0);
+  setHin(tid, 0);
+  setHin(tid, 1);
+  pc[tid][0] = 2;
+}
+
+int main(void)
+{
+  init();
+  TYPEOFAGENTID firstAgent = 0;
+  while (1)
+  {
+    {if ((_Bool) __VERIFIER_nondet_int())
+    {
+      __VERIFIER_assume(firstAgent < 3);
+      switch (pc[firstAgent][0])
+      {
+        case 2:
+          _0_2(firstAgent);
+          break;
+
+        default:
+          __VERIFIER_assume(0);
+
+      }
+
+      {if (firstAgent == (3 - 1))
+      {
+        firstAgent = 0;
+      }
+      else
+      {
+        firstAgent++;
+      }}
+
+    }
+    else
+    {
+      _Bool propagate_or_confirm = __VERIFIER_nondet_int();
+      {if (propagate_or_confirm)
+        {propagate();}
+      else
+        {confirm();}}
+
+    }}
+    {if ((((((((((((Lvalue[0][0] == Lvalue[0][0]) && (Lvalue[0][1] == Lvalue[0][1])) && (Lvalue[0][0] == Lvalue[1][0])) && (Lvalue[0][1] == Lvalue[1][1])) && (Lvalue[0][0] == Lvalue[2][0])) && (Lvalue[0][1] == Lvalue[2][1])) && (Lvalue[1][0] == Lvalue[1][0])) && (Lvalue[1][1] == Lvalue[1][1])) && (Lvalue[1][0] == Lvalue[2][0])) && (Lvalue[1][1] == Lvalue[2][1])) && (Lvalue[2][0] == Lvalue[2][0])) && (Lvalue[2][1] == Lvalue[2][1]))
+    {
+      return 0;
+    }}
+
+  }
+
+}
+
+
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : flock_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program used in the experimental evaluation of the following paper:
+ * De Nicola, Di Stefano, Inverso. Multi-Agent Systems With Virtual Stigmergies. Sci.Comp. Progr. 187, 2020
+ *
+ * Date: 2020
+ * Authors: Luca Di Stefano, Omar Inverso
+ * Contact: luca <dot> distefano <at> gssi <dot> it
+ */
+extern int __VERIFIER_nondet_int(void);
+typedef char TYPEOFVALUES;
+typedef unsigned char TYPEOFPC;
+typedef unsigned char TYPEOFTIME;
+typedef unsigned char TYPEOFAGENTID;
+typedef unsigned char TYPEOFKEYIID;
+typedef unsigned char TYPEOFKEYLID;
+
+TYPEOFVALUES mod(TYPEOFVALUES n, TYPEOFVALUES m)
+{
+  //return (n >= 0) ? (n % m) : (m + (n % m));
+  { __VERIFIER_reached_control(20, __func__);
+if (n >= 0) { __VERIFIER_control_true(20, __func__);
+
+    return n - (n/m*m);
+  }
+  else { __VERIFIER_control_false(23, __func__);
+
+    return m + (n-(n/m*m));
+  }}
+}
+
+TYPEOFVALUES I[3][2];
+unsigned char pc[3][1];
+TYPEOFTIME __LABS_time;
+_Bool Hin[3][2];
+_Bool Hout[3][2];
+unsigned char HinCnt[3];
+unsigned char HoutCnt[3];
+TYPEOFTIME now(void)
+{
+  return ++__LABS_time;
+}
+
+TYPEOFVALUES Lvalue[3][2];
+TYPEOFTIME Ltstamp[3][2];
+const TYPEOFKEYLID tupleStart[2] = {0, 0};
+const TYPEOFKEYLID tupleEnd[2] = {1, 1};
+_Bool link(TYPEOFAGENTID __LABS_link1, TYPEOFAGENTID __LABS_link2, TYPEOFKEYLID key)
+{
+  _Bool __LABS_link = 0;
+  { __VERIFIER_reached_control(47, __func__);
+if ((key >= 0) && (key <= 1))
+  { __VERIFIER_control_true(48, __func__);
+
+    __LABS_link = (((I[__LABS_link1][0] - I[__LABS_link2][0]) * (I[__LABS_link1][0] - I[__LABS_link2][0])) + ((I[__LABS_link1][1] - I[__LABS_link2][1]) * (I[__LABS_link1][1] - I[__LABS_link2][1]))) <= (5 * 5);
+  }}
+
+  return __LABS_link;
+}
+
+TYPEOFTIME timeof(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  return Ltstamp[id][tupleStart[key]];
+}
+
+void setHin(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  HinCnt[id] = HinCnt[id] + (!Hin[id][tupleStart[key]]);
+  Hin[id][tupleStart[key]] = 1;
+}
+
+void clearHin(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  HinCnt[id] = HinCnt[id] - Hin[id][tupleStart[key]];
+  Hin[id][tupleStart[key]] = 0;
+}
+
+void setHout(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  HoutCnt[id] = HoutCnt[id] + (!Hout[id][tupleStart[key]]);
+  Hout[id][tupleStart[key]] = 1;
+}
+
+void clearHout(TYPEOFAGENTID id, TYPEOFKEYLID key)
+{
+  HoutCnt[id] = HoutCnt[id] - Hout[id][tupleStart[key]];
+  Hout[id][tupleStart[key]] = 0;
+}
+
+void attr(TYPEOFAGENTID id, TYPEOFKEYIID key, TYPEOFVALUES value, _Bool check)
+{
+  __VERIFIER_assume((!check) || (HoutCnt[id] == 0));
+  __VERIFIER_assume((!check) || (HinCnt[id] == 0));
+  I[id][key] = value;
+  now();
+}
+
+void lstig(TYPEOFAGENTID id, TYPEOFKEYLID key, TYPEOFVALUES value, _Bool check)
+{
+  __VERIFIER_assume((!check) || (HoutCnt[id] == 0));
+  __VERIFIER_assume((!check) || (HinCnt[id] == 0));
+  Lvalue[id][key] = value;
+  Ltstamp[id][tupleStart[key]] = now();
+  setHout(id, key);
+}
+
+void confirm(void)
+{
+  TYPEOFAGENTID guessedcomp = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedcomp < 3);
+  __VERIFIER_assume(HinCnt[guessedcomp] > 0);
+  TYPEOFKEYLID guessedkey = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedkey < 2);
+  __VERIFIER_assume(Hin[guessedcomp][guessedkey] == 1);
+  TYPEOFAGENTID i = __VERIFIER_nondet_int();
+  TYPEOFTIME t = timeof(guessedcomp, guessedkey);
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(112, __func__);
+ for (i = 0; i < 3; i++)
+  { __VERIFIER_loop_head(112, __func__);
+
+    { __VERIFIER_reached_control(113, __func__);
+if (((guessedcomp != i) && (timeof(i, guessedkey) != t)) && link(guessedcomp, i, guessedkey))
+    { __VERIFIER_control_true(114, __func__);
+
+      setHout(i, guessedkey);
+      { __VERIFIER_reached_control(116, __func__);
+if (timeof(i, guessedkey) < t)
+      { __VERIFIER_control_true(117, __func__);
+
+        TYPEOFKEYLID k = __VERIFIER_nondet_int();
+        TYPEOFKEYLID next = __VERIFIER_nondet_int();
+        clearHin(i, guessedkey);
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(122, __func__);
+ for (k = 0; k < 2; k++)
+        { __VERIFIER_loop_head(122, __func__);
+
+          next = guessedkey + k;
+          { __VERIFIER_reached_control(124, __func__);
+if (next <= tupleEnd[guessedkey])
+            { __VERIFIER_control_true(125, __func__);
+Lvalue[i][next] = Lvalue[guessedcomp][next];}}
+
+        }
+
+        Ltstamp[i][guessedkey] = t;
+      }}
+
+    }}
+
+  }
+
+  clearHin(guessedcomp, guessedkey);
+}
+
+void propagate(void)
+{
+  TYPEOFAGENTID guessedcomp = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedcomp < 3);
+  __VERIFIER_assume(HoutCnt[guessedcomp] > 0);
+  TYPEOFKEYLID guessedkey = __VERIFIER_nondet_int();
+  __VERIFIER_assume(guessedkey < 2);
+  __VERIFIER_assume(Hout[guessedcomp][guessedkey] == 1);
+  TYPEOFAGENTID i = __VERIFIER_nondet_int();
+  TYPEOFTIME t = timeof(guessedcomp, guessedkey);
+ myBool pStored2 = myFalse; __VERIFIER_reached_control(150, __func__);
+ for (i = 0; i < 3; i++)
+  { __VERIFIER_loop_head(150, __func__);
+
+    { __VERIFIER_reached_control(151, __func__);
+if (((guessedcomp != i) && (timeof(i, guessedkey) < t)) && link(guessedcomp, i, guessedkey))
+    { __VERIFIER_control_true(152, __func__);
+
+      setHout(i, guessedkey);
+      clearHin(i, guessedkey);
+      TYPEOFKEYLID k = __VERIFIER_nondet_int();
+      TYPEOFKEYLID next = __VERIFIER_nondet_int();
+     myBool pStored3 = myFalse; __VERIFIER_reached_control(158, __func__);
+ for (k = 0; k < 2; k++)
+      { __VERIFIER_loop_head(158, __func__);
+
+        next = guessedkey + k;
+        { __VERIFIER_reached_control(160, __func__);
+if (next <= tupleEnd[guessedkey])
+          { __VERIFIER_control_true(161, __func__);
+Lvalue[i][next] = Lvalue[guessedcomp][next];}}
+
+      }
+
+      Ltstamp[i][guessedkey] = t;
+    }}
+
+  }
+
+  clearHout(guessedcomp, guessedkey);
+}
+
+void init()
+{
+  TYPEOFVALUES _I[3][2];
+  TYPEOFPC _pc[3][1];
+  TYPEOFVALUES _Lvalue[3][2];
+  unsigned char i = __VERIFIER_nondet_int();
+  unsigned char j = __VERIFIER_nondet_int();
+  for (i = 0; i < 3; i++)
+  {printf("ArrayNT State @ line181: Array Found\n");
+    for (j = 0; j < 2; j++)
+    {printf("ArrayNT State @ line183: Array Found\n");
+      _I[i][j] = __VERIFIER_nondet_int();
+    }
+
+    for (j = 0; j < 2; j++)
+    {printf("ArrayNT State @ line188: Array Found\n");
+      _Lvalue[i][j] = __VERIFIER_nondet_int();
+      Ltstamp[i][j] = 0;
+      Hin[i][j] = 0;
+      Hout[i][j] = 0;
+    }
+
+    HinCnt[i] = 0;
+    HoutCnt[i] = 0;
+  }
+
+  _pc[0][0] = 2;
+  _pc[1][0] = 2;
+  _pc[2][0] = 2;
+  __VERIFIER_assume((_Lvalue[0][0] == (-1)) || (_Lvalue[0][0] == 1));
+  __VERIFIER_assume((_Lvalue[1][0] == (-1)) || (_Lvalue[1][0] == 1));
+  __VERIFIER_assume((_Lvalue[2][0] == (-1)) || (_Lvalue[2][0] == 1));
+  __VERIFIER_assume((_Lvalue[0][1] == (-1)) || (_Lvalue[0][1] == 1));
+  __VERIFIER_assume((_Lvalue[1][1] == (-1)) || (_Lvalue[1][1] == 1));
+  __VERIFIER_assume((_Lvalue[2][1] == (-1)) || (_Lvalue[2][1] == 1));
+  __VERIFIER_assume((_I[0][0] >= 0) && (_I[0][0] < (5 - 0)));
+  __VERIFIER_assume((_I[1][0] >= 0) && (_I[1][0] < (5 - 0)));
+  __VERIFIER_assume((_I[2][0] >= 0) && (_I[2][0] < (5 - 0)));
+  __VERIFIER_assume((_I[0][1] >= 0) && (_I[0][1] < (5 - 0)));
+  __VERIFIER_assume((_I[1][1] >= 0) && (_I[1][1] < (5 - 0)));
+  __VERIFIER_assume((_I[2][1] >= 0) && (_I[2][1] < (5 - 0)));
+  Ltstamp[0][tupleStart[0]] = now();
+  Ltstamp[1][tupleStart[0]] = now();
+  Ltstamp[2][tupleStart[0]] = now();
+  Ltstamp[0][tupleStart[1]] = now();
+  Ltstamp[1][tupleStart[1]] = now();
+  Ltstamp[2][tupleStart[1]] = now();
+  now();
+
+ myBool pStored4 = myFalse; __VERIFIER_reached_control(223, __func__);
+ for (i = 0; i < 3; i++)
+  { __VERIFIER_loop_head(223, __func__);
+printf("CBMC Instrumentation @ line223");myBool flag=__VERIFIER_nondet_myBool();static unsigned char oj;if(pStored4){__CPROVER_assert(!(oj==j),"recurrent state found");} if(flag){oj=j;pStored4=myTrue;} 
+    for (j = 0; j < 1; j++)
+    {printf("ArrayNT State @ line225: Array Found\n");
+      pc[i][j] = _pc[i][j];
+    }
+
+    for (j = 
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+0; j < 2; j++)
+    {printf("ArrayNT State @ line230: Array Found\n");
+      I[i][j] = _I[i][j];
+    }
+
+    for (j = 0; j < 2; j++)
+    {printf("ArrayNT State @ line235: Array Found\n");
+      Lvalue[i][j] = _Lvalue[i][j];
+    }
+
+  }
+
+}
+
+void _0_2(int tid)
+{
+  TYPEOFVALUES val0 = mod(I[tid][0] + Lvalue[tid][0], 5);
+  TYPEOFVALUES val1 = mod(I[tid][1] + Lvalue[tid][1], 5);
+  attr(tid, 0, val0, 1);
+  attr(tid, 1, val1, 0);
+  setHin(tid, 0);
+  setHin(tid, 1);
+  pc[tid][0] = 2;
+}
+
+int main(void)
+{
+  init();
+  TYPEOFAGENTID firstAgent = 0;
+ myBool pStored5 = myFalse; __VERIFIER_reached_control(259, __func__);
+ while (1)
+  { __VERIFIER_loop_head(259, __func__);
+
+    { __VERIFIER_reached_control(260, __func__);
+if ((_Bool) __VERIFIER_nondet_int())
+    { __VERIFIER_control_true(261, __func__);
+
+      __VERIFIER_assume(firstAgent < 3);
+      switch (pc[firstAgent][0])
+      {
+        case 2:
+          _0_2(firstAgent);
+          break;
+
+        default:
+          __VERIFIER_assume(0);
+
+      }
+
+      { __VERIFIER_reached_control(274, __func__);
+if (firstAgent == (3 - 1))
+      { __VERIFIER_control_true(275, __func__);
+
+        firstAgent = 0;
+      }
+      else
+      { __VERIFIER_control_false(279, __func__);
+
+        firstAgent++;
+      }}
+
+    }
+    else
+    { __VERIFIER_control_false(285, __func__);
+
+      _Bool propagate_or_confirm = __VERIFIER_nondet_int();
+      { __VERIFIER_reached_control(287, __func__);
+if (propagate_or_confirm)
+        { __VERIFIER_control_true(288, __func__);
+propagate();}
+      else
+        { __VERIFIER_control_false(290, __func__);
+confirm();}}
+
+    }}
+    { __VERIFIER_reached_control(293, __func__);
+if ((((((((((((Lvalue[0][0] == Lvalue[0][0]) && (Lvalue[0][1] == Lvalue[0][1])) && (Lvalue[0][0] == Lvalue[1][0])) && (Lvalue[0][1] == Lvalue[1][1])) && (Lvalue[0][0] == Lvalue[2][0])) && (Lvalue[0][1] == Lvalue[2][1])) && (Lvalue[1][0] == Lvalue[1][0])) && (Lvalue[1][1] == Lvalue[1][1])) && (Lvalue[1][0] == Lvalue[2][0])) && (Lvalue[1][1] == Lvalue[2][1])) && (Lvalue[2][0] == Lvalue[2][0])) && (Lvalue[2][1] == Lvalue[2][1]))
+    { __VERIFIER_control_true(294, __func__);
+
+      return 0;
+    }}
+
+  }
+
+}
+
+
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+flock_true-termination_braced_instrumented.c
+NTFILE is flock_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = flock_true-termination.c
+b'16ff64a5987e6788a9104ddb4010e7a73750a398c858fd00c1f238290ccc2c47  flock_true-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/flock_true-termination/flock_true-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+enteringLasso
+init 223 reachedControl
+init 223 loopHead
+main 223 reachedControl
+init 223 loopHead
+Trace file line inside enterred lasso check : init 223 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Di_Stefano_20/flock_true-termination/flock_true-termination.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for flock_true-termination.c
+FILE=flock_true-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 3407 milliseconds

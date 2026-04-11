@@ -1,0 +1,29 @@
+line 53:5 extraneous input 'metadata' expecting EXCLAMATION
+line 53:25 no viable alternative at input '!'
+Graph finished, checking  consistency
+Graph finished, checked consistency, took 0.0s
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No LoAT installation found. 
+Set the 'LOAT_PATH' environment variable to point to the folder containing the executable loat file
+Running Thread.stop() against 1755995527Exec. 246, IntTRSPeriodicNonterm[]
+Stack trace:
+    app//aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:148)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at java.base/java.lang.Thread.stop(Thread.java:949)
+	at aprove.Strategies.Abortions.PooledJob.kill(PooledJob.java:174)
+	at aprove.Strategies.Abortions.TrackThreadPool.kill(TrackThreadPool.java:42)
+	at aprove.Strategies.Abortions.TrackThread.checkKill(TrackThread.java:173)
+	at aprove.Strategies.Abortions.TrackThread.checkTime(TrackThread.java:110)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.doPoll(TimeRefresher.java:65)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.run(TimeRefresher.java:54)
+/Users/nfathi2/Desktop/run_AProVE.sh: line 39:  3941 Killed: 9               timeout --kill-after=10 "$timeout" docker run --rm --platform linux/amd64 -v "$root_directory":/liveness_analysis --entrypoint java aprove -ea -jar /opt/aprove/aprove.jar -m wst --bit-width 64 "/liveness_analysis/Benchmarks/$path_postfix"
+Runtime: 910034 milliseconds

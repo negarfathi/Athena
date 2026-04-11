@@ -1,0 +1,152 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.Aj9wgd
+
+Input File is : svcomp_diff_alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+void diff(int *A, int Alen, int *B, int Blen, int *D)
+{
+    int k = 0;
+    int i = 0;
+    int l1 = Alen;
+    int l2 = Blen;
+    int found;
+
+    while (i < l1) {
+        int j = 0;
+        found = 0;
+        while (j < l2 && !found) {
+            {if(A[i] == B[j]) {
+                found = 1;
+            } else {
+                j++;
+            }}
+        }
+        {if (!found) {
+            D[k] = A[i];
+            k++;
+        }}
+        i++;
+    }
+}
+
+int main() {
+  int Alen = __VERIFIER_nondet_int();
+  int Blen = __VERIFIER_nondet_int();
+  {if (Alen < 1) {
+     Alen = 1;
+  }}
+  {if (Blen < 1) {
+     Blen = 1;
+  }}
+  int* A = (int*) alloca(Alen * sizeof(int));
+  int* B = (int*) alloca(Blen * sizeof(int));
+  int* D = (int*) alloca(Alen * sizeof(int));
+  diff(A, Alen, B, Blen, D);
+  return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_diff_alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+void diff(int *A, int Alen, int *B, int Blen, int *D)
+{
+    int k = 0;
+    int i = 0;
+    int l1 = Alen;
+    int l2 = Blen;
+    int found;
+
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(13, __func__);
+ while (i < l1) { __VERIFIER_loop_head(13, __func__);
+printf("CBMC Instrumentation @ line13");myBool flag=__VERIFIER_nondet_myBool();static int oAlen;static int oBlen;static int ofound;static int oi;static int ok;static int ol1;static int ol2;if(pStored0){__CPROVER_assert(!(oAlen==Alen && oBlen==Blen && ofound==found && oi==i && ok==k && ol1==l1 && ol2==l2),"recurrent state found");} if(flag){oAlen=Alen;oBlen=Blen;ofound=found;oi=i;ok=k;ol1=l1;ol2=l2;pStored0=myTrue;} 
+        int j = 0;
+        found = 0;
+       myBool pStored1 = myFalse; __VERIFIER_reached_control(16, __func__);
+ while (j < l2 && !found) { __VERIFIER_loop_head(16, __func__);
+printf("CBMC Instrumentation @ line16");myBool flag=__VERIFIER_nondet_myBool();static int oAlen;static int oBlen;static int ofound;static int oi;static int oj;static int ok;static int ol1;static int ol2;if(pStored1){__CPROVER_assert(!(oAlen==Alen && oBlen==Blen && ofound==found && oi==i && oj==j && ok==k && ol1==l1 && ol2==l2),"recurrent state found");} if(flag){oAlen=Alen;oBlen=Blen;ofound=found;oi=i;oj=j;ok=k;ol1=l1;ol2=l2;pStored1=myTrue;} 
+            { __VERIFIER_reached_control(17, __func__);
+if(A[i] == B[j]) { __VERIFIER_control_true(17, __func__);
+
+                found = 1;
+            } else { __VERIFIER_control_false(19, __func__);
+
+                j++;
+            }}
+        }
+        { __VERIFIER_reached_control(23, __func__);
+if (!found) { __VERIFIER_control_true(23, __func__);
+
+            D[k] = A[i];
+            k++;
+        }}
+        i++;
+    }
+}
+
+int main() {
+  int Alen = __VERIFIER_nondet_int();
+  int Blen = __VERIFIER_nondet_int();
+  { __VERIFIER_reached_control(34, __func__);
+if (Alen < 1) { __VERIFIER_control_true(34, __func__);
+
+     Alen = 1;
+  }}
+  { __VERIFIER_reached_control(37, __func__);
+if (Blen < 1) { __VERIFIER_control_true(37, __func__);
+
+     Blen = 1;
+  }}
+  int* A = (int*) alloca(Alen * sizeof(int));
+  int* B = (int*) alloca(Blen * sizeof(int));
+  int* D = (int*) alloca(Alen * sizeof(int));
+  diff(A, Alen, B, Blen, D);
+  return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_diff_alloca_braced_instrumented.c
+NTFILE is svcomp_diff_alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_diff_alloca.c
+FILE=svcomp_diff_alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182870 milliseconds

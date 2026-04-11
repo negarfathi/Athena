@@ -1,0 +1,218 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.3ePUVW
+
+Input File is : Toulouse-MultiBranchesToLoop_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  //#Termination
+/*
+ * Date: November 2013
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ * 
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x;
+	int y;
+	int z;
+	y = __VERIFIER_nondet_int();
+	z = __VERIFIER_nondet_int();
+    {if (__VERIFIER_nondet_int() != 0) {
+        x = 1;
+    } else {
+        x = -1;
+    }}
+    {if (x > 0) {
+        x = x + 1;
+    } else {
+        x = x - 1;
+    }}
+    {if (x > 0) {
+        x = x + 1;
+    } else {
+        x = x - 1;
+    }}
+    {if (x > 0) {
+        x = x + 1;
+    } else {
+        x = x - 1;
+    }}
+    {if (x > 0) {
+        x = x + 1;
+    } else {
+        x = x - 1;
+    }}
+    {if (x > 0) {
+        x = x + 1;
+    } else {
+        x = x - 1;
+    }}
+    {if (x > 0) {
+        x = x + 1;
+    } else {
+        x = x - 1;
+    }}
+    {if (x > 0) {
+        x = x + 1;
+    } else {
+        x = x - 1;
+    }}
+    {if (x > 0) {
+        x = x + 1;
+    } else {
+        x = x - 1;
+    }}
+    while (y<100 && z<100) {
+        y = y+x;
+        z = z-x;
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Toulouse-MultiBranchesToLoop_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+//#Termination
+/*
+ * Date: November 2013
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ * 
+ */
+
+typedef enum {false, true} bool;
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int x;
+	int y;
+	int z;
+	y = __VERIFIER_nondet_int();
+	z = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(19, __func__);
+if (__VERIFIER_nondet_int() != 0) { __VERIFIER_control_true(19, __func__);
+
+        x = 1;
+    } else { __VERIFIER_control_false(21, __func__);
+
+        x = -1;
+    }}
+    { __VERIFIER_reached_control(24, __func__);
+if (x > 0) { __VERIFIER_control_true(24, __func__);
+
+        x = x + 1;
+    } else { __VERIFIER_control_false(26, __func__);
+
+        x = x - 1;
+    }}
+    { __VERIFIER_reached_control(29, __func__);
+if (x > 0) { __VERIFIER_control_true(29, __func__);
+
+        x = x + 1;
+    } else { __VERIFIER_control_false(31, __func__);
+
+        x = x - 1;
+    }}
+    { __VERIFIER_reached_control(34, __func__);
+if (x > 0) { __VERIFIER_control_true(34, __func__);
+
+        x = x + 1;
+    } else { __VERIFIER_control_false(36, __func__);
+
+        x = x - 1;
+    }}
+    { __VERIFIER_reached_control(39, __func__);
+if (x > 0) { __VERIFIER_control_true(39, __func__);
+
+        x = x + 1;
+    } else { __VERIFIER_control_false(41, __func__);
+
+        x = x - 1;
+    }}
+    { __VERIFIER_reached_control(44, __func__);
+if (x > 0) { __VERIFIER_control_true(44, __func__);
+
+        x = x + 1;
+    } else { __VERIFIER_control_false(46, __func__);
+
+        x = x - 1;
+    }}
+    { __VERIFIER_reached_control(49, __func__);
+if (x > 0) { __VERIFIER_control_true(49, __func__);
+
+        x = x + 1;
+    } else { __VERIFIER_control_false(51, __func__);
+
+        x = x - 1;
+    }}
+    { __VERIFIER_reached_control(54, __func__);
+if (x > 0) { __VERIFIER_control_true(54, __func__);
+
+        x = x + 1;
+    } else { __VERIFIER_control_false(56, __func__);
+
+        x = x - 1;
+    }}
+    { __VERIFIER_reached_control(59, __func__);
+if (x > 0) { __VERIFIER_control_true(59, __func__);
+
+        x = x + 1;
+    } else { __VERIFIER_control_false(61, __func__);
+
+        x = x - 1;
+    }}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(64, __func__);
+ while (y<100 && z<100) { __VERIFIER_loop_head(64, __func__);
+printf("CBMC Instrumentation @ line64");myBool flag=__VERIFIER_nondet_myBool();static int ox;static int oy;static int oz;if(pStored0){__CPROVER_assert(!(ox==x && oy==y && oz==z),"recurrent state found");} if(flag){ox=x;oy=y;oz=z;pStored0=myTrue;} 
+        y = y+x;
+        z = z-x;
+    }
+    return 0;
+}
+
+End Main 
+ Toulouse-MultiBranchesToLoop_true-termination_braced_instrumented.c
+NTFILE is Toulouse-MultiBranchesToLoop_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Toulouse-MultiBranchesToLoop_true-termination.c
+FILE=Toulouse-MultiBranchesToLoop_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183009 milliseconds

@@ -1,0 +1,120 @@
+///*** 1_main ***///
+START: main_bb2;
+
+FROM: main_bb2;
+var__temp_vi.0 := 0;
+TO: main_bb2_end;
+
+FROM: main_bb2_end;
+assume(nondet());
+TO: main_bb3;
+
+FROM: main_bb2_end;
+assume(nondet());
+TO: main_bb4;
+
+FROM: main_bb3;
+TO: main_bb3;
+
+FROM: main_bb4;
+vi.0 := var__temp_vi.0;
+TO: main_bb4_end;
+
+FROM: main_bb4_end;
+assume(vi.0 < 30);
+TO: main_bb5;
+
+FROM: main_bb4_end;
+assume(vi.0 >= 30);
+TO: main_.critedge;
+
+FROM: main_bb5;
+v4 := nondet();
+v6 := vi.0;
+TO: main_bb5_end;
+
+FROM: main_bb5_end;
+assume(v4 != 0);
+TO: main_bb6;
+
+FROM: main_bb5_end;
+assume(v4 == 0);
+TO: main_bb9;
+
+FROM: main_bb6;
+TO: main_bb6_end;
+
+FROM: main_bb6_end;
+assume(nondet());
+TO: main_bb7;
+
+FROM: main_bb6_end;
+assume(nondet());
+TO: main_bb8;
+
+FROM: main_bb7;
+TO: main_bb7;
+
+FROM: main_bb8;
+v10 := v8;
+v13 := vi.0 + 1;
+var__temp_vi.0 := v13;
+TO: main_bb4;
+
+FROM: main_.critedge;
+v14 := vi.0;
+TO: main_bb9;
+
+FROM: main_bb9;
+v15 := nondef.1;
+var__temp_vi.1 := 0;
+TO: main_bb10;
+
+FROM: main_bb10;
+vi.1 := var__temp_vi.1;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(nondet());
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(nondet());
+TO: main_bb14;
+
+FROM: main_bb11;
+v18 := nondef.2;
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(v18 != vi.1);
+TO: main_bb12;
+
+FROM: main_bb11_end;
+assume(v18 == vi.1);
+TO: main_bb13;
+
+FROM: main_bb12;
+
+FROM: main_bb13;
+v22 := vi.1 + 1;
+var__temp_vi.1 := v22;
+TO: main_bb10;
+
+FROM: main_bb14;
+TO: main_bb14_end;
+
+FROM: main_bb14_end;
+assume(nondet());
+TO: main_bb15;
+
+FROM: main_bb14_end;
+assume(nondet());
+TO: main_bb16;
+
+FROM: main_bb15;
+TO: main_bb14;
+
+FROM: main_bb16;
+TO: main_bb16_ret;
+

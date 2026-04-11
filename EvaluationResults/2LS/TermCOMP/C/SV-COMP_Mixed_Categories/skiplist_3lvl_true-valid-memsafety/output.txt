@@ -1,0 +1,199 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/skiplist_3lvl_true-valid-memsafety/skiplist_3lvl_true-valid-memsafety.c
+Converting
+Type-checking skiplist_3lvl_true-valid-memsafety
+file Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/skiplist_3lvl_true-valid-memsafety/skiplist_3lvl_true-valid-memsafety.c line 644 function sl_random_insert: function '__VERIFIER_nondet_int' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_deallocate
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of alloc_or_die
+Simplifying
+Computing SSA of create_sl_with_head_and_tail
+Simplifying
+Computing SSA of sl_random_insert
+Simplifying
+Computing SSA of destroy_sl
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#39 __CPROVER_thread_key_dtors#37 __CPROVER_thread_keys#38 __CPROVER_malloc_is_new_array#29 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#26 __CPROVER_dead_object#27 __CPROVER_deallocated#28 __CPROVER_new_object#31 __CPROVER_rounding_mode#35 __CPROVER_pipe_count#34 __CPROVER_max_malloc_size#30 __CPROVER_next_thread_id#32 __CPROVER_next_thread_key#33 __CPROVER_thread_id#36 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#35 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#35) <= 0 && __CPROVER_pipe_count#34 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#34) <= 0 && __CPROVER_max_malloc_size#30 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#30) <= -36028797018963968 && __CPROVER_next_thread_id#32 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#32) <= 0 && __CPROVER_next_thread_key#33 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#33) <= 0 && __CPROVER_thread_id#36 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#36) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of create_sl_with_head_and_tail
+Function create_sl_with_head_and_tail not analyzed yet
+Recursively summarizing function create_sl_with_head_and_tail
+Analyzing function create_sl_with_head_and_tail
+Computing summary
+Computing termination argument for create_sl_with_head_and_tail
+Function trivially terminates
+
+Summary for function create_sl_with_head_and_tail
+params: 
+globals_in: __CPROVER_malloc_is_new_array __CPROVER_deallocated'obj __CPROVER_memory_leak$145'obj __CPROVER_memory_leak$200'obj __CPROVER_memory_leak$255'obj return_value_malloc$0'obj return_value_malloc$1'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_deallocated __CPROVER_memory_leak$145 __CPROVER_memory_leak$200 __CPROVER_memory_leak$255 $deref0'obj.n1 $deref0'obj.n2 $deref0'obj.n3 $deref1'obj.n1 $deref1'obj.n2 $deref1'obj.n3 $deref2'obj.n1 $deref2'obj.n2 $deref2'obj.n3 $deref3'obj.n1 $deref3'obj.n2 $deref3'obj.n3 $deref4'obj.n1 $deref4'obj.n2 $deref4'obj.n3 $deref5'obj.n1 $deref5'obj.n2 $deref5'obj.n3 create_sl_with_head_and_tail#return_value'obj.head create_sl_with_head_and_tail#return_value'obj.tail tmp_assign$0'obj.n1 tmp_assign$0'obj.n2 tmp_assign$0'obj.n3 tmp_assign$1'obj.n1 tmp_assign$1'obj.n2 tmp_assign$1'obj.n3 tmp_assign$2'obj.n1 tmp_assign$2'obj.n2 tmp_assign$2'obj.n3 tmp_assign'obj.n1 tmp_assign'obj.n2 tmp_assign'obj.n3 sl'obj.head sl'obj.tail dynamic_object$133.head dynamic_object$133.tail dynamic_object$188.n1 dynamic_object$188.n2 dynamic_object$188.n3 dynamic_object$243.n1 dynamic_object$243.n2 dynamic_object$243.n3 create_sl_with_head_and_tail#return_value'obj sl'obj $deref0'obj $deref1'obj $deref2'obj $deref3'obj $deref4'obj $deref5'obj tmp_assign$0'obj tmp_assign$1'obj tmp_assign$2'obj tmp_assign'obj dynamic_object$133 dynamic_object$188 dynamic_object$243 __CPROVER_max_malloc_size 
+globals_out: __CPROVER_malloc_is_new_array#phi274 __CPROVER_deallocated'obj __CPROVER_memory_leak$145'obj __CPROVER_memory_leak$200'obj __CPROVER_memory_leak$255'obj return_value_malloc$0'obj return_value_malloc$1'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_deallocated#phi274 __CPROVER_memory_leak$145#phi160 __CPROVER_memory_leak$200#phi217 __CPROVER_memory_leak$255#phi274 create_sl_with_head_and_tail#return_value#299 $deref0'obj.n1#282 $deref0'obj.n2 $deref0'obj.n3 $deref1'obj.n1 $deref1'obj.n2#286 $deref1'obj.n3 $deref2'obj.n1 $deref2'obj.n2 $deref2'obj.n3#288 $deref3'obj.n1#292 $deref3'obj.n2 $deref3'obj.n3 $deref4'obj.n1 $deref4'obj.n2#296 $deref4'obj.n3 $deref5'obj.n1 $deref5'obj.n2 $deref5'obj.n3#298 create_sl_with_head_and_tail#return_value'obj.head create_sl_with_head_and_tail#return_value'obj.tail tmp_assign$0'obj.n1 tmp_assign$0'obj.n2 tmp_assign$0'obj.n3 tmp_assign$1'obj.n1 tmp_assign$1'obj.n2 tmp_assign$1'obj.n3 tmp_assign$2'obj.n1 tmp_assign$2'obj.n2 tmp_assign$2'obj.n3 tmp_assign'obj.n1 tmp_assign'obj.n2 tmp_assign'obj.n3 sl'obj.head#221 sl'obj.tail#278 dynamic_object$133.head#221 dynamic_object$133.tail#278 dynamic_object$188.n1#282 dynamic_object$188.n2#286 dynamic_object$188.n3#288 dynamic_object$243.n1#292 dynamic_object$243.n2#296 dynamic_object$243.n3#298 create_sl_with_head_and_tail#return_value'obj sl'obj $deref0'obj $deref1'obj $deref2'obj $deref3'obj $deref4'obj $deref5'obj tmp_assign$0'obj tmp_assign$1'obj tmp_assign$2'obj tmp_assign'obj dynamic_object$133 dynamic_object$188 dynamic_object$243 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of sl_random_insert
+Function sl_random_insert not analyzed yet
+Recursively summarizing function sl_random_insert
+Analyzing function sl_random_insert
+Computing summary
+Computing termination argument for sl_random_insert
+Synthesizing ranking function to prove termination
+
+Summary for function sl_random_insert
+params: sl 
+globals_in: __CPROVER_malloc_is_new_array __CPROVER_deallocated'obj __CPROVER_memory_leak$365'obj malloc#return_value'obj malloc_value'obj malloc_res'obj return_value_malloc'obj __CPROVER_deallocated __CPROVER_memory_leak$365 a1'obj.n1 a1'obj.n2 a1'obj.n3 a2'obj.n1 a2'obj.n2 a2'obj.n3 a3'obj.n1 a3'obj.n2 a3'obj.n3 new'obj.n1 new'obj.n2 new'obj.n3 sl'obj.head sl'obj.tail dynamic_object$353.n1 dynamic_object$353.n2 dynamic_object$353.n3 sl'obj a1'obj a2'obj a3'obj new'obj dynamic_object$353 __CPROVER_max_malloc_size 
+globals_out: __CPROVER_malloc_is_new_array#phi387 __CPROVER_deallocated'obj __CPROVER_memory_leak$365'obj malloc#return_value'obj malloc_value'obj malloc_res'obj return_value_malloc'obj __CPROVER_deallocated#phi387 __CPROVER_memory_leak$365#phi387 a1'obj.n1#393 a1'obj.n2 a1'obj.n3 a2'obj.n1 a2'obj.n2#phi405 a2'obj.n3 a3'obj.n1 a3'obj.n2 a3'obj.n3#phi405 new'obj.n1#392 new'obj.n2#phi405 new'obj.n3#phi405 sl'obj.head#314 sl'obj.tail dynamic_object$353.n1#392 dynamic_object$353.n2#phi405 dynamic_object$353.n3#phi405 sl'obj a1'obj a2'obj a3'obj new'obj dynamic_object$353 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: ($guard#315 && $guard#ls320 ==> return_value___VERIFIER_nondet_int#lb320 <= 2147483647) && ($guard#315 && $guard#ls320 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb320) <= 2147483648) && ($guard#322 && $guard#ls327 ==> return_value___VERIFIER_nondet_int$0#lb327 <= 2147483647) && ($guard#322 && $guard#ls327 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int$0#lb327) <= 2147483648) && ($guard#329 && $guard#ls334 ==> return_value___VERIFIER_nondet_int$1#lb334 <= 2147483647) && ($guard#329 && $guard#ls334 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int$1#lb334) <= 2147483648) && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#315 && $guard#319 && $cond#320 ==> FALSE) && ($guard#322 && $guard#326 && $cond#327 ==> FALSE) && ($guard#329 && $guard#333 && $cond#334 ==> TRUE)
+
+terminates: unknown
+
+Checking precondition of destroy_sl
+Function destroy_sl not analyzed yet
+Recursively summarizing function destroy_sl
+Checking precondition of __CPROVER_deallocate
+Function __CPROVER_deallocate not analyzed yet
+Recursively summarizing function __CPROVER_deallocate
+Analyzing function __CPROVER_deallocate
+Computing summary
+Computing termination argument for __CPROVER_deallocate
+Function trivially terminates
+
+Summary for function __CPROVER_deallocate
+params: ptr 
+globals_in: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated 
+globals_out: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated#phi23 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Analyzing function destroy_sl
+Computing summary
+Computing termination argument for destroy_sl
+Synthesizing ranking function to prove termination
+
+Summary for function destroy_sl
+params: sl 
+globals_in: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated $deref6'obj.n1 $deref6'obj.n2 $deref6'obj.n3 tmp'obj.n1 tmp'obj.n2 tmp'obj.n3 sl'obj.head sl'obj.tail sl'obj $deref6'obj tmp'obj 
+globals_out: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated $deref6'obj.n1#phi416 $deref6'obj.n2 $deref6'obj.n3 tmp'obj.n1 tmp'obj.n2 tmp'obj.n3 sl'obj.head#phi416 sl'obj.tail sl'obj $deref6'obj tmp'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+
+Summary for function main
+params: 
+globals_in: create_sl_with_head_and_tail#return_value'obj.head create_sl_with_head_and_tail#return_value'obj.tail return_value_create_sl_with_head_and_tail'obj.head return_value_create_sl_with_head_and_tail'obj.tail sl'obj.head sl'obj.tail create_sl_with_head_and_tail#return_value'obj return_value_create_sl_with_head_and_tail'obj sl'obj 
+globals_out: create_sl_with_head_and_tail#return_value'obj.head create_sl_with_head_and_tail#return_value'obj.tail return_value_create_sl_with_head_and_tail'obj.head return_value_create_sl_with_head_and_tail'obj.tail sl'obj.head sl'obj.tail main#return_value#12 create_sl_with_head_and_tail#return_value'obj return_value_create_sl_with_head_and_tail'obj sl'obj 
+forward precondition: TRUE
+forward transformer: main#return_value#12 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#12) <= 0
+forward invariant: ($guard#6 && $guard#ls10 ==> return_value___VERIFIER_nondet_int#lb10 <= 2147483647) && ($guard#6 && $guard#ls10 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb10) <= 2147483648)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 4066555987
+  number of solver calls: 458999
+  number of summaries used: 7
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_deallocate]: yes
+[__CPROVER_initialize]: yes
+[alloc_or_die]: not computed
+[create_sl_with_head_and_tail]: yes
+[sl_random_insert]: unknown
+[destroy_sl]: unknown
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 548 milliseconds

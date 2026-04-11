@@ -1,0 +1,41 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %i = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %i = alloca i32, align 4 + 0
+NODE   4:   %up = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %up = alloca i32, align 4 + 0
+NODE   5:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   6:   %call = call i32 @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   7:   store i32 %call, i32* %i, align 4 (points-to size: 0)
+NODE   8:   store i32 0, i32* %up, align 4 (points-to size: 0)
+NODE   9:   %0 = load i32, i32* %i, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  10:   %1 = load i32, i32* %i, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  11:   %2 = phi i1 [ false, %while.cond ], [ %cmp1, %land.rhs ] (points-to size: 1)
+    -> null + 0
+NODE  12:   %3 = load i32, i32* %i, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  13:   ret i32 0 (points-to size: 1)
+    -> null + 0
+NODE  14:   store i32 0, i32* %up, align 4 (points-to size: 0)
+NODE  15:   %4 = load i32, i32* %i, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  16:   store i32 1, i32* %up, align 4 (points-to size: 0)
+NODE  17:   %5 = load i32, i32* %up, align 4 (points-to size: 2)
+    -> null + 0
+    -> unknown + Offset::UNKNOWN
+NODE  18:   %6 = load i32, i32* %i, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  19:   %add = add nsw i32 %6, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  20:   store i32 %add, i32* %i, align 4 (points-to size: 0)
+NODE  21:   %7 = load i32, i32* %i, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  22:   %sub = sub nsw i32 %7, 1 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  23:   store i32 %sub, i32* %i, align 4 (points-to size: 0)
+NODE  24: main (points-to size: 1)
+    -> main + 0

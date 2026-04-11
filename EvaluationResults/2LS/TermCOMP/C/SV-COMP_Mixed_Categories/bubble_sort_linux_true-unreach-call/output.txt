@@ -1,0 +1,333 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/bubble_sort_linux_true-unreach-call/bubble_sort_linux_true-unreach-call.c
+Converting
+Type-checking bubble_sort_linux_true-unreach-call
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_deallocate
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of abort
+Simplifying
+Computing SSA of fail
+Simplifying
+Computing SSA of inspect
+Simplifying
+Computing SSA of __list_add
+Simplifying
+Computing SSA of __list_del
+Simplifying
+Computing SSA of list_add
+Simplifying
+Computing SSA of list_move
+Simplifying
+Computing SSA of gl_insert
+Simplifying
+Computing SSA of gl_read
+Simplifying
+Computing SSA of gl_destroy
+Simplifying
+Computing SSA of val_from_node
+Simplifying
+Computing SSA of gl_sort_pass
+Simplifying
+Computing SSA of gl_sort
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object gl_list.next gl_list.prev __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#29 __CPROVER_thread_key_dtors#27 __CPROVER_thread_keys#28 __CPROVER_malloc_is_new_array#19 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#16 __CPROVER_dead_object#17 __CPROVER_deallocated#18 __CPROVER_new_object#21 __CPROVER_rounding_mode#25 __CPROVER_pipe_count#24 __CPROVER_max_malloc_size#20 __CPROVER_next_thread_id#22 __CPROVER_next_thread_key#23 __CPROVER_thread_id#26 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#25 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#25) <= 0 && __CPROVER_pipe_count#24 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#24) <= 0 && __CPROVER_max_malloc_size#20 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#20) <= -36028797018963968 && __CPROVER_next_thread_id#22 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#22) <= 0 && __CPROVER_next_thread_key#23 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#23) <= 0 && __CPROVER_thread_id#26 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#26) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of gl_read
+Function gl_read not analyzed yet
+Recursively summarizing function gl_read
+Checking precondition of gl_insert
+Function gl_insert not analyzed yet
+Recursively summarizing function gl_insert
+Analyzing function gl_insert
+Computing summary
+Computing termination argument for gl_insert
+Synthesizing ranking function to prove termination
+
+Summary for function gl_insert
+params: value 
+globals_in: __CPROVER_malloc_is_new_array __CPROVER_deallocated'obj __CPROVER_memory_leak$218'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_deallocated __CPROVER_memory_leak$218 new'obj.next new'obj.prev next'obj.next next'obj.prev prev'obj.next prev'obj.prev gl_list.next gl_list.prev head'obj.next head'obj.prev new'obj.next new'obj.prev node'obj.value dynamic_object$206.value new'obj next'obj prev'obj head'obj new'obj node'obj node'obj.linkage node'obj.nested dynamic_object$206 node'obj.$pad1 dynamic_object$206.$pad1 __CPROVER_max_malloc_size 
+globals_out: __CPROVER_malloc_is_new_array#phi247 __CPROVER_deallocated'obj __CPROVER_memory_leak$218'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_deallocated#phi247 __CPROVER_memory_leak$218#phi247 new'obj.next#268 new'obj.prev#269 next'obj.next next'obj.prev#267 prev'obj.next#270 prev'obj.prev head'obj.next#266 head'obj.prev new'obj.next new'obj.prev node'obj.value#254 dynamic_object$206.value#254 new'obj next'obj prev'obj head'obj new'obj node'obj node'obj.linkage node'obj.nested dynamic_object$206 node'obj.$pad1 dynamic_object$206.$pad1#phi247 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: dynamic_object$206.value#254 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$206.value#254) <= 2147483648 && dynamic_object$206.$pad1#phi247 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$206.$pad1#phi247) <= 0 && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function gl_read
+Computing summary
+Computing termination argument for gl_read
+
+Summary for function gl_read
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: ($guard#290 && $guard#ls297 ==> return_value___VERIFIER_nondet_int#lb297 <= 2147483647) && ($guard#290 && $guard#ls297 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb297) <= 2147483648)
+forward invariant: ($guard#290 && $guard#ls297 ==> return_value___VERIFIER_nondet_int#lb297 <= 2147483647) && ($guard#290 && $guard#ls297 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb297) <= 2147483648)
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of inspect
+Function inspect not analyzed yet
+Recursively summarizing function inspect
+Checking precondition of fail
+Function fail not analyzed yet
+Recursively summarizing function fail
+Analyzing function fail
+Computing summary
+Computing termination argument for fail
+Function never terminates normally
+
+Summary for function fail
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: FALSE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: no
+
+Analyzing function inspect
+Computing summary
+Computing termination argument for inspect
+
+Summary for function inspect
+params: head 
+globals_in: head'obj.next head'obj.prev node'obj.value head'obj node'obj node'obj.linkage node'obj.nested node'obj.$pad1 
+globals_out: head'obj.next#phi125 head'obj.prev#54 node'obj.value head'obj node'obj node'obj.linkage node'obj.nested node'obj.$pad1 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of gl_sort
+Function gl_sort not analyzed yet
+Recursively summarizing function gl_sort
+Checking precondition of gl_sort_pass
+Function gl_sort_pass not analyzed yet
+Recursively summarizing function gl_sort_pass
+Checking precondition of val_from_node
+Function val_from_node not analyzed yet
+Recursively summarizing function val_from_node
+Analyzing function val_from_node
+Computing summary
+Computing termination argument for val_from_node
+Function trivially terminates
+
+Summary for function val_from_node
+params: head 
+globals_in: head'obj.next head'obj.prev entry'obj.value head'obj entry'obj entry'obj.linkage entry'obj.nested entry'obj.$pad1 
+globals_out: head'obj.next head'obj.prev val_from_node#return_value#327 entry'obj.value#327 head'obj entry'obj entry'obj.linkage entry'obj.nested entry'obj.$pad1 
+forward precondition: TRUE
+forward transformer: val_from_node#return_value#327 <= 2147483647 && -((signed __CPROVER_bitvector[33])val_from_node#return_value#327) <= 2147483648
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of val_from_node
+Precondition trivially holds, replacing by summary.
+Analyzing function gl_sort_pass
+Computing summary
+Computing termination argument for gl_sort_pass
+Synthesizing ranking function to prove termination
+
+Summary for function gl_sort_pass
+params: 
+globals_in: new'obj.next new'obj.prev next'obj.next next'obj.prev prev'obj.next prev'obj.prev next'obj.next next'obj.prev prev'obj.next prev'obj.prev gl_list.next gl_list.prev pos0'obj.next pos0'obj.prev pos1'obj.next pos1'obj.prev head'obj.next head'obj.prev new'obj.next new'obj.prev head'obj.next head'obj.prev list'obj.next list'obj.prev new'obj next'obj prev'obj next'obj prev'obj pos0'obj pos1'obj head'obj new'obj head'obj list'obj 
+globals_out: gl_sort_pass#return_value#403 new'obj.next#phi335 new'obj.prev#phi335 next'obj.next next'obj.prev#phi335 prev'obj.next#phi335 prev'obj.prev next'obj.next next'obj.prev#phi335 prev'obj.next#phi335 prev'obj.prev pos0'obj.next#335 pos0'obj.prev pos1'obj.next pos1'obj.prev head'obj.next#phi335 head'obj.prev new'obj.next new'obj.prev head'obj.next head'obj.prev list'obj.next#phi335 list'obj.prev#phi335 new'obj next'obj prev'obj next'obj prev'obj pos0'obj pos1'obj head'obj new'obj head'obj list'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function gl_sort
+Computing summary
+Computing termination argument for gl_sort
+
+Summary for function gl_sort
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Checking precondition of inspect
+Precondition trivially holds, replacing by summary.
+Checking precondition of gl_destroy
+Function gl_destroy not analyzed yet
+Recursively summarizing function gl_destroy
+Checking precondition of __CPROVER_deallocate
+Function __CPROVER_deallocate not analyzed yet
+Recursively summarizing function __CPROVER_deallocate
+Analyzing function __CPROVER_deallocate
+Computing summary
+Computing termination argument for __CPROVER_deallocate
+Function trivially terminates
+
+Summary for function __CPROVER_deallocate
+params: ptr 
+globals_in: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated 
+globals_out: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated#phi13 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Analyzing function gl_destroy
+Computing summary
+Computing termination argument for gl_destroy
+Synthesizing ranking function to prove termination
+
+Summary for function gl_destroy
+params: 
+globals_in: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated next'obj.next next'obj.prev gl_list.next gl_list.prev next'obj 
+globals_out: __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj ptr'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated next'obj.next#phi301 next'obj.prev next'obj 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function main
+Computing summary
+Computing termination argument for main
+
+Summary for function main
+params: 
+globals_in: gl_list.next gl_list.prev 
+globals_out: main#return_value#5 
+forward precondition: TRUE
+forward transformer: main#return_value#5 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#5) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 3401762632
+  number of solver calls: 2357976207
+  number of summaries used: 13
+  number of termination arguments computed: 0
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_deallocate]: yes
+[__CPROVER_initialize]: yes
+[abort]: not computed
+[fail]: no
+[inspect]: unknown
+[__list_add]: not computed
+[__list_del]: not computed
+[list_add]: not computed
+[list_move]: not computed
+[gl_insert]: unknown
+[gl_read]: unknown
+[gl_destroy]: unknown
+[val_from_node]: yes
+[gl_sort_pass]: unknown
+[gl_sort]: unknown
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 583 milliseconds

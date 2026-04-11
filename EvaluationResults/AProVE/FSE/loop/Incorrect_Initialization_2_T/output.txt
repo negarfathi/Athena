@@ -1,0 +1,51 @@
+/liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_2_T/Incorrect_Initialization_2_T.c:33:29: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+                    if( res = res_return() < 0 )
+                        ~~~~^~~~~~~~~~~~~~~~~~
+/liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_2_T/Incorrect_Initialization_2_T.c:33:29: note: place parentheses around the assignment to silence this warning
+                    if( res = res_return() < 0 )
+                            ^
+                        (                     )
+/liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_2_T/Incorrect_Initialization_2_T.c:33:29: note: use '==' to turn this assignment into an equality comparison
+                    if( res = res_return() < 0 )
+                            ^
+                            ==
+/liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_2_T/Incorrect_Initialization_2_T.c:35:29: warning: using the result of an assi
+gnment as a condition without parentheses [-Wparentheses]
+                    if( res = res_return() == 0 )
+                        ~~~~^~~~~~~~~~~~~~~~~~~
+/liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_2_T/Incorrect_Initialization_2_T.c:35:29: note: place parentheses around the assignment to silence this warning
+                    if( res = res_return() == 0 )
+                            ^
+                        (                      )
+/liveness_analysis/Benchmarks/FSE/loop/Incorrect_Initialization_2_T/Incorrect_Initialization_2_T.c:35:29: note: use '==' to turn this assignment into an equality comparison
+                    if( res = res_return() == 0 )
+                            ^
+                            ==
+2 warnings generated.
+
+line 146:5 extraneous input 'metadata' expecting EXCLAMATION
+line 146:25 no viable alternative at input '!'
+Graph finished, checking  consistency
+Graph finished, checked consistency, took 0.002s
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+MAYBE
+Runtime: 29300 milliseconds

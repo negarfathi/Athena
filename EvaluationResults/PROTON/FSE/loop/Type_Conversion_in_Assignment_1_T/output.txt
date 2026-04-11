@@ -1,0 +1,163 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.pZdw2j
+
+Input File is : Type_Conversion_in_Assignment_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 57e7400d046f382ee94745791ccb0e1a06efb2e4
+URL: https://github.com/kmatheussen/das_watchdog/commit/57e7400d046f382ee94745791ccb0e1a06efb2e4
+Project Name: das_watchdog
+License: GPL-2.0
+termination: TRUE
+*/
+#define EOF -1
+int flag = 0;
+int fgetc()
+{
+    {if( flag > 1000 )
+        {return -1;}}
+    flag++;
+    int c = __VERIFIER_nondet_int();
+    {if( c < 0 )
+        {c = -c;}}
+    c = c % 256;
+    return c;
+}
+int main()
+{
+    int temp;
+    for( ; ; )
+    {
+        temp = fgetc();
+        {if( temp == '\0' || temp == EOF )
+            {return 0;}}
+        switch( temp ){
+            case EOF:
+                return 0;
+            case '=':
+                break;
+            case '\0':
+                break;
+            default:
+                break;
+        }
+    }
+    return 0;
+}
+
+End Main   
+
+Input File is : Type_Conversion_in_Assignment_1_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 57e7400d046f382ee94745791ccb0e1a06efb2e4
+URL: https://github.com/kmatheussen/das_watchdog/commit/57e7400d046f382ee94745791ccb0e1a06efb2e4
+Project Name: das_watchdog
+License: GPL-2.0
+termination: TRUE
+*/
+#define EOF -1
+int flag = 0;
+int fgetc()
+{
+    { __VERIFIER_reached_control(13, __func__);
+if( flag > 1000 )
+        { __VERIFIER_control_true(14, __func__);
+return -1;}}
+    flag++;
+    int c = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(17, __func__);
+if( c < 0 )
+        { __VERIFIER_control_true(18, __func__);
+c = -c;}}
+    c = c % 256;
+    return c;
+}
+int main()
+{
+    int temp;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(26, __func__);
+ for( ; ; )
+    { __VERIFIER_loop_head(26, __func__);
+printf("CBMC Instrumentation @ line26");myBool flag=__VERIFIER_nondet_myBool();static int oflag;static int otemp;if(pStored0){__CPROVER_assert(!(oflag==flag && otemp==temp),"recurrent state found");} if(flag){oflag=flag;otemp=temp;pStored0=myTrue;} 
+        temp = fgetc();
+        { __VERIFIER_reached_control(28, __func__);
+if( temp == '\0' || temp == EOF )
+            { __VERIFIER_control_true(29, __func__);
+return 0;}}
+        switch( temp ){
+            case EOF:
+                return 0;
+            case '=':
+                break;
+            case '\0':
+                break;
+            default:
+                break;
+        }
+    }
+    return 0;
+}
+
+End Main 
+ Type_Conversion_in_Assignment_1_T_braced_instrumented.c
+NTFILE is Type_Conversion_in_Assignment_1_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Type_Conversion_in_Assignment_1_T.c
+b'c31eb6ac3102bbd4d3a2d1887f9b6a53dc0bb0c5c5bc31ea09d8f4784dc31301  Type_Conversion_in_Assignment_1_T.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Type_Conversion_in_Assignment_1_T/Type_Conversion_in_Assignment_1_T.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 26 reachedControl
+main 26 loopHead
+fgetc 13 reachedControl
+fgetc 17 reachedControl
+fgetc 18 trueBranch
+enteringLasso
+main 28 reachedControl
+main 26 loopHead
+Trace file line inside enterred lasso check : main 28 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Type_Conversion_in_Assignment_1_T/Type_Conversion_in_Assignment_1_T.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Type_Conversion_in_Assignment_1_T.c
+FILE=Type_Conversion_in_Assignment_1_T_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2062 milliseconds

@@ -1,0 +1,119 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/cs_szymanski_true-unreach-call/cs_szymanski_true-unreach-call.c
+Converting
+Type-checking cs_szymanski_true-unreach-call
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+file Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/cs_szymanski_true-unreach-call/cs_szymanski_true-unreach-call.c line 937 function main: replacing function pointer by 3 possible targets
+file Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/cs_szymanski_true-unreach-call/cs_szymanski_true-unreach-call.c line 943 function main: replacing function pointer by 3 possible targets
+file Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/cs_szymanski_true-unreach-call/cs_szymanski_true-unreach-call.c line 949 function main: replacing function pointer by 3 possible targets
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of __VERIFIER_assert
+Simplifying
+Computing SSA of __CS_cs
+Simplifying
+Computing SSA of __CS_pthread_mutex_init
+Simplifying
+Computing SSA of __CS_pthread_mutex_destroy
+Simplifying
+Computing SSA of __CS_pthread_mutex_lock
+Simplifying
+Computing SSA of __CS_pthread_mutex_unlock
+Simplifying
+Computing SSA of __CS_pthread_cond_init
+Simplifying
+Computing SSA of __CS_pthread_cond_signal
+Simplifying
+Computing SSA of __CS_pthread_cond_broadcast
+Simplifying
+Computing SSA of __CS_pthread_cond_wait
+Simplifying
+Computing SSA of __CS_assert
+Simplifying
+Computing SSA of __CS_assume
+Simplifying
+Computing SSA of __CS_pthread_join
+Simplifying
+Computing SSA of __CS_pthread_create
+Simplifying
+Computing SSA of thr1
+Simplifying
+Computing SSA of thr2
+Simplifying
+Computing SSA of main_thread
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CS_thread_lockedon __CS_thread_status __CPROVER_threads_exited __CPROVER_thread_key_dtors __CS_thread __CPROVER_thread_keys flag1 flag2 x __CS_thread_allocated __CS_thread_born_round __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CS_u __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id __CS_error __CS_ret __CS_ret_ERROR __CS_ret_FINISHED __CS_ret_PREEMPTED __CS_round __CS_thread_index __THREAD_FINISHED __THREAD_RUNNING __THREAD_UNUSED 
+globals_out: __CS_thread_lockedon#126 __CS_thread_status#127 __CPROVER_threads_exited#115 __CPROVER_thread_key_dtors#113 __CS_thread#122 __CPROVER_thread_keys#114 flag1#132 flag2#133 x#134 __CS_thread_allocated#123 __CS_thread_born_round#124 __CPROVER_malloc_is_new_array#105 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#102 __CPROVER_dead_object#103 __CPROVER_deallocated#104 __CPROVER_new_object#107 __CPROVER_rounding_mode#111 __CS_u#128 __CPROVER_pipe_count#110 __CPROVER_max_malloc_size#106 __CPROVER_next_thread_id#108 __CPROVER_next_thread_key#109 __CPROVER_thread_id#112 __CS_error#116 __CS_ret#117 __CS_ret_ERROR#118 __CS_ret_FINISHED#119 __CS_ret_PREEMPTED#120 __CS_round#121 __CS_thread_index#125 __THREAD_FINISHED#129 __THREAD_RUNNING#130 __THREAD_UNUSED#131 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#111 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#111) <= 0 && __CPROVER_pipe_count#110 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#110) <= 0 && __CPROVER_max_malloc_size#106 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#106) <= -36028797018963968 && __CPROVER_next_thread_id#108 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#108) <= 0 && __CPROVER_next_thread_key#109 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#109) <= 0 && __CPROVER_thread_id#112 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#112) <= 0 && __CS_error#116 <= 0 && -((signed __CPROVER_bitvector[9])__CS_error#116) <= 0 && __CS_ret#117 <= 0 && -((signed __CPROVER_bitvector[9])__CS_ret#117) <= 0 && __CS_ret_ERROR#118 <= 2 && -((signed __CPROVER_bitvector[9])__CS_ret_ERROR#118) <= -2 && __CS_ret_FINISHED#119 <= 4 && -((signed __CPROVER_bitvector[9])__CS_ret_FINISHED#119) <= -4 && __CS_ret_PREEMPTED#120 <= 1 && -((signed __CPROVER_bitvector[9])__CS_ret_PREEMPTED#120) <= -1 && __CS_round#121 <= 0 && -((signed __CPROVER_bitvector[9])__CS_round#121) <= 0 && __CS_thread_index#125 <= 0 && -((signed __CPROVER_bitvector[9])__CS_thread_index#125) <= 0 && __THREAD_FINISHED#129 <= 2 && -((signed __CPROVER_bitvector[9])__THREAD_FINISHED#129) <= -2 && __THREAD_RUNNING#130 <= 1 && -((signed __CPROVER_bitvector[9])__THREAD_RUNNING#130) <= -1 && __THREAD_UNUSED#131 <= 0 && -((signed __CPROVER_bitvector[9])__THREAD_UNUSED#131) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+--- begin invariant violation report ---
+Invariant check failed
+File: flattening/boolbv_width.h:27 function: operator()
+Condition: entry_opt.has_value()
+Reason: Check return value
+Backtrace:
+/root/2ls/src/2ls/2ls(+0x3ee1ac) [0xaaaabc5ae1ac]
+/root/2ls/src/2ls/2ls(+0x3eedb8) [0xaaaabc5aedb8]
+/root/2ls/src/2ls/2ls(+0x3cd6c) [0xaaaabc1fcd6c]
+/root/2ls/src/2ls/2ls(+0x35c030) [0xaaaabc51c030]
+/root/2ls/src/2ls/2ls(+0x31d8b8) [0xaaaabc4dd8b8]
+/root/2ls/src/2ls/2ls(+0x35da24) [0xaaaabc51da24]
+/root/2ls/src/2ls/2ls(+0x3213c4) [0xaaaabc4e13c4]
+/root/2ls/src/2ls/2ls(+0x35abac) [0xaaaabc51abac]
+/root/2ls/src/2ls/2ls(+0x35bee0) [0xaaaabc51bee0]
+/root/2ls/src/2ls/2ls(+0x31d8b8) [0xaaaabc4dd8b8]
+/root/2ls/src/2ls/2ls(+0x35da24) [0xaaaabc51da24]
+/root/2ls/src/2ls/2ls(+0x3213c4) [0xaaaabc4e13c4]
+/root/2ls/src/2ls/2ls(+0x31cfec) [0xaaaabc4dcfec]
+/root/2ls/src/2ls/2ls(+0x31d0f0) [0xaaaabc4dd0f0]
+/root/2ls/src/2ls/2ls(+0x4c204c) [0xaaaabc68204c]
+/root/2ls/src/2ls/2ls(+0x53bacc) [0xaaaabc6fbacc]
+/root/2ls/src/2ls/2ls(+0x533db4) [0xaaaabc6f3db4]
+/root/2ls/src/2ls/2ls(+0x535954) [0xaaaabc6f5954]
+/root/2ls/src/2ls/2ls(+0x533ef0) [0xaaaabc6f3ef0]
+/root/2ls/src/2ls/2ls(+0x535954) [0xaaaabc6f5954]
+/root/2ls/src/2ls/2ls(+0x53b618) [0xaaaabc6fb618]
+/root/2ls/src/2ls/2ls(+0x5cd8c) [0xaaaabc21cd8c]
+/root/2ls/src/2ls/2ls(+0x647c4) [0xaaaabc2247c4]
+/root/2ls/src/2ls/2ls(+0x463e4) [0xaaaabc2063e4]
+/root/2ls/src/2ls/2ls(+0x38d80) [0xaaaabc1f8d80]
+/root/2ls/src/2ls/2ls(+0x32844) [0xaaaabc1f2844]
+/lib/aarch64-linux-gnu/libc.so.6(+0x273fc) [0xffffa7b873fc]
+/lib/aarch64-linux-gnu/libc.so.6(__libc_start_main+0x98) [0xffffa7b874cc]
+/root/2ls/src/2ls/2ls(+0x3c0f0) [0xaaaabc1fc0f0]
+
+
+--- end invariant violation report ---
+Runtime: 287 milliseconds

@@ -1,0 +1,101 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.KVgjQX
+
+Input File is : standard_password_true-unreach-call_ground.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+void __VERIFIER_assert(int cond) { {if(!(cond)) { ERROR: __VERIFIER_error(); }} }
+int main( ) {
+  int password[ 100000 ];
+  int guess[ 100000 ];
+  int i;
+  int result = 1;
+  for ( i = 0 ; i < 100000 ; i++ ) {
+    {if ( password[ i ] != guess[ i ] ) {
+      result = 0;
+    }}
+  }
+  {if ( result ) {
+    int x;
+    for ( x = 0 ; x < 100000 ; x++ ) {
+      __VERIFIER_assert( password[ x ] == guess[ x ] );
+    }
+  }}
+  return 0;
+}
+
+End Main   
+
+Input File is : standard_password_true-unreach-call_ground_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+void __VERIFIER_assert(int cond) { { __VERIFIER_reached_control(2, __func__);
+if(!(cond)) { __VERIFIER_control_true(2, __func__);
+ ERROR: __VERIFIER_error(); }} }
+int main( ) {
+  int password[ 100000 ];
+  int guess[ 100000 ];
+  int i;
+  int result = 1;
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(8, __func__);
+ for ( i = 0 ; i < 100000 ; i++ ) { __VERIFIER_loop_head(8, __func__);
+printf("CBMC Instrumentation @ line8");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int oresult;if(pStored0){__CPROVER_assert(!(oi==i && oresult==result),"recurrent state found");} if(flag){oi=i;oresult=result;pStored0=myTrue;} 
+    { __VERIFIER_reached_control(9, __func__);
+if ( password[ i ] != guess[ i ] ) { __VERIFIER_control_true(9, __func__);
+
+      result = 0;
+    }}
+  }
+  { __VERIFIER_reached_control(13, __func__);
+if ( result ) { __VERIFIER_control_true(13, __func__);
+
+    int x;
+   myBool pStored1 = myFalse; __VERIFIER_reached_control(15, __func__);
+ for ( x = 0 ; x < 100000 ; x++ ) { __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int oresult;static int ox;if(pStored1){__CPROVER_assert(!(oi==i && oresult==result && ox==x),"recurrent state found");} if(flag){oi=i;oresult=result;ox=x;pStored1=myTrue;} 
+      __VERIFIER_assert( password[ x ] == guess[ x ] );
+    }
+  }}
+  return 0;
+}
+
+End Main 
+ standard_password_true-unreach-call_ground_braced_instrumented.c
+NTFILE is standard_password_true-unreach-call_ground_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for standard_password_true-unreach-call_ground.c
+FILE=standard_password_true-unreach-call_ground_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 83044 milliseconds

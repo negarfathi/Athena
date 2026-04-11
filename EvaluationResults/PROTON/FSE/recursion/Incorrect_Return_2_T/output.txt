@@ -1,0 +1,130 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.L6ZSr1
+
+Input File is : Incorrect_Return_2_T.cpp
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern char __VERIFIER_nondet_char(void);
+/*
+Commit Number: 7800003a8fd28c386fcefa652376bbe7e5aa0ddb
+URL: https://github.com/ArtifexSoftware/mupdf/commit/7800003a8fd28c386fcefa652376bbe7e5aa0ddb
+Project Name: mupdf
+License: AGPL-3.0
+termination: TRUE
+*/
+#include "string.h"
+void loadpagetree(char* obj, char* kobj) {
+    char* type = obj;
+    int kids = strlen(obj);
+    {if (strcmp(type, "Page") == 0) {
+    }else {if(strcmp(type, "Pages") == 0){
+        for(int i =0; i < kids; i++){
+            {if (kobj == obj)
+            {
+                /* prevent infinite recursion possible in maliciously crafted PDFs */
+                return;
+            }}
+            loadpagetree(obj, kobj);
+        }
+}}}
+    return;
+}
+int main(){
+    char obj[5];
+    char kobj[5];
+    for(int i=0; i<4; i++){
+        obj[i] = __VERIFIER_nondet_char();
+        kobj[i] = __VERIFIER_nondet_char();
+    }
+    obj[4] = '\0';
+    kobj[4] = '\0';
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Incorrect_Return_2_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern char __VERIFIER_nondet_char(void);
+/*
+Commit Number: 7800003a8fd28c386fcefa652376bbe7e5aa0ddb
+URL: https://github.com/ArtifexSoftware/mupdf/commit/7800003a8fd28c386fcefa652376bbe7e5aa0ddb
+Project Name: mupdf
+License: AGPL-3.0
+termination: TRUE
+*/
+#include "string.h"
+void loadpagetree(char* obj, char* kobj) {
+    char* type = obj;
+    int kids = strlen(obj);
+    { __VERIFIER_reached_control(13, __func__);
+if (strcmp(type, "Page") == 0) { __VERIFIER_control_true(13, __func__);
+
+    }else { __VERIFIER_control_false(14, __func__);
+ __VERIFIER_reached_control(14, __func__);
+if(strcmp(type, "Pages") == 0){ __VERIFIER_control_true(14, __func__);
+
+       myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+ for(int i =0; i < kids; i++){ __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int okids;static char * okobj;static char * oobj;static char * otype;if(pStored0){__CPROVER_assert(!(oi==i && okids==kids && okobj==kobj && oobj==obj && otype==type),"recurrent state found");} if(flag){oi=i;okids=kids;okobj=kobj;oobj=obj;otype=type;pStored0=myTrue;} 
+            { __VERIFIER_reached_control(16, __func__);
+if (kobj == obj)
+            { __VERIFIER_control_true(17, __func__);
+
+                /* prevent infinite recursion possible in maliciously crafted PDFs */
+                return;
+            }}
+            loadpagetree(obj, kobj);
+        }
+}}}
+    return;
+}
+int main(){
+    char obj[5];
+    char kobj[5];
+    for(int i=0; i<4; i++){printf("ArrayNT State @ line29: Array Found\n");
+        obj[i] = __VERIFIER_nondet_char();
+        kobj[i] = __VERIFIER_nondet_char();
+    }
+    obj[4] = '\0';
+    kobj[4] = '\0';
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Incorrect_Return_2_T_braced_instrumented.c
+NTFILE is Incorrect_Return_2_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Incorrect_Return_2_T.cpp
+FILE=Incorrect_Return_2_T_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 7156 milliseconds

@@ -1,0 +1,81 @@
+NODE   1: <1> PSNodeType::ENTRY (points-to size: 0)
+NODE   2:   %retval = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %retval = alloca i32, align 4 + 0
+NODE   3:   %n = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %n = alloca i32, align 4 + 0
+NODE   4:   %head = alloca %struct.list*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %head = alloca %struct.list*, align 8 + 0
+NODE   5:   store i32 0, i32* %retval, align 4 (points-to size: 0)
+NODE   6:   %call = call i32 (...) @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   7:   store i32 %call, i32* %n, align 4 (points-to size: 0)
+NODE   8:   %0 = load i32, i32* %n, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE   9: <9> PSNodeType::CALL (points-to size: 0)
+NODE  10: <10> PSNodeType::ENTRY (points-to size: 0)
+NODE  11: i32 %n (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  12:   %n.addr = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %n.addr = alloca i32, align 4 + 0
+NODE  13:   %curr = alloca %struct.list*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %curr = alloca %struct.list*, align 8 + 0
+NODE  14:   %tail = alloca %struct.list*, align 8 [size: 8, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %tail = alloca %struct.list*, align 8 + 0
+NODE  15:   %j = alloca i32, align 4 [size: 4, heap: 0, zeroed: 0] (points-to size: 1)
+    ->   %j = alloca i32, align 4 + 0
+NODE  16:   store i32 %n, i32* %n.addr, align 4 (points-to size: 0)
+NODE  17:   store %struct.list* null, %struct.list** %curr, align 8 (points-to size: 0)
+NODE  18:   %0 = load %struct.list*, %struct.list** %curr, align 8 (points-to size: 1)
+    -> null + 0
+NODE  19:   store %struct.list* %0, %struct.list** %tail, align 8 (points-to size: 0)
+NODE  20:   store i32 0, i32* %j, align 4 (points-to size: 0)
+NODE  21:   %1 = load i32, i32* %j, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  22:   %2 = load i32, i32* %n.addr, align 4 (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  23:   %call = call noalias i8* @malloc(i64 16) #3 [size: 16, heap: 1, zeroed: 0] (points-to size: 1)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 0
+NODE  24:   %3 = bitcast i8* %call to %struct.list* (points-to size: 1)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 0
+NODE  25:   store %struct.list* %3, %struct.list** %curr, align 8 (points-to size: 0)
+NODE  26:   %call1 = call i32 (...) @__VERIFIER_nondet_int() (points-to size: 1)
+    -> unknown + Offset::UNKNOWN
+NODE  27:   %4 = load %struct.list*, %struct.list** %curr, align 8 (points-to size: 1)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 0
+NODE  28:   %value = getelementptr inbounds %struct.list, %struct.list* %4, i32  ... (points-to size: 1)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 0
+NODE  29:   store i32 %call1, i32* %value, align 8 (points-to size: 0)
+NODE  30:   %5 = load %struct.list*, %struct.list** %tail, align 8 (points-to size: 2)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 0
+    -> null + 0
+NODE  31:   %6 = load %struct.list*, %struct.list** %curr, align 8 (points-to size: 1)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 0
+NODE  32:   %next = getelementptr inbounds %struct.list, %struct.list* %6, i32 0 ... (points-to size: 1)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 8
+NODE  33:   store %struct.list* %5, %struct.list** %next, align 8 (points-to size: 0)
+NODE  34:   %7 = load %struct.list*, %struct.list** %curr, align 8 (points-to size: 1)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 0
+NODE  35:   store %struct.list* %7, %struct.list** %tail, align 8 (points-to size: 0)
+NODE  36:   %9 = load %struct.list*, %struct.list** %curr, align 8 (points-to size: 2)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 0
+    -> null + 0
+NODE  37:   ret %struct.list* %9 (points-to size: 2)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 0
+    -> null + 0
+NODE  38:   %8 = load i32, i32* %j, align 4 (points-to size: 2)
+    -> null + 0
+    -> null + Offset::UNKNOWN
+NODE  39:   %inc = add nsw i32 %8, 1 (points-to size: 1)
+    -> null + Offset::UNKNOWN
+NODE  40:   store i32 %inc, i32* %j, align 4 (points-to size: 0)
+NODE  41: init_list (points-to size: 1)
+    -> init_list + 0
+NODE  42: main (points-to size: 1)
+    -> main + 0
+NODE  43:   %call1 = call %struct.list* @init_list(i32 %0) (points-to size: 2)
+    ->   %call = call noalias i8* @malloc(i64 16) #3 + 0
+    -> null + 0
+NODE  44:   store %struct.list* %call1, %struct.list** %head, align 8 (points-to size: 0)
+NODE  45:   ret i32 0 (points-to size: 1)
+    -> null + 0

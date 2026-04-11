@@ -1,0 +1,124 @@
+2LS version 0.10.0
+Parsing Benchmarks/TermCOMP/C/SV-COMP_Mixed_Categories/list-ext_1_true-valid-memsafety/list-ext_1_true-valid-memsafety.c
+Converting
+Type-checking list-ext_1_true-valid-memsafety
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Generic Property Instrumentation
+Constant Propagation
+Using intervals domain with binary search solver
+Computing SSA of main
+Simplifying
+Computing SSA of __CPROVER_deallocate
+Simplifying
+Computing SSA of __CPROVER_initialize
+Simplifying
+Computing SSA of exit
+Simplifying
+Computing SSA of __CPROVER__start
+Simplifying
+
+Summarizing function __CPROVER__start
+Checking precondition of __CPROVER_initialize
+Function __CPROVER_initialize not analyzed yet
+Recursively summarizing function __CPROVER_initialize
+Analyzing function __CPROVER_initialize
+Computing summary
+Computing termination argument for __CPROVER_initialize
+Function trivially terminates
+
+Summary for function __CPROVER_initialize
+params: 
+globals_in: __CPROVER_threads_exited __CPROVER_thread_key_dtors __CPROVER_thread_keys __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_new_object __CPROVER_rounding_mode __CPROVER_pipe_count __CPROVER_max_malloc_size __CPROVER_next_thread_id __CPROVER_next_thread_key __CPROVER_thread_id 
+globals_out: __CPROVER_threads_exited#310 __CPROVER_thread_key_dtors#308 __CPROVER_thread_keys#309 __CPROVER_malloc_is_new_array#300 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_new_object'obj __CPROVER_alloca_object#297 __CPROVER_dead_object#298 __CPROVER_deallocated#299 __CPROVER_new_object#302 __CPROVER_rounding_mode#306 __CPROVER_pipe_count#305 __CPROVER_max_malloc_size#301 __CPROVER_next_thread_id#303 __CPROVER_next_thread_key#304 __CPROVER_thread_id#307 
+forward precondition: TRUE
+forward transformer: __CPROVER_rounding_mode#306 <= 0 && -((signed __CPROVER_bitvector[33])__CPROVER_rounding_mode#306) <= 0 && __CPROVER_pipe_count#305 <= 0u && -((signed __CPROVER_bitvector[33])__CPROVER_pipe_count#305) <= 0 && __CPROVER_max_malloc_size#301 <= 36028797018963968ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size#301) <= -36028797018963968 && __CPROVER_next_thread_id#303 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_id#303) <= 0 && __CPROVER_next_thread_key#304 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_next_thread_key#304) <= 0 && __CPROVER_thread_id#307 <= 0ul && -((signed __CPROVER_bitvector[65])__CPROVER_thread_id#307) <= 0
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of main
+Function main not analyzed yet
+Recursively summarizing function main
+Checking precondition of __CPROVER_deallocate
+Function __CPROVER_deallocate not analyzed yet
+Recursively summarizing function __CPROVER_deallocate
+Analyzing function __CPROVER_deallocate
+Computing summary
+Computing termination argument for __CPROVER_deallocate
+Function trivially terminates
+
+Summary for function __CPROVER_deallocate
+params: ptr 
+globals_in: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated 
+globals_out: ptr'obj __CPROVER_deallocated'obj __CPROVER_deallocated#phi294 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: yes
+
+Checking precondition of __CPROVER_deallocate
+Precondition trivially holds, replacing by summary.
+Analyzing function main
+Computing summary
+Computing termination argument for main
+Synthesizing ranking function to prove termination
+
+Summary for function main
+params: 
+globals_in: __CPROVER_malloc_is_new_array __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_memory_leak$113'obj __CPROVER_memory_leak$180'obj __CPROVER_memory_leak$47'obj ptr'obj return_value_malloc$0'obj return_value_malloc$1'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated __CPROVER_memory_leak$113 __CPROVER_memory_leak$180 __CPROVER_memory_leak$47 a'obj.n p'obj.n t'obj.n dynamic_object$101$0.n dynamic_object$101$1.n dynamic_object$101$2.n dynamic_object$168$0.n dynamic_object$168$1.n dynamic_object$168$2.n dynamic_object$35.n a'obj.h p'obj.h t'obj.h dynamic_object$101$0.h dynamic_object$101$1.h dynamic_object$101$2.h dynamic_object$168$0.h dynamic_object$168$1.h dynamic_object$168$2.h dynamic_object$35.h a'obj p'obj t'obj dynamic_object$101$0 dynamic_object$101$1 dynamic_object$101$2 dynamic_object$168$0 dynamic_object$168$1 dynamic_object$168$2 dynamic_object$35 a'obj.$pad1 p'obj.$pad1 t'obj.$pad1 dynamic_object$101$0.$pad1 dynamic_object$101$1.$pad1 dynamic_object$101$2.$pad1 dynamic_object$168$0.$pad1 dynamic_object$168$1.$pad1 dynamic_object$168$2.$pad1 dynamic_object$35.$pad1 __CPROVER_max_malloc_size 
+globals_out: __CPROVER_malloc_is_new_array#phi139 __CPROVER_alloca_object'obj __CPROVER_dead_object'obj __CPROVER_deallocated'obj __CPROVER_memory_leak$113'obj __CPROVER_memory_leak$180'obj __CPROVER_memory_leak$47'obj ptr'obj return_value_malloc$0'obj return_value_malloc$1'obj return_value_malloc'obj malloc#return_value'obj malloc_value'obj malloc_res'obj __CPROVER_alloca_object __CPROVER_dead_object __CPROVER_deallocated#phi139 __CPROVER_memory_leak$113#phi276 __CPROVER_memory_leak$180#phi276 __CPROVER_memory_leak$47#phi276 a'obj.n p'obj.n#phi226 t'obj.n dynamic_object$101$0.n#209 dynamic_object$101$1.n#209 dynamic_object$101$2.n#209 dynamic_object$168$0.n#209 dynamic_object$168$1.n#209 dynamic_object$168$2.n#209 dynamic_object$35.n#209 main#return_value#278 a'obj.h p'obj.h#208 t'obj.h dynamic_object$101$0.h#208 dynamic_object$101$1.h#208 dynamic_object$101$2.h#208 dynamic_object$168$0.h#208 dynamic_object$168$1.h#208 dynamic_object$168$2.h#208 dynamic_object$35.h#208 a'obj p'obj t'obj dynamic_object$101$0 dynamic_object$101$1 dynamic_object$101$2 dynamic_object$168$0 dynamic_object$168$1 dynamic_object$168$2 dynamic_object$35 a'obj.$pad1 p'obj.$pad1 t'obj.$pad1 dynamic_object$101$0.$pad1#phi70 dynamic_object$101$1.$pad1#phi70 dynamic_object$101$2.$pad1#phi70 dynamic_object$168$0.$pad1#phi139 dynamic_object$168$1.$pad1#phi139 dynamic_object$168$2.$pad1#phi139 dynamic_object$35.$pad1#phi60 __CPROVER_max_malloc_size 
+forward precondition: TRUE
+forward transformer: main#return_value#278 <= 0 && -((signed __CPROVER_bitvector[33])main#return_value#278) <= 0 && dynamic_object$101$0.h#208 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$101$0.h#208) <= 2147483648 && dynamic_object$101$1.h#208 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$101$1.h#208) <= 2147483648 && dynamic_object$101$2.h#208 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$101$2.h#208) <= 2147483648 && dynamic_object$168$0.h#208 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$168$0.h#208) <= 2147483648 && dynamic_object$168$1.h#208 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$168$1.h#208) <= 2147483648 && dynamic_object$168$2.h#208 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$168$2.h#208) <= 2147483648 && dynamic_object$35.h#208 <= 2147483647 && -((signed __CPROVER_bitvector[33])dynamic_object$35.h#208) <= 2147483648 && dynamic_object$101$0.$pad1#phi70 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$101$0.$pad1#phi70) <= 0 && dynamic_object$101$1.$pad1#phi70 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$101$1.$pad1#phi70) <= 0 && dynamic_object$101$2.$pad1#phi70 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$101$2.$pad1#phi70) <= 0 && dynamic_object$168$0.$pad1#phi139 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$168$0.$pad1#phi139) <= 0 && dynamic_object$168$1.$pad1#phi139 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$168$1.$pad1#phi139) <= 0 && dynamic_object$168$2.$pad1#phi139 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$168$2.$pad1#phi139) <= 0 && dynamic_object$35.$pad1#phi60 <= 4294967295 && -((signed __CPROVER_bitvector[33])dynamic_object$35.$pad1#phi60) <= 0 && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+forward invariant: ($guard#70 && $guard#ls138 ==> i#lb138 <= 10) && ($guard#70 && $guard#ls138 ==> -((signed __CPROVER_bitvector[33])i#lb138) <= 0) && ($guard#70 && $guard#ls138 ==> return_value___VERIFIER_nondet_int#lb138 <= 2147483647) && ($guard#70 && $guard#ls138 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb138) <= 2147483648) && ($guard#70 && $guard#ls138 ==> dynamic_object$35.h#lb138 <= 2147483647) && ($guard#70 && $guard#ls138 ==> -((signed __CPROVER_bitvector[33])dynamic_object$35.h#lb138) <= 2147483648) && ($guard#70 && $guard#ls138 ==> dynamic_object$101$0.h#lb138 <= 2147483647) && ($guard#70 && $guard#ls138 ==> -((signed __CPROVER_bitvector[33])dynamic_object$101$0.h#lb138) <= 2147483648) && ($guard#70 && $guard#ls138 ==> dynamic_object$101$0.$pad1#lb138 <= 4294967295) && ($guard#70 && $guard#ls138 ==> -((signed __CPROVER_bitvector[33])dynamic_object$101$0.$pad1#lb138) <= 0) && ($guard#70 && $guard#ls138 ==> dynamic_object$101$1.h#lb138 <= 2147483647) && ($guard#70 && $guard#ls138 ==> -((signed __CPROVER_bitvector[33])dynamic_object$101$1.h#lb138) <= 2147483648) && ($guard#70 && $guard#ls138 ==> dynamic_object$101$1.$pad1#lb138 <= 4294967295) && ($guard#70 && $guard#ls138 ==> -((signed __CPROVER_bitvector[33])dynamic_object$101$1.$pad1#lb138) <= 0) && ($guard#70 && $guard#ls138 ==> dynamic_object$101$2.h#lb138 <= 2147483647) && ($guard#70 && $guard#ls138 ==> -((signed __CPROVER_bitvector[33])dynamic_object$101$2.h#lb138) <= 2147483648) && ($guard#70 && $guard#ls138 ==> dynamic_object$101$2.$pad1#lb138 <= 4294967295) && ($guard#70 && $guard#ls138 ==> -((signed __CPROVER_bitvector[33])dynamic_object$101$2.$pad1#lb138) <= 0) && ($guard#139 && $guard#ls207 ==> y#lb207 <= 10) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])y#lb207) <= 0) && ($guard#139 && $guard#ls207 ==> return_value___VERIFIER_nondet_int#lb207 <= 2147483647) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#lb207) <= 2147483648) && ($guard#139 && $guard#ls207 ==> return_value___VERIFIER_nondet_int$0#lb207 <= 2147483647) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int$0#lb207) <= 2147483648) && ($guard#139 && $guard#ls207 ==> dynamic_object$35.h#lb207 <= 2147483647) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])dynamic_object$35.h#lb207) <= 2147483648) && ($guard#139 && $guard#ls207 ==> dynamic_object$101$0.h#lb207 <= 2147483647) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])dynamic_object$101$0.h#lb207) <= 2147483648) && ($guard#139 && $guard#ls207 ==> dynamic_object$101$1.h#lb207 <= 2147483647) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])dynamic_object$101$1.h#lb207) <= 2147483648) && ($guard#139 && $guard#ls207 ==> dynamic_object$101$2.h#lb207 <= 2147483647) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])dynamic_object$101$2.h#lb207) <= 2147483648) && ($guard#139 && $guard#ls207 ==> dynamic_object$168$0.h#lb207 <= 2147483647) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])dynamic_object$168$0.h#lb207) <= 2147483648) && ($guard#139 && $guard#ls207 ==> dynamic_object$168$0.$pad1#lb207 <= 4294967295) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])dynamic_object$168$0.$pad1#lb207) <= 0) && ($guard#139 && $guard#ls207 ==> dynamic_object$168$1.h#lb207 <= 2147483647) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])dynamic_object$168$1.h#lb207) <= 2147483648) && ($guard#139 && $guard#ls207 ==> dynamic_object$168$1.$pad1#lb207 <= 4294967295) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])dynamic_object$168$1.$pad1#lb207) <= 0) && ($guard#139 && $guard#ls207 ==> dynamic_object$168$2.h#lb207 <= 2147483647) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])dynamic_object$168$2.h#lb207) <= 2147483648) && ($guard#139 && $guard#ls207 ==> dynamic_object$168$2.$pad1#lb207 <= 4294967295) && ($guard#139 && $guard#ls207 ==> -((signed __CPROVER_bitvector[33])dynamic_object$168$2.$pad1#lb207) <= 0) && ($guard#213 && $guard#ls216 ==> i#lb216 <= 2147483647) && ($guard#213 && $guard#ls216 ==> -((signed __CPROVER_bitvector[33])i#lb216) <= 2147483648) && ($guard#217 && $guard#ls220 ==> y#lb220 <= 2147483647) && ($guard#217 && $guard#ls220 ==> -((signed __CPROVER_bitvector[33])y#lb220) <= 2147483648) && __CPROVER_max_malloc_size <= 18446744073709551615ul && -((signed __CPROVER_bitvector[65])__CPROVER_max_malloc_size) <= 0
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: ($guard#70 && $guard#70 && $guard#70 && $guard#70 && $guard#70 && $guard#70 && $guard#70 && $guard#70 && $guard#70 && $guard#70 && $guard#135 && $cond#138 && $guard#135 && $cond#138 && $guard#135 && $cond#138 && $guard#135 && $cond#138 && $guard#135 && $cond#138 && $guard#135 && $cond#138 && $guard#135 && $cond#138 && $guard#135 && $cond#138 && $guard#135 && $cond#138 && $guard#135 && $cond#138 ==> (signed __CPROVER_bitvector[53])((signed __CPROVER_bitvector[52])((signed __CPROVER_bitvector[51])((signed __CPROVER_bitvector[50])((signed __CPROVER_bitvector[49])((signed __CPROVER_bitvector[48])((signed __CPROVER_bitvector[47])((signed __CPROVER_bitvector[46])((signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])i#phi70 - (signed __CPROVER_bitvector[33])i#74)) + (signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#phi70 - (signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#72))) + (signed __CPROVER_bitvector[46])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$35.h#phi70 - (signed __CPROVER_bitvector[33])dynamic_object$35.h#75))) + (signed __CPROVER_bitvector[47])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])p'obj.h#phi70 - (signed __CPROVER_bitvector[33])p'obj.h#75))) + (signed __CPROVER_bitvector[48])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$101$0.h#phi70 - (signed __CPROVER_bitvector[33])dynamic_object$101$0.h#phi128))) + (signed __CPROVER_bitvector[49])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$101$0.$pad1#phi70 - (signed __CPROVER_bitvector[33])dynamic_object$101$0.$pad1#phi128))) + (signed __CPROVER_bitvector[50])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$101$1.h#phi70 - (signed __CPROVER_bitvector[33])dynamic_object$101$1.h#phi128))) + (signed __CPROVER_bitvector[51])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$101$1.$pad1#phi70 - (signed __CPROVER_bitvector[33])dynamic_object$101$1.$pad1#phi128))) + (signed __CPROVER_bitvector[52])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$101$2.h#phi70 - (signed __CPROVER_bitvector[33])dynamic_object$101$2.h#phi128))) + (signed __CPROVER_bitvector[53])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$101$2.$pad1#phi70 - (signed __CPROVER_bitvector[33])dynamic_object$101$2.$pad1#phi128)) > 0) && ($guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#139 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 && $guard#204 && $cond#207 ==> (signed __CPROVER_bitvector[57])((signed __CPROVER_bitvector[56])((signed __CPROVER_bitvector[55])((signed __CPROVER_bitvector[54])((signed __CPROVER_bitvector[53])((signed __CPROVER_bitvector[52])((signed __CPROVER_bitvector[51])((signed __CPROVER_bitvector[50])((signed __CPROVER_bitvector[49])((signed __CPROVER_bitvector[48])((signed __CPROVER_bitvector[47])((signed __CPROVER_bitvector[46])((signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi139 - (signed __CPROVER_bitvector[33])y#143)) + (signed __CPROVER_bitvector[45])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#phi139 - (signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int#phi139))) + (signed __CPROVER_bitvector[46])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int$0#phi139 - (signed __CPROVER_bitvector[33])return_value___VERIFIER_nondet_int$0#141))) + (signed __CPROVER_bitvector[47])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$35.h#phi139 - (signed __CPROVER_bitvector[33])dynamic_object$35.h#144))) + (signed __CPROVER_bitvector[48])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])p'obj.h#phi139 - (signed __CPROVER_bitvector[33])p'obj.h#144))) + (signed __CPROVER_bitvector[49])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$101$0.h#phi139 - (signed __CPROVER_bitvector[33])dynamic_object$101$0.h#144))) + (signed __CPROVER_bitvector[50])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$101$1.h#phi139 - (signed __CPROVER_bitvector[33])dynamic_object$101$1.h#144))) + (signed __CPROVER_bitvector[51])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$101$2.h#phi139 - (signed __CPROVER_bitvector[33])dynamic_object$101$2.h#144))) + (signed __CPROVER_bitvector[52])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$168$0.h#phi139 - (signed __CPROVER_bitvector[33])dynamic_object$168$0.h#phi197))) + (signed __CPROVER_bitvector[53])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$168$0.$pad1#phi139 - (signed __CPROVER_bitvector[33])dynamic_object$168$0.$pad1#phi197))) + (signed __CPROVER_bitvector[54])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$168$1.h#phi139 - (signed __CPROVER_bitvector[33])dynamic_object$168$1.h#phi197))) + (signed __CPROVER_bitvector[55])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$168$1.$pad1#phi139 - (signed __CPROVER_bitvector[33])dynamic_object$168$1.$pad1#phi197))) + (signed __CPROVER_bitvector[56])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$168$2.h#phi139 - (signed __CPROVER_bitvector[33])dynamic_object$168$2.h#phi197))) + (signed __CPROVER_bitvector[57])((signed __CPROVER_bitvector[44])0 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])dynamic_object$168$2.$pad1#phi139 - (signed __CPROVER_bitvector[33])dynamic_object$168$2.$pad1#phi197)) > 0) && ($guard#213 && $guard#214 && $cond#216 ==> TRUE) && ($guard#217 && $guard#218 && $cond#220 ==> (signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi217 - (signed __CPROVER_bitvector[33])y#218) > 0 && (signed __CPROVER_bitvector[44])1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi217 - (signed __CPROVER_bitvector[33])y#218) >= 0 && (signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi217 - (signed __CPROVER_bitvector[33])y#218) >= 0 && (signed __CPROVER_bitvector[44])1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi217 - (signed __CPROVER_bitvector[33])y#218) >= 0 || (signed __CPROVER_bitvector[44])1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi217 - (signed __CPROVER_bitvector[33])y#218) > 0 && (signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi217 - (signed __CPROVER_bitvector[33])y#218) >= 0 && (signed __CPROVER_bitvector[44])1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi217 - (signed __CPROVER_bitvector[33])y#218) >= 0 || (signed __CPROVER_bitvector[44])-1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi217 - (signed __CPROVER_bitvector[33])y#218) > 0 && (signed __CPROVER_bitvector[44])1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi217 - (signed __CPROVER_bitvector[33])y#218) >= 0 || (signed __CPROVER_bitvector[44])1 * (signed __CPROVER_bitvector[44])((signed __CPROVER_bitvector[33])y#phi217 - (signed __CPROVER_bitvector[33])y#218) > 0)
+
+terminates: unknown
+
+Analyzing function __CPROVER__start
+Computing summary
+Computing termination argument for __CPROVER__start
+
+Summary for function __CPROVER__start
+params: 
+globals_in: 
+globals_out: 
+forward precondition: TRUE
+forward transformer: TRUE
+forward invariant: TRUE
+backward precondition: not computed
+backward postcondition: not computed
+backward transformer: not computed
+backward invariant: not computed
+termination argument: not computed
+terminates: unknown
+
+** statistics: 
+  number of solver instances: 2747621388
+  number of solver calls: 263675
+  number of summaries used: 4
+  number of termination arguments computed: 1
+
+
+** Termination: 
+[main]: unknown
+[__CPROVER_deallocate]: yes
+[__CPROVER_initialize]: yes
+[exit]: not computed
+[__CPROVER__start]: unknown
+VERIFICATION INCONCLUSIVE
+Runtime: 4522 milliseconds

@@ -1,0 +1,114 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.QruSSK
+
+Input File is : NonTerminationSimple7_false-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Date: 2014-06-26
+ * Author: leike@informatik.uni-freiburg.de
+ */
+
+extern int __VERIFIER_nondet_int();
+
+int main()
+{
+	int x = __VERIFIER_nondet_int();
+	int c = __VERIFIER_nondet_int();
+	
+	{if (c != 0) {
+		return 1;
+	}}
+	while (x >= 0) {
+		x += c;
+	}
+	return 0;
+}
+
+
+End Main   
+
+Input File is : NonTerminationSimple7_false-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Date: 2014-06-26
+ * Author: leike@informatik.uni-freiburg.de
+ */
+
+extern int __VERIFIER_nondet_int();
+
+int main()
+{
+	int x = __VERIFIER_nondet_int();
+	int c = __VERIFIER_nondet_int();
+	
+	{ __VERIFIER_reached_control(13, __func__);
+if (c != 0) { __VERIFIER_control_true(13, __func__);
+
+		return 1;
+	}}
+myBool pStored0 = myFalse; __VERIFIER_reached_control(16, __func__);
+	while (x >= 0) { __VERIFIER_loop_head(16, __func__);
+printf("CBMC Instrumentation @ line16");myBool flag=__VERIFIER_nondet_myBool();static int oc;static int ox;if(pStored0){__CPROVER_assert(!(oc==c && ox==x),"recurrent state found");} if(flag){oc=c;ox=x;pStored0=myTrue;} 
+		x += c;
+	}
+	return 0;
+}
+
+
+End Main 
+ NonTerminationSimple7_false-termination_braced_instrumented.c
+NTFILE is NonTerminationSimple7_false-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = NonTerminationSimple7_false-termination.c
+b'022d672d7ef0dc3bf4bd7ad47cae7eb3a7dda77dc60df29b79fed88ac3cb8d34  NonTerminationSimple7_false-termination.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/TermCOMP/C/Ultimate/NonTerminationSimple7_false-termination/NonTerminationSimple7_false-termination.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 13 reachedControl
+enteringLasso
+main 16 reachedControl
+main 16 loopHead
+main 16 reachedControl
+main 16 loopHead
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 163, in generateViolationWitness
+    nextLineNo = nextLineWords[-2]
+IndexError: list index out of range
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for NonTerminationSimple7_false-termination.c
+FILE=NonTerminationSimple7_false-termination_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 2003 milliseconds

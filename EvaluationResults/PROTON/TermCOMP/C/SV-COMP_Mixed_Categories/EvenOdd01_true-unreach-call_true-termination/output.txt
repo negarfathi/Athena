@@ -1,0 +1,166 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.ozV6Wv
+
+Input File is : EvenOdd01_true-unreach-call_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+/*
+ * Recursive implementation integer addition.
+ * 
+ * Author: Matthias Heizmann
+ * Date: 2013-07-13
+ * 
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int isOdd(int n);
+int isEven(int n);
+
+int isOdd(int n) {
+    {if (n == 0) {
+        return 0;
+    } else {if (n == 1) {
+        return 1;
+    } else {
+        return isEven(n - 1);
+    }}}
+}
+
+int isEven(int n) {
+    {if (n == 0) {
+        return 1;
+    } else {if (n == 1) {
+        return 0;
+    } else {
+        return isOdd(n - 1);
+    }}}
+}
+
+
+int main() {
+    int n = __VERIFIER_nondet_int();
+    {if (n < 0) {
+        return 0;
+    }}
+    int result = isOdd(n);
+    int mod = n % 2;
+    {if (result < 0 || result == mod) {
+        return 0;
+    } else {
+        ERROR: __VERIFIER_error();
+    }}
+}
+
+End Main   
+
+Input File is : EvenOdd01_true-unreach-call_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+
+/*
+ * Recursive implementation integer addition.
+ * 
+ * Author: Matthias Heizmann
+ * Date: 2013-07-13
+ * 
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int isOdd(int n);
+int isEven(int n);
+
+int isOdd(int n) {
+    { __VERIFIER_reached_control(17, __func__);
+if (n == 0) { __VERIFIER_control_true(17, __func__);
+
+        return 0;
+    } else { __VERIFIER_control_false(19, __func__);
+ __VERIFIER_reached_control(19, __func__);
+if (n == 1) { __VERIFIER_control_true(19, __func__);
+
+        return 1;
+    } else { __VERIFIER_control_false(21, __func__);
+
+        return isEven(n - 1);
+    }}}
+}
+
+int isEven(int n) {
+    { __VERIFIER_reached_control(27, __func__);
+if (n == 0) { __VERIFIER_control_true(27, __func__);
+
+        return 1;
+    } else { __VERIFIER_control_false(29, __func__);
+ __VERIFIER_reached_control(29, __func__);
+if (n == 1) { __VERIFIER_control_true(29, __func__);
+
+        return 0;
+    } else { __VERIFIER_control_false(31, __func__);
+
+        return isOdd(n - 1);
+    }}}
+}
+
+
+int main() {
+    int n = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(39, __func__);
+if (n < 0) { __VERIFIER_control_true(39, __func__);
+
+        return 0;
+    }}
+    int result = isOdd(n);
+    int mod = n % 2;
+    { __VERIFIER_reached_control(44, __func__);
+if (result < 0 || result == mod) { __VERIFIER_control_true(44, __func__);
+
+        return 0;
+    } else { __VERIFIER_control_false(46, __func__);
+
+        ERROR: __VERIFIER_error();
+    }}
+}
+
+End Main 
+ EvenOdd01_true-unreach-call_true-termination_braced_instrumented.c
+NTFILE is EvenOdd01_true-unreach-call_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+MISSING RSA
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for EvenOdd01_true-unreach-call_true-termination.c
+FILE=EvenOdd01_true-unreach-call_true-termination_braced_instrumented.c GLRES=0 Z3RES=0 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 2295 milliseconds

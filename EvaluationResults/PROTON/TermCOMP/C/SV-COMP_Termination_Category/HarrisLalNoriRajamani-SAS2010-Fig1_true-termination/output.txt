@@ -1,0 +1,155 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.LrxgXr
+
+Input File is : HarrisLalNoriRajamani-SAS2010-Fig1_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program from Fig.1 of
+ * 2010SAS - Harris, Lal, Nori, Rajamani - AlternationforTermination
+ *
+ * Date: 12.12.2013
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+
+void f(int d) {
+	int x = __VERIFIER_nondet_int();
+	int y = __VERIFIER_nondet_int();
+	int k = __VERIFIER_nondet_int();
+	int z = 1;
+	{if (k > 1073741823) {
+		return;
+	}}
+	// ...
+	L1:
+	while (z < k) {
+		z = 2 * z;
+	}
+	L2:
+	while (x > 0 && y > 0) {
+		// ...
+		{if (__VERIFIER_nondet_int()) {
+			P1:
+			x = x - d;
+			y = __VERIFIER_nondet_int();
+			z = z - 1;
+		} else {
+			y = y - d;
+		}}
+	}
+}
+
+int main() {
+	{if (__VERIFIER_nondet_int()) {
+		f(1);
+	} else {
+		f(2);
+	}}
+}
+
+End Main   
+
+Input File is : HarrisLalNoriRajamani-SAS2010-Fig1_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program from Fig.1 of
+ * 2010SAS - Harris, Lal, Nori, Rajamani - AlternationforTermination
+ *
+ * Date: 12.12.2013
+ * Author: heizmann@informatik.uni-freiburg.de
+ *
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+
+void f(int d) {
+	int x = __VERIFIER_nondet_int();
+	int y = __VERIFIER_nondet_int();
+	int k = __VERIFIER_nondet_int();
+	int z = 1;
+	{ __VERIFIER_reached_control(18, __func__);
+if (k > 1073741823) { __VERIFIER_control_true(18, __func__);
+
+		return;
+	}}
+	// ...
+	L1:
+myBool pStored0 = myFalse; __VERIFIER_reached_control(23, __func__);
+	while (z < k) { __VERIFIER_loop_head(23, __func__);
+printf("CBMC Instrumentation @ line23");myBool flag=__VERIFIER_nondet_myBool();static int od;static int ok;static int ox;static int oy;static int oz;if(pStored0){__CPROVER_assert(!(od==d && ok==k && ox==x && oy==y && oz==z),"recurrent state found");} if(flag){od=d;ok=k;ox=x;oy=y;oz=z;pStored0=myTrue;} 
+		z = 2 * z;
+	}
+	L2:
+myBool pStored1 = myFalse; __VERIFIER_reached_control(27, __func__);
+	while (x > 0 && y > 0) { __VERIFIER_loop_head(27, __func__);
+printf("CBMC Instrumentation @ line27");myBool flag=__VERIFIER_nondet_myBool();static int od;static int ok;static int ox;static int oy;static int oz;if(pStored1){__CPROVER_assert(!(od==d && ok==k && ox==x && oy==y && oz==z),"recurrent state found");} if(flag){od=d;ok=k;ox=x;oy=y;oz=z;pStored1=myTrue;} 
+		// ...
+		{ __VERIFIER_reached_control(29, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(29, __func__);
+
+			P1:
+			x = x - d;
+			y = __VERIFIER_nondet_int();
+			z = z - 1;
+		} else { __VERIFIER_control_false(34, __func__);
+
+			y = y - d;
+		}}
+	}
+}
+
+int main() {
+	{ __VERIFIER_reached_control(41, __func__);
+if (__VERIFIER_nondet_int()) { __VERIFIER_control_true(41, __func__);
+
+		f(1);
+	} else { __VERIFIER_control_false(43, __func__);
+
+		f(2);
+	}}
+}
+
+End Main 
+ HarrisLalNoriRajamani-SAS2010-Fig1_true-termination_braced_instrumented.c
+NTFILE is HarrisLalNoriRajamani-SAS2010-Fig1_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=6. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for HarrisLalNoriRajamani-SAS2010-Fig1_true-termination.c
+FILE=HarrisLalNoriRajamani-SAS2010-Fig1_true-termination_braced_instrumented.c GLRES=0 Z3RES=6 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 9595 milliseconds

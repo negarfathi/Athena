@@ -1,0 +1,98 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.bCzyv3
+
+Input File is : svcomp_delete_alloca_unsafe.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int length1 = __VERIFIER_nondet_int();
+    {if (length1 < 1) {
+        length1 = 1;
+    }}
+    char* x = (char*) alloca(length1 * sizeof(char));
+    char *y;
+    {if (x <= y && y < x + length1 * sizeof(char)) {
+        *y = 0;
+        while (*x != 0) {
+            *x = 0;
+            x++;
+	    }
+    }}
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_delete_alloca_unsafe_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int length1 = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(7, __func__);
+if (length1 < 1) { __VERIFIER_control_true(7, __func__);
+
+        length1 = 1;
+    }}
+    char* x = (char*) alloca(length1 * sizeof(char));
+    char *y;
+    { __VERIFIER_reached_control(12, __func__);
+if (x <= y && y < x + length1 * sizeof(char)) { __VERIFIER_control_true(12, __func__);
+
+        *y = 0;
+       myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+ while (*x != 0) { __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int olength1;static char * ox;static char * oy;if(pStored0){__CPROVER_assert(!(olength1==length1 && ox==x && oy==y),"recurrent state found");} if(flag){olength1=length1;ox=x;oy=y;pStored0=myTrue;} 
+            *x = 0;
+            x++;
+	    }
+    }}
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_delete_alloca_unsafe_braced_instrumented.c
+NTFILE is svcomp_delete_alloca_unsafe_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for svcomp_delete_alloca_unsafe.c
+FILE=svcomp_delete_alloca_unsafe_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 171651 milliseconds

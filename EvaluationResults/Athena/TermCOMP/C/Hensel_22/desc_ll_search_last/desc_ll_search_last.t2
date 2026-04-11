@@ -1,0 +1,80 @@
+///*** 1_main ***///
+START: main_bb9;
+
+
+
+FROM: main_bb9;
+memory0_freeIndex := 1;
+vmemory0 := nondet();
+v23 := nondet();
+var__temp_vj.0.i := 0;
+var__temp_vtail.0.i := 0;
+TO: main_bb9_end;
+
+FROM: main_bb9_end;
+assume(v23 < 1);
+TO: main_search.exit;
+
+FROM: main_bb9_end;
+assume(v23 >= 1);
+TO: main_bb10;
+
+FROM: main_bb10;
+vj.0.i := var__temp_vj.0.i;
+vtail.0.i := var__temp_vtail.0.i;
+var__temp_vcurr.0.i := vtail.0.i;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(vj.0.i < v23);
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(vj.0.i >= v23);
+TO: main_init_list.exit;
+
+FROM: main_bb11;
+v26 := memory0_freeIndex;
+v27 := memory0_freeIndex;
+v28 := v27 + 8;
+memory0_freeIndex := v28;
+v29 := v26;
+v30 := select_array(vmemory0, v29);
+v31v1 := select_tuple(v30, 1, 2);
+v31v2 := constr_tuple(vj.0.i, v31v1);
+vmemory0 := store_array(vmemory0, v29, v31v2);
+v32 := v26;
+v33 := select_array(vmemory0, v32);
+v34v0 := select_tuple(v33, 0, 2);
+v34v2 := constr_tuple(v34v0, vtail.0.i);
+vmemory0 := store_array(vmemory0, v32, v34v2);
+v35 := vj.0.i + 1;
+var__temp_vj.0.i := v35;
+var__temp_vtail.0.i := v26;
+TO: main_bb10;
+
+FROM: main_init_list.exit;
+vcurr.0.i := var__temp_vcurr.0.i;
+v36 := vcurr.0.i;
+v37 := select_array(vmemory0, v36);
+v39 := select_tuple(v37, 0, 2);
+TO: main_init_list.exit_end;
+
+FROM: main_init_list.exit_end;
+assume(v39 != 0);
+TO: main_bb12;
+
+FROM: main_init_list.exit_end;
+assume(v39 == 0);
+TO: main_search.exit;
+
+FROM: main_bb12;
+v41 := vcurr.0.i;
+v42 := select_array(vmemory0, v41);
+v44 := select_tuple(v42, 1, 2);
+var__temp_vcurr.0.i := v44;
+TO: main_init_list.exit;
+
+FROM: main_search.exit;
+TO: main_search.exit_ret;
+

@@ -1,0 +1,48 @@
+- entry_type: "violation_sequence"
+  metadata:
+    format_version: "2.0"
+    uuid: "0050ccc9-6975-3b4f-ab04-aea460b8e604"
+    creation_time: "2025-09-04T22:23:20Z"
+    producer:
+      name: "CPAchecker"
+      version: "4.0"
+    task:
+      input_files:
+      - "Benchmarks/FSE/loop/Unsigned_Wraparound_Error_4_NT/Unsigned_Wraparound_Error_4_NT.c"
+      input_file_hashes:
+        Benchmarks/FSE/loop/Unsigned_Wraparound_Error_4_NT/Unsigned_Wraparound_Error_4_NT.c: "fdd30432ba6617de5eb20a47d7530bed58a972d531cd69d566d59eb8976c2adb"
+      specification: "CHECK( init(main()), LTL(G ! overflow) )"
+      data_model: "LP64"
+      language: "C"
+  content:
+  - segment:
+    - waypoint:
+        type: "branching"
+        action: "follow"
+        constraint:
+          value: "true"
+        location:
+          file_name: "Benchmarks/FSE/loop/Unsigned_Wraparound_Error_4_NT/Unsigned_Wraparound_Error_4_NT.c"
+          line: 14
+          column: 5
+          function: "main"
+  - segment:
+    - waypoint:
+        type: "branching"
+        action: "follow"
+        constraint:
+          value: "false"
+        location:
+          file_name: "Benchmarks/FSE/loop/Unsigned_Wraparound_Error_4_NT/Unsigned_Wraparound_Error_4_NT.c"
+          line: 17
+          column: 9
+          function: "main"
+  - segment:
+    - waypoint:
+        type: "target"
+        action: "follow"
+        location:
+          file_name: "Benchmarks/FSE/loop/Unsigned_Wraparound_Error_4_NT/Unsigned_Wraparound_Error_4_NT.c"
+          line: 19
+          column: 9
+          function: "main"

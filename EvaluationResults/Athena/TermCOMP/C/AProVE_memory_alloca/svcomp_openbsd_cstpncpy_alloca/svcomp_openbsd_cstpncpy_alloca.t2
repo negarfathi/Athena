@@ -1,0 +1,131 @@
+///*** 1_main ***///
+START: main_bb10;
+
+
+
+FROM: main_bb10;
+memory0_freeIndex := 1;
+memory1_freeIndex := 1;
+vmemory0 := nondet();
+vmemory1 := nondet();
+v27 := nondet();
+v28 := nondet();
+TO: main_bb10_v.;
+FROM: main_bb10_v.;
+assume(v27 < 1);
+v. := 1;
+TO: main_bb10_sv.;
+
+FROM: main_bb10_v.;
+assume(v27 >= 1);
+v. := v27;
+TO: main_bb10_sv.;
+
+FROM: main_bb10_sv.;
+TO: main_bb10_vn.0;
+FROM: main_bb10_vn.0;
+assume(v28 < 1);
+vn.0 := 1;
+TO: main_bb10_svn.0;
+
+FROM: main_bb10_vn.0;
+assume(v28 >= 1);
+vn.0 := v28;
+TO: main_bb10_svn.0;
+
+FROM: main_bb10_svn.0;
+v31 := vn.0 * 1;
+v32 := memory1_freeIndex;
+v33 := memory1_freeIndex;
+v34 := v33 + v31;
+memory1_freeIndex := v34;
+v35 := v. * 1;
+v36 := memory0_freeIndex;
+v37 := memory0_freeIndex;
+v38 := v37 + v35;
+memory0_freeIndex := v38;
+v39 := v. - 1;
+v40 := v36 + v39;
+v41 := v40;
+v42 := v41;
+vmemory0 := store_array(vmemory0, v42, 0);
+v43 := vn.0;
+var__temp_vs.0.i := v36;
+var__temp_vd.0.i := v32;
+var__temp_v.01.i := v43;
+TO: main_bb10_end;
+
+FROM: main_bb10_end;
+assume(v43 != 0);
+TO: main_bb11;
+
+FROM: main_bb10_end;
+assume(v43 == 0);
+TO: main_cstpncpy.exit;
+
+FROM: main_bb11;
+vs.0.i := var__temp_vs.0.i;
+vd.0.i := var__temp_vd.0.i;
+v.01.i := var__temp_v.01.i;
+v45 := vs.0.i + 1;
+v46 := vs.0.i;
+v47 := v46;
+v48 := select_array(vmemory0, v47);
+v49 := vd.0.i + 1;
+v50 := vd.0.i;
+v51 := v50;
+vmemory1 := store_array(vmemory1, v51, v48);
+v52 := v48;
+var__temp_vd.1.i := v49;
+var__temp_v.12.i := v.01.i;
+TO: main_bb11_end;
+
+FROM: main_bb11_end;
+assume(v52 == 0);
+TO: main_bb12;
+
+FROM: main_bb11_end;
+assume(v52 != 0);
+TO: main_bb14;
+
+FROM: main_bb12;
+vd.1.i := var__temp_vd.1.i;
+v.12.i := var__temp_v.12.i;
+v54 := v.12.i + -1;
+TO: main_bb12_end;
+
+FROM: main_bb12_end;
+assume(v54 != 0);
+TO: main_bb13;
+
+FROM: main_bb12_end;
+assume(v54 == 0);
+TO: main_cstpncpy.exit;
+
+FROM: main_bb13;
+v56 := vd.1.i + 1;
+v57 := vd.1.i;
+v58 := v57;
+vmemory1 := store_array(vmemory1, v58, 0);
+var__temp_vd.1.i := v56;
+var__temp_v.12.i := v54;
+TO: main_bb12;
+
+FROM: main_bb14;
+v59 := v.01.i + -1;
+var__temp_vs.0.i := v45;
+var__temp_vd.0.i := v49;
+var__temp_v.01.i := v59;
+TO: main_bb14_end;
+
+FROM: main_bb14_end;
+assume(v59 != 0);
+TO: main_bb11;
+
+FROM: main_bb14_end;
+assume(v59 == 0);
+TO: main_cstpncpy.exit;
+
+FROM: main_cstpncpy.exit;
+TO: main_cstpncpy.exit_ret;
+

@@ -1,0 +1,136 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.MVDIxy
+
+Input File is : standard_copy7_true-unreach-call_ground.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+void __VERIFIER_assert(int cond) { {if(!(cond)) { ERROR: __VERIFIER_error(); }} }
+int main( ) {
+  int a1[100000];
+  int a2[100000];
+  int a3[100000];
+  int a4[100000];
+  int a5[100000];
+  int a6[100000];
+  int a7[100000];
+  int a8[100000];
+  int i;
+  for ( i = 0 ; i < 100000 ; i++ ) {
+    a2[i] = a1[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {
+    a3[i] = a2[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {
+    a4[i] = a3[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {
+    a5[i] = a4[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {
+    a6[i] = a5[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {
+    a7[i] = a6[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {
+    a8[i] = a7[i];
+  }
+  int x;
+  for ( x = 0 ; x < 100000 ; x++ ) {
+    __VERIFIER_assert( a1[x] == a8[x] );
+  }
+  return 0;
+}
+
+End Main   
+
+Input File is : standard_copy7_true-unreach-call_ground_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern void __VERIFIER_error() __attribute__ ((__noreturn__));
+void __VERIFIER_assert(int cond) { { __VERIFIER_reached_control(2, __func__);
+if(!(cond)) { __VERIFIER_control_true(2, __func__);
+ ERROR: __VERIFIER_error(); }} }
+int main( ) {
+  int a1[100000];
+  int a2[100000];
+  int a3[100000];
+  int a4[100000];
+  int a5[100000];
+  int a6[100000];
+  int a7[100000];
+  int a8[100000];
+  int i;
+  for ( i = 0 ; i < 100000 ; i++ ) {printf("ArrayNT State @ line13: Array Found\n");
+    a2[i] = a1[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {printf("ArrayNT State @ line16: Array Found\n");
+    a3[i] = a2[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {printf("ArrayNT State @ line19: Array Found\n");
+    a4[i] = a3[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {printf("ArrayNT State @ line22: Array Found\n");
+    a5[i] = a4[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {printf("ArrayNT State @ line25: Array Found\n");
+    a6[i] = a5[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {printf("ArrayNT State @ line28: Array Found\n");
+    a7[i] = a6[i];
+  }
+  for ( i = 0 ; i < 100000 ; i++ ) {printf("ArrayNT State @ line31: Array Found\n");
+    a8[i] = a7[i];
+  }
+  int x;
+ myBool pStored0 = myFalse; __VERIFIER_reached_control(35, __func__);
+ for ( x = 0 ; x < 100000 ; x++ ) { __VERIFIER_loop_head(35, __func__);
+printf("CBMC Instrumentation @ line35");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int ox;if(pStored0){__CPROVER_assert(!(oi==i && ox==x),"recurrent state found");} if(flag){oi=i;ox=x;pStored0=myTrue;} 
+    __VERIFIER_assert( a1[x] == a8[x] );
+  }
+  return 0;
+}
+
+End Main 
+ standard_copy7_true-unreach-call_ground_braced_instrumented.c
+NTFILE is standard_copy7_true-unreach-call_ground_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+/opt/term/proton/llm-t-check.sh
+llm-t-check has execute permission
+LLM_T_CHECK EXIT VAL 1
+T-CHECKRESULT. TRES=1
+NTRES=0 TRES=1 for standard_copy7_true-unreach-call_ground.c
+FILE=standard_copy7_true-unreach-call_ground_braced_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=1 TNT-RESULT=DEFAULT INCONCLUSIVE EXITCODE=3
+INCONCLUSIVE
+Runtime: 127261 milliseconds

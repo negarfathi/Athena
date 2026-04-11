@@ -1,0 +1,6 @@
+line 55:5 extraneous input 'metadata' expecting EXCLAMATION
+line 55:25 no viable alternative at input '!'
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+/Users/nfathi2/Desktop/run_AProVE.sh: line 39:  3170 Killed: 9               timeout --kill-after=10 "$timeout" docker run --rm --platform linux/amd64 -v "$root_directory":/liveness_analysis --entrypoint java aprove -ea -jar /opt/aprove/aprove.jar -m wst --bit-width 64 "/liveness_analysis/Benchmarks/$path_postfix"
+Runtime: 910045 milliseconds

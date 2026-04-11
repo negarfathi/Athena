@@ -1,0 +1,109 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.27Vk1T
+
+Input File is : svcomp_b.03_assume-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int test_fun(int x, int y)
+{
+    int* x_ref = alloca(sizeof(int));
+    int* y_ref = alloca(sizeof(int));
+    *x_ref = x;
+    *y_ref = y;
+    {if (*x_ref <= 0) {
+        // replace assume
+        return *y_ref;
+    }}
+    while (*x_ref > *y_ref) {
+        {if (*x_ref <= 0) {
+            // replace assume
+            return *y_ref;
+        }}
+        *y_ref = *y_ref + *x_ref;
+    }
+    return *y_ref;
+}
+
+int main() {
+  return test_fun(__VERIFIER_nondet_int(),__VERIFIER_nondet_int());
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_b.03_assume-alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int test_fun(int x, int y)
+{
+    int* x_ref = alloca(sizeof(int));
+    int* y_ref = alloca(sizeof(int));
+    *x_ref = x;
+    *y_ref = y;
+    { __VERIFIER_reached_control(11, __func__);
+if (*x_ref <= 0) { __VERIFIER_control_true(11, __func__);
+
+        // replace assume
+        return *y_ref;
+    }}
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(15, __func__);
+ while (*x_ref > *y_ref) { __VERIFIER_loop_head(15, __func__);
+printf("CBMC Instrumentation @ line15");myBool flag=__VERIFIER_nondet_myBool();static int ox;static int * ox_ref;static int ox_ref_val;static int oy;static int * oy_ref;static int oy_ref_val;if(pStored0){__CPROVER_assert(!(ox==x && ox_ref==x_ref && *ox_ref==*x_ref && ox_ref_val==*x_ref && oy==y && oy_ref==y_ref && *oy_ref==*y_ref && oy_ref_val==*y_ref),"recurrent state found");} if(flag){ox=x;ox_ref=x_ref;*ox_ref=*x_ref;ox_ref_val=*x_ref;oy=y;oy_ref=y_ref;*oy_ref=*y_ref;oy_ref_val=*y_ref;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(16, __func__);
+if (*x_ref <= 0) { __VERIFIER_control_true(16, __func__);
+
+            // replace assume
+            return *y_ref;
+        }}
+        *y_ref = *y_ref + *x_ref;
+    }
+    return *y_ref;
+}
+
+int main() {
+  return test_fun(__VERIFIER_nondet_int(),__VERIFIER_nondet_int());
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_b.03_assume-alloca_braced_instrumented.c
+NTFILE is svcomp_b.03_assume-alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_b.03_assume-alloca.c
+FILE=svcomp_b.03_assume-alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183326 milliseconds

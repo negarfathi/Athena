@@ -1,0 +1,198 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.KNnuOE
+
+Input File is : Using_Erroneous_Condition_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 0a8633d07e660813f630e4ab389bb4da9be8bb63
+URL: https://github.com/rkd77/elinks/commit/0a8633d07e660813f630e4ab389bb4da9be8bb63
+Project Name: elinks
+License: GPL2
+termination: TRUE
+*/
+typedef struct Node{
+    int size;
+    int selected;
+}Node;
+
+
+
+int main()
+{
+    Node* menu =(Node*)malloc(sizeof(Node));
+    menu->selected = __VERIFIER_nondet_int();
+    menu->size = __VERIFIER_nondet_int();
+    {if( menu->selected <= -2 || menu->size < 1 )
+        {return 0;}}
+    int pos = menu->selected;
+    int direction;
+    int action_id =  __VERIFIER_nondet_int();
+    {if( action_id > 0 && pos >= 1 )
+    {
+        pos--;
+        direction = -1;
+    }
+    else
+    {
+        pos++;
+        direction = 1;
+    }}
+    pos %= menu->size;
+    int start = pos;
+    do{
+        pos += direction;
+        {if( pos == menu->size ) {pos = 0;}
+        else {if( pos < 0 ) {pos = menu -> size - 1;}}}
+    }while( pos != start );
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Using_Erroneous_Condition_1_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 0a8633d07e660813f630e4ab389bb4da9be8bb63
+URL: https://github.com/rkd77/elinks/commit/0a8633d07e660813f630e4ab389bb4da9be8bb63
+Project Name: elinks
+License: GPL2
+termination: TRUE
+*/
+typedef struct Node{
+    int size;
+    int selected;
+}Node;
+
+
+
+int main()
+{
+    Node* menu =(Node*)malloc(sizeof(Node));
+    menu->selected = __VERIFIER_nondet_int();
+    menu->size = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(21, __func__);
+if( menu->selected <= -2 || menu->size < 1 )
+        { __VERIFIER_control_true(22, __func__);
+return 0;}}
+    int pos = menu->selected;
+    int direction;
+    int action_id =  __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(26, __func__);
+if( action_id > 0 && pos >= 1 )
+    { __VERIFIER_control_true(27, __func__);
+
+        pos--;
+        direction = -1;
+    }
+    else
+    { __VERIFIER_control_false(32, __func__);
+
+        pos++;
+        direction = 1;
+    }}
+    pos %= menu->size;
+    int start = pos;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(38, __func__);
+ do{ __VERIFIER_loop_head(38, __func__);
+printf("CBMC Instrumentation @ line38");myBool flag=__VERIFIER_nondet_myBool();static int oaction_id;static int odirection;static int opos;static int ostart;if(pStored0){__CPROVER_assert(!(oaction_id==action_id && odirection==direction && opos==pos && ostart==start),"recurrent state found");} if(flag){oaction_id=action_id;odirection=direction;opos=pos;ostart=start;pStored0=myTrue;} 
+        pos += direction;
+        { __VERIFIER_reached_control(40, __func__);
+if( pos == menu->size ) { __VERIFIER_control_true(40, __func__);
+pos = 0;}
+        else { __VERIFIER_control_false(41, __func__);
+ __VERIFIER_reached_control(41, __func__);
+if( pos < 0 ) { __VERIFIER_control_true(41, __func__);
+pos = menu -> size - 1;}}}
+    }while( pos != start );
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Using_Erroneous_Condition_1_T_braced_instrumented.c
+NTFILE is Using_Erroneous_Condition_1_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Using_Erroneous_Condition_1_T.c
+b'227b4c3e17c9f8b7791ba9bd4d688f52be2f1b92979bf896966a94a837cbb1ba  Using_Erroneous_Condition_1_T.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Using_Erroneous_Condition_1_T/Using_Erroneous_Condition_1_T.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 21 reachedControl
+main 26 reachedControl
+main 32 falseBranch
+main 38 reachedControl
+main 38 loopHead
+main 40 reachedControl
+main 41 falseBranch
+main 41 reachedControl
+main 41 trueBranch
+main 38 loopHead
+main 40 reachedControl
+main 40 trueBranch
+main 38 loopHead
+main 40 reachedControl
+main 41 falseBranch
+main 41 reachedControl
+main 38 loopHead
+main 40 reachedControl
+main 41 falseBranch
+main 41 reachedControl
+main 38 loopHead
+main 40 reachedControl
+main 41 falseBranch
+main 41 reachedControl
+main 38 loopHead
+main 40 reachedControl
+main 41 falseBranch
+main 41 reachedControl
+main 38 loopHead
+main 40 reachedControl
+main 41 falseBranch
+enteringLasso
+main 41 reachedControl
+main 38 loopHead
+main 40 reachedControl
+main 40 trueBranch
+main 38 loopHead
+Trace file line inside enterred lasso check : main 41 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Using_Erroneous_Condition_1_T/Using_Erroneous_Condition_1_T.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Using_Erroneous_Condition_1_T.c
+FILE=Using_Erroneous_Condition_1_T_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 6128 milliseconds

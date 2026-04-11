@@ -1,0 +1,100 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.hcCjT8
+
+Input File is : svcomp_GulwaniJainKoskinen-2009PLDI-Fig1_true-alloca.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  #include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int* id = alloca(sizeof(int));
+    int* maxId = alloca(sizeof(int));
+    *id = __VERIFIER_nondet_int();
+    *maxId = __VERIFIER_nondet_int();
+    
+    {if (0 <= *id && *id < *maxId) {
+        int* tmp = alloca(sizeof(int));
+        *tmp = *id + 1;
+        while (*tmp != *id && __VERIFIER_nondet_int()) {
+            {if (*tmp <= *maxId) {
+                *tmp = *tmp + 1;
+            } else {
+                *tmp = 0;
+            }}
+        }
+    }}
+    return 0;
+}./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : svcomp_GulwaniJainKoskinen-2009PLDI-Fig1_true-alloca_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+#include <stdlib.h>
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+    int* id = alloca(sizeof(int));
+    int* maxId = alloca(sizeof(int));
+    *id = __VERIFIER_nondet_int();
+    *maxId = __VERIFIER_nondet_int();
+    
+    { __VERIFIER_reached_control(11, __func__);
+if (0 <= *id && *id < *maxId) { __VERIFIER_control_true(11, __func__);
+
+        int* tmp = alloca(sizeof(int));
+        *tmp = *id + 1;
+       myBool pStored0 = myFalse; __VERIFIER_reached_control(14, __func__);
+ while (*tmp != *id && __VERIFIER_nondet_int()) { __VERIFIER_loop_head(14, __func__);
+printf("CBMC Instrumentation @ line14");myBool flag=__VERIFIER_nondet_myBool();static int * oid;static int oid_val;static int * omaxId;static int omaxId_val;static int * otmp;static int otmp_val;if(pStored0){__CPROVER_assert(!(oid==id && *oid==*id && oid_val==*id && omaxId==maxId && *omaxId==*maxId && omaxId_val==*maxId && otmp==tmp && *otmp==*tmp && otmp_val==*tmp),"recurrent state found");} if(flag){oid=id;*oid=*id;oid_val=*id;omaxId=maxId;*omaxId=*maxId;omaxId_val=*maxId;otmp=tmp;*otmp=*tmp;otmp_val=*tmp;pStored0=myTrue;} 
+            { __VERIFIER_reached_control(15, __func__);
+if (*tmp <= *maxId) { __VERIFIER_control_true(15, __func__);
+
+                *tmp = *tmp + 1;
+            } else { __VERIFIER_control_false(17, __func__);
+
+                *tmp = 0;
+            }}
+        }
+    }}
+    return 0;
+}./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+svcomp_GulwaniJainKoskinen-2009PLDI-Fig1_true-alloca_braced_instrumented.c
+NTFILE is svcomp_GulwaniJainKoskinen-2009PLDI-Fig1_true-alloca_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for svcomp_GulwaniJainKoskinen-2009PLDI-Fig1_true-alloca.c
+FILE=svcomp_GulwaniJainKoskinen-2009PLDI-Fig1_true-alloca_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 182541 milliseconds

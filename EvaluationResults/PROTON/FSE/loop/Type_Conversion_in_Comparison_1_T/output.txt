@@ -1,0 +1,72 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.c4nUBD
+
+Input File is : Type_Conversion_in_Comparison_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+End Main   
+
+Input File is : Type_Conversion_in_Comparison_1_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern unsigned short __VERIFIER_nondet_ushort(void);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: f9bfec180f91671d8ba72a01cab1781c1f5e9999
+URL: https://github.com/squireblackdens/daapd/commit/f9bfec180f91671d8ba72a01cab1781c1f5e9999
+Project Name: daapd
+License: GPL-2.0
+termination: TRUE
+*/
+int main()
+{
+    unsigned short int s, seqnum;
+    int len;
+    seqnum = __VERIFIER_nondet_ushort();
+    len = __VERIFIER_nondet_int();
+    int i;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(18, __func__);
+ for( i = 0, s = seqnum ; i < len; i++, s++ )
+    { __VERIFIER_loop_head(18, __func__);
+printf("CBMC Instrumentation @ line18");myBool flag=__VERIFIER_nondet_myBool();static int oi;static int olen;static unsigned short os;static unsigned short oseqnum;if(pStored0){__CPROVER_assert(!(oi==i && olen==len && os==s && oseqnum==seqnum),"recurrent state found");} if(flag){oi=i;olen=len;os=s;oseqnum=seqnum;pStored0=myTrue;} 
+
+    }
+    return 0;
+}
+
+End Main 
+ Type_Conversion_in_Comparison_1_T_instrumented.c
+NTFILE is Type_Conversion_in_Comparison_1_T_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=1. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for Type_Conversion_in_Comparison_1_T.c
+FILE=Type_Conversion_in_Comparison_1_T_instrumented.c GLRES=0 Z3RES=1 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 37694 milliseconds

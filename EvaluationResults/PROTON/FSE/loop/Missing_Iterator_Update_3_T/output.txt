@@ -1,0 +1,192 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.GQsbX8
+
+Input File is : Missing_Iterator_Update_3_T.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 8ddb6410edb0c4e87b4c6b9d0887868977c8eff5
+URL: https://github.com/mirror/busybox/commit/8ddb6410edb0c4e87b4c6b9d0887868977c8eff5
+Project Name: busybox
+License: GPL2
+termination: TRUE
+
+*/
+int flag = 0;
+int fopen_or_warn()
+{
+
+    flag++;
+    {if( flag > 10 )// avoid almost-sure
+        {return 0;}}
+    int i =  __VERIFIER_nondet_int();
+    {if( i >= 0 )
+        {return 0;}
+    else
+        {return i;}}
+}
+int main()
+{
+    int len = __VERIFIER_nondet_int();
+    {if( len <= 0 )
+        {return 0;}}
+    int argv1[len];
+    for( int i = 0 ; i < len - 1 ; i++ )
+        {argv1[i] = __VERIFIER_nondet_int();}
+    argv1[len-1] = 0;
+    int* argv = argv1;
+    int fp = 0;
+    goto GOT_NEW_FILE;
+    do{
+        {if( *argv > 0 )
+        {
+            fp = fopen_or_warn();
+            {if( fp == 0 )
+            {
+                argv++;
+                continue;
+            }}
+        }}
+        argv++;
+GOT_NEW_FILE:
+    fp++;
+    }while( *argv );
+    return 0;
+}
+./proton: line 26:    91 Aborted                 bracer -in $FILE_NAME -c
+
+Input File is : Missing_Iterator_Update_3_T_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+extern int __VERIFIER_nondet_int(void);
+/*
+Commit Number: 8ddb6410edb0c4e87b4c6b9d0887868977c8eff5
+URL: https://github.com/mirror/busybox/commit/8ddb6410edb0c4e87b4c6b9d0887868977c8eff5
+Project Name: busybox
+License: GPL2
+termination: TRUE
+
+*/
+int flag = 0;
+int fopen_or_warn()
+{
+
+    flag++;
+    { __VERIFIER_reached_control(15, __func__);
+if( flag > 10 )// avoid almost-sure
+        { __VERIFIER_control_true(16, __func__);
+return 0;}}
+    int i =  __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(18, __func__);
+if( i >= 0 )
+        { __VERIFIER_control_true(19, __func__);
+return 0;}
+    else
+        { __VERIFIER_control_false(21, __func__);
+return i;}}
+}
+int main()
+{
+    int len = __VERIFIER_nondet_int();
+    { __VERIFIER_reached_control(26, __func__);
+if( len <= 0 )
+        { __VERIFIER_control_true(27, __func__);
+return 0;}}
+    int argv1[len];
+    for( int i = 0 ; i < len - 1 ; i++ )
+        {printf("ArrayNT State @ line30: Array Found\n");argv1[i] = __VERIFIER_nondet_int();}
+    argv1[len-1] = 0;
+    int* argv = argv1;
+    int fp = 0;
+    goto GOT_NEW_FILE;
+   myBool pStored0 = myFalse; __VERIFIER_reached_control(35, __func__);
+ do{ __VERIFIER_loop_head(35, __func__);
+printf("CBMC Instrumentation @ line35");myBool flag=__VERIFIER_nondet_myBool();static int oflag;static int ofp;static int olen;if(pStored0){__CPROVER_assert(!(oflag==flag && ofp==fp && olen==len),"recurrent state found");} if(flag){oflag=flag;ofp=fp;olen=len;pStored0=myTrue;} 
+        { __VERIFIER_reached_control(36, __func__);
+if( *argv > 0 )
+        { __VERIFIER_control_true(37, __func__);
+
+            fp = fopen_or_warn();
+            { __VERIFIER_reached_control(39, __func__);
+if( fp == 0 )
+            { __VERIFIER_control_true(40, __func__);
+
+                argv++;
+                continue;
+            }}
+        }}
+        argv++;
+GOT_NEW_FILE:
+    fp++;
+    }while( *argv );
+    return 0;
+}
+./proton: line 26:   103 Aborted                 instrumenter -in *braced.c -c
+Missing_Iterator_Update_3_T_braced_instrumented.c
+NTFILE is Missing_Iterator_Update_3_T_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+ORIG CFILE = Missing_Iterator_Update_3_T.c
+b'89bbf353e457c240488cfb247ad29b3eef2a903288e4e399aed07a5518626b12  Missing_Iterator_Update_3_T.c\n'
+
+ Witness file name is /opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Missing_Iterator_Update_3_T/Missing_Iterator_Update_3_T.witness.graphml
+FINAL tracefilelines FIlE LINE ******************************
+
+main 26 reachedControl
+main 35 loopHead
+main 36 reachedControl
+main 37 trueBranch
+fopen_or_warn 15 reachedControl
+fopen_or_warn 18 reachedControl
+fopen_or_warn 21 falseBranch
+enteringLasso
+main 39 reachedControl
+main 35 loopHead
+main 36 reachedControl
+main 37 trueBranch
+fopen_or_warn 15 reachedControl
+fopen_or_warn 18 reachedControl
+fopen_or_warn 19 trueBranch
+main 39 reachedControl
+main 40 trueBranch
+main 35 loopHead
+Trace file line inside enterred lasso check : main 39 reachedControl
+Traceback (most recent call last):
+  File "/opt/term/proton/parse_trace_vf.py", line 303, in <module>
+    generateViolationWitness(processed_data)
+  File "/opt/term/proton/parse_trace_vf.py", line 211, in generateViolationWitness
+    nonTermWit_file = open(os.environ['WITNESS_FILENAME'], 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/term/proton//liveness_analysis/Benchmarks/FSE/loop/Missing_Iterator_Update_3_T/Missing_Iterator_Update_3_T.witness.graphml'
+NT-CHECKRESULT. GLRV=0. Z3RV=10. NTRES=1
+NTRES=1 TRES=10 for Missing_Iterator_Update_3_T.c
+FILE=Missing_Iterator_Update_3_T_braced_instrumented.c GLRES=0 Z3RES=10 NTRES=1 TRES=10 TNT-RESULT=FALSE(termination) EXITCODE=1
+FALSE(termination)
+Runtime: 3336 milliseconds

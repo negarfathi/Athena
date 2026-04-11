@@ -1,0 +1,44 @@
+line 129:5 extraneous input 'metadata' expecting EXCLAMATION
+line 129:25 no viable alternative at input '!'
+Graph finished, checking  consistency
+Graph finished, checked consistency, took 0.003s
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+No T2 installation found. 
+Set the 'T2_PATH' environment variable to point to the folder containing T2.exe and libz3.so / libz3.dll / libz3.dylib
+Running Thread.stop() against 1755917220Exec. 117, RankingReductionPairProcessor[GenerateFollowingInequalities=True]
+Stack trace:
+    app//aprove.Strategies.Abortions.PooledJob.finish(PooledJob.java:148)
+    app//aprove.Strategies.Abortions.PooledJob.run(PooledJob.java:125)
+    app//aprove.Strategies.Util.PrioritizableThreadPool$Worker.run(PrioritizableThreadPool.java:274)
+    java.base@17.0.15/java.lang.Thread.run(Thread.java:840)
+Threadpool thread died by not catching an exception
+java.lang.ThreadDeath
+	at java.base/java.lang.Thread.stop(Thread.java:949)
+	at aprove.Strategies.Abortions.PooledJob.kill(PooledJob.java:174)
+	at aprove.Strategies.Abortions.TrackThreadPool.kill(TrackThreadPool.java:42)
+	at aprove.Strategies.Abortions.TrackThread.checkKill(TrackThread.java:173)
+	at aprove.Strategies.Abortions.TrackThread.checkTime(TrackThread.java:110)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.doPoll(TimeRefresher.java:65)
+	at aprove.Strategies.Abortions.TimeRefresher$TimeRefresherThread.run(TimeRefresher.java:54)
+Runtime: 900910 milliseconds

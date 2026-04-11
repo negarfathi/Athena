@@ -1,0 +1,123 @@
+TOOL_DIR is /opt/term/proton
+BM_DIR = /tmp/PROTON-benchmark.2FzqnP
+
+Input File is : AliasDarteFeautrierGonnord-SAS2010-nestedLoop_true-termination.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Rewrite Buffer is not NULL
+
+Finished Rewriting  /*
+ * Program used in the experimental evaluation of the following paper.
+ * 2010SAS - Alias,Darte,Feautrier,Gonnord, Multi-dimensional Rankings, Program Termination, and Complexity Bounds of Flowchart Programs
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int i = __VERIFIER_nondet_int();
+	int j = __VERIFIER_nondet_int();
+	int k = __VERIFIER_nondet_int();
+	int n = __VERIFIER_nondet_int();
+	int m = __VERIFIER_nondet_int();
+	int N = __VERIFIER_nondet_int();
+	{if (0 <= n && 0 <= m && 0 <= N) {
+		i = 0;
+		while (i < n) {
+			j = 0;
+			while (j < m) {
+				j += 1;
+				k = i;
+				while (k < N)
+					{k += 1;}
+				i = k;
+			}
+			i++;
+		}
+	}}
+	return 0;
+}
+End Main   
+
+Input File is : AliasDarteFeautrierGonnord-SAS2010-nestedLoop_true-termination_braced.c
+
+ CBMC instrumentation
+
+Rewriter Init
+
+Finished call to function ParseAST   
+
+ Rewrite Buffer is Not NULL 
+
+Finished Rewriting 
+typedef enum {myFalse, myTrue} myBool; myBool __VERIFIER_nondet_myBool(void);
+extern void __VERIFIER_reached_control(int, char const *);
+extern void __VERIFIER_loop_head(int, char const *);
+extern void __VERIFIER_control_true(int, char const *);
+extern void __VERIFIER_control_false(int, char const *);
+/*
+ * Program used in the experimental evaluation of the following paper.
+ * 2010SAS - Alias,Darte,Feautrier,Gonnord, Multi-dimensional Rankings, Program Termination, and Complexity Bounds of Flowchart Programs
+ *
+ * Date: 2014
+ * Author: Caterina Urban
+ */
+
+extern int __VERIFIER_nondet_int(void);
+
+int main() {
+	int i = __VERIFIER_nondet_int();
+	int j = __VERIFIER_nondet_int();
+	int k = __VERIFIER_nondet_int();
+	int n = __VERIFIER_nondet_int();
+	int m = __VERIFIER_nondet_int();
+	int N = __VERIFIER_nondet_int();
+	{ __VERIFIER_reached_control(18, __func__);
+if (0 <= n && 0 <= m && 0 <= N) { __VERIFIER_control_true(18, __func__);
+
+		i = 0;
+	myBool pStored0 = myFalse; __VERIFIER_reached_control(20, __func__);
+	while (i < n) { __VERIFIER_loop_head(20, __func__);
+printf("CBMC Instrumentation @ line20");myBool flag=__VERIFIER_nondet_myBool();static int oN;static int oi;static int oj;static int ok;static int om;static int on;if(pStored0){__CPROVER_assert(!(oN==N && oi==i && oj==j && ok==k && om==m && on==n),"recurrent state found");} if(flag){oN=N;oi=i;oj=j;ok=k;om=m;on=n;pStored0=myTrue;} 
+			j = 0;
+		myBool pStored1 = myFalse; __VERIFIER_reached_control(22, __func__);
+	while (j < m) { __VERIFIER_loop_head(22, __func__);
+printf("CBMC Instrumentation @ line22");myBool flag=__VERIFIER_nondet_myBool();static int oN;static int oi;static int oj;static int ok;static int om;static int on;if(pStored1){__CPROVER_assert(!(oN==N && oi==i && oj==j && ok==k && om==m && on==n),"recurrent state found");} if(flag){oN=N;oi=i;oj=j;ok=k;om=m;on=n;pStored1=myTrue;} 
+				j += 1;
+				k = i;
+			myBool pStored2 = myFalse; __VERIFIER_reached_control(26, __func__);
+	while (k < N)
+					{ __VERIFIER_loop_head(26, __func__);
+printf("CBMC Instrumentation @ line26");myBool flag=__VERIFIER_nondet_myBool();static int oN;static int oi;static int oj;static int ok;static int om;static int on;if(pStored2){__CPROVER_assert(!(oN==N && oi==i && oj==j && ok==k && om==m && on==n),"recurrent state found");} if(flag){oN=N;oi=i;oj=j;ok=k;om=m;on=n;pStored2=myTrue;} k += 1;}
+				i = k;
+			}
+			i++;
+		}
+	}}
+	return 0;
+}
+End Main 
+ AliasDarteFeautrierGonnord-SAS2010-nestedLoop_true-termination_braced_instrumented.c
+NTFILE is AliasDarteFeautrierGonnord-SAS2010-nestedLoop_true-termination_braced_instrumented.c
+
+* *                 CBMC 5.95.0 (n/a) 64-bit                * *
+* *                 Copyright (C) 2001-2018                 * *
+* *              Daniel Kroening, Edmund Clarke             * *
+* * Carnegie Mellon University, Computer Science Department * *
+* *                  kroening@kroening.com                  * *
+* *        Protected in part by U.S. patent 7,225,417       * *
+* *  *****************************************************  * *
+* *                 Built with Llama                        * *
+* *  *****************************************************  * *
+
+NT-CHECKRESULT. GLRV=0. Z3RV=124. NTRES=0
+T-CHECKRESULT. TRES=0
+NTRES=0 TRES=0 for AliasDarteFeautrierGonnord-SAS2010-nestedLoop_true-termination.c
+FILE=AliasDarteFeautrierGonnord-SAS2010-nestedLoop_true-termination_braced_instrumented.c GLRES=0 Z3RES=124 NTRES=0 TRES=0 TNT-RESULT=TRUE EXITCODE=0
+TRUE
+Runtime: 183945 milliseconds

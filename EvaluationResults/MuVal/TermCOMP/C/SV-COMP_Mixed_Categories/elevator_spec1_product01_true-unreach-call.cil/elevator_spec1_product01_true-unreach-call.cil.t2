@@ -1,0 +1,7050 @@
+///*** 1_main ***///
+START: main_bb6756;
+
+FROM: main_bb6756;
+TO: main_bb6756_end;
+
+FROM: main_bb6756_end;
+assume(0 >= 0);
+TO: main_bb6757;
+
+FROM: main_bb6756_end;
+assume(1 >= 0);
+TO: main_runTest.exit;
+
+FROM: main_bb6757;
+landingButtons_spc1_0 := 0;
+landingButtons_spc1_1 := 0;
+landingButtons_spc1_2 := 0;
+landingButtons_spc1_3 := 0;
+landingButtons_spc1_4 := 0;
+personOnFloor_5_1 := 1;
+landingButtons_spc1_1 := 1;
+calls_1 := 1;
+personOnFloor_2_2 := 1;
+landingButtons_spc1_2 := 1;
+calls_2 := 1;
+v9478 := currentFloorID;
+TO: main_bb6757_end;
+
+FROM: main_bb6757_end;
+assume(v9478 < 2);
+TO: main_NodeBlock.i.i.i.i.i.i;
+
+FROM: main_bb6757_end;
+assume(v9478 >= 2);
+TO: main_NodeBlock5.i.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i.i.i.i.i;
+TO: main_NodeBlock.i.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i.i.i.i.i.i_end;
+assume(v9478 < 1);
+TO: main_LeafBlock.i.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i.i.i.i.i_end;
+assume(v9478 >= 1);
+TO: main_bb6758;
+
+FROM: main_LeafBlock.i.i.i.i.i.i;
+v9479 := calls_0;
+TO: main_LeafBlock.i.i.i.i.i.i_v.14.i.i.i.i.i;
+FROM: main_LeafBlock.i.i.i.i.i.i_v.14.i.i.i.i.i;
+assume(v9478 == 0);
+v.14.i.i.i.i.i := v9479;
+TO: main_LeafBlock.i.i.i.i.i.i_sv.14.i.i.i.i.i;
+
+FROM: main_LeafBlock.i.i.i.i.i.i_v.14.i.i.i.i.i;
+assume(v9478 != 0);
+v.14.i.i.i.i.i := 0;
+TO: main_LeafBlock.i.i.i.i.i.i_sv.14.i.i.i.i.i;
+
+FROM: main_LeafBlock.i.i.i.i.i.i_sv.14.i.i.i.i.i;
+var__temp_v.0.i.i.i.i.i.i := v.14.i.i.i.i.i;
+TO: main_isFloorCalling.exit.i.i.i.i.i;
+
+FROM: main_bb6758;
+v9480 := calls_1;
+var__temp_v.0.i.i.i.i.i.i := v9480;
+TO: main_isFloorCalling.exit.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i.i.i.i.i.i;
+TO: main_NodeBlock5.i.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i.i.i.i.i_end;
+assume(v9478 < 3);
+TO: main_bb6759;
+
+FROM: main_NodeBlock5.i.i.i.i.i.i_end;
+assume(v9478 >= 3);
+TO: main_NodeBlock3.i.i.i.i.i.i;
+
+FROM: main_bb6759;
+v9481 := calls_2;
+var__temp_v.0.i.i.i.i.i.i := v9481;
+TO: main_isFloorCalling.exit.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i.i.i.i.i.i;
+TO: main_NodeBlock3.i.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i.i.i.i.i_end;
+assume(v9478 < 4);
+TO: main_bb6760;
+
+FROM: main_NodeBlock3.i.i.i.i.i.i_end;
+assume(v9478 >= 4);
+TO: main_LeafBlock1.i.i.i.i.i.i;
+
+FROM: main_bb6760;
+v9482 := calls_3;
+var__temp_v.0.i.i.i.i.i.i := v9482;
+TO: main_isFloorCalling.exit.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i.i.i.i.i;
+v9483 := calls_4;
+TO: main_LeafBlock1.i.i.i.i.i.i_v.15.i.i.i.i.i;
+FROM: main_LeafBlock1.i.i.i.i.i.i_v.15.i.i.i.i.i;
+assume(v9478 == 4);
+v.15.i.i.i.i.i := v9483;
+TO: main_LeafBlock1.i.i.i.i.i.i_sv.15.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i.i.i.i.i_v.15.i.i.i.i.i;
+assume(v9478 != 4);
+v.15.i.i.i.i.i := 0;
+TO: main_LeafBlock1.i.i.i.i.i.i_sv.15.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i.i.i.i.i_sv.15.i.i.i.i.i;
+var__temp_v.0.i.i.i.i.i.i := v.15.i.i.i.i.i;
+TO: main_isFloorCalling.exit.i.i.i.i.i;
+
+FROM: main_isFloorCalling.exit.i.i.i.i.i;
+v.0.i.i.i.i.i.i := var__temp_v.0.i.i.i.i.i.i;
+var__temp_v.0.i.i.i.i.i := 1;
+TO: main_isFloorCalling.exit.i.i.i.i.i_end;
+
+FROM: main_isFloorCalling.exit.i.i.i.i.i_end;
+assume(v.0.i.i.i.i.i.i != 0);
+TO: main_stopRequestedAtCurrentFloor.exit.i.i.i.i;
+
+FROM: main_isFloorCalling.exit.i.i.i.i.i_end;
+assume(v.0.i.i.i.i.i.i == 0);
+TO: main_bb6761;
+
+FROM: main_bb6761;
+v9485 := currentFloorID;
+TO: main_bb6761_end;
+
+FROM: main_bb6761_end;
+assume(v9485 < 2);
+TO: main_NodeBlock.i3.i.i.i.i.i;
+
+FROM: main_bb6761_end;
+assume(v9485 >= 2);
+TO: main_NodeBlock5.i7.i.i.i.i.i;
+
+FROM: main_NodeBlock.i3.i.i.i.i.i;
+TO: main_NodeBlock.i3.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i3.i.i.i.i.i_end;
+assume(v9485 < 1);
+TO: main_LeafBlock.i5.i.i.i.i.i;
+
+FROM: main_NodeBlock.i3.i.i.i.i.i_end;
+assume(v9485 >= 1);
+TO: main_bb6762;
+
+FROM: main_LeafBlock.i5.i.i.i.i.i;
+v9486 := floorButtons_0;
+TO: main_LeafBlock.i5.i.i.i.i.i_v.16.i.i.i.i.i;
+FROM: main_LeafBlock.i5.i.i.i.i.i_v.16.i.i.i.i.i;
+assume(v9485 == 0);
+v.16.i.i.i.i.i := v9486;
+TO: main_LeafBlock.i5.i.i.i.i.i_sv.16.i.i.i.i.i;
+
+FROM: main_LeafBlock.i5.i.i.i.i.i_v.16.i.i.i.i.i;
+assume(v9485 != 0);
+v.16.i.i.i.i.i := 0;
+TO: main_LeafBlock.i5.i.i.i.i.i_sv.16.i.i.i.i.i;
+
+FROM: main_LeafBlock.i5.i.i.i.i.i_sv.16.i.i.i.i.i;
+var__temp_v.0.i13.i.i.i.i.i := v.16.i.i.i.i.i;
+TO: main_buttonForFloorIsPressed.exit.i.i.i.i.i;
+
+FROM: main_bb6762;
+v9487 := floorButtons_1;
+var__temp_v.0.i13.i.i.i.i.i := v9487;
+TO: main_buttonForFloorIsPressed.exit.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i7.i.i.i.i.i;
+TO: main_NodeBlock5.i7.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i7.i.i.i.i.i_end;
+assume(v9485 < 3);
+TO: main_bb6763;
+
+FROM: main_NodeBlock5.i7.i.i.i.i.i_end;
+assume(v9485 >= 3);
+TO: main_NodeBlock3.i9.i.i.i.i.i;
+
+FROM: main_bb6763;
+v9488 := floorButtons_2;
+var__temp_v.0.i13.i.i.i.i.i := v9488;
+TO: main_buttonForFloorIsPressed.exit.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i9.i.i.i.i.i;
+TO: main_NodeBlock3.i9.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i9.i.i.i.i.i_end;
+assume(v9485 < 4);
+TO: main_bb6764;
+
+FROM: main_NodeBlock3.i9.i.i.i.i.i_end;
+assume(v9485 >= 4);
+TO: main_LeafBlock1.i11.i.i.i.i.i;
+
+FROM: main_bb6764;
+v9489 := floorButtons_3;
+var__temp_v.0.i13.i.i.i.i.i := v9489;
+TO: main_buttonForFloorIsPressed.exit.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i11.i.i.i.i.i;
+v9490 := floorButtons_4;
+TO: main_LeafBlock1.i11.i.i.i.i.i_v.17.i.i.i.i.i;
+FROM: main_LeafBlock1.i11.i.i.i.i.i_v.17.i.i.i.i.i;
+assume(v9485 == 4);
+v.17.i.i.i.i.i := v9490;
+TO: main_LeafBlock1.i11.i.i.i.i.i_sv.17.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i11.i.i.i.i.i_v.17.i.i.i.i.i;
+assume(v9485 != 4);
+v.17.i.i.i.i.i := 0;
+TO: main_LeafBlock1.i11.i.i.i.i.i_sv.17.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i11.i.i.i.i.i_sv.17.i.i.i.i.i;
+var__temp_v.0.i13.i.i.i.i.i := v.17.i.i.i.i.i;
+TO: main_buttonForFloorIsPressed.exit.i.i.i.i.i;
+
+FROM: main_buttonForFloorIsPressed.exit.i.i.i.i.i;
+v.0.i13.i.i.i.i.i := var__temp_v.0.i13.i.i.i.i.i;
+TO: main_buttonForFloorIsPressed.exit.i.i.i.i.i_v..i.i.i.i.i;
+FROM: main_buttonForFloorIsPressed.exit.i.i.i.i.i_v..i.i.i.i.i;
+assume(v.0.i13.i.i.i.i.i != 0);
+v..i.i.i.i.i := 1;
+TO: main_buttonForFloorIsPressed.exit.i.i.i.i.i_sv..i.i.i.i.i;
+
+FROM: main_buttonForFloorIsPressed.exit.i.i.i.i.i_v..i.i.i.i.i;
+assume(v.0.i13.i.i.i.i.i == 0);
+v..i.i.i.i.i := 0;
+TO: main_buttonForFloorIsPressed.exit.i.i.i.i.i_sv..i.i.i.i.i;
+
+FROM: main_buttonForFloorIsPressed.exit.i.i.i.i.i_sv..i.i.i.i.i;
+var__temp_v.0.i.i.i.i.i := v..i.i.i.i.i;
+TO: main_stopRequestedAtCurrentFloor.exit.i.i.i.i;
+
+FROM: main_stopRequestedAtCurrentFloor.exit.i.i.i.i;
+v.0.i.i.i.i.i := var__temp_v.0.i.i.i.i.i;
+TO: main_stopRequestedAtCurrentFloor.exit.i.i.i.i_end;
+
+FROM: main_stopRequestedAtCurrentFloor.exit.i.i.i.i_end;
+assume(v.0.i.i.i.i.i != 0);
+TO: main_bb6765;
+
+FROM: main_stopRequestedAtCurrentFloor.exit.i.i.i.i_end;
+assume(v.0.i.i.i.i.i == 0);
+TO: main_bb6878;
+
+FROM: main_bb6765;
+doorState := 1;
+v9493 := persons_0;
+v9495 := currentFloorID;
+TO: main_bb6765_end;
+
+FROM: main_bb6765_end;
+assume((v9493 != 0) && (0 == v9495));
+TO: main_bb6766;
+
+FROM: main_bb6765_end;
+assume((v9493 == 0) || (0 != v9495));
+TO: main_bb6767;
+
+FROM: main_bb6766;
+persons_0 := 0;
+TO: main_bb6767;
+
+FROM: main_bb6767;
+v9497 := persons_1;
+v9499 := currentFloorID;
+TO: main_bb6767_end;
+
+FROM: main_bb6767_end;
+assume((v9497 != 0) && (0 == v9499));
+TO: main_bb6768;
+
+FROM: main_bb6767_end;
+assume((v9497 == 0) || (0 != v9499));
+TO: main_bb6769;
+
+FROM: main_bb6768;
+persons_1 := 0;
+TO: main_bb6769;
+
+FROM: main_bb6769;
+v9501 := persons_2;
+v9503 := currentFloorID;
+TO: main_bb6769_end;
+
+FROM: main_bb6769_end;
+assume((v9501 != 0) && (1 == v9503));
+TO: main_bb6770;
+
+FROM: main_bb6769_end;
+assume((v9501 == 0) || (1 != v9503));
+TO: main_bb6771;
+
+FROM: main_bb6770;
+persons_2 := 0;
+TO: main_bb6771;
+
+FROM: main_bb6771;
+v9505 := persons_3;
+v9507 := currentFloorID;
+TO: main_bb6771_end;
+
+FROM: main_bb6771_end;
+assume((v9505 != 0) && (3 == v9507));
+TO: main_bb6772;
+
+FROM: main_bb6771_end;
+assume((v9505 == 0) || (3 != v9507));
+TO: main_bb6773;
+
+FROM: main_bb6772;
+persons_3 := 0;
+TO: main_bb6773;
+
+FROM: main_bb6773;
+v9509 := persons_4;
+v9511 := currentFloorID;
+TO: main_bb6773_end;
+
+FROM: main_bb6773_end;
+assume((v9509 != 0) && (1 == v9511));
+TO: main_bb6774;
+
+FROM: main_bb6773_end;
+assume((v9509 == 0) || (1 != v9511));
+TO: main_bb6775;
+
+FROM: main_bb6774;
+persons_4 := 0;
+TO: main_bb6775;
+
+FROM: main_bb6775;
+v9513 := persons_5;
+v9515 := currentFloorID;
+TO: main_bb6775_end;
+
+FROM: main_bb6775_end;
+assume((v9513 != 0) && (3 == v9515));
+TO: main_bb6776;
+
+FROM: main_bb6775_end;
+assume((v9513 == 0) || (3 != v9515));
+TO: main_bb6777;
+
+FROM: main_bb6776;
+persons_5 := 0;
+TO: main_bb6777;
+
+FROM: main_bb6777;
+v9517 := currentFloorID;
+TO: main_bb6777_end;
+
+FROM: main_bb6777_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i.i39.i.i.i.i;
+
+FROM: main_bb6777_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i.i44.i.i.i.i;
+
+FROM: main_NodeBlock.i.i39.i.i.i.i;
+TO: main_NodeBlock.i.i39.i.i.i.i_end;
+
+FROM: main_NodeBlock.i.i39.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i.i42.i.i.i.i;
+
+FROM: main_NodeBlock.i.i39.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6778;
+
+FROM: main_LeafBlock.i.i42.i.i.i.i;
+v9518 := personOnFloor_0_0;
+TO: main_LeafBlock.i.i42.i.i.i.i_v..i41.i.i.i.i;
+FROM: main_LeafBlock.i.i42.i.i.i.i_v..i41.i.i.i.i;
+assume(v9517 == 0);
+v..i41.i.i.i.i := v9518;
+TO: main_LeafBlock.i.i42.i.i.i.i_sv..i41.i.i.i.i;
+
+FROM: main_LeafBlock.i.i42.i.i.i.i_v..i41.i.i.i.i;
+assume(v9517 != 0);
+v..i41.i.i.i.i := 0;
+TO: main_LeafBlock.i.i42.i.i.i.i_sv..i41.i.i.i.i;
+
+FROM: main_LeafBlock.i.i42.i.i.i.i_sv..i41.i.i.i.i;
+var__temp_v.0.i.i49.i.i.i.i := v..i41.i.i.i.i;
+TO: main_isPersonOnFloor.exit.i.i.i.i.i;
+
+FROM: main_bb6778;
+v9519 := personOnFloor_0_1;
+var__temp_v.0.i.i49.i.i.i.i := v9519;
+TO: main_isPersonOnFloor.exit.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i.i44.i.i.i.i;
+TO: main_NodeBlock5.i.i44.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i44.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6779;
+
+FROM: main_NodeBlock5.i.i44.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i.i46.i.i.i.i;
+
+FROM: main_bb6779;
+v9520 := personOnFloor_0_2;
+var__temp_v.0.i.i49.i.i.i.i := v9520;
+TO: main_isPersonOnFloor.exit.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i.i46.i.i.i.i;
+TO: main_NodeBlock3.i.i46.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i46.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6780;
+
+FROM: main_NodeBlock3.i.i46.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i.i48.i.i.i.i;
+
+FROM: main_bb6780;
+v9521 := personOnFloor_0_3;
+var__temp_v.0.i.i49.i.i.i.i := v9521;
+TO: main_isPersonOnFloor.exit.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i48.i.i.i.i;
+v9522 := personOnFloor_0_4;
+TO: main_LeafBlock1.i.i48.i.i.i.i_v.321.i.i.i.i.i;
+FROM: main_LeafBlock1.i.i48.i.i.i.i_v.321.i.i.i.i.i;
+assume(v9517 == 4);
+v.321.i.i.i.i.i := v9522;
+TO: main_LeafBlock1.i.i48.i.i.i.i_sv.321.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i48.i.i.i.i_v.321.i.i.i.i.i;
+assume(v9517 != 4);
+v.321.i.i.i.i.i := 0;
+TO: main_LeafBlock1.i.i48.i.i.i.i_sv.321.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i48.i.i.i.i_sv.321.i.i.i.i.i;
+var__temp_v.0.i.i49.i.i.i.i := v.321.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit.i.i.i.i.i;
+
+FROM: main_isPersonOnFloor.exit.i.i.i.i.i;
+v.0.i.i49.i.i.i.i := var__temp_v.0.i.i49.i.i.i.i;
+TO: main_isPersonOnFloor.exit.i.i.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit.i.i.i.i.i_end;
+assume(v.0.i.i49.i.i.i.i != 0);
+TO: main_bb6781;
+
+FROM: main_isPersonOnFloor.exit.i.i.i.i.i_end;
+assume(v.0.i.i49.i.i.i.i == 0);
+TO: main_bb6792;
+
+FROM: main_bb6781;
+TO: main_bb6781_end;
+
+FROM: main_bb6781_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i299.i.i.i.i.i;
+
+FROM: main_bb6781_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i303.i.i.i.i.i;
+
+FROM: main_NodeBlock.i299.i.i.i.i.i;
+TO: main_NodeBlock.i299.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i299.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i301.i.i.i.i.i;
+
+FROM: main_NodeBlock.i299.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6783;
+
+FROM: main_LeafBlock.i301.i.i.i.i.i;
+TO: main_LeafBlock.i301.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i301.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6782;
+
+FROM: main_LeafBlock.i301.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_NewDefault.i308.i.i.i.i.i;
+
+FROM: main_bb6782;
+personOnFloor_0_0 := 0;
+TO: main_NewDefault.i308.i.i.i.i.i;
+
+FROM: main_bb6783;
+personOnFloor_0_1 := 0;
+TO: main_NewDefault.i308.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i303.i.i.i.i.i;
+TO: main_NodeBlock5.i303.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i303.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6784;
+
+FROM: main_NodeBlock5.i303.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i305.i.i.i.i.i;
+
+FROM: main_bb6784;
+personOnFloor_0_2 := 0;
+TO: main_NewDefault.i308.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i305.i.i.i.i.i;
+TO: main_NodeBlock3.i305.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i305.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6785;
+
+FROM: main_NodeBlock3.i305.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i307.i.i.i.i.i;
+
+FROM: main_bb6785;
+personOnFloor_0_3 := 0;
+TO: main_NewDefault.i308.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i307.i.i.i.i.i;
+TO: main_LeafBlock1.i307.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i307.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6786;
+
+FROM: main_LeafBlock1.i307.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_NewDefault.i308.i.i.i.i.i;
+
+FROM: main_bb6786;
+personOnFloor_0_4 := 0;
+TO: main_NewDefault.i308.i.i.i.i.i;
+
+FROM: main_NewDefault.i308.i.i.i.i.i;
+TO: main_NewDefault.i308.i.i.i.i.i_end;
+
+FROM: main_NewDefault.i308.i.i.i.i.i_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i.i311.i.i.i.i.i;
+
+FROM: main_NewDefault.i308.i.i.i.i.i_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i.i315.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i311.i.i.i.i.i;
+TO: main_NodeBlock.i.i311.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i.i311.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i.i313.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i311.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6788;
+
+FROM: main_LeafBlock.i.i313.i.i.i.i.i;
+TO: main_LeafBlock.i.i313.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i.i313.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6787;
+
+FROM: main_LeafBlock.i.i313.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_removePersonFromFloor.exit320.i.i.i.i.i;
+
+FROM: main_bb6787;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit320.i.i.i.i.i;
+
+FROM: main_bb6788;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit320.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i.i315.i.i.i.i.i;
+TO: main_NodeBlock5.i.i315.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i315.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6789;
+
+FROM: main_NodeBlock5.i.i315.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i.i317.i.i.i.i.i;
+
+FROM: main_bb6789;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit320.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i.i317.i.i.i.i.i;
+TO: main_NodeBlock3.i.i317.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i317.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6790;
+
+FROM: main_NodeBlock3.i.i317.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i.i319.i.i.i.i.i;
+
+FROM: main_bb6790;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit320.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i319.i.i.i.i.i;
+TO: main_LeafBlock1.i.i319.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i319.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6791;
+
+FROM: main_LeafBlock1.i.i319.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_removePersonFromFloor.exit320.i.i.i.i.i;
+
+FROM: main_bb6791;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit320.i.i.i.i.i;
+
+FROM: main_removePersonFromFloor.exit320.i.i.i.i.i;
+floorButtons_0 := 1;
+persons_0 := 1;
+TO: main_bb6792;
+
+FROM: main_bb6792;
+TO: main_bb6792_end;
+
+FROM: main_bb6792_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i266.i.i.i.i.i;
+
+FROM: main_bb6792_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i270.i.i.i.i.i;
+
+FROM: main_NodeBlock.i266.i.i.i.i.i;
+TO: main_NodeBlock.i266.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i266.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i268.i.i.i.i.i;
+
+FROM: main_NodeBlock.i266.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6793;
+
+FROM: main_LeafBlock.i268.i.i.i.i.i;
+v9524 := personOnFloor_1_0;
+TO: main_LeafBlock.i268.i.i.i.i.i_v.322.i.i.i.i.i;
+FROM: main_LeafBlock.i268.i.i.i.i.i_v.322.i.i.i.i.i;
+assume(v9517 == 0);
+v.322.i.i.i.i.i := v9524;
+TO: main_LeafBlock.i268.i.i.i.i.i_sv.322.i.i.i.i.i;
+
+FROM: main_LeafBlock.i268.i.i.i.i.i_v.322.i.i.i.i.i;
+assume(v9517 != 0);
+v.322.i.i.i.i.i := 0;
+TO: main_LeafBlock.i268.i.i.i.i.i_sv.322.i.i.i.i.i;
+
+FROM: main_LeafBlock.i268.i.i.i.i.i_sv.322.i.i.i.i.i;
+var__temp_v.0.i276.i.i.i.i.i := v.322.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit277.i.i.i.i.i;
+
+FROM: main_bb6793;
+v9525 := personOnFloor_1_1;
+var__temp_v.0.i276.i.i.i.i.i := v9525;
+TO: main_isPersonOnFloor.exit277.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i270.i.i.i.i.i;
+TO: main_NodeBlock5.i270.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i270.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6794;
+
+FROM: main_NodeBlock5.i270.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i272.i.i.i.i.i;
+
+FROM: main_bb6794;
+v9526 := personOnFloor_1_2;
+var__temp_v.0.i276.i.i.i.i.i := v9526;
+TO: main_isPersonOnFloor.exit277.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i272.i.i.i.i.i;
+TO: main_NodeBlock3.i272.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i272.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6795;
+
+FROM: main_NodeBlock3.i272.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i274.i.i.i.i.i;
+
+FROM: main_bb6795;
+v9527 := personOnFloor_1_3;
+var__temp_v.0.i276.i.i.i.i.i := v9527;
+TO: main_isPersonOnFloor.exit277.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i274.i.i.i.i.i;
+v9528 := personOnFloor_1_4;
+TO: main_LeafBlock1.i274.i.i.i.i.i_v.323.i.i.i.i.i;
+FROM: main_LeafBlock1.i274.i.i.i.i.i_v.323.i.i.i.i.i;
+assume(v9517 == 4);
+v.323.i.i.i.i.i := v9528;
+TO: main_LeafBlock1.i274.i.i.i.i.i_sv.323.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i274.i.i.i.i.i_v.323.i.i.i.i.i;
+assume(v9517 != 4);
+v.323.i.i.i.i.i := 0;
+TO: main_LeafBlock1.i274.i.i.i.i.i_sv.323.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i274.i.i.i.i.i_sv.323.i.i.i.i.i;
+var__temp_v.0.i276.i.i.i.i.i := v.323.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit277.i.i.i.i.i;
+
+FROM: main_isPersonOnFloor.exit277.i.i.i.i.i;
+v.0.i276.i.i.i.i.i := var__temp_v.0.i276.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit277.i.i.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit277.i.i.i.i.i_end;
+assume(v.0.i276.i.i.i.i.i != 0);
+TO: main_bb6796;
+
+FROM: main_isPersonOnFloor.exit277.i.i.i.i.i_end;
+assume(v.0.i276.i.i.i.i.i == 0);
+TO: main_bb6807;
+
+FROM: main_bb6796;
+TO: main_bb6796_end;
+
+FROM: main_bb6796_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i242.i.i.i.i.i;
+
+FROM: main_bb6796_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i246.i.i.i.i.i;
+
+FROM: main_NodeBlock.i242.i.i.i.i.i;
+TO: main_NodeBlock.i242.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i242.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i244.i.i.i.i.i;
+
+FROM: main_NodeBlock.i242.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6798;
+
+FROM: main_LeafBlock.i244.i.i.i.i.i;
+TO: main_LeafBlock.i244.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i244.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6797;
+
+FROM: main_LeafBlock.i244.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_NewDefault.i251.i.i.i.i.i;
+
+FROM: main_bb6797;
+personOnFloor_1_0 := 0;
+TO: main_NewDefault.i251.i.i.i.i.i;
+
+FROM: main_bb6798;
+personOnFloor_1_1 := 0;
+TO: main_NewDefault.i251.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i246.i.i.i.i.i;
+TO: main_NodeBlock5.i246.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i246.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6799;
+
+FROM: main_NodeBlock5.i246.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i248.i.i.i.i.i;
+
+FROM: main_bb6799;
+personOnFloor_1_2 := 0;
+TO: main_NewDefault.i251.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i248.i.i.i.i.i;
+TO: main_NodeBlock3.i248.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i248.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6800;
+
+FROM: main_NodeBlock3.i248.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i250.i.i.i.i.i;
+
+FROM: main_bb6800;
+personOnFloor_1_3 := 0;
+TO: main_NewDefault.i251.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i250.i.i.i.i.i;
+TO: main_LeafBlock1.i250.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i250.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6801;
+
+FROM: main_LeafBlock1.i250.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_NewDefault.i251.i.i.i.i.i;
+
+FROM: main_bb6801;
+personOnFloor_1_4 := 0;
+TO: main_NewDefault.i251.i.i.i.i.i;
+
+FROM: main_NewDefault.i251.i.i.i.i.i;
+TO: main_NewDefault.i251.i.i.i.i.i_end;
+
+FROM: main_NewDefault.i251.i.i.i.i.i_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i.i254.i.i.i.i.i;
+
+FROM: main_NewDefault.i251.i.i.i.i.i_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i.i258.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i254.i.i.i.i.i;
+TO: main_NodeBlock.i.i254.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i.i254.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i.i256.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i254.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6803;
+
+FROM: main_LeafBlock.i.i256.i.i.i.i.i;
+TO: main_LeafBlock.i.i256.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i.i256.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6802;
+
+FROM: main_LeafBlock.i.i256.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_removePersonFromFloor.exit263.i.i.i.i.i;
+
+FROM: main_bb6802;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit263.i.i.i.i.i;
+
+FROM: main_bb6803;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit263.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i.i258.i.i.i.i.i;
+TO: main_NodeBlock5.i.i258.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i258.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6804;
+
+FROM: main_NodeBlock5.i.i258.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i.i260.i.i.i.i.i;
+
+FROM: main_bb6804;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit263.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i.i260.i.i.i.i.i;
+TO: main_NodeBlock3.i.i260.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i260.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6805;
+
+FROM: main_NodeBlock3.i.i260.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i.i262.i.i.i.i.i;
+
+FROM: main_bb6805;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit263.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i262.i.i.i.i.i;
+TO: main_LeafBlock1.i.i262.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i262.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6806;
+
+FROM: main_LeafBlock1.i.i262.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_removePersonFromFloor.exit263.i.i.i.i.i;
+
+FROM: main_bb6806;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit263.i.i.i.i.i;
+
+FROM: main_removePersonFromFloor.exit263.i.i.i.i.i;
+floorButtons_0 := 1;
+persons_1 := 1;
+TO: main_bb6807;
+
+FROM: main_bb6807;
+TO: main_bb6807_end;
+
+FROM: main_bb6807_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i209.i.i.i.i.i;
+
+FROM: main_bb6807_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i213.i.i.i.i.i;
+
+FROM: main_NodeBlock.i209.i.i.i.i.i;
+TO: main_NodeBlock.i209.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i209.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i211.i.i.i.i.i;
+
+FROM: main_NodeBlock.i209.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6808;
+
+FROM: main_LeafBlock.i211.i.i.i.i.i;
+v9530 := personOnFloor_2_0;
+TO: main_LeafBlock.i211.i.i.i.i.i_v.324.i.i.i.i.i;
+FROM: main_LeafBlock.i211.i.i.i.i.i_v.324.i.i.i.i.i;
+assume(v9517 == 0);
+v.324.i.i.i.i.i := v9530;
+TO: main_LeafBlock.i211.i.i.i.i.i_sv.324.i.i.i.i.i;
+
+FROM: main_LeafBlock.i211.i.i.i.i.i_v.324.i.i.i.i.i;
+assume(v9517 != 0);
+v.324.i.i.i.i.i := 0;
+TO: main_LeafBlock.i211.i.i.i.i.i_sv.324.i.i.i.i.i;
+
+FROM: main_LeafBlock.i211.i.i.i.i.i_sv.324.i.i.i.i.i;
+var__temp_v.0.i219.i.i.i.i.i := v.324.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit220.i.i.i.i.i;
+
+FROM: main_bb6808;
+v9531 := personOnFloor_2_1;
+var__temp_v.0.i219.i.i.i.i.i := v9531;
+TO: main_isPersonOnFloor.exit220.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i213.i.i.i.i.i;
+TO: main_NodeBlock5.i213.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i213.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6809;
+
+FROM: main_NodeBlock5.i213.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i215.i.i.i.i.i;
+
+FROM: main_bb6809;
+v9532 := personOnFloor_2_2;
+var__temp_v.0.i219.i.i.i.i.i := v9532;
+TO: main_isPersonOnFloor.exit220.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i215.i.i.i.i.i;
+TO: main_NodeBlock3.i215.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i215.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6810;
+
+FROM: main_NodeBlock3.i215.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i217.i.i.i.i.i;
+
+FROM: main_bb6810;
+v9533 := personOnFloor_2_3;
+var__temp_v.0.i219.i.i.i.i.i := v9533;
+TO: main_isPersonOnFloor.exit220.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i217.i.i.i.i.i;
+v9534 := personOnFloor_2_4;
+TO: main_LeafBlock1.i217.i.i.i.i.i_v.325.i.i.i.i.i;
+FROM: main_LeafBlock1.i217.i.i.i.i.i_v.325.i.i.i.i.i;
+assume(v9517 == 4);
+v.325.i.i.i.i.i := v9534;
+TO: main_LeafBlock1.i217.i.i.i.i.i_sv.325.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i217.i.i.i.i.i_v.325.i.i.i.i.i;
+assume(v9517 != 4);
+v.325.i.i.i.i.i := 0;
+TO: main_LeafBlock1.i217.i.i.i.i.i_sv.325.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i217.i.i.i.i.i_sv.325.i.i.i.i.i;
+var__temp_v.0.i219.i.i.i.i.i := v.325.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit220.i.i.i.i.i;
+
+FROM: main_isPersonOnFloor.exit220.i.i.i.i.i;
+v.0.i219.i.i.i.i.i := var__temp_v.0.i219.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit220.i.i.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit220.i.i.i.i.i_end;
+assume(v.0.i219.i.i.i.i.i != 0);
+TO: main_bb6811;
+
+FROM: main_isPersonOnFloor.exit220.i.i.i.i.i_end;
+assume(v.0.i219.i.i.i.i.i == 0);
+TO: main_bb6822;
+
+FROM: main_bb6811;
+TO: main_bb6811_end;
+
+FROM: main_bb6811_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i185.i.i.i.i.i;
+
+FROM: main_bb6811_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i189.i.i.i.i.i;
+
+FROM: main_NodeBlock.i185.i.i.i.i.i;
+TO: main_NodeBlock.i185.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i185.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i187.i.i.i.i.i;
+
+FROM: main_NodeBlock.i185.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6813;
+
+FROM: main_LeafBlock.i187.i.i.i.i.i;
+TO: main_LeafBlock.i187.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i187.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6812;
+
+FROM: main_LeafBlock.i187.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_NewDefault.i194.i.i.i.i.i;
+
+FROM: main_bb6812;
+personOnFloor_2_0 := 0;
+TO: main_NewDefault.i194.i.i.i.i.i;
+
+FROM: main_bb6813;
+personOnFloor_2_1 := 0;
+TO: main_NewDefault.i194.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i189.i.i.i.i.i;
+TO: main_NodeBlock5.i189.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i189.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6814;
+
+FROM: main_NodeBlock5.i189.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i191.i.i.i.i.i;
+
+FROM: main_bb6814;
+personOnFloor_2_2 := 0;
+TO: main_NewDefault.i194.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i191.i.i.i.i.i;
+TO: main_NodeBlock3.i191.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i191.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6815;
+
+FROM: main_NodeBlock3.i191.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i193.i.i.i.i.i;
+
+FROM: main_bb6815;
+personOnFloor_2_3 := 0;
+TO: main_NewDefault.i194.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i193.i.i.i.i.i;
+TO: main_LeafBlock1.i193.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i193.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6816;
+
+FROM: main_LeafBlock1.i193.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_NewDefault.i194.i.i.i.i.i;
+
+FROM: main_bb6816;
+personOnFloor_2_4 := 0;
+TO: main_NewDefault.i194.i.i.i.i.i;
+
+FROM: main_NewDefault.i194.i.i.i.i.i;
+TO: main_NewDefault.i194.i.i.i.i.i_end;
+
+FROM: main_NewDefault.i194.i.i.i.i.i_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i.i197.i.i.i.i.i;
+
+FROM: main_NewDefault.i194.i.i.i.i.i_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i.i201.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i197.i.i.i.i.i;
+TO: main_NodeBlock.i.i197.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i.i197.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i.i199.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i197.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6818;
+
+FROM: main_LeafBlock.i.i199.i.i.i.i.i;
+TO: main_LeafBlock.i.i199.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i.i199.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6817;
+
+FROM: main_LeafBlock.i.i199.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_removePersonFromFloor.exit206.i.i.i.i.i;
+
+FROM: main_bb6817;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit206.i.i.i.i.i;
+
+FROM: main_bb6818;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit206.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i.i201.i.i.i.i.i;
+TO: main_NodeBlock5.i.i201.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i201.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6819;
+
+FROM: main_NodeBlock5.i.i201.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i.i203.i.i.i.i.i;
+
+FROM: main_bb6819;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit206.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i.i203.i.i.i.i.i;
+TO: main_NodeBlock3.i.i203.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i203.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6820;
+
+FROM: main_NodeBlock3.i.i203.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i.i205.i.i.i.i.i;
+
+FROM: main_bb6820;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit206.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i205.i.i.i.i.i;
+TO: main_LeafBlock1.i.i205.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i205.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6821;
+
+FROM: main_LeafBlock1.i.i205.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_removePersonFromFloor.exit206.i.i.i.i.i;
+
+FROM: main_bb6821;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit206.i.i.i.i.i;
+
+FROM: main_removePersonFromFloor.exit206.i.i.i.i.i;
+floorButtons_1 := 1;
+persons_2 := 1;
+TO: main_bb6822;
+
+FROM: main_bb6822;
+TO: main_bb6822_end;
+
+FROM: main_bb6822_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i153.i.i.i.i.i;
+
+FROM: main_bb6822_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i157.i.i.i.i.i;
+
+FROM: main_NodeBlock.i153.i.i.i.i.i;
+TO: main_NodeBlock.i153.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i153.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i155.i.i.i.i.i;
+
+FROM: main_NodeBlock.i153.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6823;
+
+FROM: main_LeafBlock.i155.i.i.i.i.i;
+v9536 := personOnFloor_3_0;
+TO: main_LeafBlock.i155.i.i.i.i.i_v.326.i.i.i.i.i;
+FROM: main_LeafBlock.i155.i.i.i.i.i_v.326.i.i.i.i.i;
+assume(v9517 == 0);
+v.326.i.i.i.i.i := v9536;
+TO: main_LeafBlock.i155.i.i.i.i.i_sv.326.i.i.i.i.i;
+
+FROM: main_LeafBlock.i155.i.i.i.i.i_v.326.i.i.i.i.i;
+assume(v9517 != 0);
+v.326.i.i.i.i.i := 0;
+TO: main_LeafBlock.i155.i.i.i.i.i_sv.326.i.i.i.i.i;
+
+FROM: main_LeafBlock.i155.i.i.i.i.i_sv.326.i.i.i.i.i;
+var__temp_v.0.i163.i.i.i.i.i := v.326.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit164.i.i.i.i.i;
+
+FROM: main_bb6823;
+v9537 := personOnFloor_3_1;
+var__temp_v.0.i163.i.i.i.i.i := v9537;
+TO: main_isPersonOnFloor.exit164.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i157.i.i.i.i.i;
+TO: main_NodeBlock5.i157.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i157.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6824;
+
+FROM: main_NodeBlock5.i157.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i159.i.i.i.i.i;
+
+FROM: main_bb6824;
+v9538 := personOnFloor_3_2;
+var__temp_v.0.i163.i.i.i.i.i := v9538;
+TO: main_isPersonOnFloor.exit164.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i159.i.i.i.i.i;
+TO: main_NodeBlock3.i159.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i159.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6825;
+
+FROM: main_NodeBlock3.i159.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i161.i.i.i.i.i;
+
+FROM: main_bb6825;
+v9539 := personOnFloor_3_3;
+var__temp_v.0.i163.i.i.i.i.i := v9539;
+TO: main_isPersonOnFloor.exit164.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i161.i.i.i.i.i;
+v9540 := personOnFloor_3_4;
+TO: main_LeafBlock1.i161.i.i.i.i.i_v.327.i.i.i.i.i;
+FROM: main_LeafBlock1.i161.i.i.i.i.i_v.327.i.i.i.i.i;
+assume(v9517 == 4);
+v.327.i.i.i.i.i := v9540;
+TO: main_LeafBlock1.i161.i.i.i.i.i_sv.327.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i161.i.i.i.i.i_v.327.i.i.i.i.i;
+assume(v9517 != 4);
+v.327.i.i.i.i.i := 0;
+TO: main_LeafBlock1.i161.i.i.i.i.i_sv.327.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i161.i.i.i.i.i_sv.327.i.i.i.i.i;
+var__temp_v.0.i163.i.i.i.i.i := v.327.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit164.i.i.i.i.i;
+
+FROM: main_isPersonOnFloor.exit164.i.i.i.i.i;
+v.0.i163.i.i.i.i.i := var__temp_v.0.i163.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit164.i.i.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit164.i.i.i.i.i_end;
+assume(v.0.i163.i.i.i.i.i != 0);
+TO: main_bb6826;
+
+FROM: main_isPersonOnFloor.exit164.i.i.i.i.i_end;
+assume(v.0.i163.i.i.i.i.i == 0);
+TO: main_bb6837;
+
+FROM: main_bb6826;
+TO: main_bb6826_end;
+
+FROM: main_bb6826_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i129.i.i.i.i.i;
+
+FROM: main_bb6826_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i133.i.i.i.i.i;
+
+FROM: main_NodeBlock.i129.i.i.i.i.i;
+TO: main_NodeBlock.i129.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i129.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i131.i.i.i.i.i;
+
+FROM: main_NodeBlock.i129.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6828;
+
+FROM: main_LeafBlock.i131.i.i.i.i.i;
+TO: main_LeafBlock.i131.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i131.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6827;
+
+FROM: main_LeafBlock.i131.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_NewDefault.i138.i.i.i.i.i;
+
+FROM: main_bb6827;
+personOnFloor_3_0 := 0;
+TO: main_NewDefault.i138.i.i.i.i.i;
+
+FROM: main_bb6828;
+personOnFloor_3_1 := 0;
+TO: main_NewDefault.i138.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i133.i.i.i.i.i;
+TO: main_NodeBlock5.i133.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i133.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6829;
+
+FROM: main_NodeBlock5.i133.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i135.i.i.i.i.i;
+
+FROM: main_bb6829;
+personOnFloor_3_2 := 0;
+TO: main_NewDefault.i138.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i135.i.i.i.i.i;
+TO: main_NodeBlock3.i135.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i135.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6830;
+
+FROM: main_NodeBlock3.i135.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i137.i.i.i.i.i;
+
+FROM: main_bb6830;
+personOnFloor_3_3 := 0;
+TO: main_NewDefault.i138.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i137.i.i.i.i.i;
+TO: main_LeafBlock1.i137.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i137.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6831;
+
+FROM: main_LeafBlock1.i137.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_NewDefault.i138.i.i.i.i.i;
+
+FROM: main_bb6831;
+personOnFloor_3_4 := 0;
+TO: main_NewDefault.i138.i.i.i.i.i;
+
+FROM: main_NewDefault.i138.i.i.i.i.i;
+TO: main_NewDefault.i138.i.i.i.i.i_end;
+
+FROM: main_NewDefault.i138.i.i.i.i.i_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i.i141.i.i.i.i.i;
+
+FROM: main_NewDefault.i138.i.i.i.i.i_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i.i145.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i141.i.i.i.i.i;
+TO: main_NodeBlock.i.i141.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i.i141.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i.i143.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i141.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6833;
+
+FROM: main_LeafBlock.i.i143.i.i.i.i.i;
+TO: main_LeafBlock.i.i143.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i.i143.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6832;
+
+FROM: main_LeafBlock.i.i143.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_removePersonFromFloor.exit150.i.i.i.i.i;
+
+FROM: main_bb6832;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit150.i.i.i.i.i;
+
+FROM: main_bb6833;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit150.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i.i145.i.i.i.i.i;
+TO: main_NodeBlock5.i.i145.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i145.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6834;
+
+FROM: main_NodeBlock5.i.i145.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i.i147.i.i.i.i.i;
+
+FROM: main_bb6834;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit150.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i.i147.i.i.i.i.i;
+TO: main_NodeBlock3.i.i147.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i147.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6835;
+
+FROM: main_NodeBlock3.i.i147.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i.i149.i.i.i.i.i;
+
+FROM: main_bb6835;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit150.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i149.i.i.i.i.i;
+TO: main_LeafBlock1.i.i149.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i149.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6836;
+
+FROM: main_LeafBlock1.i.i149.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_removePersonFromFloor.exit150.i.i.i.i.i;
+
+FROM: main_bb6836;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit150.i.i.i.i.i;
+
+FROM: main_removePersonFromFloor.exit150.i.i.i.i.i;
+floorButtons_3 := 1;
+persons_3 := 1;
+TO: main_bb6837;
+
+FROM: main_bb6837;
+TO: main_bb6837_end;
+
+FROM: main_bb6837_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i99.i.i.i.i.i;
+
+FROM: main_bb6837_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i103.i.i.i.i.i;
+
+FROM: main_NodeBlock.i99.i.i.i.i.i;
+TO: main_NodeBlock.i99.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i99.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i101.i.i.i.i.i;
+
+FROM: main_NodeBlock.i99.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6838;
+
+FROM: main_LeafBlock.i101.i.i.i.i.i;
+v9542 := personOnFloor_4_0;
+TO: main_LeafBlock.i101.i.i.i.i.i_v.328.i.i.i.i.i;
+FROM: main_LeafBlock.i101.i.i.i.i.i_v.328.i.i.i.i.i;
+assume(v9517 == 0);
+v.328.i.i.i.i.i := v9542;
+TO: main_LeafBlock.i101.i.i.i.i.i_sv.328.i.i.i.i.i;
+
+FROM: main_LeafBlock.i101.i.i.i.i.i_v.328.i.i.i.i.i;
+assume(v9517 != 0);
+v.328.i.i.i.i.i := 0;
+TO: main_LeafBlock.i101.i.i.i.i.i_sv.328.i.i.i.i.i;
+
+FROM: main_LeafBlock.i101.i.i.i.i.i_sv.328.i.i.i.i.i;
+var__temp_v.0.i109.i.i.i.i.i := v.328.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit110.i.i.i.i.i;
+
+FROM: main_bb6838;
+v9543 := personOnFloor_4_1;
+var__temp_v.0.i109.i.i.i.i.i := v9543;
+TO: main_isPersonOnFloor.exit110.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i103.i.i.i.i.i;
+TO: main_NodeBlock5.i103.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i103.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6839;
+
+FROM: main_NodeBlock5.i103.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i105.i.i.i.i.i;
+
+FROM: main_bb6839;
+v9544 := personOnFloor_4_2;
+var__temp_v.0.i109.i.i.i.i.i := v9544;
+TO: main_isPersonOnFloor.exit110.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i105.i.i.i.i.i;
+TO: main_NodeBlock3.i105.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i105.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6840;
+
+FROM: main_NodeBlock3.i105.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i107.i.i.i.i.i;
+
+FROM: main_bb6840;
+v9545 := personOnFloor_4_3;
+var__temp_v.0.i109.i.i.i.i.i := v9545;
+TO: main_isPersonOnFloor.exit110.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i107.i.i.i.i.i;
+v9546 := personOnFloor_4_4;
+TO: main_LeafBlock1.i107.i.i.i.i.i_v.329.i.i.i.i.i;
+FROM: main_LeafBlock1.i107.i.i.i.i.i_v.329.i.i.i.i.i;
+assume(v9517 == 4);
+v.329.i.i.i.i.i := v9546;
+TO: main_LeafBlock1.i107.i.i.i.i.i_sv.329.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i107.i.i.i.i.i_v.329.i.i.i.i.i;
+assume(v9517 != 4);
+v.329.i.i.i.i.i := 0;
+TO: main_LeafBlock1.i107.i.i.i.i.i_sv.329.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i107.i.i.i.i.i_sv.329.i.i.i.i.i;
+var__temp_v.0.i109.i.i.i.i.i := v.329.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit110.i.i.i.i.i;
+
+FROM: main_isPersonOnFloor.exit110.i.i.i.i.i;
+v.0.i109.i.i.i.i.i := var__temp_v.0.i109.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit110.i.i.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit110.i.i.i.i.i_end;
+assume(v.0.i109.i.i.i.i.i != 0);
+TO: main_bb6841;
+
+FROM: main_isPersonOnFloor.exit110.i.i.i.i.i_end;
+assume(v.0.i109.i.i.i.i.i == 0);
+TO: main_bb6852;
+
+FROM: main_bb6841;
+TO: main_bb6841_end;
+
+FROM: main_bb6841_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i75.i.i.i.i.i;
+
+FROM: main_bb6841_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i79.i.i.i.i.i;
+
+FROM: main_NodeBlock.i75.i.i.i.i.i;
+TO: main_NodeBlock.i75.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i75.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i77.i.i.i.i.i;
+
+FROM: main_NodeBlock.i75.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6843;
+
+FROM: main_LeafBlock.i77.i.i.i.i.i;
+TO: main_LeafBlock.i77.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i77.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6842;
+
+FROM: main_LeafBlock.i77.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_NewDefault.i84.i.i.i.i.i;
+
+FROM: main_bb6842;
+personOnFloor_4_0 := 0;
+TO: main_NewDefault.i84.i.i.i.i.i;
+
+FROM: main_bb6843;
+personOnFloor_4_1 := 0;
+TO: main_NewDefault.i84.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i79.i.i.i.i.i;
+TO: main_NodeBlock5.i79.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i79.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6844;
+
+FROM: main_NodeBlock5.i79.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i81.i.i.i.i.i;
+
+FROM: main_bb6844;
+personOnFloor_4_2 := 0;
+TO: main_NewDefault.i84.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i81.i.i.i.i.i;
+TO: main_NodeBlock3.i81.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i81.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6845;
+
+FROM: main_NodeBlock3.i81.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i83.i.i.i.i.i;
+
+FROM: main_bb6845;
+personOnFloor_4_3 := 0;
+TO: main_NewDefault.i84.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i83.i.i.i.i.i;
+TO: main_LeafBlock1.i83.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i83.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6846;
+
+FROM: main_LeafBlock1.i83.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_NewDefault.i84.i.i.i.i.i;
+
+FROM: main_bb6846;
+personOnFloor_4_4 := 0;
+TO: main_NewDefault.i84.i.i.i.i.i;
+
+FROM: main_NewDefault.i84.i.i.i.i.i;
+TO: main_NewDefault.i84.i.i.i.i.i_end;
+
+FROM: main_NewDefault.i84.i.i.i.i.i_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i.i87.i.i.i.i.i;
+
+FROM: main_NewDefault.i84.i.i.i.i.i_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i.i91.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i87.i.i.i.i.i;
+TO: main_NodeBlock.i.i87.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i.i87.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i.i89.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i87.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6848;
+
+FROM: main_LeafBlock.i.i89.i.i.i.i.i;
+TO: main_LeafBlock.i.i89.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i.i89.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6847;
+
+FROM: main_LeafBlock.i.i89.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_removePersonFromFloor.exit96.i.i.i.i.i;
+
+FROM: main_bb6847;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit96.i.i.i.i.i;
+
+FROM: main_bb6848;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit96.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i.i91.i.i.i.i.i;
+TO: main_NodeBlock5.i.i91.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i91.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6849;
+
+FROM: main_NodeBlock5.i.i91.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i.i93.i.i.i.i.i;
+
+FROM: main_bb6849;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit96.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i.i93.i.i.i.i.i;
+TO: main_NodeBlock3.i.i93.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i93.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6850;
+
+FROM: main_NodeBlock3.i.i93.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i.i95.i.i.i.i.i;
+
+FROM: main_bb6850;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit96.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i95.i.i.i.i.i;
+TO: main_LeafBlock1.i.i95.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i95.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6851;
+
+FROM: main_LeafBlock1.i.i95.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_removePersonFromFloor.exit96.i.i.i.i.i;
+
+FROM: main_bb6851;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit96.i.i.i.i.i;
+
+FROM: main_removePersonFromFloor.exit96.i.i.i.i.i;
+floorButtons_1 := 1;
+persons_4 := 1;
+TO: main_bb6852;
+
+FROM: main_bb6852;
+TO: main_bb6852_end;
+
+FROM: main_bb6852_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i44.i.i.i.i.i;
+
+FROM: main_bb6852_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i48.i.i.i.i.i;
+
+FROM: main_NodeBlock.i44.i.i.i.i.i;
+TO: main_NodeBlock.i44.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i44.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i46.i.i.i.i.i;
+
+FROM: main_NodeBlock.i44.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6853;
+
+FROM: main_LeafBlock.i46.i.i.i.i.i;
+v9548 := personOnFloor_5_0;
+TO: main_LeafBlock.i46.i.i.i.i.i_v.330.i.i.i.i.i;
+FROM: main_LeafBlock.i46.i.i.i.i.i_v.330.i.i.i.i.i;
+assume(v9517 == 0);
+v.330.i.i.i.i.i := v9548;
+TO: main_LeafBlock.i46.i.i.i.i.i_sv.330.i.i.i.i.i;
+
+FROM: main_LeafBlock.i46.i.i.i.i.i_v.330.i.i.i.i.i;
+assume(v9517 != 0);
+v.330.i.i.i.i.i := 0;
+TO: main_LeafBlock.i46.i.i.i.i.i_sv.330.i.i.i.i.i;
+
+FROM: main_LeafBlock.i46.i.i.i.i.i_sv.330.i.i.i.i.i;
+var__temp_v.0.i54.i.i.i.i.i := v.330.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit55.i.i.i.i.i;
+
+FROM: main_bb6853;
+v9549 := personOnFloor_5_1;
+var__temp_v.0.i54.i.i.i.i.i := v9549;
+TO: main_isPersonOnFloor.exit55.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i48.i.i.i.i.i;
+TO: main_NodeBlock5.i48.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i48.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6854;
+
+FROM: main_NodeBlock5.i48.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i50.i.i.i.i.i;
+
+FROM: main_bb6854;
+v9550 := personOnFloor_5_2;
+var__temp_v.0.i54.i.i.i.i.i := v9550;
+TO: main_isPersonOnFloor.exit55.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i50.i.i.i.i.i;
+TO: main_NodeBlock3.i50.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i50.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6855;
+
+FROM: main_NodeBlock3.i50.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i52.i.i.i.i.i;
+
+FROM: main_bb6855;
+v9551 := personOnFloor_5_3;
+var__temp_v.0.i54.i.i.i.i.i := v9551;
+TO: main_isPersonOnFloor.exit55.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i52.i.i.i.i.i;
+v9552 := personOnFloor_5_4;
+TO: main_LeafBlock1.i52.i.i.i.i.i_v.331.i.i.i.i.i;
+FROM: main_LeafBlock1.i52.i.i.i.i.i_v.331.i.i.i.i.i;
+assume(v9517 == 4);
+v.331.i.i.i.i.i := v9552;
+TO: main_LeafBlock1.i52.i.i.i.i.i_sv.331.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i52.i.i.i.i.i_v.331.i.i.i.i.i;
+assume(v9517 != 4);
+v.331.i.i.i.i.i := 0;
+TO: main_LeafBlock1.i52.i.i.i.i.i_sv.331.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i52.i.i.i.i.i_sv.331.i.i.i.i.i;
+var__temp_v.0.i54.i.i.i.i.i := v.331.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit55.i.i.i.i.i;
+
+FROM: main_isPersonOnFloor.exit55.i.i.i.i.i;
+v.0.i54.i.i.i.i.i := var__temp_v.0.i54.i.i.i.i.i;
+TO: main_isPersonOnFloor.exit55.i.i.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit55.i.i.i.i.i_end;
+assume(v.0.i54.i.i.i.i.i != 0);
+TO: main_bb6856;
+
+FROM: main_isPersonOnFloor.exit55.i.i.i.i.i_end;
+assume(v.0.i54.i.i.i.i.i == 0);
+TO: main_bb6867;
+
+FROM: main_bb6856;
+TO: main_bb6856_end;
+
+FROM: main_bb6856_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i32.i.i.i.i.i;
+
+FROM: main_bb6856_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i36.i.i.i.i.i;
+
+FROM: main_NodeBlock.i32.i.i.i.i.i;
+TO: main_NodeBlock.i32.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i32.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i34.i.i.i.i.i;
+
+FROM: main_NodeBlock.i32.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6858;
+
+FROM: main_LeafBlock.i34.i.i.i.i.i;
+TO: main_LeafBlock.i34.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i34.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6857;
+
+FROM: main_LeafBlock.i34.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_NewDefault.i41.i.i.i.i.i;
+
+FROM: main_bb6857;
+personOnFloor_5_0 := 0;
+TO: main_NewDefault.i41.i.i.i.i.i;
+
+FROM: main_bb6858;
+personOnFloor_5_1 := 0;
+TO: main_NewDefault.i41.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i36.i.i.i.i.i;
+TO: main_NodeBlock5.i36.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i36.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6859;
+
+FROM: main_NodeBlock5.i36.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i38.i.i.i.i.i;
+
+FROM: main_bb6859;
+personOnFloor_5_2 := 0;
+TO: main_NewDefault.i41.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i38.i.i.i.i.i;
+TO: main_NodeBlock3.i38.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i38.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6860;
+
+FROM: main_NodeBlock3.i38.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i40.i.i.i.i.i;
+
+FROM: main_bb6860;
+personOnFloor_5_3 := 0;
+TO: main_NewDefault.i41.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i40.i.i.i.i.i;
+TO: main_LeafBlock1.i40.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i40.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6861;
+
+FROM: main_LeafBlock1.i40.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_NewDefault.i41.i.i.i.i.i;
+
+FROM: main_bb6861;
+personOnFloor_5_4 := 0;
+TO: main_NewDefault.i41.i.i.i.i.i;
+
+FROM: main_NewDefault.i41.i.i.i.i.i;
+TO: main_NewDefault.i41.i.i.i.i.i_end;
+
+FROM: main_NewDefault.i41.i.i.i.i.i_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i.i.i.i.i.i.i;
+
+FROM: main_NewDefault.i41.i.i.i.i.i_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i.i.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i.i.i.i.i.i;
+TO: main_NodeBlock.i.i.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i.i.i.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i.i.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i.i.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6863;
+
+FROM: main_LeafBlock.i.i.i.i.i.i.i;
+TO: main_LeafBlock.i.i.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i.i.i.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6862;
+
+FROM: main_LeafBlock.i.i.i.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_removePersonFromFloor.exit.i.i.i.i.i;
+
+FROM: main_bb6862;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit.i.i.i.i.i;
+
+FROM: main_bb6863;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit.i.i.i.i.i;
+
+FROM: main_NodeBlock5.i.i.i.i.i.i.i;
+TO: main_NodeBlock5.i.i.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i.i.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6864;
+
+FROM: main_NodeBlock5.i.i.i.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i.i.i.i.i.i.i;
+
+FROM: main_bb6864;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit.i.i.i.i.i;
+
+FROM: main_NodeBlock3.i.i.i.i.i.i.i;
+TO: main_NodeBlock3.i.i.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i.i.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6865;
+
+FROM: main_NodeBlock3.i.i.i.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i.i.i.i.i.i.i;
+
+FROM: main_bb6865;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit.i.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i.i.i.i.i.i;
+TO: main_LeafBlock1.i.i.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i.i.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6866;
+
+FROM: main_LeafBlock1.i.i.i.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_removePersonFromFloor.exit.i.i.i.i.i;
+
+FROM: main_bb6866;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit.i.i.i.i.i;
+
+FROM: main_removePersonFromFloor.exit.i.i.i.i.i;
+floorButtons_3 := 1;
+persons_5 := 1;
+TO: main_bb6867;
+
+FROM: main_bb6867;
+TO: main_bb6867_end;
+
+FROM: main_bb6867_end;
+assume(v9517 < 2);
+TO: main_NodeBlock.i3.i52.i.i.i.i;
+
+FROM: main_bb6867_end;
+assume(v9517 >= 2);
+TO: main_NodeBlock5.i7.i56.i.i.i.i;
+
+FROM: main_NodeBlock.i3.i52.i.i.i.i;
+TO: main_NodeBlock.i3.i52.i.i.i.i_end;
+
+FROM: main_NodeBlock.i3.i52.i.i.i.i_end;
+assume(v9517 < 1);
+TO: main_LeafBlock.i5.i54.i.i.i.i;
+
+FROM: main_NodeBlock.i3.i52.i.i.i.i_end;
+assume(v9517 >= 1);
+TO: main_bb6869;
+
+FROM: main_LeafBlock.i5.i54.i.i.i.i;
+TO: main_LeafBlock.i5.i54.i.i.i.i_end;
+
+FROM: main_LeafBlock.i5.i54.i.i.i.i_end;
+assume(v9517 == 0);
+TO: main_bb6868;
+
+FROM: main_LeafBlock.i5.i54.i.i.i.i_end;
+assume(v9517 != 0);
+TO: main_processWaitingOnFloor.exit.i.i.i.i;
+
+FROM: main_bb6868;
+calls_0 := 0;
+TO: main_processWaitingOnFloor.exit.i.i.i.i;
+
+FROM: main_bb6869;
+calls_1 := 0;
+TO: main_processWaitingOnFloor.exit.i.i.i.i;
+
+FROM: main_NodeBlock5.i7.i56.i.i.i.i;
+TO: main_NodeBlock5.i7.i56.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i7.i56.i.i.i.i_end;
+assume(v9517 < 3);
+TO: main_bb6870;
+
+FROM: main_NodeBlock5.i7.i56.i.i.i.i_end;
+assume(v9517 >= 3);
+TO: main_NodeBlock3.i9.i58.i.i.i.i;
+
+FROM: main_bb6870;
+calls_2 := 0;
+TO: main_processWaitingOnFloor.exit.i.i.i.i;
+
+FROM: main_NodeBlock3.i9.i58.i.i.i.i;
+TO: main_NodeBlock3.i9.i58.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i9.i58.i.i.i.i_end;
+assume(v9517 < 4);
+TO: main_bb6871;
+
+FROM: main_NodeBlock3.i9.i58.i.i.i.i_end;
+assume(v9517 >= 4);
+TO: main_LeafBlock1.i11.i60.i.i.i.i;
+
+FROM: main_bb6871;
+calls_3 := 0;
+TO: main_processWaitingOnFloor.exit.i.i.i.i;
+
+FROM: main_LeafBlock1.i11.i60.i.i.i.i;
+TO: main_LeafBlock1.i11.i60.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i11.i60.i.i.i.i_end;
+assume(v9517 == 4);
+TO: main_bb6872;
+
+FROM: main_LeafBlock1.i11.i60.i.i.i.i_end;
+assume(v9517 != 4);
+TO: main_processWaitingOnFloor.exit.i.i.i.i;
+
+FROM: main_bb6872;
+calls_4 := 0;
+TO: main_processWaitingOnFloor.exit.i.i.i.i;
+
+FROM: main_processWaitingOnFloor.exit.i.i.i.i;
+v9554 := currentFloorID;
+TO: main_processWaitingOnFloor.exit.i.i.i.i_end;
+
+FROM: main_processWaitingOnFloor.exit.i.i.i.i_end;
+assume(v9554 < 2);
+TO: main_NodeBlock.i33.i.i.i.i;
+
+FROM: main_processWaitingOnFloor.exit.i.i.i.i_end;
+assume(v9554 >= 2);
+TO: main_NodeBlock5.i.i.i.i.i;
+
+FROM: main_NodeBlock.i33.i.i.i.i;
+TO: main_NodeBlock.i33.i.i.i.i_end;
+
+FROM: main_NodeBlock.i33.i.i.i.i_end;
+assume(v9554 < 1);
+TO: main_LeafBlock.i35.i.i.i.i;
+
+FROM: main_NodeBlock.i33.i.i.i.i_end;
+assume(v9554 >= 1);
+TO: main_bb6874;
+
+FROM: main_LeafBlock.i35.i.i.i.i;
+TO: main_LeafBlock.i35.i.i.i.i_end;
+
+FROM: main_LeafBlock.i35.i.i.i.i_end;
+assume(v9554 == 0);
+TO: main_bb6873;
+
+FROM: main_LeafBlock.i35.i.i.i.i_end;
+assume(v9554 != 0);
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_bb6873;
+floorButtons_0 := 0;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_bb6874;
+floorButtons_1 := 0;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_NodeBlock5.i.i.i.i.i;
+TO: main_NodeBlock5.i.i.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i.i.i.i_end;
+assume(v9554 < 3);
+TO: main_bb6875;
+
+FROM: main_NodeBlock5.i.i.i.i.i_end;
+assume(v9554 >= 3);
+TO: main_NodeBlock3.i.i.i.i.i;
+
+FROM: main_bb6875;
+floorButtons_2 := 0;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_NodeBlock3.i.i.i.i.i;
+TO: main_NodeBlock3.i.i.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i.i.i.i_end;
+assume(v9554 < 4);
+TO: main_bb6876;
+
+FROM: main_NodeBlock3.i.i.i.i.i_end;
+assume(v9554 >= 4);
+TO: main_LeafBlock1.i.i.i.i.i;
+
+FROM: main_bb6876;
+floorButtons_3 := 0;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_LeafBlock1.i.i.i.i.i;
+TO: main_LeafBlock1.i.i.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i.i.i.i_end;
+assume(v9554 == 4);
+TO: main_bb6877;
+
+FROM: main_LeafBlock1.i.i.i.i.i_end;
+assume(v9554 != 4);
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_bb6877;
+floorButtons_4 := 0;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_bb6878;
+v9555 := doorState;
+TO: main_bb6878_end;
+
+FROM: main_bb6878_end;
+assume(v9555 == 1);
+TO: main_bb6879;
+
+FROM: main_bb6878_end;
+assume(v9555 != 1);
+TO: main_bb6880;
+
+FROM: main_bb6879;
+doorState := 0;
+TO: main_bb6880;
+
+FROM: main_bb6880;
+v9557 := currentHeading;
+v9559 := currentFloorID;
+TO: main_bb6880_end;
+
+FROM: main_bb6880_end;
+assume(v9557 == 1);
+TO: main_bb6881;
+
+FROM: main_bb6880_end;
+assume(v9557 != 1);
+TO: main_bb6893;
+
+FROM: main_bb6881;
+var__temp_v.0.i30.i.i.i.i := 0;
+TO: main_bb6881_end;
+
+FROM: main_bb6881_end;
+assume(v9559 == 4);
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6881_end;
+assume(v9559 != 4);
+TO: main_bb6882;
+
+FROM: main_bb6882;
+v9561 := currentFloorID;
+v9563 := calls_0;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6882_end;
+
+FROM: main_bb6882_end;
+assume((v9561 < 0) && (v9563 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6882_end;
+assume((v9561 >= 0) || (v9563 == 0));
+TO: main_bb6883;
+
+FROM: main_bb6883;
+v9565 := currentFloorID;
+v9567 := floorButtons_0;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6883_end;
+
+FROM: main_bb6883_end;
+assume((v9565 < 0) && (v9567 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6883_end;
+assume((v9565 >= 0) || (v9567 == 0));
+TO: main_bb6884;
+
+FROM: main_bb6884;
+v9569 := currentFloorID;
+v9571 := calls_1;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6884_end;
+
+FROM: main_bb6884_end;
+assume((v9569 < 1) && (v9571 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6884_end;
+assume((v9569 >= 1) || (v9571 == 0));
+TO: main_bb6885;
+
+FROM: main_bb6885;
+v9573 := currentFloorID;
+v9575 := floorButtons_1;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6885_end;
+
+FROM: main_bb6885_end;
+assume((v9573 < 1) && (v9575 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6885_end;
+assume((v9573 >= 1) || (v9575 == 0));
+TO: main_bb6886;
+
+FROM: main_bb6886;
+v9577 := currentFloorID;
+v9579 := calls_2;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6886_end;
+
+FROM: main_bb6886_end;
+assume((v9577 < 2) && (v9579 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6886_end;
+assume((v9577 >= 2) || (v9579 == 0));
+TO: main_bb6887;
+
+FROM: main_bb6887;
+v9581 := currentFloorID;
+v9583 := floorButtons_2;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6887_end;
+
+FROM: main_bb6887_end;
+assume((v9581 < 2) && (v9583 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6887_end;
+assume((v9581 >= 2) || (v9583 == 0));
+TO: main_bb6888;
+
+FROM: main_bb6888;
+v9585 := currentFloorID;
+v9587 := calls_3;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6888_end;
+
+FROM: main_bb6888_end;
+assume((v9585 < 3) && (v9587 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6888_end;
+assume((v9585 >= 3) || (v9587 == 0));
+TO: main_bb6889;
+
+FROM: main_bb6889;
+v9589 := currentFloorID;
+v9591 := floorButtons_3;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6889_end;
+
+FROM: main_bb6889_end;
+assume((v9589 < 3) && (v9591 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6889_end;
+assume((v9589 >= 3) || (v9591 == 0));
+TO: main_bb6890;
+
+FROM: main_bb6890;
+v9593 := currentFloorID;
+v9595 := calls_4;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6890_end;
+
+FROM: main_bb6890_end;
+assume((v9593 < 4) && (v9595 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6890_end;
+assume((v9593 >= 4) || (v9595 == 0));
+TO: main_bb6891;
+
+FROM: main_bb6891;
+v9597 := currentFloorID;
+var__temp_v.0.i30.i.i.i.i := 0;
+TO: main_bb6891_end;
+
+FROM: main_bb6891_end;
+assume(v9597 < 4);
+TO: main_bb6892;
+
+FROM: main_bb6891_end;
+assume(v9597 >= 4);
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6892;
+v9599 := floorButtons_4;
+TO: main_bb6892_v..i19.i.i.i.i;
+FROM: main_bb6892_v..i19.i.i.i.i;
+assume(v9599 != 0);
+v..i19.i.i.i.i := 1;
+TO: main_bb6892_sv..i19.i.i.i.i;
+
+FROM: main_bb6892_v..i19.i.i.i.i;
+assume(v9599 == 0);
+v..i19.i.i.i.i := 0;
+TO: main_bb6892_sv..i19.i.i.i.i;
+
+FROM: main_bb6892_sv..i19.i.i.i.i;
+var__temp_v.0.i30.i.i.i.i := v..i19.i.i.i.i;
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6893;
+var__temp_v.0.i30.i.i.i.i := 0;
+TO: main_bb6893_end;
+
+FROM: main_bb6893_end;
+assume(v9559 == 0);
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6893_end;
+assume(v9559 != 0);
+TO: main_bb6894;
+
+FROM: main_bb6894;
+v9602 := currentFloorID;
+v9604 := calls_0;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6894_end;
+
+FROM: main_bb6894_end;
+assume((v9602 > 0) && (v9604 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6894_end;
+assume((v9602 <= 0) || (v9604 == 0));
+TO: main_bb6895;
+
+FROM: main_bb6895;
+v9606 := currentFloorID;
+v9608 := floorButtons_0;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6895_end;
+
+FROM: main_bb6895_end;
+assume((v9606 > 0) && (v9608 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6895_end;
+assume((v9606 <= 0) || (v9608 == 0));
+TO: main_bb6896;
+
+FROM: main_bb6896;
+v9610 := currentFloorID;
+v9612 := calls_1;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6896_end;
+
+FROM: main_bb6896_end;
+assume((v9610 > 1) && (v9612 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6896_end;
+assume((v9610 <= 1) || (v9612 == 0));
+TO: main_bb6897;
+
+FROM: main_bb6897;
+v9614 := currentFloorID;
+v9616 := floorButtons_1;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6897_end;
+
+FROM: main_bb6897_end;
+assume((v9614 > 1) && (v9616 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6897_end;
+assume((v9614 <= 1) || (v9616 == 0));
+TO: main_bb6898;
+
+FROM: main_bb6898;
+v9618 := currentFloorID;
+v9620 := calls_2;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6898_end;
+
+FROM: main_bb6898_end;
+assume((v9618 > 2) && (v9620 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6898_end;
+assume((v9618 <= 2) || (v9620 == 0));
+TO: main_bb6899;
+
+FROM: main_bb6899;
+v9622 := currentFloorID;
+v9624 := floorButtons_2;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6899_end;
+
+FROM: main_bb6899_end;
+assume((v9622 > 2) && (v9624 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6899_end;
+assume((v9622 <= 2) || (v9624 == 0));
+TO: main_bb6900;
+
+FROM: main_bb6900;
+v9626 := currentFloorID;
+v9628 := calls_3;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6900_end;
+
+FROM: main_bb6900_end;
+assume((v9626 > 3) && (v9628 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6900_end;
+assume((v9626 <= 3) || (v9628 == 0));
+TO: main_bb6901;
+
+FROM: main_bb6901;
+v9630 := currentFloorID;
+v9632 := floorButtons_3;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6901_end;
+
+FROM: main_bb6901_end;
+assume((v9630 > 3) && (v9632 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6901_end;
+assume((v9630 <= 3) || (v9632 == 0));
+TO: main_bb6902;
+
+FROM: main_bb6902;
+v9634 := currentFloorID;
+v9636 := calls_4;
+var__temp_v.0.i30.i.i.i.i := 1;
+TO: main_bb6902_end;
+
+FROM: main_bb6902_end;
+assume((v9634 > 4) && (v9636 != 0));
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6902_end;
+assume((v9634 <= 4) || (v9636 == 0));
+TO: main_bb6903;
+
+FROM: main_bb6903;
+v9638 := currentFloorID;
+var__temp_v.0.i30.i.i.i.i := 0;
+TO: main_bb6903_end;
+
+FROM: main_bb6903_end;
+assume(v9638 > 4);
+TO: main_bb6904;
+
+FROM: main_bb6903_end;
+assume(v9638 <= 4);
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_bb6904;
+v9640 := floorButtons_4;
+TO: main_bb6904_v.1.i29.i.i.i.i;
+FROM: main_bb6904_v.1.i29.i.i.i.i;
+assume(v9640 != 0);
+v.1.i29.i.i.i.i := 1;
+TO: main_bb6904_sv.1.i29.i.i.i.i;
+
+FROM: main_bb6904_v.1.i29.i.i.i.i;
+assume(v9640 == 0);
+v.1.i29.i.i.i.i := 0;
+TO: main_bb6904_sv.1.i29.i.i.i.i;
+
+FROM: main_bb6904_sv.1.i29.i.i.i.i;
+var__temp_v.0.i30.i.i.i.i := v.1.i29.i.i.i.i;
+TO: main_stopRequestedInDirection.exit31.i.i.i.i;
+
+FROM: main_stopRequestedInDirection.exit31.i.i.i.i;
+v.0.i30.i.i.i.i := var__temp_v.0.i30.i.i.i.i;
+v9643 := currentHeading;
+TO: main_stopRequestedInDirection.exit31.i.i.i.i_end;
+
+FROM: main_stopRequestedInDirection.exit31.i.i.i.i_end;
+assume(v.0.i30.i.i.i.i != 0);
+TO: main_bb6905;
+
+FROM: main_stopRequestedInDirection.exit31.i.i.i.i_end;
+assume(v.0.i30.i.i.i.i == 0);
+TO: main_bb6913;
+
+FROM: main_bb6905;
+currentHeading := v9643;
+v9644 := currentHeading;
+v9646 := currentFloorID;
+TO: main_bb6905_end;
+
+FROM: main_bb6905_end;
+assume(v9644 == 1);
+TO: main_bb6906;
+
+FROM: main_bb6905_end;
+assume(v9644 != 1);
+TO: main_bb6908;
+
+FROM: main_bb6906;
+TO: main_bb6906_end;
+
+FROM: main_bb6906_end;
+assume(v9646 == 4);
+TO: main_bb6907;
+
+FROM: main_bb6906_end;
+assume(v9646 != 4);
+TO: main_bb6910;
+
+FROM: main_bb6907;
+currentHeading := 0;
+TO: main_bb6910;
+
+FROM: main_bb6908;
+TO: main_bb6908_end;
+
+FROM: main_bb6908_end;
+assume(v9646 == 0);
+TO: main_bb6909;
+
+FROM: main_bb6908_end;
+assume(v9646 != 0);
+TO: main_bb6910;
+
+FROM: main_bb6909;
+currentHeading := 1;
+TO: main_bb6910;
+
+FROM: main_bb6910;
+v9649 := currentHeading;
+v9651 := currentFloorID;
+TO: main_bb6910_end;
+
+FROM: main_bb6910_end;
+assume(v9649 == 1);
+TO: main_bb6911;
+
+FROM: main_bb6910_end;
+assume(v9649 != 1);
+TO: main_bb6912;
+
+FROM: main_bb6911;
+v9652 := v9651 + 1;
+currentFloorID := v9652;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_bb6912;
+v9653 := v9651 - 1;
+currentFloorID := v9653;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_bb6913;
+v9655 := currentFloorID;
+TO: main_bb6913_end;
+
+FROM: main_bb6913_end;
+assume(v9643 == 0);
+TO: main_bb6914;
+
+FROM: main_bb6913_end;
+assume(v9643 != 0);
+TO: main_bb6926;
+
+FROM: main_bb6914;
+var__temp_v.0.i7.i.i.i.i := 0;
+TO: main_bb6914_end;
+
+FROM: main_bb6914_end;
+assume(v9655 == 4);
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6914_end;
+assume(v9655 != 4);
+TO: main_bb6915;
+
+FROM: main_bb6915;
+v9657 := currentFloorID;
+v9659 := calls_0;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6915_end;
+
+FROM: main_bb6915_end;
+assume((v9657 < 0) && (v9659 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6915_end;
+assume((v9657 >= 0) || (v9659 == 0));
+TO: main_bb6916;
+
+FROM: main_bb6916;
+v9661 := currentFloorID;
+v9663 := floorButtons_0;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6916_end;
+
+FROM: main_bb6916_end;
+assume((v9661 < 0) && (v9663 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6916_end;
+assume((v9661 >= 0) || (v9663 == 0));
+TO: main_bb6917;
+
+FROM: main_bb6917;
+v9665 := currentFloorID;
+v9667 := calls_1;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6917_end;
+
+FROM: main_bb6917_end;
+assume((v9665 < 1) && (v9667 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6917_end;
+assume((v9665 >= 1) || (v9667 == 0));
+TO: main_bb6918;
+
+FROM: main_bb6918;
+v9669 := currentFloorID;
+v9671 := floorButtons_1;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6918_end;
+
+FROM: main_bb6918_end;
+assume((v9669 < 1) && (v9671 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6918_end;
+assume((v9669 >= 1) || (v9671 == 0));
+TO: main_bb6919;
+
+FROM: main_bb6919;
+v9673 := currentFloorID;
+v9675 := calls_2;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6919_end;
+
+FROM: main_bb6919_end;
+assume((v9673 < 2) && (v9675 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6919_end;
+assume((v9673 >= 2) || (v9675 == 0));
+TO: main_bb6920;
+
+FROM: main_bb6920;
+v9677 := currentFloorID;
+v9679 := floorButtons_2;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6920_end;
+
+FROM: main_bb6920_end;
+assume((v9677 < 2) && (v9679 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6920_end;
+assume((v9677 >= 2) || (v9679 == 0));
+TO: main_bb6921;
+
+FROM: main_bb6921;
+v9681 := currentFloorID;
+v9683 := calls_3;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6921_end;
+
+FROM: main_bb6921_end;
+assume((v9681 < 3) && (v9683 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6921_end;
+assume((v9681 >= 3) || (v9683 == 0));
+TO: main_bb6922;
+
+FROM: main_bb6922;
+v9685 := currentFloorID;
+v9687 := floorButtons_3;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6922_end;
+
+FROM: main_bb6922_end;
+assume((v9685 < 3) && (v9687 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6922_end;
+assume((v9685 >= 3) || (v9687 == 0));
+TO: main_bb6923;
+
+FROM: main_bb6923;
+v9689 := currentFloorID;
+v9691 := calls_4;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6923_end;
+
+FROM: main_bb6923_end;
+assume((v9689 < 4) && (v9691 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6923_end;
+assume((v9689 >= 4) || (v9691 == 0));
+TO: main_bb6924;
+
+FROM: main_bb6924;
+v9693 := currentFloorID;
+var__temp_v.0.i7.i.i.i.i := 0;
+TO: main_bb6924_end;
+
+FROM: main_bb6924_end;
+assume(v9693 < 4);
+TO: main_bb6925;
+
+FROM: main_bb6924_end;
+assume(v9693 >= 4);
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6925;
+v9695 := floorButtons_4;
+TO: main_bb6925_v..i6.i.i.i.i;
+FROM: main_bb6925_v..i6.i.i.i.i;
+assume(v9695 != 0);
+v..i6.i.i.i.i := 1;
+TO: main_bb6925_sv..i6.i.i.i.i;
+
+FROM: main_bb6925_v..i6.i.i.i.i;
+assume(v9695 == 0);
+v..i6.i.i.i.i := 0;
+TO: main_bb6925_sv..i6.i.i.i.i;
+
+FROM: main_bb6925_sv..i6.i.i.i.i;
+var__temp_v.0.i7.i.i.i.i := v..i6.i.i.i.i;
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6926;
+var__temp_v.0.i7.i.i.i.i := 0;
+TO: main_bb6926_end;
+
+FROM: main_bb6926_end;
+assume(v9655 == 0);
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6926_end;
+assume(v9655 != 0);
+TO: main_bb6927;
+
+FROM: main_bb6927;
+v9698 := currentFloorID;
+v9700 := calls_0;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6927_end;
+
+FROM: main_bb6927_end;
+assume((v9698 > 0) && (v9700 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6927_end;
+assume((v9698 <= 0) || (v9700 == 0));
+TO: main_bb6928;
+
+FROM: main_bb6928;
+v9702 := currentFloorID;
+v9704 := floorButtons_0;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6928_end;
+
+FROM: main_bb6928_end;
+assume((v9702 > 0) && (v9704 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6928_end;
+assume((v9702 <= 0) || (v9704 == 0));
+TO: main_bb6929;
+
+FROM: main_bb6929;
+v9706 := currentFloorID;
+v9708 := calls_1;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6929_end;
+
+FROM: main_bb6929_end;
+assume((v9706 > 1) && (v9708 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6929_end;
+assume((v9706 <= 1) || (v9708 == 0));
+TO: main_bb6930;
+
+FROM: main_bb6930;
+v9710 := currentFloorID;
+v9712 := floorButtons_1;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6930_end;
+
+FROM: main_bb6930_end;
+assume((v9710 > 1) && (v9712 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6930_end;
+assume((v9710 <= 1) || (v9712 == 0));
+TO: main_bb6931;
+
+FROM: main_bb6931;
+v9714 := currentFloorID;
+v9716 := calls_2;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6931_end;
+
+FROM: main_bb6931_end;
+assume((v9714 > 2) && (v9716 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6931_end;
+assume((v9714 <= 2) || (v9716 == 0));
+TO: main_bb6932;
+
+FROM: main_bb6932;
+v9718 := currentFloorID;
+v9720 := floorButtons_2;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6932_end;
+
+FROM: main_bb6932_end;
+assume((v9718 > 2) && (v9720 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6932_end;
+assume((v9718 <= 2) || (v9720 == 0));
+TO: main_bb6933;
+
+FROM: main_bb6933;
+v9722 := currentFloorID;
+v9724 := calls_3;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6933_end;
+
+FROM: main_bb6933_end;
+assume((v9722 > 3) && (v9724 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6933_end;
+assume((v9722 <= 3) || (v9724 == 0));
+TO: main_bb6934;
+
+FROM: main_bb6934;
+v9726 := currentFloorID;
+v9728 := floorButtons_3;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6934_end;
+
+FROM: main_bb6934_end;
+assume((v9726 > 3) && (v9728 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6934_end;
+assume((v9726 <= 3) || (v9728 == 0));
+TO: main_bb6935;
+
+FROM: main_bb6935;
+v9730 := currentFloorID;
+v9732 := calls_4;
+var__temp_v.0.i7.i.i.i.i := 1;
+TO: main_bb6935_end;
+
+FROM: main_bb6935_end;
+assume((v9730 > 4) && (v9732 != 0));
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6935_end;
+assume((v9730 <= 4) || (v9732 == 0));
+TO: main_bb6936;
+
+FROM: main_bb6936;
+v9734 := currentFloorID;
+var__temp_v.0.i7.i.i.i.i := 0;
+TO: main_bb6936_end;
+
+FROM: main_bb6936_end;
+assume(v9734 > 4);
+TO: main_bb6937;
+
+FROM: main_bb6936_end;
+assume(v9734 <= 4);
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_bb6937;
+v9736 := floorButtons_4;
+TO: main_bb6937_v.1.i.i.i.i.i;
+FROM: main_bb6937_v.1.i.i.i.i.i;
+assume(v9736 != 0);
+v.1.i.i.i.i.i := 1;
+TO: main_bb6937_sv.1.i.i.i.i.i;
+
+FROM: main_bb6937_v.1.i.i.i.i.i;
+assume(v9736 == 0);
+v.1.i.i.i.i.i := 0;
+TO: main_bb6937_sv.1.i.i.i.i.i;
+
+FROM: main_bb6937_sv.1.i.i.i.i.i;
+var__temp_v.0.i7.i.i.i.i := v.1.i.i.i.i.i;
+TO: main_stopRequestedInDirection.exit.i.i.i.i;
+
+FROM: main_stopRequestedInDirection.exit.i.i.i.i;
+v.0.i7.i.i.i.i := var__temp_v.0.i7.i.i.i.i;
+v9739 := currentHeading;
+TO: main_stopRequestedInDirection.exit.i.i.i.i_end;
+
+FROM: main_stopRequestedInDirection.exit.i.i.i.i_end;
+assume(v.0.i7.i.i.i.i != 0);
+TO: main_bb6938;
+
+FROM: main_stopRequestedInDirection.exit.i.i.i.i_end;
+assume(v.0.i7.i.i.i.i == 0);
+TO: main_bb6946;
+
+FROM: main_bb6938;
+TO: main_bb6938_v..i2.i.i.i.i;
+FROM: main_bb6938_v..i2.i.i.i.i;
+assume(v9739 == 0);
+v..i2.i.i.i.i := 1;
+TO: main_bb6938_sv..i2.i.i.i.i;
+
+FROM: main_bb6938_v..i2.i.i.i.i;
+assume(v9739 != 0);
+v..i2.i.i.i.i := 0;
+TO: main_bb6938_sv..i2.i.i.i.i;
+
+FROM: main_bb6938_sv..i2.i.i.i.i;
+currentHeading := v..i2.i.i.i.i;
+v9741 := currentHeading;
+v9743 := currentFloorID;
+TO: main_bb6938_end;
+
+FROM: main_bb6938_end;
+assume(v9741 == 1);
+TO: main_bb6939;
+
+FROM: main_bb6938_end;
+assume(v9741 != 1);
+TO: main_bb6941;
+
+FROM: main_bb6939;
+TO: main_bb6939_end;
+
+FROM: main_bb6939_end;
+assume(v9743 == 4);
+TO: main_bb6940;
+
+FROM: main_bb6939_end;
+assume(v9743 != 4);
+TO: main_bb6943;
+
+FROM: main_bb6940;
+currentHeading := 0;
+TO: main_bb6943;
+
+FROM: main_bb6941;
+TO: main_bb6941_end;
+
+FROM: main_bb6941_end;
+assume(v9743 == 0);
+TO: main_bb6942;
+
+FROM: main_bb6941_end;
+assume(v9743 != 0);
+TO: main_bb6943;
+
+FROM: main_bb6942;
+currentHeading := 1;
+TO: main_bb6943;
+
+FROM: main_bb6943;
+v9746 := currentHeading;
+v9748 := currentFloorID;
+TO: main_bb6943_end;
+
+FROM: main_bb6943_end;
+assume(v9746 == 1);
+TO: main_bb6944;
+
+FROM: main_bb6943_end;
+assume(v9746 != 1);
+TO: main_bb6945;
+
+FROM: main_bb6944;
+v9749 := v9748 + 1;
+currentFloorID := v9749;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_bb6945;
+v9750 := v9748 - 1;
+currentFloorID := v9750;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_bb6946;
+currentHeading := v9739;
+v9751 := currentHeading;
+v9753 := currentFloorID;
+TO: main_bb6946_end;
+
+FROM: main_bb6946_end;
+assume(v9751 == 1);
+TO: main_bb6947;
+
+FROM: main_bb6946_end;
+assume(v9751 != 1);
+TO: main_bb6949;
+
+FROM: main_bb6947;
+TO: main_bb6947_end;
+
+FROM: main_bb6947_end;
+assume(v9753 == 4);
+TO: main_bb6948;
+
+FROM: main_bb6947_end;
+assume(v9753 != 4);
+TO: main_bb6951;
+
+FROM: main_bb6948;
+currentHeading := 0;
+TO: main_bb6951;
+
+FROM: main_bb6949;
+TO: main_bb6949_end;
+
+FROM: main_bb6949_end;
+assume(v9753 == 0);
+TO: main_bb6950;
+
+FROM: main_bb6949_end;
+assume(v9753 != 0);
+TO: main_bb6951;
+
+FROM: main_bb6950;
+currentHeading := 1;
+TO: main_bb6951;
+
+FROM: main_bb6951;
+v9756 := currentHeading;
+v9758 := currentFloorID;
+TO: main_bb6951_end;
+
+FROM: main_bb6951_end;
+assume(v9756 == 1);
+TO: main_bb6952;
+
+FROM: main_bb6951_end;
+assume(v9756 != 1);
+TO: main_bb6953;
+
+FROM: main_bb6952;
+v9759 := v9758 + 1;
+currentFloorID := v9759;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_bb6953;
+v9760 := v9758 - 1;
+currentFloorID := v9760;
+TO: main_resetFloorButton.exit.i.i.i.i;
+
+FROM: main_resetFloorButton.exit.i.i.i.i;
+v9761 := currentFloorID;
+TO: main_resetFloorButton.exit.i.i.i.i_end;
+
+FROM: main_resetFloorButton.exit.i.i.i.i_end;
+assume(v9761 < 2);
+TO: main_NodeBlock.i.i.i.i.i;
+
+FROM: main_resetFloorButton.exit.i.i.i.i_end;
+assume(v9761 >= 2);
+TO: main_NodeBlock19.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i.i.i.i;
+TO: main_NodeBlock.i.i.i.i.i_end;
+
+FROM: main_NodeBlock.i.i.i.i.i_end;
+assume(v9761 < 1);
+TO: main_LeafBlock.i.i.i.i.i;
+
+FROM: main_NodeBlock.i.i.i.i.i_end;
+assume(v9761 >= 1);
+TO: main_bb6957;
+
+FROM: main_LeafBlock.i.i.i.i.i;
+TO: main_LeafBlock.i.i.i.i.i_end;
+
+FROM: main_LeafBlock.i.i.i.i.i_end;
+assume(v9761 == 0);
+TO: main_bb6954;
+
+FROM: main_LeafBlock.i.i.i.i.i_end;
+assume(v9761 != 0);
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_bb6954;
+v9762 := landingButtons_spc1_0;
+v9764 := doorState;
+TO: main_bb6954_end;
+
+FROM: main_bb6954_end;
+assume((v9762 != 0) && (v9764 != 0));
+TO: main_bb6955;
+
+FROM: main_bb6954_end;
+assume((v9762 == 0) || (v9764 == 0));
+TO: main_bb6956;
+
+FROM: main_bb6955;
+landingButtons_spc1_0 := 0;
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_bb6956;
+TO: main_bb6956_end;
+
+FROM: main_bb6956_end;
+assume(v9761 < 3);
+TO: main_NodeBlock26.i.i.i.i.i;
+
+FROM: main_bb6956_end;
+assume(v9761 >= 3);
+TO: main_NodeBlock30.i.i.i.i.i;
+
+FROM: main_NodeBlock26.i.i.i.i.i;
+TO: main_NodeBlock26.i.i.i.i.i_end;
+
+FROM: main_NodeBlock26.i.i.i.i.i_end;
+assume(v9761 < 2);
+TO: main_LeafBlock24.i.i.i.i.i;
+
+FROM: main_NodeBlock26.i.i.i.i.i_end;
+assume(v9761 >= 2);
+TO: main_bb6960;
+
+FROM: main_LeafBlock24.i.i.i.i.i;
+TO: main_LeafBlock24.i.i.i.i.i_end;
+
+FROM: main_LeafBlock24.i.i.i.i.i_end;
+assume(v9761 == 1);
+TO: main_bb6957;
+
+FROM: main_LeafBlock24.i.i.i.i.i_end;
+assume(v9761 != 1);
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_NodeBlock30.i.i.i.i.i;
+TO: main_NodeBlock30.i.i.i.i.i_end;
+
+FROM: main_NodeBlock30.i.i.i.i.i_end;
+assume(v9761 < 4);
+TO: main_bb6963;
+
+FROM: main_NodeBlock30.i.i.i.i.i_end;
+assume(v9761 >= 4);
+TO: main_LeafBlock28.i.i.i.i.i;
+
+FROM: main_LeafBlock28.i.i.i.i.i;
+TO: main_LeafBlock28.i.i.i.i.i_end;
+
+FROM: main_LeafBlock28.i.i.i.i.i_end;
+assume(v9761 == 4);
+TO: main_bb6966;
+
+FROM: main_LeafBlock28.i.i.i.i.i_end;
+assume(v9761 != 4);
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_bb6957;
+v9766 := landingButtons_spc1_1;
+v9768 := doorState;
+TO: main_bb6957_end;
+
+FROM: main_bb6957_end;
+assume((v9766 != 0) && (v9768 != 0));
+TO: main_bb6958;
+
+FROM: main_bb6957_end;
+assume((v9766 == 0) || (v9768 == 0));
+TO: main_bb6959;
+
+FROM: main_bb6958;
+landingButtons_spc1_1 := 0;
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_bb6959;
+TO: main_bb6959_end;
+
+FROM: main_bb6959_end;
+assume(v9761 < 3);
+TO: main_LeafBlock35.i.i.i.i.i;
+
+FROM: main_bb6959_end;
+assume(v9761 >= 3);
+TO: main_NodeBlock39.i.i.i.i.i;
+
+FROM: main_LeafBlock35.i.i.i.i.i;
+TO: main_LeafBlock35.i.i.i.i.i_end;
+
+FROM: main_LeafBlock35.i.i.i.i.i_end;
+assume(v9761 == 2);
+TO: main_bb6960;
+
+FROM: main_LeafBlock35.i.i.i.i.i_end;
+assume(v9761 != 2);
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_NodeBlock39.i.i.i.i.i;
+TO: main_NodeBlock39.i.i.i.i.i_end;
+
+FROM: main_NodeBlock39.i.i.i.i.i_end;
+assume(v9761 < 4);
+TO: main_bb6963;
+
+FROM: main_NodeBlock39.i.i.i.i.i_end;
+assume(v9761 >= 4);
+TO: main_LeafBlock37.i.i.i.i.i;
+
+FROM: main_LeafBlock37.i.i.i.i.i;
+TO: main_LeafBlock37.i.i.i.i.i_end;
+
+FROM: main_LeafBlock37.i.i.i.i.i_end;
+assume(v9761 == 4);
+TO: main_bb6966;
+
+FROM: main_LeafBlock37.i.i.i.i.i_end;
+assume(v9761 != 4);
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_NodeBlock19.i.i.i.i.i;
+TO: main_NodeBlock19.i.i.i.i.i_end;
+
+FROM: main_NodeBlock19.i.i.i.i.i_end;
+assume(v9761 < 3);
+TO: main_bb6960;
+
+FROM: main_NodeBlock19.i.i.i.i.i_end;
+assume(v9761 >= 3);
+TO: main_NodeBlock17.i.i.i.i.i;
+
+FROM: main_bb6960;
+v9770 := landingButtons_spc1_2;
+v9772 := doorState;
+TO: main_bb6960_end;
+
+FROM: main_bb6960_end;
+assume((v9770 != 0) && (v9772 != 0));
+TO: main_bb6961;
+
+FROM: main_bb6960_end;
+assume((v9770 == 0) || (v9772 == 0));
+TO: main_bb6962;
+
+FROM: main_bb6961;
+landingButtons_spc1_2 := 0;
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_bb6962;
+TO: main_bb6962_end;
+
+FROM: main_bb6962_end;
+assume(v9761 < 4);
+TO: main_LeafBlock44.i.i.i.i.i;
+
+FROM: main_bb6962_end;
+assume(v9761 >= 4);
+TO: main_LeafBlock46.i.i.i.i.i;
+
+FROM: main_LeafBlock44.i.i.i.i.i;
+TO: main_LeafBlock44.i.i.i.i.i_end;
+
+FROM: main_LeafBlock44.i.i.i.i.i_end;
+assume(v9761 == 3);
+TO: main_bb6963;
+
+FROM: main_LeafBlock44.i.i.i.i.i_end;
+assume(v9761 != 3);
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_LeafBlock46.i.i.i.i.i;
+TO: main_LeafBlock46.i.i.i.i.i_end;
+
+FROM: main_LeafBlock46.i.i.i.i.i_end;
+assume(v9761 == 4);
+TO: main_bb6966;
+
+FROM: main_LeafBlock46.i.i.i.i.i_end;
+assume(v9761 != 4);
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_NodeBlock17.i.i.i.i.i;
+TO: main_NodeBlock17.i.i.i.i.i_end;
+
+FROM: main_NodeBlock17.i.i.i.i.i_end;
+assume(v9761 < 4);
+TO: main_bb6963;
+
+FROM: main_NodeBlock17.i.i.i.i.i_end;
+assume(v9761 >= 4);
+TO: main_LeafBlock15.i.i.i.i.i;
+
+FROM: main_bb6963;
+v9774 := landingButtons_spc1_3;
+v9776 := doorState;
+TO: main_bb6963_end;
+
+FROM: main_bb6963_end;
+assume((v9774 != 0) && (v9776 != 0));
+TO: main_bb6964;
+
+FROM: main_bb6963_end;
+assume((v9774 == 0) || (v9776 == 0));
+TO: main_bb6965;
+
+FROM: main_bb6964;
+landingButtons_spc1_3 := 0;
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_bb6965;
+v9779 := landingButtons_spc1_4;
+v9781 := doorState;
+TO: main_bb6965_end;
+
+FROM: main_bb6965_end;
+assume(((v9761 == 4) && (v9779 != 0)) && (v9781 != 0));
+TO: main_bb6967;
+
+FROM: main_bb6965_end;
+assume(((v9761 != 4) || (v9779 == 0)) || (v9781 == 0));
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_LeafBlock15.i.i.i.i.i;
+TO: main_LeafBlock15.i.i.i.i.i_end;
+
+FROM: main_LeafBlock15.i.i.i.i.i_end;
+assume(v9761 == 4);
+TO: main_bb6966;
+
+FROM: main_LeafBlock15.i.i.i.i.i_end;
+assume(v9761 != 4);
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_bb6966;
+v.old.i.i.i.i.i := landingButtons_spc1_4;
+v.old10.i.i.i.i.i := doorState;
+TO: main_bb6966_end;
+
+FROM: main_bb6966_end;
+assume((v.old.i.i.i.i.i != 0) && (v.old10.i.i.i.i.i != 0));
+TO: main_bb6967;
+
+FROM: main_bb6966_end;
+assume((v.old.i.i.i.i.i == 0) || (v.old10.i.i.i.i.i == 0));
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_bb6967;
+landingButtons_spc1_4 := 0;
+TO: main_timeShift.exit.i.i.i;
+
+FROM: main_timeShift.exit.i.i.i;
+v9783 := cleanupTimeShifts;
+var__temp_vi.0.i.i.i := 0;
+TO: main_bb6968;
+
+FROM: main_bb6968;
+vi.0.i.i.i := var__temp_vi.0.i.i.i;
+v9784 := v9783 - 1;
+TO: main_bb6968_end;
+
+FROM: main_bb6968_end;
+assume(vi.0.i.i.i < v9784);
+TO: main_bb6969;
+
+FROM: main_bb6968_end;
+assume(vi.0.i.i.i >= v9784);
+TO: main_test.exit.i;
+
+FROM: main_bb6969;
+v9786 := calls_0;
+v9788 := floorButtons_0;
+v9790 := calls_1;
+v9792 := floorButtons_1;
+v9794 := calls_2;
+v9796 := floorButtons_2;
+v9798 := calls_3;
+v9800 := floorButtons_3;
+v9802 := calls_4;
+v9804 := floorButtons_4;
+TO: main_bb6969_v.0.i.i394.i.i.i;
+FROM: main_bb6969_v.0.i.i394.i.i.i;
+assume((((((((((v9786 != 0) || (v9788 != 0)) || (v9790 != 0)) || (v9792 != 0)) || (v9794 != 0)) || (v9796 != 0)) || (v9798 != 0)) || (v9800 != 0)) || (v9802 != 0)) || (v9804 != 0));
+v.0.i.i394.i.i.i := 1;
+TO: main_bb6969_sv.0.i.i394.i.i.i;
+
+FROM: main_bb6969_v.0.i.i394.i.i.i;
+assume((((((((((v9786 == 0) && (v9788 == 0)) && (v9790 == 0)) && (v9792 == 0)) && (v9794 == 0)) && (v9796 == 0)) && (v9798 == 0)) && (v9800 == 0)) && (v9802 == 0)) && (v9804 == 0));
+v.0.i.i394.i.i.i := 0;
+TO: main_bb6969_sv.0.i.i394.i.i.i;
+
+FROM: main_bb6969_sv.0.i.i394.i.i.i;
+TO: main_bb6969_end;
+
+FROM: main_bb6969_end;
+assume(v.0.i.i394.i.i.i == 0);
+TO: main_test.exit.i;
+
+FROM: main_bb6969_end;
+assume(v.0.i.i394.i.i.i != 0);
+TO: main_bb6970;
+
+FROM: main_bb6970;
+v9807 := currentFloorID;
+TO: main_bb6970_end;
+
+FROM: main_bb6970_end;
+assume(v9807 < 2);
+TO: main_NodeBlock.i.i.i3.i.i.i;
+
+FROM: main_bb6970_end;
+assume(v9807 >= 2);
+TO: main_NodeBlock5.i.i.i8.i.i.i;
+
+FROM: main_NodeBlock.i.i.i3.i.i.i;
+TO: main_NodeBlock.i.i.i3.i.i.i_end;
+
+FROM: main_NodeBlock.i.i.i3.i.i.i_end;
+assume(v9807 < 1);
+TO: main_LeafBlock.i.i.i6.i.i.i;
+
+FROM: main_NodeBlock.i.i.i3.i.i.i_end;
+assume(v9807 >= 1);
+TO: main_bb6971;
+
+FROM: main_LeafBlock.i.i.i6.i.i.i;
+v9808 := calls_0;
+TO: main_LeafBlock.i.i.i6.i.i.i_v.14.i.i5.i.i.i;
+FROM: main_LeafBlock.i.i.i6.i.i.i_v.14.i.i5.i.i.i;
+assume(v9807 == 0);
+v.14.i.i5.i.i.i := v9808;
+TO: main_LeafBlock.i.i.i6.i.i.i_sv.14.i.i5.i.i.i;
+
+FROM: main_LeafBlock.i.i.i6.i.i.i_v.14.i.i5.i.i.i;
+assume(v9807 != 0);
+v.14.i.i5.i.i.i := 0;
+TO: main_LeafBlock.i.i.i6.i.i.i_sv.14.i.i5.i.i.i;
+
+FROM: main_LeafBlock.i.i.i6.i.i.i_sv.14.i.i5.i.i.i;
+var__temp_v.0.i.i.i14.i.i.i := v.14.i.i5.i.i.i;
+TO: main_isFloorCalling.exit.i.i15.i.i.i;
+
+FROM: main_bb6971;
+v9809 := calls_1;
+var__temp_v.0.i.i.i14.i.i.i := v9809;
+TO: main_isFloorCalling.exit.i.i15.i.i.i;
+
+FROM: main_NodeBlock5.i.i.i8.i.i.i;
+TO: main_NodeBlock5.i.i.i8.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i.i8.i.i.i_end;
+assume(v9807 < 3);
+TO: main_bb6972;
+
+FROM: main_NodeBlock5.i.i.i8.i.i.i_end;
+assume(v9807 >= 3);
+TO: main_NodeBlock3.i.i.i10.i.i.i;
+
+FROM: main_bb6972;
+v9810 := calls_2;
+var__temp_v.0.i.i.i14.i.i.i := v9810;
+TO: main_isFloorCalling.exit.i.i15.i.i.i;
+
+FROM: main_NodeBlock3.i.i.i10.i.i.i;
+TO: main_NodeBlock3.i.i.i10.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i.i10.i.i.i_end;
+assume(v9807 < 4);
+TO: main_bb6973;
+
+FROM: main_NodeBlock3.i.i.i10.i.i.i_end;
+assume(v9807 >= 4);
+TO: main_LeafBlock1.i.i.i13.i.i.i;
+
+FROM: main_bb6973;
+v9811 := calls_3;
+var__temp_v.0.i.i.i14.i.i.i := v9811;
+TO: main_isFloorCalling.exit.i.i15.i.i.i;
+
+FROM: main_LeafBlock1.i.i.i13.i.i.i;
+v9812 := calls_4;
+TO: main_LeafBlock1.i.i.i13.i.i.i_v.15.i.i12.i.i.i;
+FROM: main_LeafBlock1.i.i.i13.i.i.i_v.15.i.i12.i.i.i;
+assume(v9807 == 4);
+v.15.i.i12.i.i.i := v9812;
+TO: main_LeafBlock1.i.i.i13.i.i.i_sv.15.i.i12.i.i.i;
+
+FROM: main_LeafBlock1.i.i.i13.i.i.i_v.15.i.i12.i.i.i;
+assume(v9807 != 4);
+v.15.i.i12.i.i.i := 0;
+TO: main_LeafBlock1.i.i.i13.i.i.i_sv.15.i.i12.i.i.i;
+
+FROM: main_LeafBlock1.i.i.i13.i.i.i_sv.15.i.i12.i.i.i;
+var__temp_v.0.i.i.i14.i.i.i := v.15.i.i12.i.i.i;
+TO: main_isFloorCalling.exit.i.i15.i.i.i;
+
+FROM: main_isFloorCalling.exit.i.i15.i.i.i;
+v.0.i.i.i14.i.i.i := var__temp_v.0.i.i.i14.i.i.i;
+var__temp_v.0.i.i32.i.i.i := 1;
+TO: main_isFloorCalling.exit.i.i15.i.i.i_end;
+
+FROM: main_isFloorCalling.exit.i.i15.i.i.i_end;
+assume(v.0.i.i.i14.i.i.i != 0);
+TO: main_stopRequestedAtCurrentFloor.exit.i33.i.i.i;
+
+FROM: main_isFloorCalling.exit.i.i15.i.i.i_end;
+assume(v.0.i.i.i14.i.i.i == 0);
+TO: main_bb6974;
+
+FROM: main_bb6974;
+v9814 := currentFloorID;
+TO: main_bb6974_end;
+
+FROM: main_bb6974_end;
+assume(v9814 < 2);
+TO: main_NodeBlock.i3.i.i18.i.i.i;
+
+FROM: main_bb6974_end;
+assume(v9814 >= 2);
+TO: main_NodeBlock5.i7.i.i23.i.i.i;
+
+FROM: main_NodeBlock.i3.i.i18.i.i.i;
+TO: main_NodeBlock.i3.i.i18.i.i.i_end;
+
+FROM: main_NodeBlock.i3.i.i18.i.i.i_end;
+assume(v9814 < 1);
+TO: main_LeafBlock.i5.i.i21.i.i.i;
+
+FROM: main_NodeBlock.i3.i.i18.i.i.i_end;
+assume(v9814 >= 1);
+TO: main_bb6975;
+
+FROM: main_LeafBlock.i5.i.i21.i.i.i;
+v9815 := floorButtons_0;
+TO: main_LeafBlock.i5.i.i21.i.i.i_v.16.i.i20.i.i.i;
+FROM: main_LeafBlock.i5.i.i21.i.i.i_v.16.i.i20.i.i.i;
+assume(v9814 == 0);
+v.16.i.i20.i.i.i := v9815;
+TO: main_LeafBlock.i5.i.i21.i.i.i_sv.16.i.i20.i.i.i;
+
+FROM: main_LeafBlock.i5.i.i21.i.i.i_v.16.i.i20.i.i.i;
+assume(v9814 != 0);
+v.16.i.i20.i.i.i := 0;
+TO: main_LeafBlock.i5.i.i21.i.i.i_sv.16.i.i20.i.i.i;
+
+FROM: main_LeafBlock.i5.i.i21.i.i.i_sv.16.i.i20.i.i.i;
+var__temp_v.0.i13.i.i29.i.i.i := v.16.i.i20.i.i.i;
+TO: main_buttonForFloorIsPressed.exit.i.i31.i.i.i;
+
+FROM: main_bb6975;
+v9816 := floorButtons_1;
+var__temp_v.0.i13.i.i29.i.i.i := v9816;
+TO: main_buttonForFloorIsPressed.exit.i.i31.i.i.i;
+
+FROM: main_NodeBlock5.i7.i.i23.i.i.i;
+TO: main_NodeBlock5.i7.i.i23.i.i.i_end;
+
+FROM: main_NodeBlock5.i7.i.i23.i.i.i_end;
+assume(v9814 < 3);
+TO: main_bb6976;
+
+FROM: main_NodeBlock5.i7.i.i23.i.i.i_end;
+assume(v9814 >= 3);
+TO: main_NodeBlock3.i9.i.i25.i.i.i;
+
+FROM: main_bb6976;
+v9817 := floorButtons_2;
+var__temp_v.0.i13.i.i29.i.i.i := v9817;
+TO: main_buttonForFloorIsPressed.exit.i.i31.i.i.i;
+
+FROM: main_NodeBlock3.i9.i.i25.i.i.i;
+TO: main_NodeBlock3.i9.i.i25.i.i.i_end;
+
+FROM: main_NodeBlock3.i9.i.i25.i.i.i_end;
+assume(v9814 < 4);
+TO: main_bb6977;
+
+FROM: main_NodeBlock3.i9.i.i25.i.i.i_end;
+assume(v9814 >= 4);
+TO: main_LeafBlock1.i11.i.i28.i.i.i;
+
+FROM: main_bb6977;
+v9818 := floorButtons_3;
+var__temp_v.0.i13.i.i29.i.i.i := v9818;
+TO: main_buttonForFloorIsPressed.exit.i.i31.i.i.i;
+
+FROM: main_LeafBlock1.i11.i.i28.i.i.i;
+v9819 := floorButtons_4;
+TO: main_LeafBlock1.i11.i.i28.i.i.i_v.17.i.i27.i.i.i;
+FROM: main_LeafBlock1.i11.i.i28.i.i.i_v.17.i.i27.i.i.i;
+assume(v9814 == 4);
+v.17.i.i27.i.i.i := v9819;
+TO: main_LeafBlock1.i11.i.i28.i.i.i_sv.17.i.i27.i.i.i;
+
+FROM: main_LeafBlock1.i11.i.i28.i.i.i_v.17.i.i27.i.i.i;
+assume(v9814 != 4);
+v.17.i.i27.i.i.i := 0;
+TO: main_LeafBlock1.i11.i.i28.i.i.i_sv.17.i.i27.i.i.i;
+
+FROM: main_LeafBlock1.i11.i.i28.i.i.i_sv.17.i.i27.i.i.i;
+var__temp_v.0.i13.i.i29.i.i.i := v.17.i.i27.i.i.i;
+TO: main_buttonForFloorIsPressed.exit.i.i31.i.i.i;
+
+FROM: main_buttonForFloorIsPressed.exit.i.i31.i.i.i;
+v.0.i13.i.i29.i.i.i := var__temp_v.0.i13.i.i29.i.i.i;
+TO: main_buttonForFloorIsPressed.exit.i.i31.i.i.i_v..i.i30.i.i.i;
+FROM: main_buttonForFloorIsPressed.exit.i.i31.i.i.i_v..i.i30.i.i.i;
+assume(v.0.i13.i.i29.i.i.i != 0);
+v..i.i30.i.i.i := 1;
+TO: main_buttonForFloorIsPressed.exit.i.i31.i.i.i_sv..i.i30.i.i.i;
+
+FROM: main_buttonForFloorIsPressed.exit.i.i31.i.i.i_v..i.i30.i.i.i;
+assume(v.0.i13.i.i29.i.i.i == 0);
+v..i.i30.i.i.i := 0;
+TO: main_buttonForFloorIsPressed.exit.i.i31.i.i.i_sv..i.i30.i.i.i;
+
+FROM: main_buttonForFloorIsPressed.exit.i.i31.i.i.i_sv..i.i30.i.i.i;
+var__temp_v.0.i.i32.i.i.i := v..i.i30.i.i.i;
+TO: main_stopRequestedAtCurrentFloor.exit.i33.i.i.i;
+
+FROM: main_stopRequestedAtCurrentFloor.exit.i33.i.i.i;
+v.0.i.i32.i.i.i := var__temp_v.0.i.i32.i.i.i;
+TO: main_stopRequestedAtCurrentFloor.exit.i33.i.i.i_end;
+
+FROM: main_stopRequestedAtCurrentFloor.exit.i33.i.i.i_end;
+assume(v.0.i.i32.i.i.i != 0);
+TO: main_bb6978;
+
+FROM: main_stopRequestedAtCurrentFloor.exit.i33.i.i.i_end;
+assume(v.0.i.i32.i.i.i == 0);
+TO: main_bb7091;
+
+FROM: main_bb6978;
+doorState := 1;
+v9822 := persons_0;
+v9824 := currentFloorID;
+TO: main_bb6978_end;
+
+FROM: main_bb6978_end;
+assume((v9822 != 0) && (0 == v9824));
+TO: main_bb6979;
+
+FROM: main_bb6978_end;
+assume((v9822 == 0) || (0 != v9824));
+TO: main_bb6980;
+
+FROM: main_bb6979;
+persons_0 := 0;
+TO: main_bb6980;
+
+FROM: main_bb6980;
+v9826 := persons_1;
+v9828 := currentFloorID;
+TO: main_bb6980_end;
+
+FROM: main_bb6980_end;
+assume((v9826 != 0) && (0 == v9828));
+TO: main_bb6981;
+
+FROM: main_bb6980_end;
+assume((v9826 == 0) || (0 != v9828));
+TO: main_bb6982;
+
+FROM: main_bb6981;
+persons_1 := 0;
+TO: main_bb6982;
+
+FROM: main_bb6982;
+v9830 := persons_2;
+v9832 := currentFloorID;
+TO: main_bb6982_end;
+
+FROM: main_bb6982_end;
+assume((v9830 != 0) && (1 == v9832));
+TO: main_bb6983;
+
+FROM: main_bb6982_end;
+assume((v9830 == 0) || (1 != v9832));
+TO: main_bb6984;
+
+FROM: main_bb6983;
+persons_2 := 0;
+TO: main_bb6984;
+
+FROM: main_bb6984;
+v9834 := persons_3;
+v9836 := currentFloorID;
+TO: main_bb6984_end;
+
+FROM: main_bb6984_end;
+assume((v9834 != 0) && (3 == v9836));
+TO: main_bb6985;
+
+FROM: main_bb6984_end;
+assume((v9834 == 0) || (3 != v9836));
+TO: main_bb6986;
+
+FROM: main_bb6985;
+persons_3 := 0;
+TO: main_bb6986;
+
+FROM: main_bb6986;
+v9838 := persons_4;
+v9840 := currentFloorID;
+TO: main_bb6986_end;
+
+FROM: main_bb6986_end;
+assume((v9838 != 0) && (1 == v9840));
+TO: main_bb6987;
+
+FROM: main_bb6986_end;
+assume((v9838 == 0) || (1 != v9840));
+TO: main_bb6988;
+
+FROM: main_bb6987;
+persons_4 := 0;
+TO: main_bb6988;
+
+FROM: main_bb6988;
+v9842 := persons_5;
+v9844 := currentFloorID;
+TO: main_bb6988_end;
+
+FROM: main_bb6988_end;
+assume((v9842 != 0) && (3 == v9844));
+TO: main_bb6989;
+
+FROM: main_bb6988_end;
+assume((v9842 == 0) || (3 != v9844));
+TO: main_bb6990;
+
+FROM: main_bb6989;
+persons_5 := 0;
+TO: main_bb6990;
+
+FROM: main_bb6990;
+v9846 := currentFloorID;
+TO: main_bb6990_end;
+
+FROM: main_bb6990_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i.i39.i42.i.i.i;
+
+FROM: main_bb6990_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i.i44.i47.i.i.i;
+
+FROM: main_NodeBlock.i.i39.i42.i.i.i;
+TO: main_NodeBlock.i.i39.i42.i.i.i_end;
+
+FROM: main_NodeBlock.i.i39.i42.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i.i42.i45.i.i.i;
+
+FROM: main_NodeBlock.i.i39.i42.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb6991;
+
+FROM: main_LeafBlock.i.i42.i45.i.i.i;
+v9847 := personOnFloor_0_0;
+TO: main_LeafBlock.i.i42.i45.i.i.i_v..i41.i44.i.i.i;
+FROM: main_LeafBlock.i.i42.i45.i.i.i_v..i41.i44.i.i.i;
+assume(v9846 == 0);
+v..i41.i44.i.i.i := v9847;
+TO: main_LeafBlock.i.i42.i45.i.i.i_sv..i41.i44.i.i.i;
+
+FROM: main_LeafBlock.i.i42.i45.i.i.i_v..i41.i44.i.i.i;
+assume(v9846 != 0);
+v..i41.i44.i.i.i := 0;
+TO: main_LeafBlock.i.i42.i45.i.i.i_sv..i41.i44.i.i.i;
+
+FROM: main_LeafBlock.i.i42.i45.i.i.i_sv..i41.i44.i.i.i;
+var__temp_v.0.i.i49.i53.i.i.i := v..i41.i44.i.i.i;
+TO: main_isPersonOnFloor.exit.i.i54.i.i.i;
+
+FROM: main_bb6991;
+v9848 := personOnFloor_0_1;
+var__temp_v.0.i.i49.i53.i.i.i := v9848;
+TO: main_isPersonOnFloor.exit.i.i54.i.i.i;
+
+FROM: main_NodeBlock5.i.i44.i47.i.i.i;
+TO: main_NodeBlock5.i.i44.i47.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i44.i47.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb6992;
+
+FROM: main_NodeBlock5.i.i44.i47.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i.i46.i49.i.i.i;
+
+FROM: main_bb6992;
+v9849 := personOnFloor_0_2;
+var__temp_v.0.i.i49.i53.i.i.i := v9849;
+TO: main_isPersonOnFloor.exit.i.i54.i.i.i;
+
+FROM: main_NodeBlock3.i.i46.i49.i.i.i;
+TO: main_NodeBlock3.i.i46.i49.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i46.i49.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb6993;
+
+FROM: main_NodeBlock3.i.i46.i49.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i.i48.i52.i.i.i;
+
+FROM: main_bb6993;
+v9850 := personOnFloor_0_3;
+var__temp_v.0.i.i49.i53.i.i.i := v9850;
+TO: main_isPersonOnFloor.exit.i.i54.i.i.i;
+
+FROM: main_LeafBlock1.i.i48.i52.i.i.i;
+v9851 := personOnFloor_0_4;
+TO: main_LeafBlock1.i.i48.i52.i.i.i_v.321.i.i51.i.i.i;
+FROM: main_LeafBlock1.i.i48.i52.i.i.i_v.321.i.i51.i.i.i;
+assume(v9846 == 4);
+v.321.i.i51.i.i.i := v9851;
+TO: main_LeafBlock1.i.i48.i52.i.i.i_sv.321.i.i51.i.i.i;
+
+FROM: main_LeafBlock1.i.i48.i52.i.i.i_v.321.i.i51.i.i.i;
+assume(v9846 != 4);
+v.321.i.i51.i.i.i := 0;
+TO: main_LeafBlock1.i.i48.i52.i.i.i_sv.321.i.i51.i.i.i;
+
+FROM: main_LeafBlock1.i.i48.i52.i.i.i_sv.321.i.i51.i.i.i;
+var__temp_v.0.i.i49.i53.i.i.i := v.321.i.i51.i.i.i;
+TO: main_isPersonOnFloor.exit.i.i54.i.i.i;
+
+FROM: main_isPersonOnFloor.exit.i.i54.i.i.i;
+v.0.i.i49.i53.i.i.i := var__temp_v.0.i.i49.i53.i.i.i;
+TO: main_isPersonOnFloor.exit.i.i54.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit.i.i54.i.i.i_end;
+assume(v.0.i.i49.i53.i.i.i != 0);
+TO: main_bb6994;
+
+FROM: main_isPersonOnFloor.exit.i.i54.i.i.i_end;
+assume(v.0.i.i49.i53.i.i.i == 0);
+TO: main_bb7005;
+
+FROM: main_bb6994;
+TO: main_bb6994_end;
+
+FROM: main_bb6994_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i299.i.i57.i.i.i;
+
+FROM: main_bb6994_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i303.i.i61.i.i.i;
+
+FROM: main_NodeBlock.i299.i.i57.i.i.i;
+TO: main_NodeBlock.i299.i.i57.i.i.i_end;
+
+FROM: main_NodeBlock.i299.i.i57.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i301.i.i59.i.i.i;
+
+FROM: main_NodeBlock.i299.i.i57.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb6996;
+
+FROM: main_LeafBlock.i301.i.i59.i.i.i;
+TO: main_LeafBlock.i301.i.i59.i.i.i_end;
+
+FROM: main_LeafBlock.i301.i.i59.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb6995;
+
+FROM: main_LeafBlock.i301.i.i59.i.i.i_end;
+assume(v9846 != 0);
+TO: main_NewDefault.i308.i.i67.i.i.i;
+
+FROM: main_bb6995;
+personOnFloor_0_0 := 0;
+TO: main_NewDefault.i308.i.i67.i.i.i;
+
+FROM: main_bb6996;
+personOnFloor_0_1 := 0;
+TO: main_NewDefault.i308.i.i67.i.i.i;
+
+FROM: main_NodeBlock5.i303.i.i61.i.i.i;
+TO: main_NodeBlock5.i303.i.i61.i.i.i_end;
+
+FROM: main_NodeBlock5.i303.i.i61.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb6997;
+
+FROM: main_NodeBlock5.i303.i.i61.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i305.i.i63.i.i.i;
+
+FROM: main_bb6997;
+personOnFloor_0_2 := 0;
+TO: main_NewDefault.i308.i.i67.i.i.i;
+
+FROM: main_NodeBlock3.i305.i.i63.i.i.i;
+TO: main_NodeBlock3.i305.i.i63.i.i.i_end;
+
+FROM: main_NodeBlock3.i305.i.i63.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb6998;
+
+FROM: main_NodeBlock3.i305.i.i63.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i307.i.i65.i.i.i;
+
+FROM: main_bb6998;
+personOnFloor_0_3 := 0;
+TO: main_NewDefault.i308.i.i67.i.i.i;
+
+FROM: main_LeafBlock1.i307.i.i65.i.i.i;
+TO: main_LeafBlock1.i307.i.i65.i.i.i_end;
+
+FROM: main_LeafBlock1.i307.i.i65.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb6999;
+
+FROM: main_LeafBlock1.i307.i.i65.i.i.i_end;
+assume(v9846 != 4);
+TO: main_NewDefault.i308.i.i67.i.i.i;
+
+FROM: main_bb6999;
+personOnFloor_0_4 := 0;
+TO: main_NewDefault.i308.i.i67.i.i.i;
+
+FROM: main_NewDefault.i308.i.i67.i.i.i;
+TO: main_NewDefault.i308.i.i67.i.i.i_end;
+
+FROM: main_NewDefault.i308.i.i67.i.i.i_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i.i311.i.i69.i.i.i;
+
+FROM: main_NewDefault.i308.i.i67.i.i.i_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i.i315.i.i73.i.i.i;
+
+FROM: main_NodeBlock.i.i311.i.i69.i.i.i;
+TO: main_NodeBlock.i.i311.i.i69.i.i.i_end;
+
+FROM: main_NodeBlock.i.i311.i.i69.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i.i313.i.i71.i.i.i;
+
+FROM: main_NodeBlock.i.i311.i.i69.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7001;
+
+FROM: main_LeafBlock.i.i313.i.i71.i.i.i;
+TO: main_LeafBlock.i.i313.i.i71.i.i.i_end;
+
+FROM: main_LeafBlock.i.i313.i.i71.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7000;
+
+FROM: main_LeafBlock.i.i313.i.i71.i.i.i_end;
+assume(v9846 != 0);
+TO: main_removePersonFromFloor.exit320.i.i78.i.i.i;
+
+FROM: main_bb7000;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit320.i.i78.i.i.i;
+
+FROM: main_bb7001;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit320.i.i78.i.i.i;
+
+FROM: main_NodeBlock5.i.i315.i.i73.i.i.i;
+TO: main_NodeBlock5.i.i315.i.i73.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i315.i.i73.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7002;
+
+FROM: main_NodeBlock5.i.i315.i.i73.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i.i317.i.i75.i.i.i;
+
+FROM: main_bb7002;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit320.i.i78.i.i.i;
+
+FROM: main_NodeBlock3.i.i317.i.i75.i.i.i;
+TO: main_NodeBlock3.i.i317.i.i75.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i317.i.i75.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7003;
+
+FROM: main_NodeBlock3.i.i317.i.i75.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i.i319.i.i77.i.i.i;
+
+FROM: main_bb7003;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit320.i.i78.i.i.i;
+
+FROM: main_LeafBlock1.i.i319.i.i77.i.i.i;
+TO: main_LeafBlock1.i.i319.i.i77.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i319.i.i77.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7004;
+
+FROM: main_LeafBlock1.i.i319.i.i77.i.i.i_end;
+assume(v9846 != 4);
+TO: main_removePersonFromFloor.exit320.i.i78.i.i.i;
+
+FROM: main_bb7004;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit320.i.i78.i.i.i;
+
+FROM: main_removePersonFromFloor.exit320.i.i78.i.i.i;
+floorButtons_0 := 1;
+persons_0 := 1;
+TO: main_bb7005;
+
+FROM: main_bb7005;
+TO: main_bb7005_end;
+
+FROM: main_bb7005_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i266.i.i81.i.i.i;
+
+FROM: main_bb7005_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i270.i.i86.i.i.i;
+
+FROM: main_NodeBlock.i266.i.i81.i.i.i;
+TO: main_NodeBlock.i266.i.i81.i.i.i_end;
+
+FROM: main_NodeBlock.i266.i.i81.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i268.i.i84.i.i.i;
+
+FROM: main_NodeBlock.i266.i.i81.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7006;
+
+FROM: main_LeafBlock.i268.i.i84.i.i.i;
+v9853 := personOnFloor_1_0;
+TO: main_LeafBlock.i268.i.i84.i.i.i_v.322.i.i83.i.i.i;
+FROM: main_LeafBlock.i268.i.i84.i.i.i_v.322.i.i83.i.i.i;
+assume(v9846 == 0);
+v.322.i.i83.i.i.i := v9853;
+TO: main_LeafBlock.i268.i.i84.i.i.i_sv.322.i.i83.i.i.i;
+
+FROM: main_LeafBlock.i268.i.i84.i.i.i_v.322.i.i83.i.i.i;
+assume(v9846 != 0);
+v.322.i.i83.i.i.i := 0;
+TO: main_LeafBlock.i268.i.i84.i.i.i_sv.322.i.i83.i.i.i;
+
+FROM: main_LeafBlock.i268.i.i84.i.i.i_sv.322.i.i83.i.i.i;
+var__temp_v.0.i276.i.i92.i.i.i := v.322.i.i83.i.i.i;
+TO: main_isPersonOnFloor.exit277.i.i93.i.i.i;
+
+FROM: main_bb7006;
+v9854 := personOnFloor_1_1;
+var__temp_v.0.i276.i.i92.i.i.i := v9854;
+TO: main_isPersonOnFloor.exit277.i.i93.i.i.i;
+
+FROM: main_NodeBlock5.i270.i.i86.i.i.i;
+TO: main_NodeBlock5.i270.i.i86.i.i.i_end;
+
+FROM: main_NodeBlock5.i270.i.i86.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7007;
+
+FROM: main_NodeBlock5.i270.i.i86.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i272.i.i88.i.i.i;
+
+FROM: main_bb7007;
+v9855 := personOnFloor_1_2;
+var__temp_v.0.i276.i.i92.i.i.i := v9855;
+TO: main_isPersonOnFloor.exit277.i.i93.i.i.i;
+
+FROM: main_NodeBlock3.i272.i.i88.i.i.i;
+TO: main_NodeBlock3.i272.i.i88.i.i.i_end;
+
+FROM: main_NodeBlock3.i272.i.i88.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7008;
+
+FROM: main_NodeBlock3.i272.i.i88.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i274.i.i91.i.i.i;
+
+FROM: main_bb7008;
+v9856 := personOnFloor_1_3;
+var__temp_v.0.i276.i.i92.i.i.i := v9856;
+TO: main_isPersonOnFloor.exit277.i.i93.i.i.i;
+
+FROM: main_LeafBlock1.i274.i.i91.i.i.i;
+v9857 := personOnFloor_1_4;
+TO: main_LeafBlock1.i274.i.i91.i.i.i_v.323.i.i90.i.i.i;
+FROM: main_LeafBlock1.i274.i.i91.i.i.i_v.323.i.i90.i.i.i;
+assume(v9846 == 4);
+v.323.i.i90.i.i.i := v9857;
+TO: main_LeafBlock1.i274.i.i91.i.i.i_sv.323.i.i90.i.i.i;
+
+FROM: main_LeafBlock1.i274.i.i91.i.i.i_v.323.i.i90.i.i.i;
+assume(v9846 != 4);
+v.323.i.i90.i.i.i := 0;
+TO: main_LeafBlock1.i274.i.i91.i.i.i_sv.323.i.i90.i.i.i;
+
+FROM: main_LeafBlock1.i274.i.i91.i.i.i_sv.323.i.i90.i.i.i;
+var__temp_v.0.i276.i.i92.i.i.i := v.323.i.i90.i.i.i;
+TO: main_isPersonOnFloor.exit277.i.i93.i.i.i;
+
+FROM: main_isPersonOnFloor.exit277.i.i93.i.i.i;
+v.0.i276.i.i92.i.i.i := var__temp_v.0.i276.i.i92.i.i.i;
+TO: main_isPersonOnFloor.exit277.i.i93.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit277.i.i93.i.i.i_end;
+assume(v.0.i276.i.i92.i.i.i != 0);
+TO: main_bb7009;
+
+FROM: main_isPersonOnFloor.exit277.i.i93.i.i.i_end;
+assume(v.0.i276.i.i92.i.i.i == 0);
+TO: main_bb7020;
+
+FROM: main_bb7009;
+TO: main_bb7009_end;
+
+FROM: main_bb7009_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i242.i.i96.i.i.i;
+
+FROM: main_bb7009_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i246.i.i100.i.i.i;
+
+FROM: main_NodeBlock.i242.i.i96.i.i.i;
+TO: main_NodeBlock.i242.i.i96.i.i.i_end;
+
+FROM: main_NodeBlock.i242.i.i96.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i244.i.i98.i.i.i;
+
+FROM: main_NodeBlock.i242.i.i96.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7011;
+
+FROM: main_LeafBlock.i244.i.i98.i.i.i;
+TO: main_LeafBlock.i244.i.i98.i.i.i_end;
+
+FROM: main_LeafBlock.i244.i.i98.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7010;
+
+FROM: main_LeafBlock.i244.i.i98.i.i.i_end;
+assume(v9846 != 0);
+TO: main_NewDefault.i251.i.i106.i.i.i;
+
+FROM: main_bb7010;
+personOnFloor_1_0 := 0;
+TO: main_NewDefault.i251.i.i106.i.i.i;
+
+FROM: main_bb7011;
+personOnFloor_1_1 := 0;
+TO: main_NewDefault.i251.i.i106.i.i.i;
+
+FROM: main_NodeBlock5.i246.i.i100.i.i.i;
+TO: main_NodeBlock5.i246.i.i100.i.i.i_end;
+
+FROM: main_NodeBlock5.i246.i.i100.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7012;
+
+FROM: main_NodeBlock5.i246.i.i100.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i248.i.i102.i.i.i;
+
+FROM: main_bb7012;
+personOnFloor_1_2 := 0;
+TO: main_NewDefault.i251.i.i106.i.i.i;
+
+FROM: main_NodeBlock3.i248.i.i102.i.i.i;
+TO: main_NodeBlock3.i248.i.i102.i.i.i_end;
+
+FROM: main_NodeBlock3.i248.i.i102.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7013;
+
+FROM: main_NodeBlock3.i248.i.i102.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i250.i.i104.i.i.i;
+
+FROM: main_bb7013;
+personOnFloor_1_3 := 0;
+TO: main_NewDefault.i251.i.i106.i.i.i;
+
+FROM: main_LeafBlock1.i250.i.i104.i.i.i;
+TO: main_LeafBlock1.i250.i.i104.i.i.i_end;
+
+FROM: main_LeafBlock1.i250.i.i104.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7014;
+
+FROM: main_LeafBlock1.i250.i.i104.i.i.i_end;
+assume(v9846 != 4);
+TO: main_NewDefault.i251.i.i106.i.i.i;
+
+FROM: main_bb7014;
+personOnFloor_1_4 := 0;
+TO: main_NewDefault.i251.i.i106.i.i.i;
+
+FROM: main_NewDefault.i251.i.i106.i.i.i;
+TO: main_NewDefault.i251.i.i106.i.i.i_end;
+
+FROM: main_NewDefault.i251.i.i106.i.i.i_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i.i254.i.i108.i.i.i;
+
+FROM: main_NewDefault.i251.i.i106.i.i.i_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i.i258.i.i112.i.i.i;
+
+FROM: main_NodeBlock.i.i254.i.i108.i.i.i;
+TO: main_NodeBlock.i.i254.i.i108.i.i.i_end;
+
+FROM: main_NodeBlock.i.i254.i.i108.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i.i256.i.i110.i.i.i;
+
+FROM: main_NodeBlock.i.i254.i.i108.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7016;
+
+FROM: main_LeafBlock.i.i256.i.i110.i.i.i;
+TO: main_LeafBlock.i.i256.i.i110.i.i.i_end;
+
+FROM: main_LeafBlock.i.i256.i.i110.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7015;
+
+FROM: main_LeafBlock.i.i256.i.i110.i.i.i_end;
+assume(v9846 != 0);
+TO: main_removePersonFromFloor.exit263.i.i117.i.i.i;
+
+FROM: main_bb7015;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit263.i.i117.i.i.i;
+
+FROM: main_bb7016;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit263.i.i117.i.i.i;
+
+FROM: main_NodeBlock5.i.i258.i.i112.i.i.i;
+TO: main_NodeBlock5.i.i258.i.i112.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i258.i.i112.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7017;
+
+FROM: main_NodeBlock5.i.i258.i.i112.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i.i260.i.i114.i.i.i;
+
+FROM: main_bb7017;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit263.i.i117.i.i.i;
+
+FROM: main_NodeBlock3.i.i260.i.i114.i.i.i;
+TO: main_NodeBlock3.i.i260.i.i114.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i260.i.i114.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7018;
+
+FROM: main_NodeBlock3.i.i260.i.i114.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i.i262.i.i116.i.i.i;
+
+FROM: main_bb7018;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit263.i.i117.i.i.i;
+
+FROM: main_LeafBlock1.i.i262.i.i116.i.i.i;
+TO: main_LeafBlock1.i.i262.i.i116.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i262.i.i116.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7019;
+
+FROM: main_LeafBlock1.i.i262.i.i116.i.i.i_end;
+assume(v9846 != 4);
+TO: main_removePersonFromFloor.exit263.i.i117.i.i.i;
+
+FROM: main_bb7019;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit263.i.i117.i.i.i;
+
+FROM: main_removePersonFromFloor.exit263.i.i117.i.i.i;
+floorButtons_0 := 1;
+persons_1 := 1;
+TO: main_bb7020;
+
+FROM: main_bb7020;
+TO: main_bb7020_end;
+
+FROM: main_bb7020_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i209.i.i120.i.i.i;
+
+FROM: main_bb7020_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i213.i.i125.i.i.i;
+
+FROM: main_NodeBlock.i209.i.i120.i.i.i;
+TO: main_NodeBlock.i209.i.i120.i.i.i_end;
+
+FROM: main_NodeBlock.i209.i.i120.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i211.i.i123.i.i.i;
+
+FROM: main_NodeBlock.i209.i.i120.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7021;
+
+FROM: main_LeafBlock.i211.i.i123.i.i.i;
+v9859 := personOnFloor_2_0;
+TO: main_LeafBlock.i211.i.i123.i.i.i_v.324.i.i122.i.i.i;
+FROM: main_LeafBlock.i211.i.i123.i.i.i_v.324.i.i122.i.i.i;
+assume(v9846 == 0);
+v.324.i.i122.i.i.i := v9859;
+TO: main_LeafBlock.i211.i.i123.i.i.i_sv.324.i.i122.i.i.i;
+
+FROM: main_LeafBlock.i211.i.i123.i.i.i_v.324.i.i122.i.i.i;
+assume(v9846 != 0);
+v.324.i.i122.i.i.i := 0;
+TO: main_LeafBlock.i211.i.i123.i.i.i_sv.324.i.i122.i.i.i;
+
+FROM: main_LeafBlock.i211.i.i123.i.i.i_sv.324.i.i122.i.i.i;
+var__temp_v.0.i219.i.i131.i.i.i := v.324.i.i122.i.i.i;
+TO: main_isPersonOnFloor.exit220.i.i132.i.i.i;
+
+FROM: main_bb7021;
+v9860 := personOnFloor_2_1;
+var__temp_v.0.i219.i.i131.i.i.i := v9860;
+TO: main_isPersonOnFloor.exit220.i.i132.i.i.i;
+
+FROM: main_NodeBlock5.i213.i.i125.i.i.i;
+TO: main_NodeBlock5.i213.i.i125.i.i.i_end;
+
+FROM: main_NodeBlock5.i213.i.i125.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7022;
+
+FROM: main_NodeBlock5.i213.i.i125.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i215.i.i127.i.i.i;
+
+FROM: main_bb7022;
+v9861 := personOnFloor_2_2;
+var__temp_v.0.i219.i.i131.i.i.i := v9861;
+TO: main_isPersonOnFloor.exit220.i.i132.i.i.i;
+
+FROM: main_NodeBlock3.i215.i.i127.i.i.i;
+TO: main_NodeBlock3.i215.i.i127.i.i.i_end;
+
+FROM: main_NodeBlock3.i215.i.i127.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7023;
+
+FROM: main_NodeBlock3.i215.i.i127.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i217.i.i130.i.i.i;
+
+FROM: main_bb7023;
+v9862 := personOnFloor_2_3;
+var__temp_v.0.i219.i.i131.i.i.i := v9862;
+TO: main_isPersonOnFloor.exit220.i.i132.i.i.i;
+
+FROM: main_LeafBlock1.i217.i.i130.i.i.i;
+v9863 := personOnFloor_2_4;
+TO: main_LeafBlock1.i217.i.i130.i.i.i_v.325.i.i129.i.i.i;
+FROM: main_LeafBlock1.i217.i.i130.i.i.i_v.325.i.i129.i.i.i;
+assume(v9846 == 4);
+v.325.i.i129.i.i.i := v9863;
+TO: main_LeafBlock1.i217.i.i130.i.i.i_sv.325.i.i129.i.i.i;
+
+FROM: main_LeafBlock1.i217.i.i130.i.i.i_v.325.i.i129.i.i.i;
+assume(v9846 != 4);
+v.325.i.i129.i.i.i := 0;
+TO: main_LeafBlock1.i217.i.i130.i.i.i_sv.325.i.i129.i.i.i;
+
+FROM: main_LeafBlock1.i217.i.i130.i.i.i_sv.325.i.i129.i.i.i;
+var__temp_v.0.i219.i.i131.i.i.i := v.325.i.i129.i.i.i;
+TO: main_isPersonOnFloor.exit220.i.i132.i.i.i;
+
+FROM: main_isPersonOnFloor.exit220.i.i132.i.i.i;
+v.0.i219.i.i131.i.i.i := var__temp_v.0.i219.i.i131.i.i.i;
+TO: main_isPersonOnFloor.exit220.i.i132.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit220.i.i132.i.i.i_end;
+assume(v.0.i219.i.i131.i.i.i != 0);
+TO: main_bb7024;
+
+FROM: main_isPersonOnFloor.exit220.i.i132.i.i.i_end;
+assume(v.0.i219.i.i131.i.i.i == 0);
+TO: main_bb7035;
+
+FROM: main_bb7024;
+TO: main_bb7024_end;
+
+FROM: main_bb7024_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i185.i.i135.i.i.i;
+
+FROM: main_bb7024_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i189.i.i139.i.i.i;
+
+FROM: main_NodeBlock.i185.i.i135.i.i.i;
+TO: main_NodeBlock.i185.i.i135.i.i.i_end;
+
+FROM: main_NodeBlock.i185.i.i135.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i187.i.i137.i.i.i;
+
+FROM: main_NodeBlock.i185.i.i135.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7026;
+
+FROM: main_LeafBlock.i187.i.i137.i.i.i;
+TO: main_LeafBlock.i187.i.i137.i.i.i_end;
+
+FROM: main_LeafBlock.i187.i.i137.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7025;
+
+FROM: main_LeafBlock.i187.i.i137.i.i.i_end;
+assume(v9846 != 0);
+TO: main_NewDefault.i194.i.i145.i.i.i;
+
+FROM: main_bb7025;
+personOnFloor_2_0 := 0;
+TO: main_NewDefault.i194.i.i145.i.i.i;
+
+FROM: main_bb7026;
+personOnFloor_2_1 := 0;
+TO: main_NewDefault.i194.i.i145.i.i.i;
+
+FROM: main_NodeBlock5.i189.i.i139.i.i.i;
+TO: main_NodeBlock5.i189.i.i139.i.i.i_end;
+
+FROM: main_NodeBlock5.i189.i.i139.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7027;
+
+FROM: main_NodeBlock5.i189.i.i139.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i191.i.i141.i.i.i;
+
+FROM: main_bb7027;
+personOnFloor_2_2 := 0;
+TO: main_NewDefault.i194.i.i145.i.i.i;
+
+FROM: main_NodeBlock3.i191.i.i141.i.i.i;
+TO: main_NodeBlock3.i191.i.i141.i.i.i_end;
+
+FROM: main_NodeBlock3.i191.i.i141.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7028;
+
+FROM: main_NodeBlock3.i191.i.i141.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i193.i.i143.i.i.i;
+
+FROM: main_bb7028;
+personOnFloor_2_3 := 0;
+TO: main_NewDefault.i194.i.i145.i.i.i;
+
+FROM: main_LeafBlock1.i193.i.i143.i.i.i;
+TO: main_LeafBlock1.i193.i.i143.i.i.i_end;
+
+FROM: main_LeafBlock1.i193.i.i143.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7029;
+
+FROM: main_LeafBlock1.i193.i.i143.i.i.i_end;
+assume(v9846 != 4);
+TO: main_NewDefault.i194.i.i145.i.i.i;
+
+FROM: main_bb7029;
+personOnFloor_2_4 := 0;
+TO: main_NewDefault.i194.i.i145.i.i.i;
+
+FROM: main_NewDefault.i194.i.i145.i.i.i;
+TO: main_NewDefault.i194.i.i145.i.i.i_end;
+
+FROM: main_NewDefault.i194.i.i145.i.i.i_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i.i197.i.i147.i.i.i;
+
+FROM: main_NewDefault.i194.i.i145.i.i.i_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i.i201.i.i151.i.i.i;
+
+FROM: main_NodeBlock.i.i197.i.i147.i.i.i;
+TO: main_NodeBlock.i.i197.i.i147.i.i.i_end;
+
+FROM: main_NodeBlock.i.i197.i.i147.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i.i199.i.i149.i.i.i;
+
+FROM: main_NodeBlock.i.i197.i.i147.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7031;
+
+FROM: main_LeafBlock.i.i199.i.i149.i.i.i;
+TO: main_LeafBlock.i.i199.i.i149.i.i.i_end;
+
+FROM: main_LeafBlock.i.i199.i.i149.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7030;
+
+FROM: main_LeafBlock.i.i199.i.i149.i.i.i_end;
+assume(v9846 != 0);
+TO: main_removePersonFromFloor.exit206.i.i156.i.i.i;
+
+FROM: main_bb7030;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit206.i.i156.i.i.i;
+
+FROM: main_bb7031;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit206.i.i156.i.i.i;
+
+FROM: main_NodeBlock5.i.i201.i.i151.i.i.i;
+TO: main_NodeBlock5.i.i201.i.i151.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i201.i.i151.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7032;
+
+FROM: main_NodeBlock5.i.i201.i.i151.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i.i203.i.i153.i.i.i;
+
+FROM: main_bb7032;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit206.i.i156.i.i.i;
+
+FROM: main_NodeBlock3.i.i203.i.i153.i.i.i;
+TO: main_NodeBlock3.i.i203.i.i153.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i203.i.i153.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7033;
+
+FROM: main_NodeBlock3.i.i203.i.i153.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i.i205.i.i155.i.i.i;
+
+FROM: main_bb7033;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit206.i.i156.i.i.i;
+
+FROM: main_LeafBlock1.i.i205.i.i155.i.i.i;
+TO: main_LeafBlock1.i.i205.i.i155.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i205.i.i155.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7034;
+
+FROM: main_LeafBlock1.i.i205.i.i155.i.i.i_end;
+assume(v9846 != 4);
+TO: main_removePersonFromFloor.exit206.i.i156.i.i.i;
+
+FROM: main_bb7034;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit206.i.i156.i.i.i;
+
+FROM: main_removePersonFromFloor.exit206.i.i156.i.i.i;
+floorButtons_1 := 1;
+persons_2 := 1;
+TO: main_bb7035;
+
+FROM: main_bb7035;
+TO: main_bb7035_end;
+
+FROM: main_bb7035_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i153.i.i159.i.i.i;
+
+FROM: main_bb7035_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i157.i.i164.i.i.i;
+
+FROM: main_NodeBlock.i153.i.i159.i.i.i;
+TO: main_NodeBlock.i153.i.i159.i.i.i_end;
+
+FROM: main_NodeBlock.i153.i.i159.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i155.i.i162.i.i.i;
+
+FROM: main_NodeBlock.i153.i.i159.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7036;
+
+FROM: main_LeafBlock.i155.i.i162.i.i.i;
+v9865 := personOnFloor_3_0;
+TO: main_LeafBlock.i155.i.i162.i.i.i_v.326.i.i161.i.i.i;
+FROM: main_LeafBlock.i155.i.i162.i.i.i_v.326.i.i161.i.i.i;
+assume(v9846 == 0);
+v.326.i.i161.i.i.i := v9865;
+TO: main_LeafBlock.i155.i.i162.i.i.i_sv.326.i.i161.i.i.i;
+
+FROM: main_LeafBlock.i155.i.i162.i.i.i_v.326.i.i161.i.i.i;
+assume(v9846 != 0);
+v.326.i.i161.i.i.i := 0;
+TO: main_LeafBlock.i155.i.i162.i.i.i_sv.326.i.i161.i.i.i;
+
+FROM: main_LeafBlock.i155.i.i162.i.i.i_sv.326.i.i161.i.i.i;
+var__temp_v.0.i163.i.i170.i.i.i := v.326.i.i161.i.i.i;
+TO: main_isPersonOnFloor.exit164.i.i171.i.i.i;
+
+FROM: main_bb7036;
+v9866 := personOnFloor_3_1;
+var__temp_v.0.i163.i.i170.i.i.i := v9866;
+TO: main_isPersonOnFloor.exit164.i.i171.i.i.i;
+
+FROM: main_NodeBlock5.i157.i.i164.i.i.i;
+TO: main_NodeBlock5.i157.i.i164.i.i.i_end;
+
+FROM: main_NodeBlock5.i157.i.i164.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7037;
+
+FROM: main_NodeBlock5.i157.i.i164.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i159.i.i166.i.i.i;
+
+FROM: main_bb7037;
+v9867 := personOnFloor_3_2;
+var__temp_v.0.i163.i.i170.i.i.i := v9867;
+TO: main_isPersonOnFloor.exit164.i.i171.i.i.i;
+
+FROM: main_NodeBlock3.i159.i.i166.i.i.i;
+TO: main_NodeBlock3.i159.i.i166.i.i.i_end;
+
+FROM: main_NodeBlock3.i159.i.i166.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7038;
+
+FROM: main_NodeBlock3.i159.i.i166.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i161.i.i169.i.i.i;
+
+FROM: main_bb7038;
+v9868 := personOnFloor_3_3;
+var__temp_v.0.i163.i.i170.i.i.i := v9868;
+TO: main_isPersonOnFloor.exit164.i.i171.i.i.i;
+
+FROM: main_LeafBlock1.i161.i.i169.i.i.i;
+v9869 := personOnFloor_3_4;
+TO: main_LeafBlock1.i161.i.i169.i.i.i_v.327.i.i168.i.i.i;
+FROM: main_LeafBlock1.i161.i.i169.i.i.i_v.327.i.i168.i.i.i;
+assume(v9846 == 4);
+v.327.i.i168.i.i.i := v9869;
+TO: main_LeafBlock1.i161.i.i169.i.i.i_sv.327.i.i168.i.i.i;
+
+FROM: main_LeafBlock1.i161.i.i169.i.i.i_v.327.i.i168.i.i.i;
+assume(v9846 != 4);
+v.327.i.i168.i.i.i := 0;
+TO: main_LeafBlock1.i161.i.i169.i.i.i_sv.327.i.i168.i.i.i;
+
+FROM: main_LeafBlock1.i161.i.i169.i.i.i_sv.327.i.i168.i.i.i;
+var__temp_v.0.i163.i.i170.i.i.i := v.327.i.i168.i.i.i;
+TO: main_isPersonOnFloor.exit164.i.i171.i.i.i;
+
+FROM: main_isPersonOnFloor.exit164.i.i171.i.i.i;
+v.0.i163.i.i170.i.i.i := var__temp_v.0.i163.i.i170.i.i.i;
+TO: main_isPersonOnFloor.exit164.i.i171.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit164.i.i171.i.i.i_end;
+assume(v.0.i163.i.i170.i.i.i != 0);
+TO: main_bb7039;
+
+FROM: main_isPersonOnFloor.exit164.i.i171.i.i.i_end;
+assume(v.0.i163.i.i170.i.i.i == 0);
+TO: main_bb7050;
+
+FROM: main_bb7039;
+TO: main_bb7039_end;
+
+FROM: main_bb7039_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i129.i.i174.i.i.i;
+
+FROM: main_bb7039_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i133.i.i178.i.i.i;
+
+FROM: main_NodeBlock.i129.i.i174.i.i.i;
+TO: main_NodeBlock.i129.i.i174.i.i.i_end;
+
+FROM: main_NodeBlock.i129.i.i174.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i131.i.i176.i.i.i;
+
+FROM: main_NodeBlock.i129.i.i174.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7041;
+
+FROM: main_LeafBlock.i131.i.i176.i.i.i;
+TO: main_LeafBlock.i131.i.i176.i.i.i_end;
+
+FROM: main_LeafBlock.i131.i.i176.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7040;
+
+FROM: main_LeafBlock.i131.i.i176.i.i.i_end;
+assume(v9846 != 0);
+TO: main_NewDefault.i138.i.i184.i.i.i;
+
+FROM: main_bb7040;
+personOnFloor_3_0 := 0;
+TO: main_NewDefault.i138.i.i184.i.i.i;
+
+FROM: main_bb7041;
+personOnFloor_3_1 := 0;
+TO: main_NewDefault.i138.i.i184.i.i.i;
+
+FROM: main_NodeBlock5.i133.i.i178.i.i.i;
+TO: main_NodeBlock5.i133.i.i178.i.i.i_end;
+
+FROM: main_NodeBlock5.i133.i.i178.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7042;
+
+FROM: main_NodeBlock5.i133.i.i178.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i135.i.i180.i.i.i;
+
+FROM: main_bb7042;
+personOnFloor_3_2 := 0;
+TO: main_NewDefault.i138.i.i184.i.i.i;
+
+FROM: main_NodeBlock3.i135.i.i180.i.i.i;
+TO: main_NodeBlock3.i135.i.i180.i.i.i_end;
+
+FROM: main_NodeBlock3.i135.i.i180.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7043;
+
+FROM: main_NodeBlock3.i135.i.i180.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i137.i.i182.i.i.i;
+
+FROM: main_bb7043;
+personOnFloor_3_3 := 0;
+TO: main_NewDefault.i138.i.i184.i.i.i;
+
+FROM: main_LeafBlock1.i137.i.i182.i.i.i;
+TO: main_LeafBlock1.i137.i.i182.i.i.i_end;
+
+FROM: main_LeafBlock1.i137.i.i182.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7044;
+
+FROM: main_LeafBlock1.i137.i.i182.i.i.i_end;
+assume(v9846 != 4);
+TO: main_NewDefault.i138.i.i184.i.i.i;
+
+FROM: main_bb7044;
+personOnFloor_3_4 := 0;
+TO: main_NewDefault.i138.i.i184.i.i.i;
+
+FROM: main_NewDefault.i138.i.i184.i.i.i;
+TO: main_NewDefault.i138.i.i184.i.i.i_end;
+
+FROM: main_NewDefault.i138.i.i184.i.i.i_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i.i141.i.i186.i.i.i;
+
+FROM: main_NewDefault.i138.i.i184.i.i.i_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i.i145.i.i190.i.i.i;
+
+FROM: main_NodeBlock.i.i141.i.i186.i.i.i;
+TO: main_NodeBlock.i.i141.i.i186.i.i.i_end;
+
+FROM: main_NodeBlock.i.i141.i.i186.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i.i143.i.i188.i.i.i;
+
+FROM: main_NodeBlock.i.i141.i.i186.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7046;
+
+FROM: main_LeafBlock.i.i143.i.i188.i.i.i;
+TO: main_LeafBlock.i.i143.i.i188.i.i.i_end;
+
+FROM: main_LeafBlock.i.i143.i.i188.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7045;
+
+FROM: main_LeafBlock.i.i143.i.i188.i.i.i_end;
+assume(v9846 != 0);
+TO: main_removePersonFromFloor.exit150.i.i195.i.i.i;
+
+FROM: main_bb7045;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit150.i.i195.i.i.i;
+
+FROM: main_bb7046;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit150.i.i195.i.i.i;
+
+FROM: main_NodeBlock5.i.i145.i.i190.i.i.i;
+TO: main_NodeBlock5.i.i145.i.i190.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i145.i.i190.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7047;
+
+FROM: main_NodeBlock5.i.i145.i.i190.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i.i147.i.i192.i.i.i;
+
+FROM: main_bb7047;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit150.i.i195.i.i.i;
+
+FROM: main_NodeBlock3.i.i147.i.i192.i.i.i;
+TO: main_NodeBlock3.i.i147.i.i192.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i147.i.i192.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7048;
+
+FROM: main_NodeBlock3.i.i147.i.i192.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i.i149.i.i194.i.i.i;
+
+FROM: main_bb7048;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit150.i.i195.i.i.i;
+
+FROM: main_LeafBlock1.i.i149.i.i194.i.i.i;
+TO: main_LeafBlock1.i.i149.i.i194.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i149.i.i194.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7049;
+
+FROM: main_LeafBlock1.i.i149.i.i194.i.i.i_end;
+assume(v9846 != 4);
+TO: main_removePersonFromFloor.exit150.i.i195.i.i.i;
+
+FROM: main_bb7049;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit150.i.i195.i.i.i;
+
+FROM: main_removePersonFromFloor.exit150.i.i195.i.i.i;
+floorButtons_3 := 1;
+persons_3 := 1;
+TO: main_bb7050;
+
+FROM: main_bb7050;
+TO: main_bb7050_end;
+
+FROM: main_bb7050_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i99.i.i198.i.i.i;
+
+FROM: main_bb7050_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i103.i.i203.i.i.i;
+
+FROM: main_NodeBlock.i99.i.i198.i.i.i;
+TO: main_NodeBlock.i99.i.i198.i.i.i_end;
+
+FROM: main_NodeBlock.i99.i.i198.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i101.i.i201.i.i.i;
+
+FROM: main_NodeBlock.i99.i.i198.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7051;
+
+FROM: main_LeafBlock.i101.i.i201.i.i.i;
+v9871 := personOnFloor_4_0;
+TO: main_LeafBlock.i101.i.i201.i.i.i_v.328.i.i200.i.i.i;
+FROM: main_LeafBlock.i101.i.i201.i.i.i_v.328.i.i200.i.i.i;
+assume(v9846 == 0);
+v.328.i.i200.i.i.i := v9871;
+TO: main_LeafBlock.i101.i.i201.i.i.i_sv.328.i.i200.i.i.i;
+
+FROM: main_LeafBlock.i101.i.i201.i.i.i_v.328.i.i200.i.i.i;
+assume(v9846 != 0);
+v.328.i.i200.i.i.i := 0;
+TO: main_LeafBlock.i101.i.i201.i.i.i_sv.328.i.i200.i.i.i;
+
+FROM: main_LeafBlock.i101.i.i201.i.i.i_sv.328.i.i200.i.i.i;
+var__temp_v.0.i109.i.i209.i.i.i := v.328.i.i200.i.i.i;
+TO: main_isPersonOnFloor.exit110.i.i210.i.i.i;
+
+FROM: main_bb7051;
+v9872 := personOnFloor_4_1;
+var__temp_v.0.i109.i.i209.i.i.i := v9872;
+TO: main_isPersonOnFloor.exit110.i.i210.i.i.i;
+
+FROM: main_NodeBlock5.i103.i.i203.i.i.i;
+TO: main_NodeBlock5.i103.i.i203.i.i.i_end;
+
+FROM: main_NodeBlock5.i103.i.i203.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7052;
+
+FROM: main_NodeBlock5.i103.i.i203.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i105.i.i205.i.i.i;
+
+FROM: main_bb7052;
+v9873 := personOnFloor_4_2;
+var__temp_v.0.i109.i.i209.i.i.i := v9873;
+TO: main_isPersonOnFloor.exit110.i.i210.i.i.i;
+
+FROM: main_NodeBlock3.i105.i.i205.i.i.i;
+TO: main_NodeBlock3.i105.i.i205.i.i.i_end;
+
+FROM: main_NodeBlock3.i105.i.i205.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7053;
+
+FROM: main_NodeBlock3.i105.i.i205.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i107.i.i208.i.i.i;
+
+FROM: main_bb7053;
+v9874 := personOnFloor_4_3;
+var__temp_v.0.i109.i.i209.i.i.i := v9874;
+TO: main_isPersonOnFloor.exit110.i.i210.i.i.i;
+
+FROM: main_LeafBlock1.i107.i.i208.i.i.i;
+v9875 := personOnFloor_4_4;
+TO: main_LeafBlock1.i107.i.i208.i.i.i_v.329.i.i207.i.i.i;
+FROM: main_LeafBlock1.i107.i.i208.i.i.i_v.329.i.i207.i.i.i;
+assume(v9846 == 4);
+v.329.i.i207.i.i.i := v9875;
+TO: main_LeafBlock1.i107.i.i208.i.i.i_sv.329.i.i207.i.i.i;
+
+FROM: main_LeafBlock1.i107.i.i208.i.i.i_v.329.i.i207.i.i.i;
+assume(v9846 != 4);
+v.329.i.i207.i.i.i := 0;
+TO: main_LeafBlock1.i107.i.i208.i.i.i_sv.329.i.i207.i.i.i;
+
+FROM: main_LeafBlock1.i107.i.i208.i.i.i_sv.329.i.i207.i.i.i;
+var__temp_v.0.i109.i.i209.i.i.i := v.329.i.i207.i.i.i;
+TO: main_isPersonOnFloor.exit110.i.i210.i.i.i;
+
+FROM: main_isPersonOnFloor.exit110.i.i210.i.i.i;
+v.0.i109.i.i209.i.i.i := var__temp_v.0.i109.i.i209.i.i.i;
+TO: main_isPersonOnFloor.exit110.i.i210.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit110.i.i210.i.i.i_end;
+assume(v.0.i109.i.i209.i.i.i != 0);
+TO: main_bb7054;
+
+FROM: main_isPersonOnFloor.exit110.i.i210.i.i.i_end;
+assume(v.0.i109.i.i209.i.i.i == 0);
+TO: main_bb7065;
+
+FROM: main_bb7054;
+TO: main_bb7054_end;
+
+FROM: main_bb7054_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i75.i.i213.i.i.i;
+
+FROM: main_bb7054_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i79.i.i217.i.i.i;
+
+FROM: main_NodeBlock.i75.i.i213.i.i.i;
+TO: main_NodeBlock.i75.i.i213.i.i.i_end;
+
+FROM: main_NodeBlock.i75.i.i213.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i77.i.i215.i.i.i;
+
+FROM: main_NodeBlock.i75.i.i213.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7056;
+
+FROM: main_LeafBlock.i77.i.i215.i.i.i;
+TO: main_LeafBlock.i77.i.i215.i.i.i_end;
+
+FROM: main_LeafBlock.i77.i.i215.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7055;
+
+FROM: main_LeafBlock.i77.i.i215.i.i.i_end;
+assume(v9846 != 0);
+TO: main_NewDefault.i84.i.i223.i.i.i;
+
+FROM: main_bb7055;
+personOnFloor_4_0 := 0;
+TO: main_NewDefault.i84.i.i223.i.i.i;
+
+FROM: main_bb7056;
+personOnFloor_4_1 := 0;
+TO: main_NewDefault.i84.i.i223.i.i.i;
+
+FROM: main_NodeBlock5.i79.i.i217.i.i.i;
+TO: main_NodeBlock5.i79.i.i217.i.i.i_end;
+
+FROM: main_NodeBlock5.i79.i.i217.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7057;
+
+FROM: main_NodeBlock5.i79.i.i217.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i81.i.i219.i.i.i;
+
+FROM: main_bb7057;
+personOnFloor_4_2 := 0;
+TO: main_NewDefault.i84.i.i223.i.i.i;
+
+FROM: main_NodeBlock3.i81.i.i219.i.i.i;
+TO: main_NodeBlock3.i81.i.i219.i.i.i_end;
+
+FROM: main_NodeBlock3.i81.i.i219.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7058;
+
+FROM: main_NodeBlock3.i81.i.i219.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i83.i.i221.i.i.i;
+
+FROM: main_bb7058;
+personOnFloor_4_3 := 0;
+TO: main_NewDefault.i84.i.i223.i.i.i;
+
+FROM: main_LeafBlock1.i83.i.i221.i.i.i;
+TO: main_LeafBlock1.i83.i.i221.i.i.i_end;
+
+FROM: main_LeafBlock1.i83.i.i221.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7059;
+
+FROM: main_LeafBlock1.i83.i.i221.i.i.i_end;
+assume(v9846 != 4);
+TO: main_NewDefault.i84.i.i223.i.i.i;
+
+FROM: main_bb7059;
+personOnFloor_4_4 := 0;
+TO: main_NewDefault.i84.i.i223.i.i.i;
+
+FROM: main_NewDefault.i84.i.i223.i.i.i;
+TO: main_NewDefault.i84.i.i223.i.i.i_end;
+
+FROM: main_NewDefault.i84.i.i223.i.i.i_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i.i87.i.i225.i.i.i;
+
+FROM: main_NewDefault.i84.i.i223.i.i.i_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i.i91.i.i229.i.i.i;
+
+FROM: main_NodeBlock.i.i87.i.i225.i.i.i;
+TO: main_NodeBlock.i.i87.i.i225.i.i.i_end;
+
+FROM: main_NodeBlock.i.i87.i.i225.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i.i89.i.i227.i.i.i;
+
+FROM: main_NodeBlock.i.i87.i.i225.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7061;
+
+FROM: main_LeafBlock.i.i89.i.i227.i.i.i;
+TO: main_LeafBlock.i.i89.i.i227.i.i.i_end;
+
+FROM: main_LeafBlock.i.i89.i.i227.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7060;
+
+FROM: main_LeafBlock.i.i89.i.i227.i.i.i_end;
+assume(v9846 != 0);
+TO: main_removePersonFromFloor.exit96.i.i234.i.i.i;
+
+FROM: main_bb7060;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit96.i.i234.i.i.i;
+
+FROM: main_bb7061;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit96.i.i234.i.i.i;
+
+FROM: main_NodeBlock5.i.i91.i.i229.i.i.i;
+TO: main_NodeBlock5.i.i91.i.i229.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i91.i.i229.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7062;
+
+FROM: main_NodeBlock5.i.i91.i.i229.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i.i93.i.i231.i.i.i;
+
+FROM: main_bb7062;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit96.i.i234.i.i.i;
+
+FROM: main_NodeBlock3.i.i93.i.i231.i.i.i;
+TO: main_NodeBlock3.i.i93.i.i231.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i93.i.i231.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7063;
+
+FROM: main_NodeBlock3.i.i93.i.i231.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i.i95.i.i233.i.i.i;
+
+FROM: main_bb7063;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit96.i.i234.i.i.i;
+
+FROM: main_LeafBlock1.i.i95.i.i233.i.i.i;
+TO: main_LeafBlock1.i.i95.i.i233.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i95.i.i233.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7064;
+
+FROM: main_LeafBlock1.i.i95.i.i233.i.i.i_end;
+assume(v9846 != 4);
+TO: main_removePersonFromFloor.exit96.i.i234.i.i.i;
+
+FROM: main_bb7064;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit96.i.i234.i.i.i;
+
+FROM: main_removePersonFromFloor.exit96.i.i234.i.i.i;
+floorButtons_1 := 1;
+persons_4 := 1;
+TO: main_bb7065;
+
+FROM: main_bb7065;
+TO: main_bb7065_end;
+
+FROM: main_bb7065_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i44.i.i237.i.i.i;
+
+FROM: main_bb7065_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i48.i.i242.i.i.i;
+
+FROM: main_NodeBlock.i44.i.i237.i.i.i;
+TO: main_NodeBlock.i44.i.i237.i.i.i_end;
+
+FROM: main_NodeBlock.i44.i.i237.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i46.i.i240.i.i.i;
+
+FROM: main_NodeBlock.i44.i.i237.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7066;
+
+FROM: main_LeafBlock.i46.i.i240.i.i.i;
+v9877 := personOnFloor_5_0;
+TO: main_LeafBlock.i46.i.i240.i.i.i_v.330.i.i239.i.i.i;
+FROM: main_LeafBlock.i46.i.i240.i.i.i_v.330.i.i239.i.i.i;
+assume(v9846 == 0);
+v.330.i.i239.i.i.i := v9877;
+TO: main_LeafBlock.i46.i.i240.i.i.i_sv.330.i.i239.i.i.i;
+
+FROM: main_LeafBlock.i46.i.i240.i.i.i_v.330.i.i239.i.i.i;
+assume(v9846 != 0);
+v.330.i.i239.i.i.i := 0;
+TO: main_LeafBlock.i46.i.i240.i.i.i_sv.330.i.i239.i.i.i;
+
+FROM: main_LeafBlock.i46.i.i240.i.i.i_sv.330.i.i239.i.i.i;
+var__temp_v.0.i54.i.i248.i.i.i := v.330.i.i239.i.i.i;
+TO: main_isPersonOnFloor.exit55.i.i249.i.i.i;
+
+FROM: main_bb7066;
+v9878 := personOnFloor_5_1;
+var__temp_v.0.i54.i.i248.i.i.i := v9878;
+TO: main_isPersonOnFloor.exit55.i.i249.i.i.i;
+
+FROM: main_NodeBlock5.i48.i.i242.i.i.i;
+TO: main_NodeBlock5.i48.i.i242.i.i.i_end;
+
+FROM: main_NodeBlock5.i48.i.i242.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7067;
+
+FROM: main_NodeBlock5.i48.i.i242.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i50.i.i244.i.i.i;
+
+FROM: main_bb7067;
+v9879 := personOnFloor_5_2;
+var__temp_v.0.i54.i.i248.i.i.i := v9879;
+TO: main_isPersonOnFloor.exit55.i.i249.i.i.i;
+
+FROM: main_NodeBlock3.i50.i.i244.i.i.i;
+TO: main_NodeBlock3.i50.i.i244.i.i.i_end;
+
+FROM: main_NodeBlock3.i50.i.i244.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7068;
+
+FROM: main_NodeBlock3.i50.i.i244.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i52.i.i247.i.i.i;
+
+FROM: main_bb7068;
+v9880 := personOnFloor_5_3;
+var__temp_v.0.i54.i.i248.i.i.i := v9880;
+TO: main_isPersonOnFloor.exit55.i.i249.i.i.i;
+
+FROM: main_LeafBlock1.i52.i.i247.i.i.i;
+v9881 := personOnFloor_5_4;
+TO: main_LeafBlock1.i52.i.i247.i.i.i_v.331.i.i246.i.i.i;
+FROM: main_LeafBlock1.i52.i.i247.i.i.i_v.331.i.i246.i.i.i;
+assume(v9846 == 4);
+v.331.i.i246.i.i.i := v9881;
+TO: main_LeafBlock1.i52.i.i247.i.i.i_sv.331.i.i246.i.i.i;
+
+FROM: main_LeafBlock1.i52.i.i247.i.i.i_v.331.i.i246.i.i.i;
+assume(v9846 != 4);
+v.331.i.i246.i.i.i := 0;
+TO: main_LeafBlock1.i52.i.i247.i.i.i_sv.331.i.i246.i.i.i;
+
+FROM: main_LeafBlock1.i52.i.i247.i.i.i_sv.331.i.i246.i.i.i;
+var__temp_v.0.i54.i.i248.i.i.i := v.331.i.i246.i.i.i;
+TO: main_isPersonOnFloor.exit55.i.i249.i.i.i;
+
+FROM: main_isPersonOnFloor.exit55.i.i249.i.i.i;
+v.0.i54.i.i248.i.i.i := var__temp_v.0.i54.i.i248.i.i.i;
+TO: main_isPersonOnFloor.exit55.i.i249.i.i.i_end;
+
+FROM: main_isPersonOnFloor.exit55.i.i249.i.i.i_end;
+assume(v.0.i54.i.i248.i.i.i != 0);
+TO: main_bb7069;
+
+FROM: main_isPersonOnFloor.exit55.i.i249.i.i.i_end;
+assume(v.0.i54.i.i248.i.i.i == 0);
+TO: main_bb7080;
+
+FROM: main_bb7069;
+TO: main_bb7069_end;
+
+FROM: main_bb7069_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i32.i.i252.i.i.i;
+
+FROM: main_bb7069_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i36.i.i256.i.i.i;
+
+FROM: main_NodeBlock.i32.i.i252.i.i.i;
+TO: main_NodeBlock.i32.i.i252.i.i.i_end;
+
+FROM: main_NodeBlock.i32.i.i252.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i34.i.i254.i.i.i;
+
+FROM: main_NodeBlock.i32.i.i252.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7071;
+
+FROM: main_LeafBlock.i34.i.i254.i.i.i;
+TO: main_LeafBlock.i34.i.i254.i.i.i_end;
+
+FROM: main_LeafBlock.i34.i.i254.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7070;
+
+FROM: main_LeafBlock.i34.i.i254.i.i.i_end;
+assume(v9846 != 0);
+TO: main_NewDefault.i41.i.i262.i.i.i;
+
+FROM: main_bb7070;
+personOnFloor_5_0 := 0;
+TO: main_NewDefault.i41.i.i262.i.i.i;
+
+FROM: main_bb7071;
+personOnFloor_5_1 := 0;
+TO: main_NewDefault.i41.i.i262.i.i.i;
+
+FROM: main_NodeBlock5.i36.i.i256.i.i.i;
+TO: main_NodeBlock5.i36.i.i256.i.i.i_end;
+
+FROM: main_NodeBlock5.i36.i.i256.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7072;
+
+FROM: main_NodeBlock5.i36.i.i256.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i38.i.i258.i.i.i;
+
+FROM: main_bb7072;
+personOnFloor_5_2 := 0;
+TO: main_NewDefault.i41.i.i262.i.i.i;
+
+FROM: main_NodeBlock3.i38.i.i258.i.i.i;
+TO: main_NodeBlock3.i38.i.i258.i.i.i_end;
+
+FROM: main_NodeBlock3.i38.i.i258.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7073;
+
+FROM: main_NodeBlock3.i38.i.i258.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i40.i.i260.i.i.i;
+
+FROM: main_bb7073;
+personOnFloor_5_3 := 0;
+TO: main_NewDefault.i41.i.i262.i.i.i;
+
+FROM: main_LeafBlock1.i40.i.i260.i.i.i;
+TO: main_LeafBlock1.i40.i.i260.i.i.i_end;
+
+FROM: main_LeafBlock1.i40.i.i260.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7074;
+
+FROM: main_LeafBlock1.i40.i.i260.i.i.i_end;
+assume(v9846 != 4);
+TO: main_NewDefault.i41.i.i262.i.i.i;
+
+FROM: main_bb7074;
+personOnFloor_5_4 := 0;
+TO: main_NewDefault.i41.i.i262.i.i.i;
+
+FROM: main_NewDefault.i41.i.i262.i.i.i;
+TO: main_NewDefault.i41.i.i262.i.i.i_end;
+
+FROM: main_NewDefault.i41.i.i262.i.i.i_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i.i.i.i264.i.i.i;
+
+FROM: main_NewDefault.i41.i.i262.i.i.i_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i.i.i.i268.i.i.i;
+
+FROM: main_NodeBlock.i.i.i.i264.i.i.i;
+TO: main_NodeBlock.i.i.i.i264.i.i.i_end;
+
+FROM: main_NodeBlock.i.i.i.i264.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i.i.i.i266.i.i.i;
+
+FROM: main_NodeBlock.i.i.i.i264.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7076;
+
+FROM: main_LeafBlock.i.i.i.i266.i.i.i;
+TO: main_LeafBlock.i.i.i.i266.i.i.i_end;
+
+FROM: main_LeafBlock.i.i.i.i266.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7075;
+
+FROM: main_LeafBlock.i.i.i.i266.i.i.i_end;
+assume(v9846 != 0);
+TO: main_removePersonFromFloor.exit.i.i273.i.i.i;
+
+FROM: main_bb7075;
+calls_0 := 0;
+TO: main_removePersonFromFloor.exit.i.i273.i.i.i;
+
+FROM: main_bb7076;
+calls_1 := 0;
+TO: main_removePersonFromFloor.exit.i.i273.i.i.i;
+
+FROM: main_NodeBlock5.i.i.i.i268.i.i.i;
+TO: main_NodeBlock5.i.i.i.i268.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i.i.i268.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7077;
+
+FROM: main_NodeBlock5.i.i.i.i268.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i.i.i.i270.i.i.i;
+
+FROM: main_bb7077;
+calls_2 := 0;
+TO: main_removePersonFromFloor.exit.i.i273.i.i.i;
+
+FROM: main_NodeBlock3.i.i.i.i270.i.i.i;
+TO: main_NodeBlock3.i.i.i.i270.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i.i.i270.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7078;
+
+FROM: main_NodeBlock3.i.i.i.i270.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i.i.i.i272.i.i.i;
+
+FROM: main_bb7078;
+calls_3 := 0;
+TO: main_removePersonFromFloor.exit.i.i273.i.i.i;
+
+FROM: main_LeafBlock1.i.i.i.i272.i.i.i;
+TO: main_LeafBlock1.i.i.i.i272.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i.i.i272.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7079;
+
+FROM: main_LeafBlock1.i.i.i.i272.i.i.i_end;
+assume(v9846 != 4);
+TO: main_removePersonFromFloor.exit.i.i273.i.i.i;
+
+FROM: main_bb7079;
+calls_4 := 0;
+TO: main_removePersonFromFloor.exit.i.i273.i.i.i;
+
+FROM: main_removePersonFromFloor.exit.i.i273.i.i.i;
+floorButtons_3 := 1;
+persons_5 := 1;
+TO: main_bb7080;
+
+FROM: main_bb7080;
+TO: main_bb7080_end;
+
+FROM: main_bb7080_end;
+assume(v9846 < 2);
+TO: main_NodeBlock.i3.i52.i276.i.i.i;
+
+FROM: main_bb7080_end;
+assume(v9846 >= 2);
+TO: main_NodeBlock5.i7.i56.i280.i.i.i;
+
+FROM: main_NodeBlock.i3.i52.i276.i.i.i;
+TO: main_NodeBlock.i3.i52.i276.i.i.i_end;
+
+FROM: main_NodeBlock.i3.i52.i276.i.i.i_end;
+assume(v9846 < 1);
+TO: main_LeafBlock.i5.i54.i278.i.i.i;
+
+FROM: main_NodeBlock.i3.i52.i276.i.i.i_end;
+assume(v9846 >= 1);
+TO: main_bb7082;
+
+FROM: main_LeafBlock.i5.i54.i278.i.i.i;
+TO: main_LeafBlock.i5.i54.i278.i.i.i_end;
+
+FROM: main_LeafBlock.i5.i54.i278.i.i.i_end;
+assume(v9846 == 0);
+TO: main_bb7081;
+
+FROM: main_LeafBlock.i5.i54.i278.i.i.i_end;
+assume(v9846 != 0);
+TO: main_processWaitingOnFloor.exit.i286.i.i.i;
+
+FROM: main_bb7081;
+calls_0 := 0;
+TO: main_processWaitingOnFloor.exit.i286.i.i.i;
+
+FROM: main_bb7082;
+calls_1 := 0;
+TO: main_processWaitingOnFloor.exit.i286.i.i.i;
+
+FROM: main_NodeBlock5.i7.i56.i280.i.i.i;
+TO: main_NodeBlock5.i7.i56.i280.i.i.i_end;
+
+FROM: main_NodeBlock5.i7.i56.i280.i.i.i_end;
+assume(v9846 < 3);
+TO: main_bb7083;
+
+FROM: main_NodeBlock5.i7.i56.i280.i.i.i_end;
+assume(v9846 >= 3);
+TO: main_NodeBlock3.i9.i58.i282.i.i.i;
+
+FROM: main_bb7083;
+calls_2 := 0;
+TO: main_processWaitingOnFloor.exit.i286.i.i.i;
+
+FROM: main_NodeBlock3.i9.i58.i282.i.i.i;
+TO: main_NodeBlock3.i9.i58.i282.i.i.i_end;
+
+FROM: main_NodeBlock3.i9.i58.i282.i.i.i_end;
+assume(v9846 < 4);
+TO: main_bb7084;
+
+FROM: main_NodeBlock3.i9.i58.i282.i.i.i_end;
+assume(v9846 >= 4);
+TO: main_LeafBlock1.i11.i60.i284.i.i.i;
+
+FROM: main_bb7084;
+calls_3 := 0;
+TO: main_processWaitingOnFloor.exit.i286.i.i.i;
+
+FROM: main_LeafBlock1.i11.i60.i284.i.i.i;
+TO: main_LeafBlock1.i11.i60.i284.i.i.i_end;
+
+FROM: main_LeafBlock1.i11.i60.i284.i.i.i_end;
+assume(v9846 == 4);
+TO: main_bb7085;
+
+FROM: main_LeafBlock1.i11.i60.i284.i.i.i_end;
+assume(v9846 != 4);
+TO: main_processWaitingOnFloor.exit.i286.i.i.i;
+
+FROM: main_bb7085;
+calls_4 := 0;
+TO: main_processWaitingOnFloor.exit.i286.i.i.i;
+
+FROM: main_processWaitingOnFloor.exit.i286.i.i.i;
+v9883 := currentFloorID;
+TO: main_processWaitingOnFloor.exit.i286.i.i.i_end;
+
+FROM: main_processWaitingOnFloor.exit.i286.i.i.i_end;
+assume(v9883 < 2);
+TO: main_NodeBlock.i33.i288.i.i.i;
+
+FROM: main_processWaitingOnFloor.exit.i286.i.i.i_end;
+assume(v9883 >= 2);
+TO: main_NodeBlock5.i.i292.i.i.i;
+
+FROM: main_NodeBlock.i33.i288.i.i.i;
+TO: main_NodeBlock.i33.i288.i.i.i_end;
+
+FROM: main_NodeBlock.i33.i288.i.i.i_end;
+assume(v9883 < 1);
+TO: main_LeafBlock.i35.i290.i.i.i;
+
+FROM: main_NodeBlock.i33.i288.i.i.i_end;
+assume(v9883 >= 1);
+TO: main_bb7087;
+
+FROM: main_LeafBlock.i35.i290.i.i.i;
+TO: main_LeafBlock.i35.i290.i.i.i_end;
+
+FROM: main_LeafBlock.i35.i290.i.i.i_end;
+assume(v9883 == 0);
+TO: main_bb7086;
+
+FROM: main_LeafBlock.i35.i290.i.i.i_end;
+assume(v9883 != 0);
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_bb7086;
+floorButtons_0 := 0;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_bb7087;
+floorButtons_1 := 0;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_NodeBlock5.i.i292.i.i.i;
+TO: main_NodeBlock5.i.i292.i.i.i_end;
+
+FROM: main_NodeBlock5.i.i292.i.i.i_end;
+assume(v9883 < 3);
+TO: main_bb7088;
+
+FROM: main_NodeBlock5.i.i292.i.i.i_end;
+assume(v9883 >= 3);
+TO: main_NodeBlock3.i.i294.i.i.i;
+
+FROM: main_bb7088;
+floorButtons_2 := 0;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_NodeBlock3.i.i294.i.i.i;
+TO: main_NodeBlock3.i.i294.i.i.i_end;
+
+FROM: main_NodeBlock3.i.i294.i.i.i_end;
+assume(v9883 < 4);
+TO: main_bb7089;
+
+FROM: main_NodeBlock3.i.i294.i.i.i_end;
+assume(v9883 >= 4);
+TO: main_LeafBlock1.i.i296.i.i.i;
+
+FROM: main_bb7089;
+floorButtons_3 := 0;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_LeafBlock1.i.i296.i.i.i;
+TO: main_LeafBlock1.i.i296.i.i.i_end;
+
+FROM: main_LeafBlock1.i.i296.i.i.i_end;
+assume(v9883 == 4);
+TO: main_bb7090;
+
+FROM: main_LeafBlock1.i.i296.i.i.i_end;
+assume(v9883 != 4);
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_bb7090;
+floorButtons_4 := 0;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_bb7091;
+v9884 := doorState;
+TO: main_bb7091_end;
+
+FROM: main_bb7091_end;
+assume(v9884 == 1);
+TO: main_bb7092;
+
+FROM: main_bb7091_end;
+assume(v9884 != 1);
+TO: main_bb7093;
+
+FROM: main_bb7092;
+doorState := 0;
+TO: main_bb7093;
+
+FROM: main_bb7093;
+v9886 := currentHeading;
+v9888 := currentFloorID;
+TO: main_bb7093_end;
+
+FROM: main_bb7093_end;
+assume(v9886 == 1);
+TO: main_bb7094;
+
+FROM: main_bb7093_end;
+assume(v9886 != 1);
+TO: main_bb7106;
+
+FROM: main_bb7094;
+var__temp_v.0.i30.i317.i.i.i := 0;
+TO: main_bb7094_end;
+
+FROM: main_bb7094_end;
+assume(v9888 == 4);
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7094_end;
+assume(v9888 != 4);
+TO: main_bb7095;
+
+FROM: main_bb7095;
+v9890 := currentFloorID;
+v9892 := calls_0;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7095_end;
+
+FROM: main_bb7095_end;
+assume((v9890 < 0) && (v9892 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7095_end;
+assume((v9890 >= 0) || (v9892 == 0));
+TO: main_bb7096;
+
+FROM: main_bb7096;
+v9894 := currentFloorID;
+v9896 := floorButtons_0;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7096_end;
+
+FROM: main_bb7096_end;
+assume((v9894 < 0) && (v9896 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7096_end;
+assume((v9894 >= 0) || (v9896 == 0));
+TO: main_bb7097;
+
+FROM: main_bb7097;
+v9898 := currentFloorID;
+v9900 := calls_1;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7097_end;
+
+FROM: main_bb7097_end;
+assume((v9898 < 1) && (v9900 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7097_end;
+assume((v9898 >= 1) || (v9900 == 0));
+TO: main_bb7098;
+
+FROM: main_bb7098;
+v9902 := currentFloorID;
+v9904 := floorButtons_1;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7098_end;
+
+FROM: main_bb7098_end;
+assume((v9902 < 1) && (v9904 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7098_end;
+assume((v9902 >= 1) || (v9904 == 0));
+TO: main_bb7099;
+
+FROM: main_bb7099;
+v9906 := currentFloorID;
+v9908 := calls_2;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7099_end;
+
+FROM: main_bb7099_end;
+assume((v9906 < 2) && (v9908 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7099_end;
+assume((v9906 >= 2) || (v9908 == 0));
+TO: main_bb7100;
+
+FROM: main_bb7100;
+v9910 := currentFloorID;
+v9912 := floorButtons_2;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7100_end;
+
+FROM: main_bb7100_end;
+assume((v9910 < 2) && (v9912 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7100_end;
+assume((v9910 >= 2) || (v9912 == 0));
+TO: main_bb7101;
+
+FROM: main_bb7101;
+v9914 := currentFloorID;
+v9916 := calls_3;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7101_end;
+
+FROM: main_bb7101_end;
+assume((v9914 < 3) && (v9916 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7101_end;
+assume((v9914 >= 3) || (v9916 == 0));
+TO: main_bb7102;
+
+FROM: main_bb7102;
+v9918 := currentFloorID;
+v9920 := floorButtons_3;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7102_end;
+
+FROM: main_bb7102_end;
+assume((v9918 < 3) && (v9920 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7102_end;
+assume((v9918 >= 3) || (v9920 == 0));
+TO: main_bb7103;
+
+FROM: main_bb7103;
+v9922 := currentFloorID;
+v9924 := calls_4;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7103_end;
+
+FROM: main_bb7103_end;
+assume((v9922 < 4) && (v9924 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7103_end;
+assume((v9922 >= 4) || (v9924 == 0));
+TO: main_bb7104;
+
+FROM: main_bb7104;
+v9926 := currentFloorID;
+var__temp_v.0.i30.i317.i.i.i := 0;
+TO: main_bb7104_end;
+
+FROM: main_bb7104_end;
+assume(v9926 < 4);
+TO: main_bb7105;
+
+FROM: main_bb7104_end;
+assume(v9926 >= 4);
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7105;
+v9928 := floorButtons_4;
+TO: main_bb7105_v..i19.i306.i.i.i;
+FROM: main_bb7105_v..i19.i306.i.i.i;
+assume(v9928 != 0);
+v..i19.i306.i.i.i := 1;
+TO: main_bb7105_sv..i19.i306.i.i.i;
+
+FROM: main_bb7105_v..i19.i306.i.i.i;
+assume(v9928 == 0);
+v..i19.i306.i.i.i := 0;
+TO: main_bb7105_sv..i19.i306.i.i.i;
+
+FROM: main_bb7105_sv..i19.i306.i.i.i;
+var__temp_v.0.i30.i317.i.i.i := v..i19.i306.i.i.i;
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7106;
+var__temp_v.0.i30.i317.i.i.i := 0;
+TO: main_bb7106_end;
+
+FROM: main_bb7106_end;
+assume(v9888 == 0);
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7106_end;
+assume(v9888 != 0);
+TO: main_bb7107;
+
+FROM: main_bb7107;
+v9931 := currentFloorID;
+v9933 := calls_0;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7107_end;
+
+FROM: main_bb7107_end;
+assume((v9931 > 0) && (v9933 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7107_end;
+assume((v9931 <= 0) || (v9933 == 0));
+TO: main_bb7108;
+
+FROM: main_bb7108;
+v9935 := currentFloorID;
+v9937 := floorButtons_0;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7108_end;
+
+FROM: main_bb7108_end;
+assume((v9935 > 0) && (v9937 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7108_end;
+assume((v9935 <= 0) || (v9937 == 0));
+TO: main_bb7109;
+
+FROM: main_bb7109;
+v9939 := currentFloorID;
+v9941 := calls_1;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7109_end;
+
+FROM: main_bb7109_end;
+assume((v9939 > 1) && (v9941 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7109_end;
+assume((v9939 <= 1) || (v9941 == 0));
+TO: main_bb7110;
+
+FROM: main_bb7110;
+v9943 := currentFloorID;
+v9945 := floorButtons_1;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7110_end;
+
+FROM: main_bb7110_end;
+assume((v9943 > 1) && (v9945 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7110_end;
+assume((v9943 <= 1) || (v9945 == 0));
+TO: main_bb7111;
+
+FROM: main_bb7111;
+v9947 := currentFloorID;
+v9949 := calls_2;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7111_end;
+
+FROM: main_bb7111_end;
+assume((v9947 > 2) && (v9949 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7111_end;
+assume((v9947 <= 2) || (v9949 == 0));
+TO: main_bb7112;
+
+FROM: main_bb7112;
+v9951 := currentFloorID;
+v9953 := floorButtons_2;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7112_end;
+
+FROM: main_bb7112_end;
+assume((v9951 > 2) && (v9953 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7112_end;
+assume((v9951 <= 2) || (v9953 == 0));
+TO: main_bb7113;
+
+FROM: main_bb7113;
+v9955 := currentFloorID;
+v9957 := calls_3;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7113_end;
+
+FROM: main_bb7113_end;
+assume((v9955 > 3) && (v9957 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7113_end;
+assume((v9955 <= 3) || (v9957 == 0));
+TO: main_bb7114;
+
+FROM: main_bb7114;
+v9959 := currentFloorID;
+v9961 := floorButtons_3;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7114_end;
+
+FROM: main_bb7114_end;
+assume((v9959 > 3) && (v9961 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7114_end;
+assume((v9959 <= 3) || (v9961 == 0));
+TO: main_bb7115;
+
+FROM: main_bb7115;
+v9963 := currentFloorID;
+v9965 := calls_4;
+var__temp_v.0.i30.i317.i.i.i := 1;
+TO: main_bb7115_end;
+
+FROM: main_bb7115_end;
+assume((v9963 > 4) && (v9965 != 0));
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7115_end;
+assume((v9963 <= 4) || (v9965 == 0));
+TO: main_bb7116;
+
+FROM: main_bb7116;
+v9967 := currentFloorID;
+var__temp_v.0.i30.i317.i.i.i := 0;
+TO: main_bb7116_end;
+
+FROM: main_bb7116_end;
+assume(v9967 > 4);
+TO: main_bb7117;
+
+FROM: main_bb7116_end;
+assume(v9967 <= 4);
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_bb7117;
+v9969 := floorButtons_4;
+TO: main_bb7117_v.1.i29.i316.i.i.i;
+FROM: main_bb7117_v.1.i29.i316.i.i.i;
+assume(v9969 != 0);
+v.1.i29.i316.i.i.i := 1;
+TO: main_bb7117_sv.1.i29.i316.i.i.i;
+
+FROM: main_bb7117_v.1.i29.i316.i.i.i;
+assume(v9969 == 0);
+v.1.i29.i316.i.i.i := 0;
+TO: main_bb7117_sv.1.i29.i316.i.i.i;
+
+FROM: main_bb7117_sv.1.i29.i316.i.i.i;
+var__temp_v.0.i30.i317.i.i.i := v.1.i29.i316.i.i.i;
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i;
+
+FROM: main_stopRequestedInDirection.exit31.i318.i.i.i;
+v.0.i30.i317.i.i.i := var__temp_v.0.i30.i317.i.i.i;
+v9972 := currentHeading;
+TO: main_stopRequestedInDirection.exit31.i318.i.i.i_end;
+
+FROM: main_stopRequestedInDirection.exit31.i318.i.i.i_end;
+assume(v.0.i30.i317.i.i.i != 0);
+TO: main_bb7118;
+
+FROM: main_stopRequestedInDirection.exit31.i318.i.i.i_end;
+assume(v.0.i30.i317.i.i.i == 0);
+TO: main_bb7126;
+
+FROM: main_bb7118;
+currentHeading := v9972;
+v9973 := currentHeading;
+v9975 := currentFloorID;
+TO: main_bb7118_end;
+
+FROM: main_bb7118_end;
+assume(v9973 == 1);
+TO: main_bb7119;
+
+FROM: main_bb7118_end;
+assume(v9973 != 1);
+TO: main_bb7121;
+
+FROM: main_bb7119;
+TO: main_bb7119_end;
+
+FROM: main_bb7119_end;
+assume(v9975 == 4);
+TO: main_bb7120;
+
+FROM: main_bb7119_end;
+assume(v9975 != 4);
+TO: main_bb7123;
+
+FROM: main_bb7120;
+currentHeading := 0;
+TO: main_bb7123;
+
+FROM: main_bb7121;
+TO: main_bb7121_end;
+
+FROM: main_bb7121_end;
+assume(v9975 == 0);
+TO: main_bb7122;
+
+FROM: main_bb7121_end;
+assume(v9975 != 0);
+TO: main_bb7123;
+
+FROM: main_bb7122;
+currentHeading := 1;
+TO: main_bb7123;
+
+FROM: main_bb7123;
+v9978 := currentHeading;
+v9980 := currentFloorID;
+TO: main_bb7123_end;
+
+FROM: main_bb7123_end;
+assume(v9978 == 1);
+TO: main_bb7124;
+
+FROM: main_bb7123_end;
+assume(v9978 != 1);
+TO: main_bb7125;
+
+FROM: main_bb7124;
+v9981 := v9980 + 1;
+currentFloorID := v9981;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_bb7125;
+v9982 := v9980 - 1;
+currentFloorID := v9982;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_bb7126;
+v9984 := currentFloorID;
+TO: main_bb7126_end;
+
+FROM: main_bb7126_end;
+assume(v9972 == 0);
+TO: main_bb7127;
+
+FROM: main_bb7126_end;
+assume(v9972 != 0);
+TO: main_bb7139;
+
+FROM: main_bb7127;
+var__temp_v.0.i7.i340.i.i.i := 0;
+TO: main_bb7127_end;
+
+FROM: main_bb7127_end;
+assume(v9984 == 4);
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7127_end;
+assume(v9984 != 4);
+TO: main_bb7128;
+
+FROM: main_bb7128;
+v9986 := currentFloorID;
+v9988 := calls_0;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7128_end;
+
+FROM: main_bb7128_end;
+assume((v9986 < 0) && (v9988 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7128_end;
+assume((v9986 >= 0) || (v9988 == 0));
+TO: main_bb7129;
+
+FROM: main_bb7129;
+v9990 := currentFloorID;
+v9992 := floorButtons_0;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7129_end;
+
+FROM: main_bb7129_end;
+assume((v9990 < 0) && (v9992 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7129_end;
+assume((v9990 >= 0) || (v9992 == 0));
+TO: main_bb7130;
+
+FROM: main_bb7130;
+v9994 := currentFloorID;
+v9996 := calls_1;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7130_end;
+
+FROM: main_bb7130_end;
+assume((v9994 < 1) && (v9996 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7130_end;
+assume((v9994 >= 1) || (v9996 == 0));
+TO: main_bb7131;
+
+FROM: main_bb7131;
+v9998 := currentFloorID;
+v10000 := floorButtons_1;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7131_end;
+
+FROM: main_bb7131_end;
+assume((v9998 < 1) && (v10000 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7131_end;
+assume((v9998 >= 1) || (v10000 == 0));
+TO: main_bb7132;
+
+FROM: main_bb7132;
+v10002 := currentFloorID;
+v10004 := calls_2;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7132_end;
+
+FROM: main_bb7132_end;
+assume((v10002 < 2) && (v10004 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7132_end;
+assume((v10002 >= 2) || (v10004 == 0));
+TO: main_bb7133;
+
+FROM: main_bb7133;
+v10006 := currentFloorID;
+v10008 := floorButtons_2;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7133_end;
+
+FROM: main_bb7133_end;
+assume((v10006 < 2) && (v10008 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7133_end;
+assume((v10006 >= 2) || (v10008 == 0));
+TO: main_bb7134;
+
+FROM: main_bb7134;
+v10010 := currentFloorID;
+v10012 := calls_3;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7134_end;
+
+FROM: main_bb7134_end;
+assume((v10010 < 3) && (v10012 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7134_end;
+assume((v10010 >= 3) || (v10012 == 0));
+TO: main_bb7135;
+
+FROM: main_bb7135;
+v10014 := currentFloorID;
+v10016 := floorButtons_3;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7135_end;
+
+FROM: main_bb7135_end;
+assume((v10014 < 3) && (v10016 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7135_end;
+assume((v10014 >= 3) || (v10016 == 0));
+TO: main_bb7136;
+
+FROM: main_bb7136;
+v10018 := currentFloorID;
+v10020 := calls_4;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7136_end;
+
+FROM: main_bb7136_end;
+assume((v10018 < 4) && (v10020 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7136_end;
+assume((v10018 >= 4) || (v10020 == 0));
+TO: main_bb7137;
+
+FROM: main_bb7137;
+v10022 := currentFloorID;
+var__temp_v.0.i7.i340.i.i.i := 0;
+TO: main_bb7137_end;
+
+FROM: main_bb7137_end;
+assume(v10022 < 4);
+TO: main_bb7138;
+
+FROM: main_bb7137_end;
+assume(v10022 >= 4);
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7138;
+v10024 := floorButtons_4;
+TO: main_bb7138_v..i6.i329.i.i.i;
+FROM: main_bb7138_v..i6.i329.i.i.i;
+assume(v10024 != 0);
+v..i6.i329.i.i.i := 1;
+TO: main_bb7138_sv..i6.i329.i.i.i;
+
+FROM: main_bb7138_v..i6.i329.i.i.i;
+assume(v10024 == 0);
+v..i6.i329.i.i.i := 0;
+TO: main_bb7138_sv..i6.i329.i.i.i;
+
+FROM: main_bb7138_sv..i6.i329.i.i.i;
+var__temp_v.0.i7.i340.i.i.i := v..i6.i329.i.i.i;
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7139;
+var__temp_v.0.i7.i340.i.i.i := 0;
+TO: main_bb7139_end;
+
+FROM: main_bb7139_end;
+assume(v9984 == 0);
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7139_end;
+assume(v9984 != 0);
+TO: main_bb7140;
+
+FROM: main_bb7140;
+v10027 := currentFloorID;
+v10029 := calls_0;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7140_end;
+
+FROM: main_bb7140_end;
+assume((v10027 > 0) && (v10029 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7140_end;
+assume((v10027 <= 0) || (v10029 == 0));
+TO: main_bb7141;
+
+FROM: main_bb7141;
+v10031 := currentFloorID;
+v10033 := floorButtons_0;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7141_end;
+
+FROM: main_bb7141_end;
+assume((v10031 > 0) && (v10033 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7141_end;
+assume((v10031 <= 0) || (v10033 == 0));
+TO: main_bb7142;
+
+FROM: main_bb7142;
+v10035 := currentFloorID;
+v10037 := calls_1;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7142_end;
+
+FROM: main_bb7142_end;
+assume((v10035 > 1) && (v10037 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7142_end;
+assume((v10035 <= 1) || (v10037 == 0));
+TO: main_bb7143;
+
+FROM: main_bb7143;
+v10039 := currentFloorID;
+v10041 := floorButtons_1;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7143_end;
+
+FROM: main_bb7143_end;
+assume((v10039 > 1) && (v10041 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7143_end;
+assume((v10039 <= 1) || (v10041 == 0));
+TO: main_bb7144;
+
+FROM: main_bb7144;
+v10043 := currentFloorID;
+v10045 := calls_2;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7144_end;
+
+FROM: main_bb7144_end;
+assume((v10043 > 2) && (v10045 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7144_end;
+assume((v10043 <= 2) || (v10045 == 0));
+TO: main_bb7145;
+
+FROM: main_bb7145;
+v10047 := currentFloorID;
+v10049 := floorButtons_2;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7145_end;
+
+FROM: main_bb7145_end;
+assume((v10047 > 2) && (v10049 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7145_end;
+assume((v10047 <= 2) || (v10049 == 0));
+TO: main_bb7146;
+
+FROM: main_bb7146;
+v10051 := currentFloorID;
+v10053 := calls_3;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7146_end;
+
+FROM: main_bb7146_end;
+assume((v10051 > 3) && (v10053 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7146_end;
+assume((v10051 <= 3) || (v10053 == 0));
+TO: main_bb7147;
+
+FROM: main_bb7147;
+v10055 := currentFloorID;
+v10057 := floorButtons_3;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7147_end;
+
+FROM: main_bb7147_end;
+assume((v10055 > 3) && (v10057 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7147_end;
+assume((v10055 <= 3) || (v10057 == 0));
+TO: main_bb7148;
+
+FROM: main_bb7148;
+v10059 := currentFloorID;
+v10061 := calls_4;
+var__temp_v.0.i7.i340.i.i.i := 1;
+TO: main_bb7148_end;
+
+FROM: main_bb7148_end;
+assume((v10059 > 4) && (v10061 != 0));
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7148_end;
+assume((v10059 <= 4) || (v10061 == 0));
+TO: main_bb7149;
+
+FROM: main_bb7149;
+v10063 := currentFloorID;
+var__temp_v.0.i7.i340.i.i.i := 0;
+TO: main_bb7149_end;
+
+FROM: main_bb7149_end;
+assume(v10063 > 4);
+TO: main_bb7150;
+
+FROM: main_bb7149_end;
+assume(v10063 <= 4);
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_bb7150;
+v10065 := floorButtons_4;
+TO: main_bb7150_v.1.i.i339.i.i.i;
+FROM: main_bb7150_v.1.i.i339.i.i.i;
+assume(v10065 != 0);
+v.1.i.i339.i.i.i := 1;
+TO: main_bb7150_sv.1.i.i339.i.i.i;
+
+FROM: main_bb7150_v.1.i.i339.i.i.i;
+assume(v10065 == 0);
+v.1.i.i339.i.i.i := 0;
+TO: main_bb7150_sv.1.i.i339.i.i.i;
+
+FROM: main_bb7150_sv.1.i.i339.i.i.i;
+var__temp_v.0.i7.i340.i.i.i := v.1.i.i339.i.i.i;
+TO: main_stopRequestedInDirection.exit.i341.i.i.i;
+
+FROM: main_stopRequestedInDirection.exit.i341.i.i.i;
+v.0.i7.i340.i.i.i := var__temp_v.0.i7.i340.i.i.i;
+v10068 := currentHeading;
+TO: main_stopRequestedInDirection.exit.i341.i.i.i_end;
+
+FROM: main_stopRequestedInDirection.exit.i341.i.i.i_end;
+assume(v.0.i7.i340.i.i.i != 0);
+TO: main_bb7151;
+
+FROM: main_stopRequestedInDirection.exit.i341.i.i.i_end;
+assume(v.0.i7.i340.i.i.i == 0);
+TO: main_bb7159;
+
+FROM: main_bb7151;
+TO: main_bb7151_v..i2.i342.i.i.i;
+FROM: main_bb7151_v..i2.i342.i.i.i;
+assume(v10068 == 0);
+v..i2.i342.i.i.i := 1;
+TO: main_bb7151_sv..i2.i342.i.i.i;
+
+FROM: main_bb7151_v..i2.i342.i.i.i;
+assume(v10068 != 0);
+v..i2.i342.i.i.i := 0;
+TO: main_bb7151_sv..i2.i342.i.i.i;
+
+FROM: main_bb7151_sv..i2.i342.i.i.i;
+currentHeading := v..i2.i342.i.i.i;
+v10070 := currentHeading;
+v10072 := currentFloorID;
+TO: main_bb7151_end;
+
+FROM: main_bb7151_end;
+assume(v10070 == 1);
+TO: main_bb7152;
+
+FROM: main_bb7151_end;
+assume(v10070 != 1);
+TO: main_bb7154;
+
+FROM: main_bb7152;
+TO: main_bb7152_end;
+
+FROM: main_bb7152_end;
+assume(v10072 == 4);
+TO: main_bb7153;
+
+FROM: main_bb7152_end;
+assume(v10072 != 4);
+TO: main_bb7156;
+
+FROM: main_bb7153;
+currentHeading := 0;
+TO: main_bb7156;
+
+FROM: main_bb7154;
+TO: main_bb7154_end;
+
+FROM: main_bb7154_end;
+assume(v10072 == 0);
+TO: main_bb7155;
+
+FROM: main_bb7154_end;
+assume(v10072 != 0);
+TO: main_bb7156;
+
+FROM: main_bb7155;
+currentHeading := 1;
+TO: main_bb7156;
+
+FROM: main_bb7156;
+v10075 := currentHeading;
+v10077 := currentFloorID;
+TO: main_bb7156_end;
+
+FROM: main_bb7156_end;
+assume(v10075 == 1);
+TO: main_bb7157;
+
+FROM: main_bb7156_end;
+assume(v10075 != 1);
+TO: main_bb7158;
+
+FROM: main_bb7157;
+v10078 := v10077 + 1;
+currentFloorID := v10078;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_bb7158;
+v10079 := v10077 - 1;
+currentFloorID := v10079;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_bb7159;
+currentHeading := v10068;
+v10080 := currentHeading;
+v10082 := currentFloorID;
+TO: main_bb7159_end;
+
+FROM: main_bb7159_end;
+assume(v10080 == 1);
+TO: main_bb7160;
+
+FROM: main_bb7159_end;
+assume(v10080 != 1);
+TO: main_bb7162;
+
+FROM: main_bb7160;
+TO: main_bb7160_end;
+
+FROM: main_bb7160_end;
+assume(v10082 == 4);
+TO: main_bb7161;
+
+FROM: main_bb7160_end;
+assume(v10082 != 4);
+TO: main_bb7164;
+
+FROM: main_bb7161;
+currentHeading := 0;
+TO: main_bb7164;
+
+FROM: main_bb7162;
+TO: main_bb7162_end;
+
+FROM: main_bb7162_end;
+assume(v10082 == 0);
+TO: main_bb7163;
+
+FROM: main_bb7162_end;
+assume(v10082 != 0);
+TO: main_bb7164;
+
+FROM: main_bb7163;
+currentHeading := 1;
+TO: main_bb7164;
+
+FROM: main_bb7164;
+v10085 := currentHeading;
+v10087 := currentFloorID;
+TO: main_bb7164_end;
+
+FROM: main_bb7164_end;
+assume(v10085 == 1);
+TO: main_bb7165;
+
+FROM: main_bb7164_end;
+assume(v10085 != 1);
+TO: main_bb7166;
+
+FROM: main_bb7165;
+v10088 := v10087 + 1;
+currentFloorID := v10088;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_bb7166;
+v10089 := v10087 - 1;
+currentFloorID := v10089;
+TO: main_resetFloorButton.exit.i344.i.i.i;
+
+FROM: main_resetFloorButton.exit.i344.i.i.i;
+v10090 := currentFloorID;
+TO: main_resetFloorButton.exit.i344.i.i.i_end;
+
+FROM: main_resetFloorButton.exit.i344.i.i.i_end;
+assume(v10090 < 2);
+TO: main_NodeBlock.i.i346.i.i.i;
+
+FROM: main_resetFloorButton.exit.i344.i.i.i_end;
+assume(v10090 >= 2);
+TO: main_NodeBlock19.i.i368.i.i.i;
+
+FROM: main_NodeBlock.i.i346.i.i.i;
+TO: main_NodeBlock.i.i346.i.i.i_end;
+
+FROM: main_NodeBlock.i.i346.i.i.i_end;
+assume(v10090 < 1);
+TO: main_LeafBlock.i.i348.i.i.i;
+
+FROM: main_NodeBlock.i.i346.i.i.i_end;
+assume(v10090 >= 1);
+TO: main_bb7170;
+
+FROM: main_LeafBlock.i.i348.i.i.i;
+TO: main_LeafBlock.i.i348.i.i.i_end;
+
+FROM: main_LeafBlock.i.i348.i.i.i_end;
+assume(v10090 == 0);
+TO: main_bb7167;
+
+FROM: main_LeafBlock.i.i348.i.i.i_end;
+assume(v10090 != 0);
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_bb7167;
+v10091 := landingButtons_spc1_0;
+v10093 := doorState;
+TO: main_bb7167_end;
+
+FROM: main_bb7167_end;
+assume((v10091 != 0) && (v10093 != 0));
+TO: main_bb7168;
+
+FROM: main_bb7167_end;
+assume((v10091 == 0) || (v10093 == 0));
+TO: main_bb7169;
+
+FROM: main_bb7168;
+landingButtons_spc1_0 := 0;
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_bb7169;
+TO: main_bb7169_end;
+
+FROM: main_bb7169_end;
+assume(v10090 < 3);
+TO: main_NodeBlock26.i.i352.i.i.i;
+
+FROM: main_bb7169_end;
+assume(v10090 >= 3);
+TO: main_NodeBlock30.i.i356.i.i.i;
+
+FROM: main_NodeBlock26.i.i352.i.i.i;
+TO: main_NodeBlock26.i.i352.i.i.i_end;
+
+FROM: main_NodeBlock26.i.i352.i.i.i_end;
+assume(v10090 < 2);
+TO: main_LeafBlock24.i.i354.i.i.i;
+
+FROM: main_NodeBlock26.i.i352.i.i.i_end;
+assume(v10090 >= 2);
+TO: main_bb7173;
+
+FROM: main_LeafBlock24.i.i354.i.i.i;
+TO: main_LeafBlock24.i.i354.i.i.i_end;
+
+FROM: main_LeafBlock24.i.i354.i.i.i_end;
+assume(v10090 == 1);
+TO: main_bb7170;
+
+FROM: main_LeafBlock24.i.i354.i.i.i_end;
+assume(v10090 != 1);
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_NodeBlock30.i.i356.i.i.i;
+TO: main_NodeBlock30.i.i356.i.i.i_end;
+
+FROM: main_NodeBlock30.i.i356.i.i.i_end;
+assume(v10090 < 4);
+TO: main_bb7176;
+
+FROM: main_NodeBlock30.i.i356.i.i.i_end;
+assume(v10090 >= 4);
+TO: main_LeafBlock28.i.i358.i.i.i;
+
+FROM: main_LeafBlock28.i.i358.i.i.i;
+TO: main_LeafBlock28.i.i358.i.i.i_end;
+
+FROM: main_LeafBlock28.i.i358.i.i.i_end;
+assume(v10090 == 4);
+TO: main_bb7179;
+
+FROM: main_LeafBlock28.i.i358.i.i.i_end;
+assume(v10090 != 4);
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_bb7170;
+v10095 := landingButtons_spc1_1;
+v10097 := doorState;
+TO: main_bb7170_end;
+
+FROM: main_bb7170_end;
+assume((v10095 != 0) && (v10097 != 0));
+TO: main_bb7171;
+
+FROM: main_bb7170_end;
+assume((v10095 == 0) || (v10097 == 0));
+TO: main_bb7172;
+
+FROM: main_bb7171;
+landingButtons_spc1_1 := 0;
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_bb7172;
+TO: main_bb7172_end;
+
+FROM: main_bb7172_end;
+assume(v10090 < 3);
+TO: main_LeafBlock35.i.i362.i.i.i;
+
+FROM: main_bb7172_end;
+assume(v10090 >= 3);
+TO: main_NodeBlock39.i.i364.i.i.i;
+
+FROM: main_LeafBlock35.i.i362.i.i.i;
+TO: main_LeafBlock35.i.i362.i.i.i_end;
+
+FROM: main_LeafBlock35.i.i362.i.i.i_end;
+assume(v10090 == 2);
+TO: main_bb7173;
+
+FROM: main_LeafBlock35.i.i362.i.i.i_end;
+assume(v10090 != 2);
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_NodeBlock39.i.i364.i.i.i;
+TO: main_NodeBlock39.i.i364.i.i.i_end;
+
+FROM: main_NodeBlock39.i.i364.i.i.i_end;
+assume(v10090 < 4);
+TO: main_bb7176;
+
+FROM: main_NodeBlock39.i.i364.i.i.i_end;
+assume(v10090 >= 4);
+TO: main_LeafBlock37.i.i366.i.i.i;
+
+FROM: main_LeafBlock37.i.i366.i.i.i;
+TO: main_LeafBlock37.i.i366.i.i.i_end;
+
+FROM: main_LeafBlock37.i.i366.i.i.i_end;
+assume(v10090 == 4);
+TO: main_bb7179;
+
+FROM: main_LeafBlock37.i.i366.i.i.i_end;
+assume(v10090 != 4);
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_NodeBlock19.i.i368.i.i.i;
+TO: main_NodeBlock19.i.i368.i.i.i_end;
+
+FROM: main_NodeBlock19.i.i368.i.i.i_end;
+assume(v10090 < 3);
+TO: main_bb7173;
+
+FROM: main_NodeBlock19.i.i368.i.i.i_end;
+assume(v10090 >= 3);
+TO: main_NodeBlock17.i.i376.i.i.i;
+
+FROM: main_bb7173;
+v10099 := landingButtons_spc1_2;
+v10101 := doorState;
+TO: main_bb7173_end;
+
+FROM: main_bb7173_end;
+assume((v10099 != 0) && (v10101 != 0));
+TO: main_bb7174;
+
+FROM: main_bb7173_end;
+assume((v10099 == 0) || (v10101 == 0));
+TO: main_bb7175;
+
+FROM: main_bb7174;
+landingButtons_spc1_2 := 0;
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_bb7175;
+TO: main_bb7175_end;
+
+FROM: main_bb7175_end;
+assume(v10090 < 4);
+TO: main_LeafBlock44.i.i372.i.i.i;
+
+FROM: main_bb7175_end;
+assume(v10090 >= 4);
+TO: main_LeafBlock46.i.i374.i.i.i;
+
+FROM: main_LeafBlock44.i.i372.i.i.i;
+TO: main_LeafBlock44.i.i372.i.i.i_end;
+
+FROM: main_LeafBlock44.i.i372.i.i.i_end;
+assume(v10090 == 3);
+TO: main_bb7176;
+
+FROM: main_LeafBlock44.i.i372.i.i.i_end;
+assume(v10090 != 3);
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_LeafBlock46.i.i374.i.i.i;
+TO: main_LeafBlock46.i.i374.i.i.i_end;
+
+FROM: main_LeafBlock46.i.i374.i.i.i_end;
+assume(v10090 == 4);
+TO: main_bb7179;
+
+FROM: main_LeafBlock46.i.i374.i.i.i_end;
+assume(v10090 != 4);
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_NodeBlock17.i.i376.i.i.i;
+TO: main_NodeBlock17.i.i376.i.i.i_end;
+
+FROM: main_NodeBlock17.i.i376.i.i.i_end;
+assume(v10090 < 4);
+TO: main_bb7176;
+
+FROM: main_NodeBlock17.i.i376.i.i.i_end;
+assume(v10090 >= 4);
+TO: main_LeafBlock15.i.i381.i.i.i;
+
+FROM: main_bb7176;
+v10103 := landingButtons_spc1_3;
+v10105 := doorState;
+TO: main_bb7176_end;
+
+FROM: main_bb7176_end;
+assume((v10103 != 0) && (v10105 != 0));
+TO: main_bb7177;
+
+FROM: main_bb7176_end;
+assume((v10103 == 0) || (v10105 == 0));
+TO: main_bb7178;
+
+FROM: main_bb7177;
+landingButtons_spc1_3 := 0;
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_bb7178;
+v10108 := landingButtons_spc1_4;
+v10110 := doorState;
+TO: main_bb7178_end;
+
+FROM: main_bb7178_end;
+assume(((v10090 == 4) && (v10108 != 0)) && (v10110 != 0));
+TO: main_bb7180;
+
+FROM: main_bb7178_end;
+assume(((v10090 != 4) || (v10108 == 0)) || (v10110 == 0));
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_LeafBlock15.i.i381.i.i.i;
+TO: main_LeafBlock15.i.i381.i.i.i_end;
+
+FROM: main_LeafBlock15.i.i381.i.i.i_end;
+assume(v10090 == 4);
+TO: main_bb7179;
+
+FROM: main_LeafBlock15.i.i381.i.i.i_end;
+assume(v10090 != 4);
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_bb7179;
+v.old.i.i382.i.i.i := landingButtons_spc1_4;
+v.old10.i.i384.i.i.i := doorState;
+TO: main_bb7179_end;
+
+FROM: main_bb7179_end;
+assume((v.old.i.i382.i.i.i != 0) && (v.old10.i.i384.i.i.i != 0));
+TO: main_bb7180;
+
+FROM: main_bb7179_end;
+assume((v.old.i.i382.i.i.i == 0) || (v.old10.i.i384.i.i.i == 0));
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_bb7180;
+landingButtons_spc1_4 := 0;
+TO: main_timeShift.exit387.i.i.i;
+
+FROM: main_timeShift.exit387.i.i.i;
+v10112 := vi.0.i.i.i + 1;
+var__temp_vi.0.i.i.i := v10112;
+TO: main_bb6968;
+
+FROM: main_test.exit.i;
+v10113 := landingButtons_spc1_0;
+TO: main_test.exit.i_end;
+
+FROM: main_test.exit.i_end;
+assume(v10113 != 0);
+TO: main_bb7181;
+
+FROM: main_test.exit.i_end;
+assume(v10113 == 0);
+TO: main_bb7182;
+
+FROM: main_bb7181;
+
+FROM: main_bb7182;
+v10115 := landingButtons_spc1_1;
+TO: main_bb7182_end;
+
+FROM: main_bb7182_end;
+assume(v10115 != 0);
+TO: main_bb7183;
+
+FROM: main_bb7182_end;
+assume(v10115 == 0);
+TO: main_bb7184;
+
+FROM: main_bb7183;
+
+FROM: main_bb7184;
+v10117 := landingButtons_spc1_2;
+TO: main_bb7184_end;
+
+FROM: main_bb7184_end;
+assume(v10117 != 0);
+TO: main_bb7185;
+
+FROM: main_bb7184_end;
+assume(v10117 == 0);
+TO: main_bb7186;
+
+FROM: main_bb7185;
+
+FROM: main_bb7186;
+v10119 := landingButtons_spc1_3;
+TO: main_bb7186_end;
+
+FROM: main_bb7186_end;
+assume(v10119 != 0);
+TO: main_bb7187;
+
+FROM: main_bb7186_end;
+assume(v10119 == 0);
+TO: main_bb7188;
+
+FROM: main_bb7187;
+
+FROM: main_bb7188;
+v10121 := landingButtons_spc1_4;
+TO: main_bb7188_end;
+
+FROM: main_bb7188_end;
+assume(v10121 != 0);
+TO: main_bb7189;
+
+FROM: main_bb7188_end;
+assume(v10121 == 0);
+TO: main_runTest.exit;
+
+FROM: main_bb7189;
+
+FROM: main_runTest.exit;
+TO: main_runTest.exit_ret;
+

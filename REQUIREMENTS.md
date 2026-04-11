@@ -25,7 +25,7 @@ Before installation, ensure that the following tools are available on the host m
 - Git
 - Docker
 
-Athena’s build configuration requires C++23 together with LLVM and Clang discoverable by CMake, and the provided installation scripts require `cmake`, `make`, `git`, and `docker`.
+Athena’s build configuration requires C++23 together with LLVM and Clang discoverable by CMake. The provided installation scripts require `cmake`, `make`, `git`, and `docker`.
 
 ## Additional Requirements
 
@@ -35,4 +35,6 @@ The artifact includes benchmark programs under the repository’s root `Benchmar
 
 ## Notes
 
-No separate `requirements.txt` file is needed for this artifact, since it is not a Python-only environment. Any deviation from the tested environment above should be considered unsupported unless adapted by the user.
+No separate `requirements.txt` file is needed for this artifact, since it is not a Python-only environment.
+
+The artifact was tested in the environment above. Other environments may also work, but they have not been validated as part of this artifact submission.

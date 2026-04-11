@@ -4,20 +4,21 @@ Athena is an end-to-end framework for sound termination and non-termination anal
 
 Athena combines:
 
-- pointer-to-array rewriting,
-- bounded-integer semantics assurance,
-- translation to Labeled Transition Systems (LTSs),
-- and logic-based termination and non-termination analysis using extended MuVal backends.
+- pointer-to-array rewriting
+- bounded-integer semantics assurance
+- translation to Labeled Transition Systems (LTSs)
+- logic-based termination and non-termination analysis using extended MuVal backends
 
 Together, these components enable sound reasoning about complex memory behavior and low-level bounded semantics in C programs.
 
-
 ## Artifact Availability
 
-The artifact can be obtained from:
+The artifact is available at:
 
 - Zenodo DOI: [https://doi.org/10.5281/zenodo.19455305](https://doi.org/10.5281/zenodo.19455305)
 - GitHub repository: [https://github.com/negarfathi/Athena](https://github.com/negarfathi/Athena)
+
+The Zenodo archive provides the persistent, citable, versioned artifact associated with the accepted paper, while the GitHub repository provides the corresponding public development repository.
 
 ## Repository Contents
 
@@ -51,7 +52,7 @@ From the repository root, run:
 
 This script installs Athena’s required dependencies and components, including [DG](https://github.com/mchalupa/dg), [llvm2KITTeL](https://github.com/negarfathi/llvm2kittel), [MuVal](https://github.com/hiroshi-unno/coar), Athena’s internal components, and the Athena executable.
 
-For detailed installation instructions, see [`INSTALL.md`](INSTALL.md).
+For detailed installation instructions, basic installation validation, and expected demo results, see [`INSTALL.md`](INSTALL.md).
 
 ## Reproducing the Paper Results
 
@@ -74,7 +75,7 @@ The benchmark programs included in the artifact are stored under the repository�
 * [TermCOMP C Benchmarks](https://github.com/TermCOMP/TPDB/tree/master/C)
 * [Shi et al. Benchmarks](https://github.com/FSE2022benchmarks/-FSE-2022-Termination/tree/v1.0)
 
-### Demo mode
+### Demo Mode
 
 `./run_Athena.sh demo` runs Athena on two representative benchmark programs:
 
@@ -91,11 +92,98 @@ These modes should be interpreted as described in the paper.
 
 For the TermCOMP example, Athena runs only the mathematical-integer configuration, consistent with the unbounded-integer semantics assumed for that benchmark suite.
 
-### Full mode
+### Full Mode
 
 `./run_Athena.sh full` runs Athena on all benchmark programs included under the repository’s root `Benchmarks/` directory.
 
 For the Shi et al. benchmarks, Athena runs the three configurations listed above. For the TermCOMP benchmarks, Athena runs the mathematical-integer configuration only.
+
+## Using Athena on Custom Inputs
+
+In addition to the packaged `demo` and `full` workflows, Athena can also be invoked directly on a user-provided C program as follows:
+
+```bash
+<path/to/Athena> <path/to/SourceCode.c> \
+    --timeout=<time> \
+    --semantic-augmentor-mode=<none|only-bv|only-nobv|all> \
+    --type-annotator-mode=<none|only-bv|only-nobv|all> \
+    --signedness-info=<none|only-bv|only-nobv|all> \
+    --unreachable-exit=<true|false>
+```
+
+The packaged `demo` and `full` scripts use this interface internally together with benchmark-specific presets.
+
+Where:
+
+* `<path/to/Athena>` is the path to the Athena executable.
+* `<path/to/SourceCode.c>` is the path to the C source file to be analyzed.
+* `--timeout` specifies the maximum runtime in seconds.
+* `--semantic-augmentor-mode` controls when bounded-integer wraparound is modeled explicitly.
+* `--type-annotator-mode` controls when type information is added to the generated LTS.
+* `--signedness-info` controls when signedness information is added to the generated LTS.
+* `--unreachable-exit` determines how `unreachable` blocks are interpreted during analysis:
+
+  * `true`: reaching an `unreachable` block is treated as program termination.
+  * `false`: reaching an `unreachable` block is treated as non-termination.
+
+The options `--semantic-augmentor-mode`, `--type-annotator-mode`, and `--signedness-info` use the same four values:
+
+* `none`: never enable the corresponding component
+* `only-bv`: enable it only for programs that contain bitwise operations
+* `only-nobv`: enable it only for programs that do not contain bitwise operations
+* `all`: always enable it regardless of the presence of bitwise operations
+
+### Predefined Evaluation Presets
+
+For convenience, the artifact documents the presets used for the benchmark classes evaluated in the paper.
+
+#### TermCOMP C Benchmarks
+
+For the TermCOMP C benchmark suite, Athena uses mathematical-integer semantics:
+
+```bash
+--semantic-augmentor-mode=none \
+--type-annotator-mode=none \
+--signedness-info=none \
+--unreachable-exit=true
+```
+
+#### Shi et al. Benchmarks: Modulo-Arithmetic Encoding
+
+For the Shi et al. benchmark suite, Athena uses the following modulo-arithmetic configuration:
+
+```bash
+--semantic-augmentor-mode=only-nobv \
+--type-annotator-mode=only-bv \
+--signedness-info=only-bv \
+--unreachable-exit=true
+```
+
+#### Shi et al. Benchmarks: Bit-Vector Encoding
+
+For the Shi et al. benchmark suite, Athena uses the following bit-vector configuration:
+
+```bash
+--semantic-augmentor-mode=none \
+--type-annotator-mode=all \
+--signedness-info=all \
+--unreachable-exit=true
+```
+
+### Example Direct Invocation
+
+A typical direct invocation on a user-provided input has the following form:
+
+```bash
+<path/to/Athena> <path/to/SourceCode.c> \
+    --timeout=60 \
+    --semantic-augmentor-mode=none \
+    --type-annotator-mode=all \
+    --signedness-info=all \
+    --unreachable-exit=true
+```
+
+This interface can be used to analyze new C programs beyond the packaged artifact workflows.
 
 ## Output
 
@@ -144,6 +232,10 @@ Please see:
 * [`INSTALL.md`](INSTALL.md) for installation and execution details
 * [`STATUS.md`](STATUS.md) for requested badges
 * `LICENSE` for licensing terms
+
+## License
+
+The MIT license applies to the Athena source code and artifact documentation. Third-party tools, dependencies, and benchmark suites referenced or included by the artifact remain subject to their respective licenses and terms.
 
 ## Paper
 

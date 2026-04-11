@@ -8,7 +8,9 @@ From the repository root, run:
 ./install_Athena.sh
 ```
 
-This script installs Athena’s required dependencies and components, including [DG](https://github.com/mchalupa/dg), [llvm2KITTeL](https://github.com/negarfathi/llvm2kittel), [MuVal](https://github.com/hiroshi-unno/coar), Athena’s internal components, and the Athena executable. A successful installation should end with messages indicating that DG, llvm2KITTeL, MuVal, Athena’s components, and Athena were installed successfully.
+This script installs Athena’s required dependencies and components, including [DG](https://github.com/mchalupa/dg), [llvm2KITTeL](https://github.com/negarfathi/llvm2kittel), [MuVal](https://github.com/hiroshi-unno/coar), Athena’s internal components, and the Athena executable.
+
+A successful installation should end with messages indicating that DG, llvm2KITTeL, MuVal, Athena’s components, and Athena were installed successfully.
 
 ## Execution
 
@@ -31,7 +33,7 @@ The benchmark programs included in the artifact are stored under the repository�
 * [TermCOMP C Benchmarks](https://github.com/TermCOMP/TPDB/tree/master/C)
 * [Shi et al. Benchmarks](https://github.com/FSE2022benchmarks/-FSE-2022-Termination/tree/v1.0)
 
-### Demo mode
+### Demo Mode
 
 `./run_Athena.sh demo` runs Athena on two representative benchmark programs:
 
@@ -48,11 +50,15 @@ These modes should be interpreted as described in the paper.
 
 For the TermCOMP example, Athena runs only the mathematical-integer configuration, consistent with the unbounded-integer semantics assumed for that benchmark suite.
 
-### Full mode
+### Full Mode
 
 `./run_Athena.sh full` runs Athena on all benchmark programs included under the repository’s root `Benchmarks/` directory.
 
-For the Shi et al. benchmarks, Athena runs the three FSE configurations listed above. For the TermCOMP benchmarks, Athena runs the mathematical-integer configuration only.
+For the Shi et al. benchmarks, Athena runs the three configurations listed above. For the TermCOMP benchmarks, Athena runs the mathematical-integer configuration only.
+
+## Running Athena on Custom Inputs
+
+In addition to the packaged artifact workflows, Athena can also be invoked directly on a user-provided C program. The command-line interface, argument descriptions, and reusable evaluation presets are documented in [`README.md`](README.md).
 
 ## Basic Installation Test
 

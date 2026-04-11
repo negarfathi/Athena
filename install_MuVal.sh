@@ -17,8 +17,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 if cd "$SCRIPT_DIR" && \
     rm -rf muval-master && \
     rm -rf muval-fse2026 && \
-    git clone https://github.com/negarfathi/muval-master.git && \
-    git clone https://github.com/negarfathi/muval-fse2026.git && \
+    git clone https://github.com/hiroshi-unno/coar.git && \
+    git clone https://github.com/hiroshi-unno/coar.git && \
     cd muval-master && \
     docker build -t muval-master . && \
     cd ../muval-fse2026 && \

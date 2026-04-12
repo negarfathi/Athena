@@ -21,7 +21,7 @@ if docker pull k0kubun/llvm35 && \
       apt-get install -y cmake gdb libgmp-dev libgmpxx4ldbl && \
       cd /PATH && \
       rm -rf llvm2kittel && \
-      git clone -b kou https://github.com/negarfathi/llvm2kittel.git && \
+      git clone --branch svcomp2026 https://github.com/addmai/llvm2kittel.git && \
       cd llvm2kittel && \
       mkdir -p build && \
       cd build && \

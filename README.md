@@ -179,7 +179,7 @@ These files summarize the benchmark name, analysis result, and runtime for each 
 
 The reproduced outputs under `ReproducedResults/` are intended to reproduce the evaluation results reported in the paper and provided under `EvaluationResults/`. Exact runtime values may vary across machines.
 
-## Related Paper
+## Related Papers
 
 This repository is based on the following work:
 
